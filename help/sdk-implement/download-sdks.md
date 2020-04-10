@@ -3,7 +3,7 @@ title: Hämta SDK:er
 description: Länkar till SDK-nedladdningar för tillgängliga plattformar, inklusive Android, iOS, JavaScript, Chromecast och Roku.
 uuid: a619fbb8-693e-4583-8dad-0ff875e715f8
 translation-type: tm+mt
-source-git-commit: 3dae96b81137c2d7df9fe284e6a3db515c0350eb
+source-git-commit: 8589a89847f4c3cc38317c1fe65e4e2efb9d8875
 
 ---
 
@@ -17,7 +17,7 @@ source-git-commit: 3dae96b81137c2d7df9fe284e6a3db515c0350eb
 | Android/FireTV | [Media SDK för Android v2.2.4](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/android-v2.2.4) | [Android API-referens](https://adobe-marketing-cloud.github.io/media-sdks/reference/android/) | [Konfigurera Android](/help/sdk-implement/setup/set-up-android.md) |
 | iOS/AppleTV | [Media SDK för iOS v2.2.7](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/ios-v2.2.7) (kontakta [kundtjänst ](https://helpx.adobe.com/marketing-cloud/contact-support.html) för att få äldre 2.0 SDK) | [API-referens för iOS](https://adobe-marketing-cloud.github.io/media-sdks/reference/ios/) | [Konfigurera iOS](/help/sdk-implement/setup/set-up-ios.md) |
 | JavaScript | [Media SDK för JS v2.2.1](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/js-v2.2.1) | [JS API-referens](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/) | [Konfigurera JavaScript](/help/sdk-implement/setup/set-up-js.md) |
-| Roku | [Media SDK för Roku v2.2.2](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/roku-v2.2.2) |  | [Konfigurera Roku](/help/sdk-implement/setup/set-up-roku.md) |
+| Roku | [Media SDK för Roku v2.2.3](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/roku-v2.2.3) |  | [Konfigurera Roku](/help/sdk-implement/setup/set-up-roku.md) |
 | Kromecast | [Media SDK för Chromecast v2.2.0](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/chromecast-v2.2.0) | [API-referens för Chromecast](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/) | [Konfigurera kromecast](/help/sdk-implement/setup/set-up-chromecast.md) |
 
 ## Starta tillägg för Media Analytics {#media-analytics-launch-extension}
