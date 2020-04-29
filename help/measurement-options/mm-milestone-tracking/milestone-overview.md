@@ -1,14 +1,14 @@
 ---
-title: Översikt över milstolpe
+title: Översikt över milstolpar
 description: null
 uuid: 2f9ec6bb-8860-4863-98bc-5cffb356ccc5
 translation-type: tm+mt
-source-git-commit: 0d2d75dd411edea2a7a853ed425af5c6da154b06
+source-git-commit: 5a4f15616712ee91bc028258991fc4e7359698a5
 
 ---
 
 
-# Översikt över milstolpe{#milestone-overview}
+# Översikt över milstolpar{#milestone-overview}
 
 >[!CAUTION]
 >
@@ -30,7 +30,10 @@ Du kan också spåra valfritt antal ytterligare mätvärden för video. Om du ti
 
 Om du vill konfigurera videorapportering för en milstolpe-implementering går du till **[!UICONTROL Admin > Report Suite Manager].**Markera rapportsviten och välj sedan**[!UICONTROL Video Management > Video Reporting]:**
 
-<!--![](assets/0clip_image002_1537416456.png){width="248"}-->
+<!--
+![](assets/0clip_image002_1537416456.png){width="248"}
+-->
+
 ![](assets/rs1.png)
 
 På den första skärmen fungerar bara Video Core med milstolpe-data. Markera **[!UICONTROL Video Core]** och klicka **[!UICONTROL Save].**
@@ -39,12 +42,18 @@ På den första skärmen fungerar bara Video Core med milstolpe-data. Markera **
 
 På nästa skärm väljer du **[!UICONTROL Use Custom Variables].**
 
-<!--![](assets/0clip_image006_-1561510960.png){width="470"}-->
+<!--
+![](assets/0clip_image006_-1561510960.png){width="470"}
+-->
+
 ![](assets/rs2.png)
 
 På den sista skärmen väljer du de två eVars och tre händelser som ska användas för videomätningen:
 
-<!--![](assets/0clip_image008_-92166399.png)-->
+<!--
+![](assets/0clip_image008_-92166399.png)
+-->
+
 ![](assets/rs3.png)
 
 ## Variabelreferens för video {#video-variable-reference}
