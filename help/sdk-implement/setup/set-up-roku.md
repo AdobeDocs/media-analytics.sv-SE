@@ -3,7 +3,7 @@ title: Konfigurera Roku
 description: Installation av Media SDK-program för implementering på Roku.
 uuid: 904dfda0-4782-41da-b4ab-212e81156633
 translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+source-git-commit: ccdc3e170d125a76d798be7ce1fa5c12eef1f76a
 
 ---
 
@@ -19,7 +19,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 Adobes mobiltjänster har ett nytt användargränssnitt som samlar funktioner för mobilmarknadsföring för mobilappar från hela Adobe Marketing Cloud. Från början erbjuder mobiltjänsten smidig integrering av funktioner för appanalys och målinriktning för Adobe Analytics- och Adobe Target-lösningarna.
 
-Läs mer i dokumentationen för [Adobe Mobile Services.](https://marketing.adobe.com/resources/help/en_US/mobile/)
+Läs mer i dokumentationen för [Adobe Mobile Services.](https://docs.adobe.com/content/help/en/mobile-services/using/home.html)
 
 Med Roku SDK 2.x för Experience Cloud Solutions kan ni mäta Roku-applikationer som skrivits i BrightScript, utnyttja och samla in målgruppsdata via målgruppshantering och mäta videoengagemang med videohjärtslag.
 
@@ -83,7 +83,7 @@ Med Roku SDK 2.x för Experience Cloud Solutions kan ni mäta Roku-applikationer
       }
       ```
 
-      | Konfigurationsparameter | Beskrivning |
+      | Konfigurationsparameter | Beskrivning     |
       | --- | --- |
       | `server` | Sträng som representerar URL:en för spårningsslutpunkten på backend-objektet. |
       | `publisher` | En sträng som representerar den unika identifieraren för innehållsutgivaren. |
@@ -124,11 +124,11 @@ Med Roku SDK 2.x för Experience Cloud Solutions kan ni mäta Roku-applikationer
    >
    >Experience Cloud Visitor ID-metoder har prefixet `visitor`.
 
-   |  Metod | Beskrivning |
+   |  Metod   | Beskrivning |
    | --- | --- |
    | `visitorMarketingCloudID` | Hämtar besökar-ID:t för Experience Cloud från besökar-ID-tjänsten.  <br/><br/>`ADBMobile().visitorMarketingCloudID()` |
    | `visitorSyncIdentifiers` | Med Experience Cloud Visitor ID kan ni ange ytterligare kund-ID:n som kan kopplas till varje besökare. Besökar-API:t godkänner flera kund-ID:n för samma besökare och en kundtypsidentifierare för att skilja omfattningen för olika kund-ID:n åt. Den här metoden motsvarar `setCustomerIDs`. Exempel: <br/><br/>`identifiers={}` <br/>`identifiers["idType"]="idValue"` <br/>`ADBMobile().visitorSyncIdentifiers(identifiers)` |
-   | `setAdvertisingIdentifier` | Används för att ange Roku-ID för annonsering (RIDA) på SDK. Exempel: <br/><br/> `ADBMobile().setAdvertisingIdentifier(`<br/>  `"<sample_roku_identifier_for_advertising>")` Hämta Roku ID för Advertising (RIDA) med Roku SDK <br/><br/><br/>getRIDA() [](https://developer.roku.com/docs/references/brightscript/interfaces/ifdeviceinfo.md#getrida-as-dynamic) -API:t. |
+   | `setAdvertisingIdentifier` | Används för att ange Roku-ID för annonsering (RIDA) på SDK. Exempel: <br/><br/> `ADBMobile().setAdvertisingIdentifier(`<br/>  `"<sample_roku_identifier_for_advertising>")` <br/><br/><br/>Hämta Roku ID för Advertising (RIDA) med hjälp av API:t [getRIDA()](https://developer.roku.com/docs/references/brightscript/interfaces/ifdeviceinfo.md#getrida-as-dynamic) för Roku SDK. |
 
    <!--
     Roku Api Reference: 
@@ -136,4 +136,4 @@ Med Roku SDK 2.x för Experience Cloud Solutions kan ni mäta Roku-applikationer
     * [GetRIDA()](https://sdkdocs.roku.com/display/sdkdoc/ifDeviceInfo#ifDeviceInfo-GetRIDA())
     -->
 
-<!--    **Postbacks -** For more information about configuring postbacks, see [Configure Postbacks.](https://marketing.adobe.com/resources/help/en_US/mobile/signals_.html) -->
+<!--    **Postbacks -** For more information about configuring postbacks, see [Configure Postbacks.](https://docs.adobe.com/content/help/en/mobile-services/using/manage-app-settings-ug/configuring-app/signals.html) -->
