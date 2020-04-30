@@ -1,14 +1,14 @@
 ---
-title: Konfigurera kromecast
+title: Konfigurera Chromecast
 description: Installation av Media SDK-program för implementering på Chromecast.
 uuid: d664e394-02a2-4985-bbad-be1bcc44fb2b
 translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+source-git-commit: ccdc3e170d125a76d798be7ce1fa5c12eef1f76a
 
 ---
 
 
-# Konfigurera kromecast{#set-up-chromecast}
+# Konfigurera Chromecast{#set-up-chromecast}
 
 ## Vanliga frågor
 
@@ -25,7 +25,7 @@ Det korrekta svaret är &quot;Chromecast&quot; av följande skäl:
    * *Ett API för att prenumerera på spelarhändelser* - Media SDK kräver att du anropar en uppsättning enkla API:er när händelser inträffar i spelaren.
    * *Ett API som tillhandahåller spelarinformation* - Den här informationen innehåller information som medienamnet och spelhuvudets position.
 
-Adobes mobiltjänster har ett nytt användargränssnitt som samlar funktioner för mobilmarknadsföring för mobilappar från hela Adobe Marketing Cloud. Från början erbjuder mobiltjänsten smidig integrering av funktioner för appanalys och målinriktning för Adobe Analytics- och Adobe Target-lösningarna. Läs mer i dokumentationen för [Adobe Mobile Services.](https://marketing.adobe.com/resources/help/en_US/mobile/)
+Adobes mobiltjänster har ett nytt användargränssnitt som samlar funktioner för mobilmarknadsföring för mobilappar från hela Adobe Marketing Cloud. Från början erbjuder mobiltjänsten smidig integrering av funktioner för appanalys och målinriktning för Adobe Analytics- och Adobe Target-lösningarna. Läs mer i dokumentationen för [Adobe Mobile Services.](https://docs.adobe.com/content/help/en/mobile-services/using/home.html)
 
 Med Chromecast SDK 2.x for Experience Cloud Solutions kan ni mäta Chromecast-applikationer som skrivits i JavaScript, utnyttja och samla in målgruppsdata via målgruppshantering och mäta videoengagemang med videohjärtslag.
 
@@ -90,7 +90,7 @@ Med Chromecast SDK 2.x for Experience Cloud Solutions kan ni mäta Chromecast-ap
       >Om `mediaHeartbeat` inte är korrekt konfigurerad försätts mediemodulen i ett feltillstånd och skickar inga spårningsanrop.
 
       ADBMoble Config-parametrar för nyckeln mediaHeartbeat:
-   | Konfigurationsparameter | Beskrivning |
+   | Konfigurationsparameter | Beskrivning     |
    | --- | --- |
    | `server` | Sträng som representerar URL:en för spårningsslutpunkten på backend-objektet. |
    | `publisher` | En sträng som representerar den unika identifieraren för innehållsutgivaren. |
@@ -133,5 +133,5 @@ Med Chromecast SDK 2.x for Experience Cloud Solutions kan ni mäta Chromecast-ap
    | `syncIdentifiers()` | Med Experience Cloud Visitor ID kan ni ange ytterligare kund-ID:n som kan kopplas till varje besökare. Besökar-API:t godkänner flera kund-ID:n för samma besökare och en kundtypsidentifierare för att skilja omfattningen för olika kund-ID:n åt. Den här metoden motsvarar den `setCustomerIDs()` i JavaScript-biblioteket.  Exempel: <br/><br/>`var identifiers = {};` <br/><br/>`identifiers["idType"] = "idValue";` <br/><br/>`ADBMobile.visitor.syncIdentifiers(identifiers);` |
 
 
-<!--   **Postbacks -** For more information about configuring postbacks, see [Configure Postbacks.](https://marketing.adobe.com/resources/help/en_US/mobile/signals_.html) -->
+<!--   **Postbacks -** For more information about configuring postbacks, see [Configure Postbacks.](https://docs.adobe.com/content/help/en/mobile-services/using/manage-app-settings-ug/configuring-app/signals.html) -->
 
