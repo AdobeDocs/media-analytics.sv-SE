@@ -3,18 +3,18 @@ title: Implementeringshandbok för anpassade länkar
 description: null
 uuid: 83315e73-20ca-4db5-9d43-33daade45a13
 translation-type: tm+mt
-source-git-commit: 0d2d75dd411edea2a7a853ed425af5c6da154b06
+source-git-commit: ccdc3e170d125a76d798be7ce1fa5c12eef1f76a
 
 ---
 
 
-# Implementeringshandbok för anpassad länk{#custom-link-implementation-guide}
+# Implementeringshandbok för anpassade länkar{#custom-link-implementation-guide}
 
-Anpassad videospårning använder [manuell länkspårning med anpassad länkkod](https://marketing.adobe.com/resources/help/en_US/sc/implement/link_manual.html) i Analytics `appMeasurement`.
+Anpassad videospårning använder [manuell länkspårning med anpassad länkkod](https://docs.adobe.com/content/help/en/media-analytics/using/measurement-options/cl-in-aa/cl-impl-guide.html) i Analytics `appMeasurement`.
 Oftast används videouppföljning för anpassade videolänkar på plattformar och enheter där minimal videomätning krävs.
 
 * I JavaScript: funktionen `s.tl()`
-* I mobilappar: [trackAction() Android](https://marketing.adobe.com/resources/help/en_US/mobile/android/actions.html), [trackAction() iOS](https://marketing.adobe.com/resources/help/en_US/mobile/ios/actions.html), [trackAction() OTT](/help/sdk-implement/analytics-with-ott/track-app-actions.md)
+* I mobilappar: [trackAction() Android](hhttps://docs.adobe.com/content/help/en/mobile-services/android/analytics-android/actions.html), [trackAction() iOS](https://docs.adobe.com/content/help/en/mobile-services/ios/analytics-ios/actions.html), [trackAction() OTT](/help/sdk-implement/analytics-with-ott/track-app-actions.md)
 * I API:t för datainmatning: [linktype-tagg](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/reference/r_supported_tags.md)
 
 ## Krav
