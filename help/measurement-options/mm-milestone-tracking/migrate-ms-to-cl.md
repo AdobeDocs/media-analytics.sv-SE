@@ -3,7 +3,7 @@ title: Migrera från milstolpe till anpassad länk
 description: null
 uuid: 1c8edde5-0ef1-4bc0-a62d-1747f4907f09
 translation-type: tm+mt
-source-git-commit: 0d2d75dd411edea2a7a853ed425af5c6da154b06
+source-git-commit: ccdc3e170d125a76d798be7ce1fa5c12eef1f76a
 
 ---
 
@@ -12,7 +12,7 @@ source-git-commit: 0d2d75dd411edea2a7a853ed425af5c6da154b06
 
 ## Översikt {#overview}
 
-De centrala begreppen för videomätning är desamma för milstolpe och Custom Link tracking, som tar videospelarhändelser och mappar dem till analysmetoder, samtidigt som spelarens metadata och värden hämtas och mappas till analysvariabler. Metoden Custom Link bör ses som en nedbantning och en förenkling av både implementeringen och de data som samlas in. Med Custom Link-lösningen är inga variabler eller metoder fördefinierade för videomätning, utan en fullständig anpassad konfiguration krävs. Det bör vara möjligt att uppdatera spelarens händelsekod så att den pekar på anpassade länkspårningsanrop för grundläggande spelarhändelser som start och complete. Mer information finns i Implementeringshandboken [för](/help/measurement-options/cl-in-aa/cl-impl-guide.md) anpassad länk och [Manuell länkspårning med anpassad länkkod](https://marketing.adobe.com/resources/help/en_US/sc/implement/link_manual.html) .
+De centrala begreppen för videomätning är desamma för milstolpe och Custom Link tracking, som tar videospelarhändelser och mappar dem till analysmetoder, samtidigt som spelarens metadata och värden hämtas och mappas till analysvariabler. Metoden Custom Link bör ses som en nedbantning och en förenkling av både implementeringen och de data som samlas in. Med Custom Link-lösningen är inga variabler eller metoder fördefinierade för videomätning, utan en fullständig anpassad konfiguration krävs. Det bör vara möjligt att uppdatera spelarens händelsekod så att den pekar på anpassade länkspårningsanrop för grundläggande spelarhändelser som start och complete. Mer information finns i Implementeringshandboken [för](/help/measurement-options/cl-in-aa/cl-impl-guide.md) anpassad länk och [Manuell länkspårning med anpassad länkkod](https://docs.adobe.com/content/help/en/media-analytics/using/measurement-options/cl-in-aa/cl-impl-guide.html) .
 
 I följande tabeller finns översättningar mellan milstolpe-lösningen och Custom Link-lösningen.
 
@@ -367,7 +367,7 @@ s.Media.trackSeconds = 15
 </tr>
 <tr>
 <td>
-Media.trackMilstolpar
+Media.trackMilestones
 </td>
 <td>
 <pre>
@@ -381,7 +381,7 @@ s.Media.trackMilestone = "25,50,75";
 </tr>
 <tr>
 <td>
-Media.trackOffsetMilstolpar
+Media.trackOffsetMilestones
 </td>
 <td>
 <pre>
@@ -395,7 +395,7 @@ s.Media.trackOffsetMilestone = "20,40,60";
 </tr>
 <tr>
 <td>
-Media.segmentByMilestone
+Media.segmentByMilestones
 </td>
 <td>
 <pre>
@@ -409,7 +409,7 @@ s.Media.segmentByMilestone = true;
 </tr>
 <tr>
 <td>
-Media.segmentByOffsetMilstolpar
+Media.segmentByOffsetMilestones
 </td>
 <td>
 <pre>
@@ -457,7 +457,7 @@ s.Media.adTrackSeconds = 15
 </tr>
 <tr>
 <td>
-Media.adTrackMilstolpar
+Media.adTrackMilestones
 </td>
 <td>
 <pre>
@@ -471,7 +471,7 @@ s.Media.adTrackMilestone = "25,50,75";
 </tr>
 <tr>
 <td>
-Media.adTrackOffsetMilstolpar
+Media.adTrackOffsetMilestones
 </td>
 <td>
 <pre>
@@ -486,7 +486,7 @@ s.Media.
 </tr>
 <tr>
 <td>
-Media.adSegmentByMilestone
+Media.adSegmentByMilestones
 </td>
 <td>
 <pre>
@@ -501,7 +501,7 @@ s.Media.
 </tr>
 <tr>
 <td>
-Media.adSegmentByOffsetMilstolpar
+Media.adSegmentByOffsetMilestones
 </td>
 <td>
 <pre>
