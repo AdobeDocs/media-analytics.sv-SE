@@ -3,7 +3,7 @@ title: Konfigurera Android
 description: Installation av Media SDK-program för implementering på Android.
 uuid: 3ffe3276-a104-4182-9220-038729e9f3d5
 translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+source-git-commit: ccdc3e170d125a76d798be7ce1fa5c12eef1f76a
 
 ---
 
@@ -13,7 +13,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 ## Förutsättningar
 
 * **Hämta giltiga konfigurationsparametrar för Media SDK** Dessa parametrar kan hämtas från en Adobe-representant när du har konfigurerat ditt analyskonto.
-* **Implementera ADBMobil för Android i ditt program** Mer information om dokumentationen för Adobe Mobile SDK finns i [Android SDK 4.x för Experience Cloud Solutions.](https://marketing.adobe.com/resources/help/en_US/mobile/android/)
+* **Implementera ADBMobil för Android i ditt program** Mer information om dokumentationen för Adobe Mobile SDK finns i [Android SDK 4.x för Experience Cloud Solutions.](https://docs.adobe.com/content/help/en/mobile-services/android/overview.html)
 * **Tillhandahåll följande funktioner i din mediespelare:**
    * *Ett API för att prenumerera på spelarhändelser* - Media SDK kräver att du anropar en uppsättning enkla API:er när händelser inträffar i spelaren.
    * *Ett API som tillhandahåller spelarinformation* - Den här informationen innehåller information som medienamnet och spelhuvudets position.
