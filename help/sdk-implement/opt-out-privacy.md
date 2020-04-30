@@ -3,19 +3,19 @@ title: Avanmäl dig och sekretess
 description: Hur man hanterar anmälan, avanmälan och sekretess.
 uuid: 7e60c7bd-8dba-4c7a-9c3c-0c634b815397
 translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+source-git-commit: ccdc3e170d125a76d798be7ce1fa5c12eef1f76a
 
 ---
 
 
-# Avanmäl dig och sekretess{#opt-out-and-privacy}
+# Opt-out and privacy{#opt-out-and-privacy}
 
 ## Opt-out / Opt-in {#opt-out-opt-in}
 
 Du kan kontrollera om spårningsaktivitet tillåts på en viss enhet:
 
 * **Mobilappar -** VA-biblioteket respekterar `AdobeMobile` bibliotekets inställningar för sekretess och avanmälan. Om du vill avanmäla dig från spårning måste du använda `AdobeMobile` biblioteket. Mer information om `AdobeMobile` bibliotekets avanmälan och sekretessinställningar finns i [Avanmäl dig och Sekretessinställningar](https://docs.adobe.com/content/help/en/mobile-services/android/gdpr-privacy-android/privacy.html).
-* **JavaScript-/webbläsarappar -** VA-biblioteket respekterar inställningarna för sekretess och `VisitorAPI` valmöjlighet. Om du vill välja bort spårning måste du avanmäla dig från Visitor API-tjänsten. Mer information om avanmälan och sekretess finns i [Adobe Experience Platform Identity Service.](https://marketing.adobe.com/resources/help/en_US/mcvid/).
+* **JavaScript-/webbläsarappar -** VA-biblioteket respekterar inställningarna för sekretess och `VisitorAPI` valmöjlighet. Om du vill välja bort spårning måste du avanmäla dig från Visitor API-tjänsten. Mer information om avanmälan och sekretess finns i [Adobe Experience Platform Identity Service.](https://docs.adobe.com/content/help/en/id-service/using/home.html).
 * **OTT-appar (Chromecast, Roku) -** OTT SDK:er tillhandahåller GDPR-klara API:er som gör att du kan ange `opt` statusflaggor för datainsamling och överföring samt hämta lokalt lagrade identiteter.
 
    >[!NOTE]
