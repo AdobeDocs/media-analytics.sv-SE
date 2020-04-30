@@ -3,7 +3,7 @@ title: Förutsättningar
 description: null
 uuid: 4c0b37f3-8615-4cc0-b9c9-eeb029067064
 translation-type: tm+mt
-source-git-commit: 0d2d75dd411edea2a7a853ed425af5c6da154b06
+source-git-commit: ccdc3e170d125a76d798be7ce1fa5c12eef1f76a
 
 ---
 
@@ -30,7 +30,7 @@ För en implementering av *Media Analytics* måste du utföra följande uppgifte
 
    ![](assets/mc_id_service_graphic.png)
 
-   ID-tjänsten kan även ersätta olika lösningsspecifika ID:n (till exempel Analytics AID). Genom funktionerna [Kund-ID:n och Autentiseringstillstånd](https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-authenticated-state.html) kan du med ID-tjänsten skicka dina egna kund-ID:n till Experience Cloud. Tänk dock på att ID-tjänsten bara fungerar med de lösningar som du redan har prenumererat på. Om du inte är registrerad för åtkomst till andra produkter ger ID-tjänsten inte åtkomst.
+   ID-tjänsten kan även ersätta olika lösningsspecifika ID:n (till exempel Analytics AID). Genom funktionerna [Kund-ID:n och Autentiseringstillstånd](https://docs.adobe.com/content/help/en/id-service/using/reference/authenticated-state.html) kan du med ID-tjänsten skicka dina egna kund-ID:n till Experience Cloud. Tänk dock på att ID-tjänsten bara fungerar med de lösningar som du redan har prenumererat på. Om du inte är registrerad för åtkomst till andra produkter ger ID-tjänsten inte åtkomst.
 
    Framöver är ID-tjänsten en integrerad komponent i många aktuella och framtida Experience Cloud-funktioner, förbättringar och tjänster. För närvarande stöder ID-tjänsten [Analytics,](https://www.adobe.com/marketing-cloud/web-analytics.html) [Audience Manager](https://www.adobe.com/marketing-cloud/data-management-platform.html) och [Target.](https://www.adobe.com/marketing-cloud/testing-targeting.html)
 
@@ -44,7 +44,7 @@ För en implementering av *Media Analytics* måste du utföra följande uppgifte
    >
    >Om det inte finns någon information om användar-ID för de mediespecifika anropen gäller standardmetoderna [för](https://docs-author.corp.adobe.com/content/help/en/analytics/implementation/javascript-implementation/unique-visitors/visid-fallback.html) Fallback-ID för analyser.
 
-   Mer information om Experience Cloud ID finns i Översikt över [Experience Cloud ID,](https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-overview.html) och [Adobe Experience Platform Identity Service.](https://marketing.adobe.com/resources/help/en_US/mcvid/)
+   Mer information om Experience Cloud ID finns i Översikt över [Experience Cloud ID,](https://docs.adobe.com/content/help/en/id-service/using/intro/overview.html) och [Adobe Experience Platform Identity Service.](https://docs.adobe.com/content/help/en/id-service/using/home.html)
 
 1. **Aktivera Adobe Analytics-rapporter.**
 
