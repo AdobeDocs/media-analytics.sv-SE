@@ -3,12 +3,12 @@ title: SDK-felsökning
 description: I det här avsnittet beskrivs spårning/loggning som är tillgänglig i Media SDK.
 uuid: a5972d87-c593-4b4f-a56f-dca6e25268e1
 translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+source-git-commit: ccdc3e170d125a76d798be7ce1fa5c12eef1f76a
 
 ---
 
 
-# SDK-felsökning{#sdk-debugging}
+# SDK debugging{#sdk-debugging}
 
 Du kan aktivera och inaktivera loggning. Media SDK har en omfattande funktion för spårning/loggning i hela mediespårningsstacken. Du kan aktivera eller inaktivera loggning genom att ange `debugLogging` flaggan för Config-objektet.
 
@@ -56,7 +56,7 @@ ADBMomobile-biblioteket innehåller felsökningsloggning via `setDebugLogging` m
 ADBMobile().setDebugLogging(true)
 ```
 
-#### Kromecast
+#### Chromecast
 
 ```
 ADBMobile.config.setDebugLogging(true)
@@ -64,10 +64,14 @@ ADBMobile.config.setDebugLogging(true)
 
 ## Använda Adobe Bloodhound för att testa Chromecast-program
 
-Under programutvecklingen kan du med Bloodhound visa serveranrop lokalt och eventuellt vidarebefordra data till Adobes samlingsservrar. Mer information om Bloodhound finns i följande handböcker:
+Under programutvecklingen kan du med Bloodhound visa serveranrop lokalt och eventuellt vidarebefordra data till Adobes samlingsservrar.
 
-* [Bloodhound 3.x for Mac](https://marketing.adobe.com/resources/help/en_US/mobile/bloodhound/)
+<!--
+For more information about Bloodhound, see the following guides:
+
+* [Bloodhound 3.x for Mac](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&ved=2ahUKEwiimfSUypDpAhVZHzQIHS6WDQIQFjABegQIChAD&url=https%3A%2F%2Fmarketing.adobe.com%2Fresources%2Fhelp%2Fen_US%2Fmobile%2Fbloodhound%2F&usg=AOvVaw3t4s0gcvuWEpLIqBkhKdGH) 
 * [Bloodhound 2.2 for Windows](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=3&cad=rja&uact=8&ved=0ahUKEwjil9aM87jRAhUExlQKHTYZCjoQFggoMAI&url=https%3A%2F%2Fmarketing.adobe.com%2Fresources%2Fhelp%2Fen_US%2Fmobile%2Fbloodhound_win_2x%2F&usg=AFQjCNEW-gZp1IdbifWFDgDNEaQcGlBobg&sig2=K0waTKxdMj_2kfNXdMI2yg)
+-->
 
 >[!IMPORTANT]
 >
