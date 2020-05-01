@@ -3,12 +3,18 @@ title: Konfigurera iOS
 description: Installation av Media SDK-program för implementering på iOS.
 uuid: a1c6be79-a6dc-47b6-93b3-ac7b42f1f3eb
 translation-type: tm+mt
-source-git-commit: ccdc3e170d125a76d798be7ce1fa5c12eef1f76a
+source-git-commit: be82be2eb58f89344f2125288599fef461db441e
 
 ---
 
 
 # Konfigurera iOS{#set-up-ios}
+
+>[!IMPORTANT]
+>
+>Från och med oktober 2020 upphör stödet för version 4 Mobile SDK och de fristående Media Analytics SDK:erna för iOS. Du kan fortsätta att hämta och använda version 4 SDK:er, men kundtjänst och åtkomst till forumen upphör. Du bör migrera till Adobe Experience Platform (AEP) SDK:er för iOS. AEP Mobile SDK (tidigare kallat v5) har exklusivt stöd för funktioner och funktioner i Adobe Experience Cloud. Mer information om den här ändringen finns i [version 4 av Mobile SDKs End of Support FAQ](https://aep-sdks.gitbook.io/docs/version-4-sdk-end-of-support-faq). Vi rekommenderar att du migrerar till nya AEP Mobile SDK.
+När du har migrerat till AEP Mobile SDK måste du implementera startstillägget för Analytics och starttillägget för Media Analytics för att aktivera Adobe Analytics för ljud och video. Mer information om hur du migrerar till nya AEP Mobile SDK finns i [Migrera från fristående media SDK till Adobe Launch ](https://docs.adobe.com/content/help/en/media-analytics/using/sdk-implement/sdk-to-launch/sdk-to-launch-migration.html)
+
 
 ## Förutsättningar
 
@@ -71,8 +77,8 @@ source-git-commit: ccdc3e170d125a76d798be7ce1fa5c12eef1f76a
 1. Importera biblioteket.
 
    ```
-   #import "ADBMediaHeartbeat.h" 
-   #import "ADBMediaHeartbeatConfig.h" 
+   #import "ADBMediaHeartbeat.h"
+   #import "ADBMediaHeartbeatConfig.h"
    ```
 
 1. Skapa en `ADBMediaHeartbeatConfig` instans.
@@ -82,40 +88,40 @@ source-git-commit: ccdc3e170d125a76d798be7ce1fa5c12eef1f76a
    Här följer ett exempel på `ADBMediaHeartbeatConfig`-initiering:
 
    ```
-   // Media Heartbeat Initialization 
-   ADBMediaHeartbeatConfig *config = [[ADBMediaHeartbeatConfig alloc] init]; 
-   config.trackingServer = <SAMPLE_HEARTBEAT_TRACKING_SERVER>; 
-   config.channel        = <SAMPLE_HEARTBEAT_CHANNEL>; 
-   config.appVersion     = <SAMPLE_HEARTBEAT_SDK_VERSION>; 
-   config.ovp            = <SAMPLE_HEARTBEAT_OVP_NAME>; 
-   config.playerName     = <SAMPLE_PLAYER_NAME>; 
-   config.ssl            = <YES/NO>; 
-   config.debugLogging   = <YES/NO>; 
+   // Media Heartbeat Initialization
+   ADBMediaHeartbeatConfig *config = [[ADBMediaHeartbeatConfig alloc] init];
+   config.trackingServer = <SAMPLE_HEARTBEAT_TRACKING_SERVER>;
+   config.channel        = <SAMPLE_HEARTBEAT_CHANNEL>;
+   config.appVersion     = <SAMPLE_HEARTBEAT_SDK_VERSION>;
+   config.ovp            = <SAMPLE_HEARTBEAT_OVP_NAME>;
+   config.playerName     = <SAMPLE_PLAYER_NAME>;
+   config.ssl            = <YES/NO>;
+   config.debugLogging   = <YES/NO>;
    ```
 
 1. Implementera `ADBMediaHeartbeatDelegate` protokollet.
 
    ```
-   @interface VideoAnalyticsProvider : NSObject <ADBMediaHeartbeatDelegate> 
+   @interface VideoAnalyticsProvider : NSObject <ADBMediaHeartbeatDelegate>
    
-   @end 
+   @end
    
-   @implementation VideoAnalyticsProvider 
+   @implementation VideoAnalyticsProvider
    
    // Replace <bitrate>, <startuptime>, <fps> and <droppeFrames>  
-   // with the current playback QoS values. 
-   - (ADBMediaObject *)getQoSObject { 
+   // with the current playback QoS values.
+   - (ADBMediaObject *)getQoSObject {
        return [ADBMediaHeartbeat createQoSObjectWithBitrate:<bitrate>  
                                  startupTime:<startuptime>   
                                  fps:<fps>  
-                                 droppedFrames:<droppedFrames>]; 
-   } 
+                                 droppedFrames:<droppedFrames>];
+   }
    
-   // Return the current video player playhead position. 
-   // Replace <currentPlaybackTime> with the video player current playback time 
-   - (NSTimeInterval)getCurrentPlaybackTime { 
-       return <currentPlaybackTime>; 
-   } 
+   // Return the current video player playhead position.
+   // Replace <currentPlaybackTime> with the video player current playback time
+   - (NSTimeInterval)getCurrentPlaybackTime {
+       return <currentPlaybackTime>;
+   }
    
    @end
    ```
@@ -123,8 +129,8 @@ source-git-commit: ccdc3e170d125a76d798be7ce1fa5c12eef1f76a
 1. Använd `ADBMediaHeartBeatConfig` och `ADBMediaHeartBeatDelegate` för att skapa `ADBMediaHeartbeat` instansen.
 
    ```
-   //Replace <ADBMediaHeartBeatDelegate> with your delegate instance 
-   _mediaHeartbeat = [[ADBMediaHeartbeat alloc] initWithDelegate: 
+   //Replace <ADBMediaHeartBeatDelegate> with your delegate instance
+   _mediaHeartbeat = [[ADBMediaHeartbeat alloc] initWithDelegate:
      <ADBMediaHeartBeatDelegate> config:config];
    ```
 
@@ -152,4 +158,3 @@ Utför följande steg i Xcode-projektet. Den här guiden är skriven under föru
    * `AdobeMobileLibrary_TV.a`
    * `libsqlite3.0.tbd`
    * `SystemConfiguration.framework`
-
