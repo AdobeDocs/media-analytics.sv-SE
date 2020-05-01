@@ -1,9 +1,14 @@
 ---
-source-git-commit: 97af9e6790bb4a4d65057868b90e1127cb3bb153
+source-git-commit: e8b232d0771863e739f806daefa344b58cbc661c
 translation-type: tm+mt
 
 ---
 # Contribute-artikel
+
+| Produktion | Scen |
+|---|---|
+| [![Byggstatus](https://docs.ci.corp.adobe.com/job/media-analytics.en_production/badge/icon)](https://docs.ci.corp.adobe.com/job/media-analytics.en_production/lastBuild) | [![Byggstatus](https://docs.ci.corp.adobe.com/job/media-analytics.en_stage/badge/icon)](https://docs.ci.corp.adobe.com/job/collaborative-doc-instructions.en_stage/lastBuild) |
+| [Utdataprodukt](https://docs.adobe.com/content/help/en/media-analytics/using/media-overview.html) | [Utdatastrg](https://docs-stg.corp.adobe.com/content/help/en/media-analytics/using/media-overview.html) |
 
 Vi välkomnar bidrag från både vår community och från Adobe-anställda utanför dokumentationsteamen.
 
