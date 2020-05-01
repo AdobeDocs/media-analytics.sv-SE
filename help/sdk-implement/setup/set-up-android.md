@@ -3,17 +3,25 @@ title: Konfigurera Android
 description: Installation av Media SDK-program för implementering på Android.
 uuid: 3ffe3276-a104-4182-9220-038729e9f3d5
 translation-type: tm+mt
-source-git-commit: ccdc3e170d125a76d798be7ce1fa5c12eef1f76a
+source-git-commit: be82be2eb58f89344f2125288599fef461db441e
 
 ---
 
 
 # Konfigurera Android{#set-up-android}
 
+>[!IMPORTANT]
+>
+>Från och med oktober 2020 upphör stödet för version 4 Mobile SDK och de fristående Media Analytics SDK:erna för Android. Du kan fortsätta att hämta och använda version 4 SDK:er, men kundtjänst och åtkomst till forumen upphör. Du bör migrera till Adobe Experience Platform (AEP) SDK:er för Android. AEP Mobile SDK (tidigare kallat v5) har exklusivt stöd för funktioner och funktioner i Adobe Experience Cloud. Mer information om den här ändringen finns i [version 4 av Mobile SDKs End of Support FAQ](https://aep-sdks.gitbook.io/docs/version-4-sdk-end-of-support-faq). Vi rekommenderar att du migrerar till nya AEP Mobile SDK.
+När du har migrerat till AEP Mobile SDK måste du implementera startstillägget för Analytics och starttillägget för Media Analytics för att aktivera Adobe Analytics för ljud och video. Mer information om hur du migrerar till nya AEP Mobile SDK finns i [Migrera från fristående media SDK till Adobe Launch ](https://docs.adobe.com/content/help/en/media-analytics/using/sdk-implement/sdk-to-launch/sdk-to-launch-migration.html)
+
+
 ## Förutsättningar
+
 
 * **Hämta giltiga konfigurationsparametrar för Media SDK** Dessa parametrar kan hämtas från en Adobe-representant när du har konfigurerat ditt analyskonto.
 * **Implementera ADBMobil för Android i ditt program** Mer information om dokumentationen för Adobe Mobile SDK finns i [Android SDK 4.x för Experience Cloud Solutions.](https://docs.adobe.com/content/help/en/mobile-services/android/overview.html)
+
 * **Tillhandahåll följande funktioner i din mediespelare:**
    * *Ett API för att prenumerera på spelarhändelser* - Media SDK kräver att du anropar en uppsättning enkla API:er när händelser inträffar i spelaren.
    * *Ett API som tillhandahåller spelarinformation* - Den här informationen innehåller information som medienamnet och spelhuvudets position.
@@ -53,10 +61,10 @@ source-git-commit: ccdc3e170d125a76d798be7ce1fa5c12eef1f76a
 1. Importera biblioteket.
 
    ```java
-   import com.adobe.primetime.va.simple.MediaHeartbeat; 
-   import com.adobe.primetime.va.simple.MediaHeartbeat.MediaHeartbeatDelegate; 
-   import com.adobe.primetime.va.simple.MediaHeartbeatConfig; 
-   import com.adobe.primetime.va.simple.MediaObject; 
+   import com.adobe.primetime.va.simple.MediaHeartbeat;
+   import com.adobe.primetime.va.simple.MediaHeartbeat.MediaHeartbeatDelegate;
+   import com.adobe.primetime.va.simple.MediaHeartbeatConfig;
+   import com.adobe.primetime.va.simple.MediaObject;
    ```
 
 1. Skapa `MediaHeartbeatConfig` instansen.
@@ -64,14 +72,14 @@ source-git-commit: ccdc3e170d125a76d798be7ce1fa5c12eef1f76a
    Här följer ett exempel på `MediaHeartbeatConfig`-initiering:
 
    ```java
-   // Media Heartbeat Initialization 
-   config.trackingServer = _<SAMPLE_HEARTBEAT_TRACKING_SERVER>_; 
-   config.channel = <SAMPLE_HEARTBEAT_CHANNEL>; 
-   config.appVersion = <SAMPLE_HEARTBEAT_SDK_VERSION>; 
-   config.ovp =  <SAMPLE_HEARTBEAT_OVP_NAME>; 
-   config.playerName = <SAMPLE_PLAYER_NAME>; 
-   config.ssl = <true/false>; 
-   config.debugLogging = <true/false>; 
+   // Media Heartbeat Initialization
+   config.trackingServer = _<SAMPLE_HEARTBEAT_TRACKING_SERVER>_;
+   config.channel = <SAMPLE_HEARTBEAT_CHANNEL>;
+   config.appVersion = <SAMPLE_HEARTBEAT_SDK_VERSION>;
+   config.ovp =  <SAMPLE_HEARTBEAT_OVP_NAME>;
+   config.playerName = <SAMPLE_PLAYER_NAME>;
+   config.ssl = <true/false>;
+   config.debugLogging = <true/false>;
    ```
 
 1. Implementera `MediaHeartbeatDelegate` gränssnittet.
@@ -83,18 +91,18 @@ source-git-commit: ccdc3e170d125a76d798be7ce1fa5c12eef1f76a
    ```java
    // Replace <bitrate>, <startupTime>, <fps>, and  
    // <droppeFrames> with the current playback QoS values.  
-   @Override 
-   public MediaObject getQoSObject() { 
+   @Override
+   public MediaObject getQoSObject() {
        return MediaHeartbeat.createQoSObject(<bitrate>,  
                                              <startupTime>,  
                                              <fps>,  
-                                             <droppedFrames>); 
-   } 
+                                             <droppedFrames>);
+   }
    
-   //Replace <currentPlaybackTime> with the video player current playback time 
-   @Override 
-   public Double getCurrentPlaybackTime() { 
-       return <currentPlaybackTime>; 
+   //Replace <currentPlaybackTime> with the video player current playback time
+   @Override
+   public Double getCurrentPlaybackTime() {
+       return <currentPlaybackTime>;
    }
    ```
 
@@ -103,7 +111,7 @@ source-git-commit: ccdc3e170d125a76d798be7ce1fa5c12eef1f76a
    Använd `MediaHeartbeatConfig` instansen och `MediaHertbeatDelegate` instansen för att skapa `MediaHeartbeat` instansen.
 
    ```java
-   // Replace <MediaHertbeatDelegate> with your delegate instance 
+   // Replace <MediaHertbeatDelegate> with your delegate instance
    MediaHeartbeat _heartbeat =  
      new MediaHeartbeat(<MediaHeartbeatDelegate>, config);
    ```
