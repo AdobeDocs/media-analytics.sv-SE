@@ -1,14 +1,14 @@
 ---
-title: Tidslinje 1 - Visa till innehållets slut
+title: Tidslinje 1 – Visa till innehållets slut
 description: null
 uuid: 0ff591d3-fa99-4123-9e09-c4e71ea1060b
 translation-type: tm+mt
-source-git-commit: 0d2d75dd411edea2a7a853ed425af5c6da154b06
+source-git-commit: c86c7932f932af0a121e0b757921973d6f4084e8
 
 ---
 
 
-# Tidslinje 1 - Visa till innehållets slut{#timeline-view-to-end-of-content}
+# Tidslinje 1 – Visa till innehållets slut{#timeline-view-to-end-of-content}
 
 ## VOD, pre-roll ads, pausa, buffra, visa innehållet i slutet
 
@@ -696,4 +696,3 @@ Skicka `sessionComplete` till backend för att ange att användaren har tittat k
 >[!NOTE]
 >
 >**Hittar du inga händelser? -** Det finns inget uttryckligt stöd i Media Collection API för `seekStart` eller `seekComplete` händelser. Detta beror på att vissa spelare genererar ett mycket stort antal sådana händelser när slutanvändaren rensar, och att flera hundra användare enkelt kan tappa bort nätverksbandbredden för en backend-tjänst. Adobe arbetar runt explicit stöd för seek-händelser genom att beräkna pulsslagets varaktighet baserat på enhetens tidsstämpel i stället för spelhuvudets position.
-
