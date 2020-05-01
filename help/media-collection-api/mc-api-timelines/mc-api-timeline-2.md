@@ -1,14 +1,14 @@
 ---
-title: Tidslinje 2 - sessionen användaren avbryter
+title: Tidslinje 2 – Användaren avbryter sessionen
 description: null
 uuid: 74b89e8f-ef56-4e0c-b9a8-40739e15b4cf
 translation-type: tm+mt
-source-git-commit: 0d2d75dd411edea2a7a853ed425af5c6da154b06
+source-git-commit: c86c7932f932af0a121e0b757921973d6f4084e8
 
 ---
 
 
-# Tidslinje 2 - sessionen användaren avbryter {#timeline--2-user-abandons-session}
+# Tidslinje 2 – Användaren avbryter sessionen {#timeline--2-user-abandons-session}
 
 ## VOD, Pre-roll-ad-annons, midroll-ads-annonser, användare överger innehåll tidigt
 
@@ -407,5 +407,3 @@ Skicka `sessionEnd` till VA-servern för att ange att sessionen ska stängas ome
     eventType:sessionEnd
 }
 ```
-
-
