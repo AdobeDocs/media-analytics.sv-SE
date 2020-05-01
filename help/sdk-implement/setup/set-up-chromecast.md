@@ -3,7 +3,7 @@ title: Konfigurera Chromecast
 description: Installation av Media SDK-program för implementering på Chromecast.
 uuid: d664e394-02a2-4985-bbad-be1bcc44fb2b
 translation-type: tm+mt
-source-git-commit: ccdc3e170d125a76d798be7ce1fa5c12eef1f76a
+source-git-commit: be82be2eb58f89344f2125288599fef461db441e
 
 ---
 
@@ -45,43 +45,43 @@ Med Chromecast SDK 2.x for Experience Cloud Solutions kan ni mäta Chromecast-ap
    1. Lägg till biblioteksfilen i din `index.html` fil och skapa den `ADBMobileConfig` globala variabeln enligt följande (den globala variabeln som används för att konfigurera Adobe Mobile för Heartbeats har en exklusiv nyckel med namnet `mediaHeartbeat`):
 
       ```js
-      <script> 
-          var ADBMobileConfig = { 
-            "marketingCloud": { 
-              "org": "972C898555E9F7BC7F000101@AdobeOrg" 
-            }, 
-            "target": { 
-              "clientCode": "", 
-              "timeout": 5 
-            }, 
-            "audienceManager": { 
-              "server": "obumobile5.demdex.net" 
-            }, 
-            "analytics": { 
-              "rsids": "mobile5vhl.sample.player", 
-              "server": "obumobile5.sc.omtrdc.net", 
-              "ssl": false, 
-              "offlineEnabled": false, 
-              "charset": "UTF-8", 
-              "lifecycleTimeout": 300, 
-              "privacyDefault": "optedin", 
-              "batchLimit": 0, 
-              "timezone": "MDT", 
-              "timezoneOffset": -360, 
-              "referrerTimeout": 0, 
-              "poi": [] 
-            }, 
-            "mediaHeartbeat": { 
-              "server": "obumobile5.hb.omtrdc.net", 
-              "publisher": "972C898555E9F7BC7F000101@AdobeOrg", 
-              "channel": "test-channel-chromecast", 
-              "ssl": false, 
-              "ovp": "chromecast-player", 
-              "sdkVersion": "chromecast-sdk", 
-              "playerName": "Chromecast" 
-            } 
-          }; 
-        </script> 
+      <script>
+          var ADBMobileConfig = {
+            "marketingCloud": {
+              "org": "972C898555E9F7BC7F000101@AdobeOrg"
+            },
+            "target": {
+              "clientCode": "",
+              "timeout": 5
+            },
+            "audienceManager": {
+              "server": "obumobile5.demdex.net"
+            },
+            "analytics": {
+              "rsids": "mobile5vhl.sample.player",
+              "server": "obumobile5.sc.omtrdc.net",
+              "ssl": false,
+              "offlineEnabled": false,
+              "charset": "UTF-8",
+              "lifecycleTimeout": 300,
+              "privacyDefault": "optedin",
+              "batchLimit": 0,
+              "timezone": "MDT",
+              "timezoneOffset": -360,
+              "referrerTimeout": 0,
+              "poi": []
+            },
+            "mediaHeartbeat": {
+              "server": "obumobile5.hb.omtrdc.net",
+              "publisher": "972C898555E9F7BC7F000101@AdobeOrg",
+              "channel": "test-channel-chromecast",
+              "ssl": false,
+              "ovp": "chromecast-player",
+              "sdkVersion": "chromecast-sdk",
+              "playerName": "Chromecast"
+            }
+          };
+        </script>
       <script type="text/javascript" src="script/lib/adbmobile-chromecast.min.js"></script>
       ```
 
@@ -108,8 +108,8 @@ Med Chromecast SDK 2.x for Experience Cloud Solutions kan ni mäta Chromecast-ap
    Kontrollera att din `ADBMobileConfig` konfiguration innehåller ditt `marketingCloud` organisations-ID.
 
    ```js
-   "marketingCloud": { 
-       "org": YOUR-MCORG-ID" 
+   "marketingCloud": {
+       "org": YOUR-MCORG-ID"
    }
    ```
 
@@ -131,6 +131,7 @@ Med Chromecast SDK 2.x for Experience Cloud Solutions kan ni mäta Chromecast-ap
    | --- | --- |
    | `getMarketingCloudID()` | Hämtar Experience Cloud-besökar-ID:t från besökar-ID-tjänsten.  <br/><br/>`ADBMobile.visitor.getMarketingCloudID();` |
    | `syncIdentifiers()` | Med Experience Cloud Visitor ID kan ni ange ytterligare kund-ID:n som kan kopplas till varje besökare. Besökar-API:t godkänner flera kund-ID:n för samma besökare och en kundtypsidentifierare för att skilja omfattningen för olika kund-ID:n åt. Den här metoden motsvarar den `setCustomerIDs()` i JavaScript-biblioteket.  Exempel: <br/><br/>`var identifiers = {};` <br/><br/>`identifiers["idType"] = "idValue";` <br/><br/>`ADBMobile.visitor.syncIdentifiers(identifiers);` |
+
 
 
 <!--   **Postbacks -** For more information about configuring postbacks, see [Configure Postbacks.](https://docs.adobe.com/content/help/en/mobile-services/using/manage-app-settings-ug/configuring-app/signals.html) -->
