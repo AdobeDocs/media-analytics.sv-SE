@@ -3,7 +3,10 @@ title: Förutsättningar
 description: null
 uuid: 4c0b37f3-8615-4cc0-b9c9-eeb029067064
 translation-type: tm+mt
-source-git-commit: ccdc3e170d125a76d798be7ce1fa5c12eef1f76a
+source-git-commit: 72cdf2d03ebae6998514c9092ab462c29345c9f9
+workflow-type: tm+mt
+source-wordcount: '424'
+ht-degree: 0%
 
 ---
 
@@ -38,7 +41,7 @@ För en implementering av *Media Analytics* måste du utföra följande uppgifte
    >
    >För att kunna delta i Adobe Experience Cloud Device Co-op krävs Experience Cloud ID-tjänsten.
 
-   Om du inte har implementerat ID-tjänsten är det dags att börja fundera på en migreringsstrategi nu. Mer information om ID-tjänstens betydelse och roll finns i [Varför identitetstjänsten ska finnas på din radarr.](https://blogs.adobe.com/digitalmarketing/analytics/why-new-adobe-marketing-cloud-id-service-should-be-on-your-radar/)
+   Om du inte har implementerat ID-tjänsten är det dags att börja fundera på en migreringsstrategi nu. Mer information om ID-tjänstens betydelse och roll finns i [Varför identitetstjänsten ska finnas på din radarr.](https://theblog.adobe.com/why-new-adobe-marketing-cloud-id-service-should-be-on-your-radar/)
 
    >[!IMPORTANT]
    >
