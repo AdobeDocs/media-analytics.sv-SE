@@ -3,12 +3,15 @@ title: Kodjämförelse 1.x till 2.x
 description: I det här avsnittet jämförs kod i 1.x- och 2.x-versionerna av Media SDK.
 uuid: 9f0a1660-2100-446d-ab75-afdf966478b3
 translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+source-git-commit: 72cdf2d03ebae6998514c9092ab462c29345c9f9
+workflow-type: tm+mt
+source-wordcount: '567'
+ht-degree: 2%
 
 ---
 
 
-# Kodjämförelse: 1.x till 2.x {#code-comparison-x-to-x}
+# Code comparison: 1.x to 2.x {#code-comparison-x-to-x}
 
 Alla konfigurationsparametrar och API:er för spårning konsolideras nu i `MediaHeartbeats` - och `MediaHeartbeatConfig` -klasserna.
 
@@ -27,7 +30,7 @@ Alla konfigurationsparametrar och API:er för spårning konsolideras nu i `Media
 **Länkar till exempelspelare för 1.x och 2.x:**
 
 * [1.x Exempelspelare ](https://github.com/Adobe-Marketing-Cloud/video-heartbeat/blob/master/sdks/js/samples/BasicPlayerSample/script/app/analytics/video.analytics.provider.js#L58)
-* [2.x Exempelspelare ](https://github.com/Adobe-Marketing-Cloud/media-sdks/blob/master/sdks/js/samples/BasicPlayerSample/script/app/analytics/video.analytics.provider.js#L47)
+* [2.x Exempelspelare ](https://github.com/Adobe-Marketing-Cloud/media-sdks/blob/master/sdks/js/2.x/samples/BasicPlayerSample/script/app/analytics/video.analytics.provider.js#L47)
 
 I följande avsnitt finns kodjämförelser mellan 1.x och 2.x, som omfattar initiering, Core Playback, Ad Playback, Chapter PlayPlayback och några andra händelser.
 
@@ -626,7 +629,7 @@ VideoAnalyticsProvider.prototype._onAdSkip = function() {
 ```
 
 >[!NOTE]
->I VHL 1.5.X-API:er; och `getAdinfo()` `getAdBreakInfo()` måste returnera null om spelaren befinner sig utanför annonsbrytningens gränser.
+>I VHL 1.5.X-API:er; `getAdinfo()` och måste returnera null om spelaren befinner sig utanför annonsbrytningens gränser. `getAdBreakInfo()`
 
 ### Ad Complete
 
