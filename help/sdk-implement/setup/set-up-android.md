@@ -3,7 +3,10 @@ title: Konfigurera Android
 description: Installation av Media SDK-program för implementering på Android.
 uuid: 3ffe3276-a104-4182-9220-038729e9f3d5
 translation-type: tm+mt
-source-git-commit: be82be2eb58f89344f2125288599fef461db441e
+source-git-commit: 300eb77858296f0246a2cb484386c0dcdf8b87b9
+workflow-type: tm+mt
+source-wordcount: '403'
+ht-degree: 9%
 
 ---
 
@@ -12,12 +15,10 @@ source-git-commit: be82be2eb58f89344f2125288599fef461db441e
 
 >[!IMPORTANT]
 >
->Från och med oktober 2020 upphör stödet för version 4 Mobile SDK och de fristående Media Analytics SDK:erna för Android. Du kan fortsätta att hämta och använda version 4 SDK:er, men kundtjänst och åtkomst till forumen upphör. Du bör migrera till Adobe Experience Platform (AEP) SDK:er för Android. AEP Mobile SDK (tidigare kallat v5) har exklusivt stöd för funktioner och funktioner i Adobe Experience Cloud. Mer information om den här ändringen finns i [version 4 av Mobile SDKs End of Support FAQ](https://aep-sdks.gitbook.io/docs/version-4-sdk-end-of-support-faq). Vi rekommenderar att du migrerar till nya AEP Mobile SDK.
-När du har migrerat till AEP Mobile SDK måste du implementera startstillägget för Analytics och starttillägget för Media Analytics för att aktivera Adobe Analytics för ljud och video. Mer information om hur du migrerar till nya AEP Mobile SDK finns i [Migrera från fristående media SDK till Adobe Launch ](https://docs.adobe.com/content/help/en/media-analytics/using/sdk-implement/sdk-to-launch/sdk-to-launch-migration.html)
+>När stödet för version 4 Mobile SDK upphör den 31 augusti 2021 upphör stödet för Media Analytics SDK för iOS och Android.  Mer information finns i Vanliga frågor om [supporten för Media Analytics SDK](/help/sdk-implement/end-of-support-faqs.md).
 
 
 ## Förutsättningar
-
 
 * **Hämta giltiga konfigurationsparametrar för Media SDK** Dessa parametrar kan hämtas från en Adobe-representant när du har konfigurerat ditt analyskonto.
 * **Implementera ADBMobil för Android i ditt program** Mer information om dokumentationen för Adobe Mobile SDK finns i [Android SDK 4.x för Experience Cloud Solutions.](https://docs.adobe.com/content/help/en/mobile-services/android/overview.html)
