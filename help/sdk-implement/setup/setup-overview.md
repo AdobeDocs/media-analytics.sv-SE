@@ -3,7 +3,10 @@ title: Översikt
 description: Översikt över hur du konfigurerar Media SDK för mediespårning i dina mobil-, OTT- och webbläsarprogram (JS).
 uuid: 06fefedb-b0c8-4f7d-90c8-e374cdde1695
 translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+source-git-commit: 300eb77858296f0246a2cb484386c0dcdf8b87b9
+workflow-type: tm+mt
+source-wordcount: '734'
+ht-degree: 1%
 
 ---
 
@@ -12,8 +15,9 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 >[!IMPORTANT]
 >
->Följande instruktioner gäller för 2.x Media SDK:er. Om du implementerar en 1.x-version av Media SDK läser du [1.x Media SDK-dokumentationen.](/help/sdk-implement/download-sdks.md) Information om Primetime-integratörer finns i _Primetime Media SDK-dokumentation_ nedan.
+>När stödet för version 4 Mobile SDK upphör den 31 augusti 2021 upphör även stödet för Media Analytics SDK för iOS och Android.  Mer information finns i Vanliga frågor om [supporten för Media Analytics SDK](/help/sdk-implement/end-of-support-faqs.md).
 
+Följande instruktioner gäller för 2.x Media SDK:er. Om du implementerar en 1.x-version av Media SDK läser du [1.x Media SDK-dokumentationen.](/help/sdk-implement/download-sdks.md) Information om Primetime-integratörer finns i _Primetime Media SDK-dokumentation_ nedan.
 
 ## Stöd för minst plattformsversion {#minimum-platform-version}
 
@@ -39,7 +43,7 @@ Utför följande implementeringssteg:
 
 1. Skapa en `MediaHeartbeatConfig` instans och ange parametervärden för config.
 
-   |  Variabelnamn | Beskrivning | Obligatoriskt |  Standardvärde |
+   |  Variabelnamn  | Beskrivning  | Obligatoriskt |  Standardvärde  |
    |---|---|:---:|---|
    | `trackingServer` | Spårningsserver för medieanalys. Detta skiljer sig från analysspårningsservern. | Ja | Tom sträng |
    | `channel` | Kanalnamn | Nej | Tom sträng |
@@ -51,7 +55,7 @@ Utför följande implementeringssteg:
 
 1. Implementera `MediaHeartbeatDelegate`.
 
-   |  Metodnamn |  Beskrivning | Obligatoriskt |
+   |  Metodnamn  |  Beskrivning  | Obligatoriskt |
    | --- | --- | :---: |
    | `getQoSObject()` | Returnerar den `MediaObject` instans som innehåller aktuell QoS-information. Den här metoden anropas flera gånger under en uppspelningssession. Spelarimplementeringen måste alltid returnera de senast tillgängliga QoS-data. | Ja |
    | `getCurrentPlaybackTime()` | Returnerar spelhuvudets aktuella position. För VOD-spårning anges värdet i sekunder från mediaobjektets början. För LINEAR/LIVE tracking anges värdet i sekunder från programmets början. | Ja |
@@ -60,7 +64,7 @@ Utför följande implementeringssteg:
    >
    >QoS-objektet (Quality of Service) är valfritt. Om QoS-data är tillgängliga för spelaren och du vill spåra dessa data, krävs följande variabler:
 
-   | Variabelnamn | Beskrivning | Obligatoriskt |
+   | Variabelnamn | Beskrivning   | Obligatoriskt |
    | --- | --- | :---: |
    | `bitrate` | Mediets bithastighet i bitar per sekund. | Ja |
    | `startupTime` | Starttiden för media i millisekunder. | Ja |
@@ -84,36 +88,36 @@ Utför följande implementeringssteg:
    I följande exempelkod används JavaScript 2.x SDK för en HTML5-videospelare:
 
    ```javascript
-   // Create local references to the heartbeat classes 
-   var MediaHeartbeat = ADB.va.MediaHeartbeat; 
-   var MediaHeartbeatConfig = ADB.va.MediaHeartbeatConfig; 
-   var MediaHeartbeatDelegate = ADB.va.MediaHeartbeatDelegate; 
+   // Create local references to the heartbeat classes
+   var MediaHeartbeat = ADB.va.MediaHeartbeat;
+   var MediaHeartbeatConfig = ADB.va.MediaHeartbeatConfig;
+   var MediaHeartbeatDelegate = ADB.va.MediaHeartbeatDelegate;
    
-   //Media Heartbeat Config 
-   var mediaConfig = new MediaHeartbeatConfig(); 
-   mediaConfig.trackingServer = "[your_namespace].hb.omtrdc.net"; 
-   mediaConfig.playerName = "HTML5 Basic"; 
-   mediaConfig.channel = "Video Channel"; 
-   mediaConfig.debugLogging = true; 
-   mediaConfig.appVersion = "2.0"; 
-   mediaConfig.ssl = false; 
-   mediaConfig.ovp = ""; 
+   //Media Heartbeat Config
+   var mediaConfig = new MediaHeartbeatConfig();
+   mediaConfig.trackingServer = "[your_namespace].hb.omtrdc.net";
+   mediaConfig.playerName = "HTML5 Basic";
+   mediaConfig.channel = "Video Channel";
+   mediaConfig.debugLogging = true;
+   mediaConfig.appVersion = "2.0";
+   mediaConfig.ssl = false;
+   mediaConfig.ovp = "";
    
-   // Media Heartbeat Delegate 
-   var mediaDelegate = new MediaHeartbeatDelegate(); 
+   // Media Heartbeat Delegate
+   var mediaDelegate = new MediaHeartbeatDelegate();
    
-   // Set mediaDelegate CurrentPlaybackTime 
-   mediaDelegate.getCurrentPlaybackTime = function() { 
-       return video.currentTime; 
-   }; 
+   // Set mediaDelegate CurrentPlaybackTime
+   mediaDelegate.getCurrentPlaybackTime = function() {
+       return video.currentTime;
+   };
    
-   // Set mediaDelegate QoSObject - OPTIONAL 
-   mediaDelegate.getQoSObject = function() { 
+   // Set mediaDelegate QoSObject - OPTIONAL
+   mediaDelegate.getQoSObject = function() {
        return MediaHeartbeat.createQoSObject(video.bitrate,  
                                              video.startuptime,  
                                              video.fps,  
-                                             video.droppedframes); 
-   } 
+                                             video.droppedframes);
+   }
    // Create mediaHeartbeat instance      
    this.mediaHeartbeat =  
      new MediaHeartbeat(mediaDelegate, mediaConfig, appMeasurementInstance);  
@@ -140,11 +144,11 @@ Mediespårning fungerar likadant på alla plattformar, både datorer och mobila 
 
 ## SDK 1.x-dokumentation {#sdk-1x-documentation}
 
-| Video Analytics 1.x SDKs |  Utvecklarhandböcker (endast PDF-filer) |
+| Video Analytics 1.x SDKs  |  Utvecklarhandböcker (endast PDF-filer) |
 | --- | --- |
 | Android | [Konfigurera för Android ](vhl-dev-guide-v15_android.pdf) |
 | AppleTV | [Konfigurera för AppleTV ](vhl-dev-guide-v1x_appletv.pdf) |
-| Kromecast | [Konfigurera för Chromecast ](chromecast_1.x_sdk.pdf) |
+| Chromecast | [Konfigurera för Chromecast ](chromecast_1.x_sdk.pdf) |
 | iOS | [Konfigurera för iOS ](vhl-dev-guide-v15_ios.pdf) |
 | JavaScript | [Konfigurera för JavaScript ](vhl-dev-guide-v15_js.pdf) |
 | Primetime | <ul> <li> Android:   [Konfigurera medieanalys](https://help.adobe.com/en_US/primetime/psdk/android/1.4/index.html#PSDKs-task-Initialize_and_configure_video_analytics_) </li> <li> DHLS:   [Konfigurera medieanalys](https://help.adobe.com/en_US/primetime/psdk/dhls/index.html#PSDKs-task-Initialize_and_configure_video_analytics_) </li> <li> iOS:   [Konfigurera medieanalys](https://help.adobe.com/en_US/primetime/psdk/ios/1.4/index.html#PSDKs-task-Initialize_and_configure_video_analytics_) </li> </ul> |
@@ -152,4 +156,4 @@ Mediespårning fungerar likadant på alla plattformar, både datorer och mobila 
 
 ## Primetime Media SDK-dokumentation {#primetime-docs}
 
-* [Användarhandböcker för Primetime](https://helpx.adobe.com/primetime/user-guide.html)
+* [Användarhandböcker för Primetime](https://helpx.adobe.com/se/primetime/user-guide.html)
