@@ -4,10 +4,10 @@ user-guide-title: Adobe Analytics för ljud och video
 product: adobe analytics
 sub-product: medieanalys
 translation-type: tm+mt
-source-git-commit: 9c8bbfb848948d5798c92f7267fb42a2d08cc1d2
+source-git-commit: 841e02e5f4fdd6eebd6eac0c1d42997db49b071e
 workflow-type: tm+mt
-source-wordcount: '670'
-ht-degree: 100%
+source-wordcount: '677'
+ht-degree: 98%
 
 ---
 
@@ -15,22 +15,24 @@ ht-degree: 100%
 # Adobe Analytics för ljud och video {#using}
 
 + [Mäta ljud och video i Adobe Analytics](media-overview.md)
-+ Mätalternativ {#measurement-options}
-   + Spårning av milstolpar för mediemodul {#mm-milestone-tracking}
-      + [Översikt över milstolpar](measurement-options/mm-milestone-tracking/milestone-overview.md)
-      + [Migrera milstolpe till Media Analytics](measurement-options/mm-milestone-tracking/migrate-ms-to-va.md)
-      + [Migrera från milstolpe till anpassad länk](measurement-options/mm-milestone-tracking/migrate-ms-to-cl.md)
-   + Anpassad länk i Analytics {#cl-in-aa}
-      + [Implementeringshandbok för anpassade länkar](measurement-options/cl-in-aa/cl-impl-guide.md)
++ [Enheter och plattformar som stöds](measurement-options/supported-devices.md)
 + Introduktion till ljud- och videoanalys {#intro-to-ava}
    + [Förutsättningar](intro-to-ava/prereqs.md)
    + Implementeringsvägar {#implementation-paths}
       + [Översikt](intro-to-ava/implementation-paths/implementation-paths.md)
       + [Klientsida](intro-to-ava/implementation-paths/client-side-path.md)
-      + [Adobe Experience Platform Launch](intro-to-ava/implementation-paths/launch-path.md)
-      + [Primetime](intro-to-ava/implementation-paths/primetime-path.md)
-   + [Aktivera Audience Manager](intro-to-ava/am-enablement.md)
+      + Andra implementeringsvägar {#other-paths}
+         + Spårning av milstolpar för mediemodul {#mm-milestone-tracking}
+            + [Översikt över milstolpar](measurement-options/mm-milestone-tracking/milestone-overview.md)
+            + [Migrera milstolpe till Media Analytics](measurement-options/mm-milestone-tracking/migrate-ms-to-va.md)
+            + [Migrera från milstolpe till anpassad länk](measurement-options/mm-milestone-tracking/migrate-ms-to-cl.md)
+         + Anpassad länk i Analytics {#cl-in-aa}
+            + [Implementeringshandbok för anpassade länkar](measurement-options/cl-in-aa/cl-impl-guide.md)
+         + Primetime {#primetime}
+            + [Primetime](intro-to-ava/implementation-paths/primetime-path.md)
+         + [Aktivera Audience Manager](intro-to-ava/am-enablement.md)
 + Media Analytics SDK {#sdk-implement}
+   + [Vanliga frågor om supporten för Media Analytics SDK](sdk-implement/end-of-support-faqs.md)
    + [Hämta SDK:er](sdk-implement/download-sdks.md)
    + Installera och konfigurera {#setup}
       + [Översikt](sdk-implement/setup/setup-overview.md)
