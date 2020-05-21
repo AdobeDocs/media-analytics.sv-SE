@@ -1,14 +1,17 @@
 ---
-title: Tidslinje 3 - kapitel
+title: Tidslinje 3 – Kapitel
 description: null
 uuid: 41b52072-e1cd-4dda-9253-31f3408924f6
 translation-type: tm+mt
-source-git-commit: 5107de22c2388e8ac5b15b8d28fa974e97363fdf
+source-git-commit: 197041df4c985cdc572564652a976bd733448787
+workflow-type: tm+mt
+source-wordcount: '1219'
+ht-degree: 5%
 
 ---
 
 
-# Tidslinje 3 - kapitel {#timeline-3-chapters}
+# Tidslinje 3 – Kapitel {#timeline-3-chapters}
 
 ## VOD, pre-roll ads, pausa, buffra, visa innehållet i slutet
 
@@ -745,4 +748,3 @@ Skicka `sessionComplete` till backend för att ange att användaren har tittat k
 >[!NOTE]
 >
 >**Hittar du inga händelser? -** Det finns inget uttryckligt stöd i Media Collection API för `seekStart` eller `seekComplete` händelser. Detta beror på att vissa spelare genererar ett mycket stort antal sådana händelser när slutanvändaren rensar, och att flera hundra användare enkelt kan tappa bort nätverksbandbredden för en backend-tjänst. Adobe arbetar runt explicit stöd för seek-händelser genom att beräkna pulsslagets varaktighet baserat på enhetens tidsstämpel i stället för spelhuvudets position.
-
