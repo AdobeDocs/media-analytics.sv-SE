@@ -3,7 +3,10 @@ title: Hämta SDK:er
 description: Länkar till SDK-nedladdningar för tillgängliga plattformar, inklusive Android, iOS, JavaScript, Chromecast och Roku.
 uuid: a619fbb8-693e-4583-8dad-0ff875e715f8
 translation-type: tm+mt
-source-git-commit: 06e32cbea61ed56220787e2bcb822f6bf02b44ac
+source-git-commit: 300eb77858296f0246a2cb484386c0dcdf8b87b9
+workflow-type: tm+mt
+source-wordcount: '359'
+ht-degree: 6%
 
 ---
 
@@ -12,11 +15,7 @@ source-git-commit: 06e32cbea61ed56220787e2bcb822f6bf02b44ac
 
 >[!IMPORTANT]
 >
->Från och med oktober 2020 upphör stödet för version 4 Mobile SDK och de fristående Media Analytics SDK:erna för iOS och Android. Du kan fortsätta att hämta och använda version 4 SDK:er, men kundtjänst och åtkomst till forumen upphör. Du bör migrera till Adobe Experience Platform (AEP) SDK för iOS eller Android. AEP Mobile SDK (tidigare kallat v5) har exklusivt stöd för funktioner och funktioner i Adobe Experience Cloud. Mer information om den här ändringen finns i [version 4 av Mobile SDKs End of Support FAQ](https://aep-sdks.gitbook.io/docs/version-4-sdk-end-of-support-faq). Vi rekommenderar att du migrerar till nya AEP Mobile SDK.
-När du har migrerat till AEP Mobile SDK måste du implementera startstillägget för Analytics och starttillägget för Media Analytics för att aktivera Adobe Analytics för ljud och video. Mer information om hur du migrerar till nya AEP Mobile SDK finns i [Migrera från fristående media SDK till Adobe Launch ](https://docs.adobe.com/content/help/en/media-analytics/using/sdk-implement/sdk-to-launch/sdk-to-launch-migration.html)
-
-
-
+>När stödet för version 4 Mobile SDK upphör den 31 augusti 2021 upphör även stödet för Media Analytics SDK för iOS och Android.  Mer information finns i Vanliga frågor om [supporten för Media Analytics SDK](/help/sdk-implement/end-of-support-faqs.md).
 
 ## Ladda ned 2.x Media SDKs {#download-2x-sdks}
 
