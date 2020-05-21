@@ -1,16 +1,20 @@
 ---
-title: Enheter som stöds
-description: null
-uuid: null
+title: Enheter och plattformar som stöds
+description: Adobe Analytics för ljud och video ser till att alla medieströmmar samlas in och rapporteras på alla enheter.
 translation-type: tm+mt
-source-git-commit: 3a237ee31412784f708e772cc3a58047630e2184
+source-git-commit: a8fec1747e688473af7a5eabbc4f9968772b5db3
+workflow-type: tm+mt
+source-wordcount: '341'
+ht-degree: 15%
 
 ---
 
 
-# Enheter som stöds {#devices-supported}
+# Enheter och plattformar som stöds {#devices-supported}
 
-Adobe Analytics för ljud och video ser till att alla medieströmmar samlas in och rapporteras på alla enheter.
+>[!IMPORTANT]
+>
+>När stödet för version 4 Mobile SDK upphör den 31 augusti 2021 upphör stödet för Media Analytics SDK för iOS och Android.  Mer information finns i Vanliga frågor om [supporten för Media Analytics SDK](/help/sdk-implement/end-of-support-faqs.md).
 
 Adobe Analytics for Audio and Video har stöd för alla större enheter:
 
@@ -18,32 +22,32 @@ Adobe Analytics for Audio and Video har stöd för alla större enheter:
 * OTT-enheter för ROKU, AppleTV, FireTV och Android TV
 * JavaScript-webbläsare för stationära och bärbara datorer
 
-Media SDK uppdateras regelbundet när nya versioner av enheter släpps och du kan använda SDK för att integrera med de största mediespelarna idag, inklusive Brightcove och Ooyala.
+SDK:n för media uppdateras regelbundet när nya versioner av enheter släpps och du kan använda SDK för att integrera med de största mediespelarna idag, inklusive Brightcove och Oyala.
 
 För enheter och plattformar som för närvarande inte har SDK-stöd eller i situationer där du inte vill använda en SDK kan du implementera API:t för Media Collection. Med Media Collection API kan du göra RESTful API-anrop direkt från en enhet eller plattform till Media Analytics-backend.
 
-Tabellen nedan visar de enheter som stöds för närvarande. Information om hur du hämtar den senaste SDK-versionen finns i [Hämta SDK:er](https://docs.adobe.com/content/help/en/media-analytics/using/sdk-implement/download-sdks.html). Om en enhet inte finns med i listan kontaktar du kundtjänst eller lösningskonsult för att få information om enhetens status.
+Tabellen nedan visar vilka enheter och plattformar som stöds. Information om hur du hämtar den senaste SDK-versionen finns i [Hämta SDK:er](https://docs.adobe.com/content/help/en/media-analytics/using/sdk-implement/download-sdks.html). Om en enhet inte finns med i listan kontaktar du kundtjänst eller lösningskonsult för att få information om enhetens status.
 
-
-| Strömningsplattform/enhet |  | Media Launch Extension med AEP SDK | Media SDK | Media Collection API |
-|---------------------------|-----------------------------------------------|:----------------------------:|:-------------------:|:--------------------:|
+| Strömmande plattformar och enheter |  | Media Launch Extension med AEP SDK | Media SDK | Media Collection API |
+|:---------------------------:|:-----------------------------------------------:|:----------------------------:|:-------------------:|:--------------------:|
 | Webb/mobil |  |  |  |  |
-|  | JavaScript-webbläsare | X | X | X |
+|  | JavaScript-webbläsare | ![](/help/assets/icon-blue-check.png) | ![](/help/assets/icon-blue-check.png)    | ![](/help/assets/icon-blue-check.png) |
 | Mobilapp |  |  |  |  |
-|  | iOS-enheter | X | X | X |
-|  | Android-enheter | X | X | X |
-|  | Windows-enheter |  |  | X |
+|  | iOS-enheter | ![](/help/assets/icon-blue-check.png) | ![](/help/assets/icon-blue-check.png) <sup>1</sup> | ![](/help/assets/icon-blue-check.png) |
+|  | Android-enheter | ![](/help/assets/icon-blue-check.png) | ![](/help/assets/icon-blue-check.png) <sup>1</sup> | ![](/help/assets/icon-blue-check.png) |
+|  | Windows-enheter |  |  | ![](/help/assets/icon-blue-check.png) |
 | OTT |  |  |  |  |
-|  | Apple TV (Legacy, TVOS) |  | X | X |
-|  | ROKU |  | X<br>(BrightScript) | X<br>(inbyggd) |
-|  | Fire TV (Fire OS) |  | X | X |
-|  | Android TV |  | X | X |
-|  | Chromecast |  | X | X |
-|  | Spelkonsoler (t.ex. Xbox ONE, Sony PS3/PS4) |  |  | X |
-|  | Ange övre rutor (t.ex. xfinity X1) |  |  | X |
-|  | Smarta TV-apparater (t.ex. Samsung, LG, Sony, Vizio) |  | X<br>(webbaserad) | X |
+|  | Apple TV (tvOS) | Planerat 2020 | ![](/help/assets/icon-blue-check.png) <sup>1</sup> | ![](/help/assets/icon-blue-check.png) |
+|  | ROKU |  | ![](/help/assets/icon-blue-check.png)   <br>(BrightScript)    | ![](/help/assets/icon-blue-check.png)<br>(inbyggt) |
+|  | Fire TV (Fire OS) | Planerat 2020 | ![](/help/assets/icon-blue-check.png) <sup>1</sup> | ![](/help/assets/icon-blue-check.png) |
+|  | Android TV | Planerat 2020 | ![](/help/assets/icon-blue-check.png) <sup>1</sup> | ![](/help/assets/icon-blue-check.png) |
+|  | Chromecast |  | ![](/help/assets/icon-blue-check.png)    | ![](/help/assets/icon-blue-check.png) |
+|  | Spelkonsoler (t.ex. Xbox ONE, Sony PS3/PS4) |  |  | ![](/help/assets/icon-blue-check.png) |
+|  | Ange övre rutor (t.ex. xfinity X1) |  |  | ![](/help/assets/icon-blue-check.png) |
+|  | Smarta TV-apparater (t.ex. Samsung, LG, Sony, Vizio) |  | ![](/help/assets/icon-blue-check.png)   <br>(webbaserad)    | ![](/help/assets/icon-blue-check.png) |
 | Övriga |  |  |  |  |
-|  | Nya anslutna enheter |  |  | X |
+|  | Nya anslutna enheter |  |  | ![](/help/assets/icon-blue-check.png) |
 
+1. Stödet för dessa SDK upphör den 31 augusti 2021. Mer information finns i Vanliga frågor om [supporten för Media Analytics SDK](/help/sdk-implement/end-of-support-faqs.md).
 
-För Media SDK, se även [Stöd för lägsta plattformsversion](/help/sdk-implement/setup/setup-overview.md#minimum-platform-version)
+Mer information om vilka plattformsversioner som minst stöds för varje SDK finns i [Stöd för minimiplattformsversion](https://docs.adobe.com/content/help/en/media-analytics/using/sdk-implement/setup/setup-overview.html)
