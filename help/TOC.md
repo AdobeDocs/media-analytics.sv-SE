@@ -4,10 +4,10 @@ user-guide-title: Adobe Analytics för ljud och video
 product: adobe analytics
 sub-product: medieanalys
 translation-type: tm+mt
-source-git-commit: 841e02e5f4fdd6eebd6eac0c1d42997db49b071e
+source-git-commit: 48de18b022d004bf301a55ec71b6a889f7b9ebb3
 workflow-type: tm+mt
 source-wordcount: '677'
-ht-degree: 98%
+ht-degree: 96%
 
 ---
 
@@ -21,9 +21,9 @@ ht-degree: 98%
    + Implementeringsvägar {#implementation-paths}
       + [Översikt](intro-to-ava/implementation-paths/implementation-paths.md)
       + [Klientsida](intro-to-ava/implementation-paths/client-side-path.md)
-      + Andra implementeringsvägar {#other-paths}
+      + Andra implementeringssökvägar {#other-paths}
          + Spårning av milstolpar för mediemodul {#mm-milestone-tracking}
-            + [Översikt över milstolpar](measurement-options/mm-milestone-tracking/milestone-overview.md)
+            + [Översikt över milstolpe](measurement-options/mm-milestone-tracking/milestone-overview.md)
             + [Migrera milstolpe till Media Analytics](measurement-options/mm-milestone-tracking/migrate-ms-to-va.md)
             + [Migrera från milstolpe till anpassad länk](measurement-options/mm-milestone-tracking/migrate-ms-to-cl.md)
          + Anpassad länk i Analytics {#cl-in-aa}
@@ -41,7 +41,7 @@ ht-degree: 98%
       + [Konfigurera JavaScript](sdk-implement/setup/set-up-js.md)
       + [Konfigurera Chromecast](sdk-implement/setup/set-up-chromecast.md)
       + [Konfigurera Roku](sdk-implement/setup/set-up-roku.md)
-   + Spåra ljud- och videouppspelning {#track-av-playback}
+   + Track Audio and Video Playback {#track-av-playback}
       + [Översikt](sdk-implement/track-av-playback/track-core-overview.md)
       + Spåra grundläggande ljud- och videouppspelning {#track-core}
          + [Spåra grundläggande uppspelning i Android](sdk-implement/track-av-playback/track-core/track-core-android.md)
@@ -61,7 +61,7 @@ ht-degree: 98%
          + [Spåra sökning i JavaScript](sdk-implement/track-av-playback/track-seeking/track-seeking-js.md)
          + [Spåra sökning i Chromecast](sdk-implement/track-av-playback/track-seeking/track-seeking-chromecast.md)
          + [Spåra sökning i Roku](sdk-implement/track-av-playback/track-seeking/track-seeking-roku.md)
-      + Implementera standardmetadata {#impl-std-metadata}
+      + Implement Standard Metadata {#impl-std-metadata}
          + [Implementera standardmetadata i Android](sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-android.md)
          + [Implementera standardmetadata i iOS](sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-ios.md)
          + [iOS-metadatanycklar](sdk-implement/track-av-playback/impl-std-metadata/ios-metadata-keys.md)
@@ -77,7 +77,7 @@ ht-degree: 98%
       + [Spåra annonser i JavaScript](sdk-implement/track-ads/track-ads-js.md)
       + [Spåra annonser i Chromecast](sdk-implement/track-ads/track-ads-chromecast.md)
       + [Spåra annonser i Roku](sdk-implement/track-ads/track-ads-roku.md)
-      + Implementera standardmetadata för annonser {#impl-std-ad-metadata}
+      + Implement Standard ad Metadata {#impl-std-ad-metadata}
          + [Implementera standardmetadata för annonser i Android](sdk-implement/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-android.md)
          + [Implementera standardmetadata för annonser i iOS](sdk-implement/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-ios.md)
          + [Implementera standardmetadata för annonser i JavaScript](sdk-implement/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-js.md)
