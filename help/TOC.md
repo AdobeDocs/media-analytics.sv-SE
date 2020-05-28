@@ -4,10 +4,10 @@ user-guide-title: Adobe Analytics för ljud och video
 product: adobe analytics
 sub-product: medieanalys
 translation-type: tm+mt
-source-git-commit: 48de18b022d004bf301a55ec71b6a889f7b9ebb3
+source-git-commit: a73536bd7a818ac23ad322a15f109644e75ee0d5
 workflow-type: tm+mt
-source-wordcount: '677'
-ht-degree: 96%
+source-wordcount: '765'
+ht-degree: 79%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 96%
    + Implementeringsvägar {#implementation-paths}
       + [Översikt](intro-to-ava/implementation-paths/implementation-paths.md)
       + [Klientsida](intro-to-ava/implementation-paths/client-side-path.md)
-      + Andra implementeringssökvägar {#other-paths}
+      + Other Implementation Paths {#other-paths}
          + Spårning av milstolpar för mediemodul {#mm-milestone-tracking}
             + [Översikt över milstolpe](measurement-options/mm-milestone-tracking/milestone-overview.md)
             + [Migrera milstolpe till Media Analytics](measurement-options/mm-milestone-tracking/migrate-ms-to-va.md)
@@ -38,7 +38,9 @@ ht-degree: 96%
       + [Översikt](sdk-implement/setup/setup-overview.md)
       + [Konfigurera Android](sdk-implement/setup/set-up-android.md)
       + [Konfigurera iOS](sdk-implement/setup/set-up-ios.md)
-      + [Konfigurera JavaScript](sdk-implement/setup/set-up-js.md)
+      + Konfigurera JavaScript {#setup-javascript}
+         + [Konfigurera JavaScript 2.x](sdk-implement/setup/setup-javascript/set-up-js-2.md)
+         + [Konfigurera JavaScript 3.x](sdk-implement/setup/setup-javascript/set-up-js-3.md)
       + [Konfigurera Chromecast](sdk-implement/setup/set-up-chromecast.md)
       + [Konfigurera Roku](sdk-implement/setup/set-up-roku.md)
    + Track Audio and Video Playback {#track-av-playback}
@@ -46,26 +48,30 @@ ht-degree: 96%
       + Spåra grundläggande ljud- och videouppspelning {#track-core}
          + [Spåra grundläggande uppspelning i Android](sdk-implement/track-av-playback/track-core/track-core-android.md)
          + [Spåra grundläggande uppspelning i iOS](sdk-implement/track-av-playback/track-core/track-core-ios.md)
-         + [Spåra grundläggande uppspelning i JavaScript](sdk-implement/track-av-playback/track-core/track-core-js.md)
+         + [Spåra kärnuppspelning i JavaScript 2.x](sdk-implement/track-av-playback/track-core/track-core-js.md)
+         + [Spåra kärnuppspelning i JavaScript 3.x](sdk-implement/track-av-playback/track-core/track-core-js3.md)
          + [Spåra grundläggande uppspelning i Chromecast](sdk-implement/track-av-playback/track-core/track-core-chromecast.md)
          + [Spåra grundläggande uppspelning i Roku](sdk-implement/track-av-playback/track-core/track-core-roku.md)
       + Spåra buffring {#track-buffering}
          + [Spåra buffring i Android](sdk-implement/track-av-playback/track-buffering/track-buffering-android.md)
          + [Spåra buffring i iOS](sdk-implement/track-av-playback/track-buffering/track-buffering-ios.md)
-         + [Spåra buffring i JavaScript](sdk-implement/track-av-playback/track-buffering/track-buffering-js.md)
+         + [Track Buffering on JavaScript 2.x](sdk-implement/track-av-playback/track-buffering/track-buffering-js.md)
+         + [Track Buffering on JavaScript 3.x](sdk-implement/track-av-playback/track-buffering/track-buffering-js3.md)
          + [Spåra buffring i Chromecast](sdk-implement/track-av-playback/track-buffering/track-buffering-chromecast.md)
          + [Spåra buffring i Roku](sdk-implement/track-av-playback/track-buffering/track-buffering-roku.md)
       + Spåra sökning {#track-seeking}
          + [Spåra sökning i Android](sdk-implement/track-av-playback/track-seeking/track-seeking-android.md)
          + [Spåra sökning i iOS](sdk-implement/track-av-playback/track-seeking/track-seeking-ios.md)
-         + [Spåra sökning i JavaScript](sdk-implement/track-av-playback/track-seeking/track-seeking-js.md)
+         + [Spåra sökning i JavaScript 2.x](sdk-implement/track-av-playback/track-seeking/track-seeking-js.md)
+         + [Spåra sökning i JavaScript 3.x](sdk-implement/track-av-playback/track-seeking/track-seeking-js3.md)
          + [Spåra sökning i Chromecast](sdk-implement/track-av-playback/track-seeking/track-seeking-chromecast.md)
          + [Spåra sökning i Roku](sdk-implement/track-av-playback/track-seeking/track-seeking-roku.md)
       + Implement Standard Metadata {#impl-std-metadata}
          + [Implementera standardmetadata i Android](sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-android.md)
          + [Implementera standardmetadata i iOS](sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-ios.md)
          + [iOS-metadatanycklar](sdk-implement/track-av-playback/impl-std-metadata/ios-metadata-keys.md)
-         + [Implementera standardmetadata i JavaScript](sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-js.md)
+         + [Implementera standardmetadata i JavaScript 2.x](sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-js.md)
+         + [Implementera standardmetadata i JavaScript 3.x](sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-js3.md)
          + [Implementera standardmetadata i Chromecast](sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-chromecast.md)
          + [Standardmetadataparametrar – Chromecast](sdk-implement/track-av-playback/impl-std-metadata/chromecast-metadata.md)
          + [Implementera standardmetadata i Roku](sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-roku.md)
@@ -74,33 +80,38 @@ ht-degree: 96%
       + [Översikt](sdk-implement/track-ads/track-ads-overview.md)
       + [Spåra annonser i Android](sdk-implement/track-ads/track-ads-android.md)
       + [Spåra annonser i iOS](sdk-implement/track-ads/track-ads-ios.md)
-      + [Spåra annonser i JavaScript](sdk-implement/track-ads/track-ads-js.md)
+      + [Spåra annonser på JavaScript 2.x](sdk-implement/track-ads/track-ads-js.md)
+      + [Spåra annonser på JavaScript 3.x](sdk-implement/track-ads/track-ads-js3.md)
       + [Spåra annonser i Chromecast](sdk-implement/track-ads/track-ads-chromecast.md)
       + [Spåra annonser i Roku](sdk-implement/track-ads/track-ads-roku.md)
       + Implement Standard ad Metadata {#impl-std-ad-metadata}
          + [Implementera standardmetadata för annonser i Android](sdk-implement/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-android.md)
          + [Implementera standardmetadata för annonser i iOS](sdk-implement/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-ios.md)
-         + [Implementera standardmetadata för annonser i JavaScript](sdk-implement/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-js.md)
+         + [Implementera standardannonsmetadata i JavaScript 2.x](sdk-implement/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-js.md)
+         + [Implementera standard- och metadata i JavaScript 3.x](sdk-implement/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-js3.md)
          + [Implementera standardmetadata för annonser i Roku](sdk-implement/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-roku.md)
    + Spåra kapitel och segment {#track-chapters}
       + [Översikt](sdk-implement/track-chapters/track-chapters-overview.md)
       + [Spåra kapitel och segment i Android](sdk-implement/track-chapters/track-chapters-android.md)
       + [Spåra kapitel och segment i iOS](sdk-implement/track-chapters/track-chapters-ios.md)
-      + [Spåra kapitel och segment i JavaScript](sdk-implement/track-chapters/track-chapters-js.md)
+      + [Spåra kapitel och segment i JavaScript 2.x](sdk-implement/track-chapters/track-chapters-js.md)
+      + [Spåra kapitel och segment i JavaScript 3.x](sdk-implement/track-chapters/track-chapters-js3.md)
       + [Spåra kapitel och segment i Chromecast](sdk-implement/track-chapters/track-chapters-chromecast.md)
       + [Spåra kapitel och segment i Roku](sdk-implement/track-chapters/track-chapters-roku.md)
    + Spåra upplevelsekvalitet {#track-qos}
       + [Översikt](sdk-implement/track-qos/track-qos-overview.md)
       + [Spåra upplevelsekvalitet i Android](sdk-implement/track-qos/track-qos-android.md)
       + [Spåra upplevelsekvalitet i iOS](sdk-implement/track-qos/track-qos-ios.md)
-      + [Spåra upplevelsekvalitet i JavaScript](sdk-implement/track-qos/track-qos-js.md)
+      + [Spåra upplevelsekvalitet i JavaScript 2.x](sdk-implement/track-qos/track-qos-js.md)
+      + [Spåra upplevelsekvalitet i JavaScript 3.x](sdk-implement/track-qos/track-qos-js3.md)
       + [Spåra upplevelsekvalitet i Chromecast](sdk-implement/track-qos/track-qos-chromecast.md)
       + [Spåra upplevelsekvalitet i Roku](sdk-implement/track-qos/track-qos-roku.md)
    + Spåra fel {#track-errors}
       + [Översikt](sdk-implement/track-errors/track-errors-overview.md)
       + [Spåra fel i Android](sdk-implement/track-errors/track-errors-android.md)
       + [Spåra fel i iOS](sdk-implement/track-errors/track-errors-ios.md)
-      + [Spåra fel i JavaScript](sdk-implement/track-errors/track-errors-js.md)
+      + [Spåra fel i JavaScript 2.x](sdk-implement/track-errors/track-errors-js.md)
+      + [Spåra fel i JavaScript 3.x](sdk-implement/track-errors/track-errors-js3.md)
       + [Spåra fel i Chromecast](sdk-implement/track-errors/track-errors-chromecast.md)
       + [Spåra fel i Roku](sdk-implement/track-errors/track-errors-roku.md)
    + [Avregistrering och sekretess](sdk-implement/opt-out-privacy.md)
@@ -143,9 +154,9 @@ ht-degree: 96%
       + [Migreringsöversikt](sdk-implement/va-1x-to-2x/mig-1x-2x-overview.md)
       + [Kodjämförelse: 1.x till 2.x](sdk-implement/va-1x-to-2x/code-comparison-1x-2x.md)
       + [1.x till 2.x API-konvertering](sdk-implement/va-1x-to-2x/1x-2x-api-change.md)
-   + Media Analytics SDK för att starta migrering {#sdk-to-launch}
-      + [SDK för att starta migrering](sdk-implement/sdk-to-launch/sdk-to-launch-migration.md)
-      + SDK för att starta guider för plattformsmigrering {#sdk-to-launch-migration-platforms}
+   + Migrering från Media Analytics SDK  till Launch {#sdk-to-launch}
+      + [Migrering från SDK till Launch](sdk-implement/sdk-to-launch/sdk-to-launch-migration.md)
+      + Plattformsguider för migrering från SDK till Launch {#sdk-to-launch-migration-platforms}
          + [Android](sdk-implement/sdk-to-launch/sdk-to-launch-migration-platforms/sdk-to-launch-migration-android.md)
          + [iOS](sdk-implement/sdk-to-launch/sdk-to-launch-migration-platforms/sdk-to-launch-migration-ios.md)
          + [JS](sdk-implement/sdk-to-launch/sdk-to-launch-migration-platforms/sdk-to-launch-migration-js.md)
@@ -181,6 +192,7 @@ ht-degree: 96%
    + [Parametrar för ljud och video](metrics-and-metadata/audio-video-parameters.md)
    + [Annonsparametrar](metrics-and-metadata/ad-parameters.md)
    + [Kapitelparametrar](metrics-and-metadata/chapter-parameters.md)
+   + [Parametrar för spelartillstånd](metrics-and-metadata/player-state-parameters.md)
    + [Kvalitetsparametrar](metrics-and-metadata/quality-parameters.md)
    + [Segment](metrics-and-metadata/segments.md)
    + [Beräknade mätvärden](metrics-and-metadata/calculated-metrics.md)
@@ -195,5 +207,10 @@ ht-degree: 96%
       + [Hämta JSON-rapportdata för samtidiga medieanvändare](media-reports/media-default-reports/get-concurrent-json.md)
    + [Mallar för mediearbetsyta](media-reports/media-workspace-templates.md)
 + [Federated Analytics](federated-analytics.md)
++ Spårning av spelartillstånd {#player-state-tracking}
+   + [Översikt](sdk-implement/player-state-tracking/player-state-overview.md)
+   + [Standardlägen och anpassade lägen](sdk-implement/player-state-tracking/standard-and-custom-states.md)
+   + [Implementering och rapportering](sdk-implement/player-state-tracking/implementation-and-reporting.md)
+   + [Exempel på spårning av spelartillstånd](sdk-implement/player-state-tracking/player-state-examples.md)
 + Ytterligare resurser {#additional-resources}
    + [Versionsinformation](additional-resources/doc-updates.md)
