@@ -1,14 +1,17 @@
 ---
-title: Spåra kärnuppspelning i JavaScript
-description: I det här avsnittet beskrivs hur du implementerar huvudspårning med Media SDK i webbläsarappar (JS).
+title: Spåra kärnuppspelning med JavaScript 2.x
+description: I det här avsnittet beskrivs hur du implementerar huvudspårning med Media SDK i en webbläsare med JavaScript 2.x-appar.
 uuid: 3d6e0ab1-899a-43c3-b632-8276e84345ab
 translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+source-git-commit: 30ed54924c75a9c33e6122b2d7ddbb84c06b8c0c
+workflow-type: tm+mt
+source-wordcount: '688'
+ht-degree: 2%
 
 ---
 
 
-# Spåra kärnuppspelning i JavaScript{#track-core-playback-on-javascript}
+# Spåra kärnuppspelning med JavaScript 2.x{#track-core-playback-on-javascript}
 
 >[!IMPORTANT]
 >I den här dokumentationen beskrivs spårning i version 2.x av SDK. Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandböcker här: [Hämta SDK:er](/help/sdk-implement/download-sdks.md)
@@ -29,7 +32,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
    **`StreamType`konstanter:**
 
-   | Konstantnamn | Beskrivning |
+   | Konstantnamn | Beskrivning   |
    |---|---|
    | `VOD` | Strömtyp för Video on Demand. |
    | `LIVE` | Strömtyp för LIVE-innehåll. |
@@ -49,7 +52,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
    var mediaObject =  
      MediaHeartbeat.createMediaObject(<MEDIA_NAME>,  
                                      <MEDIA_ID,  
-                                     <MEDIA_LENGTH>, 
+                                     <MEDIA_LENGTH>,
                                      MediaHeartbeat.StreamType.VOD,
                                      <MEDIA_TYPE>);
    ```
@@ -68,17 +71,17 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
       * API-referens för metadata för media - [standardmetadatanycklar - JavaScript](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript)
 
-         Se alla tillgängliga metadata här: Parametrar för [ljud och video](/help/metrics-and-metadata/audio-video-parameters.md)
+         Se alla tillgängliga metadata här: [Parametrar för ljud och video](/help/metrics-and-metadata/audio-video-parameters.md)
    * **Anpassade metadata**
 
       Skapa ett variabelobjekt för de anpassade variablerna och fyll i med data för mediet. Exempel:
 
       ```js
-      /* Set custom context data */ 
-      var customVideoMetadata = { 
-          isUserLoggedIn: "false", 
-          tvStation: "Sample TV station", 
-          programmer: "Sample programmer" 
+      /* Set custom context data */
+      var customVideoMetadata = {
+          isUserLoggedIn: "false",
+          tvStation: "Sample TV station",
+          programmer: "Sample programmer"
       };
       ```
 
@@ -158,6 +161,5 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
    >
    >Detta kan vara samma händelsekälla som användes i steg 4. Se till att varje API-anrop `trackPause()` paras med ett följande API- `trackPlay()` anrop när uppspelningen återupptas.
 
-* Spårningsscenarier: VOD- [uppspelning utan annonser](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md)
+* Spårningsscenarier: [VOD-uppspelning utan annonser](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md)
 * Exempelspelare som ingår i JavaScript SDK för ett fullständigt spårningsexempel.
-
