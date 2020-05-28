@@ -2,9 +2,9 @@
 title: Om standardlägen och anpassade lägen
 description: I det här avsnittet beskrivs funktionen för spårning av spelartillstånd, inklusive krav och riktlinjer för implementering och rapportering av standardlägen och anpassade spelarlägen.
 translation-type: tm+mt
-source-git-commit: 1cf11a6b8971f5be490998bbd855a27bfe366e48
+source-git-commit: f7a45dfbabe71fa9e1de7a4f4b2a7e64849e4ef4
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '280'
 ht-degree: 0%
 
 ---
@@ -30,14 +30,15 @@ Data beräknas på samma sätt för standardtillstånd och anpassade tillstånd,
 
 ## Riktlinjer
 
-* En videosession är begränsad till 10 unika anpassade spelarlägen.
-* Om flera spelarlägen skickas behålls endast de första 10 och vidarebefordras nedströms till bearbetningskomponenten för VA(?videoanalys).
+* En videosession är begränsad till 10 spelarlägen.
+* Alla kombinationer av lägen är tillåtna.
+* Om flera spelarlägen godkänns, behålls endast de första 10 och vidarebefordras nedströms till VA-bearbetningskomponenten.
 * Maximalt 10 lägen tillämpas för alla lägen, oavsett om de är stängda eller inte.
-* Samma läge kan startas och avslutas ett valfritt antal gånger och räknas som ett enda läge.
-* Alla tillstånd som överskrider det högsta tillåtna anpassade värdet? lägen (10) tas bort.
+* Ett läge kan starta och avslutas flera gånger och räknas som ett enda läge. Du kan t.ex. starta och stoppa fem gånger, men det räknas som ett enskilt läge. `closedCapationing`
+* Alla lägen som överskrider maxgränsen på 10 tillåtna lägen ignoreras.
 
 ## Anpassade lägen
 
 Med möjligheten att skapa anpassade lägen kan du hämta anpassade åtgärder och uppdatera anpassade metadata under en uppspelningssession.
 
-Behöver mer information om anpassade lägen
+Mer information om hur du skapar anpassade lägen finns i referenshandboken för [Media API: `createStateObject`](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics/media-api-reference#createstateobject)
