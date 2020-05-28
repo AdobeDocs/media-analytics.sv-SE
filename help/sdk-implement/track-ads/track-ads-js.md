@@ -1,14 +1,17 @@
 ---
-title: Spåra annonser i JavaScript
+title: Spåra annonser med JavaScript 2.x
 description: Implementera annonsspårning i webbläsarprogram (JS) med Media SDK.
 uuid: 4d81d29c-c55d-4d48-b505-3260922712ff
 translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+source-git-commit: f5b3961e0525c26b682490a4376d244c2703ae24
+workflow-type: tm+mt
+source-wordcount: '352'
+ht-degree: 4%
 
 ---
 
 
-# Spåra annonser i JavaScript{#track-ads-on-javascript}
+# Spåra annonser med JavaScript 2.x{#track-ads-on-javascript}
 
 >[!IMPORTANT]
 >
@@ -16,7 +19,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ## Konstanter för annonsspårning
 
-| Konstantnamn | Beskrivning |
+| Konstantnamn | Beskrivning   |
 |---|---|
 | `AdBreakStart` | Konstant för spårning av AdBreak-starthändelse |
 | `AdBreakComplete` | Konstant för spårning av AdBreak Complete-händelse |
@@ -74,15 +77,15 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 1. Du kan också bifoga standard- och/eller annonsmetadata till mediespårningssessionen via kontextdatavariabler.
 
-   * [Implementera standardannonsmetadata i JavaScript](/help/sdk-implement/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-js.md)
+   * [Implementera standardmetadata för annonser i JavaScript](/help/sdk-implement/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-js.md)
    * **Anpassade annonseringsmetadata -** Skapa ett variabelobjekt för anpassade datavariabler och fyll i med data för den aktuella annonsen:
 
       ```js
-      /* Set custom context data */ 
-      var adCustomMetadata = { 
-          affiliate: "Sample affiliate", 
-          campaign: "Sample ad campaign", 
-          creative: "Sample creative" 
+      /* Set custom context data */
+      var adCustomMetadata = {
+          affiliate: "Sample affiliate",
+          campaign: "Sample ad campaign",
+          creative: "Sample creative"
       };
       ```
 
@@ -91,26 +94,26 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
    Ta med en referens till din anpassade metadatavariabel (eller ett tomt objekt) som den tredje parametern i händelseanropet:
 
    ```js
-   _onAdStart = function() { 
+   _onAdStart = function() {
        this._mediaHeartbeat.trackEvent(MediaHeartbeat.Event.AdStart,  
                                        adObject,  
-                                       adCustomMetadata); 
+                                       adCustomMetadata);
    };
    ```
 
 1. När annonsuppspelningen når slutet av annonsen ska du ringa `trackEvent()` med `AdComplete` händelsen:
 
    ```js
-   _onAdComplete = function() { 
-       this._mediaHeartbeat.trackEvent(MediaHeartbeat.Event.AdComplete); 
+   _onAdComplete = function() {
+       this._mediaHeartbeat.trackEvent(MediaHeartbeat.Event.AdComplete);
    };
    ```
 
 1. Om annonsuppspelningen inte slutfördes eftersom användaren valde att hoppa över annonsen, ska du spåra `AdSkip` händelsen:
 
    ```js
-   _onAdSkip = function() { 
-       this._mediaHeartbeat.trackEvent(MediaHeartbeat.Event.AdSkip); 
+   _onAdSkip = function() {
+       this._mediaHeartbeat.trackEvent(MediaHeartbeat.Event.AdSkip);
    };
    ```
 
@@ -118,8 +121,8 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 1. När annonsbrytningen är klar använder du `AdBreakComplete` händelsen för att spåra:
 
    ```js
-   _onAdBreakComplete = function() { 
-       this._mediaHeartbeat.trackEvent(MediaHeartbeat.Event.AdBreakComplete); 
+   _onAdBreakComplete = function() {
+       this._mediaHeartbeat.trackEvent(MediaHeartbeat.Event.AdBreakComplete);
    };
    ```
 
