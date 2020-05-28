@@ -1,18 +1,21 @@
 ---
-title: Spåra upplevelsekvaliteten i JavaScript
-description: I det här avsnittet beskrivs hur du implementerar kvalitetsupplevelsespårning (QoE, QoS) med Media SDK i webbläsarappar (JS).
+title: Spåra upplevelsekvaliteten med JavaScript 2.x
+description: I det här avsnittet beskrivs hur du implementerar upplevelsekvalitet (QoE, QoS) med Media SDK i webbläsarprogram med JavaScript 2.x.
 uuid: 3bc762a2-9706-4b62-aa91-747f461dd13d
 translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+source-git-commit: b165c9d133637fd0f1c529a98a936f8f31b72465
+workflow-type: tm+mt
+source-wordcount: '219'
+ht-degree: 2%
 
 ---
 
 
-# Spåra upplevelsekvaliteten i JavaScript{#track-quality-of-experience-on-javascript}
+# Spåra upplevelsekvaliteten med JavaScript 2.x{#track-quality-of-experience-on-javascript}
 
 >[!IMPORTANT]
 >
->Följande anvisningar ger vägledning för implementering i alla 2.x SDK:er. Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandboken här: [Hämta SDK:er.](/help/sdk-implement/download-sdks.md)
+>Följande instruktioner ger vägledning för implementering i alla 2.x SDK:er. Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandboken här: [Hämta SDK:er.](/help/sdk-implement/download-sdks.md)
 
 ## Implementera QOS
 
@@ -39,14 +42,14 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
    var qosObject = MediaHeartbeat.createQoSObject(<bitrate>,  
                                                   <startuptime>,  
                                                   <fps>,  
-                                                  <droppedFrames>); 
+                                                  <droppedFrames>);
    ```
 
 1. När uppspelningen växlar bithastigheter anropar du `BitrateChange` händelsen i Media Heartbeat-instansen:
 
    ```js
-   _onBitrateChange = function() { 
-       this._mediaHeartbeat.trackEvent(MediaHeartbeat.Event.BitrateChange, qosObject); 
+   _onBitrateChange = function() {
+       this._mediaHeartbeat.trackEvent(MediaHeartbeat.Event.BitrateChange, qosObject);
    };
    ```
 
@@ -60,4 +63,3 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
    >[!TIP]
    >
    >Spårning av mediespelarfel stoppar inte mediespårningssessionen. Om mediespelarfelet förhindrar att uppspelningen fortsätter kontrollerar du att mediespårningssessionen stängs genom att ringa `trackSessionEnd()` efter att du har anropat `trackError()`.
-
