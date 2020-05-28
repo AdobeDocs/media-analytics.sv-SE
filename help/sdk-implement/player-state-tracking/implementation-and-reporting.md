@@ -2,9 +2,9 @@
 title: Implementering och rapportering
 description: I det här avsnittet beskrivs hur du implementerar funktionen för spårning av spelartillstånd, inklusive .
 translation-type: tm+mt
-source-git-commit: b0bfe74d1f6083e700dbf98f504a17518bd19ecb
+source-git-commit: 614780a121eac6d5f822d439365fa59f85959ce2
 workflow-type: tm+mt
-source-wordcount: '271'
+source-wordcount: '326'
 ht-degree: 0%
 
 ---
@@ -21,9 +21,9 @@ Media SDK innehåller två nya metoder för anpassad statusspårning:
 `trackStateClose("state_name")`
 
 
-Media Collection API innehåller två nya händelser som har &quot;media.stateName&quot; som obligatorisk parameter:
+Media Collection API innehåller två nya händelser som har `media.stateName` den obligatoriska parametern:
 
-`stateStart` och `stateEnd`
+`stateStart` och `stateEnd`
 
 ## Media SDK-implementering
 
@@ -84,14 +84,19 @@ http(s)://<Analytics_Visitor_Namespace>.hb-api.omtrdc.net/api/v1/sessions/<SID>/
 
 De mått som anges för varje enskilt tillstånd beräknas och överförs till Adobe Analytics som kontextdataparametrar och lagras för rapportändamål. Tre mätvärden är tillgängliga för varje läge:
 
-* `a.media.states.(media.state.name).set = true` — Ange som true om läget ställdes in minst en gång per varje specifik uppspelning av en ström.
-* `a.media.states.(media.state.name).count = 4` — Identifierar antalet förekomster av ett läge under varje enskild uppspelning av en ström
-* `a.media.states.(media.state.name).time = 240` — Identifierar den totala lägeslängden i sekunder för varje enskild uppspelning av en ström
+* `a.media.states.[state.name].set = true` — Ange som true om läget ställdes in minst en gång per varje specifik uppspelning av en ström.
+* `a.media.states.[state.name].count = 4` — Identifierar antalet förekomster av ett läge under varje enskild uppspelning av en ström
+* `a.media.states.[state.name].time = 240` — Identifierar den totala lägeslängden i sekunder för varje enskild uppspelning av en ström
 
 ## Rapportering
 
-Alla lägesvärden kan användas för alla rapportvisualiseringar eller -komponenter (segment, beräknade värden).
-TBD - kontrollera källa/wiki för uppdaterad information - för skärmbild från AW
+Alla värden för spelartillstånd kan användas för alla rapportvisualiseringar som är tillgängliga i Analysis Workspace eller en komponent (segment, beräknade värden) när en rapportserie har aktiverats för spårning av spelartillstånd. De nya måtten kan aktiveras från Admin Console för varje enskild rapport med hjälp av inställningarna för medierapportering (Redigera inställningar > Mediehantering > Medierapportering).
+
+![](assets/report-setup.png)
+
+I arbetsytan Analytics (Analyser) finns alla nya egenskaper på mätpanelen. Du kan till exempel söka efter `full screen` för att visa helskärmsdata på mätpanelen.
+
+![](assets/full-screen-report.png)
 
 ## Importera värden från spelaren till Adobe Experience Platform
 
