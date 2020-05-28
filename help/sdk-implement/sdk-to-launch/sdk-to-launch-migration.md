@@ -4,7 +4,10 @@ title: Migrera från fristående Media SDK till Adobe Launch
 seo-description: Instruktioner och kodexempel som hjälper dig att migrera från Media SDK till Launch.
 description: Instruktioner och kodexempel som hjälper dig att migrera från Media SDK till Launch.
 translation-type: tm+mt
-source-git-commit: ccc23ad0fc7073159431c50b8a8235b692803236
+source-git-commit: fde203bab895c9a49ebc0d1dadb2c96697dea509
+workflow-type: tm+mt
+source-wordcount: '184'
+ht-degree: 1%
 
 ---
 
@@ -26,4 +29,3 @@ Adobe Media Analytics för ljud och video finns som ett Launch-tillägg för bå
 * [Android](/help/sdk-implement/sdk-to-launch/sdk-to-launch-migration-platforms/sdk-to-launch-migration-android.md)
 * [iOS](/help/sdk-implement/sdk-to-launch/sdk-to-launch-migration-platforms/sdk-to-launch-migration-ios.md)
 * [JS](/help/sdk-implement/sdk-to-launch/sdk-to-launch-migration-platforms/sdk-to-launch-migration-js.md)
-
