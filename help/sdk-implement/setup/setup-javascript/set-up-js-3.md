@@ -2,9 +2,9 @@
 title: Konfigurera JavaScript 3.x
 description: Installation av Media SDK-program för implementering i JavaScript 3.x.
 translation-type: tm+mt
-source-git-commit: a73536bd7a818ac23ad322a15f109644e75ee0d5
+source-git-commit: 83b38ac8f7fc88f982d194e776efccf8d5b983e4
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '398'
 ht-degree: 2%
 
 ---
@@ -45,6 +45,16 @@ ht-degree: 2%
       >
       >JavaScript SDK är kompatibelt med AMD- och CommonJS-modulspecifikationerna, och `MediaSDK.js` kan även användas med kompatibla modulinläsare.
 
+1. Skapa en instans av `AppMeasurement` och konfigurera `visitor`.
+
+   Konfigurationen av Media SDK kräver en instans av `AppMeasurement` med `visitor` konfigurerad.
+
+```js
+var appMeasurement = new AppMeasurement(“<rsid>”);
+appMeasurement.visitor = visitor;
+appMeasurement.trackingServer = “<visitor_namespace>.sc.omtrdc.net”;
+```
+
 1. Konfigurera Media SDK
 
    Media SDK bör konfigureras en gång per webbsida och konfigurationen gäller för alla spårningsinstanser som skapas.
@@ -52,6 +62,7 @@ ht-degree: 2%
    >[!IMPORTANT]
    >
    > Media SDK (3.x) använder Media Collection API för att spåra media som skiljer sig från HB-slutpunkten som används i 2.x SDK:er. Kontakta din Adobe-representant om du vill ha mer information.
+
 
    Här följer ett exempel på `MediaConfig`-initiering:
 
