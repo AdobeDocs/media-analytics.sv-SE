@@ -2,9 +2,9 @@
 title: Implementering och rapportering
 description: I det här avsnittet beskrivs hur du implementerar funktionen för spårning av spelartillstånd, inklusive .
 translation-type: tm+mt
-source-git-commit: 614780a121eac6d5f822d439365fa59f85959ce2
+source-git-commit: 318bb60d9835d9a07fb7aa0a0a02162248410d09
 workflow-type: tm+mt
-source-wordcount: '326'
+source-wordcount: '311'
 ht-degree: 0%
 
 ---
@@ -100,4 +100,4 @@ I arbetsytan Analytics (Analyser) finns alla nya egenskaper på mätpanelen. Du 
 
 ## Importera värden från spelaren till Adobe Experience Platform
 
-Data som lagras i Analytics kan användas i alla syften och spelarstatusvärdena kan importeras till Adobe Experience Platform med hjälp av XDM och användas med kundreseanalys. Standardlägesegenskaperna har specifika egenskaper medan de anpassade lägena är egenskaper som är tillgängliga via anpassade händelser. Mer information finns i egenskapslistan för XDM-identiteter på ?LINK TO METRIC LIST?.
+Data som lagras i Analytics kan användas i alla syften och spelarstatusvärdena kan importeras till Adobe Experience Platform med hjälp av XDM och användas med kundreseanalys. Standardlägesegenskaperna har specifika egenskaper medan de anpassade lägena är egenskaper som är tillgängliga via anpassade händelser.
