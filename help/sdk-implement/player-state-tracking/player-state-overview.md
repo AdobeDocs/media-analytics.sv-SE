@@ -2,9 +2,9 @@
 title: Om Spårning av spelartillstånd
 description: I det här avsnittet beskrivs funktionen för spårning av spelartillstånd, inklusive krav och riktlinjer för implementering och rapportering av spelarlägen.
 translation-type: tm+mt
-source-git-commit: d317188ef664c836c7125e8bbe195baa924c0d80
+source-git-commit: 1b48565bcc5c9a87e5fabbc906049ab791bf89cc
 workflow-type: tm+mt
-source-wordcount: '359'
+source-wordcount: '397'
 ht-degree: 1%
 
 ---
@@ -40,8 +40,9 @@ Spårning av spelartillstånd kräver något av följande för datainsamling:
 
 Innan du implementerar spårning av spelartillstånd bör du tänka på följande riktlinjer.
 
-* Spelarläget beräknas för alla uppspelningslägen - (ingen delning)
-* Du kan mäta flera spelarlägen samtidigt
-* Det högsta antalet spelarlägen som kan spåras under en uppspelning är 10 
-* Mätvärden för spelarstatus skickas till Analytics för att enbart rapportera om stängningsanropet för media
-* Spelartillstånd hämtas för varje enskild uppspelningssession - spelarläget beräknas inte för alla uppspelningar 
+* Spelarläget beräknas för alla uppspelningslägen (ingen delning).
+* Du kan mäta flera spelarlägen samtidigt.
+* Det högsta antalet spelarlägen som kan spåras under en uppspelning är 10.
+* Statusvärden för spelarstatus skickas till Analytics för att enbart rapportera om Media Close-anropet.
+* Kunskap om programstatus bevaras inte när ett läge har stoppats. När ett läge har avslutats måste läget startas igen för att spårningen ska kunna fortsätta. För varje nytt uppspelningsläge måste spelarens tillstånd startas igen.
+* Spelartillstånd hämtas för varje enskild uppspelningssession - spelarläget beräknas inte för alla uppspelningar.
