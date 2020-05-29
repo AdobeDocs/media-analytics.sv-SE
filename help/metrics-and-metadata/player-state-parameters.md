@@ -3,9 +3,9 @@ title: Parametrar för spelartillstånd
 description: I det här avsnittet beskrivs parametrar för spårning av spelartillstånd.
 uuid: 2a6b9247-a694-46e9-98e1-424c08c27ec2
 translation-type: tm+mt
-source-git-commit: c23a8787a8f59746665702eb5e2e74dde2c213e8
+source-git-commit: 1b48565bcc5c9a87e5fabbc906049ab791bf89cc
 workflow-type: tm+mt
-source-wordcount: '2167'
+source-wordcount: '2236'
 ht-degree: 0%
 
 ---
@@ -155,7 +155,27 @@ Spårningsfunktionerna för spelartillstånd kan kopplas till ett ljud- eller vi
 | --- | --- | --- |
 | <ul> <li> **SDK-nyckel **<br/>anges automatiskt</li> <li> **API-nyckel **<br/>saknas</li> <li> **Obligatoriskt **<br/>nr</li> <li> **Ange **<br/>nummer</li> <li> **Skickat med **<br/>mediestängning</li> <li> **Min. SDK version **<br/>3.0</li> <li> **Exempelvärde **<br/>TRUE</li><li> **Beskrivning **<br/>Tidslängden i fokus visades. Det här måttet anges till 1 endast om minst ett I fokus-läge inträffade under en uppspelningssession.<br/> **Viktigt** <br/> om den här händelsen är inställd är tiden lika med hur länge videon var i fokus. Om den här händelsen inte anges skickas inget värde.   </li> </ul> | <ul> <li> **Adobe Analytics **<br/>(media.states.infocus.time)<br/></li> <li> **Hjärtslag **<br/>N/A</li> </ul> | <ul> <li> **Tillgängligt **<br/>Ja</li> <li> **Reserverad variabelhändelse **<br/></li> <li> **Rapportnamn **<br/>i fokus, total varaktighet</li> <li> **Kontextdata **<br/>(media.states.infocus.time)<br/> </li> <li> **Data Feed **<br/>media.states.infocus.time</li> <li> **Audience Manager **<br/>(c_contextdata.media.states.infocus.time)</li> </ul> |
 
+## Egenskapslista för XDM-identiteter
 
+Data som lagras i Analytics kan användas i alla syften och Player State-mätvärdena kan importeras till Adobe Experience Platform med hjälp av XDM och användas med kundreseanalys.
+
+| Egenskapen Spelartillstånd | Mappning |
+|---------------------------------------|------------------------------------|
+| a.media.states.fullScreen.set | media.mediaTimed.primaryAssetViewDetails.fullScreen.playerStateSet |
+| a.media.states.fullScreen.count | media.mediaTimed.primaryAssetViewDetails.fullScreen.playerStateCount |
+| a.media.states.fullScreen.time | media.mediaTimed.primaryAssetViewDetails.fullScreen.playerStateTime |
+| a.media.states.mute.set | media.mediaTimed.primaryAssetViewDetails.mute.playerStateSet |
+| a.media.states.mute.count | media.mediaTimed.primaryAssetViewDetails.mute.playerStateCount |
+| a.media.states.mute.time | media.mediaTimed.primaryAssetViewDetails.mute.playerStateTime |
+| a.media.states.closeCaption.set | media.mediaTimed.primaryAssetViewDetails.closeCaption.playerStateSet |
+| a.media.states.closeCaption.count | media.mediaTimed.primaryAssetViewDetails.closeCaption.playerStateCount |
+| a.media.states.closeCaption.time | media.mediaTimed.primaryAssetViewDetails.closeCaption.playerStateTime |
+| a.media.states.pictureInPicture.set | media.mediaTimed.primaryAssetViewDetails.pictureInPicture.playerStateSet |
+| a.media.states.pictureInPicture.count | media.mediaTimed.primaryAssetViewDetails.pictureInPicture.playerStateCount |
+| a.media.states.pictureInPicture.time | media.mediaTimed.primaryAssetViewDetails.pictureInPicture.playerStateTime |
+| a.media.states.inFocus.set | media.mediaTimed.primaryAssetViewDetails.inFocus.playerStateSet |
+| a.media.states.inFocus.count | media.mediaTimed.primaryAssetViewDetails.inFocus.playerStateCount |
+| a.media.states.inFocus.time | media.mediaTimed.primaryAssetViewDetails.inFocus.playerStateTime |
 
 ## Relaterade API:er {#related_apis_section}
 
