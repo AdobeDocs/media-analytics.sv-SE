@@ -3,12 +3,15 @@ title: Spåra kärnuppspelning på Roku
 description: I det här avsnittet beskrivs hur du implementerar huvudspårning med Media SDK på Roku.
 uuid: a8aa7b3c-2d39-44d7-8ebc-b101d130101f
 translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+source-git-commit: 815965d1cd41e73e50666a89f4a7c450af5022da
+workflow-type: tm+mt
+source-wordcount: '1022'
+ht-degree: 2%
 
 ---
 
 
-# Spåra kärnuppspelning på Roku{#track-core-playback-on-roku}
+# Track core playback on Roku{#track-core-playback-on-roku}
 
 >[!IMPORTANT]
 >I den här dokumentationen beskrivs spårning i version 2.x av SDK. Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandböcker här: [Hämta SDK:er](/help/sdk-implement/download-sdks.md)
@@ -29,7 +32,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
    **`StreamType`konstanter:**
 
-   | Konstantnamn | Beskrivning |
+   | Konstantnamn | Beskrivning   |
    |---|---|
    | `MEDIA_STREAM_TYPE_VOD` | Strömtyp för Video on Demand. |
    | `MEDIA_STREAM_TYPE_LIVE` | Strömtyp för LIVE-innehåll. |
@@ -72,10 +75,10 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
    ```
    mediaInfo = adb_media_init_mediainfo(
-    "<MEDIA_NAME>", 
-    "<MEDIA_ID>", 
-    600, 
-    ADBMobile().MEDIA_STREAM_TYPE_AOD, 
+    "<MEDIA_NAME>",
+    "<MEDIA_ID>",
+    600,
+    ADBMobile().MEDIA_STREAM_TYPE_AOD,
     ADBMobile().MEDIA_TYPE_AUDIO
    )
    ```
@@ -97,7 +100,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
    * **Standardmetadata**
 
-      [Implementera standardmetadata i JavaScript](/help/sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-js.md)
+      [Implementera standardmetadata i JavaScript](/help/sdk-implement/track-av-playback/impl-std-metadata/impl-std-md-js/impl-std-metadata-js.md)
 
       >[!NOTE]
       >
@@ -105,17 +108,17 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
       * API-referens för metadata för media - [standardmetadatanycklar - JavaScript](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript)
 
-         Se alla tillgängliga metadata här: Parametrar för [ljud och video](/help/metrics-and-metadata/audio-video-parameters.md)
+         Se alla tillgängliga metadata här: [Parametrar för ljud och video](/help/metrics-and-metadata/audio-video-parameters.md)
    * **Anpassade metadata**
 
       Skapa ett variabelobjekt för de anpassade variablerna och fyll i med data för mediet. Exempel:
 
       ```js
-      /* Set custom context data */ 
-      var customVideoMetadata = { 
-          isUserLoggedIn: "false", 
-          tvStation: "Sample TV station", 
-          programmer: "Sample programmer" 
+      /* Set custom context data */
+      var customVideoMetadata = {
+          isUserLoggedIn: "false",
+          tvStation: "Sample TV station",
+          programmer: "Sample programmer"
       };
       ```
 
@@ -182,7 +185,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
    * **Standardmetadata för video**
 
-      [Implementera standardmetadata på Roku](/help/sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-roku.md)
+      [Implementera standardmetadata i Roku](/help/sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-roku.md)
 
       >[!NOTE]
       >Det är valfritt att bifoga standardmetadataobjektet för video till mediaobjektet.
@@ -267,6 +270,5 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
    >[!TIP]
    >Detta kan vara samma händelsekälla som användes i steg 4. Se till att varje API-anrop `trackPause()` paras med ett följande API- `trackPlay()` anrop när videouppspelningen återupptas.
 
-* Spårningsscenarier: VOD- [uppspelning utan annonser](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md)
+* Spårningsscenarier: [VOD-uppspelning utan annonser](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md)
 * Exempelspelare som ingår i Roku SDK för ett fullständigt spårningsexempel.
-
