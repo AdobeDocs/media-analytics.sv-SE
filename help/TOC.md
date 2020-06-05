@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: f26816d37f30e9e4ae08dbf7af78f2135e8403f4
 workflow-type: tm+mt
 source-wordcount: '809'
-ht-degree: 79%
+ht-degree: 82%
 
 ---
 
@@ -21,9 +21,9 @@ ht-degree: 79%
    + Implementeringsvägar {#implementation-paths}
       + [Översikt](intro-to-ava/implementation-paths/implementation-paths.md)
       + [Klientsida](intro-to-ava/implementation-paths/client-side-path.md)
-      + Other Implementation Paths {#other-paths}
+      + Andra implementeringssökvägar {#other-paths}
          + Spårning av milstolpar för mediemodul {#mm-milestone-tracking}
-            + [Översikt över milstolpe](measurement-options/mm-milestone-tracking/milestone-overview.md)
+            + [Översikt över milstolpar](measurement-options/mm-milestone-tracking/milestone-overview.md)
             + [Migrera milstolpe till Media Analytics](measurement-options/mm-milestone-tracking/migrate-ms-to-va.md)
             + [Migrera från milstolpe till anpassad länk](measurement-options/mm-milestone-tracking/migrate-ms-to-cl.md)
          + Anpassad länk i Analytics {#cl-in-aa}
@@ -32,7 +32,7 @@ ht-degree: 79%
             + [Primetime](intro-to-ava/implementation-paths/primetime-path.md)
          + [Aktivera Audience Manager](intro-to-ava/am-enablement.md)
 + Media Analytics SDK {#sdk-implement}
-   + [Vanliga frågor om supporten för Media Analytics SDK](sdk-implement/end-of-support-faqs.md)
+   + [Vanliga frågor om upphörande av stöd för Media Analytics SDK](sdk-implement/end-of-support-faqs.md)
    + [Hämta SDK:er](sdk-implement/download-sdks.md)
    + Installera och konfigurera {#setup}
       + [Översikt](sdk-implement/setup/setup-overview.md)
@@ -43,7 +43,7 @@ ht-degree: 79%
          + [Konfigurera JavaScript 3.x](sdk-implement/setup/setup-javascript/set-up-js-3.md)
       + [Konfigurera Chromecast](sdk-implement/setup/set-up-chromecast.md)
       + [Konfigurera Roku](sdk-implement/setup/set-up-roku.md)
-   + Track Audio and Video Playback {#track-av-playback}
+   + Spåra ljud- och videouppspelning {#track-av-playback}
       + [Översikt](sdk-implement/track-av-playback/track-core-overview.md)
       + Spåra grundläggande ljud- och videouppspelning {#track-core}
          + [Spåra grundläggande uppspelning i Android](sdk-implement/track-av-playback/track-core/track-core-android.md)
@@ -69,7 +69,7 @@ ht-degree: 79%
             + [Spåra sökning i JavaScript 3.x](sdk-implement/track-av-playback/track-seeking/track-seeking-js/track-seeking-js3.md)
          + [Spåra sökning i Chromecast](sdk-implement/track-av-playback/track-seeking/track-seeking-chromecast.md)
          + [Spåra sökning i Roku](sdk-implement/track-av-playback/track-seeking/track-seeking-roku.md)
-      + Implement Standard Metadata {#impl-std-metadata}
+      + Implementera standardmetadata {#impl-std-metadata}
          + [Implementera standardmetadata i Android](sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-android.md)
          + [Implementera standardmetadata i iOS](sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-ios.md)
          + [iOS-metadatanycklar](sdk-implement/track-av-playback/impl-std-metadata/ios-metadata-keys.md)
@@ -89,7 +89,7 @@ ht-degree: 79%
          + [Spåra annonser på JavaScript 3.x](sdk-implement/track-ads/track-ads-js/track-ads-js3.md)
       + [Spåra annonser i Chromecast](sdk-implement/track-ads/track-ads-chromecast.md)
       + [Spåra annonser i Roku](sdk-implement/track-ads/track-ads-roku.md)
-      + Implement Standard ad Metadata {#impl-std-ad-metadata}
+      + Implementera standardmetadata för annonser {#impl-std-ad-metadata}
          + [Implementera standardmetadata för annonser i Android](sdk-implement/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-android.md)
          + [Implementera standardmetadata för annonser i iOS](sdk-implement/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-ios.md)
          + Implement Standard ad Metadata on JavaScript {#impl-std-ad-md-js}
@@ -163,7 +163,7 @@ ht-degree: 79%
       + [Migreringsöversikt](sdk-implement/va-1x-to-2x/mig-1x-2x-overview.md)
       + [Kodjämförelse: 1.x till 2.x](sdk-implement/va-1x-to-2x/code-comparison-1x-2x.md)
       + [1.x till 2.x API-konvertering](sdk-implement/va-1x-to-2x/1x-2x-api-change.md)
-   + Migrering från Media Analytics SDK  till Launch {#sdk-to-launch}
+   + Migrering från Media Analytics SDK till Launch {#sdk-to-launch}
       + [Migrering från SDK till Launch](sdk-implement/sdk-to-launch/sdk-to-launch-migration.md)
       + Plattformsguider för migrering från SDK till Launch {#sdk-to-launch-migration-platforms}
          + [Android](sdk-implement/sdk-to-launch/sdk-to-launch-migration-platforms/sdk-to-launch-migration-android.md)
