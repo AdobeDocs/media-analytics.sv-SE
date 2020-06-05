@@ -2,9 +2,9 @@
 title: Vanliga frågor om supporten för Media Analytics SDK
 description: Det här avsnittet innehåller frågor och svar om att stödet för SDK:er för Media Analytics har upphört.
 translation-type: tm+mt
-source-git-commit: 300eb77858296f0246a2cb484386c0dcdf8b87b9
+source-git-commit: 38adc54438f85ca8ece8c77d9ff0d0aa14eb6605
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '703'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ När stödet för version 4 Mobile SDK upphör den 31 augusti 2021 upphör även
 
 ## De fem viktigaste sakerna att veta
 
-1. Stöd för v4 SDK:er för mobiler kommer inte längre att finnas efter den 31 augusti 2021. Du bör migrera till Adobe Experience Platform (AEP) SDK för iOS och Android.
+1. Stöd för v4 SDK:er för mobiler kommer inte längre att finnas efter den 31 augusti 2021. Du bör migrera till Adobe Experience Platform (AEP) SDK för iOS och Android. Mer information finns i [version 4 Mobile SDKs end-of-support FAQ](https://aep-sdks.gitbook.io/docs/version-4-sdk-end-of-support-faq).
 
 1. Analyser för ljud- och videoimplementering kräver AEP SDK och användning av tilläggen Analytics och Media Analytics. Från och med 1 september 2021 bör du använda de nya AEP SDK:erna och tilläggen.  Media Analytics-tillägg konfigureras med Adobe Launch.  Mer information finns i [Migrera från fristående media SDK till Adobe Launch](https://docs.adobe.com/content/help/en/media-analytics/using/sdk-implement/sdk-to-launch/sdk-to-launch-migration.html)
 
@@ -49,7 +49,7 @@ Kontakta Adobe Customer Success Manager om du har några frågor.
 
 1. **Måste jag ha Launch som tagghanteringssystem? Vad händer om jag inte vill använda Launch?**
 
-   För mobilen krävs Launch för att konfigurera medietillägg som gränssnittet för mobila tjänster. I mobilappens användningsfall används det inte som ett tagghanteringssystem.
+   För mobilappsanvändning används Launch inte som ett tagghanteringssystem som det är för webben.  Det krävs ett startgränssnitt för att konfigurera SDK-tilläggen. Det liknar hur du använder användargränssnittet för Adobe Mobile Services för att konfigurera SDK för mobilen v4. Fördelen med att använda Launch är att det ger dig anpassade installationsinstruktioner baserat på det tillägg du väljer.
 
 1. **Påverkar detta slutet på stödet SDK för tvOS?**
 
