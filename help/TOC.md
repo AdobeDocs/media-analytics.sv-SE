@@ -4,7 +4,7 @@ user-guide-title: Adobe Analytics för ljud och video
 product: adobe analytics
 sub-product: medieanalys
 translation-type: tm+mt
-source-git-commit: f26816d37f30e9e4ae08dbf7af78f2135e8403f4
+source-git-commit: f90eec31389431fe5275760d510926fb01c33d9a
 workflow-type: tm+mt
 source-wordcount: '809'
 ht-degree: 82%
@@ -193,7 +193,6 @@ ht-degree: 82%
       + [Tidslinje 1 – Visa till innehållets slut](media-collection-api/mc-api-timelines/mc-api-timeline-1.md)
       + [Tidslinje 2 – Användaren avbryter sessionen](media-collection-api/mc-api-timelines/mc-api-timeline-2.md)
       + [Tidslinje 3 – Kapitel](media-collection-api/mc-api-timelines/mc-api-timeline-3.md)
-   + [Spåra nedladdat innehåll](media-collection-api/track-downloaded-content.md)
 + Kokbok {#media-analytics-cookbook}
    + [Kokbok](media-analytics-cookbook/media-analytics-cookbook.md)
    + [Attribution för medieström](media-analytics-cookbook/media-dimensions.md)
@@ -215,6 +214,7 @@ ht-degree: 82%
       + [Samtidiga medieanvändare](media-reports/media-default-reports/media-concurrent-viewers.md)
       + [Hämta JSON-rapportdata för samtidiga medieanvändare](media-reports/media-default-reports/get-concurrent-json.md)
    + [Mallar för mediearbetsyta](media-reports/media-workspace-templates.md)
++ [Spåra nedladdat innehåll](media-collection-api/track-downloaded-content.md)
 + [Federated Analytics](federated-analytics.md)
 + Spårning av spelartillstånd {#player-state-tracking}
    + [Översikt](sdk-implement/player-state-tracking/player-state-overview.md)
