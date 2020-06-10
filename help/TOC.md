@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: f90eec31389431fe5275760d510926fb01c33d9a
 workflow-type: tm+mt
 source-wordcount: '809'
-ht-degree: 82%
+ht-degree: 100%
 
 ---
 
@@ -49,16 +49,16 @@ ht-degree: 82%
          + [Spåra grundläggande uppspelning i Android](sdk-implement/track-av-playback/track-core/track-core-android.md)
          + [Spåra grundläggande uppspelning i iOS](sdk-implement/track-av-playback/track-core/track-core-ios.md)
          + Spåra grundläggande uppspelning i JavaScript {#track-core-javascript}
-            + [Spåra kärnuppspelning i JavaScript 2.x](sdk-implement/track-av-playback/track-core/track-core-javascript/track-core-js.md)
-            + [Spåra kärnuppspelning i JavaScript 3.x](sdk-implement/track-av-playback/track-core/track-core-javascript/track-core-js3.md)
+            + [Spåra grundläggande uppspelning i JavaScript 2.x](sdk-implement/track-av-playback/track-core/track-core-javascript/track-core-js.md)
+            + [Spåra grundläggande uppspelning i JavaScript 3.x](sdk-implement/track-av-playback/track-core/track-core-javascript/track-core-js3.md)
          + [Spåra grundläggande uppspelning i Chromecast](sdk-implement/track-av-playback/track-core/track-core-chromecast.md)
          + [Spåra grundläggande uppspelning i Roku](sdk-implement/track-av-playback/track-core/track-core-roku.md)
       + Spåra buffring {#track-buffering}
          + [Spåra buffring i Android](sdk-implement/track-av-playback/track-buffering/track-buffering-android.md)
          + [Spåra buffring i iOS](sdk-implement/track-av-playback/track-buffering/track-buffering-ios.md)
          + Spåra buffring i JavaScript {#track-buffering-js}
-            + [Track Buffering on JavaScript 2.x](sdk-implement/track-av-playback/track-buffering/track-buffering-js/track-buffering-js.md)
-            + [Track Buffering on JavaScript 3.x](sdk-implement/track-av-playback/track-buffering/track-buffering-js/track-buffering-js3.md)
+            + [Spåra buffring i JavaScript 2.x](sdk-implement/track-av-playback/track-buffering/track-buffering-js/track-buffering-js.md)
+            + [Spåra buffring i JavaScript 3.x](sdk-implement/track-av-playback/track-buffering/track-buffering-js/track-buffering-js3.md)
          + [Spåra buffring i Chromecast](sdk-implement/track-av-playback/track-buffering/track-buffering-chromecast.md)
          + [Spåra buffring i Roku](sdk-implement/track-av-playback/track-buffering/track-buffering-roku.md)
       + Spåra sökning {#track-seeking}
@@ -73,7 +73,7 @@ ht-degree: 82%
          + [Implementera standardmetadata i Android](sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-android.md)
          + [Implementera standardmetadata i iOS](sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-ios.md)
          + [iOS-metadatanycklar](sdk-implement/track-av-playback/impl-std-metadata/ios-metadata-keys.md)
-         + Implement Standard Metadata on JavaScript {#impl-std-md-js}
+         + Implementera standardmetadata i JavaScript {#impl-std-md-js}
             + [Implementera standardmetadata i JavaScript 2.x](sdk-implement/track-av-playback/impl-std-metadata/impl-std-md-js/impl-std-metadata-js.md)
             + [Implementera standardmetadata i JavaScript 3.x](sdk-implement/track-av-playback/impl-std-metadata/impl-std-md-js/impl-std-metadata-js3.md)
          + [Implementera standardmetadata i Chromecast](sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-chromecast.md)
@@ -85,16 +85,16 @@ ht-degree: 82%
       + [Spåra annonser i Android](sdk-implement/track-ads/track-ads-android.md)
       + [Spåra annonser i iOS](sdk-implement/track-ads/track-ads-ios.md)
       + Spåra annonser i JavaScript {#track-ads-js}
-         + [Spåra annonser på JavaScript 2.x](sdk-implement/track-ads/track-ads-js/track-ads-js.md)
-         + [Spåra annonser på JavaScript 3.x](sdk-implement/track-ads/track-ads-js/track-ads-js3.md)
+         + [Spåra annonser i JavaScript 2.x](sdk-implement/track-ads/track-ads-js/track-ads-js.md)
+         + [Spåra annonser i JavaScript 3.x](sdk-implement/track-ads/track-ads-js/track-ads-js3.md)
       + [Spåra annonser i Chromecast](sdk-implement/track-ads/track-ads-chromecast.md)
       + [Spåra annonser i Roku](sdk-implement/track-ads/track-ads-roku.md)
       + Implementera standardmetadata för annonser {#impl-std-ad-metadata}
          + [Implementera standardmetadata för annonser i Android](sdk-implement/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-android.md)
          + [Implementera standardmetadata för annonser i iOS](sdk-implement/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-ios.md)
-         + Implement Standard ad Metadata on JavaScript {#impl-std-ad-md-js}
-            + [Implementera standardannonsmetadata i JavaScript 2.x](sdk-implement/track-ads/impl-std-ad-metadata/impl-std-ad-md-js/impl-std-ad-metadata-js.md)
-            + [Implementera standard- och metadata i JavaScript 3.x](sdk-implement/track-ads/impl-std-ad-metadata/impl-std-ad-md-js/impl-std-ad-metadata-js3.md)
+         + Implementera standardmetadata för annonser i JavaScript {#impl-std-ad-md-js}
+            + [Implementera standardmetadata för annonser i JavaScript 2.x](sdk-implement/track-ads/impl-std-ad-metadata/impl-std-ad-md-js/impl-std-ad-metadata-js.md)
+            + [Implementera standardmetadata för annonser i JavaScript 3.x](sdk-implement/track-ads/impl-std-ad-metadata/impl-std-ad-md-js/impl-std-ad-metadata-js3.md)
          + [Implementera standardmetadata för annonser i Roku](sdk-implement/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-roku.md)
    + Spåra kapitel och segment {#track-chapters}
       + [Översikt](sdk-implement/track-chapters/track-chapters-overview.md)
@@ -200,7 +200,7 @@ ht-degree: 82%
    + [Parametrar för ljud och video](metrics-and-metadata/audio-video-parameters.md)
    + [Annonsparametrar](metrics-and-metadata/ad-parameters.md)
    + [Kapitelparametrar](metrics-and-metadata/chapter-parameters.md)
-   + [Parametrar för spelartillstånd](metrics-and-metadata/player-state-parameters.md)
+   + [Parametrar för spelarens tillstånd](metrics-and-metadata/player-state-parameters.md)
    + [Kvalitetsparametrar](metrics-and-metadata/quality-parameters.md)
    + [Segment](metrics-and-metadata/segments.md)
    + [Beräknade mätvärden](metrics-and-metadata/calculated-metrics.md)
@@ -216,10 +216,10 @@ ht-degree: 82%
    + [Mallar för mediearbetsyta](media-reports/media-workspace-templates.md)
 + [Spåra nedladdat innehåll](media-collection-api/track-downloaded-content.md)
 + [Federated Analytics](federated-analytics.md)
-+ Spårning av spelartillstånd {#player-state-tracking}
++ Spårning av spelarens tillstånd {#player-state-tracking}
    + [Översikt](sdk-implement/player-state-tracking/player-state-overview.md)
-   + [Standardlägen och anpassade lägen](sdk-implement/player-state-tracking/standard-and-custom-states.md)
+   + [Standardtillstånd och anpassade tillstånd](sdk-implement/player-state-tracking/standard-and-custom-states.md)
    + [Implementering och rapportering](sdk-implement/player-state-tracking/implementation-and-reporting.md)
-   + [Exempel på spårning av spelartillstånd](sdk-implement/player-state-tracking/player-state-examples.md)
+   + [Exempel på spårning av spelarens tillstånd](sdk-implement/player-state-tracking/player-state-examples.md)
 + Ytterligare resurser {#additional-resources}
    + [Versionsinformation](additional-resources/doc-updates.md)
