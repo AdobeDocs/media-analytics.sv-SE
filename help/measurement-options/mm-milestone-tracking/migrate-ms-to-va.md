@@ -6,7 +6,7 @@ translation-type: tm+mt
 source-git-commit: 0d2d75dd411edea2a7a853ed425af5c6da154b06
 workflow-type: tm+mt
 source-wordcount: '877'
-ht-degree: 5%
+ht-degree: 20%
 
 ---
 
@@ -67,7 +67,20 @@ Media.contextDataMapping
 </td>
 <td>
 <pre>
-s.Media.contextDataMapping = { "a.media.name":"eVar2,prop2", "a.media.segment":"eVar3", "a.contentType":"eVar1", "a.media.timePlayed":"event3", "a.media.view":"event1", "a.media.segmentView": "event2", "a.media.complete":"event7", "a.media.millestone": { 25:"event4", 50:"event5", 75:"event6" }};
+s.Media.contextDataMapping = {
+  "a.media.name":"eVar2,prop2",
+  "a.media.segment":"eVar3",
+  "a.contentType":"eVar1",
+  "a.media.timePlayed":"event3",
+  "a.media.view":"event1",
+  "a.media.segmentView":"event2",
+  "a.media.complete":"event7",
+  "a.media.milestones": {
+    25:"event4",
+    50:"event5",
+    75:"event6"
+  }
+};
 </pre>
 </td>
 <td>Ej tillämpligt
@@ -81,7 +94,12 @@ Media.trackVars
 </td>
 <td>
 <pre>
-s.Media.trackVars = "events, prop2, eVar1, eVar2, eVar3";
+s.Media.trackVars = 
+  "events,
+  prop2,
+  eVar1,
+  eVar2,
+  eVar3";
 </pre>
 </td>
 <td>Ej tillämpligt
@@ -95,7 +113,14 @@ Media.trackEvents
 </td>
 <td>
 <pre>
-s.Media.trackEvents = "event1, event2, event3, event4, event5, event6, event7"
+s.Media.trackEvents = 
+  "event1,
+  event2,
+  event3,
+  event4,
+  event5,
+  event6,
+  event7"
 </pre>
 </td>
 <td>Ej tillämpligt
@@ -395,7 +420,10 @@ Media.open
 </td>
 <td>
 <pre>
-s.Media.open( mediaName, mediaLength, mediaPlayerName)
+s.Media.open(
+  mediaName,
+  mediaLength,
+  mediaPlayerName)
 </pre>
 </td>
 <td>
@@ -405,7 +433,9 @@ trackSessionStart
 </td>
 <td>
 <pre>
-trackSessionStart( mediaObject, contextData)
+trackSessionStart(
+  mediaObject, 
+  contextData)
 </pre>
 </td>
 </tr>
@@ -425,7 +455,11 @@ name
 </td>
 <td>
 <pre>
-createMediaObject( namn, mediaId, length, streamType)
+createMediaObject(
+  name, 
+  mediaId, 
+  length, 
+  streamType)
 </pre>
 </td>
 </tr>
@@ -445,7 +479,11 @@ length
 </td>
 <td>
 <pre>
-createMediaObject( namn, mediaId, length, streamType)
+createMediaObject(
+  name, 
+  mediaId, 
+  length, 
+  streamType)
 </pre>
 </td>
 </tr>
@@ -476,7 +514,14 @@ Media.openAd
 </td>
 <td>
 <pre>
-s.Media.openAd( name, length, playerName, parentName, parentPod, parentPodPosition, CPM)
+s.Media.openAd(
+  name,
+  length,
+  playerName,
+  parentName,
+  parentPod,
+  parentPodPosition,
+  CPM)
 </pre>
 </td>
 <td>
@@ -486,13 +531,18 @@ trackEvent
 </td>
 <td>
 <pre>
-mediaHeartbeat.trackEvent( MediaHeartbeat).
-    Händelse.
-    AdBreakStart, adBreakObject);
+mediaHeartbeat.trackEvent(
+  MediaHeartbeat.
+    Event.
+    AdBreakStart, 
+  adBreakObject);
 ...
-trackEvent( MediaHeartbeat).
-    Händelse.
-    AdStart, adObject, adCustomMetadata);
+trackEvent(
+  MediaHeartbeat.
+    Event.
+    AdStart, 
+  adObject, 
+  adCustomMetadata);
 </pre>
 </td>
 </tr>
@@ -512,7 +562,11 @@ name
 </td>
 <td>
 <pre>
-createAdObject( namn, adId, position, längd)
+createAdObject(
+  name, 
+  adId, 
+  position, 
+  length)
 </pre>
 </td>
 </tr>
@@ -532,7 +586,11 @@ length
 </td>
 <td>
 <pre>
-createAdObject( namn, adId, position, längd)
+createAdObject(
+  name, 
+  adId, 
+  position, 
+  length)
 </pre>
 </td>
 </tr>
@@ -587,7 +645,10 @@ position
 </td>
 <td>
 <pre>
-createAdBreakObject( namn, position, startTime)
+createAdBreakObject(
+  name, 
+  position, 
+  startTime)
 </pre>
 </td>
 </tr>
@@ -607,7 +668,11 @@ position
 </td>
 <td>
 <pre>
-createAdObject( namn, adId, position, längd)
+createAdObject(
+  name, 
+  adId, 
+  position, 
+  length)
 </pre>
 </td>
 </tr>
@@ -665,7 +730,9 @@ Media.complete
 </td>
 <td>
 <pre>
-s.Media.complete( namn, offset)
+s.Media.complete(
+  name,
+  offset)
 </pre>
 </td>
 <td>
@@ -687,7 +754,12 @@ Media.play
 </td>
 <td>
 <pre>
-s.Media.play( namn, offset, segmentNum, segment, segmentLength)
+s.Media.play(
+  name,
+  offset,
+  segmentNum,
+  segment, 
+  segmentLength)
 </pre>
 </td>
 <td>
@@ -726,13 +798,15 @@ trackPause()
 </pre> 
 eller
 <pre>
-trackEvent( MediaHeartbeat).
-  Händelse.
+trackEvent(
+  MediaHeartbeat.
+  Event.
   SeekStart)
 </pre> eller
 <pre>
-trackEvent( MediaHeartbeat).
-  Händelse.
+trackEvent(
+  MediaHeartbeat.
+  Event.
   BufferStart);
 </pre>
 </td>
@@ -752,22 +826,33 @@ s.Media.monitor(s, media)
 </td>
 <td>
 <pre>
-var customVideoMetadata = { isUserLoggedIn: 
-    "false", tvStation: 
-    "Sample TV station", programmerare: 
-    "Exempel på programmerare"};
+var customVideoMetadata = 
+{
+  isUserLoggedIn: 
+    "false",
+  tvStation: 
+    "Sample TV station",
+  programmer: 
+    "Sample programmer"
+};
 ...
-var standardVideoMetadata = {};
-standardVideoMetadata [MediaHeartbeat.
+var standardVideoMetadata 
+  = {};
+standardVideoMetadata
+  [MediaHeartbeat.
    VideoMetadataKeys.
-   EPISODE] = "Provavsnitt";
-standardVideoMetadata [MediaHeartbeat.
+   EPISODE] = 
+  "Sample Episode";
+standardVideoMetadata
+  [MediaHeartbeat.
    VideoMetadataKeys.
    SHOW] = "Sample Show";
 ...
-mediaObject.setValue( MediaHeartbeat).
+mediaObject.setValue(
+  MediaHeartbeat.
   MediaObjectKey.
-  StandardVideoMetadata, standardVideoMetadata);
+  StandardVideoMetadata, 
+  standardVideoMetadata);
 </pre>
 </td>
 </tr>
