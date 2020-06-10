@@ -6,7 +6,7 @@ translation-type: tm+mt
 source-git-commit: ccdc3e170d125a76d798be7ce1fa5c12eef1f76a
 workflow-type: tm+mt
 source-wordcount: '908'
-ht-degree: 7%
+ht-degree: 31%
 
 ---
 
@@ -106,8 +106,11 @@ linkTrackVars
 </td>
 <td>
 <pre>
-s.linkTrackVars = 'events, contextData.video.name'; 
-s.contextData["video.name"] = mediaName;
+s.linkTrackVars
+  = 'events, 
+contextData.video.name’; 
+s.contextData[‘video.name']
+  = mediaName;
 </pre>
 </td>
 </tr>
@@ -118,14 +121,27 @@ Media.contextDataMapping
 <td>
 <pre>
 s.Media.
-  contextDataMapping = { "a.media.name":
-    "eVar2,prop2", "a.media.segment":
-    "eVar3", "a.contentType":
-    "eVar1", "a.media.timePlayed":
-    "event3", "a.media.view":
-    "event1", "a.media.segmentView":
-    "event2", "a.media.complete":
-    "event7", "a.media.millestone":{ 25:"event4", 50:"event5", 75:"event6" }};
+  contextDataMapping = {
+  "a.media.name":
+    "eVar2,prop2",
+  "a.media.segment":
+    "eVar3",
+  "a.contentType":
+    "eVar1",
+  "a.media.timePlayed":
+    "event3",
+  "a.media.view":
+    "event1",
+  "a.media.segmentView":
+    "event2",
+  "a.media.complete":
+    "event7",
+  "a.media.milestones":{
+    25:"event4",
+    50:"event5",
+    75:"event6"
+  }
+};
 </pre>
 </td>
 <td>Ej tillämpligt
@@ -139,7 +155,12 @@ Media.trackVars
 </td>
 <td>
 <pre>
-s.Media.trackVars = "events, prop2, eVar1, eVar2, eVar3";
+s.Media.trackVars
+  = "events,
+     prop2,
+     eVar1,
+     eVar2,
+     eVar3";
 </pre>
 </td>
 <td>
@@ -147,8 +168,16 @@ linkTrackVars
 </td>
 <td>
 <pre>
-s.linkTrackVars = 'events, prop10, eVar10, eVar12, eVar13, eVar15, contextData.
-       video.name, contextData.
+s.linkTrackVars
+  = 'events,
+     prop10,
+     eVar10,
+     eVar12,
+     eVar13,
+     eVar15,
+     contextData.
+       video.name,
+     contextData.
        video.view';
 </pre>
 </td>
@@ -159,7 +188,14 @@ Media.trackEvents
 </td>
 <td>
 <pre>
-s.Media.trackEvents = "event1, event2, event3, event4, event5, event6, event7"
+s.Media.trackEvents
+  = "event1,
+     event2,
+     event3,
+     event4,
+     event5,
+     event6,
+     event7"
 </pre>
 </td>
 <td>
@@ -203,8 +239,11 @@ linkTrackVars
 </td>
 <td>
 <pre>
-s.linkTrackVars = 'events, contextData.video.name'; 
-s.contextData["video.name"] = mediaName;
+s.linkTrackVars
+  = 'events, 
+contextData.video.name’; 
+s.contextData[‘video.name']
+  = mediaName;
 </pre>
 </td>
 </tr>
@@ -214,7 +253,20 @@ Media.contextDataMapping
 </td>
 <td>
 <pre>
-s.Media.contextDataMapping = { "a.media.name":"eVar2,prop2", "a.media.segment":"eVar3", "a.contentType":"eVar1", "a.media.timePlayed":"event3", "a.media.view":"event1", "a.media.segmentView": "event2", "a.media.complete":"event7", "a.media.millestone":{ 25:"event4", 50:"event5", 75:"event6" }};
+s.Media.contextDataMapping = {
+  "a.media.name":"eVar2,prop2",
+  "a.media.segment":"eVar3",
+  "a.contentType":"eVar1",
+  "a.media.timePlayed":"event3",
+  "a.media.view":"event1",
+  "a.media.segmentView":"event2",
+  "a.media.complete":"event7",
+  "a.media.milestones":{
+    25:"event4",
+    50:"event5",
+    75:"event6"
+  }
+};
 </pre>
 </td>
 <td>Ej tillämpligt
@@ -228,7 +280,12 @@ Media.trackVars
 </td>
 <td>
 <pre>
-s.Media.trackVars = "events, prop2, eVar1, eVar2, eVar3";
+s.Media.trackVars
+  = "events,
+     prop2,
+     eVar1,
+     eVar2,
+     eVar3";
 </pre>
 </td>
 <td>
@@ -236,8 +293,16 @@ linkTrackVars
 </td>
 <td>
 <pre>
-s.linkTrackVars = 'events, prop10, eVar10, eVar12, eVar13, eVar15, contextData.
-       video.name, contextData.
+s.linkTrackVars
+  = 'events,
+     prop10,
+     eVar10,
+     eVar12,
+     eVar13,
+     eVar15,
+     contextData.
+       video.name,
+     contextData.
        video.view';
 </pre>
 </td>
@@ -248,7 +313,14 @@ Media.trackEvents
 </td>
 <td>
 <pre>
-s.Media.trackEvents = "event1, event2, event3, event4, event5, event6, event7"
+s.Media.trackEvents
+  = "event1,
+     event2,
+     event3,
+     event4,
+     event5,
+     event6,
+     event7"
 </pre>
 </td>
 <td>
@@ -540,21 +612,39 @@ s.Media.
 <td>Media.open</td>
 <td>
 <pre>
-s.Media.open( mediaName, mediaLength, mediaPlayerName)
+s.Media.open(
+  mediaName,
+  mediaLength,
+  mediaPlayerName)
 </pre>
 </td>
 <td>s.tl()</td>
 <td>
 <pre>
-s.linkTrackVars = 'events, prop10, eVar10, eVar12, eVar15, contextData.video.name, contextData.video.view';
-s.linkTrackEvents = 'event2';
-s.prop10 = mediaName;
-s.eVar10 = mediaName;
-s.eVar12 = "video";
-s.eVar15 = mediaPlayerName;
-s.events = 'event2';
-s.contextData['video.name'] = mediaName;
-s.contextData['video.view'] = 'true';
+s.linkTrackVars
+  = 'events,
+     prop10,
+     eVar10,
+     eVar12,
+     eVar15,
+     contextData.video.name,
+     contextData.video.view';
+s.linkTrackEvents 
+  = 'event2';
+s.prop10 
+  = mediaName;
+s.eVar10 
+  = mediaName;
+s.eVar12 
+  = "video";
+s.eVar15 
+  = mediaPlayerName;
+s.events 
+  = 'event2';
+s.contextData['video.name'] 
+  = mediaName;
+s.contextData['video.view'] 
+  = 'true';
 s.tl(this,'o','Video Start');
 </pre>
 </td>
@@ -567,7 +657,8 @@ s.tl(this,'o','Video Start');
 <pre>
 s.prop10 = mediaName;
 s.eVar10 = mediaName;
-s.contextData['video.name'] = mediaName;
+s.contextData['video.name']
+  = mediaName;
 </pre>
 </td>
 </tr>
@@ -609,7 +700,14 @@ Media.openAd
 </td>
 <td>
 <pre>
-s.Media.openAd( name, length, playerName, parentName, parentPod, parentPodPosition, CPM)
+s.Media.openAd(
+  name,
+  length,
+  playerName,
+  parentName,
+  parentPod,
+  parentPodPosition,
+  CPM)
 </pre>
 </td>
 <td>Ej tillämpligt
@@ -731,7 +829,9 @@ Media.complete
 </td>
 <td>
 <pre>
-s.Media.complete( namn, offset)
+s.Media.complete(
+  name,
+  offset)
 </pre>
 </td>
 <td>
@@ -739,17 +839,32 @@ s.tl()
 </td>
 <td>
 <pre>
-s.linkTrackVars = 'events, prop10, eVar10, eVar12, eVar15, contextData.
-       video.name, contextData.
+s.linkTrackVars
+  = 'events,
+     prop10,
+     eVar10,
+     eVar12,
+     eVar15,
+     contextData.
+       video.name,
+     contextData.
        video.complete';
-s.linkTrackEvents = 'event3';
-s.prop10 = mediaName;
-s.eVar10 = mediaName;
-s.eVar12 = "video";
-s.eVar15 = mediaPlayerName;
-s.events = 'event3';
-s.contextData['video.name'] = mediaName;
-s.contextData['video.complete'] = 'true';
+s.linkTrackEvents 
+  = 'event3';
+s.prop10 
+  = mediaName;
+s.eVar10 
+  = mediaName;
+s.eVar12 
+  = "video";
+s.eVar15 
+  = mediaPlayerName;
+s.events 
+  = 'event3';
+s.contextData['video.name']
+ =  mediaName;
+s.contextData['video.complete']
+ = 'true';
 s.tl(this,'o','Video Complete');
 </pre>
 </td>
@@ -760,7 +875,12 @@ Media.play
 </td>
 <td>
 <pre>
-s.Media.play( namn, offset, segmentNum, segment, segmentLength)
+s.Media.play(
+  name,
+  offset,
+  segmentNum,
+  segment,
+  segmentLength)
 </pre>
 </td>
 <td>Ej tillämpligt
@@ -796,8 +916,15 @@ Ange eVar- eller kontextdatavariabeln i länkanrop
 </td>
 <td>
 <pre>
-s.linkTrackVars = 'events, prop10, eVar10, eVar12, eVar15, contextData.
-       video.name, contextData.
+s.linkTrackVars
+  = 'events,
+     prop10,
+     eVar10,
+     eVar12,
+     eVar15,
+     contextData.
+       video.name,
+     contextData.
        video.view';
 s.linkTrackEvents = 'event2';
 </pre>
