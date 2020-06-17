@@ -3,9 +3,9 @@ audience: end-user
 user-guide-title: Adobe Analytics för ljud och video
 product: adobe analytics
 sub-product: medieanalys
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: f90eec31389431fe5275760d510926fb01c33d9a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '809'
 ht-degree: 100%
 
@@ -147,7 +147,7 @@ ht-degree: 100%
          + [Konfigurera Adobe Debug](sdk-implement/validation/debugging/config-adobe-debug.md)
          + [Skapa en ny felsökningsrapport](sdk-implement/validation/debugging/create-new-debug-report.md)
          + [Felsöka instrumentpaneler och rapporter](sdk-implement/validation/debugging/debug-dash-repts.md)
-   + Analyser i OTT-appar {#analytics-with-ott}
+   + Analytics i OTT-appar {#analytics-with-ott}
       + [Spåra applägen](sdk-implement/analytics-with-ott/track-app-states.md)
       + [Spåra appåtgärder](sdk-implement/analytics-with-ott/track-app-actions.md)
       + [Ange användar-ID](sdk-implement/analytics-with-ott/set-user-ids.md)
