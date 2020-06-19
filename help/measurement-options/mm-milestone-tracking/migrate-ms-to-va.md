@@ -1,29 +1,29 @@
 ---
-title: Migrera från milstolpe till mediaanalys
+title: Migrera från milstolpe till Media Analytics
 description: null
 uuid: fdc96146-af63-48ce-b938-c0ca70729277
 translation-type: tm+mt
 source-git-commit: 0d2d75dd411edea2a7a853ed425af5c6da154b06
 workflow-type: tm+mt
 source-wordcount: '877'
-ht-degree: 20%
+ht-degree: 22%
 
 ---
 
 
-# Migrera från milstolpe till mediaanalys {#migrating-from-milestone-to-media-analytics}
+# Migrera från milstolpe till Media Analytics {#migrating-from-milestone-to-media-analytics}
 
 ## Översikt {#overview}
 
-De centrala begreppen för videomätning är desamma för Milestone och Media Analytics, som tar videospelarhändelser och mappar dem till analysmetoder, samtidigt som de hämtar metadata och värden för spelaren och mappar dem till analysvariabler. Medieanalyslösningen växte ut ur milstolpen, så många av metoderna och mätvärdena är desamma, men konfigurationsstrategin och koden har ändrats avsevärt. Det bör vara möjligt att uppdatera händelsekoden för spelaren så att den pekar på de nya Media Analytics-metoderna. Mer information om hur du implementerar Media Analytics finns i Översikt [och](/help/sdk-implement/setup/setup-overview.md) Spårningsöversikt [för](/help/sdk-implement/track-av-playback/track-core-overview.md) SDK.
+De centrala begreppen för videomätning är desamma för Milestone och Media Analytics, som tar videospelarhändelser och mappar dem till analysmetoder, samtidigt som de hämtar metadata och värden för spelaren och mappar dem till analysvariabler. Media Analytics-lösningen växte ut ur milstolpen, så många av metoderna och mätvärdena är desamma, men konfigurationsstrategin och koden har ändrats avsevärt. Det bör vara möjligt att uppdatera spelarens händelsekod så att den pekar på de nya Media Analytics-metoderna. Mer information om hur du implementerar Media Analytics finns i Översikt [och](/help/sdk-implement/setup/setup-overview.md) Spårningsöversikt [för](/help/sdk-implement/track-av-playback/track-core-overview.md) SDK.
 
-I följande tabeller finns översättningar mellan milstolpe-lösningen och Media Analytics-lösningen.
+I följande tabeller finns översättningar mellan Milstolpe-lösningen och Media Analytics-lösningen.
 
 ## Migreringsguide {#migration-guide}
 
 ### Variabelreferens
 
-| Mått för milstolpe | Variabeltyp | Media Analytics-mått |
+| Mått för milstolpe | Variabeltyp | Media Analytics Metric |
 | --- | --- | --- |
 | Innehåll | Giltighetstid<br/><br/>för eVarDefault: Besök | Innehåll |
 | Innehållstyp | eVar<br/><br/> standardutgångsdatum: Sidvy | Innehållstyp |
@@ -40,9 +40,9 @@ I följande tabeller finns översättningar mellan milstolpe-lösningen och Medi
 </th>
 <th>Syntax för milstolpe
 </th>
-<th>Medieanalys
+<th>Media Analytics
 </th>
-<th>Syntax för medieanalys
+<th>Media Analytics Syntax
 </th>
 </tr>
 </thead>
@@ -58,7 +58,7 @@ s.Media.trackUsingContextData = true;
 </td>
 <td>Ej tillämpligt
 </td>
-<td>Alla Media Analytics-data skickas endast med kontextdata.
+<td>Alla Analytics-data för Media skickas endast med kontextdata.
 </td>
 </tr>
 <tr>
@@ -85,7 +85,7 @@ s.Media.contextDataMapping = {
 </td>
 <td>Ej tillämpligt
 </td>
-<td>Kontextdata för Media Analytics fylls i automatiskt i i reserverade variabler. Mappning till eVars, props och händelser behövs inte längre i implementeringskoden. Kunder kan mappa kontextdata till variabler med bearbetningsregler.
+<td>Media Analytics-kontextdata fylls i automatiskt i reserverade variabler. Mappning till eVars, props och händelser behövs inte längre i implementeringskoden. Kunder kan mappa kontextdata till variabler med bearbetningsregler.
 </td>
 </tr>
 <tr>
@@ -140,9 +140,9 @@ s.Media.trackEvents =
 </th>
 <th>Syntax för milstolpe
 </th>
-<th>Medieanalys
+<th>Media Analytics
 </th>
-<th>Syntax för medieanalys
+<th>Media Analytics Syntax
 </th>
 </tr>
 </thead>
@@ -254,7 +254,7 @@ s.Media.
 </td>
 <td>Ej tillämpligt
 </td>
-<td>Media Analytics håller alltid reda på förloppsindikatorer med 10 %, 25 %, 50 %, 75 %, 95 %
+<td>Media Analytics spårar alltid förloppsindikatorer med 10 %, 25 %, 50 %, 75 %, 95 %
 </td>
 </tr>
 <tr>
@@ -269,7 +269,7 @@ s.Media.
 </td>
 <td>Ej tillämpligt
 </td>
-<td>Media Analytics håller alltid reda på förloppsindikatorer med 10 %, 25 %, 50 %, 75 %, 95 %
+<td>Media Analytics spårar alltid förloppsindikatorer med 10 %, 25 %, 50 %, 75 %, 95 %
 </td>
 </tr>
 <tr>
@@ -313,9 +313,9 @@ s.Media.
 </th>
 <th>Syntax för milstolpe
 </th>
-<th>Medieanalys
+<th>Media Analytics
 </th>
-<th>Syntax för medieanalys
+<th>Media Analytics Syntax
 </th>
 </tr>
 </thead>
@@ -407,9 +407,9 @@ s.Media.
 </th>
 <th>Syntax för milstolpe
 </th>
-<th>Medieanalys
+<th>Media Analytics
 </th>
-<th>Syntax för medieanalys
+<th>Media Analytics Syntax
 </th>
 </tr>
 </thead>
