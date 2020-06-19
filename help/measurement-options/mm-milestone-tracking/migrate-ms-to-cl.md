@@ -6,7 +6,7 @@ translation-type: tm+mt
 source-git-commit: ccdc3e170d125a76d798be7ce1fa5c12eef1f76a
 workflow-type: tm+mt
 source-wordcount: '908'
-ht-degree: 31%
+ht-degree: 33%
 
 ---
 
@@ -28,7 +28,7 @@ I följande tabeller finns översättningar mellan milstolpe-lösningen och Cust
 <tr>
 <th><strong>Mått för milstolpe</strong></th>
 <th><strong>Variabeltyp</strong></th>
-<th><strong>Egen länk</strong></th>
+<th><strong>Anpassad länk</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -84,7 +84,7 @@ I följande tabeller finns översättningar mellan milstolpe-lösningen och Cust
 </th>
 <th>Syntax för milstolpe
 </th>
-<th>Egen länk
+<th>Anpassad länk
 </th>
 <th>Syntax för anpassad länk
 </th>
@@ -217,7 +217,7 @@ s.linkTrackEvents = 'event2';
 </th>
 <th>Syntax för milstolpe
 </th>
-<th>Egen länk
+<th>Anpassad länk
 </th>
 <th>Syntax för anpassad länk
 </th>
@@ -344,7 +344,7 @@ s.linkTrackEvents = 'event2';
 </th>
 <th>Syntax för milstolpe
 </th>
-<th>Egen länk
+<th>Anpassad länk
 </th>
 <th>Syntax för anpassad länk
 </th>
@@ -509,7 +509,7 @@ s.Media.
 </th>
 <th>Syntax för milstolpe
 </th>
-<th>Egen länk
+<th>Anpassad länk
 </th>
 <th>Syntax för anpassad länk
 </th>
@@ -601,7 +601,7 @@ s.Media.
 </th>
 <th>Syntax för milstolpe
 </th>
-<th>Egen länk
+<th>Anpassad länk
 </th>
 <th>Syntax för anpassad länk
 </th>
