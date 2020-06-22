@@ -6,7 +6,7 @@ translation-type: tm+mt
 source-git-commit: 0d2d75dd411edea2a7a853ed425af5c6da154b06
 workflow-type: tm+mt
 source-wordcount: '877'
-ht-degree: 22%
+ht-degree: 32%
 
 ---
 
@@ -53,7 +53,8 @@ Media.trackUsingContextData
 </td>
 <td>
 <pre>
-s.Media.trackUsingContextData = true;
+s.Media.trackUsingContextData
+  = true;
 </pre>
 </td>
 <td>Ej tillämpligt
@@ -153,7 +154,8 @@ Media.autoTrack
 </td>
 <td>
 <pre>
-s.Media.autoTrack = true;
+s.Media.autoTrack
+  = true;
 </pre>
 </td>
 <td>Ej tillämpligt
@@ -168,7 +170,8 @@ Media.autoTrackNetStreams
 <td>
 <pre>
 s.Media.
-  autoTrackNetStreams = true
+  autoTrackNetStreams
+  = true
 </pre>
 </td>
 <td>Ej tillämpligt
@@ -183,7 +186,8 @@ Media.completeByCloseOffset
 <td>
 <pre>
 s.Media.
-  completeByCloseOffset = true
+  completeByCloseOffset
+  = true
 </pre>
 </td>
 <td>Ej tillämpligt
@@ -198,7 +202,8 @@ Media.completeCloseOffsetThreshold
 <td>
 <pre>
 s.Media.
-  completeCloseOffsetThreshold = 1
+  completeCloseOffsetThreshold
+  = 1
 </pre>
 </td>
 <td>Ej tillämpligt
@@ -212,7 +217,8 @@ Media.playerName
 </td>
 <td>
 <pre>
-s.Media.playerName = "Namn på anpassad spelare"
+s.Media.playerName
+  = "Custom Player Name"
 </pre>
 </td>
 <td>
@@ -234,7 +240,8 @@ Media.trackSeconds
 <td>
 <pre>
 s.Media.
-  trackSeconds = 15
+  trackSeconds
+  = 15
 </pre>
 </td>
 <td>Ej tillämpligt
@@ -249,7 +256,8 @@ Media.trackMilestones
 <td>
 <pre>
 s.Media.
-  trackMilestone = "25,50,75";
+  trackMilestones
+  = "25,50,75";
 </pre>
 </td>
 <td>Ej tillämpligt
@@ -264,7 +272,8 @@ Media.trackOffsetMilestones
 <td>
 <pre>
 s.Media.
-  trackOffsetMilestone = "20,40,60";
+  trackOffsetMilestones
+  = "20,40,60";
 </pre>
 </td>
 <td>Ej tillämpligt
@@ -278,7 +287,8 @@ Media.segmentByMilestones
 </td>
 <td>
 <pre>
-s.Media.segmentByMilestone = true;
+s.Media.segmentByMilestones
+  = true;
 </pre>
 </td>
 <td>Ej tillämpligt
@@ -293,7 +303,8 @@ Media.segmentByOffsetMilestones
 <td>
 <pre>
 s.Media.
-  segmentByOffsetMilestone = true;
+  segmentByOffsetMilestones
+  = true;
 </pre>
 </td>
 <td>Ej tillämpligt
@@ -327,7 +338,8 @@ Media.adTrackSeconds
 <td>
 <pre>
 s.Media.
-  adTrackSeconds = 15
+  adTrackSeconds
+  = 15
 </pre>
 </td>
 <td>Ej tillämpligt
@@ -342,7 +354,8 @@ Media.adTrackMilestones
 <td>
 <pre>
 s.Media.
-  adTrackMilestone = "25,50,75";
+  adTrackMilestones
+  = "25,50,75";
 </pre>
 </td>
 <td>Ej tillämpligt
@@ -357,7 +370,8 @@ Media.adTrackOffsetMilestones
 <td>
 <pre>
 s.Media.
-  adTrackOffsetMilestone = "20,40,60";
+  adTrackOffsetMilestones
+  = "20,40,60";
 </pre>
 </td>
 <td>Ej tillämpligt
@@ -372,7 +386,8 @@ Media.adSegmentByMilestones
 <td>
 <pre>
 s.Media.
-  adSegmentByMilestone = true;
+  adSegmentByMilestones
+  = true;
 </pre>
 </td>
 <td>Ej tillämpligt
@@ -387,7 +402,8 @@ Media.adSegmentByOffsetMilestones
 <td>
 <pre>
 s.Media.
-  adSegmentByOffsetMilestone = true;
+  adSegmentByOffsetMilestones
+  = true;
 </pre>
 </td>
 <td>Ej tillämpligt
@@ -441,7 +457,7 @@ trackSessionStart(
 </tr>
 <tr>
 <td>
-mediaName - (obligatoriskt) Namnet på videon som du vill att den ska visas i videorapporter.
+mediaName - (Obligatoriskt) Namnet på videon som du vill att den ska visas i videorapporter.
 </td>
 <td>
 <pre>
@@ -465,7 +481,7 @@ createMediaObject(
 </tr>
 <tr>
 <td>
-mediaLength - (Required) Videons längd i sekunder.
+mediaLength - (Obligatoriskt) Videons längd i sekunder.
 </td>
 <td>
 <pre>
@@ -489,7 +505,7 @@ createMediaObject(
 </tr>
 <tr>
 <td>
-mediaPlayerName - (obligatoriskt) Namnet på den mediespelare som användes för att visa videon, så som du vill att den ska visas i videorapporter.
+mediaPlayerName - (Obligatoriskt) Namnet på den mediespelare som användes för att visa videon, så som du vill att den ska visas i videorapporter.
 </td>
 <td>
 <pre>
@@ -548,7 +564,7 @@ trackEvent(
 </tr>
 <tr>
 <td>
-name - (Required) The name or ID of the ad.
+name - (Obligatoriskt) Annonsens namn eller ID.
 </td>
 <td>
 <pre>
@@ -572,7 +588,8 @@ createAdObject(
 </tr>
 <tr>
 <td>
-length(Required) Annonsens längd.
+length
+(Obligatoriskt) Annonsens längd.
 </td>
 <td>
 <pre>
@@ -596,7 +613,7 @@ createAdObject(
 </tr>
 <tr>
 <td>
-playerName - (Required) Namnet på mediaplayer som används för att visa annonsen.
+playerName - (Obligatoriskt) Namnet på det mediaplayer som används för att visa annonsen.
 </td>
 <td>
 <pre>
@@ -654,7 +671,7 @@ createAdBreakObject(
 </tr>
 <tr>
 <td>
-parentPodPosition - positionen i rutan där annonsen spelas upp.
+parentPodPosition - Den position i rutan där annonsen spelas upp.
 </td>
 <td>
 <pre>
@@ -678,7 +695,8 @@ createAdObject(
 </tr>
 <tr>
 <td>
-CPMTThe CPM or encrypted CPM (prefixed with a "~") that apply to this playback.
+CPM
+CPM eller krypterad CPM (prefix med ett "~") som gäller för den här uppspelningen.
 </td>
 <td>
 <pre>
@@ -696,7 +714,9 @@ Media.click
 </td>
 <td>
 <pre>
-s.Media.click( namn, förskjutning)
+s.Media.click(
+  name,
+  offset)
 </pre>
 </td>
 <td>Ej tillämpligt
@@ -710,7 +730,8 @@ Media.close
 </td>
 <td>
 <pre>
-s.Media.close( mediaName)
+s.Media.close(
+  mediaName)
 </pre>
 </td>
 <td>
@@ -781,7 +802,9 @@ Media.stop
 </td>
 <td>
 <pre>
-s.Media.stop( mediaName, mediaOffset)
+s.Media.stop(
+  mediaName,
+  mediaOffset)
 </pre>
 </td>
 <td>
@@ -864,7 +887,8 @@ Media.track
 </td>
 <td>
 <pre>
-s.Media.track( mediaName)
+s.Media.track(
+  mediaName)
 </pre>
 </td>
 <td>Ej tillämpligt
