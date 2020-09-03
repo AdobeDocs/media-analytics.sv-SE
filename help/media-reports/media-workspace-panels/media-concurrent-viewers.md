@@ -2,7 +2,7 @@
 title: Media Concurrent Viewer Reporting
 description: För kunder som använder Media Analytics kan du med Media Concurrent Viewer-panelen i Analysis Workspace analysera samtidiga visningsprogram för att förstå var maximal samtidighet inträffade eller var bortfall inträffade.
 translation-type: tm+mt
-source-git-commit: 9c87109477518dd647b263edfa6bcf89be3e067d
+source-git-commit: 5d6f2c35f11b14222b704888a80e08e7217b33e9
 workflow-type: tm+mt
 source-wordcount: '224'
 ht-degree: 5%
