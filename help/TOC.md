@@ -8,7 +8,7 @@ translation-type: tm+mt
 source-git-commit: 126b54173b8b488e53fe27fbc99ad9e83fb2c078
 workflow-type: tm+mt
 source-wordcount: '816'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -214,8 +214,8 @@ ht-degree: 99%
       + [Medietid](media-reports/media-default-reports/media-reports-daypart.md)
       + [Samtidiga medieanvändare](media-reports/media-default-reports/media-concurrent-viewers.md)
       + [Hämta JSON-rapportdata för samtidiga medieanvändare](media-reports/media-default-reports/get-concurrent-json.md)
-   + Paneler i arbetsytan Media {#media-workspace-panels}
-      + [Media Concurrent Viewers panel](media-reports/media-workspace-panels/media-concurrent-viewers.md)
+   + Paneler för mediearbetsyta {#media-workspace-panels}
+      + [Panelen för samtidiga medieanvändare](media-reports/media-workspace-panels/media-concurrent-viewers.md)
    + [Mallar för mediearbetsyta](media-reports/media-workspace-templates.md)
 + [Spåra nedladdat innehåll](media-collection-api/track-downloaded-content.md)
 + [Federated Analytics](federated-analytics.md)
