@@ -3,9 +3,9 @@ title: Medievisningsprogram för samtidig användning
 description: null
 uuid: e61c50e5-8196-4538-b67c-ebc01c6e6ba7
 translation-type: tm+mt
-source-git-commit: 420d17294f8f4b5c38d960e4e4ebd0b2ee80a60b
+source-git-commit: cb54b862a0d4a179c499e3a28ab49301121de1bf
 workflow-type: tm+mt
-source-wordcount: '268'
+source-wordcount: '267'
 ht-degree: 3%
 
 ---
@@ -16,8 +16,8 @@ ht-degree: 3%
 Kontrollpanelen för samtidiga visningsprogram i Media visar samtidiga visningsprogram under en dag. Data kan filtreras efter innehåll, enhetstyp eller land.
 
 >[!TIP]
-> 
-> Tips: Den här rapporten baseras på samtidiga aktiva mediesessioner.  Använd [Media Concurrent Viewers panel i Analysis Workspace](https://docs.adobe.com/content/help/sv-SE/analytics/analyze/analysis-workspace/panels/media-concurrent-viewers.html).
+>
+> Den här rapporten baseras på samtidiga aktiva mediesessioner.  Använd [Media Concurrent Viewers panel i Analysis Workspace](https://docs.adobe.com/content/help/sv-SE/analytics/analyze/analysis-workspace/panels/media-concurrent-viewers.html).
 
 
 ![](assets/video-concurrent-viewers.png)
@@ -44,4 +44,3 @@ Här följer några begränsningar för den här rapporten:
 * Du kan inte skicka en rapport via e-post.
 * Även om du inte spårar annonser måste du aktivera mediespårning igen och välja modulen Medieannonsering.
 * Den här funktionen ger korrekta data när du använder ett hjärtslagsbibliotek som har funktioner för att pausa spårning.
-
