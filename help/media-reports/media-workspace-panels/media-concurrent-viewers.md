@@ -2,10 +2,10 @@
 title: Media Concurrent Viewer Reporting
 description: För kunder som använder Media Analytics kan du med Media Concurrent Viewer-panelen i Analysis Workspace analysera samtidiga visningsprogram för att förstå var maximal samtidighet inträffade eller var bortfall inträffade.
 translation-type: tm+mt
-source-git-commit: 5d6f2c35f11b14222b704888a80e08e7217b33e9
+source-git-commit: 687ae6f2037590b58b30ea776635898c93ca144f
 workflow-type: tm+mt
-source-wordcount: '224'
-ht-degree: 5%
+source-wordcount: '212'
+ht-degree: 13%
 
 ---
 
@@ -20,8 +20,8 @@ Genom att analysera samtidiga visningsprogram kan ni förstå var maximal samtid
 
 ## Media Concurrent Viewer Panel i Analysis Workspace
 
-I Analysis Workspace är Concurrent Viewers antalet unika besökare som visar medieströmmarna vid en viss tidpunkt, oavsett antalet sessioner. Panelen Media Concurrent Viewers är tillgänglig för att visualisera samtidiga visningsprogram, dela upp och jämföra. [Läs mer …](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/panels/media-concurrent-viewers.html)
+I Analysis Workspace är Concurrent Viewers antalet unika besökare som visar medieströmmarna vid en viss tidpunkt, oavsett antalet sessioner. Panelen Media Concurrent Viewers är tillgänglig för att visualisera samtidiga visningsprogram, dela upp och jämföra. [Läs mer …](https://docs.adobe.com/content/help/sv-SE/analytics/analyze/analysis-workspace/panels/media-concurrent-viewers.html)
 
 ## Få samtidiga visningsprogram via API:t för analysrapportering
 
-Du kan också få samtidiga visningsprogramdata för upp till en månad i taget på minutnivå med Analytics Reporting API 2.0. Rapporterings-API:t använder samma definition av samtidiga visningsprogram som Analysis Workspace.  Mer information om API:er i Analytics finns i [Användarhandbok för API-rapporter för analyser](https://www.adobe.io/apis/experiencecloud/analytics/docs.html#!AdobeDocs/analytics-2.0-apis/master/reporting-guide.md).
+Du kan också få samtidiga visningsprogramdata för upp till en månad i taget på minutnivå med Analytics Reporting API 2.0. Rapporterings-API:t använder samma definition av samtidiga visningsprogram som Analysis Workspace.  Mer information finns i [_*API:er för Analytics 2.0*_](https://www.adobe.io/apis/experiencecloud/analytics/docs.html).
