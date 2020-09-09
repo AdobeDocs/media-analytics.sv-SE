@@ -5,9 +5,9 @@ user-guide-description: Implement Analytics on audio or video sources. Includes 
 product: adobe analytics
 sub-product: medieanalys
 translation-type: tm+mt
-source-git-commit: cb54b862a0d4a179c499e3a28ab49301121de1bf
+source-git-commit: e93a39fb76c3ccca2c05e5d1590a53394e50b29b
 workflow-type: tm+mt
-source-wordcount: '830'
+source-wordcount: '818'
 ht-degree: 98%
 
 ---
@@ -213,11 +213,10 @@ ht-degree: 98%
       + [Medieinformation](media-reports/media-default-reports/media-reports-detail.md)
       + [Media Daypart-rapport](media-reports/media-default-reports/media-reports-daypart.md)
       + [Rapport över samtidiga visningsprogram för media](media-reports/media-default-reports/media-concurrent-viewers.md)
-      + [Hämta JSON-rapportdata för samtidiga medieanvändare](media-reports/media-default-reports/get-concurrent-json20.md)
    + Paneler för mediearbetsyta {#media-workspace-panels}
       + [Panelen för samtidiga medieanvändare](media-reports/media-workspace-panels/media-concurrent-viewers.md)
    + [Mallar för mediearbetsyta](media-reports/media-workspace-templates.md)
-   + [Hämta data för samtidiga visningsprogram via API](https://www.adobe.io/apis/experiencecloud/analytics/docs.html)
+   + [Hämta data för samtidiga visningsprogram via API](media-reports/media-default-reports/get-concurrent-json20.md)
 + [Spåra nedladdat innehåll](media-collection-api/track-downloaded-content.md)
 + [Federated Analytics](federated-analytics.md)
 + Spårning av spelarens tillstånd {#player-state-tracking}
