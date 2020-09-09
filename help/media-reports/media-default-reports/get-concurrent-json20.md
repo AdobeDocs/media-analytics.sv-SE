@@ -1,9 +1,9 @@
 ---
-title: Få JSON-rapportdata för samtidiga visningsprogram med API:er för Analytics 2.0
+title: Hämta JSON-rapportdata för samtidiga visningsprogram med API:er för Analytics 2.0
 description: null
 uuid: 9168f114-2459-4951-a06c-57b735d09dc0
 translation-type: tm+mt
-source-git-commit: 687ae6f2037590b58b30ea776635898c93ca144f
+source-git-commit: e93a39fb76c3ccca2c05e5d1590a53394e50b29b
 workflow-type: tm+mt
 source-wordcount: '167'
 ht-degree: 3%
@@ -11,7 +11,7 @@ ht-degree: 3%
 ---
 
 
-# Få JSON-rapportdata för samtidiga visningsprogram med API:er för Analytics 2.0{#get-concurrent-viewers-json-report-data}
+# Hämta JSON-rapportdata för samtidiga visningsprogram med API:er för Analytics 2.0{#get-concurrent-viewers-json-report-data}
 
 Du kan hämta rapportdata för samtidiga visningsprogram med [_*API:er för Analytics 2.0*_](https://www.adobe.io/apis/experiencecloud/analytics/docs.html).
 
