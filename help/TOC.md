@@ -1,11 +1,12 @@
 ---
 audience: end-user
 user-guide-title: Adobe Analytics för ljud och video
+breadcrumb-title: Media Analytics Guide
 user-guide-description: Implement Analytics on audio or video sources. Includes the Media SDK and the Media Collection API.
 product: adobe analytics
 sub-product: medieanalys
 translation-type: tm+mt
-source-git-commit: e93a39fb76c3ccca2c05e5d1590a53394e50b29b
+source-git-commit: 32865b998afc7b19ef328a2d43c3acd9970a4d5c
 workflow-type: tm+mt
 source-wordcount: '818'
 ht-degree: 98%
