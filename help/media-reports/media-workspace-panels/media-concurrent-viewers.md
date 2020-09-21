@@ -2,19 +2,15 @@
 title: Media Concurrent Viewer Reporting
 description: För kunder som använder Media Analytics kan du med Media Concurrent Viewer-panelen i Analysis Workspace analysera samtidiga visningsprogram för att förstå var maximal samtidighet inträffade eller var bortfall inträffade.
 translation-type: tm+mt
-source-git-commit: ee925e7bf2d32431679dd1b82e46c7c124256d13
+source-git-commit: eb69c5c68b7bc367a944ce441a196f45791bcb53
 workflow-type: tm+mt
-source-wordcount: '224'
-ht-degree: 9%
+source-wordcount: '204'
+ht-degree: 5%
 
 ---
 
 
 # Media Concurrent Viewer Reporting{#media-concurrent-viewers}
-
->[!IMPORTANT]
->
->Den här funktionen används i begränsad testning för kunder som använder Media Analytics. [Läs mer …](https://docs.adobe.com/content/help/sv-SE/analytics/landing/an-releases.html)
 
 Genom att analysera samtidiga visningsprogram kan ni förstå var maximal samtidighet inträffade eller var bortfall inträffade för att få värdefulla insikter om innehållets och visningsprogrammets kvalitet och för att hjälpa till med felsökning eller planering av volym och skala.
 
