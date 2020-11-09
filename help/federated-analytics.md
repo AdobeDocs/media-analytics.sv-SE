@@ -1,9 +1,12 @@
 ---
 title: Federated Analytics
-description: 'Tjänsten Federated Analytics är ett system för att dela Adobe Media Analytics-data (ljud och video) mellan två parter. '
+description: Tjänsten Federated Analytics är ett system för att dela Adobe Media Analytics-data (ljud och video) mellan två parter.
 uuid: a82ace81-c2f6-4799-9a62-4c6a737a7dab
-translation-type: ht
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+translation-type: tm+mt
+source-git-commit: 88f4479ec072ab2a332ade09a83e9fbff94a98e9
+workflow-type: tm+mt
+source-wordcount: '554'
+ht-degree: 97%
 
 ---
 
@@ -42,7 +45,8 @@ Med Federated Analytics blir ljud- och videomätningarna effektivare, smidigare 
 
 ## Hämta Federated Analytics-formuläret
 
-Hämta den aktuella versionen av formuläret här: [Avtal om regler för federering](https://github.com/AdobeDocs/media-analytics.en/blob/master/help/federated-analytics-form.pdf)
+Ladda ned och fyll i [Federationsregelavtal](federated-analytics-form.pdf) formulär.
+
 
 ## Process {#process}
 
@@ -54,4 +58,3 @@ Hämta den aktuella versionen av formuläret här: [Avtal om regler för federer
 1. När mottagaren har bekräftat att data är korrekta uppdaterar Adobes tekniker reglerna till att peka på en produktionsrapportsvit.
 1. Mottagaren granskar och validerar data i produktionsrapportsviten.
 1. Om datauppsättningen ändras i framtiden kan avsändaren eller mottagaren kontakta supporten genom att skicka en supportbegäran.
-
