@@ -3,9 +3,9 @@ title: Parametrar för ljud och video
 description: null
 uuid: fdacfb8b-db3e-46fb-b9ad-c3a749555b2a
 translation-type: tm+mt
-source-git-commit: abb2cd2d056ffbefa72126061b11286cc10ec1ca
+source-git-commit: 4dad6507966e30accfb4f6c2eb5f1d6a5507d29d
 workflow-type: tm+mt
-source-wordcount: '6237'
+source-wordcount: '6234'
 ht-degree: 2%
 
 ---
@@ -47,7 +47,7 @@ Beskrivning av tabelldata:
 >Ändra inte klassificeringsnamnen för de variabler som listas nedan och som beskrivs under Rapportera/Reserverad variabel som &quot;klassificering&quot;.\
 >Medieklassificeringarna definieras när en rapportsserie aktiveras för mediespårning. Ibland lägger Adobe till nya egenskaper och när detta inträffar måste kunderna återaktivera sina rapporteringsprogram för att få tillgång till de nya medieegenskaperna. Under uppdateringsprocessen avgör Adobe om klassificeringarna är aktiverade genom att kontrollera namnen på variablerna. Om någon av dem saknas lägger Adobe till de saknade igen.
 
-## Core Audio and Video Data {#core-audio-and-video-data}
+## Stjärnstyrda mediedata {#core-audio-and-video-data}
 
 ### Strömtyp {#stream-type}
 
@@ -187,7 +187,7 @@ public static MediaObject createMediaObject(java.lang.String name,
 | --- | --- | --- |
 | <ul> <li> **SDK-nyckel:**<br/> Ställ in automatiskt </li> <li> **API-nyckel:**<br/> Ej tillämpligt </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **Typ:**<br/> string </li> <li> **Skickat med:**<br/> Stäng media </li> <li> **Min. SDK-version:** 1.5.7 </li> <li> **Exempelvärde:**<br/> &quot;js-2.0.1.88-c8c0b1&quot; </li> <li> **Beskrivning:**<br/> Den Media SDK-version som används för spårningssessionen. <br/><br/>Kunderna måste skapa egna bearbetningsregler för att kunna rapportera värdet.  <br/><br/>[MediaHeartbeat.version();](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/MediaHeartbeat.html) </li></ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.<br/>vhlVersion) </li> <li> **Hjärtslag:**<br/> (s:sp:hb_version) </li> </ul> | <ul> <li> **Tillgängligt:**<br/> Använd anpassad bearbetningsregel </li> <li> **Reserverad variabel:**<br/> Ej tillämpligt </li> <li> **Rapportnamn:**<br/> Egen </li> <li> **Kontextdata:**<br/> (a.media.vhlVersion) </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.vhlVersion) </li> </ul> |
 
-## Standardmetadata för ljud och video {#standard-audio-and-video-metadata}
+## Standardmetadata för spelmedia {#standard-audio-and-video-metadata}
 
 ### Visa
 
@@ -321,7 +321,7 @@ public static MediaObject createMediaObject(java.lang.String name,
 | --- | --- | --- |
 | <ul> <li> **SDK-nyckel:**<br/> </li> <li> **API-nyckel:**<br/> media.publisher </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **Typ:**<br/> string </li> <li> **Skickat med:**<br/> Mediestart, stäng media </li> <li> **Min. SDK-version:** 1.5.7 <br/>Finns i [Media Collection - översikt](/help/media-collection-api/mc-api-overview.md) eller [Ladda ned SDK:er - Version 2.2](/help/sdk-implement/download-sdks.md).  </li> <li> **Exempelvärde:**<br/> &quot;Random Bauhaus&quot; </li> <li> **Beskrivning:**<br/> Namn på ljudinnehållsutgivaren.  <br/> **Releasedatum: 09/13/18** </li></ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.publisher) </li> <li> **Hjärtslag:**<br/> (s:meta:<br/>a.media.publisher) </li> </ul> | <ul> <li> **Tillgängligt:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> eVar </li> <li> **Förfallodatum:**<br/> Vid TRIT </li> <li> **Rapportnamn:**<br/> </li> <li> **Kontextdata:**<br/> (a.media.publisher) </li> <li> **Datafeed:**<br/> videoaudiopublisher </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.publisher) </li> </ul> |
 
-## Mätvärden för ljud och video {#audio-and-video-metrics}
+## Mätvärden för spelmedia {#audio-and-video-metrics}
 
 ### Media börjar
 
