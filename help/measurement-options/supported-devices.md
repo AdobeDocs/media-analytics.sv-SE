@@ -1,22 +1,22 @@
 ---
 title: Enheter och plattformar som stöds
-description: Adobe Analytics för ljud och video ser till att alla medieströmmar samlas in och rapporteras på alla enheter.
+description: Adobe Analytics for Streaming Media ser till att alla medieströmmar samlas in och rapporteras på alla enheter.
 translation-type: tm+mt
-source-git-commit: 4db4e4281ba9c7af078c18d03f73b6e1e007a0e8
+source-git-commit: fdec4da99a43d889690638f1ff3579e145548b69
 workflow-type: tm+mt
-source-wordcount: '338'
-ht-degree: 15%
+source-wordcount: '336'
+ht-degree: 19%
 
 ---
 
 
-# Supported devices and platforms {#devices-supported}
+# Enheter och plattformar som stöds {#devices-supported}
 
 >[!IMPORTANT]
 >
->När stödet för version 4 Mobile SDK upphör den 31 augusti 2021 upphör även stödet för Media Analytics SDK för iOS och Android.  Mer information finns i Vanliga frågor om supporten för [Media Analytics SDK](/help/sdk-implement/end-of-support-faqs.md).
+>När stödet för version 4 Mobile SDK upphör den 31 augusti 2021 upphör även stödet för Media Analytics SDK för iOS och Android i Adobe.  Mer information finns i [Vanliga frågor om supporten för Media Analytics SDK](/help/sdk-implement/end-of-support-faqs.md).
 
-Adobe Analytics för ljud och video har stöd för alla större enheter:
+Adobe Analytics for Streaming Media har stöd för alla större enheter:
 
 * iOS- och Android-smartphones och surfplattor
 * OTT-enheter för ROKU, AppleTV, FireTV och Android TV
@@ -24,7 +24,7 @@ Adobe Analytics för ljud och video har stöd för alla större enheter:
 
 SDK:n för media uppdateras regelbundet när nya versioner av enheter släpps och du kan använda SDK för att integrera med de största mediespelarna idag, inklusive Brightcove och Oyala.
 
-För enheter och plattformar som för närvarande inte har SDK-stöd eller i situationer där du inte vill använda en SDK kan du implementera API:t för Media Collection. Med Media Collection API kan du göra RESTful API-anrop direkt från en enhet eller plattform till Media Analytics-serverdelen.
+För enheter och plattformar som för närvarande inte har SDK-stöd eller i situationer där du inte vill använda en SDK kan du implementera API:t för Media Collection. Med Media Collection API kan du göra RESTful API-anrop direkt från en enhet eller plattform till Media Analytics-backend.
 
 Tabellen nedan visar vilka enheter och plattformar som stöds. Information om hur du hämtar den senaste SDK-versionen finns i [Hämta SDK:er](https://docs.adobe.com/content/help/en/media-analytics/using/sdk-implement/download-sdks.html). Om en enhet inte finns med i listan kontaktar du kundtjänst eller lösningskonsult för att få information om enhetens status.
 
@@ -48,6 +48,6 @@ Tabellen nedan visar vilka enheter och plattformar som stöds. Information om hu
 | Övriga |  |  |  |  |
 |  | Nya anslutna enheter |  |  | ![](/help/assets/icon-blue-check.png) |
 
-1. Stödet för dessa SDK upphör den 31 augusti 2021. Mer information finns i Vanliga frågor om supporten för [Media Analytics SDK](/help/sdk-implement/end-of-support-faqs.md).
+1. Stödet för dessa SDK upphör den 31 augusti 2021. Mer information finns i [Vanliga frågor om supporten för Media Analytics SDK](/help/sdk-implement/end-of-support-faqs.md).
 
-Mer information om de lägsta plattformsversionerna som stöds för varje SDK finns i [Minimalt stöd för Platform-versioner](https://docs.adobe.com/content/help/en/media-analytics/using/sdk-implement/setup/setup-overview.html)
+Mer information om de lägsta plattformsversionerna som stöds för varje SDK finns i [Stöd för minst plattformsversion](https://docs.adobe.com/content/help/en/media-analytics/using/sdk-implement/setup/setup-overview.html)
