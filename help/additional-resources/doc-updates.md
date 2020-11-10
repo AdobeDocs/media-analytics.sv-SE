@@ -6,7 +6,10 @@ index: y
 internal: n
 snippet: y
 translation-type: tm+mt
-source-git-commit: d9f6c99b26153ef81d4623c30361fc5b34385bf6
+source-git-commit: fdec4da99a43d889690638f1ff3579e145548b69
+workflow-type: tm+mt
+source-wordcount: '15'
+ht-degree: 80%
 
 ---
 
@@ -15,7 +18,7 @@ source-git-commit: d9f6c99b26153ef81d4623c30361fc5b34385bf6
 
 ## Versionsinformation{#release-notes}
 
-* [Versionsinformation](https://docs.adobe.com/content/help/en/release-notes/experience-cloud/current.html)
+* [Versionsinformation](https://docs.adobe.com/content/help/sv-SE/release-notes/experience-cloud/current.html)
 
 <!--
 ## Documentation Updates{#documentation-updates}
@@ -42,7 +45,7 @@ outside Media Tracking."
   now available in both the Media SDK and the Media Collection API, a relatively wholesale 
   naming update is called for:
 
-    * The overall solution is titled Adobe Analytics for Audio and Video
+    * The overall solution is titled Adobe Analytics for Streaming Media
     * The shorthand formerly used throughout the docs, "Video Analytics", is now "Media Analytics"
     * In the SDK, references to "Video Heartbeat Library (VHL)" are now "Media SDK"
     * Filenames and URLs (e.g., links to API references) that formerly referenced "video" or "vhl" now use "media" in their place
