@@ -1,24 +1,24 @@
 ---
 audience: end-user
-user-guide-title: Adobe Analytics för ljud och video
+user-guide-title: Adobe Analytics for Streaming Media
 breadcrumb-title: Media Analytics Guide
 user-guide-description: Implementera analyser på ljud- och videokällor. Innehåller Media SDK och Media Collection API.
 product: adobe analytics
 sub-product: medieanalys
 translation-type: tm+mt
-source-git-commit: 32865b998afc7b19ef328a2d43c3acd9970a4d5c
+source-git-commit: da13db682f859cfd176a5ab379b7a0a947dc0e3a
 workflow-type: tm+mt
-source-wordcount: '837'
-ht-degree: 97%
+source-wordcount: '830'
+ht-degree: 93%
 
 ---
 
 
-# Adobe Analytics för ljud och video {#using}
+# Adobe Analytics for Streaming Media {#using}
 
-+ [Mäta ljud och video i Adobe Analytics](media-overview.md)
++ [Mäta direktuppspelningsmedia i Adobe Analytics](media-overview.md)
 + [Enheter och plattformar som stöds](measurement-options/supported-devices.md)
-+ Introduktion till ljud- och videoanalys {#intro-to-ava}
++ Introduktion till Streaming Media Analytics {#intro-to-ava}
    + [Förutsättningar](intro-to-ava/prereqs.md)
    + Implementeringsvägar {#implementation-paths}
       + [Översikt](intro-to-ava/implementation-paths/implementation-paths.md)
@@ -45,9 +45,9 @@ ht-degree: 97%
          + [Konfigurera JavaScript 3.x](sdk-implement/setup/setup-javascript/set-up-js-3.md)
       + [Konfigurera Chromecast](sdk-implement/setup/set-up-chromecast.md)
       + [Konfigurera Roku](sdk-implement/setup/set-up-roku.md)
-   + Spåra ljud- och videouppspelning {#track-av-playback}
+   + Spåra uppspelning av strömmande media {#track-av-playback}
       + [Översikt](sdk-implement/track-av-playback/track-core-overview.md)
-      + Spåra grundläggande ljud- och videouppspelning {#track-core}
+      + Spåra grundläggande strömning av media {#track-core}
          + [Spåra grundläggande uppspelning i Android](sdk-implement/track-av-playback/track-core/track-core-android.md)
          + [Spåra grundläggande uppspelning i iOS](sdk-implement/track-av-playback/track-core/track-core-ios.md)
          + Spåra grundläggande uppspelning i JavaScript {#track-core-javascript}
@@ -199,7 +199,7 @@ ht-degree: 97%
    + [Kokbok](media-analytics-cookbook/media-analytics-cookbook.md)
    + [Attribution för medieström](media-analytics-cookbook/media-dimensions.md)
 + Mätvärden och metadata {#metrics-and-metadata}
-   + [Parametrar för ljud och video](metrics-and-metadata/audio-video-parameters.md)
+   + [Parametrar för spelmedia](metrics-and-metadata/audio-video-parameters.md)
    + [Annonsparametrar](metrics-and-metadata/ad-parameters.md)
    + [Kapitelparametrar](metrics-and-metadata/chapter-parameters.md)
    + [Parametrar för spelarens tillstånd](metrics-and-metadata/player-state-parameters.md)
@@ -220,6 +220,8 @@ ht-degree: 97%
    + [Hämta data för samtidiga visningsprogram via API](media-reports/media-default-reports/get-concurrent-json20.md)
 + [Spåra nedladdat innehåll](media-collection-api/track-downloaded-content.md)
 + [Federated Analytics](federated-analytics.md)
+
+<!-- + Basic Streaming Media Measurement for Adobe Analytics Ultimate{#basic-streaming-measurement} -->
 + Spårning av spelarens tillstånd {#player-state-tracking}
    + [Översikt](sdk-implement/player-state-tracking/player-state-overview.md)
    + [Standardtillstånd och anpassade tillstånd](sdk-implement/player-state-tracking/standard-and-custom-states.md)
