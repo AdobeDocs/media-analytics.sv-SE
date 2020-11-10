@@ -1,28 +1,31 @@
 ---
-title: Mäta ljud och video i Adobe Analytics
+title: Mäta spelmedia i Adobe Analytics
 description: Adobe Analytics for Media (även kallat Media Analytics) ger kunderna robusta mediemätningar för innehåll, ljud och annonser.
 uuid: b3cbe240-b94d-42b8-a99c-0280334aaa14
-translation-type: ht
-source-git-commit: bddcbcd844145788518c60399bee9e4744e42d3a
+translation-type: tm+mt
+source-git-commit: fdec4da99a43d889690638f1ff3579e145548b69
+workflow-type: tm+mt
+source-wordcount: '903'
+ht-degree: 85%
 
 ---
 
 
-# Mäta ljud och video i Adobe Analytics {#measuring-audio-and-video-in-adobe-analytics}
+# Mäta spelmedia i Adobe Analytics{#measuring-audio-and-video-in-adobe-analytics}
 
 ![Banderoll](./assets/media_analytics_banner.png)
 
-## Om Adobe Analytics för ljud och video
+## Om Adobe Analytics for Streaming Media
 
-Adobe Analytics för ljud och video är ett tillägg till Adobe Analytics som innehåller kraftfulla mätverktyg för ljud, video och reklam. Adobe Analytics ingår i Adobe Experience Platform.
+Adobe Analytics for Streaming Media är ett tillägg till Adobe Analytics som innehåller kraftfulla mätverktyg för ljud, video och reklam. Adobe Analytics ingår i Adobe Experience Platform.
 
-Med Adobe Analytics för ljud och video kan ni spåra hela kundresan på er webbplats. Mätvärdena kan enkelt integreras i Adobe Analytics-rapporter och andra Adobe Experience Cloud-produkter. Med mediemätning kan ni kategorisera data i flera dimensioner och segment och samla in alla metadata ni behöver för att göra en fullständig och detaljerad analys. Sedan kan ni analysera data och attribuera framgångsmått för helt konsumerad media, genomsnittlig tid som tillbringats på platsen och slutförda annonser.
+Med Adobe Analytics for Streaming Media kan ni spåra hela kundresan på er webbplats. Mätvärdena kan enkelt integreras i Adobe Analytics-rapporter och andra Adobe Experience Cloud-produkter. Med mediemätning kan ni kategorisera data i flera dimensioner och segment och samla in alla metadata ni behöver för att göra en fullständig och detaljerad analys. Sedan kan ni analysera data och attribuera framgångsmått för helt konsumerad media, genomsnittlig tid som tillbringats på platsen och slutförda annonser.
 
 Ni kan mäta viktiga leveransvärden som rör QoS, som uteslutna bildrutor, tidsåtgång för buffring och genomsnittlig bithastighet. Och ni kan kombinera mätvärdena med webbplats- eller appdata för att visualisera kundens väg och intressen, så att ni kan ta fram bättre rekommendationer och personalisera kundupplevelserna med Adobe Experience Cloud.
 
 ## Funktioner {#features}
 
-Bland fördelarna med Adobe Analytics för ljud och video finns övervakning i realtid, detaljerad analys, användbara insikter och intäktsmöjligheter.
+Fördelarna med Adobe Analytics för Streaming Media är bland annat övervakning i realtid, detaljerad analys, användbara insikter och möjligheter till intäktsgenerering.
 * **Realtidsanalys** – Fatta smarta beslut i realtid med hjälp av nyckeltal som varaktighet, ex2 och ex3 över flera kanaler. Huvudsakliga innehållshändelser mäts i intervall på 10 sekunder för att fånga all aktivitet när den inträffar. Annonsspårningshändelser utförs med intervall på 1 sekund.
 * **Öka engagemanget** – Engagera användarna mer med färre buffringshändelser och förstå var och när annonser ska spelas upp i innehållet för att skapa en smidig, mindre påträngande upplevelse som får användarna att komma tillbaka.
 * **Heltäckande bild** – Kombinera flera datapunkter för alla innehållsdistributörer för att få en fullständig bild av alla medieaktiviteter. Mät engagemang och visningar/avlyssningar i alla möjliga kanaler via funktionen Federated Analytics.
@@ -32,9 +35,9 @@ Bland fördelarna med Adobe Analytics för ljud och video finns övervakning i r
 
 ## Mätning av pulsslag {#heartbeat}
 
-Adobe Analytics använder ”pulsslag” för att samla in videostatistik. Under videouppspelningen skickas pulsslag till en spårningsserver för att mäta uppspelningstiden. Pulsslagsanropen skickas var tionde sekund. Pulsslagen genererar detaljerad statistik om videoengagemang och mer korrekta rapporter om videobortfall. Adobe Analytics för ljud och video mäter pulsslag med hjälp av Adobe Launch och Media Analytics-tillägget, medie-SDK:et och Media Collection-API:et. Komponenterna `AppMeasurement` och `VisitorID` används för att ta emot videodata.
+Adobe Analytics använder ”pulsslag” för att samla in videostatistik. Under videouppspelningen skickas pulsslag till en spårningsserver för att mäta uppspelningstiden. Pulsslagsanropen skickas var tionde sekund. Pulsslagen genererar detaljerad statistik om videoengagemang och mer korrekta rapporter om videobortfall. Adobe Analytics for Streaming Media-mätning fångar pulsen med Adobe Launch med Media Analytics-tillägget, Media SDK och Media Collection API. Komponenterna `AppMeasurement` och `VisitorID` används för att ta emot videodata.
 
-Adobe Analytics för ljud och video med pulsslag har följande fördelar:
+Att använda pulsslag Adobe Analytics för direktuppspelande media ger följande fördelar:
 
 | Funktion | Beskrivning |
 |----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -44,7 +47,7 @@ Adobe Analytics för ljud och video med pulsslag har följande fördelar:
 | Priser | Genomskinlig spårning efter medieström (enkel) |
 | Implementering och support | Effektiv konfiguration med kontinuerliga uppdateringar och förbättringar<br>Tack vare den smidiga implementeringsprocessen kan ni snabbt mappa variabler via spelar-API:et och validera implementeringar med Adobe Debug Tool för att säkerställa att alla nödvändiga variabler spåras korrekt. |
 | Partnerdelning | Federated Analytics och certifierade mätvärden<br>Tack vare delade data via Federated Analytics kan ni använda våra branschledande funktioner för mediedelning för att utvärdera data enhetligt för alla mediedistributionspartners som operatörer, programplanerare och distributörer. |
-| Avancerad spårning | Spårning av hämtat innehåll, spårning av felåterställning och samtidiga visningar<br>Ni kan spåra ljud- och videoinnehåll som laddas ned och spelas upp på en enhet oavsett anslutning. |
+| Avancerad spårning | Spårning av hämtat innehåll, spårning av felåterställning och samtidiga visningsprogram<br>Du kan spåra direktuppspelat medieinnehåll som har laddats ned och spelats upp på en enhet oavsett dess anslutningsmöjligheter. |
 
 
 
