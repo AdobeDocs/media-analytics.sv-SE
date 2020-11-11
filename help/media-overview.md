@@ -1,9 +1,9 @@
 ---
-title: Mäta spelmedia i Adobe Analytics
+title: Mäta direktuppspelningsmedia i Adobe Analytics
 description: Adobe Analytics for Media (även kallat Media Analytics) ger kunderna robusta mediemätningar för innehåll, ljud och annonser.
 uuid: b3cbe240-b94d-42b8-a99c-0280334aaa14
 translation-type: tm+mt
-source-git-commit: fdec4da99a43d889690638f1ff3579e145548b69
+source-git-commit: 82b38f7870b6f890aaa812de30fa2d02d4f3ba8a
 workflow-type: tm+mt
 source-wordcount: '903'
 ht-degree: 85%
@@ -11,7 +11,7 @@ ht-degree: 85%
 ---
 
 
-# Mäta spelmedia i Adobe Analytics{#measuring-audio-and-video-in-adobe-analytics}
+# Mäta direktuppspelningsmedia i Adobe Analytics{#measuring-audio-and-video-in-adobe-analytics}
 
 ![Banderoll](./assets/media_analytics_banner.png)
 
@@ -47,7 +47,7 @@ Att använda pulsslag Adobe Analytics för direktuppspelande media ger följande
 | Priser | Genomskinlig spårning efter medieström (enkel) |
 | Implementering och support | Effektiv konfiguration med kontinuerliga uppdateringar och förbättringar<br>Tack vare den smidiga implementeringsprocessen kan ni snabbt mappa variabler via spelar-API:et och validera implementeringar med Adobe Debug Tool för att säkerställa att alla nödvändiga variabler spåras korrekt. |
 | Partnerdelning | Federated Analytics och certifierade mätvärden<br>Tack vare delade data via Federated Analytics kan ni använda våra branschledande funktioner för mediedelning för att utvärdera data enhetligt för alla mediedistributionspartners som operatörer, programplanerare och distributörer. |
-| Avancerad spårning | Spårning av hämtat innehåll, spårning av felåterställning och samtidiga visningsprogram<br>Du kan spåra direktuppspelat medieinnehåll som har laddats ned och spelats upp på en enhet oavsett dess anslutningsmöjligheter. |
+| Avancerad spårning | Spårning av hämtat innehåll, spårning av felåterställning och samtidiga visningsprogram<br>Du kan spåra direktuppspelat medieinnehåll som hämtas och spelas upp på en enhet oavsett dess anslutning. |
 
 
 
