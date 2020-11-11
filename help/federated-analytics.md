@@ -3,7 +3,7 @@ title: Federated Analytics
 description: Federated Analytics-tjänsten tillhandahåller ett system för delning av Adobe Analytics för direktuppspelande mediedata mellan två partners.
 uuid: a82ace81-c2f6-4799-9a62-4c6a737a7dab
 translation-type: tm+mt
-source-git-commit: 4dad6507966e30accfb4f6c2eb5f1d6a5507d29d
+source-git-commit: 82b38f7870b6f890aaa812de30fa2d02d4f3ba8a
 workflow-type: tm+mt
 source-wordcount: '552'
 ht-degree: 92%
@@ -40,13 +40,13 @@ Med Federated Analytics blir ljud- och videomätningarna effektivare, smidigare 
 * **Avtal om medieströmmar:** Mottagaren och avsändaren måste ha ingått avtal med Adobe Analytics för medieströmmar innan de får tillgång till ljud- och videodata i Adobe Analytics. Kontakta ditt kontoteam om du vill ha mer information.
 * **Federationstillägg:** Varje avsändare och mottagare måste ha undertecknat ett tillägg med Adobe innan data skickas eller tas emot. Ett tillägg per kund krävs, inte ett tillägg per partnerskap. Kontakta ditt kontoteam om du vill ha mer information.
 
-* **Implementering av medieanalys:** Avsändaren måste ha Media Analytics implementerat för alla spelare som ska ingå i den federerade datauppsättningen. Endast Media Analytics-data kan federeras. Se dokumentationen: [Mäta spelmedia i Adobe Analytics](/help/media-overview.md)
+* **Implementering av medieanalys:** Avsändaren måste ha Media Analytics implementerat för alla spelare som ska ingå i den federerade datauppsättningen. Endast Media Analytics-data kan federeras. Se dokumentationen: [Mäta direktuppspelningsmedia i Adobe Analytics](/help/media-overview.md)
 
 * **Konsultavtal med Adobe:** Vid den inledande konfigureringen av regler för federering är det praktiskt att samarbeta med våra konsulter för att granska data och skapa datadelningsavtalet.
 
 ## Hämta Federated Analytics-formuläret
 
-Ladda ned och fyll i [Federationsregelavtal](federated-analytics-form.pdf) formulär.
+Om du vill delta i Federated Analytics hämtar och fyller du i formuläret [Federation Rules Agreement](federated-analytics-form.pdf).
 
 
 ## Process {#process}
