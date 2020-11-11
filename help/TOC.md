@@ -6,7 +6,7 @@ user-guide-description: Implementera analyser på ljud- och videokällor. Inneh�
 product: adobe analytics
 sub-product: medieanalys
 translation-type: tm+mt
-source-git-commit: da13db682f859cfd176a5ab379b7a0a947dc0e3a
+source-git-commit: 82b38f7870b6f890aaa812de30fa2d02d4f3ba8a
 workflow-type: tm+mt
 source-wordcount: '830'
 ht-degree: 93%
@@ -45,9 +45,9 @@ ht-degree: 93%
          + [Konfigurera JavaScript 3.x](sdk-implement/setup/setup-javascript/set-up-js-3.md)
       + [Konfigurera Chromecast](sdk-implement/setup/set-up-chromecast.md)
       + [Konfigurera Roku](sdk-implement/setup/set-up-roku.md)
-   + Spåra uppspelning av strömmande media {#track-av-playback}
+   + Spåra direktuppspelning av media {#track-av-playback}
       + [Översikt](sdk-implement/track-av-playback/track-core-overview.md)
-      + Spåra grundläggande strömning av media {#track-core}
+      + Spåra kärndirektuppspelning av media {#track-core}
          + [Spåra grundläggande uppspelning i Android](sdk-implement/track-av-playback/track-core/track-core-android.md)
          + [Spåra grundläggande uppspelning i iOS](sdk-implement/track-av-playback/track-core/track-core-ios.md)
          + Spåra grundläggande uppspelning i JavaScript {#track-core-javascript}
@@ -199,7 +199,7 @@ ht-degree: 93%
    + [Kokbok](media-analytics-cookbook/media-analytics-cookbook.md)
    + [Attribution för medieström](media-analytics-cookbook/media-dimensions.md)
 + Mätvärden och metadata {#metrics-and-metadata}
-   + [Parametrar för spelmedia](metrics-and-metadata/audio-video-parameters.md)
+   + [Parametrar för direktuppspelande media](metrics-and-metadata/audio-video-parameters.md)
    + [Annonsparametrar](metrics-and-metadata/ad-parameters.md)
    + [Kapitelparametrar](metrics-and-metadata/chapter-parameters.md)
    + [Parametrar för spelarens tillstånd](metrics-and-metadata/player-state-parameters.md)
