@@ -2,10 +2,10 @@
 title: Media Concurrent Viewer Reporting
 description: För kunder som använder Media Analytics kan du med Media Concurrent Viewer-panelen i Analysis Workspace analysera samtidiga visningsprogram för att förstå var maximal samtidighet inträffade eller var bortfall inträffade.
 translation-type: tm+mt
-source-git-commit: eb69c5c68b7bc367a944ce441a196f45791bcb53
+source-git-commit: 2eb5318267546408f2aab5da074dd7f30c4fbb1d
 workflow-type: tm+mt
-source-wordcount: '204'
-ht-degree: 5%
+source-wordcount: '193'
+ht-degree: 6%
 
 ---
 
@@ -20,4 +20,4 @@ I Analysis Workspace är Concurrent Viewers antalet unika besökare som visar me
 
 ## Få samtidiga visningsprogram via API:t för analysrapportering
 
-Du kan också få samtidiga visningsprogramdata för upp till en månad i taget på minutnivå med Analytics Reporting API 2.0. Rapporterings-API:t använder samma definition av samtidiga visningsprogram som Analysis Workspace.  Mer information finns i [_*Få JSON-rapportdata för samtidiga visningsprogram med API:er för Analytics 2.0*_](https://docs.adobe.com/content/help/en/media-analytics/using/media-reports/media-default-reports/get-concurrent-json20.html).
+Du kan också få samtidiga visningsprogramdata för upp till en månad i taget på minutnivå med Analytics Reporting API 2.0.  Rapporterings-API:t använder samma definition av samtidiga visningsprogram som Analysis Workspace.  Mer information finns i [_*Hämta JSON-rapportdata för visningsprogram med API:er för Analytics 2.0*_](/help/media-reports/media-default-reports/get-concurrent-json20.md).
