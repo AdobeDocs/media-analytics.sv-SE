@@ -3,9 +3,9 @@ title: Parametrar för ljud och video
 description: null
 uuid: fdacfb8b-db3e-46fb-b9ad-c3a749555b2a
 translation-type: tm+mt
-source-git-commit: 82b38f7870b6f890aaa812de30fa2d02d4f3ba8a
+source-git-commit: c4d48d2ba1bec8afc7cfd8d625c6b654056e5489
 workflow-type: tm+mt
-source-wordcount: '6234'
+source-wordcount: '6235'
 ht-degree: 2%
 
 ---
@@ -53,7 +53,7 @@ Beskrivning av tabelldata:
 
 |   Implementering   | Nätverksparametrar | Rapportering |
 | --- | --- | --- |
-| <ul> <li> **SDK-nyckel:**<br/> [streamType](./audio-video-parameters.md#create-media-object) </li> <li> **API-nyckel:**<br/> media.streamType </li> <li> **Obligatoriskt:**<br/> Ja </li> <li> **Typ:**<br/> sträng </li> <li> **Skickat med:**<br/> Mediestart, mediestängning </li> <li> **Min. SDK-version:** 2.2 <br/><br/>Finns i [Översikt över API:t för mediainsamling](/help/media-collection-api/mc-api-overview.md) eller [Hämta SDK:er - Version 2.2](/help/sdk-implement/download-sdks.md).  </li>  <li> **Exempelvärde:**<br/> &quot;video&quot; </li> <li> **Beskrivning:**<br/> Identifierar strömtypen. Giltiga värden är &quot;audio&quot;, &quot;video&quot; och &quot; &quot;.  <br/><br/>[Rapporteringssegment](/help/metrics-and-metadata/segments.md):  <br/><br/>Medieströmtyp: Alla -  <br/>Segmentera alla medieströmdata. Regel: Innehållet (ID) finns  <br/><br/>i medieströmstypen: Ljud -  <br/>Segmentera alla ljudströmsdata; Regel: Innehåll (ID) finns OCH Medieströmtyp = typ av  <br/><br/>ljudmedieström: &quot;Video&quot; -  <br/>Segmentera alla videoströmsdata. Regel: Innehåll (ID) finns OCH medieströmtyp != ljud <br/><br/> **Releasedatum: 09/13/18** </li></ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.streamType) </li> <li> **pulsslag:**<br/> (s:meta:<br/>a.media.streamType) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> eVar </li> <li> **förfallodatum:**<br/> Vid besök </li> <li> **rapportnamn:**<br/> innehåll </li> <li> **Kontextdata:**<br/> (a.media.streamType) </li> <li> **datafeed:**<br/> videoströmtyp </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.streamType) </li> </ul> |
+| <ul> <li> **SDK-nyckel:**<br/> [streamType](./audio-video-parameters.md#create-media-object) </li> <li> **API-nyckel:**<br/> media.streamType </li> <li> **Obligatoriskt:**<br/> Ja </li> <li> **Typ:**<br/> sträng </li> <li> **Skickat med:**<br/> Mediestart, mediestängning </li> <li> **Min. SDK-version:** 2.2 <br/><br/>Finns i [Översikt över API:t för mediainsamling](/help/media-collection-api/mc-api-overview.md) eller [Hämta SDK:er - Version 2.2](/help/sdk-implement/download-sdks.md).  </li>  <li> **Exempelvärde:**<br/> &quot;video&quot; </li> <li> **Beskrivning:**<br/> Identifierar strömtypen. Giltiga värden är &quot;audio&quot;, &quot;video&quot; och &quot; &quot;.  <br/><br/>[Rapporteringssegment](/help/metrics-and-metadata/segments.md):  <br/><br/>Medieströmtyp: Alla -  <br/>Segmentera alla medieströmdata. Regel: Innehållet (ID) finns  <br/><br/>i medieströmstypen: Ljud -  <br/>Segmentera alla ljudströmsdata; Regel: Innehåll (ID) finns OCH Medieströmtyp = typ av  <br/><br/>ljudmedieström: &quot;Video&quot; -  <br/>Segmentera alla videoströmsdata. Regel: Innehåll (ID) finns OCH medieströmtyp != ljud <br/><br/> **Releasedatum: 09/13/18** </li></ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.streamType) </li> <li> **pulsslag:**<br/> (s:meta:<br/>a.media.streamType) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> eVar </li> <li> **Förfallotid:**<br/> vid HIT </li> <li> **Rapportnamn:**<br/> Strömtyp </li> <li> **Kontextdata:**<br/> (a.media.streamType) </li> <li> **datafeed:**<br/> videoströmtyp </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.streamType) </li> </ul> |
 
 ```
 public static MediaObject createMediaObject(java.lang.String name,
