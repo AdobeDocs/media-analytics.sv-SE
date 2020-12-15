@@ -6,7 +6,7 @@ user-guide-description: Implementera analyser på ljud- och videokällor. Inneh�
 product: adobe analytics
 sub-product: medieanalys
 translation-type: tm+mt
-source-git-commit: a6f9c93c8c21f261eb5b592d4a2d8c9d2532efee
+source-git-commit: a51f9bb33c7385fef0f13b7e1e9009b07a788305
 workflow-type: tm+mt
 source-wordcount: '830'
 ht-degree: 93%
@@ -219,11 +219,16 @@ ht-degree: 93%
    + [Mallar för mediearbetsyta](media-reports/media-workspace-templates.md)
    + [Hämta data för samtidiga visningsprogram via API](media-reports/media-default-reports/get-concurrent-json20.md)
 + [Spåra nedladdat innehåll](media-collection-api/track-downloaded-content.md)
-+ [Federated Analytics](federated-analytics.md)
 + Spårning av spelarens tillstånd {#player-state-tracking}
    + [Översikt](sdk-implement/player-state-tracking/player-state-overview.md)
    + [Standardtillstånd och anpassade tillstånd](sdk-implement/player-state-tracking/standard-and-custom-states.md)
    + [Implementering och rapportering](sdk-implement/player-state-tracking/implementation-and-reporting.md)
    + [Exempel på spårning av spelarens tillstånd](sdk-implement/player-state-tracking/player-state-examples.md)
++ [Federated Analytics](federated-analytics.md)
+<!-- + Player State Tracking {#player-state-tracking}
+    + [Overview](sdk-implement/player-state-tracking/player-state-overview.md)
+    + [Standard and custom states](sdk-implement/player-state-tracking/standard-and-custom-states.md)
+    + [Implementation and reporting](sdk-implement/player-state-tracking/implementation-and-reporting.md)
+    + [Player state tracking examples](sdk-implement/player-state-tracking/player-state-examples.md) -->
 + Ytterligare resurser {#additional-resources}
    + [Versionsinformation](additional-resources/doc-updates.md)
