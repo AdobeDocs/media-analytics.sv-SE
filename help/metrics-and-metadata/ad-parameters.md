@@ -3,9 +3,9 @@ title: Annonsparametrar
 description: null
 uuid: 92cd7f97-bb5a-4de6-8946-453d30271d0f
 translation-type: tm+mt
-source-git-commit: f59738f48eeb80d3aaead1757abd2ba3785c40da
+source-git-commit: 5802a474588a6df6c66e0d1d7cb2fd30f83e4e3d
 workflow-type: tm+mt
-source-wordcount: '1867'
+source-wordcount: '1855'
 ht-degree: 3%
 
 ---
@@ -148,7 +148,7 @@ Beskrivning av tabelldata:
 
 |   Implementering   | Nätverksparametrar | Rapportering |
 | --- | --- | --- |
-| <ul> <li> **SDK-nyckel:**<br/> SITE_ID </li> <li> **API-nyckel:**<br/> media.ad.siteId </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **Typ:**<br/> sträng </li> <li> **Skickat med:**<br/> Ad Start, Ad Close </li> <li> **Min. SDK-version:** 1.5.7 </li> <li> **Exempelvärde:**<br/> </li><li> **Beskrivning:**<br/> ID för annonsplatsen.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.ad.<br/>plats) </li> <li> **pulsslag:**<br/> (s:meta:<br/>a.media.ad.site) </li> </ul> | <ul> <li> **Tillgängligt:**<br/> <i>Använd anpassad bearbetningsregel  </i> </li> <li> **Reserverad variabel:**<br/> eVar </li> <li> **Förfallotid:**<br/> vid HIT </li> <li> **Rapportnamn:**<br/> Eget* </li> <li> **Kontextdata:**<br/> (a.media.ad.<br/>plats) </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.ad.site) </li> </ul> * Använd anpassad bearbetningsregel |
+| <ul> <li> **SDK-nyckel:**<br/> SITE_ID </li> <li> **API-nyckel:**<br/> media.ad.siteId </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **Typ:**<br/> sträng </li> <li> **Skickat med:**<br/> Ad Start, Ad Close </li> <li> **Min. SDK-version:** 1.5.7 </li> <li> **Exempelvärde:**<br/> </li><li> **Beskrivning:**<br/> ID för annonsplatsen.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.ad.<br/>plats) </li> <li> **pulsslag:**<br/> (s:meta:<br/>a.media.ad.site) </li> </ul> | <ul> <li> **Tillgängligt:**<br/> <i>Använd anpassad bearbetningsregel  </i> </li> <li> **Reserverad variabel:**<br/> eVar </li> <li> **Förfallotid:**<br/> vid HIT </li> <li> **Rapportnamn:**<br/> Eget </li> <li> **Kontextdata:**<br/> (a.media.ad.<br/>plats) </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.ad.site) </li> </ul> |
 
 
 
@@ -156,7 +156,7 @@ Beskrivning av tabelldata:
 
 |   Implementering   | Nätverksparametrar | Rapportering |
 | --- | --- | --- |
-| <ul> <li> **SDK-nyckel:**<br/> CREATIVE_URL </li> <li> **API-nyckel:**<br/> media.ad.creativeURL </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **Typ:**<br/> sträng </li> <li> **Skickat med:**<br/> Ad Start, Ad Close </li> <li> **Min. SDK-version:** 1.5.7 </li> <li> **Exempelvärde:**<br/> </li><li> **Beskrivning:**<br/> URL för annonspersonalen.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.ad.<br/>creativeURL) </li> <li> **pulsslag:**<br/> (s:meta:<br/>a.media.ad.creativeURL) </li> </ul> | <ul> <li> **Tillgängligt:**<br/> <i>Använd anpassad bearbetningsregel  </i> </li> <li> **Reserverad variabel:**<br/> eVar </li> <li> **Förfallotid:**<br/> vid HIT </li> <li> **Rapportnamn:**<br/> Eget* </li> <li> **Kontextdata:**<br/> (a.media.ad.<br/>creativeURL) </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.ad.creativeURL) </li> </ul> * Använd anpassad bearbetningsregel |
+| <ul> <li> **SDK-nyckel:**<br/> CREATIVE_URL </li> <li> **API-nyckel:**<br/> media.ad.creativeURL </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **Typ:**<br/> sträng </li> <li> **Skickat med:**<br/> Ad Start, Ad Close </li> <li> **Min. SDK-version:** 1.5.7 </li> <li> **Exempelvärde:**<br/> </li><li> **Beskrivning:**<br/> URL för annonspersonalen.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.ad.<br/>creativeURL) </li> <li> **pulsslag:**<br/> (s:meta:<br/>a.media.ad.creativeURL) </li> </ul> | <ul> <li> **Tillgängligt:**<br/> <i>Använd anpassad bearbetningsregel  </i> </li> <li> **Reserverad variabel:**<br/> eVar </li> <li> **Förfallotid:**<br/> vid HIT </li> <li> **Rapportnamn:**<br/> Eget </li> <li> **Kontextdata:**<br/> (a.media.ad.<br/>creativeURL) </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.ad.creativeURL) </li> </ul> |
 
 
 
@@ -164,7 +164,7 @@ Beskrivning av tabelldata:
 
 |   Implementering   | Nätverksparametrar | Rapportering |
 | --- | --- | --- |
-| <ul> <li> **SDK-nyckel:**<br/> PLACEMENT_ID </li> <li> **API-nyckel:**<br/> media.ad.placementId </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **Typ:**<br/> sträng </li> <li> **Skickat med:**<br/> Ad Start, Ad Close </li> <li> **Min. SDK-version:** 1.5.7 </li> <li> **Exempelvärde:**<br/> </li><li> **Beskrivning:annons**<br/> placerings-ID.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.ad.<br/>placering) </li> <li> **pulsslag:**<br/> (s:meta:<br/>a.media.ad.placement) </li> </ul> | <ul> <li> **Tillgängligt:**<br/> <i>Använd anpassad bearbetningsregel  </i> </li> <li> **Reserverad variabel:**<br/> eVar </li> <li> **Förfallotid:**<br/> vid HIT </li> <li> **Rapportnamn:**<br/> Eget* </li> <li> **Kontextdata:**<br/> (a.media.ad.<br/>placering) </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.ad.placement) </li> </ul>* Använd anpassad bearbetningsregel |
+| <ul> <li> **SDK-nyckel:**<br/> PLACEMENT_ID </li> <li> **API-nyckel:**<br/> media.ad.placementId </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **Typ:**<br/> sträng </li> <li> **Skickat med:**<br/> Ad Start, Ad Close </li> <li> **Min. SDK-version:** 1.5.7 </li> <li> **Exempelvärde:**<br/> </li><li> **Beskrivning:annons**<br/> placerings-ID.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.ad.<br/>placering) </li> <li> **pulsslag:**<br/> (s:meta:<br/>a.media.ad.placement) </li> </ul> | <ul> <li> **Tillgängligt:**<br/> <i>Använd anpassad bearbetningsregel  </i> </li> <li> **Reserverad variabel:**<br/> eVar </li> <li> **Förfallotid:**<br/> vid HIT </li> <li> **Rapportnamn:**<br/> Eget </li> <li> **Kontextdata:**<br/> (a.media.ad.<br/>placering) </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.ad.placement) </li> </ul> |
 
 
 
