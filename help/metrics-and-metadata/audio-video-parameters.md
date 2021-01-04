@@ -3,9 +3,9 @@ title: Parametrar för ljud och video
 description: null
 uuid: fdacfb8b-db3e-46fb-b9ad-c3a749555b2a
 translation-type: tm+mt
-source-git-commit: f59738f48eeb80d3aaead1757abd2ba3785c40da
+source-git-commit: 5802a474588a6df6c66e0d1d7cb2fd30f83e4e3d
 workflow-type: tm+mt
-source-wordcount: '6257'
+source-wordcount: '6245'
 ht-degree: 2%
 
 ---
@@ -179,7 +179,7 @@ public static MediaObject createMediaObject(java.lang.String name,
 
 |   Implementering   | Nätverksparametrar | Rapportering |
 | --- | --- | --- |
-| <ul> <li> **SDK-nyckel:**<br/>  [appVersion](./audio-video-parameters.md#config-media-object) </li> <li> **API-nyckel:**<br/> media.sdkVersion </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **Typ:**<br/> sträng </li> <li> **Skickat med:Stäng**<br/> media </li> <li> **Min. SDK-version:** 1.5.7 </li> <li> **Exempelvärde:**<br/> &quot;2.62.0_release&quot; </li> <li> **Beskrivning:SDK-**<br/> versionen som används av spelaren. Detta kan ha vilket värde som helst som passar din spelare. <br/><br/>Kunderna måste skapa egna bearbetningsregler för att kunna rapportera värdet.  </li></ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.<br/>sdkVersion) </li> <li> **Hjärtslag:**<br/> (s:sp:sdk) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Använd anpassad bearbetningsregel </li> <li> **Reserverad variabel:**<br/> Ej tillämpligt </li> <li> **Rapportnamn:**<br/> Eget* </li> <li> **Kontextdata:**<br/> (a.media.sdkVersion) </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.sdkVersion) </li> </ul>* Använd anpassad bearbetningsregel |
+| <ul> <li> **SDK-nyckel:**<br/>  [appVersion](./audio-video-parameters.md#config-media-object) </li> <li> **API-nyckel:**<br/> media.sdkVersion </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **Typ:**<br/> sträng </li> <li> **Skickat med:Stäng**<br/> media </li> <li> **Min. SDK-version:** 1.5.7 </li> <li> **Exempelvärde:**<br/> &quot;2.62.0_release&quot; </li> <li> **Beskrivning:SDK-**<br/> versionen som används av spelaren. Detta kan ha vilket värde som helst som passar din spelare. <br/><br/>Kunderna måste skapa egna bearbetningsregler för att kunna rapportera värdet.  </li></ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.<br/>sdkVersion) </li> <li> **Hjärtslag:**<br/> (s:sp:sdk) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Använd anpassad bearbetningsregel </li> <li> **Reserverad variabel:**<br/> Ej tillämpligt </li> <li> **Rapportnamn:**<br/> Eget </li> <li> **Kontextdata:**<br/> (a.media.sdkVersion) </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.sdkVersion) </li> </ul> |
 
 ### VHL-version
 
@@ -319,7 +319,7 @@ public static MediaObject createMediaObject(java.lang.String name,
 
 |   Implementering   | Nätverksparametrar | Rapportering |
 | --- | --- | --- |
-| <ul> <li> **SDK-nyckel:**<br/> </li> <li> **API-nyckel:**<br/> media.publisher </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **Typ:**<br/> sträng </li> <li> **Skickat med:**<br/> Mediestart, mediestängning </li> <li> **Min. SDK-version:** 1.5.7 <br/>Finns i [Översikt över mediesamling](/help/media-collection-api/mc-api-overview.md) eller [Hämta SDK:er - Version 2.2](/help/sdk-implement/download-sdks.md).  </li> <li> **Exempelvärde:**<br/> &quot;Random Bauhaus&quot; </li> <li> **Beskrivning:**<br/> Namnet på ljudinnehållsutgivaren.   <br/> **Releasedatum: 09/13/18** </li></ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.publisher) </li> <li> **pulsslag:**<br/> (s:meta:<br/>a.media.publisher) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> eVar </li> <li> **Förfallotid:**<br/> vid HIT </li> <li> **Rapportnamn:**<br/> Eget* </li> <li> **Kontextdata:**<br/> (a.media.publisher) </li> <li> **datafeed:**<br/> videoaudiopublisher </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.publisher) </li>  </ul> * Använd anpassad bearbetningsregel |
+| <ul> <li> **SDK-nyckel:**<br/> </li> <li> **API-nyckel:**<br/> media.publisher </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **Typ:**<br/> sträng </li> <li> **Skickat med:**<br/> Mediestart, mediestängning </li> <li> **Min. SDK-version:** 1.5.7 <br/>Finns i [Översikt över mediesamling](/help/media-collection-api/mc-api-overview.md) eller [Hämta SDK:er - Version 2.2](/help/sdk-implement/download-sdks.md).  </li> <li> **Exempelvärde:**<br/> &quot;Random Bauhaus&quot; </li> <li> **Beskrivning:**<br/> Namnet på ljudinnehållsutgivaren.   <br/> **Releasedatum: 09/13/18** </li></ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.publisher) </li> <li> **pulsslag:**<br/> (s:meta:<br/>a.media.publisher) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> eVar </li> <li> **Förfallotid:**<br/> vid HIT </li> <li> **Rapportnamn:**<br/> Eget </li> <li> **Kontextdata:**<br/> (a.media.publisher) </li> <li> **datafeed:**<br/> videoaudiopublisher </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.publisher) </li>  </ul> |
 
 ## Streaming Media Metrics {#audio-and-video-metrics}
 
@@ -399,7 +399,7 @@ public static MediaObject createMediaObject(java.lang.String name,
 
 |   Implementering   | Nätverksparametrar | Rapportering |
 | --- | --- | --- |
-| <ul> <li> **SDK-nyckel:**<br/> Automatiskt angiven </li> <li> **API-nyckel:**<br/> Ej tillämpligt </li> <li> **text:**<br/> tal </li> <li> **Skickat med:Stäng**<br/> media </li> <li> **Min. SDK-version:** Alla </li> <li> **Exempelvärde:**<br/> 600</li> <li> **Beskrivning:**<br/> Sekunder sedan senaste anropsmåttet är 0 om strömmen stängdes med en complete-händelse eller med en end-händelse och är vanligtvis 600 om den stängdes på grund av timeout. Det här måttet har ingen lösningsvariabel och regler för automatisk bearbetning, så du måste skapa en anpassad bearbetningsregel för att kunna spara den.</li></ul> | <ul> <li> **Adobe Analytics:**<br/> Ej tillämpligt </li> <li> **Hjärtslag:**<br/> Ej tillämpligt </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Använd anpassad bearbetningsregel </li> <li> **Reserverad variabel:**<br/> Ej tillämpligt </li> <li> **Rapportnamn:**<br/> Eget*</li> <li> **Kontextdata:**<br/> (a.media.secondsSinceLastCall) </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.secondsSinceLastCall) </li> </ul> *Använd anpassad bearbetningsregel |
+| <ul> <li> **SDK-nyckel:**<br/> Automatiskt angiven </li> <li> **API-nyckel:**<br/> Ej tillämpligt </li> <li> **text:**<br/> tal </li> <li> **Skickat med:Stäng**<br/> media </li> <li> **Min. SDK-version:** Alla </li> <li> **Exempelvärde:**<br/> 600</li> <li> **Beskrivning:**<br/> Sekunder sedan senaste anropsmåttet är 0 om strömmen stängdes med en complete-händelse eller med en end-händelse och är vanligtvis 600 om den stängdes på grund av timeout. Det här måttet har ingen lösningsvariabel och regler för automatisk bearbetning, så du måste skapa en anpassad bearbetningsregel för att kunna spara den.</li></ul> | <ul> <li> **Adobe Analytics:**<br/> Ej tillämpligt </li> <li> **Hjärtslag:**<br/> Ej tillämpligt </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Använd anpassad bearbetningsregel </li> <li> **Reserverad variabel:**<br/> Ej tillämpligt </li> <li> **Rapportnamn:**<br/> Eget</li> <li> **Kontextdata:**<br/> (a.media.secondsSinceLastCall) </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.secondsSinceLastCall) </li> </ul> |
 
 ### Federerade data
 
