@@ -3,10 +3,10 @@ title: Kvalitetsparametrar
 description: null
 uuid: 0d9fa764-edef-4178-8650-90c9a0852a57
 translation-type: tm+mt
-source-git-commit: ef237fd0d9e2bcebe011d819224d98d450830d07
+source-git-commit: 5802a474588a6df6c66e0d1d7cb2fd30f83e4e3d
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2992'
+ht-degree: 2%
 
 ---
 
@@ -117,7 +117,7 @@ Beskrivning av tabelldata:
 
 |   Implementering   | Nätverksparametrar | Rapportering |
 | --- | --- | --- |
-| <ul> <li> **SDK-nyckel:**<br/> Automatiskt angiven </li> <li> **API-nyckel:**<br/> </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **text:**<br/> tal </li> <li> **Skickat med:Stäng**<br/> media </li> <li> **Min. SDK-version:** Alla </li> <li> **Exempelvärde:**<br/> </li><li> **Beskrivning:**<br/> De unika fel-ID:n som genereras av Media SDK under uppspelning.  </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.qoe.<br/>mediaSdkErrors) </li> <li> **pulsslag:**<br/> (s:event:<br/>type=error) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> eVar </li> <li> **Förfallotid:**<br/> vid HIT </li> <li> **Rapportnamn:**<br/> Eget* </li> <li> **Kontextdata:**<br/> (a.media.qoe)<br/>mediaSdkErrors) </li> <li> **datafeed:**<br/> mediaqoeexternalerrors </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.qoe.<br/>mediaSdkErrors) </li> </ul><br/>* Använd anpassad bearbetningsregel |
+| <ul> <li> **SDK-nyckel:**<br/> Automatiskt angiven </li> <li> **API-nyckel:**<br/> </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **text:**<br/> tal </li> <li> **Skickat med:Stäng**<br/> media </li> <li> **Min. SDK-version:** Alla </li> <li> **Exempelvärde:**<br/> </li><li> **Beskrivning:**<br/> De unika fel-ID:n som genereras av Media SDK under uppspelning.  </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.qoe.<br/>mediaSdkErrors) </li> <li> **pulsslag:**<br/> (s:event:<br/>type=error) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> eVar </li> <li> **Förfallotid:**<br/> vid HIT </li> <li> **Rapportnamn:**<br/> Eget </li> <li> **Kontextdata:**<br/> (a.media.qoe)<br/>mediaSdkErrors) </li> <li> **datafeed:**<br/> mediaqoeexternalerrors </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.qoe.<br/>mediaSdkErrors) </li> </ul><br/> |
 
 
 
@@ -252,7 +252,7 @@ Beskrivning av tabelldata:
 
 |   Implementering   | Nätverksparametrar | Rapportering |
 | --- | --- | --- |
-| <ul> <li> **SDK-nyckel:**<br/> Automatiskt angiven </li> <li> **API-nyckel:**<br/> Ej tillämpligt </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **Typ:**<br/> sträng </li> <li> **Skickat med:Stäng**<br/> media </li> <li> **Min. SDK-version:** 1.5+ </li> <li> **Exempelvärde:**<br/> TRUE </li><li> **Beskrivning:**<br/> Antalet strömmar där en fast händelse inträffade. Det här måttet är bara 1 om minst en hög inträffade under uppspelningen. Kunderna måste skapa egna bearbetningsregler för att kunna rapportera värdet.  </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.qoe.<br/>stall) </li> <li> **pulsslag:**<br/> (s:event:<br/>type=stall) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Använd anpassad bearbetningsregel </li> <li> **Reserverad variabel:**<br/> händelse </li> <li> **Rapportnamn:**<br/> Eget*</li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Kontextdata:**<br/> (a.media.qoe)<br/>stall) </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.qoe.<br/>stall) </li> </ul><br/>* Använd anpassad bearbetningsregel |
+| <ul> <li> **SDK-nyckel:**<br/> Automatiskt angiven </li> <li> **API-nyckel:**<br/> Ej tillämpligt </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **Typ:**<br/> sträng </li> <li> **Skickat med:Stäng**<br/> media </li> <li> **Min. SDK-version:** 1.5+ </li> <li> **Exempelvärde:**<br/> TRUE </li><li> **Beskrivning:**<br/> Antalet strömmar där en fast händelse inträffade. Det här måttet är bara 1 om minst en hög inträffade under uppspelningen. Kunderna måste skapa egna bearbetningsregler för att kunna rapportera värdet.  </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.qoe.<br/>stall) </li> <li> **pulsslag:**<br/> (s:event:<br/>type=stall) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Använd anpassad bearbetningsregel </li> <li> **Reserverad variabel:**<br/> händelse </li> <li> **Rapportnamn:**<br/> Eget</li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Kontextdata:**<br/> (a.media.qoe)<br/>stall) </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.qoe.<br/>stall) </li> </ul><br/> |
 
 >[!IMPORTANT]
 >
@@ -262,7 +262,7 @@ Beskrivning av tabelldata:
 
 |   Implementering   | Nätverksparametrar | Rapportering |
 | --- | --- | --- |
-| <ul> <li> **SDK-nyckel:**<br/> Automatiskt angiven </li> <li> **API-nyckel:**<br/> Ej tillämpligt </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **Typ:**<br/> sträng </li> <li> **Skickat med:Stäng**<br/> media </li> <li> **Min. SDK-version:** 1.5+ </li> <li> **Exempelvärde:**<br/> &quot;3&quot; </li><li> **Beskrivning:**<br/> Antalet gånger som uppspelningen stoppades under en uppspelningssession. Kunderna måste skapa egna bearbetningsregler för att kunna rapportera värdet.  </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.qoe.<br/>stallCount) </li> <li> **pulsslag:**<br/> (s:event:<br/>type=stall) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Använd anpassad bearbetningsregel </li> <li> **Reserverad variabel:**<br/> händelse </li> <li> **Rapportnamn:**<br/> Eget*</li> <li> **Kontextdata:**<br/> (a.media.qoe)<br/>stallCount) </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.qoe.<br/>stallCount) </li> </ul><br/>* Använd anpassad bearbetningsregel |
+| <ul> <li> **SDK-nyckel:**<br/> Automatiskt angiven </li> <li> **API-nyckel:**<br/> Ej tillämpligt </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **Typ:**<br/> sträng </li> <li> **Skickat med:Stäng**<br/> media </li> <li> **Min. SDK-version:** 1.5+ </li> <li> **Exempelvärde:**<br/> &quot;3&quot; </li><li> **Beskrivning:**<br/> Antalet gånger som uppspelningen stoppades under en uppspelningssession. Kunderna måste skapa egna bearbetningsregler för att kunna rapportera värdet.  </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.qoe.<br/>stallCount) </li> <li> **pulsslag:**<br/> (s:event:<br/>type=stall) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Använd anpassad bearbetningsregel </li> <li> **Reserverad variabel:**<br/> händelse </li> <li> **Rapportnamn:**<br/> Eget</li> <li> **Kontextdata:**<br/> (a.media.qoe)<br/>stallCount) </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.qoe.<br/>stallCount) </li> </ul><br/> |
 
 
 
@@ -270,7 +270,7 @@ Beskrivning av tabelldata:
 
 |   Implementering   | Nätverksparametrar | Rapportering |
 | --- | --- | --- |
-| <ul> <li> **SDK-nyckel:**<br/> Automatiskt angiven </li> <li> **API-nyckel:**<br/> Ej tillämpligt </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **text:**<br/> tal </li> <li> **Skickat med:Stäng**<br/> media </li> <li> **Min. SDK-version:** 1.5+ </li> <li> **Exempelvärde:**<br/> 12 </li><li> **Beskrivning:**<br/> Total tid (sekunder; heltal) spelningen stoppades under en uppspelningssession. Kunderna måste skapa egna bearbetningsregler för att kunna rapportera värdet.  </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.qoe.<br/>stallTime) </li> <li> **pulsslag:**<br/> (s:event:<br/>type=stall) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Använd anpassad bearbetningsregel </li> <li> **Reserverad variabel:**<br/> händelse </li> <li> **Rapportnamn:**<br/> Eget*</li> <li> **Kontextdata:**<br/> (a.media.qoe)<br/>stallTime) </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.qoe.<br/>stallTime) </li> </ul> <br/>* Använd anpassad bearbetningsregel |
+| <ul> <li> **SDK-nyckel:**<br/> Automatiskt angiven </li> <li> **API-nyckel:**<br/> Ej tillämpligt </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **text:**<br/> tal </li> <li> **Skickat med:Stäng**<br/> media </li> <li> **Min. SDK-version:** 1.5+ </li> <li> **Exempelvärde:**<br/> 12 </li><li> **Beskrivning:**<br/> Total tid (sekunder; heltal) spelningen stoppades under en uppspelningssession. Kunderna måste skapa egna bearbetningsregler för att kunna rapportera värdet.  </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.qoe.<br/>stallTime) </li> <li> **pulsslag:**<br/> (s:event:<br/>type=stall) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Använd anpassad bearbetningsregel </li> <li> **Reserverad variabel:**<br/> händelse </li> <li> **Rapportnamn:**<br/> Eget</li> <li> **Kontextdata:**<br/> (a.media.qoe)<br/>stallTime) </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.qoe.<br/>stallTime) </li> </ul> <br/> |
 
 
 
