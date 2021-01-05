@@ -3,9 +3,9 @@ title: Konfigurera iOS
 description: Installation av Media SDK-program för implementering på iOS.
 uuid: a1c6be79-a6dc-47b6-93b3-ac7b42f1f3eb
 translation-type: tm+mt
-source-git-commit: 300eb77858296f0246a2cb484386c0dcdf8b87b9
+source-git-commit: f54733c44e96c517d0c4c624a40742b421a54325
 workflow-type: tm+mt
-source-wordcount: '666'
+source-wordcount: '724'
 ht-degree: 7%
 
 ---
@@ -15,12 +15,14 @@ ht-degree: 7%
 
 >[!IMPORTANT]
 >
->När stödet för version 4 Mobile SDK upphör den 31 augusti 2021 upphör stödet för Media Analytics SDK för iOS och Android.  Mer information finns i Vanliga frågor om [supporten för Media Analytics SDK](/help/sdk-implement/end-of-support-faqs.md).
+>När stödet för version 4 Mobile SDK upphör den 31 augusti 2021 upphör även stödet för Media Analytics SDK för iOS och Android i Adobe.  Mer information finns i [Vanliga frågor och svar om Media Analytics SDK när support upphör](/help/sdk-implement/end-of-support-faqs.md).
 
 ## Förutsättningar
 
-* **Hämta giltiga konfigurationsparametrar för Media SDK** Dessa parametrar kan hämtas från en Adobe-representant när du har konfigurerat ditt analyskonto.
-* **Implementera ADBMomobile för iOS i ditt program** Mer information om dokumentationen för Adobe Mobile SDK finns i [iOS SDK 4.x för Experience Cloud Solutions.](https://docs.adobe.com/content/help/en/mobile-services/ios/overview.html)
+* **Hämta giltiga konfigurationsparametrar för Media**
+SDKTde här parametrarna kan hämtas från en Adobe-representant när du har konfigurerat ditt analyskonto.
+* **Implementera ADBMomobile för iOS i ditt**
+programMer information om Adobe Mobile SDK-dokumentationen finns i  [iOS SDK 4.x för Experience Cloud Solutions.](https://docs.adobe.com/content/help/sv-SE/mobile-services/ios/overview.html)
 
    >[!IMPORTANT]
    >
@@ -28,14 +30,25 @@ ht-degree: 7%
 
 * **Tillhandahåll följande funktioner i din mediespelare:**
 
-   * _Ett API för att prenumerera på spelarhändelser_ - Media SDK kräver att du anropar en uppsättning enkla API:er när händelser inträffar i spelaren.
-   * _Ett API som tillhandahåller spelarinformation_ - Den här informationen innehåller information som medienamnet och spelhuvudets position.
+   * _Ett API för att prenumerera på spelarhändelser_  - Media SDK kräver att du anropar en uppsättning enkla API:er när händelser inträffar i spelaren.
+   * _Ett API som tillhandahåller spelarinformation_  - Den här informationen innehåller information som medienamnet och spelhuvudets position.
 
 ## SDK-implementering
 
-1. Lägg till din [hämtade](/help/sdk-implement/download-sdks.md#download-2x-sdks) Media SDK i projektet.
+>[!IMPORTANT]
+>
+>Från och med version 2.3.0 distribueras SDK via XCFrameworks.
+>
+>Version 2.3.0 av SDK kräver Xcode 12.0 eller senare och, om tillämpligt, Cocoapods 1.10.0 eller senare.
 
-   1. Kontrollera att följande programvarukomponenter finns i `libs` katalogen:
+* När en binär biblioteksfil nämns bör XCFramwork-ersättaren användas i stället:
+   * MediaSDK.a > MediaSDK.xcframework
+   * MediaSDK_TV.a > MediaSDKTV.xcframework
+* Om du lägger till Adobe XCFrameworks manuellt i ditt projekt måste du se till att de inte är inbäddade.
+
+1. Lägg till din [hämtade](/help/sdk-implement/download-sdks.md#download-2x-sdks) Media SDK i ditt projekt.
+
+   1. Kontrollera att följande programvarukomponenter finns i katalogen `libs`:
 
       * `ADBMediaHeartbeat.h`: Objektiv-C-huvudfilen som används för API:er för iOS-pulsspårning.
       * `ADBMediaHeartbeatConfig.h`: Mål-C-huvudfilen för SDK-konfigurationen.
@@ -49,9 +62,9 @@ ht-degree: 7%
    1. Lägg till biblioteket i ditt projekt:
 
       1. Starta Xcode IDE och öppna appen.
-      1. I **[!UICONTROL Project Navigator]** drar du `libs` katalogen och släpper den under projektet.
+      1. I **[!UICONTROL Project Navigator]** drar du katalogen `libs` och släpper den under projektet.
 
-      1. Kontrollera att **[!UICONTROL Copy Items if Needed]** kryssrutan är markerad, **[!UICONTROL Create Groups]** markerad och att ingen av kryssrutorna i **[!UICONTROL Add to Target]** är markerad.
+      1. Kontrollera att kryssrutan **[!UICONTROL Copy Items if Needed]** är markerad, att **[!UICONTROL Create Groups]** är markerad och att ingen av kryssrutorna i **[!UICONTROL Add to Target]** är markerad.
 
          ![](assets/choose-options_ios.png)
 
@@ -64,6 +77,7 @@ ht-degree: 7%
          * **AdobeMobileLibrary.a**
          * **MediaSDK.a**
          * **libsqlite3.0.tbd**
+
          **Apple TV-mål (tvOS):**
 
          * **AdobeMobileLibrary_TV.a**
@@ -82,9 +96,9 @@ ht-degree: 7%
    #import "ADBMediaHeartbeatConfig.h"
    ```
 
-1. Skapa en `ADBMediaHeartbeatConfig` instans.
+1. Skapa en `ADBMediaHeartbeatConfig`-instans.
 
-   I det här avsnittet får du hjälp med att förstå `MediaHeartbeat` konfigurationsparametrarna och att ställa in korrekta konfigurationsvärden för din `MediaHeartbeat` instans för korrekt spårning.
+   I det här avsnittet får du hjälp med att förstå `MediaHeartbeat`-konfigurationsparametrarna och att ange korrekta konfigurationsvärden för `MediaHeartbeat`-instansen för korrekt spårning.
 
    Här följer ett exempel på `ADBMediaHeartbeatConfig`-initiering:
 
@@ -100,7 +114,7 @@ ht-degree: 7%
    config.debugLogging   = <YES/NO>;
    ```
 
-1. Implementera `ADBMediaHeartbeatDelegate` protokollet.
+1. Implementera `ADBMediaHeartbeatDelegate`-protokollet.
 
    ```
    @interface VideoAnalyticsProvider : NSObject <ADBMediaHeartbeatDelegate>
@@ -127,7 +141,7 @@ ht-degree: 7%
    @end
    ```
 
-1. Använd `ADBMediaHeartBeatConfig` och `ADBMediaHeartBeatDelegate` för att skapa `ADBMediaHeartbeat` instansen.
+1. Använd `ADBMediaHeartBeatConfig` och `ADBMediaHeartBeatDelegate` för att skapa `ADBMediaHeartbeat`-instansen.
 
    ```
    //Replace <ADBMediaHeartBeatDelegate> with your delegate instance
@@ -137,21 +151,21 @@ ht-degree: 7%
 
    >[!IMPORTANT]
    >
-   >Se till att din `ADBMediaHeartbeat` instans är tillgänglig och *inte tas bort förrän i slutet av sessionen*. Den här instansen används för alla följande spårningshändelser.
+   >Kontrollera att din `ADBMediaHeartbeat`-instans är tillgänglig och att *inte frigörs förrän i slutet av sessionen*. Den här instansen används för alla följande spårningshändelser.
 
-## Migrera från version 1.x till 2.x i iOS {#migrate-to-two-x}
+## Migrerar från version 1.x till 2.x i iOS {#migrate-to-two-x}
 
-I version 2.x konsolideras alla publika metoder i `ADBMediaHeartbeat` klassen så att det blir enklare för utvecklare. Alla konfigurationer har konsoliderats i `ADBMediaHeartbeatConfig` klassen.
+I version 2.x konsolideras alla publika metoder i klassen `ADBMediaHeartbeat` så att det blir enklare för utvecklare. Alla konfigurationer har konsoliderats till klassen `ADBMediaHeartbeatConfig`.
 
-Mer information om hur du migrerar från 1.x till 2.x finns i [VHL 1.x till 2.x-migrering.](/help/sdk-implement/va-1x-to-2x/mig-1x-2x-overview.md)
+Mer information om migrering från 1.x till 2.x finns i [VHL 1.x till 2.x-migrering.](/help/sdk-implement/va-1x-to-2x/mig-1x-2x-overview.md)
 
 ## Konfigurera en intern app för tvOS
 
-Med den nya Apple TV-versionen kan du nu skapa program som kan köras i den inbyggda tvOS-miljön. Du kan antingen skapa ett helt inbyggt program med hjälp av något av flera ramverk som är tillgängliga i iOS, eller så kan du skapa programmet med hjälp av XML-mallar och JavaScript. Från och med MediaSDK version 2.0 finns stöd för tvOS. Mer information om tvOS finns på [webbplatsen för tvOS-utvecklare.](https://developer.apple.com/tvos/)
+Med den nya Apple TV-versionen kan du nu skapa program som kan köras i den inbyggda tvOS-miljön. Du kan antingen skapa ett helt inbyggt program med hjälp av något av flera ramverk som är tillgängliga i iOS, eller så kan du skapa programmet med hjälp av XML-mallar och JavaScript. Från och med MediaSDK version 2.0 finns stöd för tvOS. Mer information om tvOS finns i [webbplatsen för tvOS-utvecklare.](https://developer.apple.com/tvos/)
 
 Utför följande steg i Xcode-projektet. Den här guiden är skriven under förutsättning att ditt projekt har ett mål som är en Apple TV-app som har tvOS som mål:
 
-1. Dra biblioteksfilen till `VideoHeartbeat_TV.a` projektets `lib` mapp.
+1. Dra biblioteksfilen `VideoHeartbeat_TV.a` till projektets `lib`-mapp.
 
 1. Expandera avsnittet **[!UICONTROL Link Binary with Libraries]** på fliken **[!UICONTROL Build Phases]** i målet för din tvOS-app och lägg till följande bibliotek:
 
