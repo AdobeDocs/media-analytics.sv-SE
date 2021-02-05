@@ -1,15 +1,15 @@
 ---
-title: Dokumentationsuppdateringar
-description: null
+title: Nyheter i Adobe Analytics för direktuppspelande media?
+description: Läs om nyheterna i Adobe Analytics för direktuppspelande media
 uuid: 1f3e48df-83b6-418c-8cf7-d79466481f79
 index: y
 internal: n
 snippet: y
 translation-type: tm+mt
-source-git-commit: fdec4da99a43d889690638f1ff3579e145548b69
+source-git-commit: 5f0de1e0f0694987c6bab0bd97ac8c98e843f23a
 workflow-type: tm+mt
-source-wordcount: '15'
-ht-degree: 80%
+source-wordcount: '30'
+ht-degree: 40%
 
 ---
 
@@ -25,24 +25,24 @@ ht-degree: 80%
 
 ### Last updated: October, 2019 {#October-2019-update}
 
-Numerous editing and formatting corrections. 
+Numerous editing and formatting corrections.
 Cookbook topics expanded beyond Media SDK, including a new general cookbook topic on "Media Dimensions
 outside Media Tracking."
 
 
 ### Last updated: March 7, 2019 {#March-2019-update}
 
-* This update was primarily for the 2.2 Media SDK release on the JavaScript and OTT platforms. 
-* The 2.2 Media SDK release on JavaScript and OTT platforms provides the same support as 
+* This update was primarily for the 2.2 Media SDK release on the JavaScript and OTT platforms.
+* The 2.2 Media SDK release on JavaScript and OTT platforms provides the same support as
   described below for the iOS and Android platforms (November 1, 2018 update).
 
 ### Last updated: November 1, 2018 {#November-2018-update}
 
-* This update was primarily for the 2.2 Media SDK release on the Android and iOS platforms. 
-* The 2.2 Media SDK release on Android and iOS provides support for tracking audio on those 
+* This update was primarily for the 2.2 Media SDK release on the Android and iOS platforms.
+* The 2.2 Media SDK release on Android and iOS provides support for tracking audio on those
   platforms, along with internal improvements.
-* With the addition of audio tracking, and with both audio and video tracking capabilities 
-  now available in both the Media SDK and the Media Collection API, a relatively wholesale 
+* With the addition of audio tracking, and with both audio and video tracking capabilities
+  now available in both the Media SDK and the Media Collection API, a relatively wholesale
   naming update is called for:
 
     * The overall solution is titled Adobe Analytics for Streaming Media
@@ -58,7 +58,7 @@ outside Media Tracking."
 
 ### Update: October 10, 2018 {#October-2018-update}
 
-* Document structure was "refactored" in the SDK Implementation area, by combining the individual (but mostly identical) platform implementation guides into one SDK implementation section, with platform-specific tracking examples presented in sub-sections beneath common tracking topics. 
+* Document structure was "refactored" in the SDK Implementation area, by combining the individual (but mostly identical) platform implementation guides into one SDK implementation section, with platform-specific tracking examples presented in sub-sections beneath common tracking topics.
 * Files were renamed throughout in anticipation of a migration to a new doc system. All DITA prefixes ( c_, r_, t_ ) indicating concept, reference, and task topic types respectively) were eliminated. All underscores ('_') were replaced with hyphens ('-'). Also, file names now more closely resemble the titles of the topics.
 * Updates to general Validation and Certification topics.
 * New introductory material including a presentation of measurement options, along with updates to prerequisites, implementation paths, and Audience Manager enablement.
