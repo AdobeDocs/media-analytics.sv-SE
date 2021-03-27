@@ -3,7 +3,7 @@ title: Hämta SDK:er
 description: Länkar till SDK-nedladdningar för tillgängliga plattformar, inklusive Android, iOS, JavaScript, Chromecast och Roku.
 uuid: a619fbb8-693e-4583-8dad-0ff875e715f8
 translation-type: tm+mt
-source-git-commit: 63daad47260243d7f8c3badd8dc3cbf45432a905
+source-git-commit: cd3efa68ba0903bc9a616ac41dd5b20346c66870
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 6%
@@ -22,8 +22,8 @@ ht-degree: 6%
 
 | 3.x Media SDK  | Senaste SDK-nedladdningar för media |  API:er   |  Dokumentation  |
 | --- | --- | --- | --- |
-| JavaScript | [Media SDK för JS v3.0.1](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/js-v3.0.1) | [JS API-referens](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/index.html) | [Konfigurera JavaScript 3.x](/help/sdk-implement/setup/setup-javascript/set-up-js-3.md) |
-| Chromecast | [Media SDK för Chromecast v3.0.1](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/chromecast-v3.0.1) | [API-referens för Chromecast](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/) | [Konfigurera Chromecast](/help/sdk-implement/setup/set-up-chromecast.md) |
+| JavaScript | [Media SDK för JS v3.0.2](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/js-v3.0.2) | [JS API-referens](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/index.html) | [Konfigurera JavaScript 3.x](/help/sdk-implement/setup/setup-javascript/set-up-js-3.md) |
+| Chromecast | [Media SDK för Chromecast v3.0.2](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/chromecast-v3.0.2) | [API-referens för Chromecast](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/) | [Konfigurera Chromecast](/help/sdk-implement/setup/set-up-chromecast.md) |
 
 
 ## Ladda ned 2.x Media SDK {#download-2x-sdks}
