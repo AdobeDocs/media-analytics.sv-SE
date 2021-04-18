@@ -1,12 +1,15 @@
 ---
 title: Händelsebegäran
-description: null
+description: Händelsebegäran
 uuid: b237f0a0-dc29-418b-89ee-04c596a27f39
+exl-id: ee0dd8a6-1529-4258-af12-0e2f5948ec38
 translation-type: tm+mt
-source-git-commit: 0d2d75dd411edea2a7a853ed425af5c6da154b06
+source-git-commit: d4491dfec33d8729f40bcef1d57622467443bdbb
+workflow-type: tm+mt
+source-wordcount: '246'
+ht-degree: 4%
 
 ---
-
 
 # Händelsebegäran{#events-request}
 
@@ -17,7 +20,7 @@ https://{uri}/api/v1/sessions/{sid}/events
 
 ## URI-parameter
 
-`sid`: Sessions-ID som returnerats från en [sessionsbegäran.](/help/media-collection-api/mc-api-ref/mc-api-sessions-req.md)
+`sid`: Sessions-ID som returnerats från en  [sessionsbegäran.](/help/media-collection-api/mc-api-ref/mc-api-sessions-req.md)
 
 ## Begärandetext
 
@@ -41,7 +44,7 @@ Begärandetexten måste vara JSON och ha samma struktur som exempelbegärandetex
    * `ts` - Tidsstämpel. måste vara i millisekunder.
 * `eventType` (Obligatoriskt)
 * `params` (Valfritt)
-* `customMetadata` (Valfritt) skicka endast med `adStart` och `chapterStart` händelsetyper)
+* `customMetadata` (Valfritt) skicka endast med  `adStart` och  `chapterStart` händelsetyper)
 * `qoeData` (Valfritt)
 
 En lista över giltiga händelsetyper för den här versionen finns i [Händelsetyper och beskrivningar.](/help/media-collection-api/mc-api-ref/mc-api-event-types.md)
@@ -50,7 +53,7 @@ En lista över giltiga händelsetyper för den här versionen finns i [Händelse
 >
 >***Annonsuppföljning -**Du kan bara spåra annonser inuti en`adBreak`*.
 >
->I avsaknad av `adBreakStart` - och `adBreakComplete` &quot;bokstöd&quot; runt annonser, kommer `adStart` och `adComplete` händelser helt enkelt att ignoreras och motsvarande annonslängd kommer att spåras som innehållets längd. Detta kan ha en betydande inverkan på de aggregerade data som kommer att bli tillgängliga i Adobe Analytics.
+>Om `adBreakStart` och `adBreakComplete` &quot;bookends&quot; runt annonser saknas ignoreras bara händelserna `adStart` och `adComplete` och motsvarande annonslängd spåras som innehållslängd. Detta kan ha en betydande inverkan på de aggregerade data som kommer att bli tillgängliga i Adobe Analytics.
 
 ## Svar
 
@@ -69,9 +72,8 @@ Access-Control-Expose-Headers Location
 
 | HTTP-svarskod | Beskrivning | Klientåtgärdsobjekt |
 |---|---|---|
-| **204** | **Inget innehåll.** Anropet <br/><br/>till pulsslag lyckades. | Ej tillämpligt |
-| **400** | **Felaktig begäran.** Begäran <br/><br/>hade ett felaktigt format. | Kontrollera [JSON-valideringsscheman](/help/media-collection-api/mc-api-ref/mc-api-json-validation.md) för begärandetypen. |
-| **404** | **Hittades inte.** Det <br/><br/>gick inte att hitta sessions-ID för mediesessionen i back end-tjänsten. | Klientprogrammet bör använda API:t för [sessionsbegäran](/help/media-collection-api/mc-api-ref/mc-api-sessions-req.md) för att skapa en annan mediesession och rapportera spårning för den. |
-| **410** | **Borta.** Mediesessionen <br/><br/>hittades i back-end-tjänsten, men klienten kan inte längre rapportera aktivitet på den. | Klientprogrammet bör använda API:t för [sessionsbegäran](/help/media-collection-api/mc-api-ref/mc-api-sessions-req.md) för att skapa en annan mediesession och rapportera spårning för den. |
+| **204** | **Inget innehåll.** <br/><br/>Anropet till pulsslag lyckades. | Ej tillämpligt |
+| **400** | **Felaktig begäran.** <br/><br/>Begäran hade ett felaktigt format. | Kontrollera [JSON-valideringsscheman](/help/media-collection-api/mc-api-ref/mc-api-json-validation.md) för typen av begäran. |
+| **404** | **Hittades inte.** <br/><br/>Sessions-ID:t för mediesessionen hittades inte i back end-tjänsten. | Klientprogrammet bör använda API:t [Sessioner request](/help/media-collection-api/mc-api-ref/mc-api-sessions-req.md) för att skapa en annan mediesession och rapportera spårning för den. |
+| **410** | **Borta.** <br/><br/>Mediesessionen hittades i back-end-tjänsten, men klienten kan inte längre rapportera aktivitet på den. | Klientprogrammet bör använda API:t [Sessioner request](/help/media-collection-api/mc-api-ref/mc-api-sessions-req.md) för att skapa en annan mediesession och rapportera spårning för den. |
 | **500** | **Serverfel** | Ej tillämpligt |
-
