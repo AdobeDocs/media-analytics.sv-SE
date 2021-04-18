@@ -1,21 +1,21 @@
 ---
 title: Migrera från milstolpe till mediaanalys
-description: null
+description: Migrera från milstolpe till mediaanalys
 uuid: fdc96146-af63-48ce-b938-c0ca70729277
+exl-id: 655841ed-3a02-4e33-bbc9-46fb14302194
 translation-type: tm+mt
-source-git-commit: e079b90f8fb9197e5ebae0fb6ca31081ba28de1d
+source-git-commit: d4491dfec33d8729f40bcef1d57622467443bdbb
 workflow-type: tm+mt
-source-wordcount: '669'
+source-wordcount: '675'
 ht-degree: 12%
 
 ---
 
-
-# Migrera från milstolpe till mediaanalys {#migrating-from-milestone-to-media-analytics}
+# Migrera från milstolpe till medieanalys {#migrating-from-milestone-to-media-analytics}
 
 ## Översikt {#overview}
 
-De centrala begreppen för videomätning är desamma för Milestone och Media Analytics, som tar videospelarhändelser och mappar dem till analysmetoder, samtidigt som de hämtar metadata och värden för spelaren och mappar dem till analysvariabler. Medieanalyslösningen växte ut ur milstolpen, så många av metoderna och mätvärdena är desamma, men konfigurationsstrategin och koden har ändrats avsevärt. Det bör vara möjligt att uppdatera händelsekoden för spelaren så att den pekar på de nya Media Analytics-metoderna. Se [SDK-översikt](/help/sdk-implement/setup/setup-overview.md) och [Spårningsöversikt](/help/sdk-implement/track-av-playback/track-core-overview.md) om du vill ha mer information om hur du implementerar Media Analytics.
+De centrala begreppen för videomätning är desamma för Milestone och Media Analytics, som tar videospelarhändelser och mappar dem till analysmetoder, samtidigt som de hämtar metadata och värden för spelaren och mappar dem till analysvariabler. Medieanalyslösningen växte ut ur milstolpen, så många av metoderna och mätvärdena är desamma, men konfigurationsstrategin och koden har ändrats avsevärt. Det bör vara möjligt att uppdatera händelsekoden för spelaren så att den pekar på de nya Media Analytics-metoderna. Mer information om hur du implementerar Media Analytics finns i [SDK Overview](/help/sdk-implement/setup/setup-overview.md) och [Spårningsöversikt](/help/sdk-implement/track-av-playback/track-core-overview.md).
 
 I följande tabeller finns översättningar mellan milstolpe-lösningen och Media Analytics-lösningen.
 
@@ -27,9 +27,9 @@ I följande tabeller finns översättningar mellan milstolpe-lösningen och Medi
 | --- | --- | --- |
 | Innehåll | eVar <br> Standardförfallodatum: Besök | Innehåll |
 | Innehållstyp | eVar <br> Standardförfallodatum: Sidvy | Innehållstyp |
-| Innehållstid | Händelse <br> Typ: Räknare | Innehållstid |
-| Videostart | Händelse <br> Typ: Räknare | Videostart |
-| Videon slutförs | Händelse <br> Typ: Räknare | Innehållet har slutförts |
+| Innehållstid | Händelsens <br>-typ: Räknare | Innehållstid |
+| Videostart | Händelsens <br>-typ: Räknare | Videostart |
+| Videon slutförs | Händelsens <br>-typ: Räknare | Innehållet har slutförts |
 
 
 ### Mediemodvariabler
@@ -86,7 +86,6 @@ I följande tabeller finns översättningar mellan milstolpe-lösningen och Medi
 | Media.close | `s.Media.close(mediaName)` | trackSessionEnd | `trackSessionEnd()` |
 | Media.complete | `s.Media.complete(name, offset)` | trackComplete | `trackComplete()` |
 | Media.play | `s.Media.play(` <br> `  name,` <br> `  offset,` <br> `  segmentNum,` <br> `  segment, ` <br> `  segmentLength)` | trackPlay | `trackPlay()` |
-| Media.stop | `s.Media.stop(mediaName, mediaOffset)` | trackPause <br> eller <br> trackEvent | `trackPause()` <br> eller `trackEvent(` <br> `  MediaHeartbeat.` <br> `  Event.` <br> `  SeekStart)` <br> eller <br> `trackEvent(` <br> `  MediaHeartbeat.` <br> `  Event.` <br> `  BufferStart);` |
+| Media.stop | `s.Media.stop(mediaName, mediaOffset)` | trackPause <br> eller <br> trackEvent | `trackPause()` <br> eller  `trackEvent(` <br> `  MediaHeartbeat.` <br> `  Event.` <br> `  SeekStart)` <br> eller  <br> `trackEvent(` <br> `  MediaHeartbeat.` <br> `  Event.` <br> `  BufferStart);` |
 | Media.monitor | `s.Media.monitor(s, media)` | Använd anpassade metadata eller standardmetadata för att ange ytterligare variabler. | `var customVideoMetadata = ` <br> `{` <br> `  isUserLoggedIn: ` <br> `    "false",` <br> `  tvStation: ` <br> `    "Sample TV station",` <br> `  programmer: ` <br> `    "Sample programmer"` <br> `};` <br> `...` <br> `var standardVideoMetadata ` <br> `  = {};` <br> `standardVideoMetadata` <br> `  [MediaHeartbeat.` <br> `   VideoMetadataKeys.` <br> `   EPISODE] = ` <br> `  "Sample Episode";` <br> `standardVideoMetadata` <br> `  [MediaHeartbeat.` <br> `   VideoMetadataKeys.` <br> `   SHOW] = "Sample Show";` <br> `...` <br> `mediaObject.setValue(` <br> `  MediaHeartbeat.` <br> `  MediaObjectKey.` <br> `  StandardVideoMetadata, ` <br> `  standardVideoMetadata);` |
 | Media.track | `s.Media.track(mediaName)` | Ej tillämpligt | Frekvensen för spårningsanrop ställs in automatiskt. |
-
