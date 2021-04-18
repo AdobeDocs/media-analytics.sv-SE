@@ -1,14 +1,17 @@
 ---
 title: Översikt över media
-description: null
+description: Översikt över media
 uuid: bdbd998f-9b5e-40c9-a8ea-12dfa5acd35c
+exl-id: 4fe91372-da41-44c5-bea9-2bba762512ef
 translation-type: tm+mt
-source-git-commit: 5a4f15616712ee91bc028258991fc4e7359698a5
+source-git-commit: d4491dfec33d8729f40bcef1d57622467443bdbb
+workflow-type: tm+mt
+source-wordcount: '93'
+ht-degree: 1%
 
 ---
 
-
-# Media overview{#media-overview}
+# Medieöversikt{#media-overview}
 
 Kontrollpanelen Medieöversikt är utformad för att du ska kunna övervaka media på hela webbplatsen. I vyn Medieöversikt visas flera aggregerade mått så att du snabbt kan övervaka att media fungerar som förväntat. I ett diagram visas innehåll som börjar bredvid och som börjar så att du snabbt kan visa dessa mått för varje medieobjekt.
 
