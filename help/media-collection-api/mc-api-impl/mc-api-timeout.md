@@ -1,12 +1,15 @@
 ---
 title: Timeoutvillkor
-description: null
+description: Timeoutvillkor
 uuid: 2a4ea13e-a561-4adf-b567-f980301b32c8
+exl-id: 0b494b27-a4a6-4af7-84c1-c44b33b6da8f
 translation-type: tm+mt
-source-git-commit: 0d2d75dd411edea2a7a853ed425af5c6da154b06
+source-git-commit: d4491dfec33d8729f40bcef1d57622467443bdbb
+workflow-type: tm+mt
+source-wordcount: '156'
+ht-degree: 0%
 
 ---
-
 
 # Timeoutvillkor{#timeout-conditions}
 
@@ -23,5 +26,4 @@ Media Collection API har inte samma funktion som Media SDK för att utfärda ett
 
 >[!NOTE]
 >
->Du kan också tvinga fram ett sessionsslut genom att skicka en `events` begäran med `sessionEnd` händelsetypen.
-
+>Du kan också tvinga fram ett sessionsslut genom att skicka en `events`-begäran med händelsetypen `sessionEnd`.
