@@ -1,16 +1,19 @@
 ---
 title: Hämta ett sessions-ID
-description: null
+description: Hämta ett sessions-ID
 uuid: fc8712fa-848f-4564-af5d-5dd9d6b088d8
+exl-id: 4a1c4ade-4a5e-4af0-8117-19d718dd8bda
 translation-type: tm+mt
-source-git-commit: 0d2d75dd411edea2a7a853ed425af5c6da154b06
+source-git-commit: d4491dfec33d8729f40bcef1d57622467443bdbb
+workflow-type: tm+mt
+source-wordcount: '46'
+ht-degree: 0%
 
 ---
 
-
 # Hämta ett sessions-ID{#obtaining-a-session-id}
 
-I det här kodfragmentet från referensspelaren visas ett sätt att koda en [sessionsbegäran,](/help/media-collection-api/mc-api-ref/mc-api-sessions-req.md) tillsammans med att extrahera sessions-ID (och API-versionen för Media Collection) från platshuvudet i svaret:
+I det här kodfragmentet från referensspelaren visas ett sätt att koda en [sessionsbegäran](/help/media-collection-api/mc-api-ref/mc-api-sessions-req.md) tillsammans med att extrahera sessions-ID (och API-versionen för Media Collection) från platshuvudet i svaret:
 
 ```js
 var  
@@ -37,4 +40,3 @@ const SESSION_ID_EXTRACTOR = /^\/api\/(.*)\/sessions\/(.*)/;
         this._sessionStarted = true;    // Session started. 
     ...
 ```
-
