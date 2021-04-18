@@ -1,12 +1,15 @@
 ---
 title: Validerar händelsebegäranden
-description: null
+description: Validerar händelsebegäranden
 uuid: 1fc92f21-b510-4c96-8ea2-47e819f4a96e
+exl-id: a78739da-9fc9-42e3-9181-1887fb3dd357
 translation-type: tm+mt
-source-git-commit: 0d2d75dd411edea2a7a853ed425af5c6da154b06
+source-git-commit: d4491dfec33d8729f40bcef1d57622467443bdbb
+workflow-type: tm+mt
+source-wordcount: '112'
+ht-degree: 0%
 
 ---
-
 
 # Validerar händelsebegäranden{#validating-event-requests}
 
@@ -14,7 +17,7 @@ JSON-begärandetexten för varje händelsetyp valideras på serverdelen med JSON
 
 JSON-valideringsscheman för varje händelsetyp är allmänt tillgängliga här: `{uri}/api/v1/schemas/{eventType}` (t.ex. `{uri}/api/v1/schemas/sessionEnd`). Dessa JSON-valideringsscheman är den absoluta auktoriteten för att fastställa korrekta parametrar för begärande för varje typ av händelse.
 
-Svaret på en begäran om `sessionStart` valideringsschemat ser till exempel ut ungefär som det här exemplet (något formaterat för läsbarhet här):
+Svaret på en begäran om valideringsschemat `sessionStart` ser till exempel ut ungefär som det här exemplet (något formaterat för läsbarhet här):
 
 ```
 HTTP/1.1 200 OK
@@ -126,4 +129,3 @@ Connection: keep-alive
 >[!NOTE]
 >
 >Det går inte att validera sessionsnivån eftersom sessionskontexten inte är tillgänglig i samlingslagret.
-
