@@ -1,27 +1,30 @@
 ---
 title: Hämta JSON-rapportdata för samtidiga visningsprogram
-description: null
+description: Hämta JSON-rapportdata för samtidiga visningsprogram
 uuid: 9168f114-2459-4951-a06c-57b735d09dc0
 translation-type: tm+mt
-source-git-commit: ccdc3e170d125a76d798be7ce1fa5c12eef1f76a
+source-git-commit: d4491dfec33d8729f40bcef1d57622467443bdbb
+workflow-type: tm+mt
+source-wordcount: '164'
+ht-degree: 4%
 
 ---
 
 
-# Get concurrent viewers JSON report data{#get-concurrent-viewers-json-report-data}
+# Hämta JSON-rapportdata för samtidiga visningsprogram{#get-concurrent-viewers-json-report-data}
 
-Du kan hämta rapportdata för samtidiga visningsprogram med _*1.4-versionen*_ av API:erna i Analytics:
+Du kan hämta rapportdata för samtidiga visningsprogram med hjälp av _*1.4-versionen*_ av API:erna för analys:
 * [API:er för Analytics](https://github.com/AdobeDocs/analytics-1.4-apis)
 * [Swagger](https://adobedocs.github.io/analytics-1.4-apis/swagger-docs.html#/Report/Report.Get)
 
 1. Filtrera data med ett segment som bygger på användargränssnittet. Om du vill filtrera efter ett visst innehålls-ID skapar du ett nytt segment.
-1. Ställ in `elements` -> `id` i begärandetexten på `videoconcurrentviewers`.
-1. Begär tillräckligt med data. Adobe rekommenderar 3 200 datapunkter för att säkerställa att det inte finns några luckor i informationen.
+1. Ange `elements` -> `id` i begärandetexten som `videoconcurrentviewers`.
+1. Begär tillräckligt med data. Adobe rekommenderar 3200 datapunkter för att säkerställa att det inte finns några luckor i data.
 
-   * Det dataområde som du anger i rapporten samlar in alla samtidiga visningsprogramdata _när videosessionen avslutades._
+   * Det dataområde som du anger i rapporten samlar alla samtidiga visningsdata _när videosessionen avslutades._
 Du måste alltså redovisa sessioner som börjar en dag och slutar efter midnatt (dvs. nästa dag).
 
-   * Begär mer än en dag data, men i din analys _*används bara den första dagen i dessa data.*_
+   * Begär mer än en dag data, men i din analys _*använd bara den första dagen i data.*_
 
 Nyttolasten för en exempelbegäran för det här scenariot skulle se ut så här:
 
