@@ -1,12 +1,15 @@
 ---
 title: Sessionsbegäran
-description: null
+description: Sessionsbegäran
 uuid: 9609192d-4f7f-4fb5-844f-ea89d47c4e30
+exl-id: f55f5838-610f-4f82-b3c5-72165ea2c86b
 translation-type: tm+mt
-source-git-commit: 0d2d75dd411edea2a7a853ed425af5c6da154b06
+source-git-commit: d4491dfec33d8729f40bcef1d57622467443bdbb
+workflow-type: tm+mt
+source-wordcount: '80'
+ht-degree: 8%
 
 ---
-
 
 # Sessionsbegäran{#sessions-request}
 
@@ -62,7 +65,7 @@ Begärandetexten måste vara JSON och ha samma struktur som exempelbegärandetex
    * `ts` - Tidsstämpel. måste vara i millisekunder.
 * `eventType` (Obligatoriskt)
 
-   **Giltigt värde:**`sessionStart`
+   **Giltigt värde:** `sessionStart`
 * `params` (Obligatoriskt)
 * `customMetadata` (Valfritt)
 * `qoeData` (Valfritt)
@@ -84,7 +87,7 @@ Age: 0
 Via: 1.1 wsg.sanjose08
 ```
 
-`Location:` header - `/api/v1/` Delen innehåller API-versionen. Delen efter `[…]sessions/` är sessions-ID.
+`Location:` header -  `/api/v1/` delen innehåller API-versionen. Delen efter `[…]sessions/` är sessions-ID.
 
 ## Svarskoder
 
@@ -93,4 +96,3 @@ Via: 1.1 wsg.sanjose08
 | 201 | Session skapad |
 | 400 | Felaktig begäran |
 | 500 | Serverfel |
-
