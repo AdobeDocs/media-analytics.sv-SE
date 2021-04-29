@@ -4,9 +4,9 @@ description: Kontrollera händelseordningen
 uuid: 007fccc6-be72-4b79-826d-588c957ccf15
 exl-id: c0cac319-2bea-42c8-8674-641dfbb44fa2
 translation-type: tm+mt
-source-git-commit: e0da35f364dc057a241fbb05a718a731ffee1e94
+source-git-commit: 27694ec83de89980404df7a7cc77fa42b3d1a751
 workflow-type: tm+mt
-source-wordcount: '307'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,7 @@ ht-degree: 0%
 Spårning av direktuppspelad video är en mycket tidsberoende åtgärd och ibland kommer API-spårningsanrop för Media Collection i fel ordning. I det här fallet försöker backend placera händelser i kö och ordna om dem baserat på den angivna tidsstämpeln i `playerTime`-objektet.  Detta sker med vissa begränsningar. För närvarande kan det hända att ordningen inte fungerar om fördröjningarna mellan telefonsamtal som inte är i ordning är mer än en sekund. I framtida uppdateringar kan den&quot;godtagbara fördröjningstiden&quot; optimeras och konfigureras.
 
 ## Exempel på en händelse som inte är i ordning
+
 Oordnade händelser inträffar när händelser passerar genom nätverket, vilket ibland orsakar en fördröjning.
 
 Du kan till exempel skicka en `adBreakStart`-händelse följt av en `adStart`-händelse. Detta är ett vanligt användningsexempel eftersom det krävs att en annons börjar inuti en annonsbrytning.
