@@ -2,14 +2,14 @@
 title: Begär parametrar
 description: null
 uuid: f83e9ef1-803d-4152-a6c7-acaa325036b9
+exl-id: a70025ec-1418-46f1-b41f-433d09f024e1
 translation-type: tm+mt
-source-git-commit: b1b94b4cde74908ea528fb69d78250dc1da1db80
+source-git-commit: 64a91795bd2f9120991be2a67e68c645dc24c8d1
 workflow-type: tm+mt
-source-wordcount: '1195'
+source-wordcount: '1205'
 ht-degree: 5%
 
 ---
-
 
 # Begäranparametrar{#request-parameters}
 
@@ -28,7 +28,7 @@ ht-degree: 5%
 | --- | :---: | :---: | --- |
 | `visitor.marketingCloudOrgId` | Y | `sessionStart` | Organisations-ID för Experience Cloud. identifierar din organisation inom Adobe Experience Cloud ekosystem |
 | `visitor.marketingCloudUserId` | N | `sessionStart` | Det här är användar-ID:t för Experience Cloud (ECID). I de flesta fall är detta det ID som du bör använda för att identifiera en användare. Heartbeat `marketingCloudUserId` är lika med `MID` i Adobe Analytics. Den här parametern krävs inte tekniskt, men den är nödvändig för att få tillgång till appar i Experience Cloud-familjen. |
-| `visitor.aamLocationHint` | N | `sessionStart` | Tillhandahåller Adobe Audience Manager Edge-data |
+| `visitor.aamLocationHint` | N | `sessionStart` | Tillhandahåller Adobe Audience Manager Edge-data - Om inget värde anges är värdet null. |
 | `appInstallationId` | N | `sessionStart` | appInstallationId identifierar programmet och enheten unikt |
 
 ## Innehållsdata
