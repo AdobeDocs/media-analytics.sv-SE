@@ -1,14 +1,13 @@
 ---
 title: Vad är Adobe Audience Manager aktivering?
 description: Lär dig hur du länkar programåtgärder till mediespårningsdata utan att behöva använda ytterligare bearbetningsregler och anpassade variabler.
-translation-type: tm+mt
-source-git-commit: 901539a2095b23f9108a934eb61d182b14ccd9e8
+exl-id: c0d73bc2-4713-498a-8882-ff66c7f3dd50
+source-git-commit: e781af84f23400aa7c899b686f0e9fee2c19d660
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 0%
 
 ---
-
 
 # Audience Manager enablement{#audience-manager-enablement}
 
@@ -59,7 +58,7 @@ Du kan använda dessa metoder för att skicka signaler och hämta besökarsegmen
    Anger DPID och DPUID. Om DPID och DPUID anges skickas de med varje signal.
 
    ```js
-   ADBMobile.audienceManager.SetDpidAndDpuuid("myDpid", "myDpuuid");
+   ADBMobile.audienceManager.setDpidAndDpuuid("myDpid", "myDpuuid");
    ```
 
 * `submitSignal() -`
@@ -67,7 +66,7 @@ Du kan använda dessa metoder för att skicka signaler och hämta besökarsegmen
    Skickar målgruppshantering en signal med egenskaper.
 
    ```js
-   ADBMobile.audienceManager.SubmitSignal();
+   ADBMobile.audienceManager.submitSignal({"sampleTrait":"sampleValue"});
    ```
 
 ### Roku {#am-roku}
@@ -109,5 +108,7 @@ Du kan använda dessa metoder för att skicka signaler och hämta besökarsegmen
    Skickar målgruppshantering en signal med egenskaper.
 
    ```js
-   ADBMobile().audienceSubmitSignal()
+   traitData = {}
+   traitData["sampleTrait"] = "sampleValue"
+   ADBMobile().audienceSubmitSignal(traitData)
    ```
