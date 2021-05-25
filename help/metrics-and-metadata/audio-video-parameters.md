@@ -2,14 +2,13 @@
 title: Parametrar för ljud och video
 description: null
 uuid: fdacfb8b-db3e-46fb-b9ad-c3a749555b2a
-translation-type: tm+mt
-source-git-commit: b1b94b4cde74908ea528fb69d78250dc1da1db80
+exl-id: 9dc84377-6eca-482f-89e7-c4008d1c0f07
+source-git-commit: fc12fb75060759230911afbe0127b235edfb0e55
 workflow-type: tm+mt
-source-wordcount: '6243'
+source-wordcount: '6242'
 ht-degree: 2%
 
 ---
-
 
 # Parametrar för ljud och video{#audio-and-video-parameters}
 
@@ -26,7 +25,7 @@ I det här avsnittet finns en lista med ljud- och videoinnehållsdata, inklusive
 Beskrivning av tabelldata:
 
 * **implementering:** information om implementeringsvärden och -krav
-   * *Key*  - Variable, ange antingen manuellt i appen eller automatiskt av Adobe Media SDK.
+   * *Key*  - Variable, ange antingen manuellt i appen eller automatiskt med Adobe Media SDK.
    * *Obligatoriskt*  - Anger om parametern krävs för grundläggande ljud- och videospårning.
    * *Typ*  - Anger vilken typ av variabel som ska anges, strängen eller talet.
    * *Skickat med*  - Anger när data skickas:  *Media* Startis the analytics call sent on media start,  *Ad* Startis, the analytics call sent on ad ad start osv. &quot; ** Closecalls&quot; är de kompilerade analysanrop som skickas direkt från hjärtslagservern till analysservern i slutet av mediesessionen, eller i slutet av annonsen, kapitlet osv. Stäng anrop är inte tillgängliga i nätverkspaketanrop.
@@ -429,7 +428,7 @@ public static MediaObject createMediaObject(java.lang.String name,
 
 |   Implementering   | Nätverksparametrar | Rapportering |
 | --- | --- | --- |
-| <ul> <li> **SDK-nyckel:**<br/> Automatiskt angiven </li> <li> **API-nyckel:**<br/> Ej tillämpligt </li> <li> **text:**<br/> tal </li> <li> **Skickat med:Stäng**<br/> media </li> <li> **Min. SDK-version:** 1.5.6 </li> <li> **Exempelvärde:**<br/> 190 </li> <li> **Beskrivning:**<br/> Summerar längden (i sekunder) för alla händelser av typen PAUSE. Värdet visas i tidsformat (HH:MM:SS) i Analysis Workspace och Rapporter och analyser. I Data Feeds, Data warehouse och Reporting API:er visas värdena på några sekunder. <br/> **Releasedatum: 09/13/18** </li></ul> | <ul> <li> **Adobe Analytics:**<br/> Ej tillämpligt </li> <li> **Hjärtslag:**<br/> Ej tillämpligt </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> händelse </li> <li> **Rapportnamn:**<br/> Total pausvaraktighet </li> <li> **Kontextdata:**<br/> (a.media.pauseTime) </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.pauseTime) </li> </ul> |
+| <ul> <li> **SDK-nyckel:**<br/> Automatiskt angiven </li> <li> **API-nyckel:**<br/> Ej tillämpligt </li> <li> **text:**<br/> tal </li> <li> **Skickat med:Stäng**<br/> media </li> <li> **Min. SDK-version:** 1.5.6 </li> <li> **Exempelvärde:**<br/> 190 </li> <li> **Beskrivning:**<br/> Summerar längden (i sekunder) för alla händelser av typen PAUSE. Värdet visas i tidsformat (HH:MM:SS) i Analysis Workspace och Rapporter och analyser. I Data Feeds, Data warehouse och Reporting API:er visas värdena på några sekunder. <br/> **Releasedatum: 09/13/18** </li></ul> | <ul> <li> **Adobe Analytics:**<br/> Ej tillämpligt </li> <li> **Hjärtslag:**<br/> Ej tillämpligt </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> händelse </li> <li> **Rapportnamn:**<br/> Total pausvaraktighet </li> <li> **Kontextdata:**<br/> (a.media.pauseTime) </li> <li> **Datafeed:**<br/> (videoOperationTime) </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.pauseTime) </li> </ul> |
 
 ### Återuppta innehåll
 
