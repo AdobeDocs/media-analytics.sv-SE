@@ -1,12 +1,11 @@
 ---
 title: Begär parametrar
-description: null
+description: Läs mer om parametrarna för Adobe Analytics direktuppspelningsmediebegäran.
 uuid: f83e9ef1-803d-4152-a6c7-acaa325036b9
 exl-id: a70025ec-1418-46f1-b41f-433d09f024e1
-translation-type: tm+mt
-source-git-commit: 786327371aa1fc8809c8a5827bc9c8991b1ecae1
+source-git-commit: 00e9992712034dc67072e09cce7819719c0371d1
 workflow-type: tm+mt
-source-wordcount: '1205'
+source-wordcount: '1297'
 ht-degree: 5%
 
 ---
@@ -15,105 +14,105 @@ ht-degree: 5%
 
 ## Analysdata
 
-| Begär nyckel  | Obligatoriskt | Aktivera... |  Beskrivning  |
-| --- | :---: | :---: | --- |
-| `analytics.trackingServer` | Y | `sessionStart` | URL-adressen till din Adobe Analytics-server |
-| `analytics.reportSuite` | Y | `sessionStart` | Det ID som identifierar analysrapportdata |
-| `analytics.enableSSL` | N | `sessionStart` | Sant eller falskt för aktivering av SSL |
-| `analytics.visitorId` | N | `sessionStart` | Adobe Visitor-ID är ett anpassat ID som du kan använda i flera Adobe-program. Heartbeat `visitorId` är lika med Analytics `VID.` |
+| Begär nyckel  | Obligatoriskt | Begärantypnyckel | Aktivera... |  Beskrivning  |
+| --- | :---: | :---: | :---: | --- |
+| `analytics.trackingServer` | Y | string | `sessionStart` | URL-adressen till din Adobe Analytics-server |
+| `analytics.reportSuite` | Y | string | `sessionStart` | Det ID som identifierar analysrapportdata |
+| `analytics.enableSSL` | N | boolesk | `sessionStart` | Sant eller falskt för aktivering av SSL |
+| `analytics.visitorId` | N | string | `sessionStart` | Adobe Visitor-ID är ett anpassat ID som du kan använda i flera Adobe-program. Heartbeat `visitorId` är lika med Analytics `VID.` |
 
 ## Besökardata
 
-| Begär nyckel  | Obligatoriskt | Aktivera... |  Beskrivning  |
-| --- | :---: | :---: | --- |
-| `visitor.marketingCloudOrgId` | Y | `sessionStart` | Organisations-ID för Experience Cloud. identifierar din organisation inom Adobe Experience Cloud ekosystem |
-| `visitor.marketingCloudUserId` | N | `sessionStart` | Det här är användar-ID:t för Experience Cloud (ECID). I de flesta fall är detta det ID som du bör använda för att identifiera en användare. Heartbeat `marketingCloudUserId` är lika med `MID` i Adobe Analytics. Den här parametern krävs inte tekniskt, men den är nödvändig för att få tillgång till appar i Experience Cloud-familjen. |
-| `visitor.aamLocationHint` | N | `sessionStart` | Tillhandahåller Adobe Audience Manager Edge-data - Om inget värde anges är värdet null. |
-| `appInstallationId` | N | `sessionStart` | appInstallationId identifierar programmet och enheten unikt |
+| Begär nyckel  | Obligatoriskt | Begärantypnyckel | Aktivera... |  Beskrivning  |
+| --- | :---: | :---: | :---: | --- |
+| `visitor.marketingCloudOrgId` | Y | string | `sessionStart` | Organisations-ID för Experience Cloud. identifierar din organisation inom Adobe Experience Cloud ekosystem |
+| `visitor.marketingCloudUserId` | N | string | `sessionStart` | Det här är användar-ID:t för Experience Cloud (ECID). I de flesta fall är detta det ID som du bör använda för att identifiera en användare. Heartbeat `marketingCloudUserId` är lika med `MID` i Adobe Analytics. Den här parametern krävs inte tekniskt, men den är nödvändig för att få tillgång till appar i Experience Cloud-familjen. |
+| `visitor.aamLocationHint` | N | heltal | `sessionStart` | Tillhandahåller Adobe Audience Manager Edge-data - Om inget värde anges är värdet null. |
+| `appInstallationId` | N | string | `sessionStart` | appInstallationId identifierar programmet och enheten unikt |
 
 ## Innehållsdata
 
-| Begär nyckel  | Obligatoriskt | Aktivera... |  Beskrivning  |
-| --- | :---: | :---: | --- |
-| `media.id` | Y | `sessionStart` | Unik identifierare för innehållet |
-| `media.name` | N | `sessionStart` | Innehållets läsliga namn |
-| `media.length` | Y | `sessionStart` | Innehållslängd (sekunder) |
-| `media.contentType` | Y | `sessionStart` | Strömmens format (kan vara vilken sträng som helst, ett fåtal rekommenderade värden är &quot;Live&quot;, &quot;VOD&quot; eller &quot;Linear&quot;) |
-| `media.playerName` | Y | `sessionStart` | Namnet på den spelare som ansvarar för återgivningen av innehållet |
-| `media.channel` | Y | `sessionStart` | Innehållets distributionskanal. Det kan vara ett mobilprogramnamn eller ett webbplatsnamn, egenskapsnamn |
-| `media.resume` | N | `sessionStart` | Anger om en användare återupptar en tidigare session (till skillnad från att starta en ny session) |
-| `media.sdkVersion` | N | `sessionStart` | SDK-versionen som används av spelaren |
+| Begär nyckel  | Obligatoriskt | Begärantypnyckel | Aktivera... |  Beskrivning  |
+| --- | :---: | :---: | :---: | --- |
+| `media.id` | Y | string | `sessionStart` | Unik identifierare för innehållet |
+| `media.name` | N | string | `sessionStart` | Innehållets läsliga namn |
+| `media.length` | Y | tal | `sessionStart` | Innehållslängd (sekunder) |
+| `media.contentType` | Y | string | `sessionStart` | Strömmens format (kan vara vilken sträng som helst, ett fåtal rekommenderade värden är &quot;Live&quot;, &quot;VOD&quot; eller &quot;Linear&quot;) |
+| `media.playerName` | Y | string | `sessionStart` | Namnet på den spelare som ansvarar för återgivningen av innehållet |
+| `media.channel` | Y | string | `sessionStart` | Innehållets distributionskanal. Det kan vara ett mobilprogramnamn eller ett webbplatsnamn, egenskapsnamn |
+| `media.resume` | N | boolesk | `sessionStart` | Anger om en användare återupptar en tidigare session (till skillnad från att starta en ny session) |
+| `media.sdkVersion` | N | string | `sessionStart` | SDK-versionen som används av spelaren |
 
 ## Metadata för Content Standard
 
-| Begär nyckel  | Obligatoriskt | Aktivera... |  Beskrivning  |
-| --- | :---: | :---: | --- |
-| `media.streamFormat` | N | `sessionStart` | Strömformat, t.ex. &quot;HD&quot; |
-| `media.show` | N | `sessionStart` | Program- eller serienamn |
-| `media.season` | N | `sessionStart` | Det säsongsnummer som programmet eller serien tillhör |
-| `media.episode` | N | `sessionStart` | Antal avsnitt |
-| `media.assetId` | N | `sessionStart` | Den unika identifieraren för innehållet i videoresursen, till exempel TV-seriens avsnittsidentifierare, filmresursidentifierare eller live-händelseidentifierare. Vanligtvis härleds dessa ID:n från metadatautfärdare som EIDR, TMS/Gracenote eller Rovi. Dessa identifierare kan också komma från andra egenutvecklade eller interna system. |
-| `media.genre` | N | `sessionStart` | Innehållstypen som definierats av innehållsproducenten |
-| `media.firstAirDate` | N | `sessionStart` | Det datum då innehållet först skrevs på tv |
-| `media.firstDigitalDate` | N | `sessionStart` | Det datum då innehållet först skrevs på en digital plattform |
-| `media.rating` | N | `sessionStart` | Betyg enligt definitionen i TV:s föräldrariktlinjer |
-| `media.originator` | N | `sessionStart` | Innehållets skapare |
-| `media.network` | N | `sessionStart` | Nätverks-/kanalnamn |
-| `media.showType` | N | `sessionStart` | Innehållstypen, uttryckt som ett heltal mellan 0 och 3: <ul> <li>0 - Hela avsnittet </li> <li>1 - Förhandsgranska </li> <li>2 - Klipp </li> <li>3 - Annan </li> </ul> |
-| `media.adLoad` | N | `sessionStart` | Typen av annons som läses in |
-| `media.pass.mvpd` | N | `sessionStart` | MVPD som tillhandahålls av Adobe-autentisering |
-| `media.pass.auth` | N | `sessionStart` | Anger att användaren har autentiserats av Adobe (kan bara vara true om den har angetts) |
-| `media.dayPart` | N | `sessionStart` | Tidpunkten när innehållet sändes |
-| `media.feed` | N | `sessionStart` | Typ av foder, t.ex.&quot;West-HD&quot; |
+| Begär nyckel  | Obligatoriskt | Begärantypnyckel | Aktivera... |  Beskrivning  |
+| --- | :---: | :---: | :---: | --- |
+| `media.streamFormat` | N | string | `sessionStart` | Strömformat, t.ex. &quot;HD&quot; |
+| `media.show` | N | string | `sessionStart` | Program- eller serienamn |
+| `media.season` | N | string | `sessionStart` | Det säsongsnummer som programmet eller serien tillhör |
+| `media.episode` | N | string | `sessionStart` | Antal avsnitt |
+| `media.assetId` | N | string | `sessionStart` | Den unika identifieraren för innehållet i videoresursen, till exempel TV-seriens avsnittsidentifierare, filmresursidentifierare eller live-händelseidentifierare. Vanligtvis härleds dessa ID:n från metadatautfärdare som EIDR, TMS/Gracenote eller Rovi. Dessa identifierare kan också komma från andra egenutvecklade eller interna system. |
+| `media.genre` | N | string | `sessionStart` | Innehållstypen som definierats av innehållsproducenten |
+| `media.firstAirDate` | N | string | `sessionStart` | Det datum då innehållet först skrevs på tv |
+| `media.firstDigitalDate` | N | string | `sessionStart` | Det datum då innehållet först skrevs på en digital plattform |
+| `media.rating` | N | string | `sessionStart` | Betyg enligt definitionen i TV:s föräldrariktlinjer |
+| `media.originator` | N | string | `sessionStart` | Innehållets skapare |
+| `media.network` | N | string | `sessionStart` | Nätverks-/kanalnamn |
+| `media.showType` | N | string | `sessionStart` | Innehållstypen, uttryckt som ett heltal mellan 0 och 3: <ul> <li>0 - Hela avsnittet </li> <li>1 - Förhandsgranska </li> <li>2 - Klipp </li> <li>3 - Annan </li> </ul> |
+| `media.adLoad` | N | string | `sessionStart` | Typen av annons som läses in |
+| `media.pass.mvpd` | N | string | `sessionStart` | MVPD som tillhandahålls av Adobe-autentisering |
+| `media.pass.auth` | N | string | `sessionStart` | Anger att användaren har autentiserats av Adobe (kan bara vara true om den har angetts) |
+| `media.dayPart` | N | string | `sessionStart` | Tidpunkten när innehållet sändes |
+| `media.feed` | N | string | `sessionStart` | Typ av foder, t.ex.&quot;West-HD&quot; |
 
 ## Annonsdata
 
-| Begär nyckel  | Obligatoriskt | Aktivera... |  Beskrivning  |
-| --- | :---: | :---: | --- |
-| `media.ad.podFriendlyName` | N | `adBreakStart` | Eget namn på annonsbrytningen |
-| `media.ad.podIndex` | Y | `adBreakStart` | Indexvärdet för annonspunkten i videon |
-| `media.ad.podSecond` | Y | `adBreakStart` | Den andra gången som fönstret började |
-| `media.ad.podPosition` | Y | `adStart` | Indexvärdet för annonsen inuti annonsbrytningen med början vid 1 |
-| `media.ad.name` | N | `adStart` | Annonsens namn |
-| `media.ad.id` | Y | `adStart` | Annonsens namn |
-| `media.ad.length` | Y | `adStart` | Videoannons längd i sekunder |
-| `media.ad.playerName` | Y | `adStart` | Namnet på spelaren som ansvarar för att återge annonsen |
+| Begär nyckel  | Obligatoriskt | Begärantypnyckel | Aktivera... |  Beskrivning  |
+| --- | :---: | :---: | :---: | --- |
+| `media.ad.podFriendlyName` | N | string | `adBreakStart` | Eget namn på annonsbrytningen |
+| `media.ad.podIndex` | Y | heltal | `adBreakStart` | Indexvärdet för annonspunkten i videon |
+| `media.ad.podSecond` | Y | tal | `adBreakStart` | Den andra gången som fönstret började |
+| `media.ad.podPosition` | Y | heltal | `adStart` | Indexvärdet för annonsen inuti annonsbrytningen med början vid 1 |
+| `media.ad.name` | N | string | `adStart` | Annonsens namn |
+| `media.ad.id` | Y | string | `adStart` | Annonsens namn |
+| `media.ad.length` | Y | tal | `adStart` | Videoannons längd i sekunder |
+| `media.ad.playerName` | Y | string | `adStart` | Namnet på spelaren som ansvarar för att återge annonsen |
 
 ## Standardmetadata för annons
 
-| Begär nyckel  | Obligatoriskt | Aktivera... |  Beskrivning  |
-| --- | :---: | :---: | --- |
-| `media.ad.advertiser` | N | `adStart` | Företaget eller varumärket vars produkt finns i annonsen |
-| `media.ad.campaignId` | N | `adStart` | ID för annonskampanjen |
-| `media.ad.creativeId` | N | `adStart` | Annonspersonalens ID |
-| `media.ad.siteId` | N | `adStart` | Annonswebbplatsens ID |
-| `media.ad.creativeURL` | N | `adStart` | Webbadressen till annonsens kreatör |
-| `media.ad.placementId` | N | `adStart` | Annonsens placerings-ID |
+| Begär nyckel  | Obligatoriskt | Begärantypnyckel | Aktivera... |  Beskrivning  |
+| --- | :---: | :---: | :---: | --- |
+| `media.ad.advertiser` | N | string | `adStart` | Företaget eller varumärket vars produkt finns i annonsen |
+| `media.ad.campaignId` | N | string | `adStart` | ID för annonskampanjen |
+| `media.ad.creativeId` | N | string | `adStart` | Annonspersonalens ID |
+| `media.ad.siteId` | N | string | `adStart` | Annonswebbplatsens ID |
+| `media.ad.creativeURL` | N | string | `adStart` | Webbadressen till annonsens kreatör |
+| `media.ad.placementId` | N | string | `adStart` | Annonsens placerings-ID |
 
 ## Kapiteldata
 
-| Begär nyckel  | Obligatoriskt | Aktivera... |  Beskrivning  |
-| --- | :---: | :---: | --- |
-| `media.chapter.index` | Y | `chapterStart` | Identifierar kapitlets position i innehållet |
-| `media.chapter.offset` | Y | `chapterStart` | Den andra i uppspelningen där kapitlet börjar |
-| `media.chapter.length` | Y | `chapterStart` | Kapitelns längd i sekunder |
-| `media.chapter.friendlyName` | N | `chapterStart` | Kapitlets användarvänliga namn |
+| Begär nyckel  | Obligatoriskt | Begärantypnyckel | Aktivera... |  Beskrivning  |
+| --- | :---: | :---: | :---: | --- |
+| `media.chapter.index` | Y | heltal | `chapterStart` | Identifierar kapitlets position i innehållet |
+| `media.chapter.offset` | Y | tal | `chapterStart` | Den andra i uppspelningen där kapitlet börjar |
+| `media.chapter.length` | Y | tal | `chapterStart` | Kapitelns längd i sekunder |
+| `media.chapter.friendlyName` | N | string | `chapterStart` | Kapitlets användarvänliga namn |
 
 ## Kvalitetsdata
 
-| Begär nyckel  | Obligatoriskt | Aktivera... |  Beskrivning  |
-| --- | :---: | :---: | --- |
-| `media.qoe.bitrate` | N | Alla | Strömmens bithastighet |
-| `media.qoe.droppedFrames` | N | Alla | Antalet uteslutna bildrutor i strömmen |
-| `media.qoe.framesPerSecond` | N | Alla | Antalet bildrutor per sekund |
-| `media.qoe.timeToStart` | N | Alla | Den tid (i millisekunder) som förflyter mellan att användaren träffar uppspelningen och att innehållet läses in och börjar spelas upp |
+| Begär nyckel  | Obligatoriskt | Begärantypnyckel | Aktivera... |  Beskrivning  |
+| --- | :---: | :---: | :---: | --- |
+| `media.qoe.bitrate` | N | heltal | Alla | Strömmens bithastighet |
+| `media.qoe.droppedFrames` | N | heltal | Alla | Antalet uteslutna bildrutor i strömmen |
+| `media.qoe.framesPerSecond` | N | heltal | Alla | Antalet bildrutor per sekund |
+| `media.qoe.timeToStart` | N | heltal | Alla | Den tid (i millisekunder) som förflyter mellan att användaren träffar uppspelningen och att innehållet läses in och börjar spelas upp |
 
 ## California Consumer Privacy Act (CCPA) Parametrar {#ccpa-params}
 
-| Begär nyckel  | Obligatoriskt | Aktivera... |  Beskrivning  |
-| --- | :---: | :---: | --- |
-| `analytics.optOutServerSideForwarding` | N | `sessionStart` | Anges till true när slutanvändaren har valt att inte dela data mellan Adobe Analytics och andra Experience Cloud-lösningar (t.ex. Audience Manager) |
-| `analytics.optOutShare` | N | `sessionStart` | Anges till true när slutanvändaren har valt att inte använda data som federeras (t.ex. till andra Adobe Analytics-klienter). |
+| Begär nyckel  | Obligatoriskt | Begärantypnyckel | Aktivera... |  Beskrivning  |
+| --- | :---: | :---: | :---: | --- |
+| `analytics.optOutServerSideForwarding` | N | boolesk | `sessionStart` | Anges till true när slutanvändaren har valt att inte dela data mellan Adobe Analytics och andra Experience Cloud-lösningar (t.ex. Audience Manager) |
+| `analytics.optOutShare` | N | boolesk | `sessionStart` | Anges till true när slutanvändaren har valt att inte använda data som federeras (t.ex. till andra Adobe Analytics-klienter). |
 
 ## Ytterligare information {#additional-details}
 
