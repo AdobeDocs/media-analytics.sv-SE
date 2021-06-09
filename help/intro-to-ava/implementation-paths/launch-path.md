@@ -1,10 +1,9 @@
 ---
 title: Hur implementerar Adobe Launch mediespårning för direktuppspelning?
 description: Läs mer om tillägget Adobe Streaming Media Launch för direktuppspelande media.
-translation-type: tm+mt
-source-git-commit: 901539a2095b23f9108a934eb61d182b14ccd9e8
+source-git-commit: 0d5edcae0a80357247ada7f61daece9840d5c4b5
 workflow-type: tm+mt
-source-wordcount: '132'
+source-wordcount: '130'
 ht-degree: 3%
 
 ---
@@ -16,7 +15,7 @@ Media Analytics (Heartbeats) är Adobe standardiserade mediespårningslösning. 
 
 Adobe Experience Platform Launch, en uppföljningsprodukt till Dynamic Tag Management, har ett Launch-tillägg som gör det lättare att implementera spårning i mediespelare.
 
-Du kan läsa mer om Launch-tillägget här: [Adobe Media Analytics for Audio and Video Extension.](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/media-analytics-extension/overview.html)
+Du kan läsa mer om Launch-tillägget här: [Adobe Media Analytics for Audio and Video Extension.](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/media-analytics-extension/overview.html)
 
 >[!NOTE]
 >
