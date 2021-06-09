@@ -2,14 +2,13 @@
 title: Hämta SDK:er
 description: Länkar till SDK-nedladdningar för tillgängliga plattformar, inklusive Android, iOS, JavaScript, Chromecast och Roku.
 uuid: a619fbb8-693e-4583-8dad-0ff875e715f8
-translation-type: tm+mt
-source-git-commit: cd3efa68ba0903bc9a616ac41dd5b20346c66870
+exl-id: d211fa2e-d5b0-4e9f-bdb7-eda838194f3d
+source-git-commit: 0d5edcae0a80357247ada7f61daece9840d5c4b5
 workflow-type: tm+mt
-source-wordcount: '517'
+source-wordcount: '513'
 ht-degree: 6%
 
 ---
-
 
 # Hämta SDK:er{#download-sdks}
 
@@ -40,8 +39,8 @@ ht-degree: 6%
 
 | Startkomponent för MA   | Dokumentation | Exempel |
 |---|---|---|
-| **Webbtillägg** | [Adobe Media Analytics for Audio and Video Extension](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/media-analytics-extension/overview.html) | [Adobe Media Analytics for Audio and Video Extension](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/samples/launch/js/2.x) |
-| **Webbtillägg (3.x SDK)** | [Adobe Media Analytics for Audio and Video Extension](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/media-analytics-3x-extension/overview.html) | [Adobe Media Analytics (3.x SDK) för ljud- och videotillägg](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/samples/launch/js/3.x) |
+| **Webbtillägg** | [Adobe Media Analytics for Audio and Video Extension](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/media-analytics-extension/overview.html) | [Adobe Media Analytics for Audio and Video Extension](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/samples/launch/js/2.x) |
+| **Webbtillägg (3.x SDK)** | [Adobe Media Analytics for Audio and Video Extension](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/media-analytics-3x-extension/overview.html) | [Adobe Media Analytics (3.x SDK) för ljud- och videotillägg](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/samples/launch/js/3.x) |
 | **Mobiltillägg** | [Adobe Analytics - Medieanalys för ljud och video](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics) | [Adobe Analytics - Media Analytics for Audio and Video Extension](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/samples/launch/mobile) |
 
 ## Ladda ned 1.x Media SDK {#download-the-1.x-media-sDKs}
