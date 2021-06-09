@@ -2,37 +2,38 @@
 title: Konfigurera Android
 description: Installation av Media SDK-program för implementering på Android.
 uuid: 3ffe3276-a104-4182-9220-038729e9f3d5
-translation-type: tm+mt
-source-git-commit: 300eb77858296f0246a2cb484386c0dcdf8b87b9
+exl-id: 261445bf-3c8b-4658-891d-9a878e0b26ea
+source-git-commit: 0d5edcae0a80357247ada7f61daece9840d5c4b5
 workflow-type: tm+mt
-source-wordcount: '403'
+source-wordcount: '401'
 ht-degree: 9%
 
 ---
-
 
 # Konfigurera Android{#set-up-android}
 
 >[!IMPORTANT]
 >
->När stödet för version 4 Mobile SDK upphör den 31 augusti 2021 upphör stödet för Media Analytics SDK för iOS och Android.  Mer information finns i Vanliga frågor om [supporten för Media Analytics SDK](/help/sdk-implement/end-of-support-faqs.md).
+>När stödet för version 4 Mobile SDK upphör den 31 augusti 2021 upphör även stödet för Media Analytics SDK för iOS och Android i Adobe.  Mer information finns i [Vanliga frågor och svar om Media Analytics SDK när support upphör](/help/sdk-implement/end-of-support-faqs.md).
 
 
 ## Förutsättningar
 
-* **Hämta giltiga konfigurationsparametrar för Media SDK** Dessa parametrar kan hämtas från en Adobe-representant när du har konfigurerat ditt analyskonto.
-* **Implementera ADBMobil för Android i ditt program** Mer information om dokumentationen för Adobe Mobile SDK finns i [Android SDK 4.x för Experience Cloud Solutions.](https://docs.adobe.com/content/help/en/mobile-services/android/overview.html)
+* **Hämta giltiga konfigurationsparametrar för Media**
+SDKTde här parametrarna kan hämtas från en Adobe-representant när du har konfigurerat ditt analyskonto.
+* **Implementera ADBMobil för Android i ditt**
+programMer information om Adobe Mobile SDK-dokumentationen finns i  [Android SDK 4.x för Experience Cloud Solutions.](https://experienceleague.adobe.com/docs/mobile-services/android/overview.html)
 
 * **Tillhandahåll följande funktioner i din mediespelare:**
-   * *Ett API för att prenumerera på spelarhändelser* - Media SDK kräver att du anropar en uppsättning enkla API:er när händelser inträffar i spelaren.
-   * *Ett API som tillhandahåller spelarinformation* - Den här informationen innehåller information som medienamnet och spelhuvudets position.
+   * *Ett API för att prenumerera på spelarhändelser*  - Media SDK kräver att du anropar en uppsättning enkla API:er när händelser inträffar i spelaren.
+   * *Ett API som tillhandahåller spelarinformation*  - Den här informationen innehåller information som medienamnet och spelhuvudets position.
 
 ## SDK-implementering
 
-1. Lägg till din [hämtade](/help/sdk-implement/download-sdks.md#download-2x-sdks) Media SDK i projektet.
+1. Lägg till din [hämtade](/help/sdk-implement/download-sdks.md#download-2x-sdks) Media SDK i ditt projekt.
 
    1. Expandera zip-filen för Android (t.ex. `MediaSDK-android-v2.*.zip`).
-   1. Kontrollera att `MediaSDK.jar` filen finns i `libs/` katalogen.
+   1. Kontrollera att filen `MediaSDK.jar` finns i katalogen `libs/`.
 
    1. Lägg till biblioteket i ditt projekt.
 
@@ -42,11 +43,12 @@ ht-degree: 9%
       1. Välj **[!UICONTROL Open Module Settings]**.
       1. Under **[!UICONTROL Project Settings]** väljer du **[!UICONTROL Libraries]**.
 
-      1. Klicka **[!UICONTROL +]** för att lägga till ett nytt bibliotek.
-      1. Markera **[!UICONTROL Java]** och navigera till `MediaSDK.jar` filen.
+      1. Klicka på **[!UICONTROL +]** för att lägga till ett nytt bibliotek.
+      1. Välj **[!UICONTROL Java]** och navigera till filen `MediaSDK.jar`.
 
       1. Välj de moduler där du vill använda det mobila biblioteket.
       1. Klicka på **[!UICONTROL Apply]** och sedan på **[!UICONTROL OK]** för att stänga fönstret Modulinställningar.
+
       **Eclipse:**
 
       1. Högerklicka på projektnamnet i Eclipse IDE.
@@ -56,7 +58,7 @@ ht-degree: 9%
       1. Högerklicka på projektet igen och klicka på **[!UICONTROL Build Path]** > **[!UICONTROL Configure Build Path]** .
       1. Klicka på flikarna **[!UICONTROL Order]** och **[!UICONTROL Export]**.
 
-      1. Kontrollera att `MediaSDK.jar` filen är markerad.
+      1. Kontrollera att `MediaSDK.jar`-filen är markerad.
 
 
 1. Importera biblioteket.
@@ -68,7 +70,7 @@ ht-degree: 9%
    import com.adobe.primetime.va.simple.MediaObject;
    ```
 
-1. Skapa `MediaHeartbeatConfig` instansen.
+1. Skapa `MediaHeartbeatConfig`-instansen.
 
    Här följer ett exempel på `MediaHeartbeatConfig`-initiering:
 
@@ -83,7 +85,7 @@ ht-degree: 9%
    config.debugLogging = <true/false>;
    ```
 
-1. Implementera `MediaHeartbeatDelegate` gränssnittet.
+1. Implementera gränssnittet `MediaHeartbeatDelegate`.
 
    ```java
    public class VideoAnalyticsProvider implements Observer, MediaHeartbeatDelegate{}
@@ -107,9 +109,9 @@ ht-degree: 9%
    }
    ```
 
-1. Skapa `MediaHeartbeat` instansen.
+1. Skapa `MediaHeartbeat`-instansen.
 
-   Använd `MediaHeartbeatConfig` instansen och `MediaHertbeatDelegate` instansen för att skapa `MediaHeartbeat` instansen.
+   Använd instansen `MediaHeartbeatConfig` och instansen `MediaHertbeatDelegate` för att skapa instansen `MediaHeartbeat`.
 
    ```java
    // Replace <MediaHertbeatDelegate> with your delegate instance
@@ -119,7 +121,7 @@ ht-degree: 9%
 
    >[!IMPORTANT]
    >
-   >Se till att din `MediaHeartbeat` instans är tillgänglig och *inte tas bort förrän i slutet av sessionen*. Den här instansen används för alla följande spårningshändelser.
+   >Kontrollera att din `MediaHeartbeat`-instans är tillgänglig och att *inte frigörs förrän i slutet av sessionen*. Den här instansen används för alla följande spårningshändelser.
 
 **Lägga till programbehörigheter**
 
@@ -128,13 +130,13 @@ Ditt program som använder Media SDK kräver följande behörigheter för att sk
 * `INTERNET`
 * `ACCESS_NETWORK_STATE`
 
-Om du vill lägga till dessa behörigheter lägger du till följande rader i din `AndroidManifest.xml` fil i programmets projektkatalog:
+Om du vill lägga till de här behörigheterna lägger du till följande rader i din `AndroidManifest.xml`-fil i programmets projektkatalog:
 
 * `<uses-permission android:name="android.permission.INTERNET" />`
 * `<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />`
 
 **Migrera från version 1.x till 2.x i Android**
 
-I version 2.x konsolideras alla publika metoder i `com.adobe.primetime.va.simple.MediaHeartbeat` klassen så att det blir enklare för utvecklarna. Dessutom konsolideras nu alla konfigurationer i `com.adobe.primetime.va.simple.MediaHeartbeatConfig` klassen.
+I version 2.x konsolideras alla publika metoder i klassen `com.adobe.primetime.va.simple.MediaHeartbeat` så att det blir enklare för utvecklare. Dessutom konsolideras nu alla konfigurationer i klassen `com.adobe.primetime.va.simple.MediaHeartbeatConfig`.
 
 Mer information om hur du migrerar från 1.x till 2.x finns i [mig-1x-2x-overview.md.](/help/sdk-implement/va-1x-to-2x/mig-1x-2x-overview.md)
