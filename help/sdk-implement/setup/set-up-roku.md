@@ -3,10 +3,10 @@ title: Konfigurera Roku
 description: Installation av Media SDK-program för implementering på Roku.
 uuid: 904dfda0-4782-41da-b4ab-212e81156633
 exl-id: b8de88d0-3a93-4776-b372-736bf979ee26
-source-git-commit: 218c4f6a841a988477eb4509bff8d418e18715f5
+source-git-commit: 0d5edcae0a80357247ada7f61daece9840d5c4b5
 workflow-type: tm+mt
-source-wordcount: '709'
-ht-degree: 3%
+source-wordcount: '707'
+ht-degree: 2%
 
 ---
 
@@ -22,7 +22,7 @@ HeartbeatsDe här parametrarna kan hämtas från en Adobe-representant när du h
 
 Adobe Mobile-tjänster har ett nytt användargränssnitt som samlar funktioner för mobilmarknadsföring för mobilappar från hela Adobe Marketing Cloud. Från början erbjuder mobiltjänsten smidig integrering av funktioner för appanalys och målinriktning för Adobe Analytics- och Adobe Target-lösningarna.
 
-Läs mer på [Adobe Mobile Services-dokumentationen.](https://docs.adobe.com/content/help/en/mobile-services/using/home.html)
+Läs mer på [Adobe Mobile Services-dokumentationen.](https://experienceleague.adobe.com/docs/mobile-services/using/home.html)
 
 Med Roku SDK 2.x för Experience Cloud Solutions kan du mäta Roku-applikationer som skrivits i BrightScript, utnyttja och samla in målgruppsdata med hjälp av målgruppshantering och mäta videoengagemang med hjälp av videohjärtslag.
 
@@ -169,4 +169,4 @@ Med Roku SDK 2.x för Experience Cloud Solutions kan du mäta Roku-applikationer
    | `processMediaMessages` | Ansvarig för att skicka mediahändelser till den SDK som ska hanteras. <br/><br/>`ADBMobile().processMediaMessages()` |
 
 
-<!--    **Postbacks -** For more information about configuring postbacks, see [Configure Postbacks.](https://docs.adobe.com/content/help/en/mobile-services/using/manage-app-settings-ug/configuring-app/signals.html) -->
+<!--    **Postbacks -** For more information about configuring postbacks, see [Configure Postbacks.](https://experienceleague.adobe.com/docs/mobile-services/using/manage-app-settings-ug/configuring-app/signals.html) -->
