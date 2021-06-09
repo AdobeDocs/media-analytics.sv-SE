@@ -1,27 +1,27 @@
 ---
-title: Migrera från fristående Media SDK till Adobe Launch - webben (JS)
+title: Migrera från det fristående medie-SDK:t till Adobe Launch - webben (JS)
 description: Instruktioner och kodexempel som hjälper dig att migrera från Media SDK till Launch.
-translation-type: tm+mt
-source-git-commit: fe109e9d670bf7fb6379f3c3631d10cecd2d48ac
+exl-id: 19b506b2-3070-4a5e-9732-a5cd0867afde
+source-git-commit: 0d5edcae0a80357247ada7f61daece9840d5c4b5
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 2%
+source-wordcount: '400'
+ht-degree: 3%
 
 ---
 
-
-# Migrera från fristående Media SDK till Adobe Launch - webben (JS)
+# Migrera från det fristående medie-SDK:t till Adobe Launch - webben (JS)
 
 ## Skillnader i funktioner
 
-* *Launch* - Launch ger dig ett användargränssnitt som hjälper dig att konfigurera, konfigurera och driftsätta dina webbaserade mediespårningslösningar. Launch förbättrar Dynamic Tag Management (DTM).
-* *Media SDK* - Media SDK innehåller bibliotek för mediespårning som är utformade för särskilda plattformar (t.ex.: Android, iOS osv.). Adobe rekommenderar Media SDK för att spåra medieanvändning i dina mobilappar.
+* *Launch*  - Launch ger dig ett användargränssnitt som hjälper dig att konfigurera, konfigurera och driftsätta dina webbaserade mediespårningslösningar. Launch förbättrar Dynamic Tag Management (DTM).
+* *Media SDK*  - Media SDK innehåller bibliotek för mediespårning som utformats för särskilda plattformar (t.ex.: Android, iOS osv.). Adobe rekommenderar Media SDK för att spåra medieanvändning i dina mobilappar.
 
 ## Konfiguration
 
 ### Fristående media SDK
 
-I det fristående Media SDK konfigurerar du spårningskonfigurationen i appen och skickar den till SDK när du skapar spåraren.
+I det fristående Media SDK:t konfigurerar du spårningskonfigurationen i appen
+och skicka det till SDK när du skapar spåraren.
 
 ```javascript
 //Media Heartbeat initialization
@@ -35,18 +35,22 @@ mediaConfig.ssl = true;
 mediaConfig.debugLogging = true;
 ```
 
-Förutom `MediaHeartbeat` konfigurationen måste sidan konfigurera och skicka `AppMeasurement` instans och `VisitorAPI` instans för mediespårning för att fungera korrekt.
+Förutom `MediaHeartbeat`-konfigurationen måste sidan konfigurera och skicka
+instansen `AppMeasurement` och instansen `VisitorAPI` för mediespårning i ordning
+att fungera som det ska.
 
 ### Starta tillägg
 
-1. Klicka på fliken för din webbegenskap i Experience Platform Launch [!UICONTROL Extensions] .
-1. På [!UICONTROL Catalog] fliken letar du reda på Adobe Media Analytics för ljud och video och klickar på [!UICONTROL Install].
+1. Klicka på fliken [!UICONTROL Extensions] i Experience Platform Launch för
+web-egenskap.
+1. På fliken [!UICONTROL Catalog] letar du reda på Adobe Media Analytics for Audio och
+Videotillägg och klicka på [!UICONTROL Install].
 1. Konfigurera spårningsparametrarna på sidan för tilläggsinställningar.
 Media-tillägget använder de konfigurerade parametrarna för spårning.
 
    ![](assets/launch_config_js.png)
 
-[Starta användarhandboken - Installera och konfigurera medietillägget](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/media-analytics-extension/overview.html#install-and-configure-the-ma-extension)
+[Starta användarhandboken - Installera och konfigurera medietillägget](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/media-analytics-extension/overview.html#install-and-configure-the-ma-extension)
 
 ## Skillnader mellan att skapa spårare
 
@@ -54,8 +58,8 @@ Media-tillägget använder de konfigurerade parametrarna för spårning.
 
 1. Lägg till biblioteket Media Analytics i utvecklingsprojektet.
 1. Skapa ett config-objekt (`MediaHeartbeatConfig`).
-1. Implementera delegatprotokollet, så att funktionerna `getQoSObject()` och `getCurrentPlaybackTime()` visas.
-1. Skapa en instans av pulsslag (`MediaHeartbeat`).
+1. Implementera delegatprotokollet och visa funktionerna `getQoSObject()` och `getCurrentPlaybackTime()`.
+1. Skapa en instans av pulsslag för media (`MediaHeartbeat`).
 
 ```
 // Media Heartbeat initialization
@@ -77,7 +81,7 @@ this.mediaHeartbeat = new MediaHeartbeat(mediaDelegate, mediaConfig, appMeasurem
 ```
 
 <!--  Dead Link - from 2019 - can't locate where this should go
-[Media SDK - Tracker Creation](https://docs.adobe.com/content/help/en/media-analytics/using/sdk-implement/cookbook/sdk-vs-launch-qoe.html) -->
+[Media SDK - Tracker Creation](https://experienceleague.adobe.com/docs/media-analytics/using/sdk-implement/cookbook/sdk-vs-launch-qoe.html) -->
 
 ### Starta
 
@@ -93,21 +97,21 @@ Launch erbjuder två sätt att skapa spårningsinfrastrukturen. Båda metoderna 
 
 1. Använd API:erna för mediespårning från ett annat Launch-tillägg.
 
-   I det här scenariot använder du API:erna för mediespårning som visas av modulerna `get-instance` och `media-heartbeat` Delade.
+   I det här scenariot använder du API:erna för mediespårning som visas av de delade modulerna `get-instance` och `media-heartbeat`.
 
    >[!NOTE]
    >
    >Delade moduler är inte tillgängliga för användning på webbsidor. Du kan bara använda delade moduler från andra tillägg.
 
-   Skapa en `MediaHeartbeat` instans med hjälp av den `get-instance` delade modulen.
-Skicka ett delegatobjekt till `get-instance` som visar `getQoSObject()` och `getCurrentPlaybackTime()` funktioner.
+   Skapa en `MediaHeartbeat`-instans med den delade modulen `get-instance`.
+Skicka ett delegatobjekt till `get-instance` som visar funktionerna `getQoSObject()` och `getCurrentPlaybackTime()`.
 
    ```
    var getMediaHeartbeatInstance =
    turbine.getSharedModule('adobe-video-analytics', 'get-instance');
    ```
 
-   Få åtkomst till `MediaHeartbeat` konstanter via den `media-heartbeat` delade modulen.
+   Få åtkomst till `MediaHeartbeat`-konstanter via den delade modulen `media-heartbeat`.
 
 ## Relaterad dokumentation
 
@@ -119,5 +123,5 @@ Skicka ett delegatobjekt till `get-instance` som visar `getQoSObject()` och `get
 
 ### Starta
 
-* [Översikt](https://docs.adobe.com/content/help/en/launch/using/overview.html)
-* [Media Analytics-tillägg](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/media-analytics-extension/overview.html)
+* [Översikt över Launch](https://experienceleague.adobe.com/docs/launch/using/overview.html)
+* [Media Analytics-tillägg](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/media-analytics-extension/overview.html)
