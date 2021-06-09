@@ -1,14 +1,13 @@
 ---
 title: Vilka möjligheter till implementering av direktuppspelningsmedia finns?
 description: Läs mer om implementeringsvägar för Adobe Streaming Media, inklusive Adobe Launch.
-translation-type: tm+mt
-source-git-commit: 901539a2095b23f9108a934eb61d182b14ccd9e8
+exl-id: eee70e62-ba45-440a-8ce1-e151b66d2c1f
+source-git-commit: 0d5edcae0a80357247ada7f61daece9840d5c4b5
 workflow-type: tm+mt
-source-wordcount: '505'
-ht-degree: 2%
+source-wordcount: '499'
+ht-degree: 1%
 
 ---
-
 
 # Implementeringsvägar {#implementation-paths}
 
@@ -16,15 +15,15 @@ För varje implementeringsväg måste kunderna kontakta sin säljare/kontoansvar
 
 * **Adobe Launch med tillägget Adobe Media Analytics**
 
-   Adobe Launch är nästa generation av tagghanteringslösning från Adobe. Launch är ett enkelt sätt att driftsätta och hantera alla analys-, marknadsförings- och annonstaggar som behövs för att driva relevanta kundupplevelser. Om du vill skapa och underhålla egna integreringar med Launch använder du tillägg. Ett tillägg är ett JavaScript-, HTML- och CSS-paket som utökar startgränssnittet och klientfunktionerna. Mer information finns i [användarhandboken för Experience Platform Launch](https://docs.adobe.com/content/help/en/launch/using/overview.html)
+   Adobe Launch är nästa generation av tagghanteringslösning från Adobe. Launch är ett enkelt sätt att driftsätta och hantera alla analys-, marknadsförings- och annonstaggar som behövs för att driva relevanta kundupplevelser. Om du vill skapa och underhålla egna integreringar med Launch använder du tillägg. Ett tillägg är ett JavaScript-, HTML- och CSS-paket som utökar startgränssnittet och klientfunktionerna. Mer information finns i [användarhandboken för Experience Platform Launch](https://experienceleague.adobe.com/docs/launch/using/overview.html)
 
-   Tillägget Adobe Media Analytics (MA) lägger till JavaScript Media SDK (Media 2.x SDK) för ljud och video. Det här tillägget innehåller funktioner för att lägga till spårningsinstansen `MediaHeartbeat` på en startwebbplats eller ett startprojekt.
+   Adobe Media Analytics-tillägget (MA) lägger till JavaScript Media SDK (Media 2.x SDK) för ljud och video. Det här tillägget innehåller funktioner för att lägga till spårningsinstansen `MediaHeartbeat` på en startwebbplats eller ett startprojekt.
 
    Adobe Launch med Media Analytics-tillägget kräver följande:
    * Du måste vara kund hos Adobe Experience Cloud.
    * Du måste distribuera Launch- eller DTM-inbäddningskoden på dina webbsidor.
-   * [Analystillägg](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/analytics-extension/overview.html)
-   * [Experience Cloud ID-tillägg](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/id-service-extension/overview.html)
+   * [Analystillägg](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/analytics-extension/overview.html)
+   * [Experience Cloud ID-tillägg](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/id-service-extension/overview.html)
 
 
 * **Klientsidan -** Dessa är bara integrering med Media Analytics. Du kan välja SDK för pulsslag och/eller API-integreringar för Media Collection. Den här sökvägen kan användas i alla videospelare, inklusive kund- och/eller OVP-spelare som Brightcove, Ooyala, thePlatform osv.
@@ -42,7 +41,7 @@ För varje implementeringsväg måste kunderna kontakta sin säljare/kontoansvar
    * Stöd för exakt mätning av linjära och VOD-innehållstyper.
    * Stöd för mätning av annonsbrytningar med (eller utan) dynamisk annonsinfogning.
    * TVSDK:s smidiga annonsinfogningsmodell möjliggör analyser som direkt mäter annonsuppspelningen, vilket ökar noggrannheten.
-   * Robusta uppsättningar av händelser och metadata för att säkerställa exakthet över QoS-buffring eller avbrott i den mobila anslutningen och slutanvändarinteraktioner som sökning, pausning och bakgrundsbeläggning på mobilen.
+   * Robusta uppsättningar av händelser och metadata för att säkerställa exakthet över QoS-buffring eller avbrott i den mobila anslutningen och slutanvändarinteraktioner som sökning, pausning och bakgrundsrundning på mobilen.
 
 <!--
    * Integrated support for Nielsen DTVR (linear) with ID3 metadata and DCR with CMS metadata.
