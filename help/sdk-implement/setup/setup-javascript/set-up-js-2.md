@@ -2,52 +2,53 @@
 title: Konfigurera JavaScript 2.x
 description: Installation av Media SDK-program för implementering i JavaScript 2.x.
 uuid: 0269d8ad-0af8-4bf1-9d15-e06c2952a005
-translation-type: tm+mt
-source-git-commit: a73536bd7a818ac23ad322a15f109644e75ee0d5
+exl-id: 33976096-8b86-4353-906b-e25bf4693471
+source-git-commit: 0d5edcae0a80357247ada7f61daece9840d5c4b5
 workflow-type: tm+mt
-source-wordcount: '394'
-ht-degree: 2%
+source-wordcount: '392'
+ht-degree: 4%
 
 ---
-
 
 # Konfigurera JavaScript 2.x{#set-up-javascript}
 
 ## Förutsättningar
 
-* **Hämta giltiga konfigurationsparametrar** Dessa parametrar kan hämtas från en Adobe-representant när du har konfigurerat ditt analyskonto.
-* **Implementera`AppMeasurement`för JavaScript i ditt medieprogram** Mer information om dokumentationen för Adobe Mobile SDK finns i [Implementera analys med JavaScript.](https://docs.adobe.com/content/help/en/analytics/implementation/js/overview.html)
+* **Hämta giltiga**
+konfigurationsparametrarDessa parametrar kan hämtas från en Adobe-representant när du har konfigurerat analyskontot.
+* **Implementera  `AppMeasurement` för JavaScript i**
+medieprogrammetMer information om Adobe Mobile SDK-dokumentationen finns i  [Implementera analys med JavaScript.](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html)
 
 * **Tillhandahåll följande funktioner i din mediespelare:**
 
-   * *Ett API för att prenumerera på spelarhändelser* - Media SDK kräver att du anropar en uppsättning enkla API:er när händelser inträffar i spelaren.
-   * *Ett API som tillhandahåller spelarinformation* - Den här informationen innehåller information som medienamnet och spelhuvudets position.
+   * *Ett API för att prenumerera på spelarhändelser*  - Media SDK kräver att du anropar en uppsättning enkla API:er när händelser inträffar i spelaren.
+   * *Ett API som tillhandahåller spelarinformation*  - Den här informationen innehåller information som medienamnet och spelhuvudets position.
 
-1. Lägg till ditt [hämtade](/help/sdk-implement/download-sdks.md#download-2x-sdks) bibliotek i projektet. Skapa lokala referenser till klasserna.
+1. Lägg till ditt [hämtade](/help/sdk-implement/download-sdks.md#download-2x-sdks)-bibliotek i ditt projekt. Skapa lokala referenser till klasserna.
 
-   1. Expandera den `MediaSDK-js-v2.*.zip` fil du hämtade.
-   1. Kontrollera att `MediaSDK.min.js` filen finns i `libs` katalogen:
+   1. Expandera `MediaSDK-js-v2.*.zip`-filen som du hämtade.
+   1. Kontrollera att filen `MediaSDK.min.js` finns i katalogen `libs`:
 
-   1. Lägg `MediaSDK.min.js` filen som värd.
+   1. Lägg `MediaSDK.min.js`-filen som värd.
 
       Denna JavaScript-huvudfil måste finnas på en webbserver som är tillgänglig för alla sidor på din plats. Du behöver sökvägen till de här filerna för nästa steg.
 
-   1. Referens `MediaSDK.min.js` på alla webbplatssidor.
+   1. Referens `MediaSDK.min.js` för alla webbplatssidor.
 
-      Inkludera `MediaSDK` för JavaScript genom att lägga till följande kodrad i `<head>` - eller `<body>` -taggen på varje sida. Exempel:
+      Inkludera `MediaSDK` för JavaScript genom att lägga till följande kodrad i taggen `<head>` eller `<body>` på varje sida. Exempel:
 
       ```
       <script type="text/javascript"
       src="https://INSERT-DOMAIN-AND-PATH-TO-CODE-HERE/MediaSDK.min.js"></script>
       ```
 
-   1. Du kan snabbt verifiera att biblioteket har importerats genom att instansiera `ADB.va.MediaHeartbeatConfig` klassen.
+   1. Du kan snabbt verifiera att biblioteket har importerats genom att instansiera klassen `ADB.va.MediaHeartbeatConfig`.
 
       >[!NOTE]
       >
       >Från version 2.1.0 är JavaScript SDK kompatibelt med AMD- och CommonJS-modulspecifikationerna, och `VideoHeartbeat.min.js` kan även användas med kompatibla modulinläsare.
 
-1. Skapa lokala referenser till `MediaHeartbeat` klasserna för enkel åtkomst till API:erna.
+1. Skapa lokala referenser till klasserna `MediaHeartbeat` för enkel åtkomst till API:erna.
 
    ```js
    var MediaHeartbeat = ADB.va.MediaHeartbeat;
@@ -55,9 +56,9 @@ ht-degree: 2%
    var MediaHeartbeatDelegate = ADB.va.MediaHeartbeatDelegate;
    ```
 
-1. Skapa en `MediaHeartbeatConfig` instans.
+1. Skapa en `MediaHeartbeatConfig`-instans.
 
-   I det här avsnittet får du hjälp med att förstå `MediaHeartbeat` konfigurationsparametrar och hur du ställer in rätt konfigureringsvärden för `MediaHeartbeat` instansen för korrekt spårning.
+   I det här avsnittet får du hjälp med att förstå `MediaHeartbeat`-konfigurationsparametrar och hur du ställer in korrekta konfigurationsvärden för din `MediaHeartbeat`-instans för korrekt spårning.
 
    Här följer ett exempel på `MediaHeartbeatConfig`-initiering:
 
@@ -73,7 +74,7 @@ ht-degree: 2%
    mediaConfig.ovp = Configuration.HEARTBEAT.OVP;
    ```
 
-1. Implementera `MediaHeartbeatDelegate` protokollet.
+1. Implementera `MediaHeartbeatDelegate`-protokollet.
 
    ```js
    var mediaDelegate = new MediaHeartbeatDelegate();
@@ -89,9 +90,9 @@ ht-degree: 2%
    };
    ```
 
-1. Skapa `MediaHeartbeat` instansen.
+1. Skapa `MediaHeartbeat`-instansen.
 
-   Använd `MediaHeartbeatConfig` och `MediaHeartbeatDelegate` för att skapa `MediaHeartbeat` instansen.
+   Använd `MediaHeartbeatConfig` och `MediaHeartbeatDelegate` för att skapa `MediaHeartbeat`-instansen.
 
    ```js
    this.mediaHeartbeat = new MediaHeartbeat(mediaDelegate, mediaConfig, appMeasurement);
@@ -99,11 +100,11 @@ ht-degree: 2%
 
    >[!IMPORTANT]
    >
-   >Kontrollera att din `MediaHeartbeat` instans är tillgänglig och inte tas bort förrän mediesessionen är slut. Den här instansen används för alla följande spårningshändelser.
+   >Se till att din `MediaHeartbeat`-instans är tillgänglig och inte tas bort förrän i slutet av mediesessionen. Den här instansen används för alla följande spårningshändelser.
 
    >[!TIP]
    >
-   >`MediaHeartbeat` kräver en instans av `AppMeasurement` för att skicka anrop till Adobe Analytics. Här är ett exempel på en `AppMeasurement` instans:
+   >`MediaHeartbeat` kräver en instans av  `AppMeasurement` för att skicka anrop till Adobe Analytics. Här är ett exempel på en `AppMeasurement`-instans:
 
    ```js
    var appMeasurement = new AppMeasurement();
@@ -116,6 +117,6 @@ ht-degree: 2%
 
 ## Migrera från JavaScript 1.x till 2.x
 
-I version 2.x konsolideras alla publika metoder i `ADB.va.MediaHeartbeat` klassen så att det blir enklare för utvecklare. Dessutom konsolideras nu alla konfigurationer i `ADB.va.MediaHeartbeatConfig` klassen.
+I version 2.x konsolideras alla publika metoder i klassen `ADB.va.MediaHeartbeat` så att det blir enklare för utvecklare. Dessutom konsolideras nu alla konfigurationer i klassen `ADB.va.MediaHeartbeatConfig`.
 
 Mer information om hur du migrerar från 1.x till 2.x finns i [VHL 1.x till 2.x-migrering.](/help/sdk-implement/va-1x-to-2x/mig-1x-2x-overview.md)
