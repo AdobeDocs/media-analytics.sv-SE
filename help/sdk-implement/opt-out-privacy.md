@@ -2,21 +2,23 @@
 title: Avanmäl dig och sekretess
 description: Hur man hanterar anmälan, avanmälan och sekretess.
 uuid: 7e60c7bd-8dba-4c7a-9c3c-0c634b815397
-translation-type: tm+mt
-source-git-commit: ccdc3e170d125a76d798be7ce1fa5c12eef1f76a
+exl-id: 64f5ef2b-7850-43d8-8f32-3d008ea4f156
+source-git-commit: 0d5edcae0a80357247ada7f61daece9840d5c4b5
+workflow-type: tm+mt
+source-wordcount: '356'
+ht-degree: 1%
 
 ---
 
-
-# Opt-out and privacy{#opt-out-and-privacy}
+# Avanmäl dig och sekretess{#opt-out-and-privacy}
 
 ## Opt-out / Opt-in {#opt-out-opt-in}
 
 Du kan kontrollera om spårningsaktivitet tillåts på en viss enhet:
 
-* **Mobilappar -** VA-biblioteket respekterar `AdobeMobile` bibliotekets inställningar för sekretess och avanmälan. Om du vill avanmäla dig från spårning måste du använda `AdobeMobile` biblioteket. Mer information om `AdobeMobile` bibliotekets avanmälan och sekretessinställningar finns i [Avanmäl dig och Sekretessinställningar](https://docs.adobe.com/content/help/en/mobile-services/android/gdpr-privacy-android/privacy.html).
-* **JavaScript-/webbläsarappar -** VA-biblioteket respekterar inställningarna för sekretess och `VisitorAPI` valmöjlighet. Om du vill välja bort spårning måste du avanmäla dig från Visitor API-tjänsten. Mer information om avanmälan och sekretess finns i [Adobe Experience Platform Identity Service.](https://docs.adobe.com/content/help/en/id-service/using/home.html).
-* **OTT-appar (Chromecast, Roku) -** OTT SDK:er tillhandahåller GDPR-klara API:er som gör att du kan ange `opt` statusflaggor för datainsamling och överföring samt hämta lokalt lagrade identiteter.
+* **Mobilappar -** VA-biblioteket respekterar  `AdobeMobile` bibliotekets sekretess- och avanmälningsinställningar. Om du vill avanmäla dig från spårning måste du använda biblioteket `AdobeMobile`. Mer information om `AdobeMobile`-bibliotekets inställningar för avanmälan och sekretess finns i [Inställningar för avanmälan och sekretess](https://experienceleague.adobe.com/docs/mobile-services/android/gdpr-privacy-android/privacy.html).
+* **JavaScript-/webbläsarappar -** VA-biblioteket respekterar inställningarna för  `VisitorAPI` sekretess och alternativtext. Om du vill välja bort spårning måste du avanmäla dig från Visitor API-tjänsten. Mer information om avanmälan och sekretess finns i [Adobe Experience Platform identitetstjänst.](https://experienceleague.adobe.com/docs/id-service/using/home.html).
+* **OTT-appar (Chromecast, Roku) -** OTT SDK:er tillhandahåller GDPR-klara API:er som gör att du kan ange  `opt` statusflaggor för datainsamling och överföring samt hämta lokalt lagrade identiteter.
 
    >[!NOTE]
    >
@@ -24,9 +26,9 @@ Du kan kontrollera om spårningsaktivitet tillåts på en viss enhet:
 
    Du kan kontrollera om Analytics-data skickas på en viss enhet med följande inställningar:
 
-   * Inställningen `privacyDefault` i `ADBMobile.json` konfigurationsfilen. Detta styr den inledande inställningen och kvarstår tills den ändras i koden.
+   * Inställningen `privacyDefault` i konfigurationsfilen `ADBMobile.json`. Detta styr den inledande inställningen och kvarstår tills den ändras i koden.
 
-   * Metoden `ADBMobile().setPrivacyStatus()` .
+   * Metoden `ADBMobile().setPrivacyStatus()`.
 
       * **Avanmäl dig:**
 
@@ -71,7 +73,7 @@ Du kan kontrollera om spårningsaktivitet tillåts på en viss enhet:
             ```
             ADBMobile().getPrivacyStatus()
             ```
-   När sekretessinställningen har ändrats med `setPrivacyStatus`är ändringen permanent tills den ändras igen med den här metoden, eller så avinstalleras och installeras appen igen.
+   När sekretessinställningen har ändrats med `setPrivacyStatus` är ändringen permanent tills den ändras igen med den här metoden, eller så avinstalleras och installeras appen igen.
 
 ## Hämtar lagrade identifierare (OTT-appar) {#retrieving-stored-identifiers-ott-apps}
 
@@ -79,7 +81,7 @@ Den här informationen hjälper dig att hämta lokalt lagrade användaridentitet
 
 >[!IMPORTANT]
 >
->Metoden för att hämta alla identifierare hämtar alla användaridentiteter som är kända och beständiga av SDK:n. Du måste anropa den här metoden **innan** en användare avanmäler sig.
+>Metoden för att hämta alla identifierare hämtar alla användaridentiteter som är kända och beständiga av SDK:n. Du måste anropa den här metoden **innan** en användare väljer bort.
 
 De lokalt lagrade identiteterna returneras i en JSON-sträng som kan innehålla:
 
@@ -103,4 +105,3 @@ Exempel:
    ```
    vids = ADBMobile().getAllIdentifiers()
    ```
-
