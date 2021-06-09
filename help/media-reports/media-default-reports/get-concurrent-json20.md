@@ -2,27 +2,26 @@
 title: Hämta JSON-rapportdata för samtidiga visningsprogram med API:er för Analytics 2.0
 description: null
 uuid: 9168f114-2459-4951-a06c-57b735d09dc0
-translation-type: tm+mt
-source-git-commit: e93a39fb76c3ccca2c05e5d1590a53394e50b29b
+exl-id: f84f63d3-b0d0-45fe-95a7-159f22d60660
+source-git-commit: 0d5edcae0a80357247ada7f61daece9840d5c4b5
 workflow-type: tm+mt
 source-wordcount: '167'
 ht-degree: 3%
 
 ---
 
-
 # Hämta JSON-rapportdata för samtidiga visningsprogram med API:er för Analytics 2.0{#get-concurrent-viewers-json-report-data}
 
-Du kan hämta rapportdata för samtidiga visningsprogram med [_*API:er för Analytics 2.0*_](https://www.adobe.io/apis/experiencecloud/analytics/docs.html).
+Du kan hämta rapportdata för samtidiga visningsprogram med hjälp av API:erna [_*Analytics 2.0*_](https://www.adobe.io/apis/experiencecloud/analytics/docs.html).
 
 1. Filtrera data med valfritt segment som bygger på användargränssnittet. Om du vill filtrera efter ett visst innehålls-ID skapar du ett nytt segment.
-1. Ange `elements` -> `id` i begärandetexten till `metrics/concurrent_viewers_visitors`.
+1. Ange `elements` -> `id` i begärandetexten som `metrics/concurrent_viewers_visitors`.
 1. Begär tillräckligt med data.
 
-   * Det dataområde som du anger i rapporten samlar in alla samtidiga visningsprogramdata _när videosessionen avslutades._
+   * Det dataområde som du anger i rapporten samlar alla samtidiga visningsdata _när videosessionen avslutades._
 Du måste redovisa sessioner som börjar en dag och slutar efter midnatt, nästa dag.
 
-   * Begär ytterligare en dag data till den avsedda perioden i din begäran, men i din analys _*endast använda de avsedda uppgifterna.*_
+   * Begär ytterligare en dag data till den avsedda perioden i din begäran, men i din analys _*använd bara de data som är avsedda.*_
 
 Nyttolasten för en samplingsbegäran för en dag med data skulle se ut som följande exempel. Begäran görs två dagar i följd, men när du rapporterar används bara den första dagen.
 
@@ -129,7 +128,7 @@ You can extract the concurrent viewers report data using the Experience Cloud AP
     * **Environment -** Select your data center.
     * Request JSON - Specify the following:
 
-        * `reportSuiteID` - For info on reports suites: [Report Suites](https://docs.adobe.com/content/help/en/analytics/admin/manage-report-suites/report-suites-admin.html)
+        * `reportSuiteID` - For info on reports suites: [Report Suites](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/report-suites-admin.html)
 
         * `dateTo` - End date of the report.         
 
