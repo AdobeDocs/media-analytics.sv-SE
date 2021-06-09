@@ -2,8 +2,7 @@
 title: Hämta JSON-rapportdata för samtidiga visningsprogram
 description: Hämta JSON-rapportdata för samtidiga visningsprogram
 uuid: 9168f114-2459-4951-a06c-57b735d09dc0
-translation-type: tm+mt
-source-git-commit: d4491dfec33d8729f40bcef1d57622467443bdbb
+source-git-commit: 0d5edcae0a80357247ada7f61daece9840d5c4b5
 workflow-type: tm+mt
 source-wordcount: '164'
 ht-degree: 4%
@@ -67,7 +66,7 @@ You can extract the concurrent viewers report data using the Experience Cloud AP
     * **Environment -** Select your data center.
     * Request JSON - Specify the following:
 
-        * `reportSuiteID` - For info on reports suites: [Report Suites](https://docs.adobe.com/content/help/en/analytics/admin/manage-report-suites/report-suites-admin.html)
+        * `reportSuiteID` - For info on reports suites: [Report Suites](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/report-suites-admin.html)
         
         * `dateTo` - End date of the report.         
         
