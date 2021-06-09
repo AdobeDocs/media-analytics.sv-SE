@@ -3,10 +3,10 @@ title: Förutsättningar
 description: Förutsättningar
 uuid: 4c0b37f3-8615-4cc0-b9c9-eeb029067064
 exl-id: 85ab1dbd-f4a7-4f11-afc9-8d5000e2de70
-source-git-commit: 0d5edcae0a80357247ada7f61daece9840d5c4b5
+source-git-commit: e56ce73316d9cf00193220df8959a489fc3f2124
 workflow-type: tm+mt
-source-wordcount: '421'
-ht-degree: 2%
+source-wordcount: '388'
+ht-degree: 1%
 
 ---
 
@@ -42,11 +42,7 @@ För en *Media Analytics*-implementering måste du utföra följande uppgifter i
 
    Om du inte har implementerat ID-tjänsten är det dags att börja fundera på en migreringsstrategi nu. Mer information om ID-tjänstens betydelse och roll finns i [Varför identitetstjänsten ska finnas på din radarr.](https://theblog.adobe.com/why-new-adobe-marketing-cloud-id-service-should-be-on-your-radar/)
 
-   >[!IMPORTANT]
-   >
-   >Om det inte finns någon användar-ID-information för de mediespecifika anropen gäller standardanalyserna [ID-metoderna](https://docs-author.corp.adobe.com/content/help/en/analytics/implementation/javascript-implementation/unique-visitors/visid-fallback.html).
-
-   Mer information om Experience Cloud-ID finns i [Översikt över Experience Cloud-ID,](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html) och [Adobe Experience Platform identitetstjänst.](https://docs.adobe.com/content/help/sv-SE/id-service/using/home.html)
+   Mer information om Experience Cloud ID finns i [Översikt över Experience Cloud ID,](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html) och [Adobe Experience Platform identitetstjänst](https://experienceleague.adobe.com/docs/id-service/using/home.html).
 
 1. **Aktivera Adobe Analytics-rapporter.**
 
