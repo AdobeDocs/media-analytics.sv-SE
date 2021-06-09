@@ -1,27 +1,31 @@
 ---
-seo-title: Migrera från fristående Media SDK till Adobe Launch
-title: Migrera från fristående Media SDK till Adobe Launch
+seo-title: Migrering från fristående Media SDK till Adobe Launch
+title: Migrering från fristående Media SDK till Adobe Launch
 seo-description: Instruktioner och kodexempel som hjälper dig att migrera från Media SDK till Launch.
 description: Instruktioner och kodexempel som hjälper dig att migrera från Media SDK till Launch.
-translation-type: tm+mt
-source-git-commit: fde203bab895c9a49ebc0d1dadb2c96697dea509
+exl-id: 5350bbe9-c34f-46d9-a4c4-dbccdbed0bb0
+source-git-commit: 0d5edcae0a80357247ada7f61daece9840d5c4b5
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '182'
 ht-degree: 1%
 
 ---
 
+# Migrering från fristående Media SDK till Adobe Launch
 
-# Migrera från fristående Media SDK till Adobe Launch
+Denna dokumentation fokuserar främst på skillnader i implementeringen av Media Analytics
+mellan det fristående Media SDK och startalternativet för Media Analytics.
 
-Den här dokumentationen fokuserar främst på skillnader i implementering av Media Analytics mellan det fristående Media SDK och startalternativet för Media Analytics.
+Launch ger kunderna ett enkelt sätt att driftsätta och hantera alla analyser,
+marknadsförings- och annonslösningar som är nödvändiga för att stärka relevanta kunder
+upplevelser på webben och i mobilen. Launch ger alla möjlighet att bygga och underhålla
+sina egna integreringar med Launch. Dessa integreringar kallas tillägg.
+Tillägg är tillgängliga för Launch-kunder i en app-store-upplevelse, så de
+kan snabbt installera, konfigurera och driftsätta sina lösningar.
 
-Launch ger kunderna ett enkelt sätt att driftsätta och hantera alla analys-, marknadsförings- och annonslösningar som behövs för att driva relevanta kundupplevelser på webben och i mobilen. Launch ger alla möjlighet att bygga och underhålla sina egna integreringar med Launch. Dessa integreringar kallas tillägg.
-Tillägg är tillgängliga för Launch-kunder i en app-store-upplevelse, så att de snabbt kan installera, konfigurera och driftsätta sina lösningar.
+Adobe Media Analytics för ljud och video finns som ett Launch-tillägg för både webb och mobiler:
 
-Adobe Media Analytics för ljud och video finns som ett Launch-tillägg för både webben och mobiler:
-
-* [Dokumentation för Web Launch](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/media-analytics-extension/overview.html)
+* [Dokumentation för Web Launch](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/media-analytics-extension/overview.html)
 * [Dokumentation för Mobile Launch](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics)
 
 ## Plattformar
