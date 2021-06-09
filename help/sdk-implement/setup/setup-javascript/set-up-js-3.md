@@ -2,9 +2,9 @@
 title: Konfigurera JavaScript 3.x
 description: Installation av Media SDK-program för implementering i JavaScript 3.x.
 exl-id: 35e27495-e480-4463-9f00-4b60a54d02c1
-source-git-commit: 0d5edcae0a80357247ada7f61daece9840d5c4b5
+source-git-commit: e56ce73316d9cf00193220df8959a489fc3f2124
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '394'
 ht-degree: 4%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 4%
 * **Hämta giltiga**
 konfigurationsparametrarDessa parametrar kan hämtas från en Adobe-representant när du har konfigurerat analyskontot.
 * **Implementera  `AppMeasurement` och  `Experience Cloud Identity Service` för JavaScript i ditt**
-medieprogramMer information finns i  [Implementera Analytics med ](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html) JavaScript och  [Implementera identitetstjänsten för Experience Cloud.](https://docs.adobe.com/content/help/en/id-service/using/implementation/setup-analytics.html)
+medieprogramMer information finns i  [Implementera Analytics med ](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html) JavaScript och  [Implementera identitetstjänsten](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-analytics.html) för Experience Cloud.
 
 * **Tillhandahåll följande funktioner i din mediespelare:**
 
