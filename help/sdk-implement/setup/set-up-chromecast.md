@@ -3,10 +3,10 @@ title: Konfigurera Chromecast
 description: Installation av Media SDK-program för implementering på Chromecast.
 uuid: d664e394-02a2-4985-bbad-be1bcc44fb2b
 exl-id: 5dfe3407-2858-48c0-a70c-8ea87967ac47
-source-git-commit: 218c4f6a841a988477eb4509bff8d418e18715f5
+source-git-commit: 0d5edcae0a80357247ada7f61daece9840d5c4b5
 workflow-type: tm+mt
-source-wordcount: '630'
-ht-degree: 3%
+source-wordcount: '628'
+ht-degree: 2%
 
 ---
 
@@ -28,7 +28,7 @@ HeartbeatsDe här parametrarna kan hämtas från en Adobe-representant när du h
    * *Ett API för att prenumerera på spelarhändelser*  - Media SDK kräver att du anropar en uppsättning enkla API:er när händelser inträffar i spelaren.
    * *Ett API som tillhandahåller spelarinformation*  - Den här informationen innehåller information som medienamnet och spelhuvudets position.
 
-Adobe Mobile-tjänster har ett nytt användargränssnitt som samlar funktioner för mobilmarknadsföring för mobilappar från hela Adobe Marketing Cloud. Från början erbjuder mobiltjänsten smidig integrering av funktioner för appanalys och målinriktning för Adobe Analytics- och Adobe Target-lösningarna. Läs mer på [Adobe Mobile Services-dokumentationen.](https://docs.adobe.com/content/help/en/mobile-services/using/home.html)
+Adobe Mobile-tjänster har ett nytt användargränssnitt som samlar funktioner för mobilmarknadsföring för mobilappar från hela Adobe Marketing Cloud. Från början erbjuder mobiltjänsten smidig integrering av funktioner för appanalys och målinriktning för Adobe Analytics- och Adobe Target-lösningarna. Läs mer på [Adobe Mobile Services-dokumentationen.](https://experienceleague.adobe.com/docs/mobile-services/using/home.html)
 
 Med Chromecast SDK 2.x för Experience Cloud Solutions kan ni mäta Chromecast-applikationer skrivna i JavaScript, utnyttja och samla in målgruppsdata via målgruppshantering och mäta videoengagemang med videohjärtslag.
 
@@ -137,4 +137,4 @@ Med Chromecast SDK 2.x för Experience Cloud Solutions kan ni mäta Chromecast-a
 
 
 
-<!--   **Postbacks -** For more information about configuring postbacks, see [Configure Postbacks.](https://docs.adobe.com/content/help/en/mobile-services/using/manage-app-settings-ug/configuring-app/signals.html) -->
+<!--   **Postbacks -** For more information about configuring postbacks, see [Configure Postbacks.](https://experienceleague.adobe.com/docs/mobile-services/using/manage-app-settings-ug/configuring-app/signals.html) -->
