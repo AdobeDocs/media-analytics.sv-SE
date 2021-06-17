@@ -2,14 +2,13 @@
 title: Mäta direktuppspelningsmedia i Adobe Analytics
 description: Adobe Analytics for Media (även kallat Media Analytics) ger kunderna robusta mediemätningar för innehåll, ljud och annonser.
 uuid: b3cbe240-b94d-42b8-a99c-0280334aaa14
-translation-type: tm+mt
-source-git-commit: 82b38f7870b6f890aaa812de30fa2d02d4f3ba8a
+exl-id: 826530f7-2c39-41ef-b3b4-d3f44b46858f
+source-git-commit: eaae56abd3e549ad57c45852fe0bedb618f80e9e
 workflow-type: tm+mt
-source-wordcount: '903'
-ht-degree: 85%
+source-wordcount: '879'
+ht-degree: 83%
 
 ---
-
 
 # Mäta direktuppspelningsmedia i Adobe Analytics{#measuring-audio-and-video-in-adobe-analytics}
 
@@ -26,7 +25,7 @@ Ni kan mäta viktiga leveransvärden som rör QoS, som uteslutna bildrutor, tids
 ## Funktioner {#features}
 
 Fördelarna med Adobe Analytics för Streaming Media är bland annat övervakning i realtid, detaljerad analys, användbara insikter och möjligheter till intäktsgenerering.
-* **Realtidsanalys** – Fatta smarta beslut i realtid med hjälp av nyckeltal som varaktighet, ex2 och ex3 över flera kanaler. Huvudsakliga innehållshändelser mäts i intervall på 10 sekunder för att fånga all aktivitet när den inträffar. Annonsspårningshändelser utförs med intervall på 1 sekund.
+* **Realtidsanalys** - Fatta konkreta, åtgärdbara beslut i realtid med hjälp av nyckeltal som mediefunktioner, över flera kanaler.
 * **Öka engagemanget** – Engagera användarna mer med färre buffringshändelser och förstå var och när annonser ska spelas upp i innehållet för att skapa en smidig, mindre påträngande upplevelse som får användarna att komma tillbaka.
 * **Heltäckande bild** – Kombinera flera datapunkter för alla innehållsdistributörer för att få en fullständig bild av alla medieaktiviteter. Mät engagemang och visningar/avlyssningar i alla möjliga kanaler via funktionen Federated Analytics.
 * **Ökad detaljrikedom** – Utvärdera tittarnas beteende på den mest detaljerade nivån, inklusive besökstid, samtidigt antal tittare/lyssnare per minut och genomsnittlig tid som innehållet konsumeras.
