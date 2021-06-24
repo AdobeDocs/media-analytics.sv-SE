@@ -1,14 +1,15 @@
 ---
-title: Implementera standardannonsmetadata med JavaScript 3.x
+title: Lär dig implementera standardmetadata för annonsering med JavaScript 3.x
 description: Så här använder du standardmetadata för annonser i annonsspårning i en webbläsare med JavaScript 3.x-appar.
-translation-type: tm+mt
-source-git-commit: 83b38ac8f7fc88f982d194e776efccf8d5b983e4
+exl-id: ba9abf1d-3778-49ef-a2fc-6c0eafa3b227
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '54'
+source-wordcount: '58'
 ht-degree: 0%
 
 ---
-
 
 # Implementera standardannonsmetadata med JavaScript 3.x{#implement-standard-ad-metadata-on-javascript}
 
