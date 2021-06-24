@@ -1,14 +1,15 @@
 ---
-title: Spåra annonser med JavaScript 3.x
+title: Lär dig spåra annonser med JavaScript 3.x
 description: Implementera annonsspårning i webbläsarprogram (JS) med Media SDK.
-translation-type: tm+mt
-source-git-commit: 815965d1cd41e73e50666a89f4a7c450af5022da
+exl-id: 6b34b2c0-5e50-471a-b52c-b9c760fa3169
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '359'
-ht-degree: 2%
+source-wordcount: '364'
+ht-degree: 3%
 
 ---
-
 
 # Spåra annonser med JavaScript 3.x{#track-ads-on-javascript}
 
@@ -28,7 +29,7 @@ ht-degree: 2%
 
 ## Implementeringssteg
 
-1. Identifiera när annonsbrytningens gränser börjar, inklusive pre-roll, och skapa en `AdBreakObject` genom att använda annonsbrytningsinformationen.
+1. Identifiera när annonsbrytningens gränser börjar, inklusive pre-roll, och skapa en `AdBreakObject` med hjälp av annonsbrytningsinformationen.
 
    `AdBreakObject` referens:
 
@@ -47,13 +48,13 @@ ht-degree: 2%
                                       <START_TIME>);
    ```
 
-1. Anropa `trackEvent()` med `AdBreakStart` i `MediaHeartbeat` instansen för att börja spåra annonsbrytningen:
+1. Anropa `trackEvent()` med `AdBreakStart` i `MediaHeartbeat`-instansen för att börja spåra annonsbrytningen:
 
    ```js
    tracker.trackEvent(ADB.Media.Event.AdBreakStart, adBreakObject);
    ```
 
-1. Identifiera när annonsen startar och skapa en `AdObject` instans med annonsinformationen.
+1. Identifiera när annonsen startar och skapa en `AdObject`-instans med annonsinformationen.
 
    `AdObject` referens:
 
@@ -91,7 +92,7 @@ ht-degree: 2%
       adMetadata["creative"] = "Sample creative";
       ```
 
-1. Anropa `trackEvent()` med `AdStart` händelsen i `MediaHeartbeat` instansen för att börja spåra annonsuppspelningen.
+1. Anropa `trackEvent()` med händelsen `AdStart` i instansen `MediaHeartbeat` för att börja spåra annonsuppspelningen.
 
    Ta med en referens till din anpassade metadatavariabel (eller ett tomt objekt) som den tredje parametern i händelseanropet:
 
@@ -101,7 +102,7 @@ ht-degree: 2%
    };
    ```
 
-1. När annonsuppspelningen når slutet av annonsen ska du ringa `trackEvent()` med `AdComplete` händelsen:
+1. När annonsuppspelningen når slutet av annonsen anropar du `trackEvent()` med händelsen `AdComplete`:
 
    ```js
    _onAdComplete = function() {
@@ -109,7 +110,7 @@ ht-degree: 2%
    };
    ```
 
-1. Om annonsuppspelningen inte slutfördes eftersom användaren valde att hoppa över annonsen, ska du spåra `AdSkip` händelsen:
+1. Om annonsuppspelningen inte slutfördes eftersom användaren valde att hoppa över annonsen, ska du spåra händelsen `AdSkip`:
 
    ```js
    _onAdSkip = function() {
@@ -117,8 +118,8 @@ ht-degree: 2%
    };
    ```
 
-1. Om det finns fler annonser i samma `AdBreak`version upprepar du steg 3 till 7 igen.
-1. När annonsbrytningen är klar använder du `AdBreakComplete` händelsen för att spåra:
+1. Om det finns ytterligare annonser inom samma `AdBreak` upprepar du steg 3 till 7 igen.
+1. När annonsbrytningen är klar använder du händelsen `AdBreakComplete` för att spåra:
 
    ```js
    _onAdBreakComplete = function() {
@@ -126,4 +127,4 @@ ht-degree: 2%
    };
    ```
 
-Mer information finns i [VOD-uppspelningen för spårningsscenariot med förrollsannonser](/help/sdk-implement/tracking-scenarios/vod-preroll-ads.md) .
+Mer information finns i spårningsscenariot [VOD-uppspelning med förrollsannonser](/help/sdk-implement/tracking-scenarios/vod-preroll-ads.md).
