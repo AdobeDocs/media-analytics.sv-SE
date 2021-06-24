@@ -1,11 +1,13 @@
 ---
 title: Medievisningsprogram för samtidig användning
-description: null
+description: '"Lär dig mer om Media Concurrent Viewer som används för att visa samtidiga visningsprogram under en dag. Data kan filtreras efter innehåll, enhetstyp eller land."'
 uuid: e61c50e5-8196-4538-b67c-ebc01c6e6ba7
 exl-id: 2c679c1a-a4bd-44fc-8e11-173c8544ab06
-source-git-commit: 0d5edcae0a80357247ada7f61daece9840d5c4b5
+feature: '"Media Analytics, Reports & Analytics Basics"'
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '295'
 ht-degree: 0%
 
 ---
