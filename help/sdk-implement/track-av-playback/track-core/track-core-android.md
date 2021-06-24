@@ -1,12 +1,16 @@
 ---
-title: Spåra kärnuppspelning på Android
-description: I det här avsnittet beskrivs hur du implementerar huvudspårning med Media SDK på Android.
+title: Lär dig hur du spårar uppspelning i Android
+description: Lär dig hur du implementerar huvudspårning med Media SDK på Android.
 uuid: ab5fab95-76ed-4ae6-aedb-2e66eece7607
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: d5f5a3f0-f1e0-4d68-af7f-88a30faed0db
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '710'
+ht-degree: 2%
 
 ---
-
 
 # Spåra kärnuppspelning på Android{#track-core-playback-on-android}
 
@@ -15,7 +19,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 1. **Inledande spårningsinställning**
 
-   Identifiera när användaren aktiverar uppspelningsavsikten (användaren klickar på play och/eller autoplay är aktiverat) och skapar en `MediaObject` instans.
+   Identifiera när användaren aktiverar uppspelningsavsikten (användaren klickar på play och/eller autoplay är aktiverat) och skapa en `MediaObject`-instans.
 
    [createMediaObject API](https://adobe-marketing-cloud.github.io/media-sdks/reference/android/com/adobe/primetime/va/simple/MediaHeartbeat.html#createMediaObject-java.lang.String-java.lang.String-java.lang.Double-java.lang.String-com.adobe.primetime.va.simple.MediaHeartbeat.MediaType-)
 
@@ -56,14 +60,14 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
    * **Standardmetadata**
 
-      [Implementera standardmetadata på Android](/help/sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-android.md)
+      [Implementera standardmetadata i Android](/help/sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-android.md)
 
       >[!NOTE]
       >
       >Det är valfritt att bifoga standardmetadataobjektet till medieobjektet.
 
-      * API-referens för metadata för media - [standardmetadatanycklar - Android](https://adobe-marketing-cloud.github.io/media-sdks/reference/android/com/adobe/primetime/va/simple/MediaHeartbeat.VideoMetadataKeys.html)
-      * Här finns en omfattande uppsättning videometadata: Parametrar för [ljud och video](/help/metrics-and-metadata/audio-video-parameters.md)
+      * API-referens för metadata för mediematerial - [Standardmetadatanycklar - Android](https://adobe-marketing-cloud.github.io/media-sdks/reference/android/com/adobe/primetime/va/simple/MediaHeartbeat.VideoMetadataKeys.html)
+      * Här finns en omfattande uppsättning videometadata: [Parametrar för ljud och video](/help/metrics-and-metadata/audio-video-parameters.md)
    * **Anpassade metadata**
 
       Skapa en ordlista för de anpassade variablerna och fyll i med data för mediet. Exempel:
@@ -79,7 +83,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 1. **Spåra avsikten att starta uppspelningen**
 
-   Om du vill börja spåra en mediesession anropar du instansen Mediepulsslag `trackSessionStart` . Exempel:
+   Om du vill börja spåra en mediesession anropar du `trackSessionStart` på instansen Mediepulsslag. Exempel:
 
    ```java
    public void onVideoLoad(Observable observable, Object data) {  
@@ -93,11 +97,11 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
    >[!IMPORTANT]
    >
-   >`trackSessionStart` spårar användarens avsikt att spela upp, inte början av uppspelningen. Detta API används för att läsa in mediedata/metadata och för att beräkna QoS-måttet för tid till start (tidsintervallet mellan `trackSessionStart` och `trackPlay`).
+   >`trackSessionStart` spårar användarens avsikt att spela upp, inte början av uppspelningen. Detta API används för att läsa in mediedata/metadata och för att beräkna QoS-måttet för tid till start (tidslängden mellan `trackSessionStart` och `trackPlay`).
 
    >[!NOTE]
    >
-   >Om du inte använder anpassade mediametadata skickar du bara ett tomt objekt för det andra argumentet i `trackSessionStart`.
+   >Om du inte använder anpassade mediametadata skickar du ett tomt objekt för det andra argumentet i `trackSessionStart`.
 
 1. **Spåra faktiskt uppspelningsstart**
 
@@ -134,11 +138,11 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
    >[!IMPORTANT]
    >
-   >`trackSessionEnd` markerar slutet på en mediaspårningssession. Om sessionen slutfördes utan fel, där användaren tittade på innehållet tills slutet, måste du se till att `trackComplete` anropas före `trackSessionEnd`. Alla andra `track*` API-anrop ignoreras efter `trackSessionEnd`, förutom `trackSessionStart` för en ny mediespårningssession.
+   >`trackSessionEnd` markerar slutet på en mediaspårningssession. Om sessionen kunde bevakas tills det var klart, där användaren tittade på innehållet till slutet, kontrollerar du att `trackComplete` anropas före `trackSessionEnd`. Alla andra `track*` API-anrop ignoreras efter `trackSessionEnd`, förutom `trackSessionStart` för en ny mediespårningssession.
 
 1. **Spåra alla möjliga pausscenarier**
 
-   Identifiera händelsen från mediespelaren för att pausa och ringa `trackPause`:
+   Identifiera händelsen från mediespelaren för mediepaus och ring `trackPause`:
 
    ```java
    public void onVideoPause(Observable observable, Object data) {  
@@ -148,14 +152,14 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
    **Pausa scenarier**
 
-   Identifiera alla scenarier där videouppspelaren pausas och se till att det `trackPause` anropas korrekt. Följande scenarier kräver alla ditt appsamtal `trackPause()`:
+   Identifiera alla scenarier där videospelaren pausar och se till att `trackPause` anropas korrekt. Följande scenarier kräver alla att ditt program anropar `trackPause()`:
 
    * Användaren träffar uttryckligen paus i appen.
    * Spelaren försätts i pausläget.
    * (*Mobilappar*) - Användaren placerar programmet i bakgrunden, men du vill att sessionen ska vara öppen i appen.
-   * (*Mobilappar*) - Alla typer av systemavbrott inträffar som gör att ett program backjordas. Användaren får t.ex. ett samtal eller ett popup-fönster från ett annat program inträffar, men du vill att sessionen ska vara aktiv så att användaren kan återuppta mediet från den punkt då det avbröts.
+   * (*Mobilappar*) - Alla typer av systemavbrott inträffar som gör att ett program backoreras. Användaren får t.ex. ett samtal eller ett popup-fönster från ett annat program inträffar, men du vill att sessionen ska vara aktiv så att användaren kan återuppta mediet från den punkt då det avbröts.
 
-1. Identifiera händelsen från spelaren för uppspelning av media och/eller återupptagning av media från paus och samtal `trackPlay`.
+1. Identifiera händelsen från spelaren för uppspelning av media och/eller återupptagning av media från paus och ring `trackPlay`.
 
    ```java
    // trackPlay() 
@@ -166,10 +170,9 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
    >[!TIP]
    >
-   >Detta kan vara samma händelsekälla som användes i steg 4. Kontrollera att varje `trackPause()` API-anrop har parats med ett följande API- `trackPlay()` anrop när medieuppspelningen återupptas.
+   >Detta kan vara samma händelsekälla som användes i steg 4. Kontrollera att varje `trackPause()` API-anrop är parat med följande `trackPlay()` API-anrop när medieuppspelningen återupptas.
 
 Mer information om hur du spårar uppspelning finns i följande:
 
-* Spårningsscenarier: VOD- [uppspelning utan annonser](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md)
+* Spårningsscenarier: [VOD-uppspelning utan annonser](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md)
 * Exempelspelare som ingår i Android SDK för ett fullständigt spårningsexempel.
-
