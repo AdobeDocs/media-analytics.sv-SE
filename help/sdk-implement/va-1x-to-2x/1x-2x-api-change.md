@@ -1,12 +1,16 @@
 ---
-title: 1.x till 2.x API-konvertering
-description: Det här avsnittet innehåller länkar till API-referenser och listor med obligatoriska och valfria API:er för spårning i version 1.x och 2.x av Media SDK.
+title: Version 1.x till 2.x API-konvertering
+description: Utforska API-referenser och listor över obligatoriska och valfria API:er för spårning för version 1.x och 2.x av Media SDK.
 uuid: 6e619288-c082-4cb4-8685-e90823dadf4a
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: 8d06b7df-f246-49e6-aa58-91a9d6fa889a
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '202'
+ht-degree: 1%
 
 ---
-
 
 # Konvertering av API 1.x till 2.x {#one-x-to-two-x-conv}
 
@@ -19,7 +23,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ## Nödvändiga spår*-API:er:
 
-|  VHL 1.x | VHL 2.x |
+|  VHL 1.x  | VHL 2.x |
 |---|---|
 | `videoPlayerPlugin.trackVideoLoad()` | Ej tillämpligt |
 | `videoPlayerPlugin.trackSessionStart()` | [mediaHeartbeat.trackSessionStart(mediaObject, mediaCustomMetadata)](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/MediaHeartbeat.html#trackSessionStart) |
@@ -30,13 +34,13 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 | `videoPlayerPlugin.trackApplicationError()` | Ej tillämpligt |
 | `videoPlayerPlugin.trackVideoPlayerError()` | [mediaHeartbeat.trackError()](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/MediaHeartbeat.html#trackError) |
 
-Alla valfria API:er för spårning, till exempel (annonser, kapitel, ändring av bithastighet, sökning och buffring) ingår nu i ett enda `trackEvent` -API. API:t [trackEvent](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/MediaHeartbeat.html#trackEvent) tar emot en konstant parameter som representerar den typ av händelse som det är avsett att spåra:
+Alla valfria API:er för spårning, till exempel (annonser, kapitel, ändring av bithastighet, sökning och buffring), ingår nu i ett enda `trackEvent`-API. API:t [trackEvent](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/MediaHeartbeat.html#trackEvent) tar emot en konstant parameter som representerar den typ av händelse som ska spåras:
 
 ## Valfria trackEvent-API:er:
 
 | VHL 1.x | VHL 2.x |
 |---|---|
-| Returnera ett giltigt värde `AdBreakInfo` i `VideoPlayerPlugin.getAdBreakInfo()` | `trackEvent(Event.AdBreakStart)` |
+| Returnera en giltig `AdBreakInfo` i `VideoPlayerPlugin.getAdBreakInfo()` | `trackEvent(Event.AdBreakStart)` |
 | Returnera null i `VideoPlayerPlugin.getAdBreakInfo()` | `trackEvent(Event.AdBreakComplete)` |
 | `playerPlugin.trackAdStart()` | `trackEvent(Event.AdStart, adObject, adCustomMetadata)` |
 | `playerPlugin.trackAdComplete()` | `trackEvent(Event.AdComplete)` |
@@ -50,4 +54,3 @@ Alla valfria API:er för spårning, till exempel (annonser, kapitel, ändring av
 | `playerPlugin.trackBufferComplete()` | `trackEvent(Event.BufferComplete)` |
 | `playerPlugin.trackBitrateChange()` | `trackEvent(Event.BitrateChange)` |
 | `playerPlugin.trackTimedMetadata()` | `trackEvent(Event.TimedMetadataUpdate)` |
-
