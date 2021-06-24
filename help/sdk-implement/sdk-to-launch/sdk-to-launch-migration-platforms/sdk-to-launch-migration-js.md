@@ -1,8 +1,10 @@
 ---
-title: Migrera från det fristående medie-SDK:t till Adobe Launch - webben (JS)
-description: Instruktioner och kodexempel som hjälper dig att migrera från Media SDK till Launch.
+title: '"Migrering från det fristående mediet-SDK till Adobe Launch - webben (JS)"'
+description: Lär dig hur du migrerar från Media SDK till Launch for JS.
 exl-id: 19b506b2-3070-4a5e-9732-a5cd0867afde
-source-git-commit: 0d5edcae0a80357247ada7f61daece9840d5c4b5
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
 source-wordcount: '400'
 ht-degree: 3%
