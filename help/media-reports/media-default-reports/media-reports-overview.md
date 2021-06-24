@@ -1,17 +1,18 @@
 ---
 title: Översikt över media
-description: Översikt över media
+description: Använd kontrollpanelen Medieöversikt för att visa aggregerade mått. Lär dig hur du snabbt kan övervaka medieprestanda.
 uuid: bdbd998f-9b5e-40c9-a8ea-12dfa5acd35c
 exl-id: 4fe91372-da41-44c5-bea9-2bba762512ef
-translation-type: tm+mt
-source-git-commit: d4491dfec33d8729f40bcef1d57622467443bdbb
+feature: '"Media Analytics, Reports & Analytics Basics"'
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '93'
-ht-degree: 1%
+source-wordcount: '112'
+ht-degree: 0%
 
 ---
 
-# Medieöversikt{#media-overview}
+# Översikt över media{#media-overview}
 
 Kontrollpanelen Medieöversikt är utformad för att du ska kunna övervaka media på hela webbplatsen. I vyn Medieöversikt visas flera aggregerade mått så att du snabbt kan övervaka att media fungerar som förväntat. I ett diagram visas innehåll som börjar bredvid och som börjar så att du snabbt kan visa dessa mått för varje medieobjekt.
 
