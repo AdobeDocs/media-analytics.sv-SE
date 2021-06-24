@@ -1,14 +1,15 @@
 ---
 title: Implementering och rapportering
-description: I det här avsnittet beskrivs hur du implementerar funktionen för spårning av spelartillstånd, inklusive .
-translation-type: tm+mt
-source-git-commit: 1b48565bcc5c9a87e5fabbc906049ab791bf89cc
+description: Läs om hur du implementerar funktionen för spårning av spelartillstånd, inklusive .
+exl-id: 19a97c9b-14d1-4f11-bb0a-3a1ad6f949da
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '333'
-ht-degree: 0%
+source-wordcount: '334'
+ht-degree: 1%
 
 ---
-
 
 # Implementering och rapportering
 
@@ -21,7 +22,7 @@ Media SDK innehåller två nya metoder för anpassad statusspårning:
 `trackStateClose("state_name")`
 
 
-Media Collection API innehåller två nya händelser som har `media.stateName` den obligatoriska parametern:
+Media Collection API innehåller två nya händelser som har `media.stateName` som obligatorisk parameter:
 
 `stateStart` och `stateEnd`
 
@@ -82,7 +83,7 @@ http(s)://<Analytics_Visitor_Namespace>.hb-api.omtrdc.net/api/v1/sessions/<SID>/
 
 ## Lägesmått
 
-De mått som anges för varje enskilt tillstånd beräknas och överförs till Adobe Analytics som kontextdataparametrar och lagras för rapportändamål. Tre mätvärden är tillgängliga för varje läge:
+De mått som anges för varje enskilt tillstånd beräknas och skickas till Adobe Analytics som kontextdataparametrar och lagras för rapportering. Tre mätvärden är tillgängliga för varje läge:
 
 * `a.media.states.[state.name].set = true` — Ange som true om läget ställdes in minst en gång per varje specifik uppspelning av en ström.
 * `a.media.states.[state.name].count = 4` — Identifierar antalet förekomster av ett läge under varje enskild uppspelning av en ström
@@ -98,6 +99,6 @@ I arbetsytan Analytics (Analyser) finns alla nya egenskaper på mätpanelen. Du 
 
 ![](assets/full-screen-report.png)
 
-## Importera värden från spelaren till Adobe Experience Platform
+## Importera mätvärden från spelaren till Adobe Experience Platform
 
-Data som lagras i Analytics kan användas i alla syften och spelarstatusvärdena kan importeras till Adobe Experience Platform med hjälp av XDM och användas med kundreseanalys. Standardlägesegenskaperna har specifika egenskaper medan de anpassade lägena är egenskaper som är tillgängliga med anpassade händelser. Mer information om standardlägesegenskaperna finns i avsnittet *Egenskapslista för XDM-identiteter* på sidan [Parametrar](/help/metrics-and-metadata/player-state-parameters.md) för spelartillstånd.
+Data som lagras i Analytics kan användas i alla syften och spelarlägesstatistik kan importeras till Adobe Experience Platform med hjälp av XDM och användas med Customer Journey Analytics. Standardlägesegenskaperna har specifika egenskaper medan de anpassade lägena är egenskaper som är tillgängliga med anpassade händelser. Mer information om standardlägesegenskaperna finns i avsnittet *Egenskapslista för XDM-identiteter* på sidan [Parametrar för spelartillstånd](/help/metrics-and-metadata/player-state-parameters.md).
