@@ -1,12 +1,16 @@
 ---
-title: Översikt
+title: Spåra upplevelsekvalitet
 description: En översikt över upplevelsespårningskvalitet (QoE, QoS) med Media SDK.
 uuid: 4d73c47f-d0a4-4228-9040-d6432311c9eb
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: af5f3372-a9a5-46ea-9c2f-81b0f5c96ccf
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '260'
+ht-degree: 2%
 
 ---
-
 
 # Översikt{#overview}
 
@@ -14,7 +18,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 >
 >Följande anvisningar ger vägledning för implementering i alla 2.x SDK:er. Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandboken här: [Hämta SDK:er.](/help/sdk-implement/download-sdks.md)
 
-Kvaliteten på upplevelsespårningen innefattar QoS (Quality of Service) och felspårning, båda är valfria element och behövs **inte** för implementering av huvudmediespårning. Du kan använda mediespelarens API för att identifiera variabler som är relaterade till QoS och felspårning. Här är de viktigaste elementen för att hålla koll på upplevelsekvaliteten:
+Kvalitetsspårning innefattar QoS (Quality of Service) och felspårning, båda är valfria element och **krävs inte** för implementeringar av huvudmediespårning. Du kan använda mediespelarens API för att identifiera variabler som är relaterade till QoS och felspårning. Här är de viktigaste elementen för att hålla koll på upplevelsekvaliteten:
 
 ## Spelarhändelser {#player-events}
 
@@ -24,11 +28,11 @@ Skapa eller uppdatera QoS-objektinstansen för uppspelningen. [QoS API-referens]
 
 ### Alla bithastighetsändringshändelser
 
-Utlysning `trackEvent(Media.Heartbeat.Event.BitrateChange);`
+Ring `trackEvent(Media.Heartbeat.Event.BitrateChange);`
 
 ## Implementera QOS
 
-1. Identifiera när någon av mätvärdena för QOS ändras under medieuppspelning, skapa materialet `MediaObject` med QoS-informationen och uppdatera den nya QoS-informationen.
+1. Identifiera när någon av mätvärdena för QOS ändras under medieuppspelning, skapa `MediaObject` med hjälp av QoS-informationen och uppdatera den nya QoS-informationen.
 
    QoSObject-variabler:
 
@@ -43,8 +47,8 @@ Utlysning `trackEvent(Media.Heartbeat.Event.BitrateChange);`
    | `fps` | FPS-värde | Ja |
    | `droppedFrames` | Antal uteslutna bildrutor | Ja |
 
-1. Se till att den `getQoSObject()` metoden returnerar den senaste QoS-informationen.
-1. När uppspelningen växlar bithastigheter anropar du `BitrateChange` händelsen i Media Heartbeat-instansen.
+1. Kontrollera att metoden `getQoSObject()` returnerar den senaste QoS-informationen.
+1. När uppspelningen växlar bithastigheter anropar du händelsen `BitrateChange` i instansen Mediepulsslag.
 
    >[!IMPORTANT]
    >
@@ -70,4 +74,3 @@ if (e.type == "bitrate_change") {
     this.mediaHeartbeat.trackEvent(MediaHeartbeat.Event.BitrateChange, qosObject); 
 };
 ```
-
