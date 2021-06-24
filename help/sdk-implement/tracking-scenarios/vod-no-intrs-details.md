@@ -1,12 +1,16 @@
 ---
 title: VOD-uppspelning utan annonser
-description: Ett exempel på spårning av VOD-uppspelning som inte innehåller några annonser.
+description: Visa ett exempel på hur du spårar VOD-uppspelning som inte innehåller några annonser.
 uuid: ee2a1b79-2c2f-42e1-8e81-b62bbdd0d8cb
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: 9e2240f0-da8d-4dcc-9d44-0f121c60d924
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '366'
+ht-degree: 1%
 
 ---
-
 
 # VOD-uppspelning utan annonser{#vod-playback-with-no-ads}
 
@@ -14,34 +18,34 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 Detta scenario har en VOD-resurs, utan annonser, som spelas upp en gång från början till slut.
 
-| Utlösare | Heartbeat-metod | Nätverksanrop | Anteckningar |
+| Utlösare | Heartbeat-metod | Nätverksanrop | Anteckningar   |
 |---|---|---|---|
-| Användaren klickar **[!UICONTROL Play]** | `trackSessionStart` | Börja med Analytics-innehåll, starta pulsslagsinnehåll | Detta kan antingen vara en användare som klickar på Spela upp eller en automatisk uppspelningshändelse. |
+| Användaren klickar på **[!UICONTROL Play]** | `trackSessionStart` | Börja med Analytics-innehåll, starta pulsslagsinnehåll | Detta kan antingen vara en användare som klickar på Spela upp eller en automatisk uppspelningshändelse. |
 | Mediets första bildruta | `trackPlay` | Spela upp pulsslagsinnehåll | Den här metoden utlöser timern och från och med nu skickas hjärtslag var 10:e sekund under hela uppspelningen. |
 | Innehåll spelas upp |  | Hjärtslag för innehåll |  |
-| Innehållet är färdigt | `trackComplete` | Hearsbeat-innehåll slutfört | *Fullständigt* innebär att slutet av spelhuvudet nåddes. |
+| Innehållet är färdigt | `trackComplete` | Hearsbeat-innehåll slutfört | *Slutför* att slutet av spelhuvudet nåddes. |
 
 ## Parametrar {#parameters}
 
-Många av de värden som du ser på startanrop för pulsslagsinnehåll visas också i Adobe Analytics- `Content Start` anrop. Det finns många parametrar som Adobe använder för att fylla i olika medierapporter, men bara de viktigaste parametrarna visas i följande tabell:
+Många av de värden som du ser på startanrop för pulsslagsinnehåll visas också på Adobe Analytics `Content Start`-anrop. Det finns många parametrar som Adobe använder för att fylla i de olika medierapporter, men bara de viktigaste parametrarna visas i följande tabell:
 
 ### Starta pulsslagsinnehåll
 
-| Parameter | Värde | Anteckningar |
+| Parameter | Värde | Anteckningar   |
 |---|---|---|
-| `s:sc:rsid` | &lt;Ditt Adobe Report Suite-ID> |  |
-| `s:sc:tracking_server` | &lt;URL för analysspårningsserver> |  |
-| `s:user:mid` | måste anges | Ska matcha mittvärdet för `Adobe Analytics Content Start` anropet. |
+| `s:sc:rsid` | &lt;your Adobe=&quot;&quot; Report=&quot;&quot; Suite=&quot;&quot; ID=&quot;&quot;> |  |
+| `s:sc:tracking_server` | &lt;your Analytics=&quot;&quot; Tracking=&quot;&quot; Server=&quot;&quot; URL=&quot;&quot;> |  |
+| `s:user:mid` | måste anges | Ska matcha mittvärdet för `Adobe Analytics Content Start`-anropet. |
 | `s:event:type` | `"start"` |  |
 | `s:asset:type` | `"main"` |  |
-| `s:asset:media_id` | &lt;Ditt medienamn> |  |
+| `s:asset:media_id` | &lt;your Media=&quot;&quot; Name=&quot;&quot;> |  |
 | `s:meta:*` | valfri | Anpassade metadata som är inställda på mediet. |
 
 ## Spela upp pulsslagsinnehåll {#heartbeat-content-play}
 
-Dessa parametrar ska se nästan identiska ut som `Heartbeat Content Start` anropet, men den största skillnaden är `s:event:type` parametern. Alla andra parametrar ska fortfarande finnas.
+Dessa parametrar ska se nästan identiska ut som anropet `Heartbeat Content Start`, men den största skillnaden är parametern `s:event:type`. Alla andra parametrar ska fortfarande finnas.
 
-| Parameter | Värde | Anteckningar |
+| Parameter | Värde | Anteckningar   |
 |---|---|---|
 | `s:event:type` | `"play"` |  |
 | `s:asset:type` | `"main"` |  |
@@ -52,16 +56,16 @@ Under medieuppspelning skickar en tidtagare minst ett pulsslag var 10:e sekund. 
 
 I innehållsrubrikerna ska du leta efter följande parametrar:
 
-| Parametrar | Värde | Anteckningar |
+| Parametrar | Värde | Anteckningar   |
 |---|---|---|
 | `s:event:type` | `"play"` |  |
-| `l:event:playhead` | &lt;playhead position> t.ex. 50,60,70 | Den här parametern återspeglar spelhuvudets aktuella position. |
+| `l:event:playhead` | &lt;playhead position=&quot;&quot;> t.ex. 50,60,70 | Den här parametern återspeglar spelhuvudets aktuella position. |
 
 ## Hearsbeat-innehåll slutfört {#heartbeat-content-complete}
 
-När uppspelningen är klar, vilket innebär att slutet av spelhuvudet nås, skickas ett `Heartbeat Content Complete` anrop. Det här anropet ser ut som andra Heartbeat-anrop, men innehåller några specifika parametrar:
+När uppspelningen är klar, vilket innebär att slutet av spelhuvudet nås, skickas ett `Heartbeat Content Complete`-anrop. Det här anropet ser ut som andra Heartbeat-anrop, men innehåller några specifika parametrar:
 
-| Parametrar | Värde | Anteckningar |
+| Parametrar | Värde | Anteckningar   |
 |---|---|---|
 | `s:event:type` | `"complete"` |  |
 | `s:asset:type` | `"main"` |  |
@@ -198,4 +202,3 @@ this._mediaHeartbeat.trackSessionEnd();
 ........ 
 ........
 ```
-
