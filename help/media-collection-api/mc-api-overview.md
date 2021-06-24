@@ -1,16 +1,17 @@
 ---
 seo-title: Översikt
-title: Översikt
-description: null
+title: API-översikt för direktuppspelning av media Collection
+description: Lär dig mer om Media Collection API och hur spelaren kan spåra ljud- och videohändelser med RESTful HTTP-anrop.
 uuid: c14bdbef-5846-4d31-8a14-8e9e0e9c9861
-translation-type: tm+mt
-source-git-commit: 82b38f7870b6f890aaa812de30fa2d02d4f3ba8a
+exl-id: 58430636-7fab-433a-8ead-52ccaa45d920
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '331'
+source-wordcount: '357'
 ht-degree: 0%
 
 ---
-
 
 # Översikt{#overview}
 
@@ -18,7 +19,7 @@ Media Collection API är ett Adobe RESTful-alternativ till Media SDK på klients
 
 Media Collection API är i princip ett kort som fungerar som en serverversion av Media SDK. Detta innebär att vissa aspekter av Media SDK-dokumentationen också är relevanta för Media Collection API. Båda lösningarna använder till exempel samma [parametrar för direktuppspelande media](/help/metrics-and-metadata/audio-video-parameters.md), och de insamlade spårningsdata för direktuppspelande media leder till samma [rapportering och analys.](/help/media-reports/media-reports-enable.md)
 
-## Dataflöden för mediespårning {#media-tracking-data-flows}
+## Dataflöden för medieuppföljning {#media-tracking-data-flows}
 
 En mediespelare som implementerar API:t för Media Collection gör RESTful API-spårningsanrop direkt till bakomliggande mediaspårningsserver, medan en spelare som implementerar Media SDK gör spårningsanrop till SDK API:er inuti spelarappen. En effekt av att anropa via webben är att spelaren som implementerar API:t för Media Collection måste hantera en del av bearbetningen som Media SDK hanterar automatiskt. (Information i [Implementering av mediainsamling.](mc-api-impl/mc-api-quick-start.md))
 
@@ -46,7 +47,7 @@ Spårningsdata som hämtas med Media Collection API skickas och bearbetas först
    {uri}/api/v1/sessions/{session-id}/events
    ```
 
-### Begärande brödtext {#mc-api-request-body}
+### Begärandetext {#mc-api-request-body}
 
 ```
 {
