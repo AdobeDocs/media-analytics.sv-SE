@@ -1,15 +1,16 @@
 ---
 title: Parametrar för spelartillstånd
-description: I det här avsnittet beskrivs parametrar för spårning av spelartillstånd.
+description: '"Lär dig mer om parametrar för spårning av spelartillstånd för helskärmsläge, bildtext, ljud av och bild i bildegenskaper."'
 uuid: 2a6b9247-a694-46e9-98e1-424c08c27ec2
-translation-type: tm+mt
-source-git-commit: 1cf631d7f3d5365a02be99af78655ac3b53fb3cb
+exl-id: cd51ed3a-fe37-41e9-8243-dfd9deb514c1
+feature: '"Media Analytics, Variables"'
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '2236'
+source-wordcount: '2249'
 ht-degree: 1%
 
 ---
-
 
 # Parametrar för spelartillstånd{#player-state-parameters}
 
@@ -18,7 +19,7 @@ I det här avsnittet visas en lista med data om spelartillstånd som Adobe samla
 Beskrivning av tabelldata:
 
 * **implementering:** information om implementeringsvärden och -krav
-   * *Key*  - Variable, ange antingen manuellt i appen eller automatiskt av Adobe Media SDK.
+   * *Key*  - Variable, ange antingen manuellt i appen eller automatiskt med Adobe Media SDK.
    * *Obligatoriskt*  - Anger om parametern krävs för grundläggande videospårning.
    * *Typ*  - Anger vilken typ av variabel som ska anges, strängen eller talet.
    * *Skickat med*  - Anger när data skickas:  *Media* Startis the analytics call sent on media start,  *Ad* Startis, the analytics call sent on ad ad start osv. &quot; ** Closecalls&quot; är de kompilerade analysanrop som skickas direkt från hjärtslagservern till analysservern i slutet av mediesessionen, eller i slutet av annonsen, kapitlet osv. Stäng anrop är inte tillgängliga i nätverkspaketanrop.
