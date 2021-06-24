@@ -1,12 +1,14 @@
 ---
-title: Konfigurera iOS
-description: Installation av Media SDK-program för implementering på iOS.
+title: Ställa in media-SKD på iOS
+description: Följ de här stegen för att konfigurera Media SDK-programmet på iOS.
 uuid: a1c6be79-a6dc-47b6-93b3-ac7b42f1f3eb
 exl-id: fe7662b5-1700-4bd6-b542-66aa8493459d
-source-git-commit: 0d5edcae0a80357247ada7f61daece9840d5c4b5
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '720'
-ht-degree: 6%
+source-wordcount: '731'
+ht-degree: 5%
 
 ---
 
@@ -152,7 +154,7 @@ programMer information om Adobe Mobile SDK-dokumentationen finns i  [iOS SDK 4.x
    >
    >Kontrollera att din `ADBMediaHeartbeat`-instans är tillgänglig och att *inte frigörs förrän i slutet av sessionen*. Den här instansen används för alla följande spårningshändelser.
 
-## Migrerar från version 1.x till 2.x i iOS {#migrate-to-two-x}
+## Migrera från version 1.x till 2.x i iOS {#migrate-to-two-x}
 
 I version 2.x konsolideras alla publika metoder i klassen `ADBMediaHeartbeat` så att det blir enklare för utvecklare. Alla konfigurationer har konsoliderats till klassen `ADBMediaHeartbeatConfig`.
 
