@@ -2,16 +2,17 @@
 title: Federated Analytics
 description: Federated Analytics-tjänsten tillhandahåller ett system för delning av Adobe Analytics för direktuppspelande mediedata mellan två partners.
 uuid: a82ace81-c2f6-4799-9a62-4c6a737a7dab
-translation-type: tm+mt
-source-git-commit: 82b38f7870b6f890aaa812de30fa2d02d4f3ba8a
+exl-id: 81970370-663c-49d5-b13c-628d294be178
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '554'
 ht-degree: 92%
 
 ---
 
-
-# Federated Analytics {#federated-analytics}
+# Federated Analytics{#federated-analytics}
 
 Tjänsten Federated Analytics är ett system för att dela Adobe Media Analytics-data (ljud och video) mellan två parter.
 De standardiserade mätdata som skapas med Media Analytics är ett kännetecken för Federated Analytics, vilket gör att samma data kan samlas in i en enda rapport från flera olika källor.
