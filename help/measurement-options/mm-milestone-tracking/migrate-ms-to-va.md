@@ -1,17 +1,18 @@
 ---
-title: Migrera från milstolpe till mediaanalys
-description: Migrera från milstolpe till mediaanalys
+title: Lär dig hur du migrerar från milstolpe till medieanalys
+description: Lär dig hur du ändrar milstolpsvariabler till Media Analytics Metrics och Milestone-modulmetoder till Media Analytics-syntax.
 uuid: fdc96146-af63-48ce-b938-c0ca70729277
 exl-id: 655841ed-3a02-4e33-bbc9-46fb14302194
-translation-type: tm+mt
-source-git-commit: d4491dfec33d8729f40bcef1d57622467443bdbb
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '675'
-ht-degree: 12%
+source-wordcount: '692'
+ht-degree: 11%
 
 ---
 
-# Migrera från milstolpe till medieanalys {#migrating-from-milestone-to-media-analytics}
+# Migrera från milstolpe till mediaanalys {#migrating-from-milestone-to-media-analytics}
 
 ## Översikt {#overview}
 
