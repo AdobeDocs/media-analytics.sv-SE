@@ -1,12 +1,16 @@
 ---
-title: VOD-uppspelning med buffring
-description: Ett exempel på hur du spårar VOD-innehåll med Media SDK.
+title: VOD Playback with Buffering
+description: Visa ett exempel på hur du spårar VOD-innehåll med Media SDK.
 uuid: 958f7692-7193-40fb-a8e7-2ff4fa805330
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: 3a8f913f-cb51-45ae-ac1d-862ea1e7c994
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '229'
+ht-degree: 2%
 
 ---
-
 
 # VOD-uppspelning med buffring{#vod-playback-with-buffering}
 
@@ -14,11 +18,11 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 I det här scenariot inträffar viss buffring när VOD-innehåll spelas upp.
 
-Om inget annat anges är nätverksanropen i det här scenariot samma som anropen i [VOD-uppspelningen utan annonseringsscenario](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) .
+Om inget annat anges är nätverksanropen i det här scenariot samma som anropen i [VOD-uppspelningen utan annonser](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md)-scenariot.
 
-| Utlösare | Heartbeat-metod | Nätverksanrop | Anteckningar |
+| Utlösare   | Heartbeat-metod   | Nätverksanrop   | Anteckningar   |
 |---|---|---|---|
-| Användaren klickar **[!UICONTROL Play]** | `trackSessionStart` | Börja med Analytics-innehåll, starta pulsslagsinnehåll | Detta kan vara en användare som klickar **[!UICONTROL Play]** eller en automatisk uppspelningshändelse. |
+| Användaren klickar på **[!UICONTROL Play]** | `trackSessionStart` | Börja med Analytics-innehåll, starta pulsslagsinnehåll | Det kan vara en användare som klickar på **[!UICONTROL Play]** eller en automatisk uppspelningshändelse. |
 | Den första bildrutan i videon spelas upp. | `trackPlay` | Spela upp pulsslagsinnehåll | Den här metoden utlöser timern. Hjärtslag skickas var 10:e sekund så länge uppspelningen fortsätter. |
 | Innehållet spelas upp. |  | Hjärtslag för innehåll |  |
 | Bufferten börjar. | `trackEvent:BufferStart` | Heartbeat-buffert |  |
@@ -222,4 +226,3 @@ this._mediaHeartbeat.trackSessionEnd();
 ........ 
 ........ 
 ```
-
