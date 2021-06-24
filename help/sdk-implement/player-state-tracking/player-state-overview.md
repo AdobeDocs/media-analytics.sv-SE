@@ -1,49 +1,50 @@
 ---
-title: Om spårning av spelarstatus
-description: I det här avsnittet beskrivs spårningsfunktionen för spelarstatus, inklusive krav och riktlinjer för implementering och rapportering av spelartillstånd.
-translation-type: tm+mt
-source-git-commit: 4c11efd0b8bb457246c746621e7fbb9fbda621b2
+title: Om Spårning av spelartillstånd
+description: Läs mer om funktionen för spårning av spelartillstånd, inklusive krav och riktlinjer för implementering och rapportering av spelarlägen.
+exl-id: c678e182-74e4-4f46-8596-7be57e645c66
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '404'
+source-wordcount: '405'
 ht-degree: 0%
 
 ---
 
+# Om Spårning av spelartillstånd
 
-# Om spårning av spelarstatus
+För att optimera produktupplevelsen och öka värdet för ert företag är det viktigt att förstå kundbeteendet när ni tittar på videor. Detta inkluderar tiden som tillbringats i olika spelarlägen.  Det är också viktigt att ha flexibiliteten att skapa och mäta nya spelarlägen och händelser efter behov.
 
-För att optimera din produktupplevelse och ditt företags enhetsvärde är det viktigt att förstå kundbeteendet när du visar videor. Detta omfattar den tid som tillbringas inom olika spelarstater.  Det är också viktigt att ha flexibiliteten att skapa och mäta nya spelarstater och evenemang efter behov.
+Med Spårning av spelarstatus kan du fånga upp visningsprogrammets interaktion under uppspelning med en standarduppsättning av lösningsvariabler för helskärmsläge, undertexter, ljud av, bild-i-bild och fokus.  Spårning av spelarstatus ger även flexibilitet att skapa anpassade spelarlägen. Du kan använda variabler för spårning av spelartillstånd för rapportering i Analysis Workspace.
 
-Spårning av spelarstatus ger möjlighet att fånga in visningsinteraktion under uppspelning med hjälp av en standarduppsättning lösningsvariabler för helskärm, sluten bildtext, tyst läge, bild i bild och fokus.  Spårning av spelarstatus ger även möjlighet att skapa anpassade spelarlägen. Du kan använda mellanlagsspårningsvariabler för rapportering i Analysis Workspace.
-
-Om du vill spela in ändringar av spelartillståndet uppdaterar lägesspårning videomätningens metadata. Om du t.ex. vill bestämma &quot;sant&quot; videoengagemang mäter Spårning av spelarstatus den tid som läggs på ljudet jämfört med passiva eller icke-aktiva videovyer när ljudet är avstängt eller den tid som används i läget Normal kontra helskärm.
+Om du vill hämta ändringar av spelarläget uppdaterar Player State Tracking metadata för videomätningen. Om du till exempel vill fastställa videoengagemanget&quot;true&quot; mäter Flash Player State Tracking den tid som spenderas med ljudet i stället för med passiva eller icke-aktiva videobilder när ljudet är avstängt eller den tid som spenderas i läget Normal jämfört med helskärm.
 
 Spårning av spelarstatus ger följande fördelar:
 
-* Tillhandahåller standardvariabler som mäter gemensamma lägen, t.ex. helskärm eller sluten bildtext
-* Tillhandahåller anpassningsbara variabler för att mäta anpassade lägen under en uppspelningssession
-* Måtttid inom ett anpassat spelartillstånd
-* Mäter flera tillstånd som kan vara samtidiga
+* Tillhandahåller standardvariabler som mäter vanliga lägen, till exempel helskärmsläge eller undertextning
+* Tillhandahåller anpassningsbara variabler för mätning av anpassade lägen under en uppspelningssession
+* Mäter tid i ett anpassat spelarläge
+* Mäter flera lägen som kan vara samtidigt
 
-![Spårning av spelarstatus](assets/player_state_tracking.png)
+![Spårning av spelartillstånd](assets/player_state_tracking.png)
 
 ## Krav
 
-Spårning av spelarstatus kräver något av följande för datainsamling:
+Spårning av spelartillstånd kräver något av följande för datainsamling:
 * Media JS SDK 3.0+
-* Chromecast 3.0 SDK för Adobe Marketing Cloud Solutions
-* Media Analytics Extension (används med Adobe Experience Platform (AEP) SDK)
-   * Webbplats: Adobe Media Analytics (3.x SDK) för Audio and Video v1.0+
-   * Mobil: Adobe Media Analytics för ljud och video v2.0+
+* Chromecast 3.0 SDK for Adobe Marketing Cloud Solutions
+* Media Analytics-tillägg (som används med Adobe Experience Platform (AEP) SDK)
+   * Webb: Adobe Media Analytics (3.x SDK) för Audio och Video v1.0+
+   * Mobil: Adobe Media Analytics for Audio and Video v2.0+
 * Media Collection API
 
 ## Riktlinjer
 
-Innan du implementerar lägesspårning bör du tänka på följande riktlinjer.
+Innan du implementerar spårning av spelartillstånd bör du tänka på följande riktlinjer.
 
-* Spelartillståndet beräknas för alla uppspelningstillstånd (ingen uppdelning).
+* Spelarläget beräknas för alla uppspelningslägen (ingen delning).
 * Du kan mäta flera spelarlägen samtidigt.
-* Det maximala antalet uppspelningstillstånd som kan spåras under en uppspelning är 10.
-* Spelarstatusmått skickas till Analytics för att endast rapportera om Media Close-anropet.
-* Kunskap om programstatus upprätthålls inte när ett tillstånd har stoppats. När ett läge har avslutats måste tillståndet startas igen för att fortsätta spåra. För varje nytt uppspelningstillstånd måste spelarens tillstånd startas igen.
-* Spelarlägen hämtas för varje enskild uppspelningssession. Spelartillståndet beräknas inte över uppspelningar.
+* Det högsta antalet spelarlägen som kan spåras under en uppspelning är 10.
+* Statusvärden för spelarstatus skickas till Analytics för att enbart rapportera om Media Close-anropet.
+* Kunskap om programstatus bevaras inte när ett läge har stoppats. När ett läge har avslutats måste läget startas igen för att spårningen ska kunna fortsätta. För varje nytt uppspelningsläge måste spelarens tillstånd startas igen.
+* Spelartillstånd hämtas för varje enskild uppspelningssession - spelarläget beräknas inte för alla uppspelningar.
