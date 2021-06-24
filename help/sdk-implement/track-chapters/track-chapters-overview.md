@@ -1,12 +1,16 @@
 ---
-title: Översikt
+title: Lär dig spåra kapitel och segment
 description: Så här implementerar du kapitel- och segmentspårning med Media SDK.
 uuid: 3fe32425-5e2a-4886-8fea-d91d15671bb0
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: d213b633-be3b-4eb8-be71-0ef55e78a570
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '327'
+ht-degree: 1%
 
 ---
-
 
 # Översikt{#overview}
 
@@ -14,7 +18,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 >
 >Följande instruktioner ger vägledning vid implementering med 2.x SDK:er. Om du implementerar en 1.x-version av SDK kan du hämta utvecklarhandboken här: [Hämta SDK:er.](/help/sdk-implement/download-sdks.md)
 
-Kapitel- och segmentspårning är tillgängligt för anpassade mediekapital eller segment. En del vanliga användningsområden för kapitelspårning är att definiera anpassade segment baserat på mediainnehåll (t.ex. baseboll) eller att definiera innehållssegment mellan annonsbrytningar. Kapitelspårning krävs **inte** för implementering av huvudmediespårning.
+Kapitel- och segmentspårning är tillgängligt för anpassade mediekapital eller segment. En del vanliga användningsområden för kapitelspårning är att definiera anpassade segment baserat på mediainnehåll (t.ex. baseboll) eller att definiera innehållssegment mellan annonsbrytningar. Kapitelspårning är **inte** som krävs för implementeringar av huvudmediespårning.
 
 Kapitelspårning innehåller kapitelstarter, kapitelslutföranden och kapitelhopp. Du kan använda mediaspelarens API med anpassad segmenteringslogik för att identifiera kapitelhändelser och för att fylla i obligatoriska och valfria kapitelvariabler.
 
@@ -22,23 +26,23 @@ Kapitelspårning innehåller kapitelstarter, kapitelslutföranden och kapitelhop
 
 ### Vid kapitelstart
 
-* Skapa kapitelobjektinstansen för kapitlet, `chapterObject`
+* Skapa kapitelobjektinstansen för kapitlet `chapterObject`
 * Fyll i kapitelmetadata, `chapterCustomMetadata`
-* Utlysning `trackEvent(MediaHeartbeat.Event.ChapterStart, chapterObject, chapterCustomMetadata);`
+* Ring `trackEvent(MediaHeartbeat.Event.ChapterStart, chapterObject, chapterCustomMetadata);`
 
 ### Vid kapitelavslutning
 
-* Utlysning `trackEvent(MediaHeartbeat.Event.ChapterComplete);`
+* Ring `trackEvent(MediaHeartbeat.Event.ChapterComplete);`
 
 ### Hoppa över kapitel
 
-* Utlysning `trackEvent(MediaHeartbeat.Event.ChapterSkip);`
+* Ring `trackEvent(MediaHeartbeat.Event.ChapterSkip);`
 
 ## Implementera kapitelspårning {#implement-chapter-tracking}
 
-1. Identifiera när kapitelstarthändelsen inträffar och skapa `ChapterObject` instansen med kapitelinformationen.
+1. Identifiera när kapitelstarthändelsen inträffar och skapa `ChapterObject`-instansen med hjälp av kapitelinformationen.
 
-   Här är referensen för `ChapterObject` kapitelspårning:
+   Här är `ChapterObject` kapitelspårningsreferensen:
 
    >[!NOTE]
    >
@@ -52,9 +56,9 @@ Kapitelspårning innehåller kapitelstarter, kapitelslutföranden och kapitelhop
    | `startTime` | Starttid för kapitel | Ja |
 
 1. Om du inkluderar anpassade metadata för kapitlet skapar du kontextdatavariabler för metadata.
-1. Om du vill börja spåra kapiteluppspelningen anropar du `ChapterStart` händelsen i `MediaHeartbeat` instansen.
-1. När uppspelningen når kapitelslutsgränsen, som definieras av din egen kod, anropar du `ChapterComplete` händelsen i `MediaHeartbeat` instansen.
-1. Om kapiteluppspelningen inte slutfördes eftersom användaren valde att hoppa över kapitlet (till exempel om användaren söker utanför kapitelgränsen) anropar du händelsen `ChapterSkip` i MediaHeartbeat-instansen.
+1. Om du vill börja spåra kapiteluppspelningen anropar du händelsen `ChapterStart` i `MediaHeartbeat`-instansen.
+1. När uppspelningen når kapitelslutsgränsen, enligt definitionen i den anpassade koden, anropar du händelsen `ChapterComplete` i `MediaHeartbeat`-instansen.
+1. Om kapiteluppspelningen inte slutfördes eftersom användaren valde att hoppa över kapitlet (till exempel om användaren söker utanför kapitelgränsen), anropar du händelsen `ChapterSkip` i MediaHeartbeat-instansen.
 1. Om det finns ytterligare kapitel upprepar du steg 1 till 5.
 
 I följande exempelkod används JavaScript 2.x SDK för en HTML5-mediespelare. Du bör använda den här koden med den viktigaste mediespelningskoden.
@@ -84,4 +88,3 @@ if (e.type == "chapter skip") {
     this.mediaHeartbeat.trackEvent(MediaHeartbeat.Event.ChapterSkip); 
 }; 
 ```
-
