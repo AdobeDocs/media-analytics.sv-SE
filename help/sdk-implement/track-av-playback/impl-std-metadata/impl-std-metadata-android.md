@@ -1,28 +1,32 @@
 ---
-title: Implementera standardmetadata på Android
-description: Beskriver hur du ställer in standardmetadata för video och annonsering som ska skickas med spårningsanrop på Android.
+title: Lär dig hur du implementerar standardmetadata på Android
+description: Lär dig hur du ställer in standardmetadata för video och annonsering som ska skickas med spårningsanrop på Android.
 uuid: c48b4190-b062-4c4e-9c40-8dde4598a50e
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: 31afd8b5-0f23-4025-afcb-6df906cf6be5
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '108'
+ht-degree: 6%
 
 ---
 
-
-# Implementera standardmetadata på Android{#implement-standard-metadata-on-android}
+# Implementera standardmetadata i Android{#implement-standard-metadata-on-android}
 
 ## Standardmetadatakonstanter
 
-| Konstantnamn | Beskrivning |
+| Konstantnamn | Beskrivning   |
 |---|---|
 | `MediaHeartbeat.MediaObjectKey.StandardMediaMetadata` | Konstant för att bifoga standardmetadata på `MediaObject`. |
 
 ## API-referens för metadatanycklar
 
-* Skapa ett `HashMap` standardpar med metadatanyckelvärden.
+* Skapa ett `HashMap`-par med standardmetadatanyckelvärden.
    * [Metadatanycklar för video](https://adobe-marketing-cloud.github.io/media-sdks/reference/android/com/adobe/primetime/va/simple/MediaHeartbeat.VideoMetadataKeys.html)
    * [Tangenter för ljudmetadata](https://adobe-marketing-cloud.github.io/media-sdks/reference/android/com/adobe/primetime/va/simple/MediaHeartbeat.AudioMetadataKeys.html)
-* Ange standardmetadata `HashMap` för `MediaInfo` att använda konstanten Standard Metadata för metadata.
-* Ange det här `MediaInfo` objektet när du anropar `trackSessionStart()` API:t.
+* Ange standardmetadata `HashMap` på `MediaInfo` med konstanten Standard Metadata för metadata.
+* Ange det här `MediaInfo`-objektet när du anropar API:t `trackSessionStart()`.
 
 ## Exempel på implementeringar
 
