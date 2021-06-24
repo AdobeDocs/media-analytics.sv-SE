@@ -1,23 +1,24 @@
 ---
-title: Översikt
-description: Översikt över hur du konfigurerar Media SDK för mediespårning i dina mobil-, OTT- och webbläsarprogram (JS).
+title: Implementera SDK:er som förklaras
+description: '"Lär dig hur du konfigurerar Media SDK för mediespårning i dina mobil-, OTT- och webbläsarprogram (JS)."'
 uuid: 06fefedb-b0c8-4f7d-90c8-e374cdde1695
-translation-type: tm+mt
-source-git-commit: 300eb77858296f0246a2cb484386c0dcdf8b87b9
+exl-id: a175332e-0bdc-44aa-82cb-b3f879e7abfc
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '734'
-ht-degree: 1%
+source-wordcount: '739'
+ht-degree: 3%
 
 ---
-
 
 # Översikt{#setup-overview}
 
 >[!IMPORTANT]
 >
->När stödet för version 4 Mobile SDK upphör den 31 augusti 2021 upphör även stödet för Media Analytics SDK för iOS och Android.  Mer information finns i Vanliga frågor om [supporten för Media Analytics SDK](/help/sdk-implement/end-of-support-faqs.md).
+>När stödet för version 4 Mobile SDK upphör den 31 augusti 2021 upphör även stödet för Media Analytics SDK för iOS och Android i Adobe.  Mer information finns i [Vanliga frågor och svar om Media Analytics SDK när support upphör](/help/sdk-implement/end-of-support-faqs.md).
 
-Följande instruktioner gäller för 2.x Media SDK:er. Om du implementerar en 1.x-version av Media SDK läser du [1.x Media SDK-dokumentationen.](/help/sdk-implement/download-sdks.md) Information om Primetime-integratörer finns i _Primetime Media SDK-dokumentation_ nedan.
+Följande instruktioner gäller för 2.x Media SDK:er. Om du implementerar en 1.x-version av Media SDK läser du [1.x Media SDK-dokumentationen.](/help/sdk-implement/download-sdks.md) Information om Primetime-integratörer finns i  _Primetime Media SDK-_ dokumentationen nedan.
 
 ## Stöd för minst plattformsversion {#minimum-platform-version}
 
@@ -41,7 +42,7 @@ Det finns tre SDK-huvudkomponenter för mediespårning:
 
 Utför följande implementeringssteg:
 
-1. Skapa en `MediaHeartbeatConfig` instans och ange parametervärden för config.
+1. Skapa en `MediaHeartbeatConfig`-instans och ange parametervärden för config.
 
    |  Variabelnamn  | Beskrivning  | Obligatoriskt |  Standardvärde  |
    |---|---|:---:|---|
@@ -50,14 +51,14 @@ Utför följande implementeringssteg:
    | `ovp` | Namnet på onlinemedieplattformen som innehållet distribueras via | Nej | Tom sträng |
    | `appVersion` | Version av mediespelarappen/SDK | Nej | Tom sträng |
    | `playerName` | Namnet på den mediespelare som används, dvs.&quot;AVPlayer&quot;,&quot;HTML5 Player&quot;,&quot;My Custom Player&quot; | Nej | Tom sträng |
-   | `ssl` | Anger om anrop ska göras via HTTPS | Nej | false |
-   | `debugLogging` | Anger om felsökningsloggning är aktiverat | Nej | false |
+   | `ssl` | Anger om anrop ska göras via HTTPS | Nej | falskt |
+   | `debugLogging` | Anger om felsökningsloggning är aktiverat | Nej | falskt |
 
 1. Implementera `MediaHeartbeatDelegate`.
 
    |  Metodnamn  |  Beskrivning  | Obligatoriskt |
    | --- | --- | :---: |
-   | `getQoSObject()` | Returnerar den `MediaObject` instans som innehåller aktuell QoS-information. Den här metoden anropas flera gånger under en uppspelningssession. Spelarimplementeringen måste alltid returnera de senast tillgängliga QoS-data. | Ja |
+   | `getQoSObject()` | Returnerar den `MediaObject`-instans som innehåller den aktuella QoS-informationen. Den här metoden anropas flera gånger under en uppspelningssession. Spelarimplementeringen måste alltid returnera de senast tillgängliga QoS-data. | Ja |
    | `getCurrentPlaybackTime()` | Returnerar spelhuvudets aktuella position. För VOD-spårning anges värdet i sekunder från mediaobjektets början. För LINEAR/LIVE tracking anges värdet i sekunder från programmets början. | Ja |
 
    >[!TIP]
@@ -71,17 +72,17 @@ Utför följande implementeringssteg:
    | `fps` | Bildrutorna som visas per sekund. | Ja |
    | `droppedFrames` | Antalet uteslutna bildrutor hittills. | Ja |
 
-1. Skapa `MediaHeartbeat` instansen.
+1. Skapa `MediaHeartbeat`-instansen.
 
-   Använd `MediaHertbeatConfig` och `MediaHertbeatDelegate` för att skapa `MediaHeartbeat` instansen.
+   Använd `MediaHertbeatConfig` och `MediaHertbeatDelegate` för att skapa `MediaHeartbeat`-instansen.
 
    >[!IMPORTANT]
    >
-   >Se till att din `MediaHeartbeat` instans är tillgänglig och inte tas bort förrän i slutet av sessionen. Den här instansen kommer att användas för alla följande mediespårningshändelser.
+   >Se till att din `MediaHeartbeat`-instans är tillgänglig och inte tas bort förrän i slutet av sessionen. Den här instansen kommer att användas för alla följande mediespårningshändelser.
 
    >[!TIP]
    >
-   >`MediaHeartbeat` kräver en instans av `AppMeasurement` för att skicka anrop till Adobe Analytics.
+   >`MediaHeartbeat` kräver en instans av  `AppMeasurement` för att skicka anrop till Adobe Analytics.
 
 1. Kombinera alla bitar.
 
@@ -127,18 +128,20 @@ Utför följande implementeringssteg:
 
 Spåra implementeringar med Media Analytics genererar två typer av spårningsanrop:
 
-* Media- och annonsanrop skickas direkt till Adobe Analytics-servern (AppMeasurement).
+* Media- och startanrop skickas direkt till Adobe Analytics-servern (AppMeasurement).
 * Anrop till pulsslag skickas till Media Analytics-spårningsservern (hjärtslag) som bearbetas där och skickas vidare till Adobe Analytics-servern.
 
-* **Adobe Analytics-server**(AppMeasurement) Mer information om hur du spårar serveralternativ finns i Fylla i variablerna trackingServer och trackingServerSecure [korrekt.](https://helpx.adobe.com/analytics/kb/determining-data-center.html)
+* **Adobe Analytics-**
+server (AppMeasurement) Mer information om hur du spårar serveralternativ finns i Fylla i variablerna trackingServer och trackingServerSecure  [korrekt.](https://helpx.adobe.com/analytics/kb/determining-data-center.html)
 
    >[!IMPORTANT]
    >
-   >En RDC-spårningsserver eller CNAME som löser problem med en RDC-server krävs för tjänsten Experience Cloud Visitor ID.
+   >Det krävs en RDC-spårningsserver eller CNAME som kan matchas till en RDC-server för Experience Cloud Visitor ID-tjänsten.
 
-   Analysspårningsservern ska sluta med &quot;`.sc.omtrdc.net`&quot; eller vara en CNAME.
+   Analysspårningsservern ska avslutas med `.sc.omtrdc.net` eller vara en CNAME.
 
-* ** Media Analytics-server (Heartbeats)**Den har alltid formatet &quot;`[your_namespace].hb.omtrdc.net`&quot;. Värdet &quot;`[your_namespace]`&quot; anger ditt företag och tillhandahålls av Adobe.
+* ** Media Analytics-server (Heartbeats)**
+Formatet `[your_namespace].hb.omtrdc.net` har alltid angetts. Värdet `[your_namespace]` anger ditt företag och tillhandahålls av Adobe.
 
 Mediespårning fungerar likadant på alla plattformar, både datorer och mobila enheter. Ljudspårning fungerar för närvarande på mobilplattformar. För alla spårningsanrop finns det några viktiga universella variabler som ska valideras:
 
@@ -146,13 +149,13 @@ Mediespårning fungerar likadant på alla plattformar, både datorer och mobila 
 
 | Video Analytics 1.x SDKs  |  Utvecklarhandböcker (endast PDF-filer) |
 | --- | --- |
-| Android | [Konfigurera för Android ](vhl-dev-guide-v15_android.pdf) |
-| AppleTV | [Konfigurera för AppleTV ](vhl-dev-guide-v1x_appletv.pdf) |
-| Chromecast | [Konfigurera för Chromecast ](chromecast_1.x_sdk.pdf) |
-| iOS | [Konfigurera för iOS ](vhl-dev-guide-v15_ios.pdf) |
-| JavaScript | [Konfigurera för JavaScript ](vhl-dev-guide-v15_js.pdf) |
+| Android | [Konfigurera för Android  ](vhl-dev-guide-v15_android.pdf) |
+| AppleTV | [Konfigurera för AppleTV  ](vhl-dev-guide-v1x_appletv.pdf) |
+| Chromecast | [Konfigurera för Chromecast  ](chromecast_1.x_sdk.pdf) |
+| iOS | [Konfigurera för iOS  ](vhl-dev-guide-v15_ios.pdf) |
+| JavaScript | [Konfigurera för JavaScript  ](vhl-dev-guide-v15_js.pdf) |
 | Primetime | <ul> <li> Android:   [Konfigurera medieanalys](https://help.adobe.com/en_US/primetime/psdk/android/1.4/index.html#PSDKs-task-Initialize_and_configure_video_analytics_) </li> <li> DHLS:   [Konfigurera medieanalys](https://help.adobe.com/en_US/primetime/psdk/dhls/index.html#PSDKs-task-Initialize_and_configure_video_analytics_) </li> <li> iOS:   [Konfigurera medieanalys](https://help.adobe.com/en_US/primetime/psdk/ios/1.4/index.html#PSDKs-task-Initialize_and_configure_video_analytics_) </li> </ul> |
-| TVML | [Konfigurera för TVML ](vhl_tvml.pdf) |
+| TVML | [Konfigurera för TVML  ](vhl_tvml.pdf) |
 
 ## Primetime Media SDK-dokumentation {#primetime-docs}
 
