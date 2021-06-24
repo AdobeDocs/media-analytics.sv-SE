@@ -1,12 +1,16 @@
 ---
 title: Återuppta inaktiva sessioner
-description: Så här återtar du en inaktiv session.
+description: Lär dig hur du återtar en inaktiv session.
 uuid: 3ff1205d-7bbe-4016-9bd7-6e34b7862c4c
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: ee4cf7f5-5788-4d35-a04d-4ed714ccd663
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '160'
+ht-degree: 3%
 
 ---
-
 
 # Återuppta inaktiva sessioner{#resuming-inactive-sessions}
 
@@ -19,7 +23,7 @@ Media SDK spårar automatiskt hur lång medieuppspelningen är i ett av följand
 * Stängd
 * Buffring
 
-Om en mediespårningssession är inaktiv i mer än 30 minuter stängs sessionen automatiskt. Om användaren återupptar efter en tidigare inaktiv videospårningssession (`trackPlay`), skapar Media Heartbeat automatiskt en ny videosession med den videoinformation och de metadata som användes tidigare och skickar en CV-händelse (CV). Mer information finns i [Ljud- och videoparametrar.](/help/metrics-and-metadata/audio-video-parameters.md)
+Om en mediespårningssession är inaktiv i mer än 30 minuter stängs sessionen automatiskt. Om användaren återupptar efter en tidigare inaktiv videospårningssession (`trackPlay`) skapar Media Heartbeat automatiskt en ny videosession med den videoinformation och de metadata som användes tidigare och skickar en resume-händelse. Mer information finns i [Parametrar för ljud och video.](/help/metrics-and-metadata/audio-video-parameters.md)
 
 ## Återuppta tidigare stängd session manuellt
 
@@ -86,4 +90,3 @@ _onmediaLoad = function () {
   this._mediaHeartbeat.trackSessionStart(mediaObject, contextData); 
 };
 ```
-
