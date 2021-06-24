@@ -1,14 +1,18 @@
 ---
-title: Implementera standardmetadata på Chromecast
-description: Beskriver hur du ställer in standardmetadata för video och annonsering på Chromecast.
+title: Lär dig hur du implementerar standardmetadata i Chromecast
+description: Lär dig hur du ställer in standardmetadata för video och annonsering på Chromecast.
 uuid: 1560d3e0-29f5-4678-9f01-c672e0ae547b
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: 052ede4b-ea8a-4ca6-bf02-0aab22a8bcda
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '61'
+ht-degree: 11%
 
 ---
 
-
-# Implementera standardmetadata på Chromecast{#implement-standard-metadata-on-chromecast}
+# Implementera standardmetadata i Chromecast{#implement-standard-metadata-on-chromecast}
 
 Instansiera ett metadataobjekt av standardtyp, fyll i önskade variabler och ange metadataobjektet i objektet Mediepulsslag. Exempel:
 
@@ -28,4 +32,4 @@ standardAudioMetadata[AudioMetadataKeys.ALBUM] = "Sample album";
 mediaObject[ADBMobile.media.MediaObjectKey.StandardAudioMetadata] = standardAudioMetadata;
 ```
 
-Se den omfattande listan med metadata för ljud och video här: Parametrar för [ljud och video.](/help/metrics-and-metadata/audio-video-parameters.md)
+Se den omfattande listan med metadata för ljud och video här: [Parametrar för ljud och video.](/help/metrics-and-metadata/audio-video-parameters.md)
