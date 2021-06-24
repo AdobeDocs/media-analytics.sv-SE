@@ -1,14 +1,15 @@
 ---
 title: Vad är Media Stream Attribution?
 description: Lär dig hur du länkar programåtgärder till mediespårningsdata utan att behöva använda ytterligare bearbetningsregler och anpassade variabler.
-translation-type: tm+mt
-source-git-commit: 901539a2095b23f9108a934eb61d182b14ccd9e8
+exl-id: 75cc9088-776d-4b10-b358-9fff956a7eb7
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '231'
+source-wordcount: '233'
 ht-degree: 1%
 
 ---
-
 
 # Attribution för medieström
 
