@@ -1,11 +1,15 @@
 ---
-title: Migrera från den fristående Media SDK till Adobe Launch - iOS
-description: Instruktioner och kodexempel som hjälper dig att migrera från Media SDK till Launch för iOS.
-translation-type: tm+mt
-source-git-commit: bc896cc403923e2f31be7313ab2ca22c05893c45
+title: '"Migrering från det fristående mediet-SDK till Adobe Launch - iOS"'
+description: Lär dig hur du migrerar från Media SDK till Launch för iOS.
+exl-id: f70b8e1b-cb9f-4230-86b2-171bdaed4615
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '359'
+ht-degree: 0%
 
 ---
-
 
 # Migrera från den fristående Media SDK till Adobe Launch - iOS
 
@@ -13,7 +17,8 @@ source-git-commit: bc896cc403923e2f31be7313ab2ca22c05893c45
 
 ### Fristående media SDK
 
-I det fristående Media SDK konfigurerar du spårningskonfigurationen i appen och skickar den till SDK när du skapar spåraren.
+I det fristående Media SDK konfigurerar du spårningskonfigurationen i appen,
+och skicka det till SDK när du skapar spåraren.
 
 ```objective-c
 ADBMediaHeartbeatConfig *config = 
@@ -33,8 +38,8 @@ ADBMediaHeartbeat* tracker =
 
 ### Starta tillägg
 
-1. I Experience Platform Launch klickar du på [!UICONTROL Extensions] fliken för din mobila egenskap
-1. På fliken [!UICONTROL Catalog] letar du reda på Adobe Media Analytics för ljud- och videotillägg och klickar på [!UICONTROL Install].
+1. Klicka på fliken [!UICONTROL Extensions] i Experience Platform Launch för din mobila egenskap
+1. På fliken [!UICONTROL Catalog] letar du reda på tillägget Adobe Media Analytics for Audio and Video och klickar på [!UICONTROL Install].
 1. Konfigurera spårningsparametrarna på sidan för tilläggsinställningar.
 Media-tillägget använder de konfigurerade parametrarna för spårning.
 
@@ -46,7 +51,9 @@ Media-tillägget använder de konfigurerade parametrarna för spårning.
 
 ### Fristående media SDK
 
-I den fristående Media SDK skapar du objektet manuellt och konfigurerar spårningsparametrarna `ADBMediaHeartbeatConfig` . Implementera delegatgränssnittet som`getQoSObject()` visar och `getCurrentPlaybackTime()functions.`
+I den fristående Media SDK skapar du objektet `ADBMediaHeartbeatConfig` manuellt
+och konfigurera spårningsparametrarna. Implementera delegatgränssnittet som visar
+`getQoSObject()` och `getCurrentPlaybackTime()functions.`
 
 Skapa en MediaHeartbeat-instans för spårning:
 
@@ -120,16 +127,23 @@ Spåraren väljer automatiskt konfigurationen från den konfigurerade startegens
 
 ### Fristående media SDK
 
-I den fristående Media SDK skickas ett delegatobjekt som implementerar`ADBMediaHeartbeartDelegate` protokollet när spåraren skapas.
-Implementeringen bör returnera den senaste QoE-koden och spelhuvudet när spåraren anropar `getQoSObject()` - och `getCurrentPlaybackTime()` -gränssnittsmetoderna.
+I det fristående Media SDK är ett delegatobjekt som implementerar
+`ADBMediaHeartbeartDelegate`-protokollet skickas när spåraren skapas.
+Implementeringen bör returnera det senaste QoE-numret och spelhuvudet när
+spåraren anropar gränssnittet `getQoSObject()` och `getCurrentPlaybackTime()`
+metoder.
 
 ### Starta tillägg
 
-Implementeringen ska uppdatera spelarens spelhuvud genom att`updateCurrentPlayhead` anropa metoden som exponeras av spåraren. För korrekt spårning bör du anropa den här metoden minst en gång per sekund.
+Implementeringen ska uppdatera spelarens spelhuvud genom att anropa
+`updateCurrentPlayhead`-metoden som exponeras av spåraren. För korrekt spårning
+anropa den här metoden minst en gång per sekund.
 
 [Media API-referens - Uppdatera aktuellt spelhuvud](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics/media-api-reference#updatecurrentplayhead)
 
-Implementeringen bör uppdatera QoE-informationen genom att anropa den`updateQoEObject` metod som används av spåraren. Du bör anropa den här metoden närhelst det finns en ändring i kvalitetsmåtten.
+Implementeringen bör uppdatera QoE-informationen genom att anropa
+`updateQoEObject`-metoden som exponeras av spåraren. Du bör anropa den här metoden
+närhelst det sker en ändring av kvalitetsmåtten.
 
 [Media API-referens - Uppdatera QoE-objekt](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics/media-api-reference#updateqoeobject)
 
