@@ -1,12 +1,16 @@
 ---
-title: Live-huvudinnehåll med sekventiell spårning
-description: Ett exempel på hur du spårar direktsänt innehåll med sekventiell spårning med Media SDK.
+title: Live Main Content with Sequential Tracking
+description: Visa ett exempel på hur du spårar direktsänt innehåll med sekventiell spårning med Media SDK.
 uuid: b03477b6-9be8-4b67-a5a0-4cef3cf262ab
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: 277a72b8-453b-41e5-b640-65c43587baf8
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '521'
+ht-degree: 2%
 
 ---
-
 
 # Live-huvudinnehåll med sekventiell spårning{#live-main-content-with-sequential-tracking}
 
@@ -14,13 +18,13 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 I det här scenariot finns det en liveresurs utan annonser som spelas upp i 40 sekunder efter att liveströmmen anslutits.
 
-Detta är samma scenario som [VOD-uppspelning utan annonser](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) , men en del av innehållet stegas igenom och en sökning utförs från en punkt i huvudinnehållet till en annan.
+Detta är samma scenario som [VOD-uppspelningen utan annonser](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md)-scenariot, men en del av innehållet stegas igenom och en sökning utförs från en punkt i huvudinnehållet till en annan punkt.
 
-| Utlösare | Heartbeat-metod |  Nätverksanrop |  Anteckningar |
+| Utlösare | Heartbeat-metod |  Nätverksanrop  |  Anteckningar   |
 | --- | --- | --- | --- |
-| Användaren klickar [!UICONTROL Play] | trackSessionStart | Börja med Analytics-innehåll, starta pulsslagsinnehåll | Mätbiblioteket känner inte till att det finns en förrollsannonsering, så dessa nätverksanrop är identiska med [VOD-uppspelningen utan annonseringsscenario](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) . |
+| Användaren klickar på [!UICONTROL Play] | trackSessionStart | Börja med Analytics-innehåll, starta pulsslagsinnehåll | Mätbiblioteket är ovetande om att det finns en förrollad annons, så dessa nätverksanrop är identiska med [VOD-uppspelningen utan annonser](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md)-scenariot. |
 | Den första bildrutan i innehållet spelas upp. | trackPlay | Spela upp pulsslagsinnehåll | När kapitelinnehåll spelas upp före huvudinnehållet startar Heartslag när kapitlet börjar. |
-| Innehåll spelas upp |  | Hjärtslag för innehåll | Detta nätverksanrop är exakt detsamma som [VOD-uppspelningen utan annonseringsscenario](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) . |
+| Innehåll spelas upp |  | Hjärtslag för innehåll | Detta nätverksanrop är exakt detsamma som [VOD-uppspelningen utan annonser](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md)-scenariot. |
 | Session1 över (Episod1 avslutad) | trackComplete/trackSessionEnd | Hearsbeat-innehåll slutfört | Komplett innebär att session1 för det första avsnittet nåddes och sågs fullständigt. Innan du startar sessionen för nästa avsnitt måste den här sessionen avslutas. |
 | Episod2 har startats (session2 har startats) | trackSessionStart | Start av pulsslaginnehåll för analysinnehåll | Detta beror på att användaren tittade på det första avsnittet och fortsatte att titta på ett annat avsnitt |
 | Mediets första bildruta | trackPlay | Spela upp pulsslagsinnehåll | Den här metoden utlöser timern och från och med nu skickas hjärtslag var 10:e sekund så länge uppspelningen fortsätter. |
@@ -33,18 +37,18 @@ Detta är samma scenario som [VOD-uppspelning utan annonser](/help/sdk-implement
 
 | Parameter | Värde | Anteckningar |
 |---|---|---|
-| `s:sc:rsid` | &lt;Ditt Adobe Report Suite-ID> |  |
-| `s:sc:tracking_serve` | &lt;URL för analysspårningsserver> |  |
+| `s:sc:rsid` | &lt;your Adobe=&quot;&quot; Report=&quot;&quot; Suite=&quot;&quot; ID=&quot;&quot;> |  |
+| `s:sc:tracking_serve` | &lt;your Analytics=&quot;&quot; Tracking=&quot;&quot; Server=&quot;&quot; URL=&quot;&quot;> |  |
 | `s:user:mid` | `s:user:mid` | Ska matcha mittvärdet på Adobe Analytics Content Start Call |
 | `s:event:type` | `"start"` |  |
 | `s:asset:type` | `"main"` |  |
-| `s:asset:media_id` | &lt;Ditt medienamn> |  |
+| `s:asset:media_id` | &lt;your Media=&quot;&quot; Name=&quot;&quot;> |  |
 | `s:stream:type` | `live` |  |
 | `s:meta:*` | *valfri* | Anpassade metadata för mediet |
 
 ## Spela upp pulsslagsinnehåll {#heartbeat-content-play}
 
-Detta ska se nästan exakt ut som anropet till innehållsstart för pulsslag, men med den största skillnaden i parametern&quot;s:event:type&quot;. Alla parametrar bör fortfarande finnas här.
+Detta ska se ut nästan exakt som anropet till Heartbeat Content Start, men med den största skillnaden i parametern &quot;s:event:type&quot;. Alla parametrar bör fortfarande finnas här.
 
 | Parameter | Värde | Anteckningar |
 |---|---|---|
@@ -60,7 +64,7 @@ I innehållets pulsslag kan du leta efter några specifika saker:
 | Parameter | Värde | Anteckningar |
 |---|---|---|
 | `s:event:type` | `"play"` |  |
-| `l:event:playhead` | &lt;playhead position> t.ex. 50, 60, 70 | Detta bör återspegla spelhuvudets aktuella position. |
+| `l:event:playhead` | &lt;playhead position=&quot;&quot;> t.ex. 50, 60, 70 | Detta bör återspegla spelhuvudets aktuella position. |
 
 ## Hearsbeat-innehåll slutfört {#heartbeat-content-complete}
 
@@ -331,4 +335,3 @@ this._mediaHeartbeat.trackSessionEnd();
 
 // Continue tracking further sessions in live stream similarly if required 
 ```
-
