@@ -1,18 +1,22 @@
 ---
-title: Implementera standardannonsmetadata på Android
+title: Lär dig hur du implementerar standardmetadata för annonsering på Android
 description: Så här använder du standardmetadata för annonser i annonsspårning på Android.
 uuid: 19b98bc1-c659-4182-a4ff-b3340fe2453c
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: f1aa017f-b2ae-40ca-b4d9-b508cf45cb0c
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '65'
+ht-degree: 10%
 
 ---
 
-
-# Implementera standardannonsmetadata på Android{#implement-standard-ad-metadata-on-android}
+# Implementera standardmetadata för annonser i Android{#implement-standard-ad-metadata-on-android}
 
 ## Annonskonstanter
 
-| Konstantnamn | Beskrivning |
+| Konstantnamn | Beskrivning   |
 |---|---|
 | `MediaHeartbeat.MediaObjectKey.StandardAdMetadata` | Konstant för att bifoga standardannonsmetadata på annons `MediaObject`. |
 
@@ -27,4 +31,3 @@ standardAdMetadata.put(MediaHeartbeat.AdMetadataKeys.ADVERTISER, "Sample Adverti
 standardAdMetadata.put(MediaHeartbeat.AdMetadataKeys.CAMPAIGN_ID, "Sample Campaign"); 
 adInfo.setValue(MediaHeartbeat.MediaObjectKey.StandardAdMetadata, standardAdMetadata); 
 ```
-
