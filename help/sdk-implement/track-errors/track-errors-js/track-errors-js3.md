@@ -1,14 +1,15 @@
 ---
-title: Spåra fel med JavaScript 3.x
-description: I det här avsnittet beskrivs hur du implementerar felspårning med Media SDK i webbläsarprogram (JS).
-translation-type: tm+mt
-source-git-commit: fa161e2d41629fdfe77100d87d6a44728e23d77f
+title: Lär dig spåra fel med JavaScript 3.x
+description: Lär dig hur du implementerar felspårning med Media SDK i webbläsarappar (JS).
+exl-id: 3769fc47-fbc4-4498-9d2a-04c88cdd0e83
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '95'
+source-wordcount: '99'
 ht-degree: 0%
 
 ---
-
 
 # Spåra fel med JavaScript 3.x{#track-errors-on-javascript}
 
@@ -28,4 +29,4 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Spårning av mediespelarfel stoppar inte mediespårningssessionen. Om mediespelarfelet förhindrar att uppspelningen fortsätter kontrollerar du att mediespårningssessionen stängs genom att ringa `trackSessionEnd` efter att du har anropat `trackError`.
+>Spårning av mediespelarfel stoppar inte mediespårningssessionen. Om mediespelarfelet förhindrar att uppspelningen fortsätter kontrollerar du att mediespårningssessionen stängs genom att anropa `trackSessionEnd` efter att du har anropat `trackError`.
