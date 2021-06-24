@@ -1,14 +1,15 @@
 ---
-title: Spåra upplevelsekvalitet med JavaScript 3.x
-description: I det här avsnittet beskrivs hur du implementerar upplevelsekvalitet (QoE, QoS) med Media SDK i webbläsarprogram med JavaScript 3x.
-translation-type: tm+mt
-source-git-commit: fa161e2d41629fdfe77100d87d6a44728e23d77f
+title: Lär dig att spåra upplevelsekvalitet med JavaScript 3.x
+description: '"Lär dig hur du implementerar upplevelsekvalitet (QoE, QoS) med Media SDK i webbläsarappar med JavaScript 3x."'
+exl-id: b5570e9c-8fb1-4458-bd1a-86ff6fce7813
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '223'
-ht-degree: 0%
+source-wordcount: '226'
+ht-degree: 1%
 
 ---
-
 
 # Spåra upplevelsekvalitet med JavaScript 3.x{#track-quality-of-experience-on-javascript}
 
@@ -18,7 +19,7 @@ ht-degree: 0%
 
 ## Implementerings-QOE
 
-1. Identifiera när bithastigheten ändras under medieuppspelning och skapa `qoeObject` instansen med hjälp av QoE-informationen.
+1. Identifiera när bithastigheten ändras under medieuppspelning och skapa `qoeObject`-instansen med QoE-informationen.
 
    QoEObject-variabler:
 
@@ -45,7 +46,7 @@ ht-degree: 0%
    tracker.updateQoEObject(qoeObject);
    ```
 
-1. När uppspelningen växlar bithastigheter anropar du `BitrateChange` händelsen i Media Heartbeat-instansen:
+1. När uppspelningen växlar bithastigheter anropar du händelsen `BitrateChange` i instansen Mediepulsslag:
 
    ```js
    _onBitrateChange = function() {
@@ -61,9 +62,9 @@ ht-degree: 0%
    >
    >Uppdatera QoE-objektet och anropa bithastighetsändringshändelsen för varje bithastighetsändring. Detta ger de mest exakta QoE-data.
 
-1. Se till att anropa `updateQoEObject()` metoden för att tillhandahålla den senaste QoE-informationen till SDK:n.
+1. Se till att anropa metoden `updateQoEObject()` för att tillhandahålla den senaste QoE-informationen till SDK:n.
 1. När mediespelaren stöter på ett fel och felhändelsen är tillgänglig för spelarens API använder du `trackError()` för att hämta felinformationen. (Se [Översikt](/help/sdk-implement/track-errors/track-errors-overview.md).)
 
    >[!TIP]
    >
-   >Spårning av mediespelarfel stoppar inte mediespårningssessionen. Om mediespelarfelet förhindrar att uppspelningen fortsätter kontrollerar du att mediespårningssessionen stängs genom att ringa `trackSessionEnd()` efter att du har anropat `trackError()`.
+   >Spårning av mediespelarfel stoppar inte mediespårningssessionen. Om mediespelarfelet förhindrar att uppspelningen fortsätter kontrollerar du att mediespårningssessionen stängs genom att anropa `trackSessionEnd()` efter att du har anropat `trackError()`.
