@@ -1,16 +1,20 @@
 ---
 title: SDK-felsökning
-description: I det här avsnittet beskrivs spårning/loggning som är tillgänglig i Media SDK.
+description: Läs mer om spårning/loggning i Media SDK.
 uuid: a5972d87-c593-4b4f-a56f-dca6e25268e1
-translation-type: tm+mt
-source-git-commit: ccdc3e170d125a76d798be7ce1fa5c12eef1f76a
+exl-id: c2de6454-8538-4d07-a099-e278b153d894
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '272'
+ht-degree: 1%
 
 ---
 
+# SDK-felsökning{#sdk-debugging}
 
-# SDK debugging{#sdk-debugging}
-
-Du kan aktivera och inaktivera loggning. Media SDK har en omfattande funktion för spårning/loggning i hela mediespårningsstacken. Du kan aktivera eller inaktivera loggning genom att ange `debugLogging` flaggan för Config-objektet.
+Du kan aktivera och inaktivera loggning. Media SDK har en omfattande funktion för spårning/loggning i hela mediespårningsstacken. Du kan aktivera eller inaktivera loggning genom att ange flaggan `debugLogging` för Config-objektet.
 
 ## Exempelkod för felsökningsloggning
 
@@ -48,7 +52,7 @@ this._mediaHeartbeat = new MediaHeartbeat(mediaDelegate, mediaConfig, appMeasure
 
 ### OTT (kromecast, Roku)
 
-ADBMomobile-biblioteket innehåller felsökningsloggning via `setDebugLogging` metoden. Felsökningsloggning bör anges till `false` för alla produktionsprogram.
+ADBMomobile-biblioteket tillhandahåller felsökningsloggning via metoden `setDebugLogging`. Felsökningsloggning ska anges till `false` för alla produktionsprogram.
 
 #### Roku
 
@@ -64,7 +68,7 @@ ADBMobile.config.setDebugLogging(true)
 
 ## Använda Adobe Bloodhound för att testa Chromecast-program
 
-Under programutvecklingen kan du med Bloodhound visa serveranrop lokalt och eventuellt vidarebefordra data till Adobes samlingsservrar.
+Under programutvecklingen kan du med Bloodhound visa serveranrop lokalt och eventuellt vidarebefordra data till Adobe-samlingsservrar.
 
 <!--
 For more information about Bloodhound, see the following guides:
@@ -75,7 +79,7 @@ For more information about Bloodhound, see the following guides:
 
 >[!IMPORTANT]
 >
->Från och med den 30 april 2017 har Adobe Bloodhound solnedgångar. Från och med 1 maj 2017 kommer inga ytterligare förbättringar att göras och ingen ytterligare support för tekniker eller Adobe Expert Care kommer att ges.
+>Den 30 april 2017 har Adobe Bloodhound solnedgång. Från och med den 1 maj 2017 kommer inga ytterligare förbättringar att göras och ingen ytterligare support för tekniker eller Adobe Expert Care kommer att ges.
 
 ## Loggmeddelanden
 
@@ -87,17 +91,17 @@ Example: [16:10:29 GMT­0700 (PDT).245] [DEBUG] [plugin::player] Resolving qos.s
 ```
 
 * **tidsstämpel:** Detta är den aktuella processortiden (tidszonsindelad för GMT)
-* **nivå:** Det finns fyra definierade meddelandenivåer:
+* **level:** Det finns fyra definierade meddelandenivåer:
    * INFO - Vanligtvis indata från programmet (validera spelarens namn, video-ID etc.)
    * DEBUG - Felsökningsloggar som används av utvecklare för att felsöka mer komplexa problem
    * VARNING - Anger potentiella integrerings-/konfigurationsfel eller Heartbeats SDK-fel
    * FEL - Anger viktiga integreringsfel eller Heartbeats SDK-fel
-* **tagg:** Namnet på den underkomponent som utfärdade loggmeddelandet (vanligtvis klassnamnet)
+* **tagg:** Namnet på den underkomponent som skickade loggmeddelandet (vanligtvis klassnamnet)
 * **meddelande:** Det faktiska spårningsmeddelandet
 
-Du kan använda loggutdata från Media SDK-biblioteket för att verifiera implementeringen. En bra strategi är att söka igenom loggarna efter strängen `#track`. Då markeras alla `track*()` anrop som görs av programmet.
+Du kan använda loggutdata från Media SDK-biblioteket för att verifiera implementeringen. En bra strategi är att söka igenom loggarna efter strängen `#track`. Då markeras alla `track*()`-anrop som gjorts av programmet.
 
-Detta är till exempel vad loggarna som filtrerats efter `#track` kan se ut som:
+Det här är till exempel vad loggarna som filtrerats för `#track` kan se ut så här:
 
 ```js
 [16:10:29 GMT­0700 (PDT).222] [INFO] [plugin::player] #trackVideoLoad() 
@@ -111,4 +115,3 @@ Detta är till exempel vad loggarna som filtrerats efter `#track` kan se ut som:
 [16:11:29 GMT­0700 (PDT).764] [INFO] [plugin::player] #trackComplete() 
 [16:11:29 GMT­0700 (PDT).766] [INFO] [plugin::player] #trackVideoUnload()
 ```
-
