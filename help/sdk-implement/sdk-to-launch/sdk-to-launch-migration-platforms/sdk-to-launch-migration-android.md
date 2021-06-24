@@ -1,19 +1,24 @@
 ---
-title: Migrera från fristående Media SDK till Adobe Launch - Android
-description: Instruktioner och kodexempel som hjälper dig att migrera från Media SDK till Launch för Android.
-translation-type: tm+mt
-source-git-commit: bc896cc403923e2f31be7313ab2ca22c05893c45
+title: '"Migrering från fristående Media SDK till Adobe Launch - Android"'
+description: Lär dig hur du migrerar från Media SDK till Launch för Android.
+exl-id: 26764835-4781-417b-a6c0-ea6ae78d76ae
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '358'
+ht-degree: 0%
 
 ---
 
-
-# Migrera från fristående Media SDK till Adobe Launch - Android
+# Migrering från fristående Media SDK till Adobe Launch - Android
 
 ## Konfiguration
 
 ### Fristående media SDK
 
-I det fristående Media SDK konfigurerar du spårning i appen och skickar den till SDK när du skapar spåraren.
+I det fristående Media SDK konfigurerar du spårning i appen och skickar det till
+SDK när du skapar spåraren.
 
 ```java
 MediaHeartbeatConfig config = new MediaHeartbeatConfig();
@@ -30,8 +35,10 @@ MediaHeartbeat tracker = new MediaHeartbeat(... , config);
 
 ### Starta tillägg
 
-1. Klicka på fliken för din mobila egenskap i Experience Platform Launch [!UICONTROL Extensions] .
-1. Gå till fliken [!UICONTROL Catalog] , leta upp Adobe Media Analytics för ljud- och videotillägg och klicka på [!UICONTROL Install].
+1. Klicka på fliken [!UICONTROL Extensions] i Experience Platform Launch för
+mobil egenskap.
+1. På fliken [!UICONTROL Catalog] letar du reda på Adobe Media Analytics for Audio
+och Video och klicka på [!UICONTROL Install].
 1. Konfigurera spårningsparametrarna på sidan för tilläggsinställningar.
 Media-tillägget använder de konfigurerade parametrarna för spårning.
 
@@ -43,7 +50,10 @@ Media-tillägget använder de konfigurerade parametrarna för spårning.
 
 ### Fristående media SDK
 
-I den fristående Media SDK skapar du objektet manuellt och konfigurerar spårningsparametrarna `MediaHeartbeatConfig` . Implementera delegatgränssnittet för att visa`getQoSObject()` och `getCurrentPlaybackTime()functions.`skapa en `MediaHeartbeat` instans för spårning.
+I den fristående Media SDK skapar du objektet `MediaHeartbeatConfig` manuellt
+och konfigurera spårningsparametrarna. Implementera delegatgränssnittets exponering
+`getQoSObject()` och `getCurrentPlaybackTime()functions.`
+Skapa en `MediaHeartbeat`-instans för spårning.
 
 ```java
 MediaHeartbeatConfig config = new MediaHeartbeatConfig();
@@ -79,7 +89,8 @@ MediaHeartbeatDelegate delegate = new MediaHeartbeatDelegate() {
 
 [Media API-referens - Skapa en mediaspårare](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics/media-api-reference#create-a-media-tracker)
 
-Innan du skapar spåraren bör du registrera medietillägget och de beroende tilläggen med mobilkärnan.
+Innan du skapar spåraren bör du registrera medietillägget och
+beroende tillägg till mobilbasen.
 
 ```java
 // Register the extension once during app launch
@@ -119,15 +130,22 @@ Media.createTracker(new AdobeCallback<MediaTracker>() {
 
 ### Fristående media SDK
 
-I den fristående Media SDK:n skickar du ett delegatobjekt som implementerar gränssnittet när`MediaHeartbeartDelegate` spåraren skapas.  Implementeringen bör returnera den senaste QoE-koden och spelhuvudet när spåraren anropar metoderna för`getQoSObject()` gränssnitt och `getCurrentPlaybackTime()` gränssnitt.
+I den fristående Media SDK:n skickar du ett delegatobjekt som implementerar
+`MediaHeartbeartDelegate`-gränssnittet när spåraren skapas.  Implementeringen
+ska returnera det senaste QoE-numret och spelhuvudet när spåraren anropar
+Gränssnittsmetoderna `getQoSObject()` och `getCurrentPlaybackTime()`.
 
 ### Starta tillägg
 
-Implementeringen bör uppdatera spelarens spelhuvud genom att`updateCurrentPlayhead` anropa metoden som exponeras av spåraren. För korrekt spårning bör du anropa den här metoden minst en gång per sekund.
+Implementeringen bör uppdatera spelarens spelhuvud genom att anropa
+`updateCurrentPlayhead`-metoden som exponeras av spåraren. För korrekt spårning
+anropa den här metoden minst en gång per sekund.
 
 [Media API-referens - Uppdatera aktuell spelare](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics/media-api-reference#updatecurrentplayhead)
 
-Implementeringen bör uppdatera QoE-informationen genom att anropa den `updateQoEObject`metod som exponeras av spåraren. Vi förväntar oss att den här metoden anropas närhelst det finns en ändring i kvalitetsmåtten.
+Implementeringen bör uppdatera QoE-informationen genom att anropa `updateQoEObject`
+metod som exponeras av spåraren. Vi förväntar oss att den här metoden anropas när det finns
+är en förändring av kvalitetsstatistik.
 
 [Media API-referens - Uppdatera QoE-objekt](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics/media-api-reference#updateqoeobject)
 
