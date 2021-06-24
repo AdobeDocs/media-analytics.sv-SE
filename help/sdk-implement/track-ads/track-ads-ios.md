@@ -1,12 +1,16 @@
 ---
-title: Spåra annonser på iOS
+title: Lär dig spåra annonser på iOS
 description: Implementera annonsspårning i iOS-program med Media SDK.
 uuid: e979e679-cde5-4c30-8f34-867feceac13a
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: a352bca9-bcfc-4418-b2a2-c9b1ad226359
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '357'
+ht-degree: 4%
 
 ---
-
 
 # Spåra annonser på iOS{#track-ads-on-ios}
 
@@ -16,7 +20,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ## Konstanter för annonsspårning
 
-| Konstantnamn | Beskrivning |
+| Konstantnamn | Beskrivning   |
 |---|---|
 | `ADBMediaHeartbeatEventAdBreakStart` | Konstant för spårning av AdBreak-starthändelse |
 | `ADBMediaHeartbeatEventAdBreakComplete` | Konstant för spårning av AdBreak Complete-händelse |
@@ -26,7 +30,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ## Implementeringssteg
 
-1. Identifiera när annonsbrytningens gränser börjar, inklusive pre-roll, och skapa en `AdBreakObject` genom att använda annonsbrytningsinformationen.
+1. Identifiera när annonsbrytningens gränser börjar, inklusive pre-roll, och skapa en `AdBreakObject` med hjälp av annonsbrytningsinformationen.
 
    `AdBreakObject` referens:
 
@@ -44,7 +48,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
                                startTime:[START_TIME]];
    ```
 
-1. Anropa `trackEvent()` med `AdBreakStart` i `MediaHeartbeat` instansen för att börja spåra annonsbrytningen:
+1. Anropa `trackEvent()` med `AdBreakStart` i `MediaHeartbeat`-instansen för att börja spåra annonsbrytningen:
 
    ```
    - (void)onAdBreakStart:(NSNotification *)notification { 
@@ -54,7 +58,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
    }
    ```
 
-1. Identifiera när annonsen startar och skapa en `AdObject` instans med annonsinformationen.
+1. Identifiera när annonsen startar och skapa en `AdObject`-instans med annonsinformationen.
 
    `AdObject` referens:
 
@@ -76,7 +80,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 1. Du kan också bifoga standard- och/eller annonsmetadata till mediespårningssessionen via kontextdatavariabler.
 
-   * [Implementera standardannonsmetadata på iOS](/help/sdk-implement/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-ios.md)
+   * [Implementera standardmetadata för annonser i iOS](/help/sdk-implement/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-ios.md)
    * **Anpassade annonseringsmetadata -** Skapa ett variabelobjekt för anpassade datavariabler och fyll i med data för den aktuella annonsen:
 
       ```
@@ -86,7 +90,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
       [adDictionary setObject:@"Sample creative" forKey:@"creative"];
       ```
 
-1. Anropa `trackEvent()` med `AdStart` händelsen i `MediaHeartbeat` instansen för att börja spåra annonsuppspelningen.
+1. Anropa `trackEvent()` med händelsen `AdStart` i instansen `MediaHeartbeat` för att börja spåra annonsuppspelningen.
 
    Ta med en referens till din anpassade metadatavariabel (eller ett tomt objekt) som den tredje parametern i händelseanropet:
 
@@ -98,7 +102,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
    }
    ```
 
-1. När annonsuppspelningen når slutet av annonsen, anropar du `trackEvent()` med `AdComplete` händelsen.
+1. När annonsuppspelningen når slutet av annonsen anropar du `trackEvent()` med händelsen `AdComplete`.
 
    ```
    - (void)onAdComplete:(NSNotification *)notification { 
@@ -108,7 +112,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
    }
    ```
 
-1. Om annonsuppspelningen inte slutfördes eftersom användaren valde att hoppa över annonsen, ska du spåra `AdSkip` händelsen.
+1. Om annonsuppspelningen inte slutfördes eftersom användaren valde att hoppa över annonsen, ska du spåra händelsen `AdSkip`.
 
    ```
    - (void)onAdSkip:(NSNotification *)notification { 
@@ -118,8 +122,8 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
    }
    ```
 
-1. Om det finns fler annonser i samma `AdBreak`version upprepar du steg 3 till 7 igen.
-1. När annonsbrytningen är klar använder du `AdBreakComplete` händelsen för att spåra:
+1. Om det finns ytterligare annonser inom samma `AdBreak` upprepar du steg 3 till 7 igen.
+1. När annonsbrytningen är klar använder du händelsen `AdBreakComplete` för att spåra:
 
    ```
    - (void)onAdBreakComplete:(NSNotification *)notification { 
@@ -129,4 +133,4 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
    }
    ```
 
-Mer information finns i [VOD-uppspelningen för spårningsscenariot med förrollsannonser](/help/sdk-implement/tracking-scenarios/vod-preroll-ads.md) .
+Mer information finns i spårningsscenariot [VOD-uppspelning med förrollsannonser](/help/sdk-implement/tracking-scenarios/vod-preroll-ads.md).
