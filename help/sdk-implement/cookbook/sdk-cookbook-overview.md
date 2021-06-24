@@ -1,14 +1,15 @@
 ---
 title: SDK-kodboksöversikt
-description: 'SDK-specifika kokboksämnen '
-translation-type: tm+mt
-source-git-commit: 298d17ced7a62cad8e2a45814fbfb80c3f58ce35
+description: '"Utforska SDK-specifika kokboksämnen "'
+exl-id: 68230d3f-d1fd-4be3-ba67-689965d85771
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '66'
-ht-degree: 27%
+source-wordcount: '69'
+ht-degree: 26%
 
 ---
-
 
 # SDK-kodboksöversikt
 
