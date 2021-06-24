@@ -1,28 +1,32 @@
 ---
-title: VOD - en spårare för flera sessioner
-description: Ett exempel på hur du använder en spårare för att spåra flera sessioner med Media SDK.
+title: VOD One Tracker för flera sessioner
+description: Visa ett exempel på hur du använder en spårare för att spåra flera sessioner med Media SDK.
 uuid: 355c83f4-52bd-4bdd-92dc-ab506e412d0a
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: 72edb484-0d45-446e-bda3-cda9e2272e7e
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '186'
+ht-degree: 4%
 
 ---
 
-
-# VOD - en spårare för flera sessioner{#vod-one-tracker-for-multiple-sessions}
+# VOD – en spårare för flera sessioner{#vod-one-tracker-for-multiple-sessions}
 
 ## Scenario {#scenario}
 
-I det här scenariot används `MediaHeartbeat` instansen för att skapa två separata sessioner i sekvens.
+I det här scenariot används instansen `MediaHeartbeat` för att skapa två separata sessioner i sekvens.
 
-Detta scenario är detsamma som [VOD-uppspelning utan annonseringsscenario](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) .
+Detta scenario är detsamma som [VOD-uppspelningen utan annonser](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md)-scenariot.
 
 ## Parametrar {#parameters}
 
 ### Session för pulsslag
 
-| Parameter | Värde | Anteckningar |
+| Parameter | Värde | Anteckningar   |
 | --- | --- | --- |
-| `s:event:sid` | Unikt sessions-ID | Ett unikt sessions-ID som finns i alla hjärtslagsnätverksanrop tills `trackSessionEnd` |
+| `s:event:sid` | Unikt sessions-ID | Ett unikt sessions-ID som finns i alla nätverksanrop för pulsslag till `trackSessionEnd` |
 
 ## Exempelkod {#sample-code}
 
@@ -95,7 +99,7 @@ protected void onCreate(Bundle savedInstanceState) {
 } 
 ```
 
-Om du vill visa den första sessionen med `MediaAnalyticsProvider` (därav `MediaHeartbeat`) instansen i Android anger du följande kod:
+Om du vill visa den första sessionen med instansen `MediaAnalyticsProvider` (därav `MediaHeartbeat`) i Android anger du följande kod:
 
 ```java
 // Set up mediaObject 
@@ -139,7 +143,7 @@ _mediaHeartbeat.trackSessionEnd();
 ........ 
 ```
 
-Om du vill visa den andra sessionen kan du använda samma `MediaAnalyticsProvider` ( `MediaHeartbeat`) instans som den första sessionen, men för en ny session:
+Om du vill visa den andra sessionen kan du använda samma `MediaAnalyticsProvider`-instans ( `MediaHeartbeat`) som den första sessionen, men för en ny session:
 
 ```java
 // Set up mediaObject 
@@ -253,7 +257,7 @@ Om du vill skapa två instanser av `MediaHeartbeat` för två mediespelare anger
 } 
 ```
 
-Om du vill visa den första sessionen med `MediaAnalyticsProvider` instansen (därav `MediaHeartbeat`) i iOS anger du följande kod:
+Om du vill visa den första sessionen med instansen `MediaAnalyticsProvider` (därav `MediaHeartbeat`) i iOS anger du följande kod:
 
 ```
 // Set up mediaObject 
@@ -291,7 +295,7 @@ NSMutableDictionary *mediaContextData = [[NSMutableDictionary alloc] init];
 ....... 
 ```
 
-Om du vill visa den andra sessionen kan du använda samma `MediaAnalyticsProvider` ( `MediaHeartbeat`) instans som den första sessionen, men för en ny session:
+Om du vill visa den andra sessionen kan du använda samma `MediaAnalyticsProvider`-instans ( `MediaHeartbeat`) som den första sessionen, men för en ny session:
 
 ```
 // Set up mediaObject 
@@ -378,4 +382,3 @@ analyticsProvider1 = new MediaAnalyticsProvider(_player1);
 // Load the main media content.  
 _player1.loadContent(URL_TO_MEDIA_1);
 ```
-
