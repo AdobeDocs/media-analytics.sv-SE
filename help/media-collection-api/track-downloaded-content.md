@@ -1,11 +1,13 @@
 ---
 title: Spåra hämtat innehåll
-description: null
+description: Lär dig hur du använder funktionen Hämtat innehåll för att spåra medieförbrukning när en användare är offline.
 uuid: 0718689d-9602-4e3f-833c-8297aae1d909
 exl-id: 82d3e5d7-4f88-425c-8bdb-e9101fc1db92
-source-git-commit: 0d5edcae0a80357247ada7f61daece9840d5c4b5
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '609'
+source-wordcount: '628'
 ht-degree: 0%
 
 ---
@@ -53,7 +55,7 @@ Funktionen för nedladdat innehåll är en offlineversion av (standard) API:t f�
 * 201 - Skapad: Slutförd begäran; data är giltiga och sessionen skapades och kommer att bearbetas.
 * 400 - Ogiltig begäran; Schemavalideringen misslyckades, alla data ignoreras och inga sessionsdata bearbetas.
 
-## Integrering med Adobe Analtyics {#integration-with-adobe-analtyics}
+## Integrering med Adobe Analytics {#integration-with-adobe-analtyics}
 
 När du beräknar anrop för att starta/stänga analysen för det hämtade innehållsscenariot anger back-end ett extra analysfält med namnet `ts.` Dessa är tidsstämplar för de första och sista händelser som tas emot (start och slutförd). Den här funktionen gör att en slutförd mediesession kan placeras vid rätt tidpunkt (dvs. även om användaren inte ansluter igen på flera dagar, rapporteras mediesessionen ha inträffat vid den tidpunkt då innehållet visades). Du måste aktivera den här funktionen på Adobe Analytics-sidan genom att skapa en _tidsstämpelsrapport (valfri)._ Information om hur du aktiverar en tidsstämpelsrapport (valfri) finns i  [Tidsstämplar (valfritt).](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/timestamp-optional.html)
 
