@@ -1,12 +1,16 @@
 ---
 title: VOD-uppspelning med ett överhoppat kapitel
-description: Ett exempel på hur du spårar VOD-innehåll där användaren hoppade över ett kapitel med Media SDK.
+description: Visa ett exempel på hur du spårar VOD-innehåll där användaren hoppade över ett kapitel med Media SDK.
 uuid: 19fb020c-eb7a-4942-9212-94f4d47195b9
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: 5ab981bf-1195-4197-a7c0-051fa4aa11b8
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '314'
+ht-degree: 2%
 
 ---
-
 
 # VOD-uppspelning med ett överhoppat kapitel{#vod-playback-with-a-skipped-chapter}
 
@@ -16,9 +20,9 @@ I det här scenariot hoppar användaren över ett kapitel i huvudinnehållet.
 
 Detta är samma scenario som [VOD-uppspelning med ett kapitel](/help/sdk-implement/tracking-scenarios/vod-one-chapter.md), förutom att användaren i det här fallet tänker söka ut ur kapitlet och därmed hoppa över det för att landa i huvudinnehållet.
 
-| Utlösare | Heartbeat-metod | Nätverksanrop | Anteckningar |
+| Utlösare | Heartbeat-metod | Nätverksanrop   | Anteckningar |
 |---|---|---|---|
-| Användaren klickar **[!UICONTROL Play]** | `trackSessionStart` | Börja med Analytics-innehåll, starta pulsslagsinnehåll | Mätbiblioteket är ovetande om att det finns en annons före rullning. Dessa nätverksanrop är fortfarande exakt likadana som [uppspelning utan avbrott i i iOS](vod-no-intrs-details.md) . |
+| Användaren klickar på **[!UICONTROL Play]** | `trackSessionStart` | Börja med Analytics-innehåll, starta pulsslagsinnehåll | Mätbiblioteket är ovetande om att det finns en annons före rullning. Dessa nätverksanrop är fortfarande exakt likadana som [Uppspelning utan avbrott i i iOS](vod-no-intrs-details.md)-scenariot. |
 | Kapitlet börjar. | `trackEvent:ChapterStart` | Starta pulsslag i kapitel |  |
 | Den första bildrutan i kapitlet spelas upp. | `trackPlay` | Heartbeat Chapter Play | När kapitelinnehåll spelas upp före huvudinnehållet, vill vi starta hjärtslagen när kapitlet börjar. |
 | Kapitlet spelas upp. |  | Hjärtslag |  |
@@ -26,12 +30,12 @@ Detta är samma scenario som [VOD-uppspelning med ett kapitel](/help/sdk-impleme
 | Sökningen är klar. | `trackEvent:trackSeekComplete` |  | Heartbeats skulle återupptas. |
 | Programmet inser att användaren har sökt utanför den vanliga kapitelgränsen. | `trackEvent:trackChapterSkip` |  |  |
 | Innehållet spelas upp. |  | Hjärtslag för innehåll |  |
-| Innehållet spelas upp helt. | `trackComplete` | Hearsbeat-innehåll slutfört | Detta nätverksanrop är exakt detsamma som [uppspelningen utan avbrott i i iOS](vod-no-intrs-details.md) -scenariot. |
+| Innehållet spelas upp helt. | `trackComplete` | Hearsbeat-innehåll slutfört | Detta nätverksanrop är exakt detsamma som [uppspelningen utan avbrott i i iOS](vod-no-intrs-details.md)-scenariot. |
 | Sessionen är över. | `trackSessionEnd` |  | `SessionEnd` betyder slutet på en visningssession. Detta API måste anropas även om användaren inte ser mediet tills det är klart. |
 
 ## Parametrar {#parameters}
 
-Parametrarna som används vid kapiteluppspelning är identiska med parametrarna i [VOD-uppspelningen med ett kapitel](/help/sdk-implement/tracking-scenarios/vod-one-chapter.md) , förutom att det inte finns något fullständigt kapitelanrop.
+Parametrarna som används vid kapiteluppspelning är identiska med parametrarna i [VOD-uppspelningen med ett kapitel](/help/sdk-implement/tracking-scenarios/vod-one-chapter.md)-scenario, förutom att det inte finns något fullständigt kapitelanrop.
 
 ## Exempelkod {#sample-code}
 
@@ -288,4 +292,3 @@ this._mediaHeartbeat.trackSessionEnd();
 ........ 
 ........ 
 ```
-
