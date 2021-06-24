@@ -1,12 +1,14 @@
 ---
-title: Förutsättningar
-description: Förutsättningar
+title: Läs om krav för direktuppspelande media
+description: Kom igång med Adobe Analytics Streaming Media. Lär dig vad du behöver för att implementera Adobe Analytics för direktuppspelningsmedia.
 uuid: 4c0b37f3-8615-4cc0-b9c9-eeb029067064
 exl-id: 85ab1dbd-f4a7-4f11-afc9-8d5000e2de70
-source-git-commit: e56ce73316d9cf00193220df8959a489fc3f2124
+feature: '"Media Analytics, System Requirements"'
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '388'
-ht-degree: 1%
+source-wordcount: '414'
+ht-degree: 0%
 
 ---
 
