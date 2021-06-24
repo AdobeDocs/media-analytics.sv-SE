@@ -1,29 +1,33 @@
 ---
 title: VOD-uppspelning med sökning i huvudinnehållet
-description: Ett exempel på hur du spårar VOD-innehåll där sökning gjordes med Media SDK.
+description: Visa ett exempel på hur du spårar VOD-innehåll där sökning gjordes med Media SDK.
 uuid: 5c2392f6-9b9c-42f5-833f-77423d1e6222
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: d77aa717-5dcb-4429-8dce-1914434f2b32
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '276'
+ht-degree: 3%
 
 ---
 
-
-# VOD-uppspelning med sökning i huvudinnehållet{#vod-playback-with-seeking-in-the-main-content}
+# VOD-uppspelning med sökning i huvudinnehåll{#vod-playback-with-seeking-in-the-main-content}
 
 ## Scenario {#scenario}
 
 Detta scenario omfattar sökning i huvudinnehållet under uppspelning.
 
-Detta är samma scenario som [VOD-uppspelning utan annonser](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) , men en del av innehållet stegas igenom och en sökning utförs från en punkt i huvudinnehållet till en annan.
+Detta är samma scenario som [VOD-uppspelningen utan annonser](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md)-scenariot, men en del av innehållet stegas igenom och en sökning utförs från en punkt i huvudinnehållet till en annan punkt.
 
-| Utlösare | Heartbeat-metod | Nätverksanrop | Anteckningar |
+| Utlösare   | Heartbeat-metod   | Nätverksanrop   | Anteckningar   |
 | --- | --- | --- | --- |
-| Användaren klickar [!UICONTROL Play] | `trackSessionStart` | Börja med Analytics-innehåll, starta pulsslagsinnehåll | Mätbiblioteket känner inte till att det finns en förrollsannonsering, så dessa nätverksanrop är identiska med [VOD-uppspelningen utan annonseringsscenario](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) . |
+| Användaren klickar på [!UICONTROL Play] | `trackSessionStart` | Börja med Analytics-innehåll, starta pulsslagsinnehåll | Mätbiblioteket är ovetande om att det finns en förrollad annons, så dessa nätverksanrop är identiska med [VOD-uppspelningen utan annonser](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md)-scenariot. |
 | Den första bildrutan i innehållet spelas upp. | `trackPlay` | Spela upp pulsslagsinnehåll | När kapitelinnehåll spelas upp före huvudinnehållet startar Heartslag när kapitlet börjar. |
-| Innehåll spelas upp |  | Hjärtslag för innehåll | Detta nätverksanrop är exakt detsamma som [VOD-uppspelningen utan annonseringsscenario](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) . |
-| Användaren börjar söka efter innehåll | `trackSeekStart` |  | Inga hjärtslag går ut tills sökningen är klar, till exempel `trackSeekComplete` |
+| Innehåll spelas upp |  | Hjärtslag för innehåll | Detta nätverksanrop är exakt detsamma som [VOD-uppspelningen utan annonser](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md)-scenariot. |
+| Användaren börjar söka efter innehåll | `trackSeekStart` |  | Inga pulsslag går ut tills sökningen är klar, till exempel `trackSeekComplete` |
 | Sökningen har slutförts | `trackSeekComplete` |  | Hjärtslag börjar gå ut eftersom sökningen är klar.  Tips:  Spelhuvudets värde ska representera det nya spelhuvudet efter sökningen. |
-| Innehållet är färdigt | `trackComplete` | Hearsbeat-innehåll slutfört | Detta nätverksanrop är exakt detsamma som [VOD-uppspelningen utan annonseringsscenario](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) . |
+| Innehållet är färdigt | `trackComplete` | Hearsbeat-innehåll slutfört | Detta nätverksanrop är exakt detsamma som [VOD-uppspelningen utan annonser](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md)-scenariot. |
 | Sessionen är över | `trackSessionEnd` |  | `SessionEnd` |
 
 ## Exempelkod {#sample-code}
@@ -209,4 +213,3 @@ this._mediaHeartbeat.trackSessionEnd();
 ........ 
 ........ 
 ```
-
