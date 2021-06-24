@@ -1,15 +1,16 @@
 ---
-title: Spåra sökning med JavaScript 2.x
-description: I det här avsnittet beskrivs hur du implementerar sökspårning med Media SDK i webbläsarprogram (JS).
+title: Lär dig spåra sökning med JavaScript 2.x
+description: Lär dig hur du spårar händelserna Seek Start och Seek Complete med Media SDK i webbläsarappar (JS 2.x).
 uuid: 089947fb-8bae-4ae8-b215-53793620efd7
-translation-type: tm+mt
-source-git-commit: 318bb60d9835d9a07fb7aa0a0a02162248410d09
+exl-id: 90f35376-24d8-405d-82b4-d6b737acf7b9
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '127'
+source-wordcount: '137'
 ht-degree: 0%
 
 ---
-
 
 # Spåra sökning med JavaScript 2.x{#track-seeking-on-javascript}
 
@@ -26,7 +27,7 @@ ht-degree: 0%
 
 ## Implementeringssökning
 
-1. Lyssna efter uppspelningssökningshändelser från mediespelaren och spåra sökning med hjälp av `SeekStart` händelsen vid sökningshändelsemeddelanden:
+1. Lyssna efter uppspelningssökningshändelser från mediespelaren och spåra sökning med händelsen `SeekStart` vid sökningen efter start:
 
    ```js
    _onSeekStart = function() {
@@ -34,7 +35,7 @@ ht-degree: 0%
    };
    ```
 
-1. Spåra slutet av sökningen med händelsen när du söker ett fullständigt meddelande från mediespelaren: `SeekComplete`
+1. Spåra slutet av sökningen med händelsen `SeekComplete` när du söker efter ett fullständigt meddelande från mediespelaren:
 
    ```js
    _onSeekComplete = function() {
@@ -42,4 +43,4 @@ ht-degree: 0%
    };
    ```
 
-Mer information finns i spårningsscenariot för [VOD-uppspelning med sökning i huvudinnehållet](/help/sdk-implement/tracking-scenarios/vod-seeking.md) .
+Mer information finns i spårningsscenariot [VOD-uppspelning med sökning i huvudinnehållet](/help/sdk-implement/tracking-scenarios/vod-seeking.md).
