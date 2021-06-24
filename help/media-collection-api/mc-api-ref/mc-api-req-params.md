@@ -1,16 +1,18 @@
 ---
-title: Begär parametrar
-description: Läs mer om parametrarna för Adobe Analytics direktuppspelningsmediebegäran.
+title: Parametrar för � för direktuppspelad mediainsamling
+description: '"Vad är Media Collection API-parametrarna för förfrågningar, nycklar och beskrivningar."'
 uuid: f83e9ef1-803d-4152-a6c7-acaa325036b9
 exl-id: a70025ec-1418-46f1-b41f-433d09f024e1
-source-git-commit: 00e9992712034dc67072e09cce7819719c0371d1
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '1297'
+source-wordcount: '1307'
 ht-degree: 5%
 
 ---
 
-# Begäranparametrar{#request-parameters}
+# Begär parametrar{#request-parameters}
 
 ## Analysdata
 
@@ -107,7 +109,7 @@ ht-degree: 5%
 | `media.qoe.framesPerSecond` | N | heltal | Alla | Antalet bildrutor per sekund |
 | `media.qoe.timeToStart` | N | heltal | Alla | Den tid (i millisekunder) som förflyter mellan att användaren träffar uppspelningen och att innehållet läses in och börjar spelas upp |
 
-## California Consumer Privacy Act (CCPA) Parametrar {#ccpa-params}
+## CCPA-parametrar (California Consumer Privacy Act) {#ccpa-params}
 
 | Begär nyckel  | Obligatoriskt | Begärantypnyckel | Aktivera... |  Beskrivning  |
 | --- | :---: | :---: | :---: | --- |
