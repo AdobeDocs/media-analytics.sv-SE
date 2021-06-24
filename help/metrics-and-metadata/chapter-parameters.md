@@ -1,15 +1,16 @@
 ---
 title: Kapitelparametrar
-description: null
+description: '"Läs mer om kapitelparametrar för implementering, nätverk och rapportering."'
 uuid: 2a6b9247-a694-46e9-98e1-424c08c27ec2
-translation-type: tm+mt
-source-git-commit: ef237fd0d9e2bcebe011d819224d98d450830d07
+exl-id: 73da3e52-9498-478e-bfd7-8ff6c8e6bfc5
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1067'
+ht-degree: 2%
 
 ---
-
 
 # Kapitelparametrar{#chapter-parameters}
 
@@ -18,7 +19,7 @@ I det här avsnittet finns en lista med kapitel- och/eller segmentdata, inklusiv
 Beskrivning av tabelldata:
 
 * **implementering:** information om implementeringsvärden och -krav
-   * *Key*  - Variable, ange antingen manuellt i appen eller automatiskt av Adobe Media SDK.
+   * *Key*  - Variable, ange antingen manuellt i appen eller automatiskt med Adobe Media SDK.
    * *Obligatoriskt*  - Anger om parametern krävs för grundläggande videospårning.
    * *Typ*  - Anger vilken typ av variabel som ska anges, strängen eller talet.
    * *Skickat med*  - Anger när data skickas:  *Media* Startis the analytics call sent on media start,  *Ad* Startis, the analytics call sent on ad ad start osv. &quot; ** Closecalls&quot; är de kompilerade analysanrop som skickas direkt från hjärtslagservern till analysservern i slutet av mediesessionen, eller i slutet av annonsen, kapitlet osv. Stäng anrop är inte tillgängliga i nätverkspaketanrop.
@@ -44,31 +45,31 @@ Beskrivning av tabelldata:
 
 |   Implementering   | Nätverksparametrar | Rapportering |
 | --- | --- | --- |
-| <ul> <li> **SDK-nyckel:**<br/>  [name](./chapter-parameters.md#related_apis_section) </li> <li> **API-nyckel:**<br/> media.chapter.friendlyName </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **Typ:**<br/> sträng </li> <li> **Skickat med:**<br/> Kapitelstart, Kapitelstängning </li> <li> **Min. SDK-version:** 1.3 </li> <li> **Exempelvärde:**<br/> &quot;The Big Bang Chapter 2 - Dating&quot; </li><li> **Beskrivning:**<br/> Namnet på kapitlet och/eller segmentet.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.chapter.<br/>friendlyName) </li> <li> **pulsslag:**<br/> (s:ström:kapitel_namn) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Skapad som standard..  </li> <li> **Reserverad variabel:**<br/> Klassificering </li> <li> **rapportnamn:**<br/> kapitelnamn </li> <li> **Kontextdata:**<br/> (a.media.chapter.<br/>friendlyName) </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.chapter.<br/>friendlyName) </li> </ul> |
+| <ul> <li> **SDK-nyckel:**<br/>  [name](./chapter-parameters.md#related_apis_section) </li> <li> **API-nyckel:**<br/> media.chapter.friendlyName </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **Typ:**<br/> sträng </li> <li> **Skickat med:**<br/> Kapitelstart, Kapitelstängning </li> <li> **Min. SDK-version:** 1.3 </li> <li> **Exempelvärde:**<br/> &quot;The Big Bang Chapter 2 - Dating&quot; </li><li> **Beskrivning:**<br/> Namnet på kapitlet och/eller segmentet.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.chapter.<br/>friendlyName) </li> <li> **pulsslag:**<br/> (:stream:schapter_name) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Skapad som standard..  </li> <li> **Reserverad variabel:**<br/> Klassificering </li> <li> **rapportnamn:**<br/> kapitelnamn </li> <li> **Kontextdata:**<br/> (a.media.chapter.<br/>friendlyName) </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.chapter.<br/>friendlyName) </li> </ul> |
 
 ### Kapitelposition
 
 |   Implementering   | Nätverksparametrar | Rapportering |
 | --- | --- | --- |
-| <ul> <li> **SDK-nyckel:**<br/>  [position](./chapter-parameters.md#related_apis_section) </li> <li> **API-nyckel:**<br/> media.chapter.index </li> <li> **Obligatoriskt:**<br/> SDK: Nej. API: Ja. </li> <li> **text:**<br/> tal </li> <li> **Skickat med:**<br/> Kapitelstängning </li> <li> **Min. SDK-version:** 1.3 </li> <li> **Exempelvärde:**<br/> 2 </li><li> **Beskrivning:**<br/> Placeringen (index, heltal) av kapitlet i innehållet.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.chapter.<br/>position) </li> <li> **pulsslag:**<br/> (l:ström:kapitel_pos) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> Klassificering </li> <li> **rapportnamn:**<br/> kapitelposition </li> <li> **Kontextdata:**<br/> (a.media.chapter.<br/>position) </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.chapter.<br/>position) </li> </ul> |
+| <ul> <li> **SDK-nyckel:**<br/>  [position](./chapter-parameters.md#related_apis_section) </li> <li> **API-nyckel:**<br/> media.chapter.index </li> <li> **Obligatoriskt:**<br/> SDK: Nej. API: Ja. </li> <li> **text:**<br/> tal </li> <li> **Skickat med:**<br/> Kapitelstängning </li> <li> **Min. SDK-version:** 1.3 </li> <li> **Exempelvärde:**<br/> 2 </li><li> **Beskrivning:**<br/> Placeringen (index, heltal) av kapitlet i innehållet.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.chapter.<br/>position) </li> <li> **pulsslag:**<br/> (:stream:lchapter_pos) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> Klassificering </li> <li> **rapportnamn:**<br/> kapitelposition </li> <li> **Kontextdata:**<br/> (a.media.chapter.<br/>position) </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.chapter.<br/>position) </li> </ul> |
 
 ### Kapitelförskjutning
 
 |   Implementering   | Nätverksparametrar | Rapportering |
 | --- | --- | --- |
-| <ul> <li> **SDK-nyckel:**<br/>  [startTime](./chapter-parameters.md#related_apis_section) </li> <li> **API-nyckel:**<br/> media.chapter.offset </li> <li> **Obligatoriskt:**<br/> SDK: Nej. API: Ja. </li> <li> **text:**<br/> tal </li> <li> **Skickat med:**<br/> Kapitelstängning </li> <li> **Min. SDK-version:** 1.3 </li> <li> **Exempelvärde:**<br/> 58 </li><li> **Beskrivning:**<br/> Kapitelns förskjutning i innehållet (i sekunder) från början.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.chapter.<br/>förskjutning) </li> <li> **pulsslag:**<br/> (l:ström:kapitel_offset) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> Klassificering </li> <li> **rapportnamn:**<br/> kapitelförskjutning </li> <li> **Kontextdata:**<br/> (a.media.chapter.<br/>förskjutning) </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.chapter.<br/>förskjutning) </li> </ul> |
+| <ul> <li> **SDK-nyckel:**<br/>  [startTime](./chapter-parameters.md#related_apis_section) </li> <li> **API-nyckel:**<br/> media.chapter.offset </li> <li> **Obligatoriskt:**<br/> SDK: Nej. API: Ja. </li> <li> **text:**<br/> tal </li> <li> **Skickat med:**<br/> Kapitelstängning </li> <li> **Min. SDK-version:** 1.3 </li> <li> **Exempelvärde:**<br/> 58 </li><li> **Beskrivning:**<br/> Kapitelns förskjutning i innehållet (i sekunder) från början.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.chapter.<br/>förskjutning) </li> <li> **pulsslag:**<br/> (:stream:lchapter_offset) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> Klassificering </li> <li> **rapportnamn:**<br/> kapitelförskjutning </li> <li> **Kontextdata:**<br/> (a.media.chapter.<br/>förskjutning) </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.chapter.<br/>förskjutning) </li> </ul> |
 
 ### Kapitellängd
 
 |   Implementering   | Nätverksparametrar | Rapportering |
 | --- | --- | --- |
-| <ul> <li> **SDK-nyckel:**<br/> </li> <li> **API-nyckel:**<br/> media.chapter.length </li> <li> **Obligatoriskt:**<br/> SDK: Nej. API: Ja. </li> <li> **text:**<br/> tal </li> <li> **Skickat med:**<br/> Kapitelstängning </li> <li> **Min. SDK-version:** 1.3 </li> <li> **Exempelvärde:**<br/> 486 </li><li> **Beskrivning:**<br/> Kapitelns längd i sekunder.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.chapter.<br/>length) </li> <li> **pulsslag:**<br/> (l:stream:chapter_length) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> Klassificering </li> <li> **rapportnamn:**<br/> kapitellängd </li> <li> **Kontextdata:**<br/> (a.media.chapter.<br/>längd) </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.chapter.<br/>längd) </li> </ul> |
+| <ul> <li> **SDK-nyckel:**<br/> </li> <li> **API-nyckel:**<br/> media.chapter.length </li> <li> **Obligatoriskt:**<br/> SDK: Nej. API: Ja. </li> <li> **text:**<br/> tal </li> <li> **Skickat med:**<br/> Kapitelstängning </li> <li> **Min. SDK-version:** 1.3 </li> <li> **Exempelvärde:**<br/> 486 </li><li> **Beskrivning:**<br/> Kapitelns längd i sekunder.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.chapter.<br/>length) </li> <li> **pulsslag:**<br/> (:stream:lchapter_length) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> Klassificering </li> <li> **rapportnamn:**<br/> kapitellängd </li> <li> **Kontextdata:**<br/> (a.media.chapter.<br/>längd) </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.chapter.<br/>längd) </li> </ul> |
 
 ### Kapitel
 
 |   Implementering   | Nätverksparametrar | Rapportering |
 | --- | --- | --- |
-| <ul> <li> **SDK-nyckel:**<br/> Automatiskt angiven </li> <li> **API-nyckel:**<br/> Ej tillämpligt </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **Typ:**<br/> sträng </li> <li> **Skickat med:**<br/> Kapitelstängning </li> <li> **Min. SDK-version:** 1.3 </li> <li> **Exempelvärde:**<br/> </li><li> **Beskrivning:**<br/> Kapitelets automatiskt genererade ID.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.chapter.<br/>name) </li> <li> **pulsslag:**<br/> (s:ström:kapitel_id) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> eVar </li> <li> **Förfallotid:**<br/> vid HIT </li> <li> **rapportnamn:**<br/> kapitel </li> <li> **Kontextdata:**<br/> (a.media.chapter.<br/>namn) </li> <li> **datafeed:**<br/> videokort </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.chapter.<br/>namn) </li> </ul> |
+| <ul> <li> **SDK-nyckel:**<br/> Automatiskt angiven </li> <li> **API-nyckel:**<br/> Ej tillämpligt </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **Typ:**<br/> sträng </li> <li> **Skickat med:**<br/> Kapitelstängning </li> <li> **Min. SDK-version:** 1.3 </li> <li> **Exempelvärde:**<br/> </li><li> **Beskrivning:**<br/> Kapitelets automatiskt genererade ID.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.chapter.<br/>name) </li> <li> **pulsslag:**<br/> (:stream:schapter_id) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> eVar </li> <li> **Förfallotid:**<br/> vid HIT </li> <li> **rapportnamn:**<br/> kapitel </li> <li> **Kontextdata:**<br/> (a.media.chapter.<br/>namn) </li> <li> **datafeed:**<br/> videokort </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.chapter.<br/>namn) </li> </ul> |
 
 ## Kapitelmått {#chapter-Metrics}
 
@@ -76,19 +77,19 @@ Beskrivning av tabelldata:
 
 |   Implementering   | Nätverksparametrar | Rapportering |
 | --- | --- | --- |
-| <ul> <li> **SDK-nyckel:**<br/> Automatiskt angiven  </li> <li> **API-nyckel:**<br/> Ej tillämpligt </li> <li> **Obligatoriskt:**<br/> Ja </li> <li> **Typ:**<br/> sträng </li> <li> **Skickat med:**<br/> Kapitelstart </li> <li> **Min. SDK-version:** 1.3 </li> <li> **Exempelvärde:**<br/> TRUE </li><li> **Beskrivning:**<br/> Antalet kapitel börjar.  **Viktigt:**  Om den här händelsen anges är det enda möjliga värdet SANT. Om den här händelsen inte anges skickas inget värde.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.chapter.<br/>vy) </li> <li> **pulsslag:**<br/> (s:event:<br/>type=chapter_start) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> händelse </li> <li> **Rapportnamn:**<br/> kapitelstart</li> <li> **Kontextdata:**<br/> (a.media.chapter.<br/>vy) </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.chapter.<br/>vy) </li> </ul> |
+| <ul> <li> **SDK-nyckel:**<br/> Automatiskt angiven  </li> <li> **API-nyckel:**<br/> Ej tillämpligt </li> <li> **Obligatoriskt:**<br/> Ja </li> <li> **Typ:**<br/> sträng </li> <li> **Skickat med:**<br/> Kapitelstart </li> <li> **Min. SDK-version:** 1.3 </li> <li> **Exempelvärde:**<br/> TRUE </li><li> **Beskrivning:**<br/> Antalet kapitel börjar.  **Viktigt:**  Om den här händelsen anges är det enda möjliga värdet SANT. Om den här händelsen inte anges skickas inget värde.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.chapter.<br/>vy) </li> <li> **pulsslag:**<br/> (:event:<br/>stype=chapter_start) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> händelse </li> <li> **Rapportnamn:**<br/> kapitelstart</li> <li> **Kontextdata:**<br/> (a.media.chapter.<br/>vy) </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.chapter.<br/>vy) </li> </ul> |
 
 ### Kapitel slutfört
 
 |   Implementering   | Nätverksparametrar | Rapportering |
 | --- | --- | --- |
-| <ul> <li> **SDK-nyckel:**<br/> Automatiskt angiven  </li> <li> **API-nyckel:**<br/> Ej tillämpligt </li> <li> **Obligatoriskt:**<br/> Ja </li> <li> **Typ:**<br/> sträng </li> <li> **Skickat med:**<br/> Kapitelstängning </li> <li> **Min. SDK-version:** 1.3</li> <li> **Exempelvärde:**<br/> TRUE </li><li> **Beskrivning:**<br/> Antalet kapitel slutförs.  **Viktigt:**  Om den här händelsen anges är det enda möjliga värdet SANT. Om den här händelsen inte anges skickas inget värde.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.chapter.<br/>complete) </li> <li> **pulsslag:**<br/> (s:event:<br/>type=chapter_complete) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> händelse </li> <li> **rapportnamn:**<br/> kapitelslutföranden</li> <li> **Kontextdata:**<br/> (a.media.chapter.<br/>complete) </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.chapter.<br/>complete) </li> </ul> |
+| <ul> <li> **SDK-nyckel:**<br/> Automatiskt angiven  </li> <li> **API-nyckel:**<br/> Ej tillämpligt </li> <li> **Obligatoriskt:**<br/> Ja </li> <li> **Typ:**<br/> sträng </li> <li> **Skickat med:**<br/> Kapitelstängning </li> <li> **Min. SDK-version:** 1.3</li> <li> **Exempelvärde:**<br/> TRUE </li><li> **Beskrivning:**<br/> Antalet kapitel slutförs.  **Viktigt:**  Om den här händelsen anges är det enda möjliga värdet SANT. Om den här händelsen inte anges skickas inget värde.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.chapter.<br/>complete) </li> <li> **pulsslag:**<br/> (:event:<br/>stype=chapter_complete) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> händelse </li> <li> **rapportnamn:**<br/> kapitelslutföranden</li> <li> **Kontextdata:**<br/> (a.media.chapter.<br/>complete) </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.chapter.<br/>complete) </li> </ul> |
 
 ### Kapiteltid spenderad
 
 |   Implementering   | Nätverksparametrar | Rapportering |
 | --- | --- | --- |
-| <ul> <li> **SDK-nyckel:**<br/> Automatiskt angiven  </li> <li> **API-nyckel:**<br/> Ej tillämpligt </li> <li> **Obligatoriskt:**<br/> Ja </li> <li> **text:**<br/> tal </li> <li> **Skickat med:**<br/> Kapitelstängning </li> <li> **Min. SDK-version:** 1.3 </li> <li> **Exempelvärde:**<br/> </li><li> **Beskrivning:**<br/> Den tid som har ägnats åt kapitlet.  Värdet visas i tidsformat (HH:MM:SS) i Analysis Workspace och Rapporter och analyser. I Data Feeds, Data warehouse och Reporting API:er visas värdena på några sekunder. <br/>**Releasedatum: 09/13/18**   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.chapter.<br/>timePlay) </li> <li> **Hjärtslag:**<br/> </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> händelse </li> <li> **Rapportnamn:**<br/> Kapiteltid använt</li> <li> **Kontextdata:**<br/> (a.media.chapter.<br/>timePlay) </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.chapter.<br/>timePlay) </li> </ul> |
+| <ul> <li> **SDK-nyckel:**<br/> Automatiskt angiven  </li> <li> **API-nyckel:**<br/> Ej tillämpligt </li> <li> **Obligatoriskt:**<br/> Ja </li> <li> **text:**<br/> tal </li> <li> **Skickat med:**<br/> Kapitelstängning </li> <li> **Min. SDK-version:** 1.3 </li> <li> **Exempelvärde:**<br/> </li><li> **Beskrivning:**<br/> Den tid som har ägnats åt kapitlet.  Värdet visas i tidsformatet (HH:MM:SS) i Analysis Workspace och Rapporter och analyser. I Data Feeds, Data warehouse och Reporting API:er visas värdena på några sekunder. <br/>**Releasedatum: 09/13/18**   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.chapter.<br/>timePlay) </li> <li> **Hjärtslag:**<br/> </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> händelse </li> <li> **Rapportnamn:**<br/> Kapiteltid använt</li> <li> **Kontextdata:**<br/> (a.media.chapter.<br/>timePlay) </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.chapter.<br/>timePlay) </li> </ul> |
 
 ## Relaterade API:er {#related_apis_section}
 
