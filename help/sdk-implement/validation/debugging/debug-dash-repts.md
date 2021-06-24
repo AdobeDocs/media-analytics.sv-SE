@@ -1,16 +1,20 @@
 ---
 title: Felsöka instrumentpaneler och rapporter
-description: I det här avsnittet beskrivs Adobe debug-kontrollpanelerna.
+description: Lär dig mer om felsökningspanelerna i Adobe.
 uuid: 8e6f6245-d8bd-4329-89e1-4c5595e04ec5
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: fc5590a5-4d0e-4a2d-8f40-54c53eabc6f0
+feature: '"Media Analytics, Analytics Dashboards"'
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '86'
+ht-degree: 4%
 
 ---
 
-
 # Felsöka instrumentpaneler och rapporter{#debug-dashboards-and-reports}
 
-Adobe Debug tillhandahåller rapportering i realtid så att du kan visa träffar och metadata som skickas under videouppspelning. Var och en av dessa rapporter kan sparas i Felsökning.
+Adobe Debug ger rapporter i realtid så att du kan visa träffar och metadata som skickas under videouppspelning. Var och en av dessa rapporter kan sparas i Felsökning.
 
 För certifiering kan dessa rapporter delas genom att bara kopiera URL:en och skicka länken, t.ex. inom en ZenDesk-biljett.
 
@@ -19,4 +23,3 @@ För certifiering kan dessa rapporter delas genom att bara kopiera URL:en och sk
 >Endast en session åt gången kan vara aktiv. Den aktiva sessionen kan öppnas från kontrollpanelen.
 
 ![](assets/debug-dashboard.png)
-
