@@ -2,11 +2,13 @@
 seo-title: Migrering från fristående Media SDK till Adobe Launch
 title: Migrering från fristående Media SDK till Adobe Launch
 seo-description: Instruktioner och kodexempel som hjälper dig att migrera från Media SDK till Launch.
-description: Instruktioner och kodexempel som hjälper dig att migrera från Media SDK till Launch.
+description: Lär dig hur du migrerar från Media SDK till Launch.
 exl-id: 5350bbe9-c34f-46d9-a4c4-dbccdbed0bb0
-source-git-commit: 0d5edcae0a80357247ada7f61daece9840d5c4b5
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '182'
+source-wordcount: '180'
 ht-degree: 1%
 
 ---
