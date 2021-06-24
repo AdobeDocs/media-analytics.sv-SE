@@ -1,12 +1,16 @@
 ---
-title: Spåra fel i Chromecast
-description: I det här avsnittet beskrivs hur du implementerar felspårning med Media SDK på Chromecast.
+title: Lär dig spåra fel i Chromecast
+description: Lär dig hur du implementerar felspårning med Media SDK på Chromecast.
 uuid: efa9de8d-c626-4cb6-b46d-108495dd013a
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: 513772c2-582d-4b4b-92ed-0c32b99d7fdc
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '104'
+ht-degree: 0%
 
 ---
-
 
 # Spåra fel i Chromecast{#track-errors-on-chromecast}
 
@@ -24,5 +28,4 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 >[!NOTE]
 >
->Spårning av mediespelarfel stoppar inte mediespårningssessionen. Om mediespelarfelet förhindrar att uppspelningen fortsätter kontrollerar du att mediespårningssessionen stängs genom att ringa `trackSessionEnd` efter att du har anropat `trackError`.
-
+>Spårning av mediespelarfel stoppar inte mediespårningssessionen. Om mediespelarfelet förhindrar att uppspelningen fortsätter kontrollerar du att mediespårningssessionen stängs genom att anropa `trackSessionEnd` efter att du har anropat `trackError`.
