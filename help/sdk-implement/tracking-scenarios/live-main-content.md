@@ -1,12 +1,16 @@
 ---
-title: Live-huvudinnehåll
-description: Ett exempel på hur du spårar direktsänt innehåll med Media SDK.
+title: Huvudinnehåll för live
+description: Visa ett exempel på hur du spårar direktsänt innehåll med Media SDK.
 uuid: e92e99f4-c395-48aa-8a30-cbdd2f5fc07c
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: f6a00ffd-da6a-4d62-92df-15d119cfc426
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '529'
+ht-degree: 0%
 
 ---
-
 
 # Live-huvudinnehåll{#live-main-content}
 
@@ -14,27 +18,27 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 I det här scenariot finns det en liveresurs utan annonser som spelas upp i 40 sekunder efter att liveströmmen anslutits.
 
-| Utlösare | Heartbeat-metod | Nätverksanrop | Anteckningar |
+| Utlösare | Heartbeat-metod | Nätverksanrop | Anteckningar   |
 |---|---|---|---|
-| Användaren klickar **[!UICONTROL Play]** | `trackSessionStart` | Börja med Analytics-innehåll, starta pulsslagsinnehåll | Detta kan vara en användare som klickar **[!UICONTROL Play]** eller en automatisk uppspelningshändelse. |
+| Användaren klickar på **[!UICONTROL Play]** | `trackSessionStart` | Börja med Analytics-innehåll, starta pulsslagsinnehåll | Det kan vara en användare som klickar på **[!UICONTROL Play]** eller en automatisk uppspelningshändelse. |
 | Den första bildrutan i mediet spelas upp. | `trackPlay` | Spela upp pulsslagsinnehåll | Den här metoden utlöser timern. Hjärtslag skickas var 10:e sekund så länge uppspelningen fortsätter. |
 | Innehållet spelas upp. |  | Hjärtslag för innehåll |  |
 | Sessionen är över. | `trackSessionEnd` |  | `SessionEnd` betyder slutet på en visningssession. Detta API måste anropas även om användaren inte använder mediet för att slutföra det. |
 
 ## Parametrar {#parameters}
 
-Många av de värden som du ser i Adobe Analytics-anrop för innehållsstart kommer också att visas i startanrop för pulsslagsinnehåll. Du kommer också att se många andra parametrar som Adobe använder för att fylla i olika medierapporter i Adobe Analytics. Vi kommer inte att täcka alla här, bara de viktiga.
+Många av de värden du ser på Adobe Analytics Content Start Call visas även på Heartbeat Content Start Call. Du kommer också att se många andra parametrar som Adobe använder för att fylla i olika medierapporter i Adobe Analytics. Vi kommer inte att täcka alla här, bara de viktiga.
 
 ### Starta pulsslagsinnehåll
 
 | Parameter | Värde | Anteckningar |
 |---|---|---|
-| `s:sc:rsid` | &lt;Ditt Adobe Report Suite-ID> |  |
-| `s:sc:tracking_serve` | &lt;URL för analysspårningsserver> |  |
+| `s:sc:rsid` | &lt;your Adobe=&quot;&quot; Report=&quot;&quot; Suite=&quot;&quot; ID=&quot;&quot;> |  |
+| `s:sc:tracking_serve` | &lt;your Analytics=&quot;&quot; Tracking=&quot;&quot; Server=&quot;&quot; URL=&quot;&quot;> |  |
 | `s:user:mid` | `s:user:mid` | Ska matcha mittvärdet på Adobe Analytics Content Start Call |
 | `s:event:type` | &quot;start&quot; |  |
 | `s:asset:type` | &quot;main&quot; |  |
-| `s:asset:mediao_id` | &lt;Ditt medienamn> |  |
+| `s:asset:mediao_id` | &lt;your Media=&quot;&quot; Name=&quot;&quot;> |  |
 | `s:stream:type` | live |  |
 | `s:meta:*` | valfri | Anpassade metadata för mediet |
 
@@ -47,7 +51,7 @@ I innehållets pulsslag kan du leta efter några specifika saker:
 | Parameter | Värde | Anteckningar |
 |---|---|---|
 | `s:event:type` | &quot;play&quot; |  |
-| `l:event:playhead` | &lt;playhead position> t.ex. 50, 60, 70 | Detta bör återspegla spelhuvudets aktuella position. |
+| `l:event:playhead` | &lt;playhead position=&quot;&quot;> t.ex. 50, 60, 70 | Detta bör återspegla spelhuvudets aktuella position. |
 
 ## Hearsbeat-innehåll slutfört {#heartbeat-content-complete}
 
@@ -59,13 +63,13 @@ För LIVE-strömmar måste du ställa in spelhuvudet på en förskjutning från 
 
 ### Vid start
 
-För LIVE-media måste du, när en användare börjar spela upp strömmen, ange `l:event:playhead` den aktuella förskjutningen i sekunder. Detta är i motsats till VOD, där du ställer in spelhuvudet på &quot;0&quot;.
+För LIVE-media måste du ange `l:event:playhead` till aktuell förskjutning i sekunder när en användare börjar spela upp strömmen. Detta är i motsats till VOD, där du ställer in spelhuvudet på &quot;0&quot;.
 
-Exempel: en liveströmningshändelse börjar vid midnatt och pågår i 24 timmar (`a.media.length=86400`; `l:asset:length=86400`). Anta sedan att en användare börjar spela upp den LIVE-strömmen kl. 12:00. I det här scenariot bör du ange `l:event:playhead` till 43200 (12 timmar in i strömmen).
+Exempel: en LIVE-direktuppspelningshändelse startar vid midnatt och pågår i 24 timmar (`a.media.length=86400`; `l:asset:length=86400`). Anta sedan att en användare börjar spela upp den LIVE-strömmen kl. 12:00. I det här scenariot bör du ange `l:event:playhead` till 43200 (12 timmar in i strömmen).
 
 ### Vid paus
 
-Samma&quot;live playhead&quot;-logik som används i början av uppspelningen måste användas när en användare pausar uppspelningen. När användaren återgår till att spela upp LIVE-strömmen måste du ange `l:event:playhead` värdet till den nya förskjutna spelhuvudspositionen, _inte_ till den punkt där användaren pausade LIVE-strömmen.
+Samma&quot;live playhead&quot;-logik som används i början av uppspelningen måste användas när en användare pausar uppspelningen. När användaren återgår till att spela upp LIVE-strömmen måste du ange `l:event:playhead`-värdet till den nya förskjutna spelhuvudspositionen, _inte_ till den punkt där användaren pausade LIVE-strömmen.
 
 ## Exempelkod {#sample-code}
 
@@ -185,4 +189,3 @@ this._mediaHeartbeat.trackSessionEnd();
 ........ 
 ........ 
 ```
-
