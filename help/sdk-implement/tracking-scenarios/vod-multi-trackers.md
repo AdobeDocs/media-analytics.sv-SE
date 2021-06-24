@@ -1,30 +1,34 @@
 ---
-title: Flera VOD-spår parallellt
-description: Ett exempel på hur du spårar VOD med flera spårare parallellt.
+title: VOD Multiple Trackers in Parallel
+description: Visa ett exempel på hur du spårar VOD med flera spårare parallellt.
 uuid: 6e25dd92-522f-455c-8e71-99d71d352e06
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: 318beba8-bb26-4cec-81d7-c6fc446ec7b4
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '247'
+ht-degree: 2%
 
 ---
 
-
-# Flera VOD-spår parallellt{#vod-multiple-trackers-in-parallel}
+# Flera parallella VOD-spårare{#vod-multiple-trackers-in-parallel}
 
 ## Scenario {#scenario}
 
-I det här scenariot körs två sessioner parallellt för två separata media och två separata instanser av `MediaHeartbeat`.
+I det här scenariot körs två sessioner parallellt för två separata medier och två separata instanser av `MediaHeartbeat` används.
 
-Detta scenario är identiskt med [VOD-uppspelningen utan annonseringsscenario](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) , förutom att det finns två sessioner som körs parallellt för två separata medier. Var och en av dessa sessioner använder en separat instans av `MediaHeartbeat`.
+Detta scenario är identiskt med [VOD-uppspelningen utan annonser](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md)-scenariot, förutom att det finns två sessioner som körs parallellt för två separata media. Var och en av sessionerna använder en separat instans av `MediaHeartbeat`.
 
-Om inget annat anges är nätverksanropen samma som [VOD-uppspelningen utan annonseringsscenario](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) .
+Om inget annat anges är nätverksanropen samma som [VOD-uppspelningen utan annonser](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md)-scenariot.
 
 ## Parametrar {#parameters}
 
 ### Session för pulsslag
 
-| Parameter | Värde | Anteckningar |
+| Parameter | Värde | Anteckningar   |
 |---|---|---|
-| `s:event:sid` | Unikt sessions-ID | Ett unikt sessions-ID som finns i alla hjärtslagsnätverksanrop tills `trackSessionEnd` metoden anropas. |
+| `s:event:sid` | Unikt sessions-ID | Ett unikt sessions-ID som finns i alla hjärtslagsnätverksanrop tills metoden `trackSessionEnd` anropas. |
 
 ## Exempelkod {#sample-code}
 
@@ -108,7 +112,7 @@ protected void onCreate(Bundle savedInstanceState) {
 } 
 ```
 
-Båda förekomsterna `MediaAnalyticsProvider` och `MediaHeartbeat` spåra två separata sessioner, var och en med sina egna unika sessions-ID:n. De två sessionerna i felsökningsverktyget eller felsökningsloggarna för Charles kan identifieras med hjälp av värdet för sessions-ID. Ställ in följande kod för att visa det här scenariot i Android:
+Båda instanserna av `MediaAnalyticsProvider` och `MediaHeartbeat` spårar två separata sessioner, var och en med sina egna unika sessions-ID:n. De två sessionerna i felsökningsverktyget eller felsökningsloggarna för Charles kan identifieras med hjälp av värdet för sessions-ID. Ställ in följande kod för att visa det här scenariot i Android:
 
 ```java
 // Set up mediaObject 
@@ -272,7 +276,7 @@ _mediaHeartbeat.trackSessionEnd();
 } 
 ```
 
-Båda förekomsterna `MediaAnalyticsProvider` och `ADBMediaHeartbeat` spåra två separata sessioner, var och en med sina egna unika sessions-ID:n. De två sessionerna i felsökningsverktyget eller felsökningsloggarna för Charles kan identifieras med hjälp av värdet för sessions-ID.
+Båda instanserna av `MediaAnalyticsProvider` och `ADBMediaHeartbeat` spårar två separata sessioner, var och en med sina egna unika sessions-ID:n. De två sessionerna i felsökningsverktyget eller felsökningsloggarna för Charles kan identifieras med hjälp av värdet för sessions-ID.
 
 Ställ in följande kod för att visa det här scenariot i iOS:
 
@@ -373,5 +377,4 @@ analyticsProvider2 = new MediaAnalyticsProvider(_player2);
 _player2.loadContent(URL_TO_MEDIA_2); 
 ```
 
-Båda förekomsterna `MediaAnalyticsProvider` och `MediaHeartbeat` spåra två separata sessioner, var och en med sina egna unika sessions-ID:n. Du kan se de två sessionerna i felsökningsverktyget Charles.
-
+Båda instanserna av `MediaAnalyticsProvider` och `MediaHeartbeat` spårar två separata sessioner, var och en med sina egna unika sessions-ID:n. Du kan se de två sessionerna i felsökningsverktyget Charles.
