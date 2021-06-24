@@ -1,30 +1,34 @@
 ---
-title: Spåra buffring på iOS
-description: Beskriver spårning av buffringshändelser på iOS.
+title: Lär dig spåra buffring på iOS
+description: Lär dig spåra buffringshändelser på iOS.
 uuid: 4f4db23a-489b-4b41-bb6e-393ec64d52a2
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: 5f0a3c4b-7c9e-499d-98d0-6fcf316c4d9c
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '119'
+ht-degree: 0%
 
 ---
-
 
 # Spåra buffring på iOS{#track-buffering-on-ios}
 
 >[!IMPORTANT]
 >
->Följande instruktioner ger vägledning för implementering i alla 2.x SDK:er. Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandboken här: [Hämta SDK:er.](/help/sdk-implement/download-sdks.md)
+>Följande anvisningar ger vägledning för implementering i alla 2.x SDK:er. Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandboken här: [Hämta SDK:er.](/help/sdk-implement/download-sdks.md)
 
 ## Konstanter för buffertspårning
 
 
-| Konstantnamn | Beskrivning |
+| Konstantnamn | Beskrivning     |
 |---|---|
 | `ADBMediaHeartbeatEventBufferStart` | Konstant för spårning av buffertens starthändelse |
 | `ADBMediaHeartbeatEventBufferComplete` | Konstant för spårning av händelsen Buffer Complete |
 
 ## Implementera buffring
 
-1. Lyssna efter uppspelningsbuffringshändelser från mediespelaren och spåra buffring med hjälp av `BufferStart` händelsen vid meddelande om buffertstart:
+1. Lyssna efter uppspelningsbuffringshändelser från mediespelaren och spåra buffring med händelsen `BufferStart` vid meddelande om starthändelse för buffert:
 
    ```
    - (void)onBufferStart:(NSNotification *)notification { 
@@ -34,7 +38,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
    }
    ```
 
-1. Spåra slutet av buffringen med händelsen `BufferComplete` vid buffertmeddelande från mediespelaren:
+1. Spåra slutet av buffringen med händelsen `BufferComplete` när bufferten är klar från mediespelaren:
 
    ```
    - (void)onBufferComplete:(NSNotification *)notification { 
@@ -44,4 +48,4 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
    }
    ```
 
-Mer information finns i [VOD-uppspelning för spårningsscenarier med buffring](/help/sdk-implement/tracking-scenarios/vod-buffering.md) .
+Mer information finns i spårningsscenariot [VOD-uppspelning med buffring](/help/sdk-implement/tracking-scenarios/vod-buffering.md).
