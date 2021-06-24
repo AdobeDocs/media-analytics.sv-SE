@@ -1,12 +1,16 @@
 ---
 title: VOD-uppspelning med överhoppade annonser
-description: Ett exempel på hur man spårar VOD-innehåll där användaren hoppade över annonser med Media SDK.
+description: Visa ett exempel på hur du spårar VOD-innehåll där användaren hoppade över annonser med Media SDK.
 uuid: f3ab3524-abcb-4051-b64e-a1aad6e3dd3f
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: 034b5c1f-7dd9-431f-a51b-925e407a7b36
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '281'
+ht-degree: 2%
 
 ---
-
 
 # VOD-uppspelning med överhoppade annonser{#vod-playback-with-skipped-ads}
 
@@ -16,22 +20,22 @@ Detta scenario omfattar uppspelning av VOD-innehåll med en överhoppad annons.
 
 ### En VOD med en överhoppad pre-roll-annons
 
-Detta är samma scenario som för [VOD-uppspelning med pre-roll-annonser](/help/sdk-implement/tracking-scenarios/vod-preroll-ads.md), förutom att programmet har en bestämmelse om att användaren ska kunna hoppa över annonsen, kanske genom att klicka på en hoppknapp.
+Detta är samma scenario som [VOD-uppspelning med pre-roll-annonser](/help/sdk-implement/tracking-scenarios/vod-preroll-ads.md), förutom att programmet har en bestämmelse om att användaren ska kunna hoppa över annonsen, kanske genom att klicka på en hoppknapp.
 
-| Utlösare | Heartbeat-metod | Nätverksanrop | Anteckningar |
+| Utlösare   | Heartbeat-metod  | Nätverksanrop   | Anteckningar   |
 | --- | --- | --- | --- |
-| Användaren klickar [!UICONTROL Play] | `trackSessionStart()` | Börja med Analytics-innehåll, starta pulsslagsinnehåll | Mätbiblioteket är ovetande om att det finns en annons före rullning. Dessa nätverksanrop är fortfarande exakt likadana som [VOD-uppspelning utan annonseringsscenario](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) . |
+| Användaren klickar på [!UICONTROL Play] | `trackSessionStart()` | Börja med Analytics-innehåll, starta pulsslagsinnehåll | Mätbiblioteket är ovetande om att det finns en annons före rullning. Dessa nätverksanrop är fortfarande exakt likadana som [VOD-uppspelning utan annonser](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md)-scenario. |
 | Annonsen börjar. | <ul> <li> `trackEvent:AdBreakStart` </li> <li> `trackEvent:AdStart` </li> </ul> | Start, pulsslag och start för annonsering i Analytics |  |
 | Den första bildrutan i annonsen spelas upp. | `trackPlay()` | Heartbeat Ad Play | När annonsinnehållet spelas upp före huvudinnehållet börjar hjärtslagen när annonsen börjar spelas upp. |
 | Annonen spelas. |  | Ad Heartbeats |  |
 | Annonsen hoppas över. | `trackEvent:trackAdSkip` |  | Det finns inget och fullständigt nätverksanrop. |
-| Innehållet spelas upp. |  | Hjärtslag för innehåll | Dessa nätverksanrop är exakt samma som [VOD-uppspelningen utan annonseringsscenario](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) . |
-| Innehållet spelas upp helt. | `trackComplete()` | Hearsbeat-innehåll slutfört | Detta nätverksanrop är exakt detsamma som [VOD-uppspelningen utan annonseringsscenario](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) . |
+| Innehållet spelas upp. |  | Hjärtslag för innehåll | Dessa nätverksanrop är exakt likadana som [VOD-uppspelningen utan annonser](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md)-scenariot. |
+| Innehållet spelas upp helt. | `trackComplete()` | Hearsbeat-innehåll slutfört | Detta nätverksanrop är exakt detsamma som [VOD-uppspelningen utan annonser](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md)-scenariot. |
 | Sessionen är över. | `trackSessionEnd()` |  | `SessionEnd` |
 
 ## Parametrar {#parameters}
 
-Parametrarna är identiska med parametrarna i [VOD-uppspelningen med pre-roll ads](/help/sdk-implement/tracking-scenarios/vod-preroll-ads.md) -scenariot, förutom att det inte finns något fullständigt och inget fullständigt anrop om annons.
+Parametrarna är identiska med parametrarna i [VOD-uppspelningen med pre-roll ads](/help/sdk-implement/tracking-scenarios/vod-preroll-ads.md)-scenariot, förutom att det inte finns något fullständigt ad och inget fullständigt annonsanrop.
 
 ## Exempelkod {#sample-code}
 
@@ -292,4 +296,3 @@ this._mediaHeartbeat.trackSessionEnd();
 ........ 
 ........ 
 ```
-
