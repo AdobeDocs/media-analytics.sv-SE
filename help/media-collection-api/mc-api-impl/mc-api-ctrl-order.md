@@ -1,17 +1,18 @@
 ---
-title: Kontrollera händelseordningen
-description: Kontrollera händelseordningen
+title: Styra händelseförloppet
+description: Lär dig hur du styr ordningen på händelser och hur händelser i vissa fall ordnas om baserat på den angivna tidsstämpeln i playerTime-objektet.
 uuid: 007fccc6-be72-4b79-826d-588c957ccf15
 exl-id: c0cac319-2bea-42c8-8674-641dfbb44fa2
-translation-type: tm+mt
-source-git-commit: 27694ec83de89980404df7a7cc77fa42b3d1a751
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '328'
+ht-degree: 1%
 
 ---
 
-# Kontrollera ordningen för händelser{#controlling-the-order-of-events}
+# Kontrollera händelseordningen{#controlling-the-order-of-events}
 
 Spårning av direktuppspelad video är en mycket tidsberoende åtgärd och ibland kommer API-spårningsanrop för Media Collection i fel ordning. I det här fallet försöker backend placera händelser i kö och ordna om dem baserat på den angivna tidsstämpeln i `playerTime`-objektet.  Detta sker med vissa begränsningar. För närvarande kan det hända att ordningen inte fungerar om fördröjningarna mellan telefonsamtal som inte är i ordning är mer än en sekund. I framtida uppdateringar kan den&quot;godtagbara fördröjningstiden&quot; optimeras och konfigureras.
 
