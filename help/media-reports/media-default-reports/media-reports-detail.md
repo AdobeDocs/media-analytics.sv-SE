@@ -1,12 +1,13 @@
 ---
 title: Medieinformation
-description: Medieinformation
+description: '"Visa detaljerade mätvärden för samtidiga visningsprogram eller avlyssnare, innehållsstart, slutförandefrekvens, tidsåtgång och annonser börjar på kontrollpanelen Medieinformation."'
 uuid: 57d7f5b0-41dd-41d7-9a5a-474528839be5
 exl-id: 3c707539-95a4-4e16-97f0-f3fe0be4fe74
-translation-type: tm+mt
-source-git-commit: d4491dfec33d8729f40bcef1d57622467443bdbb
+feature: '"Media Analytics, Reports & Analytics Basics"'
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '30'
+source-wordcount: '55'
 ht-degree: 0%
 
 ---
