@@ -2,14 +2,15 @@
 title: Vad är Media Analytics och integreringar på klientsidan?
 description: Läs om hur Media Analytics fungerar med integreringar på klientsidan och Media SDK och/eller Media Collection API.
 uuid: ba0496e2-585a-4176-b583-c705726fecc6
-translation-type: tm+mt
-source-git-commit: 5f0de1e0f0694987c6bab0bd97ac8c98e843f23a
+exl-id: 6fd4e82e-b471-4ed1-864d-5dd77cc6ffe0
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '152'
+source-wordcount: '154'
 ht-degree: 0%
 
 ---
-
 
 # Klientsida{#client-side}
 
