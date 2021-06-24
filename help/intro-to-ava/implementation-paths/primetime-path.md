@@ -1,14 +1,15 @@
 ---
 title: Vad är Adobe Primetime?
 description: Läs om Adobe Primetime lösning och hur den kan tjäna pengar på strömmande media.
-translation-type: tm+mt
-source-git-commit: 5f0de1e0f0694987c6bab0bd97ac8c98e843f23a
+exl-id: 756e4e62-35b3-42a2-93f5-81531e1c9cc8
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '255'
+source-wordcount: '257'
 ht-degree: 1%
 
 ---
-
 
 # Primetime{#primetime}
 
@@ -21,7 +22,7 @@ Primetime eliminerar komplexiteten i att nå, tjäna pengar på och aktivera glo
 * Stöd för exakt mätning av linjära och VOD-innehållstyper.
 * Stöd för mätning av annonsbrytningar med (eller utan) dynamisk annonsinfogning.
 * TVSDK:s smidiga annonsinfogningsmodell möjliggör analyser som direkt mäter annonsuppspelningen, vilket ökar noggrannheten.
-* Robusta uppsättningar av händelser och metadata för att säkerställa exakthet över QoS-buffring eller avbrott i den mobila anslutningen och slutanvändarinteraktioner som sökning, pausning och bakgrundsbeläggning på mobilen.
+* Robusta uppsättningar av händelser och metadata för att säkerställa exakthet över QoS-buffring eller avbrott i den mobila anslutningen och slutanvändarinteraktioner som sökning, pausning och bakgrundsrundning på mobilen.
 <!--
 * Integrated support for Nielsen DTVR (linear) with ID3 metadata and DCR with CMS metadata.
 -->
