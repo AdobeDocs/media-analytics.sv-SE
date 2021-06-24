@@ -1,12 +1,16 @@
 ---
-title: Chromecast-metadatanycklar
-description: Beskriver hur du ställer in standardmetadata för video och annonsering som ska skickas med spårningsanrop på Chromecast.
+title: Förklaring av metadata för Chromecast
+description: Lär dig hur du ställer in standardmetadata för video och annonsering som ska skickas med spårningsanrop på Chromecast.
 uuid: c446ad41-51b8-46d6-9bc1-abfae866023f
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: ccc717ae-d846-4349-8282-5e3511ddeb9b
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '141'
+ht-degree: 2%
 
 ---
-
 
 # Chromecast-metadatanycklar{#chromecast-metadata-keys}
 
@@ -111,4 +115,3 @@ adObject[ADBMobile.media.MediaObjectKey.StandardAdMetadata] = standardVideoMetad
  
 ADBMobile.media.trackEvent(ADBMobile.media.Event.AdStart, this._player.getAdInfo(), adContextData);
 ```
-
