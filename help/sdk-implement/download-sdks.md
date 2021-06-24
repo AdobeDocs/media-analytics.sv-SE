@@ -1,12 +1,14 @@
 ---
-title: Hämta SDK:er
+title: Få tillgång till länkar för att ladda ned SDK:er för Media Analytics
 description: Länkar till SDK-nedladdningar för tillgängliga plattformar, inklusive Android, iOS, JavaScript, Chromecast och Roku.
 uuid: a619fbb8-693e-4583-8dad-0ff875e715f8
 exl-id: d211fa2e-d5b0-4e9f-bdb7-eda838194f3d
-source-git-commit: 0d5edcae0a80357247ada7f61daece9840d5c4b5
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '513'
-ht-degree: 6%
+source-wordcount: '520'
+ht-degree: 5%
 
 ---
 
@@ -25,7 +27,7 @@ ht-degree: 6%
 | Chromecast | [Media SDK för Chromecast v3.0.2](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/chromecast-v3.0.2) | [API-referens för Chromecast](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/) | [Konfigurera Chromecast](/help/sdk-implement/setup/set-up-chromecast.md) |
 
 
-## Ladda ned 2.x Media SDK {#download-2x-sdks}
+## Ladda ned 2.x Media SDKs {#download-2x-sdks}
 
 | 2.x Media SDK  | Senaste SDK-nedladdningar för media |  API:er   |  Dokumentation  |
 | --- | --- | --- | --- |
@@ -35,7 +37,7 @@ ht-degree: 6%
 | Roku | [Media SDK för Roku v2.2.3](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/roku-v2.2.3) |  | [Konfigurera Roku](/help/sdk-implement/setup/set-up-roku.md) |
 | Kromecast | [Media SDK för Chromecast v2.2.0](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/chromecast-v2.2.0) | [API-referens för Chromecast](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/) | [Konfigurera Chromecast](/help/sdk-implement/setup/set-up-chromecast.md) |
 
-## Starttillägg för Media Analytics {#media-analytics-launch-extension}
+## Starta tillägg för Media Analytics {#media-analytics-launch-extension}
 
 | Startkomponent för MA   | Dokumentation | Exempel |
 |---|---|---|
