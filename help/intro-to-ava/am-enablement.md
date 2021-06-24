@@ -2,14 +2,16 @@
 title: Vad är Adobe Audience Manager aktivering?
 description: Lär dig hur du länkar programåtgärder till mediespårningsdata utan att behöva använda ytterligare bearbetningsregler och anpassade variabler.
 exl-id: c0d73bc2-4713-498a-8882-ff66c7f3dd50
-source-git-commit: e56ce73316d9cf00193220df8959a489fc3f2124
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '409'
 ht-degree: 0%
 
 ---
 
-# Audience Manager enablement{#audience-manager-enablement}
+# Audience Manager aktivering{#audience-manager-enablement}
 
 Adobe Audience Manager (AAM), en plattform för datahantering (DMP), hjälper er att samla ihop era målgruppsdata, vilket gör det enkelt att samla in kommersiellt relevant information om webbplatsbesökare, skapa marknadsföringsbara segment och leverera riktad reklam och innehåll till rätt målgrupp.
 
@@ -23,7 +25,7 @@ Med AAM är du inte knuten till någon dataförsäljare, utbytesplattform eller 
 
 Federated Data har fullt stöd för datadelning till AAM. Kontakta ditt Adobe-team för att få en bekräftelse på Federated Data-inställningarna.
 
-## OTT/AAM metoder {#ott-aam-methods}
+## OTT-/AAM-metoder {#ott-aam-methods}
 
 Du kan använda dessa metoder för att skicka signaler och hämta besökarsegment från Audience Manager:
 
