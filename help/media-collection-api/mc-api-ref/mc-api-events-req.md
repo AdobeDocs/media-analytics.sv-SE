@@ -1,12 +1,13 @@
 ---
-title: Händelsebegäran
-description: Händelsebegäran
+title: API för direktuppspelad mediainsamling � händelsebegärandeslutpunkt
+description: '"Vad begär Media Collection API-händelser slutpunktsparametrar och svar?"'
 uuid: b237f0a0-dc29-418b-89ee-04c596a27f39
 exl-id: ee0dd8a6-1529-4258-af12-0e2f5948ec38
-translation-type: tm+mt
-source-git-commit: d4491dfec33d8729f40bcef1d57622467443bdbb
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '263'
 ht-degree: 4%
 
 ---
