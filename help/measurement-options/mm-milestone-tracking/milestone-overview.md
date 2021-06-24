@@ -1,11 +1,13 @@
 ---
-title: Översikt över milstolpar
-description: Översikt över milstolpar
+title: Lär dig mer om milstolperapportering (borttagen)
+description: Föråldrad � Lär dig hur du ställer in videorapportering för en milstolpe-implementering
 uuid: 2f9ec6bb-8860-4863-98bc-5cffb356ccc5
 exl-id: 960785e3-f507-4f09-8f85-6eeca57dd2f3
-source-git-commit: 0d5edcae0a80357247ada7f61daece9840d5c4b5
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '3324'
+source-wordcount: '3339'
 ht-degree: 0%
 
 ---
@@ -58,7 +60,7 @@ På den sista skärmen väljer du de två eVars och tre händelser som ska anvä
 
 ![](assets/rs3.png)
 
-## Videovariabelreferens {#video-variable-reference}
+## Variabelreferens för video {#video-variable-reference}
 
 Följande tabell innehåller ytterligare information om e-handelsvariabler och anpassade händelser för video:
 
@@ -70,7 +72,7 @@ Följande tabell innehåller ytterligare information om e-handelsvariabler och a
 | Videostart | Händelse <br/>Typ: Räknare | Anger att en besökare har visat en del av en video. Den ger dock ingen information om hur mycket, eller vilken del, av en video som besökaren visade. |
 | Videon slutförs | Händelse <br/>Typ: Räknare | Anger att en användare har visat en komplett video. Som standard mäts complete-händelsen en sekund före videons slut.  <br/>Under implementeringen kan du ange hur många sekunder från slutet av videon som du vill att en vy ska vara slutförd. För livevideo och andra strömmar som inte har någon definierad ände kan du ange en anpassad punkt för att mäta slutförda data. Till exempel efter en viss tidpunkt. |
 
-## Mediemodulvariabler {#media-module-variables}
+## Mediemodvariabler {#media-module-variables}
 
 Med följande variabler kan du konfigurera videomätning. Du måste definiera värden för variablerna i tabellen Obligatoriska variabler. Om du vill spåra händelser i videospelaren måste du aktivera autoTrack (för spelare som stöds) eller implementera anpassad spårning av spelarhändelser med metoderna open, play, stop och close.
 
@@ -108,7 +110,7 @@ Dessa variabler används för att skicka annonsinformation tillsammans med metod
 | `Media.adSegmentByMilestones` | **Syntax:** <br/><br/> `s.Media.adSegmentByMilestones = true;` <br/><br/>Genererar automatiskt data om segmentnamn, segmentnummer och segmentlängd baserat på mediets längd och de milstolpar som anges i  `Media.adTrackMilestones` <br/><br/>Segmentering efter milstolpar är det enda sättet att definiera segment när  `autoTrack`.  <br/><br/>Standardvärde:  `false` |
 | `Media.adSegmentByOffsetMilestones` | **Syntax:** <br/><br/> `s.Media.adSegmentByOffsetMilestones = true;` <br/><br/>Genererar automatiskt data om segmentnamn, segmentnummer och segmentlängd baserat på mediets längd och de milstolpar som anges i  `Media.adTrackOffsetMilestones` <br/><br/>Segmentering efter milstolpar är det enda sättet att definiera segment när  `autoTrack`. <br/><br/>Standardvärde:  `false` |
 
-## Mediemodulmetoder {#media-module-methods}
+## Media Module-metoder {#media-module-methods}
 
 Metoderna i mediemodulen används för att manuellt spåra spelarhändelser och för att spåra ytterligare mått som inte ingår i standardvideorapporterna.
 
