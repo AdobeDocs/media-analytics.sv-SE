@@ -1,12 +1,16 @@
 ---
-title: Spåra kärnuppspelning på iOS
-description: I det här avsnittet beskrivs hur du implementerar huvudspårning med Media SDK på iOS.
+title: Lär dig hur du spårar uppspelning i bakgrunden i iOS
+description: Lär dig implementera huvudspårning med Media SDK på iOS.
 uuid: bdc0e05c-4fe5-430e-aee2-f331bc59ac6b
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: 5c6b36b3-a421-45a4-a65e-4eb57513ca4a
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '713'
+ht-degree: 2%
 
 ---
-
 
 # Spåra kärnuppspelning på iOS{#track-core-playback-on-ios}
 
@@ -15,7 +19,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 1. **Inledande spårningsinställning**
 
-   Identifiera när användaren aktiverar uppspelningsavsikten (användaren klickar på play och/eller autoplay är aktiverat) och skapar en `MediaObject` instans.
+   Identifiera när användaren aktiverar uppspelningsavsikten (användaren klickar på play och/eller autoplay är aktiverat) och skapa en `MediaObject`-instans.
 
    [createMediaObjectWithName API](https://adobe-marketing-cloud.github.io/media-sdks/reference/ios/Classes/ADBMediaHeartbeat.html#//api/name/createMediaObjectWithName:mediaId:length:streamType:mediaType:)
 
@@ -62,11 +66,12 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
    * **Standardmetadata för video**
 
-      * [Implementera standardmetadata på iOS](/help/sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-ios.md)
+      * [Implementera standardmetadata i iOS](/help/sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-ios.md)
       * **Metadataknappar för video**
+
          [iOS-metadatanycklar](/help/sdk-implement/track-av-playback/impl-std-metadata/ios-metadata-keys.md)
 
-      * Se den omfattande listan med videometadata här: Parametrar för [ljud och video](/help/metrics-and-metadata/audio-video-parameters.md)
+      * Se den omfattande listan med videometadata här: [Parametrar för ljud och video](/help/metrics-and-metadata/audio-video-parameters.md)
       >[!NOTE]
       >
       >Det är valfritt att bifoga standardmetadataobjektet för video till mediaobjektet.
@@ -84,7 +89,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 1. **Spåra avsikten att starta uppspelningen**
 
-   Om du vill börja spåra en mediesession anropar du instansen Mediepulsslag `trackSessionStart` .
+   Om du vill börja spåra en mediesession anropar du `trackSessionStart` på instansen Mediepulsslag.
 
    >[!TIP]
    >
@@ -99,11 +104,11 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
    >[!IMPORTANT]
    >
-   >`trackSessionStart` spårar användarens avsikt att spela upp, inte början av uppspelningen. Detta API används för att läsa in videodata/metadata och för att beräkna QoS-måttet för tid till start (tidsintervallet mellan `trackSessionStart` och `trackPlay`).
+   >`trackSessionStart` spårar användarens avsikt att spela upp, inte början av uppspelningen. Detta API används för att läsa in videodata/metadata och för att beräkna QoS-måttet för tid till start (tidslängden mellan `trackSessionStart` och `trackPlay`).
 
    >[!NOTE]
    >
-   >Om du inte använder anpassade videometadata skickar du bara ett tomt objekt för argumentet i `data` `trackSessionStart`, vilket visas i den kommenterade utdataraden i iOS-exemplet ovan.
+   >Om du inte använder anpassade videometadata skickar du bara ett tomt objekt för argumentet `data` i `trackSessionStart`, vilket visas i den kommenterade utdataraden i iOS-exemplet ovan.
 
 1. **Spåra faktiskt uppspelningsstart**
 
@@ -117,7 +122,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 1. **Spåra slutförd uppspelning**
 
-   Identifiera händelsen från videospelaren när videouppspelningen är klar, där användaren har tittat på innehållet tills slutet och ring `trackComplete`:
+   Identifiera händelsen från videospelaren för att slutföra videouppspelningen, där användaren har tittat på innehållet tills slutet, och ring `trackComplete`:
 
    ```
    - (void)onVideoComplete:(NSNotification *)notification { 
@@ -137,11 +142,11 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
    >[!IMPORTANT]
    >
-   >`trackSessionEnd` markerar slutet av en videospårningssession. Om sessionen slutfördes utan fel, där användaren tittade på innehållet tills slutet, måste du se till att `trackComplete` anropas före `trackSessionEnd`. Alla andra `track*` API-anrop ignoreras efter `trackSessionEnd`, förutom `trackSessionStart` för en ny videospårningssession.
+   >`trackSessionEnd` markerar slutet av en videospårningssession. Om sessionen kunde bevakas tills det var klart, där användaren tittade på innehållet till slutet, kontrollerar du att `trackComplete` anropas före `trackSessionEnd`. Alla andra `track*` API-anrop ignoreras efter `trackSessionEnd`, förutom `trackSessionStart` för en ny videospårningssession.
 
 1. **Spåra alla möjliga pausscenarier**
 
-   Identifiera händelsen från videospelaren för paus och anrop av videon `trackPause`:
+   Identifiera händelsen från videospelaren för paus i videon och ring `trackPause`:
 
    ```
    - (void)onVideoPause:(NSNotification *)notification { 
@@ -151,14 +156,14 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
    **Pausa scenarier**
 
-   Identifiera alla scenarier där videouppspelaren pausas och se till att det `trackPause` anropas korrekt. Följande scenarier kräver alla ditt appsamtal `trackPause()`:
+   Identifiera alla scenarier där videospelaren pausar och se till att `trackPause` anropas korrekt. Följande scenarier kräver alla att ditt program anropar `trackPause()`:
 
    * Användaren träffar uttryckligen paus i appen.
    * Spelaren försätts i pausläget.
    * (*Mobilappar*) - Användaren placerar programmet i bakgrunden, men du vill att sessionen ska vara öppen i appen.
-   * (*Mobilappar*) - Alla typer av systemavbrott inträffar som gör att ett program backjordas. Användaren får t.ex. ett samtal eller ett popup-fönster från ett annat program inträffar, men du vill att sessionen ska vara aktiv så att användaren kan återuppta videon från avbrottet.
+   * (*Mobilappar*) - Alla typer av systemavbrott inträffar som gör att ett program backoreras. Användaren får t.ex. ett samtal eller ett popup-fönster från ett annat program inträffar, men du vill att sessionen ska vara aktiv så att användaren kan återuppta videon från avbrottet.
 
-1. Identifiera händelsen från spelaren för videouppspelning och/eller videouppspelning från paus och samtal `trackPlay`:
+1. Identifiera händelsen från spelaren för videouppspelning och/eller videouppspelning från paus och ring `trackPlay`:
 
    ```
    - (void)onVideoPlay:(NSNotification *)notification { 
@@ -168,10 +173,9 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
    >[!TIP]
    >
-   >Detta kan vara samma händelsekälla som användes i steg 4. Se till att varje API-anrop `trackPause()` paras med ett följande API- `trackPlay()` anrop när videouppspelningen återupptas.
+   >Detta kan vara samma händelsekälla som användes i steg 4. Kontrollera att varje `trackPause()` API-anrop är parat med följande `trackPlay()` API-anrop när videouppspelningen återupptas.
 
 Mer information om hur du spårar uppspelning finns i följande:
 
-* Spårningsscenarier: VOD- [uppspelning utan annonser](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md)
+* Spårningsscenarier: [VOD-uppspelning utan annonser](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md)
 * Exempelspelare som ingår i iOS SDK för ett fullständigt spårningsexempel.
-
