@@ -1,13 +1,14 @@
 ---
-title: Sessionsbegäran
-description: Sessionsbegäran
+title: API � Sessions-slutpunkt för direktuppspelning av mediainsamling
+description: '"Vad begär Media Collection API-sessioner slutpunktsparametrar och svar?"'
 uuid: 9609192d-4f7f-4fb5-844f-ea89d47c4e30
 exl-id: f55f5838-610f-4f82-b3c5-72165ea2c86b
-translation-type: tm+mt
-source-git-commit: d4491dfec33d8729f40bcef1d57622467443bdbb
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '80'
-ht-degree: 8%
+source-wordcount: '97'
+ht-degree: 7%
 
 ---
 
