@@ -1,14 +1,18 @@
 ---
-title: Implementera standardmetadata på Roku
-description: Beskriver hur du ställer in standardmetadata för video och annonsering som ska skickas med spårningsanrop på Roku.
+title: Lär dig hur du implementerar standardmetadata på Roku
+description: Lär dig hur du ställer in standardmetadata för video och annonsering som ska skickas med spårningsanrop på Roku.
 uuid: ae14d809-343f-452c-832a-f94bd3d83a90
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: 1552b16a-3c2d-4caa-b571-e6628f0b6866
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '65'
+ht-degree: 9%
 
 ---
 
-
-# Implementera standardmetadata på Roku{#implement-standard-metadata-on-roku}
+# Implementera standardmetadata i Roku{#implement-standard-metadata-on-roku}
 
 Instansiera ett metadataobjekt av standardtyp, fyll i önskade variabler och ange metadataobjektet i objektet Mediepulsslag.
 
@@ -34,5 +38,4 @@ standardMetadata[ADBMobile().MEDIA_AudioMetadataKeyLABEL] = "sample label"
 mediaInfo[ADBMobile().MEDIA_STANDARD_MEDIA_METADATA] = standardMetadata 
 ```
 
-Se den omfattande listan med videometadata här: Parametrar för [ljud och video](/help/metrics-and-metadata/audio-video-parameters.md)
-
+Se den omfattande listan med videometadata här: [Parametrar för ljud och video](/help/metrics-and-metadata/audio-video-parameters.md)
