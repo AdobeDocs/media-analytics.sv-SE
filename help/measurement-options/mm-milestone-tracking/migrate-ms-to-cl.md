@@ -1,13 +1,14 @@
 ---
-title: Migrera från milstolpe till anpassad länk
-description: Migrera från milstolpe till anpassad länk
+title: Lär dig hur du migrerar från milstolpe till anpassad länk
+description: Lär dig hur du ändrar milstolpsvariabler till metoder i modulerna för anpassad länk och milstolpe till syntaxen för anpassad länk.
 uuid: 1c8edde5-0ef1-4bc0-a62d-1747f4907f09
 exl-id: 732079f4-3eb8-4b9a-892b-25a1c9332be4
-translation-type: tm+mt
-source-git-commit: d4491dfec33d8729f40bcef1d57622467443bdbb
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '582'
-ht-degree: 18%
+source-wordcount: '598'
+ht-degree: 15%
 
 ---
 
