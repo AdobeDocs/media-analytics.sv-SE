@@ -1,12 +1,16 @@
 ---
-title: Spåra upplevelsekvalitet på Android
-description: I det här avsnittet beskrivs hur du implementerar kvalitetsuppföljning av upplevelser (QoE, QoS) med Media SDK på Android.
+title: Lär dig hur du spårar Experience Quality på Android
+description: '"Lär dig hur du implementerar kvalitetskontroll av upplevelser (QoE, QoS) med Media SDK på Android."'
 uuid: 81ff3939-48a6-45c1-8837-ddfa33490559
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: cee8b119-bca2-4a5c-8111-2b49f7eede66
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '158'
+ht-degree: 3%
 
 ---
-
 
 # Spåra upplevelsekvalitet på Android{#track-quality-of-experience-on-android}
 
@@ -16,7 +20,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ## Implementera QoS
 
-1. Identifiera när bithastigheten ändras under medieuppspelning och skapa `MediaObject` instansen med QoS-informationen.
+1. Identifiera när bithastigheten ändras under medieuppspelning och skapa `MediaObject`-instansen med QoS-informationen.
 
    QoSObject-variabler:
 
@@ -41,8 +45,8 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
                                     <DROPPED_FRAMES>);
    ```
 
-1. Se till att den `getQoSObject()` metoden returnerar den senaste QoS-informationen.
-1. När uppspelningen växlar bithastigheter anropar du `BitrateChange` händelsen i Media Heartbeat-instansen:
+1. Kontrollera att metoden `getQoSObject()` returnerar den senaste QoS-informationen.
+1. När uppspelningen växlar bithastigheter anropar du händelsen `BitrateChange` i instansen Mediepulsslag:
 
    ```java
    public void onBitrateChange(Observable observable, Object data) {  
@@ -53,4 +57,3 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
    >[!IMPORTANT]
    >
    >Uppdatera QoS-objektet och anropa bithastighetsändringshändelsen för varje bithastighetsändring. Detta ger de mest exakta QoS-data.
-
