@@ -1,20 +1,24 @@
 ---
-title: VOD-uppspelning med pre-roll-annonser
-description: Ett exempel på hur du spårar VOD-innehåll som innehåller pre-roll-annonser med Media SDK.
+title: '"VOD Playback with Pre-roll Ads"'
+description: '"Se ett exempel på hur man spårar VOD-innehåll som innehåller pre-roll-annonser med Media SDK."'
 uuid: 5d1022a8-88cb-40aa-919c-60dd592a639e
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: c77f6457-ac3b-4d7a-8eed-e7ebd357a6a5
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '528'
+ht-degree: 0%
 
 ---
 
+# VOD-uppspelning med inledande annonser{#vod-playback-with-pre-roll-ads}
 
-# VOD-uppspelning med pre-roll-annonser{#vod-playback-with-pre-roll-ads}
+I det här scenariot har annonser i förväg infogats före huvudinnehållet. Om inget annat anges är nätverksanropen samma som anropen i [VOD-uppspelningen utan annonser](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md)-scenariot. Nätverksanropen sker samtidigt, men nyttolasten är annorlunda.
 
-I det här scenariot har annonser i förväg infogats före huvudinnehållet. Om inget annat anges är nätverksanropen samma som anropen i [VOD-uppspelningen utan annonseringsscenario](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) . Nätverksanropen sker samtidigt, men nyttolasten är annorlunda.
-
-| Utlösare | Heartbeat-metod | Nätverksanrop | Anteckningar |
+| Utlösare | Heartbeat-metod | Nätverksanrop   | Anteckningar   |
 | --- | --- | --- | --- |
-| Användaren klickar [!UICONTROL Play] | `trackSessionStart` | Börja med Analytics-innehåll, starta pulsslagsinnehåll | Mätbiblioteket vet inte om det finns en förrollsannonsering, så dessa nätverksanrop är fortfarande identiska med [VOD-uppspelningen utan något annonseringsscenario](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) . |
+| Användaren klickar på [!UICONTROL Play] | `trackSessionStart` | Börja med Analytics-innehåll, starta pulsslagsinnehåll | Mätbiblioteket vet inte om det finns någon annons för pre-roll, så dessa nätverksanrop är fortfarande identiska med [VOD-uppspelningen utan annonser](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md)-scenariot. |
 | Annonsen börjar. | <ul> <li> `trackEvent:AdBreakStart` </li> <li> `trackEvent:AdStart` </li> </ul> | Start, pulsslag och start för annonsering i Analytics |  |
 | Bildrutan i annons 1 spelas upp. | `trackPlay` | Heartbeat Ad Play | Annonsinnehållet spelas upp före huvudinnehållet och hjärtslagen börjar när annonsen börjar. |
 | Annonsen spelas. |  | Ad Heartbeats |  |
@@ -22,13 +26,13 @@ I det här scenariot har annonser i förväg infogats före huvudinnehållet. Om
 | Den första bildrutan i annons nr 2 spelas upp. | `trackEvent:AdStart` | Start, pulsslag och start för annonsering i Analytics |  |
 | Annonen spelas. |  | Ad Heartbeats |  |
 | Annonsen nr 2 slutför uppspelningen. | <ul> <li> `trackEvent:trackAdComplete` </li> <li> `trackEvent:AdBreakComplete` </li> </ul> | Heartbeat Ad Complete | Slutet av annonsen och poden nås. |
-| Innehållet spelas upp. |  | Hjärtslag för innehåll | Detta nätverksanrop är identiskt med [VOD-uppspelningen utan annonseringsscenario](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) . |
-| Innehållet är färdigt. | `trackComplete` | Hearsbeat-innehåll slutfört | Detta nätverksanrop är identiskt med [VOD-uppspelningen utan annonseringsscenario](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) . |
+| Innehållet spelas upp. |  | Hjärtslag för innehåll | Detta nätverksanrop är identiskt med [VOD-uppspelningen utan annonser](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md)-scenariot. |
+| Innehållet är färdigt. | `trackComplete` | Hearsbeat-innehåll slutfört | Detta nätverksanrop är identiskt med [VOD-uppspelningen utan annonser](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md)-scenariot. |
 | Sessionen är över | `trackSessionEnd` |  | `SessionEnd` |
 
 ## Parametrar {#parameters}
 
-När en uppspelning börjar skickas ett `Heartbeat Ad Start` samtal. Om annonsens början inte sammanfaller med 10-sekunderstimern fördröjs anropet med några sekunder och anropet går till nästa 10-sekundersintervall. `Heartbeat Ad Start` När detta inträffar, `Content Heartbeat` går en åtgärd ut inom samma intervall och du kan skilja mellan de två anropen genom att titta på händelsetypen och resurstypen:
+När annonsuppspelningen börjar skickas ett `Heartbeat Ad Start`-anrop. Om annonsens början inte sammanfaller med 10-sekunderstimern fördröjs `Heartbeat Ad Start`-anropet med några sekunder och anropet går till nästa 10-sekundersintervall. När detta inträffar går en `Content Heartbeat` ut i samma intervall och du kan skilja mellan de två anropen genom att titta på händelsetypen och resurstypen:
 
 ### Heartbeat Ad Start
 
@@ -37,7 +41,7 @@ När en uppspelning börjar skickas ett `Heartbeat Ad Start` samtal. Om annonsen
 | `s:event:type` | `start` |  |
 | `s:asset:type` | `ad` |  |
 
-Annonserna följer samma grundmodell som `Content Heartbeats`, så `Ad Play` anropet liknar `Content Play` anropet.
+Annonserna följer samma grundmodell som `Content Heartbeats`, så anropet `Ad Play` liknar anropet `Content Play`.
 
 ### Heartbeat Ad Play-samtal
 
@@ -46,7 +50,7 @@ Annonserna följer samma grundmodell som `Content Heartbeats`, så `Ad Play` anr
 | `s:event:type` | `play` |  |
 | `s:asset:type` | `ad` |  |
 
-De här parametrarna liknar `Content Heartbeats` anropet, men `Ad Heartbeats` anropet innehåller några extra parametrar:
+De här parametrarna liknar anropet `Content Heartbeats`, men anropet `Ad Heartbeats` innehåller några extra parametrar:
 
 ### Ad Heartbeats
 
@@ -54,10 +58,10 @@ De här parametrarna liknar `Content Heartbeats` anropet, men `Ad Heartbeats` an
 |---|---|---|
 | `s:event:type` | `play` |  |
 | `s:asset:type` | `ad` |  |
-| `s:asset:ad_id` | &lt;annons-ID> |  |
-| `s:asset:pod_id` | &lt;ad pod ID> |  |
+| `s:asset:ad_id` | &lt;ad ID=&quot;&quot;> |  |
+| `s:asset:pod_id` | &lt;ad pod=&quot;&quot; ID=&quot;&quot;> |  |
 
-På samma sätt som för `Heartbeat Content Complete` anrop skickas ett `Heartbeat Ad Complete` anrop när annonsuppspelningen har slutförts och slutet av spelhuvudet har nåtts. Det här samtalet ser ut som andra `Heartbeat Ad` samtal men innehåller några specifika saker:
+Liknar `Heartbeat Content Complete`-anrop, när annonsuppspelningen har slutförts och slutet av spelhuvudet nås, skickas ett `Heartbeat Ad Complete`-anrop. Det här samtalet ser ut som andra `Heartbeat Ad`-anrop men innehåller några specifika saker:
 
 ### Heartbeat Ad Complete Call
 
@@ -72,7 +76,7 @@ I det här scenariot består VOD av en pre-roll-annons, en andra pre-roll-annons
 
 ![](assets/preroll-regular-playback.png)
 
-* **Android** Ställ in följande kod för att visa det här scenariot i Android:
+* **** AndroidStäll in följande kod om du vill visa det här scenariot i Android:
 
    ```java
    // Set up  mediaObject 
@@ -176,7 +180,7 @@ I det här scenariot består VOD av en pre-roll-annons, en andra pre-roll-annons
    ........ 
    ```
 
-* **iOS -** Ställ in följande kod för att visa det här scenariot i iOS:
+* **iOS -** Ställ in följande kod om du vill visa det här scenariot i iOS:
 
    ```
    //  Set up mediaObject 
@@ -280,7 +284,7 @@ I det här scenariot består VOD av en pre-roll-annons, en andra pre-roll-annons
    ....... 
    ```
 
-* **JavaScript** Ange följande text för att visa detta scenario i JavaScript:
+* **** JavaScriptOm du vill visa det här scenariot i JavaScript anger du följande text:
 
    ```js
    // Set up mediaObject 
@@ -382,7 +386,7 @@ I det här scenariot spelas VOD-innehåll upp med en pre-roll-annons, innehålle
 
 ![](assets/ad-content-regular-playback.png)
 
-* **Android** Ställ in följande kod för att visa det här scenariot i Android:
+* **** AndroidStäll in följande kod om du vill visa det här scenariot i Android:
 
    ```java
    // Set up mediaObject 
@@ -559,7 +563,7 @@ I det här scenariot spelas VOD-innehåll upp med en pre-roll-annons, innehålle
    ........ 
    ```
 
-* **iOS** Ställ in följande kod för att visa det här scenariot i iOS:
+* **Ställ in följande kod för att** iOST ska kunna visa det här scenariot i iOS:
 
    ```
    //  Set up mediaObject 
@@ -746,7 +750,7 @@ I det här scenariot spelas VOD-innehåll upp med en pre-roll-annons, innehålle
    ....... 
    ```
 
-* **JavaScript** Ange följande text för att visa detta scenario i JavaScript:
+* **** JavaScriptOm du vill visa det här scenariot i JavaScript anger du följande text:
 
    ```js
    // Set up mediaObject 
