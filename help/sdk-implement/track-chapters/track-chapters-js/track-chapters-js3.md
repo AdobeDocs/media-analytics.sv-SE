@@ -1,14 +1,15 @@
 ---
-title: Spåra kapitel och segment med JavaScript 3.x
-description: I det här avsnittet beskrivs hur du implementerar kapitel- och segmentspårning med Media SDK i webbläsarappar (JS).
-translation-type: tm+mt
-source-git-commit: 318bb60d9835d9a07fb7aa0a0a02162248410d09
+title: Lär dig spåra kapitel och segment med JavaScript 3.x
+description: Lär dig hur du implementerar kapitel- och segmentspårning med Media SDK i webbläsarappar (JS).
+exl-id: 00ba11df-d226-45a2-a561-dc9f15dcf714
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '217'
+source-wordcount: '220'
 ht-degree: 0%
 
 ---
-
 
 # Spåra kapitel och segment med JavaScript 3.x{#track-chapters-and-segments-on-javascript}
 
@@ -16,7 +17,7 @@ ht-degree: 0%
 >
 >Följande instruktioner ger vägledning vid implementering med 3.x SDK:er. Om du implementerar en tidigare version av SDK kan du ladda ned utvecklarhandboken här: [Hämta SDK:er.](/help/sdk-implement/download-sdks.md)
 
-1. Identifiera när kapitelstarthändelsen inträffar och skapa `ChapterObject` instansen med kapitelinformationen.
+1. Identifiera när kapitelstarthändelsen inträffar och skapa `ChapterObject`-instansen med hjälp av kapitelinformationen.
 
    `ChapterObject` kapitelspårningsreferens:
 
@@ -48,7 +49,7 @@ ht-degree: 0%
    chapterMetadata["segmentType"] = "Sample segment type";
    ```
 
-1. Om du vill börja spåra kapiteluppspelningen anropar du `ChapterStart` händelsen i `MediaHeartbeat` instansen:
+1. Börja spåra kapiteluppspelningen genom att anropa händelsen `ChapterStart` i `MediaHeartbeat`-instansen:
 
    ```js
    _onChapterStart = function() {
@@ -57,7 +58,7 @@ ht-degree: 0%
    };
    ```
 
-1. När uppspelningen når kapitelslutsgränsen, som definieras av din egen kod, anropar du `ChapterComplete` händelsen i `MediaHeartbeat` instansen:
+1. När uppspelningen når kapitelslutsgränsen, enligt definitionen i din egen kod, anropar du händelsen `ChapterComplete` i `MediaHeartbeat`-instansen:
 
    ```js
    _onChapterComplete = function() {
