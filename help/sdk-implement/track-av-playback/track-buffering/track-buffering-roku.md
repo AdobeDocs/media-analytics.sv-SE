@@ -1,12 +1,16 @@
 ---
-title: Spåra buffring på Roku
-description: Beskriver spårning av buffringshändelser på Roku.
+title: Lär dig spåra buffring på Roku
+description: Lär dig spåra buffringshändelser på Roku.
 uuid: 6666b270-9aa3-42ff-95a8-f12502022d47
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: 73b10b42-02ab-47f8-8250-58f03c5e0dd1
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '119'
+ht-degree: 0%
 
 ---
-
 
 # Spåra buffring på Roku{#track-buffering-on-roku}
 
@@ -16,14 +20,14 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ## Konstanter för buffertspårning
 
-| Konstantnamn | Beskrivning |
+| Konstantnamn | Beskrivning     |
 |---|---|
 | `BufferStart` | Konstant för spårning av buffertens starthändelse |
 | `BufferComplete` | Konstant för spårning av händelsen Buffer Complete |
 
 ## Implementera buffring
 
-1. Lyssna efter uppspelningsbuffringshändelser från mediespelaren och spåra buffring med hjälp av `BufferStart` händelsen vid buffertstartsmeddelanden.
+1. Lyssna efter uppspelningsbuffringshändelser från mediespelaren och spåra buffring med händelsen `BufferStart` vid meddelande om start av buffert.
 
    ```
    bufferInfo = {}
@@ -31,7 +35,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
    ADBMobile().mediaTrackEvent(MEDIA_BUFFER_START, bufferInfo, bufferContextData)
    ```
 
-1. Spåra slutet av buffringen med händelsen `BufferComplete` när ett meddelande om att bufferten har slutförts skickas från mediespelaren.
+1. Spåra slutet av buffringen med händelsen `BufferComplete` när ett meddelande om att bufferten har slutförts från mediespelaren.
 
    ```
    bufferInfo = {}
@@ -39,4 +43,4 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
    ADBMobile().mediaTrackEvent(MEDIA_BUFFER_COMPLETE, bufferInfo, bufferContextData)
    ```
 
-Mer information finns i [VOD-uppspelning för spårningsscenarier med buffring](/help/sdk-implement/tracking-scenarios/vod-buffering.md) .
+Mer information finns i spårningsscenariot [VOD-uppspelning med buffring](/help/sdk-implement/tracking-scenarios/vod-buffering.md).
