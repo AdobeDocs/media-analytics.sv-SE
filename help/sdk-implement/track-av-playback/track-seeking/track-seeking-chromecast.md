@@ -1,12 +1,16 @@
 ---
-title: Spåra sökning på Chromecast
-description: I det här avsnittet beskrivs hur du implementerar sökspårning med Media SDK på Chromecast.
+title: Lär dig spåra sökning på Chromecast
+description: Lär dig spåra händelserna Seek Start och Seek Complete med Media SDK on Chromecast.
 uuid: 8018e6c4-fed9-4de7-9eae-c720da55ad8c
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: 03be8ed3-ae3a-4e9a-b667-0d9280a844a1
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '148'
+ht-degree: 0%
 
 ---
-
 
 # Spåra sökning på Chromecast{#track-seeking-on-chromecast}
 
@@ -16,23 +20,23 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ## Sökspårningskonstanter
 
-| Konstantnamn | Beskrivning |
+| Konstantnamn | Beskrivning     |
 |---|---|
 | `SeekStart` | Konstant för spårning av Seek Start-händelse. |
 | `SeekComplete` | Konstant för spårning av händelsen Sökning slutförd. |
 
 ## Implementeringssökning
 
-1. Lyssna efter uppspelningssökningshändelser från mediespelaren och spåra sökning med hjälp av `SeekStart` händelsen vid sökningshändelsemeddelanden: [trackEvent](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackEvent)
+1. Lyssna efter uppspelningssökningshändelser från mediespelaren och spåra sökning med händelsen `SeekStart` vid sökningen efter start: [trackEvent](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackEvent)
 
    ```
    ADBMobile.media.trackEvent(ADBMobile.media.Event.SeekStart); 
    ```
 
-1. Spåra slutet av sökningen med händelsen när du söker ett fullständigt meddelande från mediespelaren: `SeekComplete` [trackEvent](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackEvent)
+1. Spåra slutet av sökningen med händelsen `SeekComplete` när du söker efter ett fullständigt meddelande från mediespelaren: [trackEvent](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackEvent)
 
    ```
    ADBMobile.media.trackEvent(ADBMobile.media.Event.SeekComplete); 
    ```
 
-Mer information finns i spårningsscenariot för [VOD-uppspelning med sökning i huvudinnehållet](/help/sdk-implement/tracking-scenarios/vod-seeking.md) .
+Mer information finns i spårningsscenariot [VOD-uppspelning med sökning i huvudinnehållet](/help/sdk-implement/tracking-scenarios/vod-seeking.md).
