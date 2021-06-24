@@ -1,12 +1,16 @@
 ---
 title: VOD-uppspelning med ett kapitel
-description: Ett exempel på spårning av VOD-uppspelning som innehåller ett kapitel.
+description: Visa ett exempel på hur du spårar VOD-uppspelning som innehåller ett kapitel.
 uuid: 1566a6f5-cf22-42e7-8e1a-6976c6c4e649
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: a8394fd3-16a2-4f5d-b6e1-6e9acb4c7afd
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '432'
+ht-degree: 2%
 
 ---
-
 
 # VOD-uppspelning med ett kapitel{#vod-playback-with-one-chapter}
 
@@ -14,24 +18,24 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 I det här scenariot markeras en del av VOD-innehållet som ett kapitel.
 
-Om inget annat anges är nätverksanropen i det här scenariot samma som anropen i [VOD-uppspelningen utan annonseringsscenario](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) . Nätverksanropet sker samtidigt, men nyttolasten är annorlunda.
+Om inget annat anges är nätverksanropen i det här scenariot samma som anropen i [VOD-uppspelningen utan annonser](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md)-scenariot. Nätverksanropet sker samtidigt, men nyttolasten är annorlunda.
 
-| Utlösare | Heartbeat-metod | Nätverksanrop | Anteckningar |
+| Utlösare   | Heartbeat-metod   | Nätverksanrop   | Anteckningar   |
 |---|---|---|---|
-| Användaren klickar **[!UICONTROL Play]** | `trackSessionStart` | Börja med Analytics-innehåll, starta pulsslagsinnehåll | Vi har ännu inte berättat för mätbiblioteket att det finns en pre-roll-annons, så dessa nätverksanrop är fortfarande exakt likadana som Single VoD. |
+| Användaren klickar på **[!UICONTROL Play]** | `trackSessionStart` | Börja med Analytics-innehåll, starta pulsslagsinnehåll | Vi har ännu inte berättat för mätbiblioteket att det finns en pre-roll-annons, så dessa nätverksanrop är fortfarande exakt likadana som Single VoD. |
 | Kapitlet börjar. | `trackEvent:ChapterStart` | Starta pulsslag i kapitel |  |
 | Den första bildrutan i kapitlet spelas upp. | `trackPlay` | Spela upp pulsslagsinnehåll | När kapitelinnehåll spelas upp före huvudinnehållet startar Heartslag när kapitlet börjar. |
 | Kapitlet spelas upp. |  | Hjärtslag |  |
 | Kapitlet är färdigt. | `trackEvent:trackChapterComplete` | pulsslagskapitlet är slutfört | Det här är när slutet av kapitlet nås. |
-| Innehållet spelas upp. |  | Hjärtslag för innehåll | Detta nätverksanrop är exakt detsamma som [VOD-uppspelningen utan annonseringsscenario](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) . |
-| Innehållet är färdigt. | `trackComplete` | Hearsbeat-innehåll slutfört | Detta nätverksanrop är exakt detsamma som [VOD-uppspelningen utan annonseringsscenario](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) . |
+| Innehållet spelas upp. |  | Hjärtslag för innehåll | Detta nätverksanrop är exakt detsamma som [VOD-uppspelningen utan annonser](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md)-scenariot. |
+| Innehållet är färdigt. | `trackComplete` | Hearsbeat-innehåll slutfört | Detta nätverksanrop är exakt detsamma som [VOD-uppspelningen utan annonser](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md)-scenariot. |
 | Sessionen är över. | `trackSessionEnd` |  | `SessionEnd` innebär att slutet av en visningssession har nåtts. Detta API måste anropas även om användaren inte ser mediet tills det är klart. |
 
 ## Parametrar {#parameters}
 
-När kapiteluppspelningen börjar skickas ett `Heartbeat Chapter Start` samtal. Om början av kapitlet inte sammanfaller med 10-sekunderstimern fördröjs anropet med några sekunder och anropet går till nästa 10-sekundersintervall. `Heartbeat Chapter Start`
+När kapiteluppspelningen börjar skickas ett `Heartbeat Chapter Start`-anrop. Om början av kapitlet inte sammanfaller med 10-sekunderstimern fördröjs `Heartbeat Chapter Start`-anropet med några sekunder och anropet går till nästa 10-sekundersintervall.
 
-När detta inträffar, `Content Heartbeat` utlöses ett samtal inom samma intervall. Du kan skilja mellan de två genom att undersöka händelsetypen och resurstypen:
+När detta inträffar går ett `Content Heartbeat`-anrop ut inom samma intervall. Du kan skilja mellan de två genom att undersöka händelsetypen och resurstypen:
 
 ### Starta pulsslag i kapitel
 
@@ -465,4 +469,3 @@ this._mediaHeartbeat.trackSessionEnd();
 ........ 
 ........ 
 ```
-
