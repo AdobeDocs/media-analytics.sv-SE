@@ -1,15 +1,16 @@
 ---
 title: Mallar för arbetsytan Media
-description: null
+description: Använd mediemallar för att analysera spårningsdata. Välj standardmallar för att köpa eller strömma media eller skapa egna mallar.
 uuid: 0024b06a-eaf5-4d2e-be45-aeda9d0554c1
-translation-type: tm+mt
-source-git-commit: 82b38f7870b6f890aaa812de30fa2d02d4f3ba8a
+exl-id: a835f86a-a93a-4a56-91f4-14628cf48214
+feature: '"Media Analytics, Workspace Basics"'
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '182'
+source-wordcount: '209'
 ht-degree: 0%
 
 ---
-
 
 # Mallar för arbetsytan Media{#media-workspace-templates}
 
