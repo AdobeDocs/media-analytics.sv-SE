@@ -1,10 +1,12 @@
 ---
-title: Vanliga frågor om supporten för Media Analytics SDK
+title: Lär dig mer om vanliga frågor och svar om Media Analytics SDK End of Support
 description: Det här avsnittet innehåller frågor och svar om att stödet för SDK:er för Media Analytics har upphört.
 exl-id: 9601ec17-8421-49d0-9d81-1cfa5e8f37cf
-source-git-commit: 0d5edcae0a80357247ada7f61daece9840d5c4b5
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '669'
+source-wordcount: '673'
 ht-degree: 1%
 
 ---
