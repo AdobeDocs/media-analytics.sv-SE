@@ -1,12 +1,16 @@
 ---
-title: Tidslinje 2 – Användaren avbryter sessionen
-description: null
+title: Lär dig mer om tidslinjer för Media Traking � sessioner där användaren avbryter
+description: Lär dig mer om spelhuvudets tidslinje och motsvarande � när en videosession avbryts. Läs mer om de olika åtgärderna och förfrågningarna.
 uuid: 74b89e8f-ef56-4e0c-b9a8-40739e15b4cf
-translation-type: tm+mt
-source-git-commit: c86c7932f932af0a121e0b757921973d6f4084e8
+exl-id: 0c6a89f4-7949-4623-8ed9-ce1d1547bdfa
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '665'
+ht-degree: 5%
 
 ---
-
 
 # Tidslinje 2 – Användaren avbryter sessionen {#timeline--2-user-abandons-session}
 
@@ -31,7 +35,7 @@ I följande diagram visas spelhuvudets tidslinje och motsvarande tidslinje för 
 
 **Implementeringsinformation**
 
-Det här samtalet signalerar _användarens avsikt att spela_ upp en video. Det returnerar ett sessions-ID ( `{sid}` ) till klienten som används för att identifiera alla efterföljande spårningsanrop i sessionen. Spelarläget är inte&quot;uppspelning&quot; än, utan är i stället&quot;start&quot;.  [Obligatoriska sessionsparametrar](/help/media-collection-api/mc-api-ref/mc-api-sessions-req.md) måste inkluderas i `params` kartan i begärandetexten.  Det här samtalet genererar ett initieringssamtal från Adobe Analytics.
+Detta anrop signalerar _användarens avsikt att spela upp_ en video. Det returnerar ett sessions-ID ( `{sid}`) till klienten som används för att identifiera alla efterföljande spårningsanrop i sessionen. Spelarläget är inte&quot;uppspelning&quot; än, utan är i stället&quot;start&quot;.  [Obligatoriska sessionsparametrar ](/help/media-collection-api/mc-api-ref/mc-api-sessions-req.md) måste inkluderas i  `params` kartan i begärandetexten.  I bakgrunden genererar det här samtalet ett Adobe Analytics-initieringssamtal.
 
 **Exempelbegärandebrödtext**
 
@@ -335,7 +339,7 @@ Ringa backend var 10:e sekund.
 
 **Implementeringsinformation**
 
-Adress mellan rullar med 8 sekunders varaktighet: skicka `adBreakStart` .
+Adress mellan rullar med 8 sekunders varaktighet: skicka `adBreakStart`.
 
 **Exempelbegärandebrödtext**
 
