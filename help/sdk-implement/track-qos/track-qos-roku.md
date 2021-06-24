@@ -1,12 +1,16 @@
 ---
-title: Spåra upplevelsekvaliteten på Roku
-description: I det här avsnittet beskrivs hur du implementerar kvalitetsuppföljning av upplevelser (QoE, QoS) med Media SDK on Roku.
+title: Lär dig hur du spårar Experience-kvalitet på Roku
+description: '"Lär dig hur du implementerar kvalitetskontroll av upplevelser (QoE, QoS) med Media SDK on Roku."'
 uuid: a8b242ab-da3c-4297-9eef-f0b9684ef56a
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: cd84c26d-ad91-4179-9532-83408030ff3e
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '199'
+ht-degree: 4%
 
 ---
-
 
 # Spåra upplevelsekvaliteten på Roku{#track-quality-of-experience-on-roku}
 
@@ -16,7 +20,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ## Implementera QOS
 
-1. Identifiera när bithastigheten ändras under medieuppspelning och använd API:t för att uppdatera QoS-informationen på Media SDK. `mediaUpdateQoS`
+1. Identifiera när bithastigheten ändras under medieuppspelning och använd API:t `mediaUpdateQoS` för att uppdatera QoS-informationen i Media SDK.
 
    QoSObject-variabler:
 
@@ -55,7 +59,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
     ```
     -->
 
-1. När uppspelningen växlar bithastigheter ska du anropa Media SDK `trackEvent(BitrateChange)` för att meddela att bithastigheten har ändrats.
+1. När uppspelningen växlar bithastighet ska du ringa `trackEvent(BitrateChange)` och meddela Media SDK att bithastigheten har ändrats.
 
    ```
    ADBMobile().mediaTrackEvent(ADBMobile().MEDIA_BITRATE_CHANGE)
@@ -63,7 +67,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
    >[!NOTE]
    >
-   >Du måste anropa `updateQoSObject` det uppdaterade bithastighetsvärdet.
+   >Du måste anropa `updateQoSObject` med det uppdaterade bithastighetsvärdet.
 
    <!--
     ```
@@ -80,5 +84,4 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
    >[!TIP]
    >
-   >Spårning av mediespelarfel stoppar inte mediespårningssessionen. Om mediespelarfelet förhindrar att uppspelningen fortsätter kontrollerar du att mediespårningssessionen stängs genom att ringa `trackSessionEnd()` efter att du har anropat `trackError()`.
-
+   >Spårning av mediespelarfel stoppar inte mediespårningssessionen. Om mediespelarfelet förhindrar att uppspelningen fortsätter kontrollerar du att mediespårningssessionen stängs genom att anropa `trackSessionEnd()` efter att du har anropat `trackError()`.
