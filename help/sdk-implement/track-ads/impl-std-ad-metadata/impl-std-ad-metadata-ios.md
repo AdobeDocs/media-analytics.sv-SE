@@ -1,18 +1,22 @@
 ---
-title: Implementera standardannonsmetadata på iOS
+title: Lär dig hur du implementerar standardmetadata för annonsering på iOS
 description: Så här använder du standardmetadata för annonser i annonsspårning på iOS.
 uuid: f15fb727-5a5b-46c5-bf12-93b376c10fd1
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: 018ae833-51d9-4ff0-80e7-3dbcaefb997c
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '67'
+ht-degree: 10%
 
 ---
 
-
-# Implementera standardannonsmetadata på iOS{#implement-standard-ad-metadata-on-ios}
+# Implementera standardmetadata för annonser i iOS{#implement-standard-ad-metadata-on-ios}
 
 ## Annonskonstanter
 
-| Konstantnamn | Beskrivning |
+| Konstantnamn | Beskrivning   |
 |---|---|
 | `ADBMediaObjectKeyStandardAdMetadata` | Konstant för att bifoga standardannonsmetadata på `AdInfo ADBMediaObject` |
 
