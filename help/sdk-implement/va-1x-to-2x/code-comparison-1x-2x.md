@@ -1,36 +1,37 @@
 ---
-title: Kodjämförelse 1.x till 2.x
-description: I det här avsnittet jämförs kod i 1.x- och 2.x-versionerna av Media SDK.
+title: Kodjämförelse v1.x till v2.x
+description: Lär dig skillnaden mellan kod i 1.x- och 2.x-versionerna av Media SDK.
 uuid: 9f0a1660-2100-446d-ab75-afdf966478b3
-translation-type: tm+mt
-source-git-commit: 72cdf2d03ebae6998514c9092ab462c29345c9f9
+exl-id: c2324c6a-329f-44e2-bea0-9d43ef9c6ef7
+feature: Medieanalys
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '572'
 ht-degree: 2%
 
 ---
 
+# Kodjämförelse: 1.x till 2.x {#code-comparison-x-to-x}
 
-# Code comparison: 1.x to 2.x {#code-comparison-x-to-x}
-
-Alla konfigurationsparametrar och API:er för spårning konsolideras nu i `MediaHeartbeats` - och `MediaHeartbeatConfig` -klasserna.
+Alla konfigurationsparametrar och API:er för spårning konsolideras nu i klasserna `MediaHeartbeats` och `MediaHeartbeatConfig`.
 
 **Ändringar i konfigurations-API:**
 
-* `AdobeHeartbeatPluginConfig.sdk` - Bytt namn till `MediaConfig.appVersion`
-* `MediaHeartbeatConfig.playerName` - Nu klar i stället `MediaHeartbeatConfig` för `VideoPlayerPluginDelegate`
-* (Endast för JavaScript): Instansen `AppMeasurement` - skickas nu via `MediaHeartbeat` konstruktorn.
+* `AdobeHeartbeatPluginConfig.sdk` - Bytt namn till  `MediaConfig.appVersion`
+* `MediaHeartbeatConfig.playerName` - Nu klar  `MediaHeartbeatConfig` istället för  `VideoPlayerPluginDelegate`
+* (Endast för JavaScript): Instansen `AppMeasurement` - skickas nu via konstruktorn `MediaHeartbeat`.
 
 **Ändringar av konfigurationsegenskaper:**
 
-* `sdk` - Bytt namn till `appVersion`
+* `sdk` - Bytt namn till  `appVersion`
 * `publisher` - Borttagen; Experience Cloud Org ID används i stället som utgivare
 * `quiteMode` - Borttagen
 
 **Länkar till exempelspelare för 1.x och 2.x:**
 
-* [1.x Exempelspelare ](https://github.com/Adobe-Marketing-Cloud/video-heartbeat/blob/master/sdks/js/samples/BasicPlayerSample/script/app/analytics/video.analytics.provider.js#L58)
-* [2.x Exempelspelare ](https://github.com/Adobe-Marketing-Cloud/media-sdks/blob/master/sdks/js/2.x/samples/BasicPlayerSample/script/app/analytics/video.analytics.provider.js#L47)
+* [1.x Exempelspelare  ](https://github.com/Adobe-Marketing-Cloud/video-heartbeat/blob/master/sdks/js/samples/BasicPlayerSample/script/app/analytics/video.analytics.provider.js#L58)
+* [2.x Exempelspelare  ](https://github.com/Adobe-Marketing-Cloud/media-sdks/blob/master/sdks/js/2.x/samples/BasicPlayerSample/script/app/analytics/video.analytics.provider.js#L47)
 
 I följande avsnitt finns kodjämförelser mellan 1.x och 2.x, som omfattar initiering, Core Playback, Ad Playback, Chapter PlayPlayback och några andra händelser.
 
@@ -265,7 +266,7 @@ VideoAnalyticsProvider.prototype._onLoad = function() {
 ```
 
 >[!NOTE]
->I stället för att ställa in standardvideometadata via `AdobeAnalyticsPlugin.setVideoMetadata()` API anges standardvideometadata i VHL 2.0 med MediaObject-tangenten `MediaObject.MediaObjectKey.StandardVideoMetadata()`.
+>I stället för att ställa in standardvideometadata via API:t `AdobeAnalyticsPlugin.setVideoMetadata()` anges standardvideometadata i VHL 2.0 med MediaObject-nyckeln `MediaObject.MediaObjectKey.StandardVideoMetadata()`.
 
 ### Egna videometadata
 
@@ -274,7 +275,7 @@ VideoAnalyticsProvider.prototype._onLoad = function() {
 | `VideoMetadataKeys()` | `MediaHeartbeat.createMediaObject()` |
 | `AdobeAnalyticsPlugin.setVideoMetadata()` | `MediaHeartbeat.trackSessionStart()` |
 
-#### Egna metadata (1.x) {#custom-meta-1.x}
+#### Anpassade metadata (1.x) {#custom-meta-1.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onLoad = function() { 
@@ -288,7 +289,7 @@ VideoAnalyticsProvider.prototype._onLoad = function() {
 };
 ```
 
-#### Egna metadata (2.x) {#custom-meta-2.x}
+#### Anpassade metadata (2.x) {#custom-meta-2.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onLoad = function() { 
@@ -305,7 +306,7 @@ VideoAnalyticsProvider.prototype._onLoad = function() {
 ```
 
 >[!NOTE]
->I stället för att ställa in anpassade videometadata via API:t anges standardvideometadata i VHL 2.0 via `AdobeAnalyticsPlugin.setVideoMetadata()` `MediaHeartbeat.trackSessionStart()` API:t.
+>I stället för att ställa in anpassade videometadata via API:t `AdobeAnalyticsPlugin.setVideoMetadata()`, ställs standardvideometadata in via API:t `MediaHeartbeat.trackSessionStart()` i VHL 2.0.
 
 
 ### Uppspelning
@@ -465,7 +466,7 @@ VideoAnalyticsProvider.prototype._onComplete = function() {
 | `VideoPlayerPluginDelegate.getAdInfo()` | `MediaHeartbeat.trackEvent(`<br/><br/>  `MediaHeartbeat.Event.AdBreakStart)` |
 |  | `MediaHeartbeat.trackEvent(`<br/><br/>  `MediaHeartbeat.Event.AdStart)` |
 
-#### Ad Start (1.x) {#ad-start-1.x}
+#### Annonsstart (1.x) {#ad-start-1.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onAdStart = function() { 
@@ -480,7 +481,7 @@ SampleVideoPlayerPluginDelegate.prototype.getAdInfo = function() {
 };
 ```
 
-#### Ad Start (2.x) {#ad-start-2.x}
+#### Annonsstart (2.x) {#ad-start-2.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onAdStart = function() { 
@@ -506,7 +507,7 @@ VideoAnalyticsProvider.prototype._onAdStart = function() {
 | `AdMetadataKeys()` | `MediaHeartbeat.createAdObject()` |
 | `AdobeAnalyticsPlugin.setAdMetadata()` | `MediaHeartbeat.trackAdStart()` |
 
-#### Standard Ad Metadata (1.x) {#ad-meta-1.x}
+#### Standardmetadata för annonsering (1.x) {#ad-meta-1.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onAdStart = function() {
@@ -525,7 +526,7 @@ VideoAnalyticsProvider.prototype._onAdStart = function() {
 };
 ```
 
-#### Standard Ad Metadata (2.x) {#ad-meta-2.x}
+#### Standardmetadata för annonsering (2.x) {#ad-meta-2.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onAdStart = function() { 
@@ -551,7 +552,7 @@ VideoAnalyticsProvider.prototype._onAdStart = function() {
 ```
 
 >[!NOTE]
->I stället för att ställa in standardmetadata för annonsering via `AdobeAnalyticsPlugin.setVideoMetadata()` API anges standardmetadata i VHL 2.0 med hjälp av `AdMetadata` nyckeln `MediaObject.MediaObjectKey.StandardVideoMetadata`
+>I stället för att ställa in standardmetadata för annonsering med hjälp av API:t `AdobeAnalyticsPlugin.setVideoMetadata()`, ställs standardmetadata för annonsering in med `AdMetadata`-nyckeln `MediaObject.MediaObjectKey.StandardVideoMetadata` i VHL 2.0
 
 ### Anpassade annonseringsmetadata
 
@@ -602,7 +603,7 @@ VideoAnalyticsProvider.prototype._onAdStart = function() {
 ```
 
 >[!NOTE]
->I stället för att ställa in anpassade annonseringsmetadata via API:t anges standardprogrammeringsmetadata i VHL 2.0 via `AdobeAnalyticsPlugin.setVideoMetadata` `MediaHeartbeat.trackAdStart()` -API:t.
+>I stället för att ställa in anpassade annonseringsmetadata via API:t `AdobeAnalyticsPlugin.setVideoMetadata`, ställs standardmetadata in via API:t `MediaHeartbeat.trackAdStart()` i VHL 2.0.
 
 ### Ad Hoppa över
 
@@ -629,7 +630,7 @@ VideoAnalyticsProvider.prototype._onAdSkip = function() {
 ```
 
 >[!NOTE]
->I VHL 1.5.X-API:er; `getAdinfo()` och måste returnera null om spelaren befinner sig utanför annonsbrytningens gränser. `getAdBreakInfo()`
+>I VHL 1.5.X-API:er; `getAdinfo()` och `getAdBreakInfo()` måste returnera null om spelaren är utanför annonsbrytningens gränser.
 
 ### Ad Complete
 
@@ -770,7 +771,7 @@ VideoAnalyticsProvider.prototype._onChapterComplete = function() {
 };
 ```
 
-#### Kapitel fullständigt (2.x) {#chap-complete-2.x}
+#### Fullständigt kapitel (2.x) {#chap-complete-2.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onChapterComplete = function() { 
