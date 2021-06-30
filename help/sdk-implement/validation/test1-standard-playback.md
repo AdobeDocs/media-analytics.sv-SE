@@ -5,7 +5,7 @@ uuid: c4b3fead-1b27-484b-ab6a-39f1ae0f03f2
 exl-id: 3781f0f7-be75-43e5-a40b-a34956dce36e
 feature: Medieanalys
 role: Business Practitioner, Administrator, Data Engineer
-source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+source-git-commit: 9fc75eb94603238aa85779b5f26f7b7de049dc8f
 workflow-type: tm+mt
 source-wordcount: '840'
 ht-degree: 0%
@@ -125,7 +125,7 @@ Fyll i och registrera följande åtgärder (i ordning):
 
    Information om anropsparametrar och metadata finns i [Testa samtalsinformation.](/help/sdk-implement/validation/test-call-details.md#ma-ad-pause-call)
 
-1. **Spela upp huvudinnehållet i 10 minuter utan avbrott.**   **Innehållsuppspelning**
+1. **Spela upp huvudinnehållet i 10 sekunder utan avbrott.**   **Innehållsuppspelning**
 
    Under uppspelningen av huvudinnehållet skickar Media SDK hjärtslag (uppspelningsanrop) till Media Analytics-servern var 10:e sekund.
 
