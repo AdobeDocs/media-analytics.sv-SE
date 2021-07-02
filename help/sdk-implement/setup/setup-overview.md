@@ -5,9 +5,9 @@ uuid: 06fefedb-b0c8-4f7d-90c8-e374cdde1695
 exl-id: a175332e-0bdc-44aa-82cb-b3f879e7abfc
 feature: Medieanalys
 role: Business Practitioner, Administrator, Data Engineer
-source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+source-git-commit: a6872703529159ded6f747b6429a9b94b4202abe
 workflow-type: tm+mt
-source-wordcount: '739'
+source-wordcount: '742'
 ht-degree: 3%
 
 ---
@@ -59,7 +59,7 @@ Utför följande implementeringssteg:
    |  Metodnamn  |  Beskrivning  | Obligatoriskt |
    | --- | --- | :---: |
    | `getQoSObject()` | Returnerar den `MediaObject`-instans som innehåller den aktuella QoS-informationen. Den här metoden anropas flera gånger under en uppspelningssession. Spelarimplementeringen måste alltid returnera de senast tillgängliga QoS-data. | Ja |
-   | `getCurrentPlaybackTime()` | Returnerar spelhuvudets aktuella position. För VOD-spårning anges värdet i sekunder från mediaobjektets början. För LINEAR/LIVE tracking anges värdet i sekunder från programmets början. | Ja |
+   | `getCurrentPlaybackTime()` | Returnerar spelhuvudets aktuella position. För VOD-spårning anges värdet i sekunder från mediaobjektets början. För LINEAR/LIVE tracking anges värdet som antalet sekunder sedan midnatt UTC den dagen. | Ja |
 
    >[!TIP]
    >
