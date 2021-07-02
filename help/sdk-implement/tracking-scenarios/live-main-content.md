@@ -5,9 +5,9 @@ uuid: e92e99f4-c395-48aa-8a30-cbdd2f5fc07c
 exl-id: f6a00ffd-da6a-4d62-92df-15d119cfc426
 feature: Medieanalys
 role: Business Practitioner, Administrator, Data Engineer
-source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+source-git-commit: a6872703529159ded6f747b6429a9b94b4202abe
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '547'
 ht-degree: 0%
 
 ---
@@ -59,17 +59,17 @@ Det kommer inte att ske något fullständigt anrop i det här scenariot, efterso
 
 ## Värdeinställningar för spelhuvud
 
-För LIVE-strömmar måste du ställa in spelhuvudet på en förskjutning från när programmeringen påbörjas, så att analytikerna i sin rapportering kan avgöra vid vilken tidpunkt användare ansluter sig och lämnar LIVE-strömmen i en 24-timmarsvy.
+För LIVE-strömmar måste du ange spelhuvudvärdet som antalet sekunder sedan midnatt UTC den dagen, så att analytikerna i sin rapportering kan avgöra vid vilken tidpunkt användarna ansluter och lämnar LIVE-strömmen i en 24-timmarsvy.
 
 ### Vid start
 
-För LIVE-media måste du ange `l:event:playhead` till aktuell förskjutning i sekunder när en användare börjar spela upp strömmen. Detta är i motsats till VOD, där du ställer in spelhuvudet på &quot;0&quot;.
+För LIVE-media måste du, när en användare börjar spela upp strömmen, ställa in `l:event:playhead` på antalet sekunder sedan midnatt UTC den dagen. Detta är i motsats till VOD, där du ställer in spelhuvudet på &quot;0&quot;.
 
-Exempel: en LIVE-direktuppspelningshändelse startar vid midnatt och pågår i 24 timmar (`a.media.length=86400`; `l:asset:length=86400`). Anta sedan att en användare börjar spela upp den LIVE-strömmen kl. 12:00. I det här scenariot bör du ange `l:event:playhead` till 43200 (12 timmar in i strömmen).
+Exempel: en LIVE-direktuppspelningshändelse startar vid midnatt och pågår i 24 timmar (`a.media.length=86400`; `l:asset:length=86400`). Anta sedan att en användare börjar spela upp den LIVE-strömmen kl. 12:00. I det här scenariot bör du ange `l:event:playhead` till 43200 (12 timmar sedan midnatt UTC den dagen i sekunder).
 
 ### Vid paus
 
-Samma&quot;live playhead&quot;-logik som används i början av uppspelningen måste användas när en användare pausar uppspelningen. När användaren återgår till att spela upp LIVE-strömmen måste du ange `l:event:playhead`-värdet till den nya förskjutna spelhuvudspositionen, _inte_ till den punkt där användaren pausade LIVE-strömmen.
+Samma&quot;live playhead&quot;-logik som används i början av uppspelningen måste användas när en användare pausar uppspelningen. När användaren återgår till att spela upp LIVE-strömmen måste du ange `l:event:playhead`-värdet enligt det nya antalet sekunder sedan midnatt UTC, _inte_ till den punkt där användaren pausade LIVE-strömmen.
 
 ## Exempelkod {#sample-code}
 
