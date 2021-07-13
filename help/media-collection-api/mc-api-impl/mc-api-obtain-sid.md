@@ -4,8 +4,8 @@ description: Lär dig hur du kodar en sessionsbegäran för att hämta sessions-
 uuid: fc8712fa-848f-4564-af5d-5dd9d6b088d8
 exl-id: 4a1c4ade-4a5e-4af0-8117-19d718dd8bda
 feature: Medieanalys
-role: Business Practitioner, Administrator, Data Engineer
-source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+role: User, Admin, Data Engineer
+source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
 workflow-type: tm+mt
 source-wordcount: '63'
 ht-degree: 6%
