@@ -3,8 +3,8 @@ title: '"Migrering från det fristående mediet-SDK till Adobe Launch - iOS"'
 description: Lär dig hur du migrerar från Media SDK till Launch för iOS.
 exl-id: f70b8e1b-cb9f-4230-86b2-171bdaed4615
 feature: Medieanalys
-role: Business Practitioner, Administrator, Data Engineer
-source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+role: User, Admin, Data Engineer
+source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
 workflow-type: tm+mt
 source-wordcount: '359'
 ht-degree: 0%
