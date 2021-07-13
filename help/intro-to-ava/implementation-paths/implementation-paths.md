@@ -3,8 +3,8 @@ title: Vilka möjligheter till implementering av direktuppspelningsmedia finns?
 description: Läs mer om implementeringsvägar för Adobe Streaming Media, inklusive Adobe Launch.
 exl-id: eee70e62-ba45-440a-8ce1-e151b66d2c1f
 feature: Medieanalys
-role: Business Practitioner, Administrator, Data Engineer
-source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+role: User, Admin, Data Engineer
+source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
 workflow-type: tm+mt
 source-wordcount: '501'
 ht-degree: 1%
