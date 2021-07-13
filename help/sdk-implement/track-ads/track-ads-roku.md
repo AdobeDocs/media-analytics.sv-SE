@@ -4,8 +4,8 @@ description: Implementera annonsspårning i Roku-program med Media SDK.
 uuid: b1567265-7043-4efa-a313-aaaa91c4bb01
 exl-id: aaed828d-1aba-486e-83e3-2ffd092305e2
 feature: Medieanalys
-role: Business Practitioner, Administrator, Data Engineer
-source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+role: User, Admin, Data Engineer
+source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
 workflow-type: tm+mt
 source-wordcount: '297'
 ht-degree: 3%
