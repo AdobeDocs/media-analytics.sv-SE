@@ -4,8 +4,8 @@ description: Läs mer om de tillgängliga metadatanycklarna för iOS.
 uuid: 8eb90111-c9dd-4ca7-9766-91530a8ae6cf
 exl-id: a4bbbcba-9644-486a-95f4-65e5dc57623e
 feature: Medieanalys
-role: Business Practitioner, Administrator, Data Engineer
-source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+role: User, Admin, Data Engineer
+source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
 workflow-type: tm+mt
 source-wordcount: '117'
 ht-degree: 19%
