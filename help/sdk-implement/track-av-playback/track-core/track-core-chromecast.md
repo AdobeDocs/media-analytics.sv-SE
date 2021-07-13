@@ -4,8 +4,8 @@ description: Lär dig implementera huvudspårning med Media SDK på Chromecast.
 uuid: a9fc59d8-a2f4-4889-bdec-55c42a835d06
 exl-id: 9812d06d-9efd-460c-a626-6a15f61a4c35
 feature: Medieanalys
-role: Business Practitioner, Administrator, Data Engineer
-source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+role: User, Admin, Data Engineer
+source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
 workflow-type: tm+mt
 source-wordcount: '664'
 ht-degree: 1%
