@@ -4,8 +4,8 @@ description: Lär dig mer om felsökningspanelerna i Adobe.
 uuid: 8e6f6245-d8bd-4329-89e1-4c5595e04ec5
 exl-id: fc5590a5-4d0e-4a2d-8f40-54c53eabc6f0
 feature: '"Media Analytics, Analytics Dashboards"'
-role: Business Practitioner, Administrator, Data Engineer
-source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+role: User, Admin, Data Engineer
+source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
 workflow-type: tm+mt
 source-wordcount: '86'
 ht-degree: 4%
