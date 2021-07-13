@@ -4,8 +4,8 @@ description: Lär dig spåra buffringshändelser på Roku.
 uuid: 6666b270-9aa3-42ff-95a8-f12502022d47
 exl-id: 73b10b42-02ab-47f8-8250-58f03c5e0dd1
 feature: Medieanalys
-role: Business Practitioner, Administrator, Data Engineer
-source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+role: User, Admin, Data Engineer
+source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
 workflow-type: tm+mt
 source-wordcount: '119'
 ht-degree: 0%
