@@ -4,8 +4,8 @@ description: Lär dig hur du styr ordningen på händelser och hur händelser i 
 uuid: 007fccc6-be72-4b79-826d-588c957ccf15
 exl-id: c0cac319-2bea-42c8-8674-641dfbb44fa2
 feature: Medieanalys
-role: Business Practitioner, Administrator, Data Engineer
-source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+role: User, Admin, Data Engineer
+source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 1%
