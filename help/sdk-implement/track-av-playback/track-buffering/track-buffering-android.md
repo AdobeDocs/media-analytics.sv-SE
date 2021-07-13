@@ -4,8 +4,8 @@ description: Lär dig spåra buffringshändelser på Android.
 uuid: f16ce76d-1db3-4b51-8c98-54cb781f71d7
 exl-id: fcea2ef8-53c5-41fb-8b70-06599c2d9cbf
 feature: Medieanalys
-role: Business Practitioner, Administrator, Data Engineer
-source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+role: User, Admin, Data Engineer
+source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
 workflow-type: tm+mt
 source-wordcount: '119'
 ht-degree: 0%
