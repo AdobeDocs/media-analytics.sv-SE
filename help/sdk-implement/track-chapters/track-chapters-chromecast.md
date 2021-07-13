@@ -4,8 +4,8 @@ description: Lär dig hur du implementerar kapitel- och segmentspårning med Med
 uuid: 5ea562b9-0e07-4fbb-9a3b-213d746304f5
 exl-id: 26b71e4d-ced7-49cb-a838-2b1c8d4ee4de
 feature: Medieanalys
-role: Business Practitioner, Administrator, Data Engineer
-source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+role: User, Admin, Data Engineer
+source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
 workflow-type: tm+mt
 source-wordcount: '222'
 ht-degree: 2%
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Följande anvisningar ger vägledning vid implementering med 2.x SDK:er. Om du implementerar en 1.x-version av SDK kan du hämta utvecklarhandboken här: [Hämta SDK:er.](/help/sdk-implement/download-sdks.md)
+>Följande instruktioner ger vägledning vid implementering med 2.x SDK:er. Om du implementerar en 1.x-version av SDK kan du hämta utvecklarhandboken här: [Hämta SDK:er.](/help/sdk-implement/download-sdks.md)
 
 1. Identifiera när kapitelstarthändelsen inträffar och skapa `ChapterObject`-instansen med hjälp av kapitelinformationen.
 
