@@ -4,8 +4,8 @@ description: Läs om hur Media Analytics fungerar med integreringar på klientsi
 uuid: ba0496e2-585a-4176-b583-c705726fecc6
 exl-id: 6fd4e82e-b471-4ed1-864d-5dd77cc6ffe0
 feature: Medieanalys
-role: Business Practitioner, Administrator, Data Engineer
-source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+role: User, Admin, Data Engineer
+source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
 workflow-type: tm+mt
 source-wordcount: '154'
 ht-degree: 0%
