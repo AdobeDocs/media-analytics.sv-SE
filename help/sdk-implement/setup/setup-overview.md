@@ -4,8 +4,8 @@ description: '"Lär dig hur du konfigurerar Media SDK för mediespårning i dina
 uuid: 06fefedb-b0c8-4f7d-90c8-e374cdde1695
 exl-id: a175332e-0bdc-44aa-82cb-b3f879e7abfc
 feature: Medieanalys
-role: Business Practitioner, Administrator, Data Engineer
-source-git-commit: a6872703529159ded6f747b6429a9b94b4202abe
+role: User, Admin, Data Engineer
+source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
 workflow-type: tm+mt
 source-wordcount: '742'
 ht-degree: 3%
