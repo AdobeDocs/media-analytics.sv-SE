@@ -4,8 +4,8 @@ description: Gå djupare in på spelhuvudets tidslinje och motsvarande � åtg�
 uuid: 0ff591d3-fa99-4123-9e09-c4e71ea1060b
 exl-id: 16b15e03-5581-471f-ab0c-077189dd32d6
 feature: Medieanalys
-role: Business Practitioner, Administrator, Data Engineer
-source-git-commit: 1f18ba0c0c1b62f4228a590276164034474ebd08
+role: User, Admin, Data Engineer
+source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
 workflow-type: tm+mt
 source-wordcount: '1192'
 ht-degree: 5%
@@ -143,7 +143,7 @@ Börja spåra den första pre-roll-annonsen, som är 15 sekunder lång. Inkluder
 
 | Åtgärd | Tidslinje för åtgärd (sekunder) | Spelhuvudsposition (sekunder) | Klientbegäran |
 | --- | :---: | :---: | --- |
-| Appen skickar ping-händelse | 3 | 0 | `/api/v1/sessions/{sid}/events` |
+| Appen skickar ping-händelse | 1 | 0 | `/api/v1/sessions/{sid}/events` |
 
 **Implementeringsinformation**
 
