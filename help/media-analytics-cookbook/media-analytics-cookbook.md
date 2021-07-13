@@ -3,8 +3,8 @@ title: Media Analytics Cookbook
 description: Cookbook-sida på den översta nivån, med allmänna MA-cookbooklänkar och SDK-specifika länkar.
 exl-id: 5f26fbce-d861-4b38-8497-ce010082f3a7
 feature: Medieanalys
-role: Business Practitioner, Administrator, Data Engineer
-source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+role: User, Admin, Data Engineer
+source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
 workflow-type: tm+mt
 source-wordcount: '34'
 ht-degree: 8%
