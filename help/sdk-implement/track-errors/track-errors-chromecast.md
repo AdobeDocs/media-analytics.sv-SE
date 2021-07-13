@@ -4,8 +4,8 @@ description: Lär dig hur du implementerar felspårning med Media SDK på Chrome
 uuid: efa9de8d-c626-4cb6-b46d-108495dd013a
 exl-id: 513772c2-582d-4b4b-92ed-0c32b99d7fdc
 feature: Medieanalys
-role: Business Practitioner, Administrator, Data Engineer
-source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+role: User, Admin, Data Engineer
+source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
 workflow-type: tm+mt
 source-wordcount: '104'
 ht-degree: 0%
