@@ -4,8 +4,8 @@ description: Lär dig hur du ställer in standardmetadata för video och annonse
 uuid: 1560d3e0-29f5-4678-9f01-c672e0ae547b
 exl-id: 052ede4b-ea8a-4ca6-bf02-0aab22a8bcda
 feature: Medieanalys
-role: Business Practitioner, Administrator, Data Engineer
-source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+role: User, Admin, Data Engineer
+source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
 workflow-type: tm+mt
 source-wordcount: '61'
 ht-degree: 11%
