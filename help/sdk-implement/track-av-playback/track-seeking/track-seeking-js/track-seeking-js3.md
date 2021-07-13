@@ -3,8 +3,8 @@ title: Lär dig spåra sökning med JavaScript 3.x
 description: Lär dig hur du spårar händelserna Seek Start och Seek Complete med Media SDK i webbläsarappar (JS 3.x).
 exl-id: b7152436-520e-4f38-a8ad-1027ca3f1f6c
 feature: Medieanalys
-role: Business Practitioner, Administrator, Data Engineer
-source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+role: User, Admin, Data Engineer
+source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
 workflow-type: tm+mt
 source-wordcount: '136'
 ht-degree: 0%
