@@ -4,8 +4,8 @@ description: Programåtgärder är de händelser som inträffar i appen som du v
 uuid: 9cdc048a-419a-4725-bd61-6ca6d909cf10
 exl-id: 88b7d540-67b7-4ec1-8273-02e34853bf60
 feature: Medieanalys
-role: Business Practitioner, Administrator, Data Engineer
-source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+role: User, Admin, Data Engineer
+source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
 workflow-type: tm+mt
 source-wordcount: '134'
 ht-degree: 3%
