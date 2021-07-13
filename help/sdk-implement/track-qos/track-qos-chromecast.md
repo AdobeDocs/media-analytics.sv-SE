@@ -4,8 +4,8 @@ description: '"Lär dig hur du implementerar kvalitetskontroll av upplevelser (Q
 uuid: d0cdc8cd-4db0-45ef-9470-1cba3996305b
 exl-id: 04b9b888-2727-4aa6-a934-94a02c85a490
 feature: Medieanalys
-role: Business Practitioner, Administrator, Data Engineer
-source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+role: User, Admin, Data Engineer
+source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
 workflow-type: tm+mt
 source-wordcount: '296'
 ht-degree: 2%
