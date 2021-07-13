@@ -4,8 +4,8 @@ description: '"Lär dig mer om de rapporteringssegment som är associerade med m
 uuid: 61906b8c-3362-4463-82be-fe0e741a5eb3
 exl-id: a450801c-0d6b-4e2a-8662-f00aaaa6e4e0
 feature: '"Medieanalys, segmentering"'
-role: Business Practitioner, Administrator, Data Engineer
-source-git-commit: 2d9d4352b0fd71710a9952ba4a77f6796ea9f5cc
+role: User, Admin, Data Engineer
+source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 6%
