@@ -4,8 +4,8 @@ description: Lär dig spåra händelserna Seek Start och Seek Complete med Media
 uuid: 0572252b-397f-4aa2-b4b5-c5346b75244a
 exl-id: cb0581f7-3ced-4d46-ac6a-a309a179c21e
 feature: Medieanalys
-role: Business Practitioner, Administrator, Data Engineer
-source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+role: User, Admin, Data Engineer
+source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
 workflow-type: tm+mt
 source-wordcount: '132'
 ht-degree: 0%
