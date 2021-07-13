@@ -3,8 +3,8 @@ title: Lär dig spåra uppspelning med JavaScript v3.x
 description: Lär dig hur du implementerar huvudspårning med Media SDK i en webbläsare med hjälp av JavaScript 3.x-appar.
 exl-id: f3145450-82ba-4790-91a4-9d2cc97bbaa5
 feature: Medieanalys
-role: Business Practitioner, Administrator, Data Engineer
-source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+role: User, Admin, Data Engineer
+source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
 workflow-type: tm+mt
 source-wordcount: '647'
 ht-degree: 0%
