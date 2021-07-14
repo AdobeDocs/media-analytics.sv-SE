@@ -101,7 +101,7 @@ ht-degree: 2%
 
    * **Standardmetadata**
 
-[Implementera standardmetadata i Roku](/help/sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-roku.md)
+      [Implementera standardmetadata i Roku](/help/sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-roku.md)
 
       >[!NOTE]
       >Det är valfritt att bifoga standardmetadataobjektet för video till mediaobjektet.
