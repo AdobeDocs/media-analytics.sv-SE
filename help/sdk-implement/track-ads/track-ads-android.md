@@ -5,7 +5,7 @@ uuid: 4a4249fb-dc39-4947-a14d-a51d972f32d4
 exl-id: 1f96dde9-c924-4fce-8b14-7dec7137f265
 feature: Medieanalys
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: 8e0f5d012e1404623e3a0a460a9391303e2ab4e0
 workflow-type: tm+mt
 source-wordcount: '357'
 ht-degree: 4%
@@ -14,9 +14,11 @@ ht-degree: 4%
 
 # Spåra annonser på Android{#track-ads-on-android}
 
+Följande anvisningar ger vägledning vid implementering med SDK:er för 2.x.
+
 >[!IMPORTANT]
 >
->Följande anvisningar ger vägledning vid implementering med SDK:er för 2.x. Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandböcker här: [Hämta SDK:er.](/help/sdk-implement/download-sdks.md)
+>Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandböcker här: [Hämta SDK:er.](/help/sdk-implement/download-sdks.md)
 
 ## Konstanter för annonsspårning
 
@@ -55,7 +57,7 @@ ht-degree: 4%
    public void onAdBreakStart(Observable observable, Object data) {  
        _heartbeat.trackEvent(MediaHeartbeat.Event.AdBreakStart,  
                              adBreakInfo,  
-                             null); 
+                             null);
    }
    ```
 
@@ -74,7 +76,7 @@ ht-degree: 4%
 
    ```java
    MediaObject adInfo =  
-     MediaHeartbeat.createAdObject(<AD_NAME> 
+     MediaHeartbeat.createAdObject(<AD_NAME>
                                    <AD_ID>,  
                                    <POSITION>,  
                                    <LENGTH>);
@@ -86,9 +88,9 @@ ht-degree: 4%
    * **Anpassade annonseringsmetadata -** Skapa ett variabelobjekt för anpassade datavariabler och fyll i med data för den aktuella annonsen:
 
       ```java
-      // Setting Ad Metadata 
-      HashMap<String, String> adMetadata = new HashMap<String, String>(); 
-      adMetadata.put("affiliate", "Sample affiliate"); 
+      // Setting Ad Metadata
+      HashMap<String, String> adMetadata = new HashMap<String, String>();
+      adMetadata.put("affiliate", "Sample affiliate");
       adMetadata.put("campaign", "Sample ad campaign");
       ```
 
@@ -100,7 +102,7 @@ ht-degree: 4%
    public void onAdStart(Observable observable, Object data) {  
        _heartbeat.trackEvent(MediaHeartbeat.Event.AdStart,  
                              adInfo,  
-                             adMetadata); 
+                             adMetadata);
    }
    ```
 
@@ -108,7 +110,7 @@ ht-degree: 4%
 
    ```java
    public void onAdComplete(Observable observable, Object data) {  
-       _heartbeat.trackEvent(MediaHeartbeat.Event.AdComplete, null, null); 
+       _heartbeat.trackEvent(MediaHeartbeat.Event.AdComplete, null, null);
    }
    ```
 
@@ -116,7 +118,7 @@ ht-degree: 4%
 
    ```java
    public void onAdSkip(Observable observable, Object data) {  
-       _heartbeat.trackEvent(MediaHeartbeat.Event.AdSkip, null, null); 
+       _heartbeat.trackEvent(MediaHeartbeat.Event.AdSkip, null, null);
    }
    ```
 
@@ -125,7 +127,7 @@ ht-degree: 4%
 
    ```java
    public void onAdBreakComplete(Observable observable, Object data) {  
-       _heartbeat.trackEvent(MediaHeartbeat.Event.AdBreakComplete, null, null); 
+       _heartbeat.trackEvent(MediaHeartbeat.Event.AdBreakComplete, null, null);
    }
    ```
 
