@@ -5,7 +5,7 @@ uuid: 1607798b-c6ef-4d60-8e40-e958c345b09c
 exl-id: c714d31f-3d08-4ded-a413-2762d53bec75
 feature: Medieanalys
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: 8e0f5d012e1404623e3a0a460a9391303e2ab4e0
 workflow-type: tm+mt
 source-wordcount: '508'
 ht-degree: 2%
@@ -14,9 +14,11 @@ ht-degree: 2%
 
 # Översikt{#overview}
 
+Följande anvisningar ger vägledning vid implementering med SDK:er för 2.x.
+
 >[!IMPORTANT]
 >
->Följande anvisningar ger vägledning vid implementering med SDK:er för 2.x. Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandböcker här: [Hämta SDK:er.](/help/sdk-implement/download-sdks.md)
+>Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandböcker här: [Hämta SDK:er.](/help/sdk-implement/download-sdks.md)
 
 Annonsuppspelning inkluderar spårning av annonsbrytningar, start, slutförande av annonser och hopp för annonser. Använd mediespelarens API för att identifiera viktiga spelarhändelser och fylla i obligatoriska och valfria annonsvariabler. Se den omfattande listan med metadata här: [Lägg till parametrar.](/help/metrics-and-metadata/ad-parameters.md)
 
@@ -109,37 +111,37 @@ Annonsuppspelning inkluderar spårning av annonsbrytningar, start, slutförande 
 I följande exempelkod används JavaScript 2.x SDK för en HTML5-mediespelare.
 
 ```js
-/* Call on ad break start */ 
- 
-if (e.type == "ad break start") { 
-    var adBreakObject = MediaHeartbeat.createAdBreakObject("mid-roll", 2, 500); 
-    this.mediaHeartbeat.trackEvent(MediaHeartbeat.Event.AdBreakStart, adBreakObject); 
-}; 
- 
-/* Call on ad start */ 
-if (e.type == "ad start") { 
-    var adObject = MediaHeartbeat.createAdObject("PepsiOne", "123456ab", 1, 30); 
-    /* Set custom context data */ 
-    var adCustomMetadata = { 
-        affiliate:"Sample affiliate", 
-        campaign:"Sample ad campaign", 
-        creative:"Sample creative" 
-    } 
-    this.mediaHeartbeat.trackEvent(MediaHeartbeat.Event.AdStart, adObject, adCustomMetadata); 
-}; 
- 
-/* Call on ad complete */ 
-if (e.type == "ad complete") { 
-    this.mediaHeartbeat.trackEvent(MediaHeartbeat.Event.AdComplete); 
-}; 
- 
-/* Call on ad skip */ 
-if (e.type == "ad skip") { 
-    this.mediaHeartbeat.trackEvent(MediaHeartbeat.Event.AdSkip); 
-}; 
-     
-/* Call on ad break complete */ 
-if (e.type == "ad break complete") { 
-    this.mediaHeartbeat.trackEvent(MediaHeartbeat.Event.AdBreakComplete); 
-}; 
+/* Call on ad break start */
+
+if (e.type == "ad break start") {
+    var adBreakObject = MediaHeartbeat.createAdBreakObject("mid-roll", 2, 500);
+    this.mediaHeartbeat.trackEvent(MediaHeartbeat.Event.AdBreakStart, adBreakObject);
+};
+
+/* Call on ad start */
+if (e.type == "ad start") {
+    var adObject = MediaHeartbeat.createAdObject("PepsiOne", "123456ab", 1, 30);
+    /* Set custom context data */
+    var adCustomMetadata = {
+        affiliate:"Sample affiliate",
+        campaign:"Sample ad campaign",
+        creative:"Sample creative"
+    }
+    this.mediaHeartbeat.trackEvent(MediaHeartbeat.Event.AdStart, adObject, adCustomMetadata);
+};
+
+/* Call on ad complete */
+if (e.type == "ad complete") {
+    this.mediaHeartbeat.trackEvent(MediaHeartbeat.Event.AdComplete);
+};
+
+/* Call on ad skip */
+if (e.type == "ad skip") {
+    this.mediaHeartbeat.trackEvent(MediaHeartbeat.Event.AdSkip);
+};
+
+/* Call on ad break complete */
+if (e.type == "ad break complete") {
+    this.mediaHeartbeat.trackEvent(MediaHeartbeat.Event.AdBreakComplete);
+};
 ```
