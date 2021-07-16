@@ -5,24 +5,26 @@ uuid: 7d0c77e5-924c-4619-8e29-3484748ab736
 exl-id: 6c4f693d-45c0-4a9c-bda1-c8721afe31f5
 feature: Medieanalys
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: 8e0f5d012e1404623e3a0a460a9391303e2ab4e0
 workflow-type: tm+mt
-source-wordcount: '93'
+source-wordcount: '92'
 ht-degree: 0%
 
 ---
 
 # Spåra fel på Android{#track-errors-on-android}
 
+Följande instruktioner ger vägledning vid implementering med 2.x SDK:er.
+
 >[!IMPORTANT]
 >
->Följande anvisningar ger vägledning för implementering i alla 2.x SDK:er. Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandboken här: [Hämta SDK:er.](/help/sdk-implement/download-sdks.md)
+>Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandboken här: [Hämta SDK:er.](/help/sdk-implement/download-sdks.md)
 
 1. Spåra mediespelarfel:
 
    ```java
    public void onPlayerError(Observable observable, Object data) {  
-       _heartbeat.trackError("mediaErrorID"); 
+       _heartbeat.trackError("mediaErrorID");
    }
    ```
 
