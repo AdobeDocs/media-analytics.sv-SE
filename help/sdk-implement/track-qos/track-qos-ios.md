@@ -5,7 +5,7 @@ uuid: cae2c142-ed39-4234-a711-765dcabc5415
 exl-id: 7f01e6eb-95bd-4e3d-93d0-8a2e68323313
 feature: Medieanalys
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: 8e0f5d012e1404623e3a0a460a9391303e2ab4e0
 workflow-type: tm+mt
 source-wordcount: '158'
 ht-degree: 3%
@@ -14,9 +14,11 @@ ht-degree: 3%
 
 # Spåra upplevelsekvalitet på iOS{#track-quality-of-experience-on-ios}
 
+Följande anvisningar ger vägledning för implementering i alla 2.x SDK:er.
+
 >[!IMPORTANT]
 >
->Följande anvisningar ger vägledning för implementering i alla 2.x SDK:er. Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandboken här: [Hämta SDK:er.](/help/sdk-implement/download-sdks.md)
+>Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandboken här: [Hämta SDK:er.](/help/sdk-implement/download-sdks.md)
 
 ## Implementera QOS
 
@@ -38,7 +40,7 @@ ht-degree: 3%
    Skapa QoS-objekt:
 
    ```
-   id qosObject = [ADBMediaHeartbeat createQoSObjectWithBitrate:[BITRATE] 
+   id qosObject = [ADBMediaHeartbeat createQoSObjectWithBitrate:[BITRATE]
                                      startupTime:[STARTUP_TIME]  
                                      fps:[FPS]  
                                      droppedFrames:[DROPPED_FRAMES]];
@@ -48,10 +50,10 @@ ht-degree: 3%
 1. När uppspelningen växlar bithastigheter anropar du händelsen `BitrateChange` i instansen Mediepulsslag:
 
    ```
-   - (void)onBitrateChange:(NSNotification *)notification { 
+   - (void)onBitrateChange:(NSNotification *)notification {
        [_mediaHeartbeat trackEvent:ADBMediaHeartbeatEventBitrateChange  
                         mediaObject:nil  
-                        data:nil]; 
+                        data:nil];
    }
    ```
 
