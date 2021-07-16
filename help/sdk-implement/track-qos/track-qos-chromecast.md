@@ -5,7 +5,7 @@ uuid: d0cdc8cd-4db0-45ef-9470-1cba3996305b
 exl-id: 04b9b888-2727-4aa6-a934-94a02c85a490
 feature: Medieanalys
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: 8e0f5d012e1404623e3a0a460a9391303e2ab4e0
 workflow-type: tm+mt
 source-wordcount: '296'
 ht-degree: 2%
@@ -14,9 +14,11 @@ ht-degree: 2%
 
 # Spåra upplevelsekvalitet på Chromecast{#track-quality-of-experience-on-chromecast}
 
+Följande anvisningar ger vägledning för implementering i alla 2.x SDK:er.
+
 >[!IMPORTANT]
 >
->Följande anvisningar ger vägledning för implementering i alla 2.x SDK:er. Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandboken här: [Hämta SDK:er.](/help/sdk-implement/download-sdks.md)
+>Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandboken här: [Hämta SDK:er.](/help/sdk-implement/download-sdks.md)
 
 ## Översikt {#overview}
 
@@ -53,13 +55,13 @@ Ring `trackError(“media error id”);`
    **skapa QoS-objekt:** [createQoSObject](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.createQoSObject)
 
    ```
-   qosInfo = ADBMobile.media.createQoSObject(50000, 0, 24, 10); 
+   qosInfo = ADBMobile.media.createQoSObject(50000, 0, 24, 10);
    ```
 
 1. När uppspelningen växlar bithastigheter anropar du händelsen `BitrateChange` i instansen Mediepulsslag: [trackEvent](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackEvent)
 
    ```
-   ADBMobile.media.trackEvent(ADBMobile.media.Event.BitrateChange); 
+   ADBMobile.media.trackEvent(ADBMobile.media.Event.BitrateChange);
    ```
 
    >[!IMPORTANT]
