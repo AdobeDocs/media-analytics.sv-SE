@@ -4,7 +4,7 @@ description: Lär dig hur du implementerar kapitel- och segmentspårning med Med
 exl-id: 00ba11df-d226-45a2-a561-dc9f15dcf714
 feature: Medieanalys
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: 8e0f5d012e1404623e3a0a460a9391303e2ab4e0
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 0%
@@ -13,9 +13,11 @@ ht-degree: 0%
 
 # Spåra kapitel och segment med JavaScript 3.x{#track-chapters-and-segments-on-javascript}
 
+Följande instruktioner ger vägledning vid implementering med 3.x SDK:er.
+
 >[!IMPORTANT]
 >
->Följande instruktioner ger vägledning vid implementering med 3.x SDK:er. Om du implementerar en tidigare version av SDK kan du ladda ned utvecklarhandboken här: [Hämta SDK:er.](/help/sdk-implement/download-sdks.md)
+> Om du implementerar en tidigare version av SDK kan du ladda ned utvecklarhandboken här: [Hämta SDK:er.](/help/sdk-implement/download-sdks.md)
 
 1. Identifiera när kapitelstarthändelsen inträffar och skapa `ChapterObject`-instansen med hjälp av kapitelinformationen.
 
