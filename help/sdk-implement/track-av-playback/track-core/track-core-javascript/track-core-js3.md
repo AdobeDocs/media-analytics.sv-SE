@@ -4,7 +4,7 @@ description: Lär dig hur du implementerar huvudspårning med Media SDK i en web
 exl-id: f3145450-82ba-4790-91a4-9d2cc97bbaa5
 feature: Medieanalys
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: 8e0f5d012e1404623e3a0a460a9391303e2ab4e0
 workflow-type: tm+mt
 source-wordcount: '647'
 ht-degree: 0%
@@ -13,8 +13,10 @@ ht-degree: 0%
 
 # Spåra kärnuppspelning med JavaScript 3.x{#track-core-playback-on-javascript}
 
+Denna dokumentation behandlar spårning i version 3.x av SDK.
+
 >[!IMPORTANT]
->Denna dokumentation behandlar spårning i version 3.x av SDK. Om du implementerar en tidigare version av SDK kan du hämta utvecklarhandböckerna här: [Hämta SDK:er](/help/sdk-implement/download-sdks.md)
+> Om du implementerar en tidigare version av SDK kan du hämta utvecklarhandböckerna här: [Hämta SDK:er](/help/sdk-implement/download-sdks.md)
 
 1. **Inledande spårningsinställning**
 
