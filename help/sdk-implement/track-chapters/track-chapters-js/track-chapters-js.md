@@ -5,7 +5,7 @@ uuid: ef99edf7-7a77-46c4-8429-bc9a856b98d6
 exl-id: 9964ec0c-cce9-4ccc-bd26-a2b3fcdc3e28
 feature: Medieanalys
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: 8e0f5d012e1404623e3a0a460a9391303e2ab4e0
 workflow-type: tm+mt
 source-wordcount: '200'
 ht-degree: 2%
@@ -14,9 +14,11 @@ ht-degree: 2%
 
 # Spåra kapitel och segment med JavaScript 2.x{#track-chapters-and-segments-on-javascript}
 
+Följande instruktioner ger vägledning vid implementering med 2.x SDK:er.
+
 >[!IMPORTANT]
 >
->Följande instruktioner ger vägledning vid implementering med 2.x SDK:er. Om du implementerar en 1.x-version av SDK kan du hämta utvecklarhandboken här: [Hämta SDK:er.](/help/sdk-implement/download-sdks.md)
+> Om du implementerar en 1.x-version av SDK kan du hämta utvecklarhandboken här: [Hämta SDK:er.](/help/sdk-implement/download-sdks.md)
 
 1. Identifiera när kapitelstarthändelsen inträffar och skapa `ChapterObject`-instansen med hjälp av kapitelinformationen.
 
