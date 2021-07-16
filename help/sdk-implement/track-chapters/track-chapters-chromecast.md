@@ -5,7 +5,7 @@ uuid: 5ea562b9-0e07-4fbb-9a3b-213d746304f5
 exl-id: 26b71e4d-ced7-49cb-a838-2b1c8d4ee4de
 feature: Medieanalys
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: 8e0f5d012e1404623e3a0a460a9391303e2ab4e0
 workflow-type: tm+mt
 source-wordcount: '222'
 ht-degree: 2%
@@ -14,9 +14,11 @@ ht-degree: 2%
 
 # Spåra kapitel och segment i Chromecast{#track-chapters-and-segments-on-chromecast}
 
+Följande instruktioner ger vägledning vid implementering med 2.x SDK:er.
+
 >[!IMPORTANT]
 >
->Följande instruktioner ger vägledning vid implementering med 2.x SDK:er. Om du implementerar en 1.x-version av SDK kan du hämta utvecklarhandboken här: [Hämta SDK:er.](/help/sdk-implement/download-sdks.md)
+> Om du implementerar en 1.x-version av SDK kan du hämta utvecklarhandboken här: [Hämta SDK:er.](/help/sdk-implement/download-sdks.md)
 
 1. Identifiera när kapitelstarthändelsen inträffar och skapa `ChapterObject`-instansen med hjälp av kapitelinformationen.
 
@@ -42,15 +44,15 @@ ht-degree: 2%
 1. Om du inkluderar anpassade metadata för kapitlet skapar du kontextdatavariabler för metadata:
 
    ```js
-   var chapterContextData = { 
-       segmentType: "Sample segment type" 
+   var chapterContextData = {
+       segmentType: "Sample segment type"
    };
    ```
 
 1. För att börja spåra kapiteluppspelningen ska du spåra händelsen `ChapterStart`: [trackEvent](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackEvent)
 
    ```js
-   ADBMobile.media.trackEvent(ADBMobile.media.Event.ChapterStart, ChapterInfo, chapterContextData); 
+   ADBMobile.media.trackEvent(ADBMobile.media.Event.ChapterStart, ChapterInfo, chapterContextData);
    ```
 
 1. När uppspelningen når kapitelslutsgränsen, enligt definitionen i din egen kod, anropar du händelsen `ChapterComplete` i `MediaHeartbeat`-instansen: [trackEvent](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackEvent)
@@ -62,7 +64,7 @@ ht-degree: 2%
 1. Om kapiteluppspelningen inte slutfördes eftersom användaren valde att hoppa över kapitlet (om användaren till exempel söker utanför kapitelgränsen), ska du spåra händelsen `ChapterSkip`: [trackEvent](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackEvent)
 
    ```js
-   ADBMobile.media.trackEvent(ADBMobile.media.Event.ChapterSkip); 
+   ADBMobile.media.trackEvent(ADBMobile.media.Event.ChapterSkip);
    ```
 
 1. Om det finns ytterligare kapitel upprepar du steg 1 till 5.
