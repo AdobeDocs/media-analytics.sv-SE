@@ -5,9 +5,9 @@ uuid: 0d9fa764-edef-4178-8650-90c9a0852a57
 exl-id: aac178dc-5a46-4ce3-80e9-ec82cbfbfff5
 feature: '"Media Analytics, Variables"'
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: 8e0f5d012e1404623e3a0a460a9391303e2ab4e0
 workflow-type: tm+mt
-source-wordcount: '2976'
+source-wordcount: '2997'
 ht-degree: 2%
 
 ---
@@ -50,11 +50,11 @@ Beskrivning av tabelldata:
 | <ul> <li> **SDK-nyckel:**<br/> </li> <li> **API-nyckel:**<br/> media.qoe.timeToStart </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **text:**<br/> tal </li> <li> **Skickat med:**<br/> Mediestart, mediestängning </li> <li> **Min. SDK-version:** Alla </li> <li> **Exempelvärde:**<br/> 30 000 </li><li> **Beskrivning:**<br/> Det här värdet är som standard noll om du inte anger det via QoSObject. Du anger det här värdet i millisekunder. Värdet visas i tidsformatet (HH:MM:SS) i Analysis Workspace och Rapporter och analyser. I Data Feeds, Data warehouse och Reporting API:er visas värdena på några sekunder.  </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.qoe.<br/>timeToStart) </li> <li> **pulsslag:**<br/> (:stream:lstartup_time) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> eVar </li> <li> **Förfallotid:**<br/> vid HIT </li> <li> **rapportnamn:**<br/> tid att starta </li> <li> **Kontextdata:**<br/> (a.media.qoe)<br/>timeToStart) </li> <li> **datafeed:**<br/> videoetimetostartevar </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.qoe.<br/>timeToStart) </li> </ul> |
 
 
-### FPS
+### Bildrutor per sekund
 
 |   Implementering   | Nätverksparametrar | Rapportering |
 | --- | --- | --- |
-| <ul> <li> **SDK-nyckel:**<br/> </li> <li> **API-nyckel:**<br/> media.qoe.framesPerSecond </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **text:**<br/> tal </li> <li> **Skickat med:**<br/> Mediestart, mediestängning </li> <li> **Min. SDK-version:** Alla </li> <li> **Exempelvärde:**<br/> 24 </li><li> **Beskrivning:**<br/> Strömmens aktuella bildrutehastighet (i bildrutor per sekund).  </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> </li> <li> **pulsslag:**<br/> (:stream:lfps) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Nej </li> <li> **Reserverad variabel:**<br/> Ej tillämpligt </li> <li> **Rapportnamn:**<br/> Ej tillämpligt </li> <li> **Kontextdata:**<br/> </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> </li> </ul> |
+| <ul> <li> **SDK-nyckel:**<br/> </li> <li> **API-nyckel:**<br/> media.qoe.framesPerSecond </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **text:**<br/> tal </li> <li> **Skickat med:**<br/> Mediestart, mediestängning </li> <li> **Min. SDK-version:** Alla </li> <li> **Exempelvärde:**<br/> 24 </li><li> **Beskrivning:**<br/> Strömmens aktuella bildrutehastighet (i bildrutor per sekund). Fältet mappas till fps-fältet i stängningsanropet och kan nås via bearbetningsregler.  </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> </li> <li> **pulsslag:**<br/> (:stream:lfps) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Nej </li> <li> **Reserverad variabel:**<br/> Ej tillämpligt </li> <li> **Rapportnamn:**<br/> Ej tillämpligt </li> <li> **Kontextdata:**<br/> </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> </li> </ul> |
 
 
 
