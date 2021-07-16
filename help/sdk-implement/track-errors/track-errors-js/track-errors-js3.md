@@ -4,7 +4,7 @@ description: Lär dig hur du implementerar felspårning med Media SDK i webbläs
 exl-id: 3769fc47-fbc4-4498-9d2a-04c88cdd0e83
 feature: Medieanalys
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: 8e0f5d012e1404623e3a0a460a9391303e2ab4e0
 workflow-type: tm+mt
 source-wordcount: '99'
 ht-degree: 0%
@@ -13,9 +13,11 @@ ht-degree: 0%
 
 # Spåra fel med JavaScript 3.x{#track-errors-on-javascript}
 
+Följande anvisningar ger vägledning för implementering i alla 2.x SDK:er.
+
 >[!IMPORTANT]
 >
->Följande instruktioner ger vägledning för implementering i alla 3.x SDK:er. Om du implementerar en tidigare version av SDK kan du hämta utvecklarhandböckerna här: [Hämta SDK:er.](/help/sdk-implement/download-sdks.md)
+>Om du implementerar en tidigare version av SDK kan du hämta utvecklarhandböckerna här: [Hämta SDK:er.](/help/sdk-implement/download-sdks.md)
 
 ## Implementera felspårning
 
