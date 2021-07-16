@@ -5,7 +5,7 @@ uuid: 4d73c47f-d0a4-4228-9040-d6432311c9eb
 exl-id: af5f3372-a9a5-46ea-9c2f-81b0f5c96ccf
 feature: Medieanalys
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: 8e0f5d012e1404623e3a0a460a9391303e2ab4e0
 workflow-type: tm+mt
 source-wordcount: '260'
 ht-degree: 2%
@@ -14,9 +14,11 @@ ht-degree: 2%
 
 # Översikt{#overview}
 
+Följande anvisningar ger vägledning för implementering i alla 2.x SDK:er.
+
 >[!IMPORTANT]
 >
->Följande anvisningar ger vägledning för implementering i alla 2.x SDK:er. Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandboken här: [Hämta SDK:er.](/help/sdk-implement/download-sdks.md)
+>Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandboken här: [Hämta SDK:er.](/help/sdk-implement/download-sdks.md)
 
 Kvalitetsspårning innefattar QoS (Quality of Service) och felspårning, båda är valfria element och **krävs inte** för implementeringar av huvudmediespårning. Du kan använda mediespelarens API för att identifiera variabler som är relaterade till QoS och felspårning. Här är de viktigaste elementen för att hålla koll på upplevelsekvaliteten:
 
@@ -57,20 +59,20 @@ Ring `trackEvent(Media.Heartbeat.Event.BitrateChange);`
 I följande exempelkod används JavaScript 2.x SDK för en HTML5-mediespelare. Du bör använda den här koden med den viktigaste mediespelningskoden.
 
 ```js
-var mediaDelegate = new MediaHeartbeatDelegate(); 
+var mediaDelegate = new MediaHeartbeatDelegate();
 ...  
- 
-// This is called periodically by MediaHeartbeat instance 
-mediaDelegate.prototype.getQoSObject = function() { 
-    return this.qosInfo; 
-}; 
- 
-if (e.type == "qos_update") { 
-    var qosInfo = MediaHeartbeat.createQoSObject(<BITRATE>,<STARTUP_TIME>,<FPS>,<DROPPED_FRAMES>); 
-    mediaDelegate.qosInfo = qosInfo; 
-}; 
- 
-if (e.type == "bitrate_change") { 
-    this.mediaHeartbeat.trackEvent(MediaHeartbeat.Event.BitrateChange, qosObject); 
+
+// This is called periodically by MediaHeartbeat instance
+mediaDelegate.prototype.getQoSObject = function() {
+    return this.qosInfo;
+};
+
+if (e.type == "qos_update") {
+    var qosInfo = MediaHeartbeat.createQoSObject(<BITRATE>,<STARTUP_TIME>,<FPS>,<DROPPED_FRAMES>);
+    mediaDelegate.qosInfo = qosInfo;
+};
+
+if (e.type == "bitrate_change") {
+    this.mediaHeartbeat.trackEvent(MediaHeartbeat.Event.BitrateChange, qosObject);
 };
 ```
