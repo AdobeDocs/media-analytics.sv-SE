@@ -5,7 +5,7 @@ uuid: e979e679-cde5-4c30-8f34-867feceac13a
 exl-id: a352bca9-bcfc-4418-b2a2-c9b1ad226359
 feature: Medieanalys
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: 8e0f5d012e1404623e3a0a460a9391303e2ab4e0
 workflow-type: tm+mt
 source-wordcount: '357'
 ht-degree: 4%
@@ -14,9 +14,11 @@ ht-degree: 4%
 
 # Spåra annonser på iOS{#track-ads-on-ios}
 
+Följande anvisningar ger vägledning vid implementering med SDK:er för 2.x.
+
 >[!IMPORTANT]
 >
->Följande anvisningar ger vägledning vid implementering med SDK:er för 2.x. Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandböcker här: [Hämta SDK:er.](/help/sdk-implement/download-sdks.md)
+>Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandböcker här: [Hämta SDK:er.](/help/sdk-implement/download-sdks.md)
 
 ## Konstanter för annonsspårning
 
@@ -43,7 +45,7 @@ ht-degree: 4%
    Skapa brytningsobjekt:
 
    ```
-   id adBreakObject = [ADBMediaHeartbeat createAdBreakObjectWithName:[ADBREAK_NAME] 
+   id adBreakObject = [ADBMediaHeartbeat createAdBreakObjectWithName:[ADBREAK_NAME]
                                position:[POSITION]  
                                startTime:[START_TIME]];
    ```
@@ -51,10 +53,10 @@ ht-degree: 4%
 1. Anropa `trackEvent()` med `AdBreakStart` i `MediaHeartbeat`-instansen för att börja spåra annonsbrytningen:
 
    ```
-   - (void)onAdBreakStart:(NSNotification *)notification { 
+   - (void)onAdBreakStart:(NSNotification *)notification {
        [_mediaHeartbeat trackEvent:ADBMediaHeartbeatEventAdBreakStart  
                         mediaObject:adBreakObject  
-                        data:nil]; 
+                        data:nil];
    }
    ```
 
@@ -72,9 +74,9 @@ ht-degree: 4%
    Skapa annonsobjekt:
 
    ```
-   id adObject = [ADBMediaHeartbeat createAdObjectWithName:[AD_NAME] 
-                                    adId:[AD_ID] 
-                                    position:[POSITION] 
+   id adObject = [ADBMediaHeartbeat createAdObjectWithName:[AD_NAME]
+                                    adId:[AD_ID]
+                                    position:[POSITION]
                                     length:[LENGTH]];
    ```
 
@@ -84,9 +86,9 @@ ht-degree: 4%
    * **Anpassade annonseringsmetadata -** Skapa ett variabelobjekt för anpassade datavariabler och fyll i med data för den aktuella annonsen:
 
       ```
-      NSMutableDictionary *adDictionary = [[NSMutableDictionary alloc] init]; 
-      [adDictionary setObject:@"Sample affiliate" forKey:@"affiliate"]; 
-      [adDictionary setObject:@"Sample campaign" forKey:@"campaign"]; 
+      NSMutableDictionary *adDictionary = [[NSMutableDictionary alloc] init];
+      [adDictionary setObject:@"Sample affiliate" forKey:@"affiliate"];
+      [adDictionary setObject:@"Sample campaign" forKey:@"campaign"];
       [adDictionary setObject:@"Sample creative" forKey:@"creative"];
       ```
 
@@ -95,30 +97,30 @@ ht-degree: 4%
    Ta med en referens till din anpassade metadatavariabel (eller ett tomt objekt) som den tredje parametern i händelseanropet:
 
    ```
-   - (void)onAdStart:(NSNotification *)notification { 
+   - (void)onAdStart:(NSNotification *)notification {
        [_mediaHeartbeat trackEvent:ADBMediaHeartbeatEventAdStart  
                         mediaObject:adObject  
-                        data:adDictionary]; 
+                        data:adDictionary];
    }
    ```
 
 1. När annonsuppspelningen når slutet av annonsen anropar du `trackEvent()` med händelsen `AdComplete`.
 
    ```
-   - (void)onAdComplete:(NSNotification *)notification { 
+   - (void)onAdComplete:(NSNotification *)notification {
        [_mediaHeartbeat trackEvent:ADBMediaHeartbeatEventAdComplete  
                         mediaObject:nil  
-                        data:nil]; 
+                        data:nil];
    }
    ```
 
 1. Om annonsuppspelningen inte slutfördes eftersom användaren valde att hoppa över annonsen, ska du spåra händelsen `AdSkip`.
 
    ```
-   - (void)onAdSkip:(NSNotification *)notification { 
+   - (void)onAdSkip:(NSNotification *)notification {
        [_mediaHeartbeat trackEvent:ADBMediaHeartbeatEventAdSkip  
                         mediaObject:nil  
-                        data:nil]; 
+                        data:nil];
    }
    ```
 
@@ -126,10 +128,10 @@ ht-degree: 4%
 1. När annonsbrytningen är klar använder du händelsen `AdBreakComplete` för att spåra:
 
    ```
-   - (void)onAdBreakComplete:(NSNotification *)notification { 
+   - (void)onAdBreakComplete:(NSNotification *)notification {
        [_mediaHeartbeat trackEvent:ADBMediaHeartbeatEventAdBreakComplete  
                         mediaObject:nil  
-                        data:nil]; 
+                        data:nil];
    }
    ```
 
