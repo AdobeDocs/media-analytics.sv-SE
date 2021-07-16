@@ -5,7 +5,7 @@ uuid: 06fefedb-b0c8-4f7d-90c8-e374cdde1695
 exl-id: a175332e-0bdc-44aa-82cb-b3f879e7abfc
 feature: Medieanalys
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: 8e0f5d012e1404623e3a0a460a9391303e2ab4e0
 workflow-type: tm+mt
 source-wordcount: '742'
 ht-degree: 3%
@@ -14,11 +14,12 @@ ht-degree: 3%
 
 # Översikt{#setup-overview}
 
+Följande instruktioner gäller för 2.x Media SDK:er. Om du implementerar en 1.x-version av Media SDK läser du [1.x Media SDK-dokumentationen.](/help/sdk-implement/download-sdks.md) Information om Primetime-integratörer finns i  _Primetime Media SDK-_ dokumentationen nedan.
+
 >[!IMPORTANT]
 >
 >När stödet för version 4 Mobile SDK upphör den 31 augusti 2021 upphör även stödet för Media Analytics SDK för iOS och Android i Adobe.  Mer information finns i [Vanliga frågor och svar om Media Analytics SDK när support upphör](/help/sdk-implement/end-of-support-faqs.md).
 
-Följande instruktioner gäller för 2.x Media SDK:er. Om du implementerar en 1.x-version av Media SDK läser du [1.x Media SDK-dokumentationen.](/help/sdk-implement/download-sdks.md) Information om Primetime-integratörer finns i  _Primetime Media SDK-_ dokumentationen nedan.
 
 ## Stöd för minst plattformsversion {#minimum-platform-version}
 
