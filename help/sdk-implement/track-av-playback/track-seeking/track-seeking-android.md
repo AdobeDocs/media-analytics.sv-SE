@@ -5,7 +5,7 @@ uuid: 65addd99-eebf-4a80-8b4a-d5fbdff8ab06
 exl-id: 8a8fcbcf-3232-4565-8c27-4167b6741613
 feature: Medieanalys
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: 8e0f5d012e1404623e3a0a460a9391303e2ab4e0
 workflow-type: tm+mt
 source-wordcount: '132'
 ht-degree: 0%
@@ -14,9 +14,11 @@ ht-degree: 0%
 
 # Spåra sökning på Android{#track-seeking-on-android}
 
+Följande anvisningar ger vägledning för implementering i alla 2.x SDK:er.
+
 >[!IMPORTANT]
 >
->Följande anvisningar ger vägledning för implementering i alla 2.x SDK:er. Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandboken här: [Hämta SDK:er.](/help/sdk-implement/download-sdks.md)
+>Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandboken här: [Hämta SDK:er.](/help/sdk-implement/download-sdks.md)
 
 ## Sökspårningskonstanter
 
@@ -31,7 +33,7 @@ ht-degree: 0%
 
    ```java
    public void onSeekStart(Observable observable, Object data) {  
-       _heartbeat.trackEvent(MediaHeartbeat.Event.SeekStart, null, null); 
+       _heartbeat.trackEvent(MediaHeartbeat.Event.SeekStart, null, null);
    }
    ```
 
@@ -39,7 +41,7 @@ ht-degree: 0%
 
    ```java
    public void onSeekComplete(Observable observable, Object data) {  
-       _heartbeat.trackEvent(MediaHeartbeat.Event.SeekComplete, null, null); 
+       _heartbeat.trackEvent(MediaHeartbeat.Event.SeekComplete, null, null);
    }
    ```
 
