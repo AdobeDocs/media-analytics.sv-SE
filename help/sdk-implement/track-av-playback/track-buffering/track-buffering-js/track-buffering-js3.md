@@ -4,7 +4,7 @@ description: Lär dig hur du spårar buffringshändelser i webbläsarappar (JS).
 exl-id: c6941942-02f9-4f9c-99ad-0c52ed2f793b
 feature: Medieanalys
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: 8e0f5d012e1404623e3a0a460a9391303e2ab4e0
 workflow-type: tm+mt
 source-wordcount: '122'
 ht-degree: 0%
@@ -13,9 +13,11 @@ ht-degree: 0%
 
 # Spåra buffring med JavaScript 3.x{#track-buffering-on-javascript}
 
+Följande instruktioner ger vägledning för implementering i alla 3.x SDK:er.
+
 >[!IMPORTANT]
 >
->Följande instruktioner ger vägledning för implementering i alla 3.x SDK:er. Om du implementerar en tidigare version av SDK kan du hämta utvecklarhandböckerna här: [Hämta SDK:er.](/help/sdk-implement/download-sdks.md)
+>Om du implementerar en tidigare version av SDK kan du hämta utvecklarhandböckerna här: [Hämta SDK:er.](/help/sdk-implement/download-sdks.md)
 
 ## Konstanter för buffertspårning
 
