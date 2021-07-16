@@ -5,7 +5,7 @@ uuid: 4d81d29c-c55d-4d48-b505-3260922712ff
 exl-id: 4404d3a6-ab98-40f0-9573-ee32f480f650
 feature: Medieanalys
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: 8e0f5d012e1404623e3a0a460a9391303e2ab4e0
 workflow-type: tm+mt
 source-wordcount: '357'
 ht-degree: 4%
@@ -14,9 +14,11 @@ ht-degree: 4%
 
 # Spåra annonser med JavaScript 2.x{#track-ads-on-javascript}
 
+Följande anvisningar ger vägledning vid implementering med SDK:er för 2.x.
+
 >[!IMPORTANT]
 >
->Följande anvisningar ger vägledning vid implementering med SDK:er för 2.x. Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandböcker här: [Hämta SDK:er.](/help/sdk-implement/download-sdks.md)
+>Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandböcker här: [Hämta SDK:er.](/help/sdk-implement/download-sdks.md)
 
 ## Konstanter för annonsspårning
 
