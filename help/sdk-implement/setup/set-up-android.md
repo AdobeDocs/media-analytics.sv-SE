@@ -5,14 +5,16 @@ uuid: 3ffe3276-a104-4182-9220-038729e9f3d5
 exl-id: 261445bf-3c8b-4658-891d-9a878e0b26ea
 feature: Medieanalys
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: 8e0f5d012e1404623e3a0a460a9391303e2ab4e0
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '423'
 ht-degree: 8%
 
 ---
 
 # Konfigurera Android{#set-up-android}
+
+Lär dig hur du konfigurerar Streaming Media Analytics för Android-enheter.
 
 >[!IMPORTANT]
 >
