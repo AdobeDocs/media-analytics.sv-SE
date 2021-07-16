@@ -4,7 +4,7 @@ description: Implementera annonsspårning i webbläsarprogram (JS) med Media SDK
 exl-id: 6b34b2c0-5e50-471a-b52c-b9c760fa3169
 feature: Medieanalys
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: 8e0f5d012e1404623e3a0a460a9391303e2ab4e0
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 3%
@@ -13,9 +13,11 @@ ht-degree: 3%
 
 # Spåra annonser med JavaScript 3.x{#track-ads-on-javascript}
 
+Följande instruktioner ger vägledning vid implementering med 3.x SDK:er.
+
 >[!IMPORTANT]
 >
->Följande instruktioner ger vägledning vid implementering med 3.x SDK:er. Om du implementerar en tidigare version av SDK kan du hämta utvecklarhandböckerna här: [Hämta SDK:er.](/help/sdk-implement/download-sdks.md)
+>Om du implementerar en tidigare version av SDK kan du hämta utvecklarhandböckerna här: [Hämta SDK:er.](/help/sdk-implement/download-sdks.md)
 
 ## Konstanter för annonsspårning
 
