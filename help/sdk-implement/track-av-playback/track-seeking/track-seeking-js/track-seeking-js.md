@@ -5,7 +5,7 @@ uuid: 089947fb-8bae-4ae8-b215-53793620efd7
 exl-id: 90f35376-24d8-405d-82b4-d6b737acf7b9
 feature: Medieanalys
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: 8e0f5d012e1404623e3a0a460a9391303e2ab4e0
 workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 0%
@@ -14,9 +14,11 @@ ht-degree: 0%
 
 # Spåra sökning med JavaScript 2.x{#track-seeking-on-javascript}
 
+Följande anvisningar ger vägledning för implementering i alla 2.x SDK:er.
+
 >[!IMPORTANT]
 >
->Följande anvisningar ger vägledning för implementering i alla 2.x SDK:er. Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandboken här: [Hämta SDK:er.](/help/sdk-implement/download-sdks.md)
+>Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandboken här: [Hämta SDK:er.](/help/sdk-implement/download-sdks.md)
 
 ## Sökspårningskonstanter
 
