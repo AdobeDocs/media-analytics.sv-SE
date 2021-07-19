@@ -103,7 +103,7 @@ I den här dokumentationen beskrivs spårning i version 2.x av SDK.
 
    * **Standardmetadata**
 
-[Implementera standardmetadata i Roku](/help/sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-roku.md)
+      [Implementera standardmetadata i Roku](/help/sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-roku.md)
 
       >[!NOTE]
       >Det är valfritt att bifoga standardmetadataobjektet för video till mediaobjektet.
