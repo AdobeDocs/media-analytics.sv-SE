@@ -1,18 +1,6 @@
 {
     "ignorePatterns": [
         {
-            "pattern": "^.*corp.adobe.com"
-        },
-        {
-            "pattern": "^.*digitalu.adobe.com"
-        },
-        {
-            "pattern": "^.*apache.org"
-        },
-        {
-            "pattern": "^.*ehow.com"
-        },
-        {
             "pattern": "^.*api.demdex.com"
         },
         {
