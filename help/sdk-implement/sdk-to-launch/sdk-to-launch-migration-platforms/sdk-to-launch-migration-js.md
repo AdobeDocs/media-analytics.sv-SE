@@ -4,7 +4,7 @@ description: Lär dig hur du migrerar från Media SDK till Launch for JS.
 exl-id: 19b506b2-3070-4a5e-9732-a5cd0867afde
 feature: Medieanalys
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: ceef739641ae07ea05314fb2bc23028de6ee5efb
 workflow-type: tm+mt
 source-wordcount: '400'
 ht-degree: 3%
@@ -52,7 +52,7 @@ Media-tillägget använder de konfigurerade parametrarna för spårning.
 
    ![](assets/launch_config_js.png)
 
-[Starta användarhandboken - Installera och konfigurera medietillägget](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/media-analytics-extension/overview.html#install-and-configure-the-ma-extension)
+[Starta användarhandboken - Installera och konfigurera medietillägget](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/media-analytics/overview.html#install-and-configure-the-ma-extension)
 
 ## Skillnader mellan att skapa spårare
 
@@ -125,5 +125,5 @@ Skicka ett delegatobjekt till `get-instance` som visar funktionerna `getQoSObjec
 
 ### Starta
 
-* [Översikt över Launch](https://experienceleague.adobe.com/docs/launch/using/overview.html)
-* [Media Analytics-tillägg](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/media-analytics-extension/overview.html)
+* [Översikt över Launch](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)
+* [Media Analytics-tillägg](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/media-analytics/overview.html)
