@@ -4,7 +4,7 @@ description: Läs mer om implementeringsvägar för Adobe Streaming Media, inklu
 exl-id: eee70e62-ba45-440a-8ce1-e151b66d2c1f
 feature: Medieanalys
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: ceef739641ae07ea05314fb2bc23028de6ee5efb
 workflow-type: tm+mt
 source-wordcount: '501'
 ht-degree: 1%
@@ -17,15 +17,15 @@ För varje implementeringsväg måste kunderna kontakta sin säljare/kontoansvar
 
 * **Adobe Launch med tillägget Adobe Media Analytics**
 
-   Adobe Launch är nästa generation av tagghanteringslösning från Adobe. Launch är ett enkelt sätt att driftsätta och hantera alla analys-, marknadsförings- och annonstaggar som behövs för att driva relevanta kundupplevelser. Om du vill skapa och underhålla egna integreringar med Launch använder du tillägg. Ett tillägg är ett JavaScript-, HTML- och CSS-paket som utökar startgränssnittet och klientfunktionerna. Mer information finns i [användarhandboken för Experience Platform Launch](https://experienceleague.adobe.com/docs/launch/using/overview.html)
+   Adobe Launch är nästa generation av tagghanteringslösning från Adobe. Launch är ett enkelt sätt att driftsätta och hantera alla analys-, marknadsförings- och annonstaggar som behövs för att driva relevanta kundupplevelser. Om du vill skapa och underhålla egna integreringar med Launch använder du tillägg. Ett tillägg är ett JavaScript-, HTML- och CSS-paket som utökar startgränssnittet och klientfunktionerna. Mer information finns i [användarhandboken för Experience Platform Launch](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)
 
    Adobe Media Analytics-tillägget (MA) lägger till JavaScript Media SDK (Media 2.x SDK) för ljud och video. Det här tillägget innehåller funktioner för att lägga till spårningsinstansen `MediaHeartbeat` på en startwebbplats eller ett startprojekt.
 
    Adobe Launch med Media Analytics-tillägget kräver följande:
    * Du måste vara kund hos Adobe Experience Cloud.
    * Du måste distribuera Launch- eller DTM-inbäddningskoden på dina webbsidor.
-   * [Analystillägg](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/analytics-extension/overview.html)
-   * [Experience Cloud ID-tillägg](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/id-service-extension/overview.html)
+   * [Analystillägg](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/analytics/overview.html)
+   * [Experience Cloud ID-tillägg](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/id-service/overview.html)
 
 
 * **Klientsidan -** Dessa är bara integrering med Media Analytics. Du kan välja SDK för pulsslag och/eller API-integreringar för Media Collection. Den här sökvägen kan användas i alla videospelare, inklusive kund- och/eller OVP-spelare som Brightcove, Ooyala, thePlatform osv.
