@@ -1,11 +1,11 @@
 ---
-title: API � Sessions-slutpunkt för direktuppspelning av mediainsamling
+title: API för direktuppspelad mediainsamling - Slutpunkt för sessionsbegäran
 description: '"Vad begär Media Collection API-sessioner slutpunktsparametrar och svar?"'
 uuid: 9609192d-4f7f-4fb5-844f-ea89d47c4e30
 exl-id: f55f5838-610f-4f82-b3c5-72165ea2c86b
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: ca709046e477bd471e2f55eb6dcf45e5c3c2be17
+source-git-commit: ef881900766be773256e2732953f7b63c5d488fa
 workflow-type: tm+mt
 source-wordcount: '0'
 ht-degree: 0%
