@@ -3,12 +3,12 @@ title: API � Sessions-slutpunkt för direktuppspelning av mediainsamling
 description: '"Vad begär Media Collection API-sessioner slutpunktsparametrar och svar?"'
 uuid: 9609192d-4f7f-4fb5-844f-ea89d47c4e30
 exl-id: f55f5838-610f-4f82-b3c5-72165ea2c86b
-feature: Medieanalys
+feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: ca709046e477bd471e2f55eb6dcf45e5c3c2be17
 workflow-type: tm+mt
-source-wordcount: '97'
-ht-degree: 7%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -62,8 +62,8 @@ Begärandetexten måste vara JSON och ha samma struktur som exempelbegärandetex
 ```
 
 * `playerTime` (Obligatoriskt)
-   * `playhead` - Måste vara i sekunder, men det kan vara ett flytande objekt.
-   * `ts` - Tidsstämpel. måste vara i millisekunder.
+   * `playhead` - Om innehållet är live måste spelhuvudet vara den aktuella sekunden på dagen, 0  &lt;> Om innehållet spelas in måste spelhuvudet vara den aktuella sekunden av innehållet, 0 &lt;= spelhuvud &lt; innehållslängd. Värdet kan vara ett flyttal.
+   * `ts` - Tidsstämpel. måste vara i millisekunder, UTC (Coordinated Universal Time).
 * `eventType` (Obligatoriskt)
 
    **Giltigt värde:** `sessionStart`
