@@ -3,11 +3,11 @@ title: Lär dig hur du spårar uppspelning på Roku
 description: Lär dig implementera huvudspårning med Media SDK på Roku.
 uuid: a8aa7b3c-2d39-44d7-8ebc-b101d130101f
 exl-id: 5272c0ce-4e3d-48c6-bfa6-94066ccbf9ac
-feature: Medieanalys
+feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: 8e0f5d012e1404623e3a0a460a9391303e2ab4e0
+source-git-commit: d7cb36c2dd6b35da4531ca975c7fc730e387b750
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '729'
 ht-degree: 2%
 
 ---
@@ -103,7 +103,7 @@ I den här dokumentationen beskrivs spårning i version 2.x av SDK.
 
    * **Standardmetadata**
 
-      [Implementera standardmetadata i Roku](/help/sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-roku.md)
+[Implementera standardmetadata i Roku](/help/sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-roku.md)
 
       >[!NOTE]
       >Det är valfritt att bifoga standardmetadataobjektet för video till mediaobjektet.
@@ -141,6 +141,14 @@ I den här dokumentationen beskrivs spårning i version 2.x av SDK.
 
    ```
    ADBMobile().mediaTrackPlay()
+   ```
+
+1. **Uppdatera spelhuvudets värde**
+
+   Meddela SDK när mediespelhuvudet ändras genom att anropa API:t `mediaUpdatePlayhead`. För video-on-demand (VOD) anges värdet i sekunder från mediaobjektets början. För direktuppspelning anges värdet som antalet sekunder sedan midnatt UTC den dagen.
+
+   ```
+   ADBMobile().mediaUpdatePlayhead(position)
    ```
 
 1. **Spåra slutförd uppspelning**

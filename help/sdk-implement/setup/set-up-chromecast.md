@@ -3,11 +3,11 @@ title: Så här ställer du in medie-SKD för Chromecast
 description: Följ de här stegen för att konfigurera Media SDK-programmet på Chromecast.
 uuid: d664e394-02a2-4985-bbad-be1bcc44fb2b
 exl-id: 5dfe3407-2858-48c0-a70c-8ea87967ac47
-feature: Medieanalys
+feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: 270dc48152dd77d7ceff8ce1ea9fbead0d1ce9be
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '643'
 ht-degree: 1%
 
 ---
@@ -137,6 +137,22 @@ Med Chromecast SDK 2.x för Experience Cloud Solutions kan ni mäta Chromecast-a
    | `getMarketingCloudID()` | Hämtar Experience Cloud Visitor-ID:t från Visitor ID-tjänsten.  <br/><br/>`ADBMobile.visitor.getMarketingCloudID();` |
    | `syncIdentifiers()` | Med besökar-ID:t för Experience Cloud kan du ange ytterligare kund-ID:n som kan kopplas till varje besökare. Besökar-API:t godkänner flera kund-ID:n för samma besökare och en kundtypsidentifierare för att skilja omfattningen för olika kund-ID:n åt. Den här metoden motsvarar `setCustomerIDs()` i JavaScript-biblioteket.  Exempel: <br/><br/>`var identifiers = {};` <br/><br/>`identifiers["idType"] = "idValue";` <br/><br/>`ADBMobile.visitor.syncIdentifiers(identifiers);` |
 
+1. Implementera MediaDelegate-protokollet för spårning av media
 
+   ```js
+    var delegate = {
+      // Replace <currentPlaybackTime> with the video player current playback time
+      getCurrentPlaybackTime = function() {
+        return <currentPlaybackTime>;
+      },
+      // Replace <bitrate>, <startuptime>, <fps> and <droppeFrames> with the current playback QoS values.
+      getQoSObject = function() {
+         return ADBMobile.media.createQoSObject(<bitrate>, <startupTime>, <fps>, <droppedFrames>);
+      }
+    }
+   
+    ADBMobile.media.setDelegate(delegate);
+   }
+   ```
 
 <!--   **Postbacks -** For more information about configuring postbacks, see [Configure Postbacks.](https://experienceleague.adobe.com/docs/mobile-services/using/manage-app-settings-ug/configuring-app/signals.html) -->
