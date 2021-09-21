@@ -3,12 +3,12 @@ title: Parametrar för � för direktuppspelad mediainsamling
 description: '"Vad är Media Collection API-parametrarna för förfrågningar, nycklar och beskrivningar."'
 uuid: f83e9ef1-803d-4152-a6c7-acaa325036b9
 exl-id: a70025ec-1418-46f1-b41f-433d09f024e1
-feature: Medieanalys
+feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: d8b10249c542d2875cba4916e4a2c7942c5589c4
 workflow-type: tm+mt
-source-wordcount: '1307'
-ht-degree: 5%
+source-wordcount: '1329'
+ht-degree: 4%
 
 ---
 
@@ -104,7 +104,7 @@ ht-degree: 5%
 
 | Begär nyckel  | Obligatoriskt | Begärantypnyckel | Aktivera... |  Beskrivning  |
 | --- | :---: | :---: | :---: | --- |
-| `media.qoe.bitrate` | N | heltal | Alla | Strömmens bithastighet |
+| `media.qoe.bitrate` | N | heltal | Alla | Genomsnittlig bithastighet (i bps). Den genomsnittliga bithastigheten beräknas som ett vägt genomsnitt av alla bithastighetsvärden som relateras till uppspelningens varaktighet som inträffade under en uppspelningssession. |
 | `media.qoe.droppedFrames` | N | heltal | Alla | Antalet uteslutna bildrutor i strömmen |
 | `media.qoe.framesPerSecond` | N | heltal | Alla | Antalet bildrutor per sekund |
 | `media.qoe.timeToStart` | N | heltal | Alla | Den tid (i millisekunder) som förflyter mellan att användaren träffar uppspelningen och att innehållet läses in och börjar spelas upp |
