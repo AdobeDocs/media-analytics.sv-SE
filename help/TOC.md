@@ -4,11 +4,11 @@ audience: end-user
 user-guide-title: Adobe Analytics for Streaming Media
 breadcrumb-title: Media Analytics Guide
 user-guide-description: Implementera Adobe Analytics för direktuppspelningsmedia. Innehåller Media SDK och Media Collection API.
-sub-product: medieanalys
-source-git-commit: 42a8e33f03c95c7ad7d1c73387450ef36b3e1560
+sub-product: media analytics
+source-git-commit: 55d77d1576236fbc1165a41d7a0775b9ee246d8a
 workflow-type: tm+mt
-source-wordcount: '829'
-ht-degree: 93%
+source-wordcount: '832'
+ht-degree: 92%
 
 ---
 
@@ -215,6 +215,7 @@ ht-degree: 93%
       + [Rapport över samtidiga visningsprogram för media](media-reports/media-default-reports/media-concurrent-viewers.md)
    + Paneler för mediearbetsyta {#media-workspace-panels}
       + [Panelen för samtidiga medieanvändare](media-reports/media-workspace-panels/media-concurrent-viewers.md)
+      + [Medieuppspelningstid spenderad panel](media-reports/media-workspace-panels/media-playback-time-spent.md)
    + [Mallar för mediearbetsyta](media-reports/media-workspace-templates.md)
    + [Hämta data för samtidiga visningsprogram via API](media-reports/media-default-reports/get-concurrent-json20.md)
 + [Spåra nedladdat innehåll](media-collection-api/track-downloaded-content.md)
@@ -231,5 +232,5 @@ ht-degree: 93%
     + [Overview](sdk-implement/player-state-tracking/player-state-overview.md)
     + [Standard and custom states](sdk-implement/player-state-tracking/standard-and-custom-states.md)
     + [Implementation and reporting](sdk-implement/player-state-tracking/implementation-and-reporting.md)
-    + [Player state tracking examples](sdk-implement/player-state-tracking/player-state-examples.md) 
+    + [Player state tracking examples](sdk-implement/player-state-tracking/player-state-examples.md)
 -->
