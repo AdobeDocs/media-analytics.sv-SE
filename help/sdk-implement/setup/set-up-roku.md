@@ -1,13 +1,13 @@
 ---
-title: Så här konfigurerar du media-SKD för Roku
+title: Så här konfigurerar du Media SDK för Roku
 description: Följ de här stegen för att konfigurera Media SDK-programmet på Roku.
 uuid: 904dfda0-4782-41da-b4ab-212e81156633
 exl-id: b8de88d0-3a93-4776-b372-736bf979ee26
-feature: Medieanalys
+feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: e10f705e135cc6b9c630059596994d12fc787866
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '716'
 ht-degree: 2%
 
 ---
