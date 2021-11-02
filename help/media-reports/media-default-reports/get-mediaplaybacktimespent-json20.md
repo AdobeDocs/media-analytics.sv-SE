@@ -1,24 +1,24 @@
 ---
-title: Hämta JSON-rapportdata för samtidiga visningsprogram med API:er för Analytics 2.0
-description: Lär dig hur du hämtar data från rapporter för samtidiga visningsprogram med API:erna i Analytics 2.0. Visa en exempelbegäran och ett exempelsvar.
-uuid: 9168f114-2459-4951-a06c-57b735d09dc0
-exl-id: f84f63d3-b0d0-45fe-95a7-159f22d60660
+title: Hämta JSON-rapportdata för Media Playback Time Spent med API:er för Analytics 2.0
+description: Lär dig hur du hämtar den mediouppspelningstid som spenderas på rapportdata med API:erna i Analytics 2.0. Visa en exempelbegäran och ett exempelsvar.
+uuid: null
+exl-id: null
 feature: Media Analytics, Reports & Analytics Basics
 role: User, Admin, Data Engineer
-source-git-commit: 03b274fa0c5580ee2759560efbea45eb308d4278
+source-git-commit: 3118a5eeef56c7768d88df7c658468c356921aac
 workflow-type: tm+mt
-source-wordcount: '185'
-ht-degree: 3%
+source-wordcount: '205'
+ht-degree: 2%
 
 ---
 
 
-# Hämta JSON-rapportdata för samtidiga visningsprogram med API:er för Analytics 2.0{#get-concurrent-viewers-json-report-data}
+# Hämta JSON-rapportdata för Media Playback Time Spent med API:er för Analytics 2.0{#get-media-playback-time-spent-json-report-data}
 
-Du kan hämta rapportdata för samtidiga visningsprogram med [_*API:er för Analytics 2.0*_](https://www.adobe.io/apis/experiencecloud/analytics/docs.html).
+Du kan hämta den tid som går åt till att rapportera data med hjälp av [_*API:er för Analytics 2.0*_](https://www.adobe.io/apis/experiencecloud/analytics/docs.html).
 
 1. Filtrera data med valfritt segment som bygger på användargränssnittet. Om du vill filtrera efter ett visst innehålls-ID skapar du ett nytt segment.
-1. Ange `elements` -> `id` i begärandetexten till `metrics/concurrent_viewers_visitors`.
+1. Ange `elements` -> `id` i begärandetexten till `metrics/playback_time_spent_seconds` eller `metrics/playback_time_spent_minutes` beroende på om du vill ha utdata i sekunder eller minuter.
 1. Begär tillräckligt med data.
 
    * Det dataområde som du anger i rapporten samlar in alla samtidiga visningsprogramdata _när videosessionen avslutades._
@@ -37,7 +37,7 @@ Nyttolasten för en samplingsbegäran för en dag med data skulle se ut som föl
     "dimension": "variables/daterangeminute",
     "globalFilters": [
         {
-            "dateRange": "2020-09-02T00:00/2020-09-03T00:00",
+            "dateRange": "2021-09-02T00:00/2021-09-03T00:00",
             "type": "dateRange"
         }
     ],
@@ -45,7 +45,7 @@ Nyttolasten för en samplingsbegäran för en dag med data skulle se ut som föl
         "metrics": [
             {
                 "columnId": "column1",
-                "id": "metrics/concurrent_viewers_visitors"
+                "id": "metrics/playback_time_spent_minutes"
             }
         ]
     },
@@ -79,21 +79,21 @@ Nyttolasten för en samplingsbegäran för en dag med data skulle se ut som föl
    "rows":[
       {
          "itemId":"12008020000",
-         "value":"00:00 2020-09-02",
+         "value":"00:00 2021-09-02",
          "data":[
             123.0
          ]
       },
       {
          "itemId":"12008020001",
-         "value":"00:01 2020-09-02",
+         "value":"00:01 2021-09-02",
          "data":[
             143.0
          ]
       },
       {
          "itemId":"12008020002",
-         "value":"00:02 2020-09-02",
+         "value":"00:02 2021-09-02",
          "data":[
             167.0
          ]
@@ -102,7 +102,7 @@ Nyttolasten för en samplingsbegäran för en dag med data skulle se ut som föl
       ...
       {
          "itemId":"12008022359",
-         "value":"23:59 2020-09-02",
+         "value":"23:59 2021-09-02",
          "data":[
             768.0
          ]
@@ -121,7 +121,7 @@ Nyttolasten för en samplingsbegäran för en dag med data skulle se ut som föl
 
 
 <!--
-You can extract the concurrent viewers report data using the Experience Cloud API Explorer as follows.
+You can extract the Media Playback Time Spent report data using the Experience Cloud API Explorer as follows.
 
 1. Navigate to: [https://www.adobe.io.](https://www.adobe.io)
 1. Select and enter the following information in the API Explorer form:
@@ -179,7 +179,7 @@ You can extract the concurrent viewers report data using the Experience Cloud AP
 1. In the form, change **Method** to "Get".
 1. Enter the value of the `reportID` you received in Step 3, and click **Get Response**.
 
-   The concurrent viewers report data, in JSON format, is presented in the Response field.
+   The Media Playback Time Spent report data, in JSON format, is presented in the Response field.
 
    For example:
 

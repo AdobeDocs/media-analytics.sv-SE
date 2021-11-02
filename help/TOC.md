@@ -5,10 +5,10 @@ user-guide-title: Adobe Analytics for Streaming Media
 breadcrumb-title: Media Analytics Guide
 user-guide-description: Implementera Adobe Analytics för direktuppspelningsmedia. Innehåller Media SDK och Media Collection API.
 sub-product: media analytics
-source-git-commit: 55d77d1576236fbc1165a41d7a0775b9ee246d8a
+source-git-commit: 407f17a5b1134362c6be7c6bfae909e9e66077be
 workflow-type: tm+mt
-source-wordcount: '832'
-ht-degree: 92%
+source-wordcount: '840'
+ht-degree: 91%
 
 ---
 
@@ -46,7 +46,7 @@ ht-degree: 92%
       + [Konfigurera Roku](sdk-implement/setup/set-up-roku.md)
    + Spåra direktuppspelning av media {#track-av-playback}
       + [Översikt](sdk-implement/track-av-playback/track-core-overview.md)
-      + Spåra kärndirektuppspelning av media {#track-core}
+      + Spåra direktuppspelning av media {#track-core}
          + [Spåra grundläggande uppspelning i Android](sdk-implement/track-av-playback/track-core/track-core-android.md)
          + [Spåra grundläggande uppspelning i iOS](sdk-implement/track-av-playback/track-core/track-core-ios.md)
          + Spåra grundläggande uppspelning i JavaScript {#track-core-javascript}
@@ -218,6 +218,7 @@ ht-degree: 92%
       + [Medieuppspelningstid spenderad panel](media-reports/media-workspace-panels/media-playback-time-spent.md)
    + [Mallar för mediearbetsyta](media-reports/media-workspace-templates.md)
    + [Hämta data för samtidiga visningsprogram via API](media-reports/media-default-reports/get-concurrent-json20.md)
+   + [Hämta mediespelningstid för spenderade data via API](media-reports/media-default-reports/get-mediaplaybacktimespent-json20.md)
 + [Spåra nedladdat innehåll](media-collection-api/track-downloaded-content.md)
 + Spårning av spelarens tillstånd {#player-state-tracking}
    + [Översikt](sdk-implement/player-state-tracking/player-state-overview.md)

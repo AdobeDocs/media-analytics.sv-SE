@@ -3,11 +3,11 @@ title: Annonsparametrar
 description: '"Lär dig mer om annonsparametrar, inklusive implementering, nätverk och rapportvariabler för annonsvideodata."'
 uuid: 92cd7f97-bb5a-4de6-8946-453d30271d0f
 exl-id: 949e86cb-d265-4836-8825-a06b87203b15
-feature: Medieanalys
+feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: f296b2549bb49162d735f29718057b3b1bbec231
 workflow-type: tm+mt
-source-wordcount: '1850'
+source-wordcount: '1927'
 ht-degree: 3%
 
 ---
@@ -18,20 +18,20 @@ I det här avsnittet presenteras en lista med videoannonsdata, inklusive kontext
 
 Beskrivning av tabelldata:
 
-* **implementering:** information om implementeringsvärden och -krav
-   * *Key*  - Variable, ange antingen manuellt i appen eller automatiskt med Adobe Media SDK.
-   * *Obligatoriskt*  - Anger om parametern krävs för grundläggande videospårning.
-   * *Typ*  - Anger vilken typ av variabel som ska anges, strängen eller talet.
-   * *Skickat med*  - Anger när data skickas:  *Media* Startis the analytics call sent on media start,  *Ad* Startis, the analytics call sent on ad ad start osv. &quot; ** Closecalls&quot; är de kompilerade analysanrop som skickas direkt från hjärtslagservern till analysservern i slutet av mediesessionen, eller i slutet av annonsen, kapitlet osv. Stäng anrop är inte tillgängliga i nätverkspaketanrop.
+* **Implementering:** Information om genomförandevärden och krav
+   * *Nyckel* - Variabel, ange antingen manuellt i appen eller automatiskt med Adobe Media SDK.
+   * *Obligatoriskt* - Anger om parametern krävs för grundläggande videospårning.
+   * *Typ* - Anger vilken typ av variabel som ska anges, strängen eller talet.
+   * *Skickat med* - Anger när data skickas: *Mediestart* är det analysanrop som skickas vid mediestart, *Annonsstart* är det analysanrop som skickas vid annonsstart osv., den *Stäng* anrop är de kompilerade analysanrop som skickas direkt från hjärtslagservern till analysservern i slutet av mediesessionen eller slutet av annonsen, kapitlet osv. Stäng anrop är inte tillgängliga i nätverkspaketanrop.
    * *Min. SDK-version* - Anger vilken SDK-version du behöver för att komma åt parametern.
-   * *Exempelvärde*  - innehåller exempel på vanlig variabelanvändning.
-* **Nätverksparametrar:** Visar värden som skickas till Adobe Analytics- eller pulsslagservrar. I den här kolumnen visas namnen på de parametrar som visas i nätverksanrop som genereras av Adobe Media SDK:er.
+   * *Exempelvärde* - Visar exempel på vanlig variabelanvändning.
+* **Nätverksparametrar:** Visar de värden som skickas till Adobe Analytics- eller pulsslagservrar. I den här kolumnen visas namnen på de parametrar som visas i nätverksanrop som genereras av Adobe Media SDK:er.
 * **Rapportering:** Information om hur du visar och analyserar videodata.
-   * *Tillgängligt*  - Anger om data är tillgängliga i rapporter som standard (*Ja*) eller om det krävs anpassad konfiguration (*Anpassad*)
-   * *Reserverad variabel*  - Anger om data har fångats in som en händelse, eVar, prop eller klassificering i en reserverad variabel.
-   * *Rapportnamn*  - Namn på analysrapport för Adobe för variabel
-   * *Kontextdata*  - Namn på Adobe Analytics-kontextdata som skickas till rapportservern och används i bearbetningsregler.
-   * *Datafeed*  - kolumnnamn för variabel som hittas i Clickstream- eller Live Stream-dataflöden
+   * *Tillgänglig* - Anger om data är tillgängliga i rapporter som standard (*Ja*), eller kräver anpassad installation (*Egen*)
+   * *Reserverad variabel* - Anger om data fångas in som en händelse, eVar, prop eller klassificering i en reserverad variabel.
+   * *Rapportnamn* - Namn på Adobe Analytics-rapport för variabel
+   * *Kontextdata* - Namnet på de Adobe Analytics-kontextdata som skickas till rapportservern och som används i bearbetningsregler.
+   * *Datafeed* - Kolumnnamn för variabeln som hittades i dataflödena Clickstream eller Live Stream
    * *Audience Manager* - Trait name found in Adobe Audience Manager
 
 >[!IMPORTANT]
@@ -51,7 +51,7 @@ Beskrivning av tabelldata:
 
 |   Implementering   | Nätverksparametrar | Rapportering |
 | --- | --- | --- |
-| <ul> <li> **SDK-nyckel:**<br/> [adId](./ad-parameters.md#section_Related_APIs) </li> <li> **API-nyckel:**<br/> media.ad.id </li> <li> **Obligatoriskt:**<br/> Ja </li> <li> **Typ:**<br/> sträng </li> <li> **Skickat med:**<br/> Ad Start, Ad Close </li> <li> **Min. SDK-version:** Alla  </li> <li> **Exempelvärde:**<br/> &quot;2125&quot; </li><li> **Beskrivning:**<br/> ID för annonsen. (Valfritt heltal och/eller bokstavskombination)  </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.ad.<br/>name) </li> <li> **pulsslag:**<br/> (:asset:ledsen_id) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> eVar </li> <li> **förfallodatum:**<br/> Vid besök </li> <li> **rapportnamn:**<br/> annons </li> <li> **Kontextdata:**<br/> (a.media.ad.<br/>namn) </li> <li> **datafeed:**<br/> videoad </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.ad.name) </li> </ul> |
+| <ul> <li> **SDK-nyckel:**<br/> [adId](./ad-parameters.md#section_Related_APIs) </li> <li> **API-nyckel:**<br/> media.ad.id </li> <li> **Obligatoriskt:**<br/> Ja </li> <li> **Typ:**<br/> string </li> <li> **Skickat med:**<br/> Annonsstart, annonsstängning </li> <li> **Min. SDK-version:** Alla  </li> <li> **Exempelvärde:**<br/> &quot;2125&quot; </li><li> **Beskrivning:**<br/> ID för annonsen. (Valfritt heltal och/eller bokstavskombination)  </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.ad.<br/>name) </li> <li> **Hjärtslag:**<br/> (s:asset:ad_id) </li> </ul> | <ul> <li> **Tillgängligt:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> eVar </li> <li> **Förfallodatum:**<br/> Vid besök </li> <li> **Rapportnamn:**<br/> Annons </li> <li> **Kontextdata:**<br/> (a.media.ad.<br/>namn) </li> <li> **Datafeed:**<br/> video </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.ad.name) </li> <li> **Sökväg till XDM-fält:**<br/> advertising.adAssetReference.@id </li> </ul> |
 
 
 
@@ -59,7 +59,7 @@ Beskrivning av tabelldata:
 
 |   Implementering   | Nätverksparametrar | Rapportering |
 | --- | --- | --- |
-| <ul> <li> **SDK-nyckel:**<br/> [position](./ad-parameters.md#section_Related_APIs) </li> <li> **API-nyckel:**<br/> media.ad.podPosition </li> <li> **Obligatoriskt:**<br/> Ja </li> <li> **text:**<br/> tal </li> <li> **Skickat med:**<br/> Ad Start, Ad Close </li> <li> **Min. SDK-version:** Alla </li> <li> **Exempelvärde:**<br/> 1 </li><li> **Beskrivning:**<br/> Platsen (index) för annonsen inuti den överordnade annonsbrytningen. Den första annonsen har index 0, den andra annonsen har index 1, osv.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.ad.<br/>podPosition) </li> <li> **pulsslag:**<br/> (:asset:spod_position) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> eVar </li> <li> **Förfallotid:**<br/> vid HIT </li> <li> **Rapportnamn:**<br/> Lägg till i rutposition </li> <li> **Kontextdata:**<br/> (a.media.ad.<br/>podPosition) </li> <li> **datafeed:**<br/> videoadinpod </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.ad.podPosition) </li> </ul> |
+| <ul> <li> **SDK-nyckel:**<br/> [position](./ad-parameters.md#section_Related_APIs) </li> <li> **API-nyckel:**<br/> media.ad.podPosition </li> <li> **Obligatoriskt:**<br/> Ja </li> <li> **Typ:**<br/> tal </li> <li> **Skickat med:**<br/> Annonsstart, annonsstängning </li> <li> **Min. SDK-version:** Alla </li> <li> **Exempelvärde:**<br/> 1 </li><li> **Beskrivning:**<br/> Platsen (index) för annonsen inuti den överordnade annonsbrytningen. Den första annonsen har index 0, den andra annonsen har index 1, osv.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.ad.<br/>podPosition) </li> <li> **Hjärtslag:**<br/> (s:asset:pod_position) </li> </ul> | <ul> <li> **Tillgängligt:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> eVar </li> <li> **Förfallodatum:**<br/> Vid TRIT </li> <li> **Rapportnamn:**<br/> Lägg till i rutposition </li> <li> **Kontextdata:**<br/> (a.media.ad.<br/>podPosition) </li> <li> **Datafeed:**<br/> videoadinpod </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.ad.podPosition) </li> <li> **Sökväg till XDM-fält:**<br/> advertising.adAssetViewDetails.index </li> </ul> |
 
 
 
@@ -67,7 +67,7 @@ Beskrivning av tabelldata:
 
 |   Implementering   | Nätverksparametrar | Rapportering |
 | --- | --- | --- |
-| <ul> <li> **SDK-nyckel:**<br/>  [length](./ad-parameters.md#section_Related_APIs) </li> <li> **API-nyckel:**<br/> media.ad.length </li> <li> **Obligatoriskt:**<br/> Ja </li> <li> **text:**<br/> tal </li> <li> **Skickat med:**<br/> Ad Start, Ad Close </li> <li> **Min. SDK-version:** 1.5.1 </li> <li> **Exempelvärde:**<br/> &quot;15&quot;  </li><li> **Beskrivning:**<br/> Längd på videoannons i sekunder.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.ad.<br/>length) </li> <li> **pulsslag:**<br/> (:asset:load_length) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> eVar och klassificering </li> <li> **Förfallotid:**<br/> vid HIT </li> <li> **Rapportnamn:**<br/> annonslängd och annonslängd (variabel) </li> <li> **Kontextdata:**<br/> (a.media.ad.<br/>längd) </li> <li> **datafeed:**<br/> videolängd </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.ad.length) </li> </ul> |
+| <ul> <li> **SDK-nyckel:**<br/>  [length](./ad-parameters.md#section_Related_APIs) </li> <li> **API-nyckel:**<br/> media.ad.length </li> <li> **Obligatoriskt:**<br/> Ja </li> <li> **Typ:**<br/> tal </li> <li> **Skickat med:**<br/> Annonsstart, annonsstängning </li> <li> **Min. SDK-version:** 1.5.1 </li> <li> **Exempelvärde:**<br/> &quot;15&quot;  </li><li> **Beskrivning:**<br/> Längd på videoannonsen i sekunder.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.ad.<br/>length) </li> <li> **Hjärtslag:**<br/> (l:asset:ad_length) </li> </ul> | <ul> <li> **Tillgängligt:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> eVar och klassificering </li> <li> **Förfallodatum:**<br/> Vid TRIT </li> <li> **Rapportnamn:**<br/> Annonslängd och annonslängd (variabel) </li> <li> **Kontextdata:**<br/> (a.media.ad.<br/>längd) </li> <li> **Datafeed:**<br/> videoadlength </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.ad.length) </li> <li> **Sökväg till XDM-fält:**<br/> advertising.adAssetReference.xmpDM:duration </li> </ul> |
 
 
 
@@ -75,7 +75,7 @@ Beskrivning av tabelldata:
 
 |   Implementering   | Nätverksparametrar | Rapportering |
 | --- | --- | --- |
-| <ul> <li> **SDK-nyckel:**<br/>  [playerName](./ad-parameters.md#section_Related_APIs) </li> <li> **API-nyckel:**<br/> media.ad.playerName </li> <li> **Obligatoriskt:**<br/> Ja </li> <li> **Typ:**<br/> sträng </li> <li> **Skickat med:**<br/> Ad Start, Ad Close </li> <li> **Min. SDK-version:** Alla </li> <li> **Exempelvärde:**<br/> &quot;Freewheel&quot; </li><li> **Beskrivning:**<br/> Namnet på spelaren som ansvarar för att återge annonsen.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.ad.<br/>playerName) </li> <li> **pulsslag:**<br/> (:sp:splayer_name) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> eVar </li> <li> **Förfallotid:**<br/> vid HIT </li> <li> **Rapportnamn:**<br/> annonsspelarens namn </li> <li> **Kontextdata:**<br/> (a.media.ad.<br/>playerName) </li> <li> **datafeed:**<br/> videoadplayername </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.ad.playerName) </li> </ul> |
+| <ul> <li> **SDK-nyckel:**<br/>  [playerName](./ad-parameters.md#section_Related_APIs) </li> <li> **API-nyckel:**<br/> media.ad.playerName </li> <li> **Obligatoriskt:**<br/> Ja </li> <li> **Typ:**<br/> string </li> <li> **Skickat med:**<br/> Annonsstart, annonsstängning </li> <li> **Min. SDK-version:** Alla </li> <li> **Exempelvärde:**<br/> &quot;Freewheel&quot; </li><li> **Beskrivning:**<br/> Namnet på spelaren som ansvarar för att återge annonsen.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.ad.<br/>playerName) </li> <li> **Hjärtslag:**<br/> (s:sp:player_name) </li> </ul> | <ul> <li> **Tillgängligt:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> eVar </li> <li> **Förfallodatum:**<br/> Vid TRIT </li> <li> **Rapportnamn:**<br/> Namn på annonsspelare </li> <li> **Kontextdata:**<br/> (a.media.ad.<br/>playerName) </li> <li> **Datafeed:**<br/> videoadplayername </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.ad.playerName) </li> <li> **Sökväg till XDM-fält:**<br/> advertising.adAssetViewDetails.playerName </li> </ul> |
 
 
 
@@ -83,7 +83,7 @@ Beskrivning av tabelldata:
 
 |   Implementering   | Nätverksparametrar | Rapportering |
 | --- | --- | --- |
-| <ul> <li> **SDK-nyckel:**<br/>  [name](./ad-parameters.md#section_Related_APIs) </li> <li> **API-nyckel:**<br/> media.ad.podFriendlyName </li> <li> **Obligatoriskt:**<br/> SDK: Ja, API: Nej. </li> <li> **Typ:**<br/> sträng </li> <li> **Skickat med:**<br/> Ad Start, Ad Close </li> <li> **Min. SDK-version:** Alla </li> <li> **Exempelvärde:**<br/> &quot;pre-roll&quot; </li><li> **Beskrivning:**<br/> Ad Breaks egna namn.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.ad.<br/>podFriendlyName) </li> <li> **pulsslag:**<br/> (:asset:spod_name) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> Klassificering </li> <li> **Rapportnamn:**<br/> Podnamn </li> <li> **Kontextdata:**<br/> (a.media.ad.<br/>podFriendlyName) </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.ad.podFriendlyName) </li> </ul> |
+| <ul> <li> **SDK-nyckel:**<br/>  [name](./ad-parameters.md#section_Related_APIs) </li> <li> **API-nyckel:**<br/> media.ad.podFriendlyName </li> <li> **Obligatoriskt:**<br/> SDK: Ja, API: Nej. </li> <li> **Typ:**<br/> string </li> <li> **Skickat med:**<br/> Annonsstart, annonsstängning </li> <li> **Min. SDK-version:** Alla </li> <li> **Exempelvärde:**<br/> &quot;pre-roll&quot; </li><li> **Beskrivning:**<br/> Ad Breaks egna namn.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.ad.<br/>podFriendlyName) </li> <li> **Hjärtslag:**<br/> (s:asset:pod_name) </li> </ul> | <ul> <li> **Tillgängligt:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> Klassificering </li> <li> **Rapportnamn:**<br/> Pod Name </li> <li> **Kontextdata:**<br/> (a.media.ad.<br/>podFriendlyName) </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.ad.podFriendlyName) </li> <li> **Sökväg till XDM-fält:**<br/> advertising.adAssetViewDetails.adBreak.dc:title </li> </ul> |
 
 
 
@@ -91,7 +91,7 @@ Beskrivning av tabelldata:
 
 |   Implementering   | Nätverksparametrar | Rapportering |
 | --- | --- | --- |
-| <ul> <li> **SDK-nyckel:**<br/>  [position](./ad-parameters.md#section_Related_APIs) </li> <li> **API-nyckel:**<br/> media.ad.podPosition </li> <li> **Obligatoriskt:**<br/> Ja </li> <li> **text:**<br/> tal </li> <li> **Skickat med:**<br/> </li> <li> **Min. SDK-version:** Alla </li> <li> **Exempelvärde:**<br/> 1 </li><li> **Beskrivning:**<br/> Indexvärdet för annonsbrytningen i innehållet med början vid 1. Den här egenskapen används **endast** av Media SDK för att generera Pod-ID.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> </li> <li> **Hjärtslag:**<br/> </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Nej </li> <li> **Reserverad variabel:**<br/> Ej tillämpligt </li> <li> **Rapportnamn:**<br/> Ej tillämpligt </li> <li> **Kontextdata:**<br/> </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> </li> </ul> |
+| <ul> <li> **SDK-nyckel:**<br/>  [position](./ad-parameters.md#section_Related_APIs) </li> <li> **API-nyckel:**<br/> media.ad.podPosition </li> <li> **Obligatoriskt:**<br/> Ja </li> <li> **Typ:**<br/> tal </li> <li> **Skickat med:**<br/> </li> <li> **Min. SDK-version:** Alla </li> <li> **Exempelvärde:**<br/> 1 </li><li> **Beskrivning:**<br/> Indexvärdet för annonsbrytningen inuti innehållet med början på 1. Den här egenskapen används **endast** av Media SDK för att generera Pod ID.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> </li> <li> **Hjärtslag:**<br/> </li> </ul> | <ul> <li> **Tillgängligt:**<br/> Nej </li> <li> **Reserverad variabel:**<br/> Ej tillämpligt </li> <li> **Rapportnamn:**<br/> Ej tillämpligt </li> <li> **Kontextdata:**<br/> </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> </li> <li> **Sökväg till XDM-fält:**<br/> advertising.adAssetViewDetails.index </li> </ul> |
 
 
 
@@ -99,7 +99,7 @@ Beskrivning av tabelldata:
 
 |   Implementering   | Nätverksparametrar | Rapportering |
 | --- | --- | --- |
-| <ul> <li> **SDK-nyckel:**<br/>  [startTime](./ad-parameters.md#section_Related_APIs) </li> <li> **API-nyckel:**<br/> media.ad.podSecond </li> <li> **Obligatoriskt:**<br/> Ja </li> <li> **text:**<br/> tal </li> <li> **Skickat med:**<br/> Ad Start, Ad Close </li> <li> **Min. SDK-version:** Alla </li> <li> **Exempelvärde:**<br/> 90 </li><li> **Beskrivning:**<br/> Annonsbrytningens förskjutning inuti innehållet, i sekunder.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.ad.<br/>podSecond) </li> <li> **pulsslag:**<br/> (:asset:lpod_offset) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> Klassificering </li> <li> **rapportnamn:**<br/> rutposition </li> <li> **Kontextdata:**<br/> (a.media.ad.<br/>podSecond) </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.ad.podSecond) </li> </ul> |
+| <ul> <li> **SDK-nyckel:**<br/>  [startTime](./ad-parameters.md#section_Related_APIs) </li> <li> **API-nyckel:**<br/> media.ad.podSecond </li> <li> **Obligatoriskt:**<br/> Ja </li> <li> **Typ:**<br/> tal </li> <li> **Skickat med:**<br/> Annonsstart, annonsstängning </li> <li> **Min. SDK-version:** Alla </li> <li> **Exempelvärde:**<br/> 90 </li><li> **Beskrivning:**<br/> Annonsens förskjutning i innehållet, i sekunder.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.ad.<br/>podSecond) </li> <li> **Hjärtslag:**<br/> (l:asset:pod_offset) </li> </ul> | <ul> <li> **Tillgängligt:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> Klassificering </li> <li> **Rapportnamn:**<br/> Pod Position </li> <li> **Kontextdata:**<br/> (a.media.ad.<br/>podSecond) </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.ad.podSecond) </li> <li> **Sökväg till XDM-fält:**<br/> advertising.adAssetViewDetails.adBreak.offset </li> </ul> |
 
 
 
@@ -107,7 +107,7 @@ Beskrivning av tabelldata:
 
 |   Implementering   | Nätverksparametrar | Rapportering |
 | --- | --- | --- |
-| <ul> <li> **SDK-nyckel:**<br/> Automatiskt angiven </li> <li> **API-nyckel:**<br/> Ej tillämpligt </li> <li> **Obligatoriskt:**<br/> Ja </li> <li> **Typ:**<br/> sträng </li> <li> **Skickat med:**<br/> Ad Start, Ad Close </li> <li> **Min. SDK-version:** Alla </li> <li> **Exempelvärde:**<br/> c4a577424c84067899b807c76722d495_1  </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.ad.<br/>pod) </li> <li> **pulsslag:**<br/> (:asset:spod_id) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> eVar </li> <li> **Förfallotid:**<br/> vid HIT </li> <li> **rapportnamn:**<br/> annonsruta </li> <li> **Kontextdata:**<br/> (a.media.ad.<br/>pod) </li> <li> **datafeed:**<br/> videoadpod </li> <li> **Audience Manager:**<br/> </li> </ul> |
+| <ul> <li> **SDK-nyckel:**<br/> Ställ in automatiskt </li> <li> **API-nyckel:**<br/> Ej tillämpligt </li> <li> **Obligatoriskt:**<br/> Ja </li> <li> **Typ:**<br/> string </li> <li> **Skickat med:**<br/> Annonsstart, annonsstängning </li> <li> **Min. SDK-version:** Alla </li> <li> **Exempelvärde:**<br/> c4a577424c84067899b807c76722d495_1  </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.ad.<br/>pod) </li> <li> **Hjärtslag:**<br/> (s:asset:pod_id) </li> </ul> | <ul> <li> **Tillgängligt:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> eVar </li> <li> **Förfallodatum:**<br/> Vid TRIT </li> <li> **Rapportnamn:**<br/> Annonsruta </li> <li> **Kontextdata:**<br/> (a.media.ad.<br/>pod) </li> <li> **Datafeed:**<br/> videoadpod </li> <li> **Audience Manager:**<br/> </li> <li> **Sökväg till XDM-fält:**<br/> advertising.adAssetViewDetails.adBreak.@id </li> </ul> |
 
 
 
@@ -115,7 +115,7 @@ Beskrivning av tabelldata:
 
 |   Implementering   | Nätverksparametrar | Rapportering |
 | --- | --- | --- |
-| <ul> <li> **SDK-nyckel:**<br/>  [name](./ad-parameters.md#section_Related_APIs) </li> <li> **API-nyckel:**<br/> media.ad.name </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **Typ:**<br/> sträng </li> <li> **Skickat med:**<br/> Ad Start, Ad Close </li> <li> **Min. SDK-version:** 1.5.1 </li> <li> **Exempelvärde:**<br/> &quot;Ford F-150&quot; </li><li> **Beskrivning:annonsens**<br/> eget namn.  I rapporter är&quot;annonsnamn&quot; klassificeringen och&quot;annonsnamn (variabel)&quot; eVar.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.ad.<br/>friendlyName) </li> <li> **pulsslag:**<br/> (:asset:ledsen_namn) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> eVar och klassificering </li> <li> **Förfallotid:**<br/> vid HIT </li> <li> **Rapportnamn:**<br/> annonsnamn och annonsnamn (variabel) </li> <li> **Kontextdata:**<br/> (a.media.ad.<br/>friendlyName) </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.ad.friendlyName) </li> </ul> |
+| <ul> <li> **SDK-nyckel:**<br/>  [name](./ad-parameters.md#section_Related_APIs) </li> <li> **API-nyckel:**<br/> media.ad.name </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **Typ:**<br/> string </li> <li> **Skickat med:**<br/> Annonsstart, annonsstängning </li> <li> **Min. SDK-version:** 1.5.1 </li> <li> **Exempelvärde:**<br/> &quot;Ford F-150&quot; </li><li> **Beskrivning:**<br/> Annonsens namn.  I rapporter är&quot;annonsnamn&quot; klassificeringen och&quot;annonsnamn (variabel)&quot; eVar.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.ad.<br/>friendlyName) </li> <li> **Hjärtslag:**<br/> (s:asset:ad_name) </li> </ul> | <ul> <li> **Tillgängligt:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> eVar och klassificering </li> <li> **Förfallodatum:**<br/> Vid TRIT </li> <li> **Rapportnamn:**<br/> Annonsnamn och annonsnamn (variabel) </li> <li> **Kontextdata:**<br/> (a.media.ad.<br/>friendlyName) </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.ad.friendlyName) </li> <li> **Sökväg till XDM-fält:**<br/> advertising.adAssetReference.dc:title </li> </ul> |
 
 
 
@@ -125,7 +125,7 @@ Beskrivning av tabelldata:
 
 |   Implementering   | Nätverksparametrar | Rapportering |
 | --- | --- | --- |
-| <ul> <li> **SDK-nyckel:**<br/> ADVERTISER </li> <li> **API-nyckel:**<br/> media.ad.advertiser </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **Typ:**<br/> sträng </li> <li> **Skickat med:**<br/> Ad Start, Ad Close </li> <li> **Min. SDK-version:** 1.5.7 </li> <li> **Exempelvärde:**<br/> </li><li> **Beskrivning:**<br/> Företag/Varumärke vars produkt visas i annonsen.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.ad.<br/>annonsör) </li> <li> **pulsslag:**<br/> (:meta:<br/>sa.media.ad.advertiser) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> eVar </li> <li> **Förfallotid:**<br/> vid HIT </li> <li> **Rapportnamn:**<br/> <i>Annonsör  </i> </li> <li> **Kontextdata:**<br/> (a.media.ad.<br/>annonsör) </li> <li> **datafeed:**<br/> videoannonsör </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.ad.advertiser) </li> </ul> |
+| <ul> <li> **SDK-nyckel:**<br/> ADVERTISER </li> <li> **API-nyckel:**<br/> media.ad.advertiser </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **Typ:**<br/> string </li> <li> **Skickat med:**<br/> Annonsstart, annonsstängning </li> <li> **Min. SDK-version:** 1.5.7 </li> <li> **Exempelvärde:**<br/> </li><li> **Beskrivning:**<br/> Företag/varumärke vars produkt visas i annonsen.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.ad.<br/>annonsör) </li> <li> **Hjärtslag:**<br/> (s:meta:<br/>a.media.ad.advertiser) </li> </ul> | <ul> <li> **Tillgängligt:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> eVar </li> <li> **Förfallodatum:**<br/> Vid TRIT </li> <li> **Rapportnamn:**<br/> <i>Annonsör </i> </li> <li> **Kontextdata:**<br/> (a.media.ad.<br/>annonsör) </li> <li> **Datafeed:**<br/> videoannonser </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.ad.advertiser) </li> <li> **Sökväg till XDM-fält:**<br/> advertising.adAssetReference.publish </li> </ul> |
 
 
 
@@ -133,7 +133,7 @@ Beskrivning av tabelldata:
 
 |   Implementering   | Nätverksparametrar | Rapportering |
 | --- | --- | --- |
-| <ul> <li> **SDK-nyckel:**<br/> CAMPAIGN_ID </li> <li> **API-nyckel:**<br/> media.ad.campaignId </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **Typ:**<br/> sträng </li> <li> **Skickat med:**<br/> Ad Start, Ad Close </li> <li> **Min. SDK-version:** 1.5.7 </li> <li> **Exempelvärde:**<br/> heltal eller namn (sträng).  </li><li> **Beskrivning:**<br/> ID för annonskampanjen.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.ad.<br/>kampanj) </li> <li> **pulsslag:**<br/> (:meta:<br/>sa.media.ad.campaign) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> eVar </li> <li> **Förfallotid:**<br/> vid HIT </li> <li> **Rapportnamn:**<br/> <i>Kampanj-ID </i> </li> <li> **Kontextdata:**<br/> (a.media.ad.<br/>kampanj) </li> <li> **datafeed:**<br/> videokamera </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.ad.ca) </li> </ul> |
+| <ul> <li> **SDK-nyckel:**<br/> CAMPAIGN_ID </li> <li> **API-nyckel:**<br/> media.ad.campaignId </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **Typ:**<br/> string </li> <li> **Skickat med:**<br/> Annonsstart, annonsstängning </li> <li> **Min. SDK-version:** 1.5.7 </li> <li> **Exempelvärde:**<br/> Heltal eller namn (sträng).  </li><li> **Beskrivning:**<br/> ID för annonskampanjen.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.ad.<br/>kampanj) </li> <li> **Hjärtslag:**<br/> (s:meta:<br/>a.media.ad.ca) </li> </ul> | <ul> <li> **Tillgängligt:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> eVar </li> <li> **Förfallodatum:**<br/> Vid TRIT </li> <li> **Rapportnamn:**<br/> <i>Kampanj-ID </i> </li> <li> **Kontextdata:**<br/> (a.media.ad.<br/>kampanj) </li> <li> **Datafeed:**<br/> videokampanj </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.ad.ca) </li> <li> **Sökväg till XDM-fält:**<br/> advertising.adAssetReference.campaign </li> </ul> |
 
 
 
@@ -141,7 +141,7 @@ Beskrivning av tabelldata:
 
 |   Implementering   | Nätverksparametrar | Rapportering |
 | --- | --- | --- |
-| <ul> <li> **SDK-nyckel:**<br/> CREATIVE_ID </li> <li> **API-nyckel:**<br/> media.ad.creativeId </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **Typ:**<br/> sträng </li> <li> **Skickat med:**<br/> Ad Start, Ad Close </li> <li> **Min. SDK-version:** 1.5.7 </li> <li> **Exempelvärde:**<br/> heltal eller namn (sträng).  </li><li> **Beskrivning:**<br/> ID för annonspersonalen.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.ad.<br/>creative) </li> <li> **pulsslag:**<br/> (:meta:<br/>sa.media.ad.creative) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> eVar </li> <li> **Förfallotid:**<br/> vid HIT </li> <li> **Rapportnamn:**<br/> <i>Kreativt ID  </i> </li> <li> **Kontextdata:**<br/> (a.media.ad.<br/>creative) </li> <li> **datafeed:**<br/> adklassifikationcreative </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.ad.creative) </li> </ul> |
+| <ul> <li> **SDK-nyckel:**<br/> CREATIVE_ID </li> <li> **API-nyckel:**<br/> media.ad.creativeId </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **Typ:**<br/> string </li> <li> **Skickat med:**<br/> Annonsstart, annonsstängning </li> <li> **Min. SDK-version:** 1.5.7 </li> <li> **Exempelvärde:**<br/> Heltal eller namn (sträng).  </li><li> **Beskrivning:**<br/> ID för annonsens kreatör.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.ad.<br/>creative) </li> <li> **Hjärtslag:**<br/> (s:meta:<br/>a.media.ad.creative) </li> </ul> | <ul> <li> **Tillgängligt:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> eVar </li> <li> **Förfallodatum:**<br/> Vid TRIT </li> <li> **Rapportnamn:**<br/> <i>Kreativt ID </i> </li> <li> **Kontextdata:**<br/> (a.media.ad.<br/>creative) </li> <li> **Datafeed:**<br/> adklassificationcreative </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.ad.creative) </li> <li> **Sökväg till XDM-fält:**<br/> advertising.adAssetReference.creativeID </li> </ul> |
 
 
 
@@ -149,7 +149,7 @@ Beskrivning av tabelldata:
 
 |   Implementering   | Nätverksparametrar | Rapportering |
 | --- | --- | --- |
-| <ul> <li> **SDK-nyckel:**<br/> SITE_ID </li> <li> **API-nyckel:**<br/> media.ad.siteId </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **Typ:**<br/> sträng </li> <li> **Skickat med:**<br/> Ad Start, Ad Close </li> <li> **Min. SDK-version:** 1.5.7 </li> <li> **Exempelvärde:**<br/> </li><li> **Beskrivning:**<br/> ID för annonsplatsen.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.ad.<br/>plats) </li> <li> **pulsslag:**<br/> (:meta:<br/>sa.media.ad.site) </li> </ul> | <ul> <li> **Tillgängligt:**<br/> <i>Använd anpassad bearbetningsregel  </i> </li> <li> **Reserverad variabel:**<br/> eVar </li> <li> **Förfallotid:**<br/> vid HIT </li> <li> **Rapportnamn:**<br/> Eget </li> <li> **Kontextdata:**<br/> (a.media.ad.<br/>plats) </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.ad.site) </li> </ul> |
+| <ul> <li> **SDK-nyckel:**<br/> SITE_ID </li> <li> **API-nyckel:**<br/> media.ad.siteId </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **Typ:**<br/> string </li> <li> **Skickat med:**<br/> Annonsstart, annonsstängning </li> <li> **Min. SDK-version:** 1.5.7 </li> <li> **Exempelvärde:**<br/> </li><li> **Beskrivning:**<br/> ID för annonsplatsen.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.ad.<br/>plats) </li> <li> **Hjärtslag:**<br/> (s:meta:<br/>a.media.ad.site) </li> </ul> | <ul> <li> **Tillgängligt:**<br/> <i>Använd anpassad bearbetningsregel </i> </li> <li> **Reserverad variabel:**<br/> eVar </li> <li> **Förfallodatum:**<br/> Vid TRIT </li> <li> **Rapportnamn:**<br/> Egen </li> <li> **Kontextdata:**<br/> (a.media.ad.<br/>plats) </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.ad.site) </li> <li> **Sökväg till XDM-fält:**<br/> advertising.adAssetReference.siteID </li> </ul> |
 
 
 
@@ -157,7 +157,7 @@ Beskrivning av tabelldata:
 
 |   Implementering   | Nätverksparametrar | Rapportering |
 | --- | --- | --- |
-| <ul> <li> **SDK-nyckel:**<br/> CREATIVE_URL </li> <li> **API-nyckel:**<br/> media.ad.creativeURL </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **Typ:**<br/> sträng </li> <li> **Skickat med:**<br/> Ad Start, Ad Close </li> <li> **Min. SDK-version:** 1.5.7 </li> <li> **Exempelvärde:**<br/> </li><li> **Beskrivning:**<br/> URL för annonspersonalen.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.ad.<br/>creativeURL) </li> <li> **pulsslag:**<br/> (:meta:<br/>sa.media.ad.creativeURL) </li> </ul> | <ul> <li> **Tillgängligt:**<br/> <i>Använd anpassad bearbetningsregel  </i> </li> <li> **Reserverad variabel:**<br/> eVar </li> <li> **Förfallotid:**<br/> vid HIT </li> <li> **Rapportnamn:**<br/> Eget </li> <li> **Kontextdata:**<br/> (a.media.ad.<br/>creativeURL) </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.ad.creativeURL) </li> </ul> |
+| <ul> <li> **SDK-nyckel:**<br/> CREATIVE_URL </li> <li> **API-nyckel:**<br/> media.ad.creativeURL </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **Typ:**<br/> string </li> <li> **Skickat med:**<br/> Annonsstart, annonsstängning </li> <li> **Min. SDK-version:** 1.5.7 </li> <li> **Exempelvärde:**<br/> </li><li> **Beskrivning:**<br/> Webbadress till reklamkreatören.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.ad.<br/>creativeURL) </li> <li> **Hjärtslag:**<br/> (s:meta:<br/>a.media.ad.creativeURL) </li> </ul> | <ul> <li> **Tillgängligt:**<br/> <i>Använd anpassad bearbetningsregel </i> </li> <li> **Reserverad variabel:**<br/> eVar </li> <li> **Förfallodatum:**<br/> Vid TRIT </li> <li> **Rapportnamn:**<br/> Egen </li> <li> **Kontextdata:**<br/> (a.media.ad.<br/>creativeURL) </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.ad.creativeURL) </li> <li> **Sökväg till XDM-fält:**<br/> advertising.adAssetReference.creativeURL </li> </ul> |
 
 
 
@@ -165,7 +165,7 @@ Beskrivning av tabelldata:
 
 |   Implementering   | Nätverksparametrar | Rapportering |
 | --- | --- | --- |
-| <ul> <li> **SDK-nyckel:**<br/> PLACEMENT_ID </li> <li> **API-nyckel:**<br/> media.ad.placementId </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **Typ:**<br/> sträng </li> <li> **Skickat med:**<br/> Ad Start, Ad Close </li> <li> **Min. SDK-version:** 1.5.7 </li> <li> **Exempelvärde:**<br/> </li><li> **Beskrivning:annons**<br/> placerings-ID.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.ad.<br/>placering) </li> <li> **pulsslag:**<br/> (:meta:<br/>sa.media.ad.placement) </li> </ul> | <ul> <li> **Tillgängligt:**<br/> <i>Använd anpassad bearbetningsregel  </i> </li> <li> **Reserverad variabel:**<br/> eVar </li> <li> **Förfallotid:**<br/> vid HIT </li> <li> **Rapportnamn:**<br/> Eget </li> <li> **Kontextdata:**<br/> (a.media.ad.<br/>placering) </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.ad.placement) </li> </ul> |
+| <ul> <li> **SDK-nyckel:**<br/> PLACEMENT_ID </li> <li> **API-nyckel:**<br/> media.ad.placementId </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **Typ:**<br/> string </li> <li> **Skickat med:**<br/> Annonsstart, annonsstängning </li> <li> **Min. SDK-version:** 1.5.7 </li> <li> **Exempelvärde:**<br/> </li><li> **Beskrivning:**<br/> Annonsens placerings-ID.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.ad.<br/>placering) </li> <li> **Hjärtslag:**<br/> (s:meta:<br/>a.media.ad.placement) </li> </ul> | <ul> <li> **Tillgängligt:**<br/> <i>Använd anpassad bearbetningsregel </i> </li> <li> **Reserverad variabel:**<br/> eVar </li> <li> **Förfallodatum:**<br/> Vid TRIT </li> <li> **Rapportnamn:**<br/> Egen </li> <li> **Kontextdata:**<br/> (a.media.ad.<br/>placering) </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.ad.placement) </li> <li> **Sökväg till XDM-fält:**<br/> advertising.adAssetReference.placementID </li> </ul> |
 
 
 
@@ -176,7 +176,7 @@ Beskrivning av tabelldata:
 
 |   Implementering   | Nätverksparametrar | Rapportering |
 | --- | --- | --- |
-| <ul> <li> **SDK-nyckel:**<br/> Automatiskt angiven </li> <li> **API-nyckel:**<br/> Ej tillämpligt </li> <li> **Obligatoriskt:**<br/> Ja </li> <li> **Typ:**<br/> sträng </li> <li> **Skickat med:**<br/> annonsstart </li> <li> **Min. SDK-version:** Alla </li> <li> **Exempelvärde:**<br/> TRUE </li><li> **Beskrivning:**<br/> Antal videoannonser som startar.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.ad.<br/>vy) </li> <li> **pulsslag:**<br/>  (:event:stype=start)<br/> (:asset:stype=ad) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> händelse </li> <li> **Rapportnamn:**<br/> annonsstart </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Kontextdata:**<br/> (a.media.ad.<br/>vy) </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.ad.vi) </li> </ul> |
+| <ul> <li> **SDK-nyckel:**<br/> Ställ in automatiskt </li> <li> **API-nyckel:**<br/> Ej tillämpligt </li> <li> **Obligatoriskt:**<br/> Ja </li> <li> **Typ:**<br/> string </li> <li> **Skickat med:**<br/> Annonsstart </li> <li> **Min. SDK-version:** Alla </li> <li> **Exempelvärde:**<br/> TRUE </li><li> **Beskrivning:**<br/> Antal videoannonser som startar.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.ad.<br/>vy) </li> <li> **Hjärtslag:**<br/>  (s:event:type=start)<br/> (s:asset:type=ad) </li> </ul> | <ul> <li> **Tillgängligt:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> event </li> <li> **Rapportnamn:**<br/> Annonsöppningar </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Kontextdata:**<br/> (a.media.ad.<br/>vy) </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.ad.vi) </li> <li> **Sökväg till XDM-fält:**<br/> advertising.starting.value > 0 => &quot;TRUE&quot; </li> </ul> |
 
 
 
@@ -184,7 +184,7 @@ Beskrivning av tabelldata:
 
 |   Implementering   | Nätverksparametrar | Rapportering |
 | --- | --- | --- |
-| <ul> <li> **SDK-nyckel:**<br/> Automatiskt angiven </li> <li> **API-nyckel:**<br/> Ej tillämpligt </li> <li> **Obligatoriskt:**<br/> Ja </li> <li> **Typ:**<br/> sträng </li> <li> **Skickat med:**<br/> Ad Close </li> <li> **Min. SDK-version:** Alla </li> <li> **Exempelvärde:**<br/> TRUE </li><li> **Beskrivning:**<br/> Antal videoannonser har slutförts.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.ad.<br/>complete) </li> <li> **pulsslag:**<br/> (:event:stype=complete)<br/> (:asset:stype=ad)  </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> händelse </li> <li> **Rapportnamn:**<br/> Ad Complete </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Kontextdata:**<br/> (a.media.ad.<br/>complete) </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.ad.comcomplete) </li> </ul> |
+| <ul> <li> **SDK-nyckel:**<br/> Ställ in automatiskt </li> <li> **API-nyckel:**<br/> Ej tillämpligt </li> <li> **Obligatoriskt:**<br/> Ja </li> <li> **Typ:**<br/> string </li> <li> **Skickat med:**<br/> Stäng annons </li> <li> **Min. SDK-version:** Alla </li> <li> **Exempelvärde:**<br/> TRUE </li><li> **Beskrivning:**<br/> Antal slutförda videoannonser.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.ad.<br/>complete) </li> <li> **Hjärtslag:**<br/> (s:event:type=complete)<br/> (s:asset:type=ad)  </li> </ul> | <ul> <li> **Tillgängligt:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> event </li> <li> **Rapportnamn:**<br/> Ad Completes </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Kontextdata:**<br/> (a.media.ad.<br/>complete) </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.ad.comcomplete) </li> <li> **Sökväg till XDM-fält:**<br/> advertising.complete.value > 0 => &quot;TRUE&quot; </li> </ul> |
 
 
 
@@ -192,7 +192,7 @@ Beskrivning av tabelldata:
 
 |   Implementering   | Nätverksparametrar | Rapportering |
 | --- | --- | --- |
-| <ul> <li> **SDK-nyckel:**<br/> Automatiskt angiven </li> <li> **API-nyckel:**<br/> Ej tillämpligt </li> <li> **Obligatoriskt:**<br/> Ja </li> <li> **Typ:**<br/> sträng </li> <li> **Skickat med:**<br/> Ad Close </li> <li> **Min. SDK-version:** Alla </li> <li> **Exempelvärde:**<br/> 15 </li><li> **Beskrivning:**<br/> Den totala tiden (i sekunder) som har ägnats åt att titta på annonsen (dvs. antalet sekunder som har spelats upp).  Värdet visas i tidsformatet (HH:MM:SS) i Analysis Workspace och Rapporter och analyser. I Data Feeds, Data warehouse och Reporting API:er visas värdena på några sekunder.  <br/>**Releasedatum: 09/13/18**  </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.ad.<br/>timePlay) </li> <li> **Hjärtslag:**<br/> </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> händelse </li> <li> **Rapportnamn:**<br/> Lägg till tid </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Kontextdata:**<br/> (a.media.ad.<br/>timePlay) </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.ad.timePlayed) </li> </ul> |
+| <ul> <li> **SDK-nyckel:**<br/> Ställ in automatiskt </li> <li> **API-nyckel:**<br/> Ej tillämpligt </li> <li> **Obligatoriskt:**<br/> Ja </li> <li> **Typ:**<br/> string </li> <li> **Skickat med:**<br/> Stäng annons </li> <li> **Min. SDK-version:** Alla </li> <li> **Exempelvärde:**<br/> 15 </li><li> **Beskrivning:**<br/> Den totala tiden (i sekunder) som har ägnats åt att titta på annonsen (dvs. antalet sekunder som har spelats upp).  Värdet visas i tidsformat (HH):MM:SS) i Analysis Workspace och Rapporter och analyser. I Data Feeds, Data warehouse och Reporting API:er visas värdena på några sekunder.  <br/>**Releasedatum: 09/13/18**  </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.ad.<br/>timePlay) </li> <li> **Hjärtslag:**<br/> </li> </ul> | <ul> <li> **Tillgängligt:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> event </li> <li> **Rapportnamn:**<br/> Annonstid </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Kontextdata:**<br/> (a.media.ad.<br/>timePlay) </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.ad.timePlayed) </li> <li> **Sökväg till XDM-fält:**<br/> advertising.timePlayed.value </li> </ul> |
 
 
 
