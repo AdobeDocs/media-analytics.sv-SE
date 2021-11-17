@@ -1,27 +1,26 @@
 ---
-title: '"Migrering från det fristående mediet-SDK till Adobe Launch - iOS"'
+title: '"Migrering från fristående Media SDK till Adobe Launch - iOS"'
 description: Lär dig hur du migrerar från Media SDK till Launch för iOS.
 exl-id: f70b8e1b-cb9f-4230-86b2-171bdaed4615
-feature: Medieanalys
+feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: 7afd4d6ff7fd2dd2c4edb7ad2b5d6462eb7eba2f
 workflow-type: tm+mt
-source-wordcount: '359'
+source-wordcount: '357'
 ht-degree: 0%
 
 ---
 
-# Migrera från den fristående Media SDK till Adobe Launch - iOS
+# Migrering från fristående Media SDK till Adobe Launch - iOS
 
 ## Konfiguration
 
 ### Fristående media SDK
 
-I det fristående Media SDK konfigurerar du spårningskonfigurationen i appen,
-och skicka det till SDK när du skapar spåraren.
+I det fristående Media SDK konfigurerar du spårningskonfigurationen i appen och skickar den till SDK när du skapar spåraren.
 
 ```objective-c
-ADBMediaHeartbeatConfig *config = 
+ADBMediaHeartbeatConfig *config =
   [[ADBMediaHeartbeatConfig alloc] init];
 
 config.trackingServer = @"namespace.hb.omtrdc.net";
@@ -32,14 +31,14 @@ config.playerName = @"native-player";
 config.ssl = YES;
 config.debugLogging = YES;
 
-ADBMediaHeartbeat* tracker = 
-  [[ADBMediaHeartbeat alloc] initWithDelegate:self config:config]; 
+ADBMediaHeartbeat* tracker =
+  [[ADBMediaHeartbeat alloc] initWithDelegate:self config:config];
 ```
 
 ### Starta tillägg
 
-1. Klicka på fliken [!UICONTROL Extensions] i Experience Platform Launch för din mobila egenskap
-1. På fliken [!UICONTROL Catalog] letar du reda på tillägget Adobe Media Analytics for Audio and Video och klickar på [!UICONTROL Install].
+1. I Experience Platform Launch klickar du på [!UICONTROL Extensions] fliken för din mobila egenskap
+1. På [!UICONTROL Catalog] går du till Adobe Media Analytics för ljud- och videotillägg och klickar på [!UICONTROL Install].
 1. Konfigurera spårningsparametrarna på sidan för tilläggsinställningar.
 Media-tillägget använder de konfigurerade parametrarna för spårning.
 
@@ -51,8 +50,7 @@ Media-tillägget använder de konfigurerade parametrarna för spårning.
 
 ### Fristående media SDK
 
-I den fristående Media SDK skapar du objektet `ADBMediaHeartbeatConfig` manuellt
-och konfigurera spårningsparametrarna. Implementera delegatgränssnittet som visar
+I den fristående Media SDK skapar du manuellt `ADBMediaHeartbeatConfig` och konfigurera spårningsparametrarna. Implementera delegatgränssnittet som visar
 `getQoSObject()` och `getCurrentPlaybackTime()functions.`
 
 Skapa en MediaHeartbeat-instans för spårning:
@@ -86,7 +84,7 @@ config.ssl = YES;
 config.debugLogging = YES;
 ADBMediaHeartbeatDelegate* delegate = [[PlayerDelegate alloc] init];
 
-ADBMediaHeartbeat* tracker = 
+ADBMediaHeartbeat* tracker =
   [[ADBMediaHeartbeat alloc] initWithDelegate:delegate config:config];
 ```
 
@@ -128,22 +126,18 @@ Spåraren väljer automatiskt konfigurationen från den konfigurerade startegens
 ### Fristående media SDK
 
 I det fristående Media SDK är ett delegatobjekt som implementerar
-`ADBMediaHeartbeartDelegate`-protokollet skickas när spåraren skapas.
-Implementeringen bör returnera det senaste QoE-numret och spelhuvudet när
-spåraren anropar gränssnittet `getQoSObject()` och `getCurrentPlaybackTime()`
-metoder.
+`ADBMediaHeartbeartDelegate` protokollet skickas när spåraren skapas.
+Implementeringen bör returnera det senaste QoE-numret och spelhuvudet när spåraren anropar `getQoSObject()` och `getCurrentPlaybackTime()` gränssnittsmetoder.
 
 ### Starta tillägg
 
 Implementeringen ska uppdatera spelarens spelhuvud genom att anropa
-`updateCurrentPlayhead`-metoden som exponeras av spåraren. För korrekt spårning
-anropa den här metoden minst en gång per sekund.
+`updateCurrentPlayhead` metod som exponeras av spåraren. För korrekt spårning bör du anropa den här metoden minst en gång per sekund.
 
 [Media API-referens - Uppdatera aktuellt spelhuvud](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics/media-api-reference#updatecurrentplayhead)
 
 Implementeringen bör uppdatera QoE-informationen genom att anropa
-`updateQoEObject`-metoden som exponeras av spåraren. Du bör anropa den här metoden
-närhelst det sker en ändring av kvalitetsmåtten.
+`updateQoEObject` metod som exponeras av spåraren. Du bör anropa den här metoden när det finns en ändring i kvalitetsmåtten.
 
 [Media API-referens - Uppdatera QoE-objekt](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics/media-api-reference#updateqoeobject)
 
@@ -154,11 +148,11 @@ närhelst det sker en ändring av kvalitetsmåtten.
 * Standardmetadata för media:
 
    ```objective-c
-   ADBMediaObject *mediaObject = 
-     [ADBMediaHeartbeat createMediaObjectWithName:@"media-name" 
-                        mediaId:@"media-id" 
-                        length:60 
-                        streamType:ADBMediaHeartbeatStreamTypeVod 
+   ADBMediaObject *mediaObject =
+     [ADBMediaHeartbeat createMediaObjectWithName:@"media-name"
+                        mediaId:@"media-id"
+                        length:60
+                        streamType:ADBMediaHeartbeatStreamTypeVod
                         mediaType:ADBMediaTypeVideo];
    
    // Standard metadata keys provided by adobe.
@@ -178,28 +172,28 @@ närhelst det sker en ändring av kvalitetsmåtten.
 * Standardmetadata för annonsering:
 
    ```objective-c
-   ADBMediaObject* adObject = 
-     [ADBMediaHeartbeat createAdObjectWithName:[adData objectForKey:@"name"] 
+   ADBMediaObject* adObject =
+     [ADBMediaHeartbeat createAdObjectWithName:[adData objectForKey:@"name"]
                         adId:[adData objectForKey:@"id"]
                         position:[[adData objectForKey:@"position"] doubleValue]
                         length:[[adData objectForKey:@"length"] doubleValue]];
    
    // Standard metadata keys provided by adobe.
-   NSMutableDictionary *standardMetadata = 
+   NSMutableDictionary *standardMetadata =
      [[NSMutableDictionary alloc] init];
-   [standardMetadata setObject:@"Sample Advertiser" 
+   [standardMetadata setObject:@"Sample Advertiser"
                      forKey:ADBAdMetadataKeyADVERTISER];
-   [standardMetadata setObject:@"Sample Campaign" 
+   [standardMetadata setObject:@"Sample Campaign"
                      forKey:ADBAdMetadataKeyCAMPAIGN_ID];
-   [adObject setValue:standardMetadata 
+   [adObject setValue:standardMetadata
                      forKey:ADBMediaObjectKeyStandardAdMetadata];
    
    //Attaching custom metadata
    NSMutableDictionary *adDictionary = [[NSMutableDictionary alloc] init];
    [adDictionary setObject:@"Sample affiliate" forKey:@"affiliate"];
    
-   [tracker trackEvent:ADBMediaHeartbeatEventAdStart 
-            mediaObject:adObject 
+   [tracker trackEvent:ADBMediaHeartbeatEventAdStart
+            mediaObject:adObject
             data:adDictionary];
    ```
 
@@ -208,14 +202,14 @@ närhelst det sker en ändring av kvalitetsmåtten.
 * Standardmetadata för media:
 
    ```objective-c
-   NSDictionary *mediaObject = 
-     [ACPMedia createMediaObjectWithName:@"media-name" 
-               mediaId:@"media-id" 
-               length:60 
-               streamType:ACPMediaStreamTypeVod 
+   NSDictionary *mediaObject =
+     [ACPMedia createMediaObjectWithName:@"media-name"
+               mediaId:@"media-id"
+               length:60
+               streamType:ACPMediaStreamTypeVod
                mediaType:ACPMediaTypeVideo];
    
-   NSMutableDictionary *mediaMetadata = 
+   NSMutableDictionary *mediaMetadata =
      [[NSMutableDictionary alloc] init];
    
    // Standard metadata keys provided by adobe.
@@ -231,13 +225,13 @@ närhelst det sker en ändring av kvalitetsmåtten.
 * Standardmetadata för annonsering:
 
    ```objective-c
-   NSDictionary* adObject = 
-     [ACPMedia createAdObjectWithName:@"ad-name" 
-               adId:@"ad-id" 
-               position:1 
+   NSDictionary* adObject =
+     [ACPMedia createAdObjectWithName:@"ad-name"
+               adId:@"ad-id"
+               position:1
                length:15];
    
-   NSMutableDictionary* adMetadata = 
+   NSMutableDictionary* adMetadata =
      [[NSMutableDictionary alloc] init];
    
    // Standard metadata keys provided by adobe.
