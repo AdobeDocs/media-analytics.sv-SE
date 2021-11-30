@@ -5,9 +5,9 @@ user-guide-title: Adobe Analytics for Streaming Media
 breadcrumb-title: Media Analytics Guide
 user-guide-description: Implementera Adobe Analytics för direktuppspelningsmedia. Innehåller Media SDK och Media Collection API.
 sub-product: media analytics
-source-git-commit: 407f17a5b1134362c6be7c6bfae909e9e66077be
+source-git-commit: 819f4a7035e5d9704d17abce6a7cd4c607b7ce39
 workflow-type: tm+mt
-source-wordcount: '840'
+source-wordcount: '828'
 ht-degree: 91%
 
 ---
@@ -145,9 +145,6 @@ ht-degree: 91%
       + [Beskrivning av parametern Heartbeat](sdk-implement/validation/heartbeat-params.md)
       + Felsökning {#debugging}
          + [SDK-felsökning](sdk-implement/validation/debugging/sdk-debugging.md)
-         + [Konfigurera Adobe Debug](sdk-implement/validation/debugging/config-adobe-debug.md)
-         + [Skapa en ny felsökningsrapport](sdk-implement/validation/debugging/create-new-debug-report.md)
-         + [Felsöka instrumentpaneler och rapporter](sdk-implement/validation/debugging/debug-dash-repts.md)
    + Analytics i OTT-appar {#analytics-with-ott}
       + [Spåra applägen](sdk-implement/analytics-with-ott/track-app-states.md)
       + [Spåra appåtgärder](sdk-implement/analytics-with-ott/track-app-actions.md)
