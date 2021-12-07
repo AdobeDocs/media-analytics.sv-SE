@@ -1,11 +1,9 @@
 ---
 title: Hämta JSON-rapportdata för Media Playback Time Spent med API:er för Analytics 2.0
 description: Lär dig hur du hämtar den mediouppspelningstid som spenderas på rapportdata med API:erna i Analytics 2.0. Visa en exempelbegäran och ett exempelsvar.
-uuid: null
-exl-id: null
 feature: Media Analytics, Reports & Analytics Basics
 role: User, Admin, Data Engineer
-source-git-commit: 3118a5eeef56c7768d88df7c658468c356921aac
+source-git-commit: 30f71465feac8bbca917630597ece4876b955ca0
 workflow-type: tm+mt
 source-wordcount: '205'
 ht-degree: 2%

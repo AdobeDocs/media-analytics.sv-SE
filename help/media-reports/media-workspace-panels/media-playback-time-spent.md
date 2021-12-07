@@ -1,10 +1,9 @@
 ---
 title: Medieuppspelningstid tillagd
 description: '"Lär dig hur du använder panelen Medieuppspelningstid spenderad för att analysera hur lång uppspelningstid som har använts och för att förstå maximal samtidighet och var bortfall har inträffat."'
-exl-id: null
 feature: Media Analytics, Workspace Basics
 role: User, Admin, Data Engineer
-source-git-commit: d5769f3eed3f0c3770e427420025ff624e775f9f
+source-git-commit: 30f71465feac8bbca917630597ece4876b955ca0
 workflow-type: tm+mt
 source-wordcount: '219'
 ht-degree: 0%
