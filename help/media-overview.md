@@ -1,14 +1,14 @@
 ---
-title: 'Adobe Streaming Media i Adobe Analytics '
+title: Adobe Streaming Media i Adobe Analytics
 description: '"Fördjupa dig i de senaste mätningarna av direktuppspelande media för innehåll, ljud och annonser. Läs mer om Adobe Analytics för direktuppspelningsmedia."'
 uuid: b3cbe240-b94d-42b8-a99c-0280334aaa14
 exl-id: 826530f7-2c39-41ef-b3b4-d3f44b46858f
-feature: Medieanalys
+feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: f0abffb48a6c0babb37f16aff2e3302bf5dd0cb4
 workflow-type: tm+mt
-source-wordcount: '880'
-ht-degree: 80%
+source-wordcount: '930'
+ht-degree: 76%
 
 ---
 
@@ -27,7 +27,7 @@ Ni kan mäta viktiga leveransvärden som rör QoS, som uteslutna bildrutor, tids
 ## Funktioner {#features}
 
 Fördelarna med Adobe Analytics för Streaming Media är bland annat övervakning i realtid, detaljerad analys, användbara insikter och möjligheter till intäktsgenerering.
-* **Realtidsanalys** - Fatta konkreta, åtgärdbara beslut i realtid med hjälp av nyckeltal som mediefunktioner, över flera kanaler.
+* **Realtidsanalys**- Fatta konkreta beslut i realtid med nyckeltal som mediestart, över flera kanaler.
 * **Öka engagemanget** – Engagera användarna mer med färre buffringshändelser och förstå var och när annonser ska spelas upp i innehållet för att skapa en smidig, mindre påträngande upplevelse som får användarna att komma tillbaka.
 * **Heltäckande bild** – Kombinera flera datapunkter för alla innehållsdistributörer för att få en fullständig bild av alla medieaktiviteter. Mät engagemang och visningar/avlyssningar i alla möjliga kanaler via funktionen Federated Analytics.
 * **Ökad detaljrikedom** – Utvärdera tittarnas beteende på den mest detaljerade nivån, inklusive besökstid, samtidigt antal tittare/lyssnare per minut och genomsnittlig tid som innehållet konsumeras.
@@ -37,6 +37,10 @@ Fördelarna med Adobe Analytics för Streaming Media är bland annat övervaknin
 ## Mätning av pulsslag {#heartbeat}
 
 Adobe Analytics använder ”pulsslag” för att samla in videostatistik. Under videouppspelningen skickas pulsslag till en spårningsserver för att mäta uppspelningstiden. Pulsslagsanropen skickas var tionde sekund. Pulsslagen genererar detaljerad statistik om videoengagemang och mer korrekta rapporter om videobortfall. Adobe Analytics for Streaming Media-mätning fångar pulsen med Adobe Launch med Media Analytics-tillägget, Media SDK och Media Collection API. Komponenterna `AppMeasurement` och `VisitorID` används för att ta emot videodata.
+
+>[!NOTE]
+>Adobe Experience Platform Launch har omklassificerats som en serie datainsamlingstekniker i Experience Platform. Som ett resultat av detta har flera terminologiska förändringar införts i produktdokumentationen. Se följande [dokument](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=en) för en konsoliderad hänvisning till terminologiska förändringar.
+
 
 Att använda pulsslag Adobe Analytics för direktuppspelande media ger följande fördelar:
 
@@ -48,7 +52,7 @@ Att använda pulsslag Adobe Analytics för direktuppspelande media ger följande
 | Priser | Genomskinlig spårning efter medieström (enkel) |
 | Implementering och support | Effektiv konfiguration med kontinuerliga uppdateringar och förbättringar<br>Tack vare den smidiga implementeringsprocessen kan ni snabbt mappa variabler via spelar-API:et och validera implementeringar med Adobe Debug Tool för att säkerställa att alla nödvändiga variabler spåras korrekt. |
 | Partnerdelning | Federated Analytics och certifierade mätvärden<br>Tack vare delade data via Federated Analytics kan ni använda våra branschledande funktioner för mediedelning för att utvärdera data enhetligt för alla mediedistributionspartners som operatörer, programplanerare och distributörer. |
-| Avancerad spårning | Spårning av hämtat innehåll, spårning av felåterställning och samtidiga visningsprogram<br>Du kan spåra direktuppspelat medieinnehåll som hämtas och spelas upp på en enhet oavsett dess anslutning. |
+| Avancerad spårning | Spårning av hämtat innehåll, spårning av felåterställning och samtidiga visningsprogram<br>Du kan spåra direktuppspelat medieinnehåll som har laddats ned och spelats upp på en enhet oavsett dess anslutningsmöjligheter. |
 
 
 

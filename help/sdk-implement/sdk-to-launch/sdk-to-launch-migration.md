@@ -1,29 +1,27 @@
 ---
-seo-title: Migrering från fristående Media SDK till Adobe Launch
+seo-title: Migrating from the standalone Media SDK to Adobe Launch
 title: Migrering från fristående Media SDK till Adobe Launch
-seo-description: Instruktioner och kodexempel som hjälper dig att migrera från Media SDK till Launch.
+seo-description: Instructions and code samples to assist in migrating from the Media SDK to Launch.
 description: Lär dig hur du migrerar från Media SDK till Launch.
 exl-id: 5350bbe9-c34f-46d9-a4c4-dbccdbed0bb0
-feature: Medieanalys
+feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: ceef739641ae07ea05314fb2bc23028de6ee5efb
+source-git-commit: f0abffb48a6c0babb37f16aff2e3302bf5dd0cb4
 workflow-type: tm+mt
-source-wordcount: '180'
+source-wordcount: '207'
 ht-degree: 1%
 
 ---
 
 # Migrering från fristående Media SDK till Adobe Launch
 
-Denna dokumentation fokuserar främst på skillnader i implementeringen av Media Analytics
-mellan det fristående Media SDK och startalternativet för Media Analytics.
+>[!NOTE]
+>Adobe Experience Platform Launch har omklassificerats som en serie datainsamlingstekniker i Experience Platform. Som ett resultat av detta har flera terminologiska förändringar införts i produktdokumentationen. Se följande [dokument](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=en) för en konsoliderad hänvisning till terminologiska förändringar.
 
-Launch ger kunderna ett enkelt sätt att driftsätta och hantera alla analyser,
-marknadsförings- och annonslösningar som är nödvändiga för att stärka relevanta kunder
-upplevelser på webben och i mobilen. Launch ger alla möjlighet att bygga och underhålla
-sina egna integreringar med Launch. Dessa integreringar kallas tillägg.
-Tillägg är tillgängliga för Launch-kunder i en app-store-upplevelse, så de
-kan snabbt installera, konfigurera och driftsätta sina lösningar.
+Denna dokumentation fokuserar främst på skillnader i implementering av Media Analytics mellan det fristående Media SDK och startalternativet för Media Analytics.
+
+Launch ger kunderna ett enkelt sätt att driftsätta och hantera alla analys-, marknadsförings- och annonslösningar som behövs för att skapa relevanta kundupplevelser på webben och i mobilen. Launch ger alla möjlighet att bygga och underhålla sina egna integreringar med Launch. Dessa integreringar kallas tillägg.
+Tillägg är tillgängliga för Launch-kunder i en app-store-upplevelse, så att de snabbt kan installera, konfigurera och driftsätta sina lösningar.
 
 Adobe Media Analytics för ljud och video finns som ett Launch-tillägg för både webb och mobiler:
 

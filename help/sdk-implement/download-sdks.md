@@ -3,20 +3,26 @@ title: Få tillgång till länkar för att ladda ned SDK:er för Media Analytics
 description: Länkar till SDK-nedladdningar för tillgängliga plattformar, inklusive Android, iOS, JavaScript, Chromecast och Roku.
 uuid: a619fbb8-693e-4583-8dad-0ff875e715f8
 exl-id: d211fa2e-d5b0-4e9f-bdb7-eda838194f3d
-feature: Medieanalys
+feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: ceef739641ae07ea05314fb2bc23028de6ee5efb
+source-git-commit: f0abffb48a6c0babb37f16aff2e3302bf5dd0cb4
 workflow-type: tm+mt
-source-wordcount: '520'
-ht-degree: 5%
+source-wordcount: '602'
+ht-degree: 4%
 
 ---
 
 # Hämta SDK:er{#download-sdks}
 
+Informationen på den här sidan innehåller länkar för att ladda ned aktuella 3.x- och 2.x-media SDKS. Länkar ingår också för de 1.x äldre medie-SDK:erna och starttillägget för Media Analytics.
+
 >[!IMPORTANT]
 >
->När stödet för version 4 Mobile SDK upphör den 31 augusti 2021 upphör även stödet för Media Analytics SDK för iOS och Android i Adobe.  Mer information finns i [Vanliga frågor och svar om Media Analytics SDK när support upphör](/help/sdk-implement/end-of-support-faqs.md).
+>När stödet för version 4 Mobile SDK upphör den 31 augusti 2021 upphör även stödet för Media Analytics SDK för iOS och Android i Adobe.  Mer information finns i [Vanliga frågor om supporten för Media Analytics SDK](/help/sdk-implement/end-of-support-faqs.md).
+
+>[!NOTE]
+>Adobe Experience Platform Launch har omklassificerats som en serie datainsamlingstekniker i Experience Platform. Som ett resultat av detta har flera terminologiska förändringar införts i produktdokumentationen. Se följande [dokument](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=en) för en konsoliderad hänvisning till terminologiska förändringar.
+
 
 
 ## Ladda ned 3.x Media SDK {#download-3x-sdks}
@@ -32,7 +38,7 @@ ht-degree: 5%
 | 2.x Media SDK  | Senaste SDK-nedladdningar för media |  API:er   |  Dokumentation  |
 | --- | --- | --- | --- |
 | Android/FireTV | [Media SDK för Android v2.2.4](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/android-v2.2.4) | [Android API-referens](https://adobe-marketing-cloud.github.io/media-sdks/reference/android/) | [Konfigurera Android](/help/sdk-implement/setup/set-up-android.md) |
-| iOS/AppleTV | [Media SDK for iOS v2.3.0](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/ios-v2.3.0) (Kontakta  [kundtjänst  ](https://helpx.adobe.com/marketing-cloud/contact-support.html) för att få äldre 2.0 SDK) | [API-referens för iOS](https://adobe-marketing-cloud.github.io/media-sdks/reference/ios/) | [Konfigurera iOS](/help/sdk-implement/setup/set-up-ios.md) |
+| iOS/AppleTV | [Media SDK för iOS v2.3.0](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/ios-v2.3.0) (Kontakt [Kundtjänst ](https://helpx.adobe.com/marketing-cloud/contact-support.html) för att få äldre 2.0 SDK) | [iOS API-referens](https://adobe-marketing-cloud.github.io/media-sdks/reference/ios/) | [Konfigurera iOS](/help/sdk-implement/setup/set-up-ios.md) |
 | JavaScript | [Media SDK för JS v2.2.2](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/js-v2.2.2) | [JS API-referens](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/) | [Konfigurera JavaScript 2.x](/help/sdk-implement/setup/setup-javascript/set-up-js-2.md) |
 | Roku | [Media SDK för Roku v2.2.3](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/roku-v2.2.3) |  | [Konfigurera Roku](/help/sdk-implement/setup/set-up-roku.md) |
 | Kromecast | [Media SDK för Chromecast v2.2.0](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/chromecast-v2.2.0) | [API-referens för Chromecast](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/) | [Konfigurera Chromecast](/help/sdk-implement/setup/set-up-chromecast.md) |
@@ -53,5 +59,5 @@ ht-degree: 5%
 | iOS | [SDK för iOS v1.5.9](https://github.com/Adobe-Marketing-Cloud/video-heartbeat/releases/tag/ios-v1.5.9) | [Kom igång - Media 1.x för iOS](setup/vhl-dev-guide-v15_ios.pdf) |
 | JavaScript | [SDK för JavaScript v1.5.7](https://github.com/Adobe-Marketing-Cloud/video-heartbeat/releases/tag/js-v1.5.7) | [Kom igång - Media 1.x för JS](setup/vhl-dev-guide-v15_js.pdf) |
 | TVML | [SDK för TVML v1.0.0](https://github.com/Adobe-Marketing-Cloud/video-heartbeat/releases/tag/tvml-v1.0.0) | [Kom igång - Media 1.x för TVML](setup/vhl_tvml.pdf) |
-| Apple TV | SDK for Apple TV v1.0.0 (kontakta [kundtjänst](https://helpx.adobe.com/marketing-cloud/contact-support.html) för att få äldre 1.x SDK) | [Kom igång - Media 1.x för Apple TV](setup/vhl-dev-guide-v1x_appletv.pdf) |
-| Kromecast | SDK för Chromecast v1.0.0 (kontakta [kundtjänst](https://helpx.adobe.com/marketing-cloud/contact-support.html) för att få äldre 1.x SDK) | [Kom igång - Media 1.x för Chromecast](setup/chromecast_1.x_sdk.pdf) |
+| Apple TV | SDK for Apple TV v1.0.0 (kontakta [Kundtjänst](https://helpx.adobe.com/marketing-cloud/contact-support.html) för att få äldre 1.x SDK) | [Kom igång - Media 1.x för Apple TV](setup/vhl-dev-guide-v1x_appletv.pdf) |
+| Kromecast | SDK för Chromecast v1.0.0 (kontakt [Kundtjänst](https://helpx.adobe.com/marketing-cloud/contact-support.html) för att få äldre 1.x SDK) | [Kom igång - Media 1.x för Chromecast](setup/chromecast_1.x_sdk.pdf) |
