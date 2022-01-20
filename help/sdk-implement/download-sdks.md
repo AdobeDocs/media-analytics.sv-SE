@@ -5,9 +5,9 @@ uuid: a619fbb8-693e-4583-8dad-0ff875e715f8
 exl-id: d211fa2e-d5b0-4e9f-bdb7-eda838194f3d
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: f0abffb48a6c0babb37f16aff2e3302bf5dd0cb4
+source-git-commit: 6c42e5d51a2b23c3fe721a36100fe47b7afb14e6
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '604'
 ht-degree: 4%
 
 ---
@@ -30,7 +30,7 @@ Informationen på den här sidan innehåller länkar för att ladda ned aktuella
 | 3.x Media SDK  | Senaste SDK-nedladdningar för media |  API:er   |  Dokumentation  |
 | --- | --- | --- | --- |
 | JavaScript | [Media SDK för JS v3.0.2](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/js-v3.0.2) | [JS API-referens](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/index.html) | [Konfigurera JavaScript 3.x](/help/sdk-implement/setup/setup-javascript/set-up-js-3.md) |
-| Chromecast | [Media SDK för Chromecast v3.0.2](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/chromecast-v3.0.2) | [API-referens för Chromecast](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/) | [Konfigurera Chromecast](/help/sdk-implement/setup/set-up-chromecast.md) |
+| Chromecast | [Media SDK för Chromecast v3.0.3](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/chromecast-v3.0.2) | [API-referens för Chromecast](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/chromecast-v3.0.3) | [Konfigurera Chromecast](/help/sdk-implement/setup/set-up-chromecast.md) |
 
 
 ## Ladda ned 2.x Media SDKs {#download-2x-sdks}
@@ -40,7 +40,7 @@ Informationen på den här sidan innehåller länkar för att ladda ned aktuella
 | Android/FireTV | [Media SDK för Android v2.2.4](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/android-v2.2.4) | [Android API-referens](https://adobe-marketing-cloud.github.io/media-sdks/reference/android/) | [Konfigurera Android](/help/sdk-implement/setup/set-up-android.md) |
 | iOS/AppleTV | [Media SDK för iOS v2.3.0](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/ios-v2.3.0) (Kontakt [Kundtjänst ](https://helpx.adobe.com/marketing-cloud/contact-support.html) för att få äldre 2.0 SDK) | [iOS API-referens](https://adobe-marketing-cloud.github.io/media-sdks/reference/ios/) | [Konfigurera iOS](/help/sdk-implement/setup/set-up-ios.md) |
 | JavaScript | [Media SDK för JS v2.2.2](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/js-v2.2.2) | [JS API-referens](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/) | [Konfigurera JavaScript 2.x](/help/sdk-implement/setup/setup-javascript/set-up-js-2.md) |
-| Roku | [Media SDK för Roku v2.2.3](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/roku-v2.2.3) |  | [Konfigurera Roku](/help/sdk-implement/setup/set-up-roku.md) |
+| Roku | [Media SDK för Roku v2.2.6](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/roku-v2.2.6) |  | [Konfigurera Roku](/help/sdk-implement/setup/set-up-roku.md) |
 | Kromecast | [Media SDK för Chromecast v2.2.0](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/chromecast-v2.2.0) | [API-referens för Chromecast](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/) | [Konfigurera Chromecast](/help/sdk-implement/setup/set-up-chromecast.md) |
 
 ## Starta tillägg för Media Analytics {#media-analytics-launch-extension}
