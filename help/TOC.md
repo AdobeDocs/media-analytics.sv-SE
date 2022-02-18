@@ -5,9 +5,9 @@ user-guide-title: Adobe Analytics for Streaming Media
 breadcrumb-title: Media Analytics Guide
 user-guide-description: Implementera Adobe Analytics för direktuppspelningsmedia. Innehåller Media SDK och Media Collection API.
 sub-product: media analytics
-source-git-commit: 819f4a7035e5d9704d17abce6a7cd4c607b7ce39
+source-git-commit: 5465631bf29e746d7d5dc07603f57fd7033935c4
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '833'
 ht-degree: 91%
 
 ---
@@ -211,8 +211,9 @@ ht-degree: 91%
       + [Media Daypart-rapport](media-reports/media-default-reports/media-reports-daypart.md)
       + [Rapport över samtidiga visningsprogram för media](media-reports/media-default-reports/media-concurrent-viewers.md)
    + Paneler för mediearbetsyta {#media-workspace-panels}
-      + [Panelen för samtidiga medieanvändare](media-reports/media-workspace-panels/media-concurrent-viewers.md)
-      + [Medieuppspelningstid spenderad panel](media-reports/media-workspace-panels/media-playback-time-spent.md)
+   + [Panelen Mediegenomsnitt för miniatyrmålgrupp](media-reports/media-workspace-panels/average-minute-audience.md)
+   + [Panelen för samtidiga medieanvändare](media-reports/media-workspace-panels/media-concurrent-viewers.md)
+   + [Medieuppspelningstid spenderad panel](media-reports/media-workspace-panels/media-playback-time-spent.md)
    + [Mallar för mediearbetsyta](media-reports/media-workspace-templates.md)
    + [Hämta data för samtidiga visningsprogram via API](media-reports/media-default-reports/get-concurrent-json20.md)
    + [Hämta mediespelningstid för spenderade data via API](media-reports/media-default-reports/get-mediaplaybacktimespent-json20.md)
