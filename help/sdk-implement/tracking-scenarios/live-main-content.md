@@ -3,11 +3,11 @@ title: Huvudinnehåll för live
 description: Visa ett exempel på hur du spårar direktsänt innehåll med Media SDK.
 uuid: e92e99f4-c395-48aa-8a30-cbdd2f5fc07c
 exl-id: f6a00ffd-da6a-4d62-92df-15d119cfc426
-feature: Medieanalys
+feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: 165c7f01a2d2c32df518c89a5c49637107d41086
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '575'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ I det här scenariot finns det en liveresurs utan annonser som spelas upp i 40 s
 
 | Utlösare | Heartbeat-metod | Nätverksanrop | Anteckningar   |
 |---|---|---|---|
-| Användaren klickar på **[!UICONTROL Play]** | `trackSessionStart` | Börja med Analytics-innehåll, starta pulsslagsinnehåll | Det kan vara en användare som klickar på **[!UICONTROL Play]** eller en automatisk uppspelningshändelse. |
+| Användaren klickar **[!UICONTROL Play]** | `trackSessionStart` | Börja med Analytics-innehåll, starta pulsslagsinnehåll | Det här kan vara en användare som klickar **[!UICONTROL Play]** eller en automatisk uppspelningshändelse. |
 | Den första bildrutan i mediet spelas upp. | `trackPlay` | Spela upp pulsslagsinnehåll | Den här metoden utlöser timern. Hjärtslag skickas var 10:e sekund så länge uppspelningen fortsätter. |
 | Innehållet spelas upp. |  | Hjärtslag för innehåll |  |
 | Sessionen är över. | `trackSessionEnd` |  | `SessionEnd` betyder slutet på en visningssession. Detta API måste anropas även om användaren inte använder mediet för att slutföra det. |
@@ -33,12 +33,12 @@ Många av de värden du ser på Adobe Analytics Content Start Call visas även p
 
 | Parameter | Värde | Anteckningar |
 |---|---|---|
-| `s:sc:rsid` | &lt;your Adobe=&quot;&quot; Report=&quot;&quot; Suite=&quot;&quot; ID=&quot;&quot;> |  |
-| `s:sc:tracking_serve` | &lt;your Analytics=&quot;&quot; Tracking=&quot;&quot; Server=&quot;&quot; URL=&quot;&quot;> |  |
+| `s:sc:rsid` | &lt;Your Adobe Report Suite ID> |  |
+| `s:sc:tracking_serve` | &lt;Your Analytics Tracking Server URL> |  |
 | `s:user:mid` | `s:user:mid` | Ska matcha mittvärdet på Adobe Analytics Content Start Call |
 | `s:event:type` | &quot;start&quot; |  |
 | `s:asset:type` | &quot;main&quot; |  |
-| `s:asset:mediao_id` | &lt;your Media=&quot;&quot; Name=&quot;&quot;> |  |
+| `s:asset:mediao_id` | &lt;Your Media Name> |  |
 | `s:stream:type` | live |  |
 | `s:meta:*` | valfri | Anpassade metadata för mediet |
 
@@ -63,13 +63,13 @@ För LIVE-strömmar måste du ange spelhuvudvärdet som antalet sekunder sedan m
 
 ### Vid start
 
-För LIVE-media måste du, när en användare börjar spela upp strömmen, ställa in `l:event:playhead` på antalet sekunder sedan midnatt UTC den dagen. Detta är i motsats till VOD, där du ställer in spelhuvudet på &quot;0&quot;.
+För LIVE-media måste du ange inställningar när en användare börjar spela upp strömmen `l:event:playhead` till antalet sekunder sedan midnatt UTC den dagen. Detta är i motsats till VOD, där du ställer in spelhuvudet på &quot;0&quot;. Obs! När du använder förloppsmarkörer krävs innehållets längd och spelhuvudet måste uppdateras som antal sekunder från början av medieobjektet, med början från 0.
 
 Exempel: en LIVE-direktuppspelningshändelse startar vid midnatt och pågår i 24 timmar (`a.media.length=86400`; `l:asset:length=86400`). Anta sedan att en användare börjar spela upp den LIVE-strömmen kl. 12:00. I det här scenariot bör du ange `l:event:playhead` till 43200 (12 timmar sedan midnatt UTC den dagen i sekunder).
 
 ### Vid paus
 
-Samma&quot;live playhead&quot;-logik som används i början av uppspelningen måste användas när en användare pausar uppspelningen. När användaren återgår till att spela upp LIVE-strömmen måste du ange `l:event:playhead`-värdet enligt det nya antalet sekunder sedan midnatt UTC, _inte_ till den punkt där användaren pausade LIVE-strömmen.
+Samma&quot;live playhead&quot;-logik som används i början av uppspelningen måste användas när en användare pausar uppspelningen. När användaren återgår till att spela upp LIVE-strömmen måste du ange `l:event:playhead` värdet enligt det nya antalet sekunder sedan midnatt UTC, _not_ till den punkt där användaren pausade LIVE-strömmen.
 
 ## Exempelkod {#sample-code}
 

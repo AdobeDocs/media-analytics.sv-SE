@@ -5,10 +5,10 @@ uuid: a8aa7b3c-2d39-44d7-8ebc-b101d130101f
 exl-id: 5272c0ce-4e3d-48c6-bfa6-94066ccbf9ac
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: d7cb36c2dd6b35da4531ca975c7fc730e387b750
+source-git-commit: 14329fab02e88cbad69ceea4ccd719b90f6555a6
 workflow-type: tm+mt
-source-wordcount: '729'
-ht-degree: 2%
+source-wordcount: '771'
+ht-degree: 1%
 
 ---
 
@@ -21,7 +21,7 @@ I den här dokumentationen beskrivs spårning i version 2.x av SDK.
 
 1. **Inledande spårningsinställning**
 
-   Identifiera när användaren aktiverar uppspelningsavsikten (användaren klickar på play och/eller autoplay är aktiverat) och skapa en `MediaObject`-instans.
+   Identifiera när användaren aktiverar uppspelningsavsikten (användaren klickar på play och/eller autoplay är aktiverat) och skapar en `MediaObject` -instans.
 
    **`MediaObject`referens:**
 
@@ -103,7 +103,7 @@ I den här dokumentationen beskrivs spårning i version 2.x av SDK.
 
    * **Standardmetadata**
 
-   [Implementera standardmetadata i Roku](/help/sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-roku.md)
+[Implementera standardmetadata i Roku](/help/sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-roku.md)
 
       >[!NOTE]
       >Det är valfritt att bifoga standardmetadataobjektet för video till mediaobjektet.
@@ -120,7 +120,7 @@ I den här dokumentationen beskrivs spårning i version 2.x av SDK.
 
 1. **Spåra avsikten att starta uppspelningen**
 
-   Om du vill börja spåra en mediesession ringer du `trackSessionStart` på instansen Mediepulsslag:
+   Om du vill börja spåra en mediesession ringer du `trackSessionStart` på Media Heartbeat-instansen:
 
    ```
    ADBMobile().mediaTrackSessionStart(mediaInfo,mediaContextData)
@@ -130,10 +130,10 @@ I den här dokumentationen beskrivs spårning i version 2.x av SDK.
    >Det andra värdet är det anpassade namnet på videometadataobjektet som du skapade i steg 2.
 
    >[!IMPORTANT]
-   >`trackSessionStart` spårar användarens avsikt att spela upp, inte början av uppspelningen. Detta API används för att läsa in videodata/metadata och för att beräkna QoS-måttet för tid till start (tidslängden mellan `trackSessionStart` och `trackPlay`).
+   >`trackSessionStart` spårar användarens avsikt att spela upp, inte början av uppspelningen. Detta API används för att läsa in videodata/metadata och för att beräkna QoS-måttet för tiden till start (tidsintervallet mellan `trackSessionStart` och `trackPlay`).
 
    >[!NOTE]
-   >Om du inte använder anpassade videometadata skickar du bara ett tomt objekt för argumentet `data` i `trackSessionStart`, vilket visas i den kommenterade utdataraden i iOS-exemplet ovan.
+   >Om du inte använder anpassade videometadata skickar du ett tomt objekt för `data` argument i `trackSessionStart`, vilket visas i kommenteringsraden i iOS-exemplet ovan.
 
 1. **Spåra faktiskt uppspelningsstart**
 
@@ -145,7 +145,8 @@ I den här dokumentationen beskrivs spårning i version 2.x av SDK.
 
 1. **Uppdatera spelhuvudets värde**
 
-   Meddela SDK när mediespelhuvudet ändras genom att anropa API:t `mediaUpdatePlayhead`. För video-on-demand (VOD) anges värdet i sekunder från mediaobjektets början. För direktuppspelning anges värdet som antalet sekunder sedan midnatt UTC den dagen.
+   När mediespelhuvudet ändras meddelas SDK genom att anropa `mediaUpdatePlayhead` API. <br /> För video-on-demand (VOD) anges värdet i sekunder från mediaobjektets början. <br /> Om spelaren inte anger information om innehållets varaktighet för direktuppspelning kan värdet anges som antalet sekunder sedan midnatt UTC den dagen. <br /> Obs! När du använder förloppsmarkörer krävs innehållets längd och spelhuvudet måste uppdateras som antal sekunder från början av medieobjektet, med början från 0.
+
 
    ```
    ADBMobile().mediaUpdatePlayhead(position)
@@ -153,7 +154,7 @@ I den här dokumentationen beskrivs spårning i version 2.x av SDK.
 
 1. **Spåra slutförd uppspelning**
 
-   Identifiera händelsen från videospelaren för att slutföra videouppspelningen, där användaren har tittat på innehållet tills slutet, och ring `trackComplete`:
+   Identifiera händelsen från videospelaren för att slutföra videouppspelningen, där användaren har tittat på innehållet tills slutet, och anropa `trackComplete`:
 
    ```
    ADBMobile().mediaTrackComplete()
@@ -168,11 +169,11 @@ I den här dokumentationen beskrivs spårning i version 2.x av SDK.
    ```
 
    >[!IMPORTANT]
-   >`trackSessionEnd` markerar slutet av en videospårningssession. Om sessionen kunde bevakas tills det var klart, där användaren tittade på innehållet till slutet, kontrollerar du att `trackComplete` anropas före `trackSessionEnd`. Alla andra `track*` API-anrop ignoreras efter `trackSessionEnd`, förutom `trackSessionStart` för en ny videospårningssession.
+   >`trackSessionEnd` markerar slutet av en videospårningssession. Om sessionen har bevakats till slutet, där användaren har tittat på innehållet till slutet, måste du se till att `trackComplete` anropas före `trackSessionEnd`. Övriga `track*` API-anrop ignoreras efter `trackSessionEnd`, förutom `trackSessionStart` för en ny videospårningssession.
 
 1. **Spåra alla möjliga pausscenarier**
 
-   Identifiera händelsen från videospelaren för paus i videon och ring `trackPause`:
+   Identifiera händelsen från videospelaren för paus och anrop av videon `trackPause`:
 
    ```
    ADBMobile().mediaTrackPause()
@@ -180,21 +181,21 @@ I den här dokumentationen beskrivs spårning i version 2.x av SDK.
 
    **Pausa scenarier**
 
-   Identifiera alla scenarier där videospelaren pausar och se till att `trackPause` anropas korrekt. Följande scenarier kräver alla att ditt program anropar `trackPause()`:
+   Identifiera alla scenarier där videouppspelaren pausar och se till att `trackPause` anropas korrekt. Följande scenarier kräver alla ditt appsamtal `trackPause()`:
 
    * Användaren träffar uttryckligen paus i appen.
    * Spelaren försätts i pausläget.
    * (*Mobilappar*) - Användaren placerar programmet i bakgrunden, men du vill att sessionen ska vara öppen i appen.
-   * (*Mobilappar*) - Alla typer av systemavbrott inträffar som gör att ett program backoreras. Användaren får t.ex. ett samtal eller ett popup-fönster från ett annat program inträffar, men du vill att sessionen ska vara aktiv så att användaren kan återuppta videon från avbrottet.
+   * (*Mobilappar*) - Alla typer av systemavbrott inträffar som gör att ett program backjordas. Användaren får t.ex. ett samtal eller ett popup-fönster från ett annat program inträffar, men du vill att sessionen ska vara aktiv så att användaren kan återuppta videon från avbrottet.
 
-1. Identifiera händelsen från spelaren för videouppspelning och/eller videouppspelning från paus och ring `trackPlay`:
+1. Identifiera händelsen från spelaren för videouppspelning och/eller videouppspelning från paus och samtal `trackPlay`:
 
    ```
    ADBMobile().mediaTrackPlay()
    ```
 
    >[!TIP]
-   >Detta kan vara samma händelsekälla som användes i steg 4. Kontrollera att varje `trackPause()` API-anrop är parat med följande `trackPlay()` API-anrop när videouppspelningen återupptas.
+   >Detta kan vara samma händelsekälla som användes i steg 4. Se till att varje `trackPause()` API-anrop har parats med följande `trackPlay()` API-anrop när videouppspelningen återupptas.
 
 * Spårningsscenarier: [VOD-uppspelning utan annonser](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md)
 * Exempelspelare som ingår i Roku SDK för ett fullständigt spårningsexempel.
