@@ -3,11 +3,11 @@ title: Lär dig mer om tidslinjer för Media Traking � View till slutet av inn
 description: Gå djupare in på spelhuvudets tidslinje och motsvarande � åtgärder. Läs mer om de olika åtgärderna och deras medföljande förfrågningar.
 uuid: 0ff591d3-fa99-4123-9e09-c4e71ea1060b
 exl-id: 16b15e03-5581-471f-ab0c-077189dd32d6
-feature: Medieanalys
+feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: 88bf699cb5b0872cefa4d6a6609c74f8fa35189a
 workflow-type: tm+mt
-source-wordcount: '1192'
+source-wordcount: '1203'
 ht-degree: 5%
 
 ---
@@ -35,7 +35,7 @@ I följande diagram visas spelhuvudets tidslinje och motsvarande tidslinje för 
 
 **Implementeringsinformation**
 
-Detta anrop signalerar _användarens avsikt att spela upp_ en video. <br/><br/>Det returnerar ett sessions-ID (  `{sid}`) till klienten som används för att identifiera alla efterföljande spårningsanrop i sessionen. Spelarläget är inte&quot;uppspelning&quot; än, utan är i stället&quot;start&quot;. <br/><br/>[Parametrar för obligatoriska sessioner  ](/help/media-collection-api/mc-api-ref/mc-api-sessions-req.md) måste inkluderas i  `params` kartan i begärandetexten. <br/><br/>I bakgrunden genererar det här samtalet ett Adobe Analytics-initieringssamtal.
+Dessa samtalssignaler _användarens avsikt att spela_ en video. <br/><br/>Det returnerar ett sessions-ID ( `{sid}`) till klienten som används för att identifiera alla efterföljande spårningsanrop i sessionen. Spelarläget är inte&quot;uppspelning&quot; än, utan är i stället&quot;start&quot;. <br/><br/>[Parametrar för obligatoriska sessioner ](/help/media-collection-api/mc-api-ref/mc-api-sessions-req.md) måste inkluderas i `params` karta i begärandetexten. <br/><br/>I bakgrunden genererar det här samtalet ett Adobe Analytics-initieringssamtal.
 
 **Exempelbegärandebrödtext**
 
@@ -105,7 +105,7 @@ Annonserna kan bara spåras inom en annonsbrytning.
 
 **Implementeringsinformation**
 
-Börja spåra den första pre-roll-annonsen, som är 15 sekunder lång. Inkludera anpassade metadata med denna `adStart`.
+Börja spåra den första pre-roll-annonsen, som är 15 sekunder lång. Inkludera anpassade metadata med detta `adStart` .
 
 **Exempelbegärandebrödtext**
 
@@ -136,6 +136,8 @@ Börja spåra den första pre-roll-annonsen, som är 15 sekunder lång. Inkluder
     }
 }
 ```
+
+**OBS! Mellan AdBreakStart- och AdStart-händelser ska det inte finnas några ytterligare uppspelningshändelser.**
 
 ### Åtgärd 5 - annonsmaterial {#Action-5}
 
@@ -342,7 +344,7 @@ Annonsbrytningen är över. Under reklampausen har lekläget fortsatt att&quot;l
 
 **Implementeringsinformation**
 
-Efter `adBreakComplete`-händelsen placerar du spelaren i uppspelningsläge med händelsen `play`.
+Efter `adBreakComplete` -händelsen, placerar spelaren i uppspelningsläge med `play` -händelse.
 
 **Exempelbegärandebrödtext**
 
@@ -407,7 +409,7 @@ Spåra spelarens förflyttning till buffringsläge.
 
 **Implementeringsinformation**
 
-Buffringen slutar efter 3 sekunder, så ställ in spelaren i uppspelningsläge igen. Du måste skicka ytterligare en spårets uppspelningshändelse som slutar buffras.  **Anropet efter ett  `play` anrop  `bufferStart` ger ett &quot;bufferEnd&quot;-anrop till bakänden,** så det finns inget behov av en  `bufferEnd` händelse.
+Buffringen slutar efter 3 sekunder, så ställ in spelaren i uppspelningsläge igen. Du måste skicka ytterligare en spårets uppspelningshändelse som slutar buffras.  **The `play` ring efter `bufferStart` infogar ett &quot;bufferEnd&quot;-anrop i bakänden,** så det finns inget behov av `bufferEnd` -händelse.
 
 **Exempelbegärandebrödtext**
 
@@ -450,7 +452,7 @@ Ringa backend var 10:e sekund.
 
 **Implementeringsinformation**
 
-Adress mellan rullar med 8 sekunders varaktighet: skicka `adBreakStart`.
+Adress mellan rullar med 8 sekunders varaktighet: skicka `adBreakStart` .
 
 **Exempelbegärandebrödtext**
 
@@ -642,7 +644,7 @@ Ringa backend var 10:e sekund. Spelaren är fortfarande i buffertläge. använda
 
 **Implementeringsinformation**
 
-Flytta uppspelningsläget till&quot;uppspelning&quot;.  **Anropet efter  `play` ett  `pauseStart` anrop till bakänden ger ett &quot;resume&quot;-anrop,** så det finns inget behov av en  `resume` händelse.
+Flytta uppspelningsläget till&quot;uppspelning&quot;.  **The `play` ring efter `pauseStart` infogar ett &quot;resume&quot;-anrop till back end,** så det finns inget behov av `resume` -händelse.
 
 **Exempelbegärandebrödtext**
 
@@ -684,7 +686,7 @@ Ringa backend var 10:e sekund.
 
 **Implementeringsinformation**
 
-Skicka `sessionComplete` till backend för att ange att användaren har tittat klart på hela innehållet.
+Skicka `sessionComplete` till serverdelen för att ange att användaren har tittat klart på hela innehållet.
 
 **Exempelbegärandebrödtext**
 
@@ -699,4 +701,4 @@ Skicka `sessionComplete` till backend för att ange att användaren har tittat k
 
 >[!NOTE]
 >
->**Hittar du inga händelser? -** Det finns inget explicit stöd i Media Collection API för `seekStart` eller `seekComplete`-händelser. Detta beror på att vissa spelare genererar ett mycket stort antal sådana händelser när slutanvändaren rensar, och att flera hundra användare enkelt kan tappa bort nätverksbandbredden för en backend-tjänst. Adobe kringgår explicit stöd för seek-händelser genom att beräkna pulsslagets varaktighet baserat på enhetens tidsstämpel i stället för spelhuvudets position.
+>**Hittar du inga händelser? -** Det finns inget uttryckligt stöd i Media Collection API för `seekStart` eller `seekComplete` händelser. Detta beror på att vissa spelare genererar ett mycket stort antal sådana händelser när slutanvändaren rensar, och att flera hundra användare enkelt kan tappa bort nätverksbandbredden för en backend-tjänst. Adobe kringgår explicit stöd för seek-händelser genom att beräkna pulsslagets varaktighet baserat på enhetens tidsstämpel i stället för spelhuvudets position.
