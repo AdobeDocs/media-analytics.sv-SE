@@ -2,17 +2,17 @@
 title: Versionsinformation om Adobe Analytics for Streaming Media
 description: Se versionsinformationen för Adobe Analytics.
 feature: Release Notes
-source-git-commit: c9a1007e0d2ae37014faeffebe89a14175c8506f
+exl-id: ef068aa6-fdf4-4a5c-b5d0-b93ad31894e8
+source-git-commit: 232d7ce89e3867527363235f08b492a92193d50e
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '545'
 ht-degree: 13%
 
 ---
 
-
 # Versionsinformation om Adobe Analytics för direktuppspelning av media (mars 2022)
 
-**Senaste uppdatering**: 3 mars 2022
+**Senaste uppdatering**: 23 mars 2022
 
 ## *Aktuell versionsinformation*
 
@@ -20,7 +20,7 @@ ht-degree: 13%
 
 | Funktion | Beskrivning | Måldatum |
 | ----------- | ---------- | ------- |
-| **Genomsnittlig målgrupp i minuter** | Media Analytics-kunder kan använda panelen för normal målgrupp för att få en bättre förståelse för den genomsnittliga materialförbrukningen. <br>Den genomsnittliga minuten-målgruppen möjliggör jämförelser av programmering oavsett längd eller genre. Dessutom kan ni jämföra eller lägga till den digitala genomsnittliga minuten-publiken med den linjära minuten-mätningen för tv. Panelen ger större flexibilitet för att mäta den genomsnittliga publiken för anpassade tidsperioder samt när tidsklassificeringen har uppdaterats.  [Läs mer](https://experienceleague.adobe.com/docs/media-analytics/using/media-reports/average-minute-audience.html?lang=en) | **Begränsad version** <br>16 februari 2022 |
+| **Genomsnittlig målgrupp i minuter** | Media Analytics-kunder kan använda panelen för normal målgrupp för att få en bättre förståelse för den genomsnittliga materialförbrukningen. <br>Den genomsnittliga minuten-målgruppen möjliggör jämförelser av programmering oavsett längd eller genre. Dessutom kan ni jämföra eller lägga till den digitala genomsnittliga minuten-publiken med den linjära minuten-mätningen för tv. Panelen ger större flexibilitet för att mäta den genomsnittliga publiken för anpassade tidsperioder samt när tidsklassificeringen har uppdaterats.  [Läs mer](https://experienceleague.adobe.com/docs/media-analytics/using/media-reports/average-minute-audience.html?lang=en) | 16 mars 2022 |
 
 ## Analyser för direktuppspelande mediahjälpresurser
 
