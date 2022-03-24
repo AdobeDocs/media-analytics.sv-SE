@@ -4,19 +4,14 @@ description: Lär dig hur du använder panelen Media Average Minute Audience fö
 feature: Media Analytics, Workspace Basics
 role: User, Admin, Data Engineer
 exl-id: af4d430c-1349-4606-b587-da5d40e0fe4b
-source-git-commit: a138edbfd7b5136f038cc9397e53521110446076
+source-git-commit: df950709d5eafd91d9f0958aeb66f09765e9026b
 workflow-type: tm+mt
-source-wordcount: '271'
+source-wordcount: '264'
 ht-degree: 0%
 
 ---
 
 # Medie - genomsnittlig minutmålgrupp {#media-average-minute-audience}
-
->[!NOTE]
->
->Den här funktionen är för närvarande i begränsad testning.
-
 
 Media Analytics-kunder kan använda den genomsnittliga minuten-målgruppspanelen för att bättre förstå den genomsnittliga förbrukningen av deras innehåll. Den genomsnittliga minuten-målgruppen möjliggör jämförelser av programmering oavsett längd eller genre. Dessutom kan kunderna jämföra eller lägga till den digitala genomsnittliga minuten-publiken med den linjära minuten-mätningen för tv. Panelen ger större flexibilitet för att mäta den genomsnittliga publiken för anpassade tidsperioder samt när tidsklassificeringen har uppdaterats efter detta. Det aktuella genomsnittliga minutvärdet för målgruppssiffran fungerar bara om varaktigheten är tillgänglig vid bearbetningstiden.
 
@@ -28,7 +23,3 @@ I Analysis Workspace är den genomsnittliga minuten den tid som går åt till at
 Panelen Mediets genomsnittliga minutmålgrupp ger en genomsnittlig minutvis målgruppsanalys utifrån det specifika innehåll som valts om varaktigheten görs tillgänglig med hjälp av klassificeringar.
 
 Panelen Minut-målgrupp innehåller även analyser under en viss tidsperiod som kan filtreras efter visst innehåll, oavsett om varaktigheten är tillgänglig med hjälp av klassificeringar eller inte. Navigera till en rapportsserie med Media Analytics-komponenter aktiverade för att få tillgång till panelen Mediemådets genomsnittliga målgrupp. Klicka sedan på panelikonen längst till vänster och dra panelen till ditt Analysis Workspace-projekt. [Läs mer …](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/average-minute-audience-panel.html?lang=en)
-
-<!-- ## DOES THIS APPLY Get Concurrent Viewers via Analytics Reporting API
-
-REVISE You can also get concurrent viewer data for up to 1-month at a time at minute-level granularity using the Analytics Reporting API 2.0.  The reporting API uses the same definition of concurrent viewers as Analysis Workspace.  For more information see [_*Get concurrent viewers JSON report data with Analytics 2.0 APIs*_](/help/media-reports/media-default-reports/get-concurrent-json20.md). -->
