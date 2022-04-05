@@ -3,9 +3,9 @@ title: Versionsinformation om Adobe Analytics for Streaming Media
 description: Se versionsinformationen för Adobe Analytics.
 feature: Release Notes
 exl-id: ef068aa6-fdf4-4a5c-b5d0-b93ad31894e8
-source-git-commit: 232d7ce89e3867527363235f08b492a92193d50e
+source-git-commit: 8ca8416ba3dd8f5d3ef4ba9399e7c84335f3abf1
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '525'
 ht-degree: 13%
 
 ---
@@ -48,7 +48,7 @@ Nya självstudiekurser och kurser i Analytics
 
 | Funktion | Allmän tillgänglighet | Beskrivning |
 | ----------- | ---------- | -------------- |
-| **Medieuppspelningstid tillagd** | 28 september 2021 | Adobe Streaming Media Playback Time Spent ger värdefull insikt i tittarnas engagemang och gör det möjligt för medieorganisationer att få djupare och mer detaljerade insikter med användarinteraktion varje minut genom avancerad tidsanalys med delningsfunktioner. Du kan se hur mycket tid du har lagt på att visa medieströmmar vid en viss tidpunkt. Du kan dela uppspelningens längd med olika granulariteter, inklusive nya 5-, 15- och 30-minutersgranulariteter. [Läs mer …](https://experienceleague.adobe.com/docs/media-analytics/using/media-reports/media-workspace-panels/media-playback-time-spent.html?lang=en) |
+| **Medieuppspelningstid tillagd** | 28 september 2021 | Adobe Streaming Media Playback Time Spent ger värdefull insikt i tittarnas engagemang och gör det möjligt för medieorganisationer att få djupare och mer detaljerade insikter med användarinteraktion varje minut genom avancerad tidsanalys med delningsfunktioner. Du kan se hur mycket tid du har lagt på att visa medieströmmar vid en viss tidpunkt. Du kan dela uppspelningens längd med olika granulariteter, inklusive nya 5-, 15- och 30-minutersgranulariteter. [Läs mer …](/help/media-reports/media-workspace-panels/media-playback-time-spent.md) |
 
 ## Januari 2021
 
@@ -65,7 +65,7 @@ Nya funktioner i Media Analytics
 
 | Funktion | Allmän tillgänglighet | Beskrivning |
 | -------- | -------------------- | ----------- |
-| **Media Concurrent Viewer panel i Workspace** | 17 september 2020 | Med panelen Medievisningsprogram för samtidiga kan du förstå var maximal samtidighet inträffade eller var bortfall inträffade. Det ger värdefull insikt i innehållets kvalitet och tittarengagemanget och hjälper till med felsökning eller planering av volym/skala. [Läs mer…](https://experienceleague.adobe.com/docs/media-analytics/using/media-reports/media-workspace-panels/media-concurrent-viewers.html?lang=en) |
+| **Media Concurrent Viewer panel i Workspace** | 17 september 2020 | Med panelen Medievisningsprogram för samtidiga kan du förstå var maximal samtidighet inträffade eller var bortfall inträffade. Det ger värdefull insikt i innehållets kvalitet och tittarengagemanget och hjälper till med felsökning eller planering av volym/skala. [Läs mer…](/help/media-reports/media-workspace-panels/media-concurrent-viewers.md) |
 
 
 ## Juli 2020
