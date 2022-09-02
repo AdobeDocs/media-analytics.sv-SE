@@ -1,19 +1,18 @@
 ---
 title: Uppdatera flera spelarlägen samtidigt
 description: I det här avsnittet beskrivs funktionen Spårning av flera spelartillstånd.
-exl-id: a77bc882-ac03-40b4-ac64-87f26a09707b
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: 7a28674024739593431a942d5e0a498294bbe793
+source-git-commit: fdbb777547181422b81ff6f7874bec3d317d02e9
 workflow-type: tm+mt
-source-wordcount: '161'
-ht-degree: 6%
+source-wordcount: '186'
+ht-degree: 4%
 
 ---
 
 # Spårning av flera spelarlägen
 
-Det finns situationer när två spelarlägen startar och slutar samtidigt eller när slutet av ett läge också är början av ett annat läge. Titta på följande exempel:
+Ibland börjar och slutar två spelarlägen samtidigt eller slutet av ett läge också i början av ett annat läge, vilket visas i följande bild:
 
 ![Flera spelarlägen](assets/multiple-player-states.svg)
 
@@ -25,18 +24,22 @@ Den aktuella implementeringen tillåter båda scenarierna:
 - `stateStart(fullScreen)` - t1
 - `stateEnd(fullScreen)` - t2
 
-Klienten måste dock ge ut många `stateStart` och `stateEnd` händelser för att signalera flera samtidiga statusförändringar. Ett nytt `statesUpdate` händelsetypen har implementerats, vilket avslutar en lista med lägen och startar en lista med nya lägen.
+Detta kräver dock att du utfärdar flera `stateStart` och `stateEnd` händelser för att signalera flera samtidiga statusförändringar. Ett nytt `statesUpdate` händelsetypen har implementerats, vilket avslutar en lista med lägen och startar en lista med nya lägen.
 
 Använda nya `statesUpdate` blir ovanstående lista över händelser:
 - `statesUpdate(statesEnd=[], statesStart=[pictureInPicture, mute])` - t0
 - `statesUpdate(statesEnd=[mute, pictureInPicture], statesStart=[fullScreen])` - t1
 - `statesUpdate(statesEnd=[fullScreen], statesStart=[])` - t2
 
-Antalet anrop om tillståndsuppdateringar har reducerats från 6 till endast 3 för samma beteende. Den sista händelsen kunde också ha varit en enkel `stateEnd(fullScreen)`.
+Antalet anrop om tillståndsuppdateringar har reducerats från sex till tre för samma beteende. Den sista händelsen kunde också ha varit en enkel `stateEnd(fullScreen)`.
 
-## API-implementering för Media Collection
+## API-implementering för Media Collection {#mpst-api}
 
-Exempel:
+Du kan använda API:t för Media Collection för att implementera flera spårningar av spelartillstånd.
+
+### Exempel
+
+Nedan visas ett exempel på en implementering av API:t för Media Collection för att spåra flera spelarlägen.
 
 ```
 // statesUpdate (ex: mute and pictureInPicture are switched on)
