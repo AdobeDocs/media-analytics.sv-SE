@@ -1,11 +1,11 @@
 ---
 title: Parametrar för spelartillstånd
-description: '"Lär dig mer om parametrar för spårning av spelartillstånd för helskärmsläge, bildtext, ljud av och bild i bildegenskaper."'
+description: "Lär dig mer om parametrar för spårning av spelartillstånd för helskärmsläge, bildtext, ljud av och bild i bildegenskaper."
 uuid: 2a6b9247-a694-46e9-98e1-424c08c27ec2
 exl-id: cd51ed3a-fe37-41e9-8243-dfd9deb514c1
-feature: Media Analytics, Variables
+feature: "Media Analytics, Variables"
 role: User, Admin, Data Engineer
-source-git-commit: 01afcf648f13af4d47b5fb41b7c9e89c2a89f590
+source-git-commit: 7e5ce452a9c96c4e34150ae0e06d73b0cff98741
 workflow-type: tm+mt
 source-wordcount: '2331'
 ht-degree: 1%
@@ -41,7 +41,7 @@ Beskrivning av tabelldata:
 
 ## Egenskaper för spelartillstånd {#player-state-properties}
 
-Spårningsfunktionerna för spelartillstånd kan kopplas till ett ljud- eller videoflöde. Standardiserade spårningsvärden för spelartillstånd lagras som lösningsvariabler. Standardlägena är: fullScreen, mute, closeCaption, pictureInPicture och inFocus.
+Spårningsfunktionerna för spelartillstånd kan kopplas till ett ljud- eller videoflöde. Standardiserade spårningsvärden för spelartillstånd lagras som lösningsvariabler. Standardlägena är: fullscreen, mute, closedCaptioning, pictureInPicture och inFocus.
 
 ### Egenskaper för helskärm
 

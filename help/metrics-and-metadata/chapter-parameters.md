@@ -1,11 +1,11 @@
 ---
 title: Kapitelparametrar
-description: '"Läs mer om kapitelparametrar för implementering, nätverk och rapportering."'
+description: "Läs mer om kapitelparametrar för implementering, nätverk och rapportering."
 uuid: 2a6b9247-a694-46e9-98e1-424c08c27ec2
 exl-id: 73da3e52-9498-478e-bfd7-8ff6c8e6bfc5
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: 01afcf648f13af4d47b5fb41b7c9e89c2a89f590
+source-git-commit: 7e5ce452a9c96c4e34150ae0e06d73b0cff98741
 workflow-type: tm+mt
 source-wordcount: '1169'
 ht-degree: 2%
@@ -68,8 +68,8 @@ Beskrivning av tabelldata:
 ### Kapitel
 
 |   Implementering   | Nätverksparametrar | Rapportering |
-| --- | --- |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <ul> <li> **SDK-nyckel:**<br/> Ställ in automatiskt </li> <li> **API-nyckel:**<br/> Ej tillämpligt </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **Typ:**<br/> string </li> <li> **Skickat med:**<br/> Stängd kapitel </li> <li> **Min. SDK-version:** 1.3 </li> <li> **Exempelvärde:**<br/> </li><li> **Beskrivning:**<br/> Kapitelets automatiskt genererade ID.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.chapter.<br/>name) </li> <li> **Hjärtslag:**<br/> (s:stream:kapitel_id) </li> </ul> | <ul> <li> **Tillgängligt:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> eVar </li> <li> **Förfallodatum:**<br/> Vid TRIT </li> <li> **Rapportnamn:**<br/> Kapitel </li> <li> **Kontextdata:**<br/> (a.media.chapter.<br/>namn) </li> <li> **Datafeed:**<br/> videokort </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.chapter.<br/>namn) </li> <li> **Sökväg till XDM-fält:**<br/> media.mediaTimed.mediaChapter.<br/>chapterAssetReference.@id </li> <li> **Sökväg till Reporting XDM-fält:**<br/> mediaReporting.chapterDetails.chapterID </li> </ul> |
+| --- | --- |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <ul> <li> **SDK-nyckel:**<br/> Ställ in automatiskt </li> <li> **API-nyckel:**<br/> Ej tillämpligt </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **Typ:**<br/> string </li> <li> **Skickat med:**<br/> Stängd kapitel </li> <li> **Min. SDK-version:** 1.3 </li> <li> **Exempelvärde:**<br/> </li><li> **Beskrivning:**<br/> Kapitelets automatiskt genererade ID.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.chapter.<br/>name) </li> <li> **Hjärtslag:**<br/> (s:stream:kapitel_id) </li> </ul> | <ul> <li> **Tillgängligt:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> eVar </li> <li> **Förfallodatum:**<br/> Vid TRIT </li> <li> **Rapportnamn:**<br/> Kapitel </li> <li> **Kontextdata:**<br/> (a.media.chapter.<br/>namn) </li> <li> **Datafeed:**<br/> videokort </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.chapter.<br/>namn) </li> <li> **Sökväg till XDM-fält:**<br/> media.mediaTimed.mediaChapter.<br/>chapterAssetReference.@id </li> <li> **Sökväg till Reporting XDM-fält:**<br/> mediaReporting.chapterDetails.ID </li> </ul> |
 
 ## Kapitelmått {#chapter-Metrics}
 
