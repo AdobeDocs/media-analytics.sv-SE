@@ -5,7 +5,7 @@ uuid: fdacfb8b-db3e-46fb-b9ad-c3a749555b2a
 exl-id: 9dc84377-6eca-482f-89e7-c4008d1c0f07
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: 7e5ce452a9c96c4e34150ae0e06d73b0cff98741
+source-git-commit: c26f472f8b35f15f594e32334f6cbfb038f77698
 workflow-type: tm+mt
 source-wordcount: '7004'
 ht-degree: 1%
@@ -272,7 +272,7 @@ public static MediaObject createMediaObject(java.lang.String name,
 
 |   Implementering   | Nätverksparametrar | Rapportering |
 | --- | --- |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <ul> <li> **SDK-nyckel:**<br/> AUKTORISERAD </li> <li> **API-nyckel:**<br/> media.pass.auth </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **Typ:**<br/> string </li> <li> **Skickat med:**<br/> Mediestart, stäng media </li> <li> **Min. SDK-version:** 1.5.7 </li> <li> **Exempelvärde:**<br/> &quot;TRUE&quot; </li> <li> **Beskrivning:**<br/> Användaren har autentiserats via Adobe.  <br/>**Viktigt:** Detta kan bara vara sant om det är inställt. Om den inte anges returneras inget värde.  </li></ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.pass.auth) </li> <li> **Hjärtslag:**<br/> (s:meta:<br/>a.media.pass.<br/>auth) </li> </ul> | <ul> <li> **Tillgängligt:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> event </li> <li> **Rapportnamn:**<br/> Auktoriserad </li> <li> **Kontextdata:**<br/> (a.media.pass.auth) </li> <li> **Datafeed:**<br/> videoauktoriserad </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.pass.auth) </li> <li> **Sökväg till XDM-fält:**<br/> media.mediaTimed.mediaAuth </li> <li> **Sökväg till XDM-samlingsfält:**<br/> mediaCollection.sessionDetails.<br/>isAuthorized </li> <li> **Sökväg till Reporting XDM-fält:**<br/> mediaReporting.sessionDetails.<br/>isAuthorized </li> </ul> |
+| <ul> <li> **SDK-nyckel:**<br/> AUKTORISERAD </li> <li> **API-nyckel:**<br/> media.pass.auth </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **Typ:**<br/> string </li> <li> **Skickat med:**<br/> Mediestart, stäng media </li> <li> **Min. SDK-version:** 1.5.7 </li> <li> **Exempelvärde:**<br/> &quot;TRUE&quot; </li> <li> **Beskrivning:**<br/> Användaren har autentiserats via Adobe.  <br/>**Viktigt:** Detta kan bara vara sant om det är inställt. Om den inte anges returneras inget värde.  </li></ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.pass.auth) </li> <li> **Hjärtslag:**<br/> (s:meta:<br/>a.media.pass.<br/>auth) </li> </ul> | <ul> <li> **Tillgängligt:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> event </li> <li> **Rapportnamn:**<br/> Auktoriserad </li> <li> **Kontextdata:**<br/> (a.media.pass.auth) </li> <li> **Datafeed:**<br/> videoauktoriserad </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.pass.auth) </li> <li> **Sökväg till XDM-fält:**<br/> media.mediaTimed.mediaAuth </li> <li> **Sökväg till XDM-samlingsfält:**<br/> mediaCollection.sessionDetails.<br/>auktoriserad </li> <li> **Sökväg till Reporting XDM-fält:**<br/> mediaReporting.sessionDetails.<br/>auktoriserad </li> </ul> |
 
 ### Dag - del
 
