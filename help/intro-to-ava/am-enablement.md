@@ -2,11 +2,11 @@
 title: Vad är Adobe Audience Manager aktivering?
 description: Lär dig hur du länkar programåtgärder till mediespårningsdata utan att behöva använda ytterligare bearbetningsregler och anpassade variabler.
 exl-id: c0d73bc2-4713-498a-8882-ff66c7f3dd50
-feature: Medieanalys
+feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: 3e996d243d060a6fd07d2ddbabf05e39eca40758
 workflow-type: tm+mt
-source-wordcount: '409'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 0%
 
 Adobe Audience Manager (AAM), en plattform för datahantering (DMP), hjälper er att samla ihop era målgruppsdata, vilket gör det enkelt att samla in kommersiellt relevant information om webbplatsbesökare, skapa marknadsföringsbara segment och leverera riktad reklam och innehåll till rätt målgrupp.
 
-Med AAM är du inte knuten till någon dataförsäljare, utbytesplattform eller efterfrågeplattform. Dessutom är AAM helt oberäkneligt när det gäller dina partners datatillgångar. Med tillgång till flera datakällor erbjuder AAM digitala utgivare möjlighet att använda en mängd olika tredjepartsdata och vår privata datainsamling. Mer information om AAM finns i AAM dokumentation [Audience Manager produktdokumentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html).
+Med AAM är du inte knuten till någon dataförsäljare, utbytesplattform eller efterfrågeplattform. Dessutom är AAM helt oberäkneligt när det gäller dina partners datatillgångar. Med tillgång till flera datakällor erbjuder AAM digitala utgivare möjlighet att använda en mängd olika tredjepartsdata. Mer information om AAM finns i AAM [Audience Manager produktdokumentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html).
 
-**VA för AAM dataöverföring -** För både videoinnehåll och videoannonser kan mätvärden och metadata som samlas in med hjälp av lösningens (reserverade) variabler skickas automatiskt till AAM. Dataöverföringen är tillgänglig på alla plattformar, inklusive datorer, mobiler och OTT. Om du vill aktivera dataöverföringen på serversidan måste du kontakta Adobe Client Care och be om att denna feed aktiveras.
+**AAM dataöverföring -** För både videoinnehåll och videoannonser kan mätvärden och metadata som samlas in med hjälp av lösningens (reserverade) variabler skickas automatiskt till AAM. Dataöverföringen är tillgänglig på alla plattformar, inklusive datorer, mobiler och OTT. Om du vill aktivera dataöverföringen på serversidan måste du kontakta Adobe Client Care och be om att denna feed aktiveras.
 
 >[!IMPORTANT]
 >
