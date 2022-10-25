@@ -3,9 +3,9 @@ title: Kvalitetsparametrar
 description: Läs mer om kvalitetsparametrarna (QoE) som används för att hämta kvalitetsmetadata.
 uuid: 0d9fa764-edef-4178-8650-90c9a0852a57
 exl-id: aac178dc-5a46-4ce3-80e9-ec82cbfbfff5
-feature: Media Analytics, Variables
+feature: "Media Analytics, Variables"
 role: User, Admin, Data Engineer
-source-git-commit: 01afcf648f13af4d47b5fb41b7c9e89c2a89f590
+source-git-commit: 6c311eea2b748ba5409935208c048c43d7bbe39b
 workflow-type: tm+mt
 source-wordcount: '3320'
 ht-degree: 1%
@@ -184,8 +184,8 @@ Beskrivning av tabelldata:
 ### Droppar före start
 
 |   Implementering   | Nätverksparametrar | Rapportering |
-| --- | --- |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <ul> <li> **SDK-nyckel:**<br/> Ställ in automatiskt </li> <li> **API-nyckel:**<br/> Ej tillämpligt </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **Typ:**<br/> string </li> <li> **Skickat med:**<br/> Stäng media </li> <li> **Min. SDK-version:** Alla </li> <li> **Exempelvärde:**<br/> TRUE </li><li> **Beskrivning:**<br/> Antalet gånger som en användare avslutar videon innan den börjar. Det här måttet är bara 1 om inget innehåll återges, oavsett annonser.  </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.qoe)<br/>dropBeforeStart) </li> <li> **Hjärtslag:**<br/> (s:event:<br/>type=aa_start) </li> </ul> | <ul> <li> **Tillgängligt:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> event </li> <li> **Rapportnamn:**<br/> Släpper före start </li> <li> **Kontextdata:**<br/> (a.media.qoe)<br/>dropBeforeStart) </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.qoe.<br/>dropBeforeStart) </li> <li> **Sökväg till XDM-fält:**<br/>  media.mediaTimed.primaryAssetViewDetails.<br/>qoe.dropBeforeStarts.value >= 1 => &quot;TRUE&quot; </li> <li> **Sökväg till Reporting XDM-fält:**<br/> mediaReporting.qoeDataDetails.<br/>hasDroppedBeforeStart </li> </ul> |
+| --- | --- |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <ul> <li> **SDK-nyckel:**<br/> Ställ in automatiskt </li> <li> **API-nyckel:**<br/> Ej tillämpligt </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **Typ:**<br/> string </li> <li> **Skickat med:**<br/> Stäng media </li> <li> **Min. SDK-version:** Alla </li> <li> **Exempelvärde:**<br/> TRUE </li><li> **Beskrivning:**<br/> Antalet gånger som en användare avslutar videon innan den börjar. Det här måttet är bara 1 om inget innehåll återges, oavsett annonser.  </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.qoe)<br/>dropBeforeStart) </li> <li> **Hjärtslag:**<br/> (s:event:<br/>type=aa_start) </li> </ul> | <ul> <li> **Tillgängligt:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> event </li> <li> **Rapportnamn:**<br/> Släpper före start </li> <li> **Kontextdata:**<br/> (a.media.qoe)<br/>dropBeforeStart) </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.qoe.<br/>dropBeforeStart) </li> <li> **Sökväg till XDM-fält:**<br/>  media.mediaTimed.primaryAssetViewDetails.<br/>qoe.dropBeforeStarts.value >= 1 => &quot;TRUE&quot; </li> <li> **Sökväg till Reporting XDM-fält:**<br/> mediaReporting.qoeDataDetails.<br/>isDroppedBeforeStart </li> </ul> |
 
 
 
