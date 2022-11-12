@@ -7,8 +7,8 @@ user-guide-description: Implementera Adobe Analytics för direktuppspelningsmedi
 sub-product: media analytics
 source-git-commit: 1d30415b0874c1e0f35045026cb341bab1833d98
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '869'
+ht-degree: 69%
 
 ---
 
