@@ -5,10 +5,10 @@ user-guide-title: Adobe Analytics for Streaming Media
 breadcrumb-title: Media Analytics Guide
 user-guide-description: Implementera Adobe Analytics för direktuppspelningsmedia. Innehåller Media SDK och Media Collection API.
 sub-product: media analytics
-source-git-commit: 1d30415b0874c1e0f35045026cb341bab1833d98
+source-git-commit: 5ea67e55448ccdcfc098c6bead78ba23d0fe8e96
 workflow-type: tm+mt
-source-wordcount: '869'
-ht-degree: 69%
+source-wordcount: '880'
+ht-degree: 70%
 
 ---
 
@@ -54,6 +54,10 @@ ht-degree: 69%
          + [Timeoutvillkor](implementation/media-collection-api/mc-api-impl/mc-api-timeout.md)
          + [Styra händelseförloppet](implementation/media-collection-api/mc-api-impl/mc-api-ctrl-order.md)
          + [Köa händelser när sessioner svarar långsamt](implementation/media-collection-api/mc-api-impl/mc-api-queuing.md)
+      + Tidslinjer för mediespårning {#mc-api-timelines}
+         + [Tidslinje 1 – Visa till innehållets slut](implementation/media-collection-api/mc-api-timelines/mc-api-timeline-1.md)
+         + [Tidslinje 2 – Användaren avbryter sessionen](implementation/media-collection-api/mc-api-timelines/mc-api-timeline-2.md)
+         + [Tidslinje 3 – Kapitel](implementation/media-collection-api/mc-api-timelines/mc-api-timeline-3.md)
    + Variabler {#variables}
       + [Parametrar för direktuppspelande media](implementation/variables/audio-video-parameters.md)
       + [Annonsparametrar](implementation/variables/ad-parameters.md)
@@ -179,8 +183,7 @@ ht-degree: 69%
    + [Spåra nedladdat innehåll offline](use-cases/track-downloaded-content.md)
    + [Federated Analytics](use-cases/federated-analytics.md)
    + [Hantera programavbrott under uppspelning](use-cases/cookbook/app-interrupts.md)
-   + [Översikt över äldre SDK-kokbok](use-cases/cookbook/sdk-cookbook-overview.md)
-   + [Äldre - Media Analytics Cookbook](use-cases/media-analytics-cookbook/media-analytics-cookbook.md)
+   + [Användningsexempel för Media SDK](use-cases/cookbook/sdk-cookbook-overview.md)
    + [Attribution för medieström](use-cases/media-analytics-cookbook/media-dimensions.md)
    + [Återuppta inaktiva sessioner](use-cases/cookbook/resuming-inactive.md)
    + [Roku-spårning i SceneGraph](use-cases/cookbook/sdk-track-scenegraph.md)
