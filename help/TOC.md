@@ -5,10 +5,10 @@ user-guide-title: Adobe Analytics for Streaming Media
 breadcrumb-title: Media Analytics Guide
 user-guide-description: Implementera Adobe Analytics för direktuppspelningsmedia. Innehåller Media SDK och Media Collection API.
 sub-product: media analytics
-source-git-commit: 5ea67e55448ccdcfc098c6bead78ba23d0fe8e96
+source-git-commit: 4c68f5997a9d336e8c3545cdfb7b9cb955602b69
 workflow-type: tm+mt
-source-wordcount: '880'
-ht-degree: 70%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -54,10 +54,6 @@ ht-degree: 70%
          + [Timeoutvillkor](implementation/media-collection-api/mc-api-impl/mc-api-timeout.md)
          + [Styra händelseförloppet](implementation/media-collection-api/mc-api-impl/mc-api-ctrl-order.md)
          + [Köa händelser när sessioner svarar långsamt](implementation/media-collection-api/mc-api-impl/mc-api-queuing.md)
-      + Tidslinjer för mediespårning {#mc-api-timelines}
-         + [Tidslinje 1 – Visa till innehållets slut](implementation/media-collection-api/mc-api-timelines/mc-api-timeline-1.md)
-         + [Tidslinje 2 – Användaren avbryter sessionen](implementation/media-collection-api/mc-api-timelines/mc-api-timeline-2.md)
-         + [Tidslinje 3 – Kapitel](implementation/media-collection-api/mc-api-timelines/mc-api-timeline-3.md)
    + Variabler {#variables}
       + [Parametrar för direktuppspelande media](implementation/variables/audio-video-parameters.md)
       + [Annonsparametrar](implementation/variables/ad-parameters.md)
@@ -174,6 +170,7 @@ ht-degree: 70%
    + [Hämta data för samtidiga visningsprogram via API](reporting/reports-and-analytics/get-concurrent-json20.md)
    + [Hämta mediespelningstid för spenderade data via API](reporting/reports-and-analytics/get-mediaplaybacktimespent-json20.md)
 + Användningsexempel {#media-use-cases}
+   + [Användningsexempel för Media SDK](use-cases/cookbook/sdk-cookbook-overview.md)
    + Spårning av spelarens tillstånd {#player-state-tracking}
       + [Översikt](use-cases/player-state-tracking/player-state-overview.md)
       + [Standardtillstånd och anpassade tillstånd](use-cases/player-state-tracking/standard-and-custom-states.md)
@@ -183,7 +180,6 @@ ht-degree: 70%
    + [Spåra nedladdat innehåll offline](use-cases/track-downloaded-content.md)
    + [Federated Analytics](use-cases/federated-analytics.md)
    + [Hantera programavbrott under uppspelning](use-cases/cookbook/app-interrupts.md)
-   + [Användningsexempel för Media SDK](use-cases/cookbook/sdk-cookbook-overview.md)
    + [Attribution för medieström](use-cases/media-analytics-cookbook/media-dimensions.md)
    + [Återuppta inaktiva sessioner](use-cases/cookbook/resuming-inactive.md)
    + [Roku-spårning i SceneGraph](use-cases/cookbook/sdk-track-scenegraph.md)
