@@ -1,0 +1,86 @@
+---
+title: Lär dig spåra kapitel och segment i Android
+description: Lär dig hur du implementerar kapitel- och segmentspårning med Media SDK på Android.
+uuid: 013815d7-4d9e-48f4-a2b9-3b70cb1149d3
+exl-id: ada2e2a7-1383-471c-9ce6-c82ea93fa79d
+feature: Media Analytics
+role: User, Admin, Data Engineer
+source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+workflow-type: tm+mt
+source-wordcount: '198'
+ht-degree: 2%
+
+---
+
+# Spåra kapitel och segment på Android{#track-chapters-and-segments-on-android}
+
+Följande instruktioner ger vägledning vid implementering med 2.x SDK:er.
+
+>[!IMPORTANT]
+>
+>Om du implementerar en 1.x-version av SDK kan du hämta utvecklarhandboken här: [Hämta SDK:er.](/help/getting-started/download-sdks.md)
+
+## Implementera kapitelspårning
+
+1. Identifiera när kapitelstarthändelsen inträffar och skapa `ChapterObject` med hjälp av kapitelinformationen.
+
+   `ChapterObject` kapitelspårningsreferens:
+
+   >[!NOTE]
+   >
+   >Dessa variabler är bara obligatoriska om du tänker spåra kapitel.
+
+   | Variabelnamn | Beskrivning | Obligatoriskt |
+   | --- | --- | :---: |
+   | `name` | Kapitelnamn | Ja |
+   | `position` | Kapitelposition | Ja |
+   | `length` | Kapitellängd | Ja |
+   | `startTime` | Starttid för kapitel | Ja |
+
+   Kapitelobjekt:
+
+   ```java
+   MediaObject chapterDataInfo =  
+     MediaHeartbeat.createChapterObject(<CHAPTER_NAME>,  
+                                        <POSITION>,  
+                                        <LENGTH>,  
+                                        <START_TIME>);
+   ```
+
+1. Om du inkluderar anpassade metadata för kapitlet skapar du kontextdatavariabler för metadata:
+
+   ```java
+   HashMap<String, String> chapterMetadata =  
+     new HashMap<String,String>();
+   chapterMetadata.put("segmentType", "Sample Segment Type");
+   chapterMetadata.put("segmentName", "Sample Segment Name");
+   chapterMetadata.put("segmentInfo", "Sample Segment Info");
+   ```
+
+1. Börja spåra kapiteluppspelningen genom att anropa `ChapterStart` i `MediaHeartbeat` instans:
+
+   ```java
+   public void onChapterStart(Observable observable, Object data) {  
+       _heartbeat.trackEvent(MediaHeartbeat.Event.ChapterStart,  
+                             chapterDataInfo,  
+                             chapterMetadata);
+   }
+   ```
+
+1. Anropa `ChapterComplete` i `MediaHeartbeat` instans:
+
+   ```java
+   public void onChapterComplete(Observable observable, Object data) {  
+       _heartbeat.trackEvent(MediaHeartbeat.Event.ChapterComplete, null, null);
+   }
+   ```
+
+1. Om kapiteluppspelningen inte slutfördes på grund av att användaren valde att hoppa över kapitlet (till exempel om användaren söker utanför kapitelgränsen), anropar du `ChapterSkip` i MediaHeartbeat-instansen:
+
+   ```java
+   public void onChapterSkip(Observable observable, Object data) {  
+       _heartbeat.trackEvent(MediaHeartbeat.Event.ChapterSkip, null, null);
+   }
+   ```
+
+1. Om det finns ytterligare kapitel upprepar du steg 1 till 5.

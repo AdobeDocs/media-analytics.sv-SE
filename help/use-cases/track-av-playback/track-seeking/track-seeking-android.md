@@ -1,0 +1,48 @@
+---
+title: Lär dig spåra sökning på Android
+description: Lär dig hur du spårar händelserna Seek Start och Seek Complete med Media SDK på Android.
+uuid: 65addd99-eebf-4a80-8b4a-d5fbdff8ab06
+exl-id: 8a8fcbcf-3232-4565-8c27-4167b6741613
+feature: Media Analytics
+role: User, Admin, Data Engineer
+source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+workflow-type: tm+mt
+source-wordcount: '130'
+ht-degree: 0%
+
+---
+
+# Spåra sökning på Android{#track-seeking-on-android}
+
+Följande instruktioner ger vägledning för implementering i alla 2.x SDK:er.
+
+>[!IMPORTANT]
+>
+>Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandboken här: [Hämta SDK:er.](/help/getting-started/download-sdks.md)
+
+## Sökspårningskonstanter
+
+| Konstantnamn | Beskrivning     |
+|---|---|
+| `MediaHeartbeat.Event.SeekStart` | Konstant för spårning av Seek Start-händelse. |
+| `MediaHeartbeat.Event.SeekComplete` | Konstant för spårning av händelsen Sökning slutförd. |
+
+## Implementeringssökning
+
+1. Lyssna efter uppspelningssökningshändelser från mediespelaren och spåra sökning med hjälp av `SeekStart` händelse:
+
+   ```java
+   public void onSeekStart(Observable observable, Object data) {  
+       _heartbeat.trackEvent(MediaHeartbeat.Event.SeekStart, null, null);
+   }
+   ```
+
+1. Spåra slutet av sökningen med `SeekComplete` händelse:
+
+   ```java
+   public void onSeekComplete(Observable observable, Object data) {  
+       _heartbeat.trackEvent(MediaHeartbeat.Event.SeekComplete, null, null);
+   }
+   ```
+
+Se spårningsscenariot [VOD-uppspelning med sökning i huvudinnehållet](/help/use-cases/tracking-scenarios/vod-seeking.md) för mer information.

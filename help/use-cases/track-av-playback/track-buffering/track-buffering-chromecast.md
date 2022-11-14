@@ -1,0 +1,45 @@
+---
+title: Lär dig spåra buffring på Chromecast
+description: Lär dig spåra buffringshändelser på Chromecast.
+uuid: f6fa3a1a-d7de-4293-bd11-ebe9e130badd
+exl-id: 26fd1e2a-4103-486f-be12-36b088d28cb6
+feature: Media Analytics
+role: User, Admin, Data Engineer
+source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+workflow-type: tm+mt
+source-wordcount: '133'
+ht-degree: 0%
+
+---
+
+# Spåra buffring på Chromecast{#track-buffering-on-chromecast}
+
+Följande instruktioner ger vägledning för implementering i alla 2.x SDK:er.
+
+>[!IMPORTANT]
+>
+>Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandboken här: [Hämta SDK:er.](/help/getting-started/download-sdks.md)
+
+## Konstanter för buffertspårning
+
+
+| Konstantnamn | Beskrivning     |
+|---|---|
+| `BufferStart` | Konstant för spårning av buffertens starthändelse |
+| `BufferComplete` | Konstant för spårning av händelsen Buffer Complete |
+
+## Implementera buffring
+
+1. Lyssna efter uppspelningsbuffringshändelser från mediespelaren och vid meddelanden om starthändelser för buffert, spåra buffring med hjälp av `BufferStart` händelse: [trackEvent](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackEvent)
+
+   ```js
+   ADBMobile.media.trackEvent(ADBMobile.media.Event.BufferStart);
+   ```
+
+1. Spåra slutet av buffringen med `BufferComplete` händelse: [trackEvent](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackEvent)
+
+   ```js
+   ADBMobile.media.trackEvent(ADBMobile.media.Event.BufferComplete);
+   ```
+
+Se spårningsscenariot [VOD-uppspelning med buffring](/help/use-cases/tracking-scenarios/vod-buffering.md) för mer information.
