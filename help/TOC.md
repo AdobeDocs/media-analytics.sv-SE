@@ -5,10 +5,10 @@ user-guide-title: Adobe Analytics for Streaming Media
 breadcrumb-title: Media Analytics Guide
 user-guide-description: Implementera Adobe Analytics för direktuppspelningsmedia. Innehåller Media SDK och Media Collection API.
 sub-product: media analytics
-source-git-commit: 4c68f5997a9d336e8c3545cdfb7b9cb955602b69
+source-git-commit: 7b33301495a6596ce5e343e9e720d15619da2af9
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '865'
+ht-degree: 70%
 
 ---
 
@@ -61,98 +61,6 @@ ht-degree: 0%
       + [Parametrar för spelarens tillstånd](implementation/variables/player-state-parameters.md)
       + [Kvalitetsparametrar](implementation/variables/quality-parameters.md)
       + [Beräknade mätvärden](implementation/variables/calculated-metrics.md)
-+ Spårning {#track-av-playback}
-   + [Översikt](use-cases/track-av-playback/track-core-overview.md)
-   + Spåra direktuppspelning av media {#track-core}
-      + [Spåra grundläggande uppspelning i Android](use-cases/track-av-playback/track-core/track-core-android.md)
-      + [Spåra grundläggande uppspelning i iOS](use-cases/track-av-playback/track-core/track-core-ios.md)
-      + Spåra grundläggande uppspelning i JavaScript {#track-core-javascript}
-         + [Spåra grundläggande uppspelning i JavaScript 2.x](use-cases/track-av-playback/track-core/track-core-javascript/track-core-js.md)
-         + [Spåra grundläggande uppspelning i JavaScript 3.x](use-cases/track-av-playback/track-core/track-core-javascript/track-core-js3.md)
-      + [Spåra grundläggande uppspelning i Chromecast](use-cases/track-av-playback/track-core/track-core-chromecast.md)
-      + [Spåra grundläggande uppspelning i Roku](use-cases/track-av-playback/track-core/track-core-roku.md)
-   + Spåra buffring {#track-buffering}
-      + [Spåra buffring i Android](use-cases/track-av-playback/track-buffering/track-buffering-android.md)
-      + [Spåra buffring i iOS](use-cases/track-av-playback/track-buffering/track-buffering-ios.md)
-      + Spåra buffring i JavaScript {#track-buffering-js}
-         + [Spåra buffring i JavaScript 2.x](use-cases/track-av-playback/track-buffering/track-buffering-js/track-buffering-js.md)
-         + [Spåra buffring i JavaScript 3.x](use-cases/track-av-playback/track-buffering/track-buffering-js/track-buffering-js3.md)
-      + [Spåra buffring i Chromecast](use-cases/track-av-playback/track-buffering/track-buffering-chromecast.md)
-      + [Spåra buffring i Roku](use-cases/track-av-playback/track-buffering/track-buffering-roku.md)
-   + Spåra sökning {#track-seeking}
-      + [Spåra sökning i Android](use-cases/track-av-playback/track-seeking/track-seeking-android.md)
-      + [Spåra sökning i iOS](use-cases/track-av-playback/track-seeking/track-seeking-ios.md)
-      + Spåra sökning i JavaScript {#track-seeking-js}
-         + [Spåra sökning i JavaScript 2.x](use-cases/track-av-playback/track-seeking/track-seeking-js/track-seeking-js.md)
-         + [Spåra sökning i JavaScript 3.x](use-cases/track-av-playback/track-seeking/track-seeking-js/track-seeking-js3.md)
-      + [Spåra sökning i Chromecast](use-cases/track-av-playback/track-seeking/track-seeking-chromecast.md)
-      + [Spåra sökning i Roku](use-cases/track-av-playback/track-seeking/track-seeking-roku.md)
-   + Implementera standardmetadata {#impl-std-metadata}
-      + [Implementera standardmetadata i Android](use-cases/track-av-playback/impl-std-metadata/impl-std-metadata-android.md)
-      + [Implementera standardmetadata i iOS](use-cases/track-av-playback/impl-std-metadata/impl-std-metadata-ios.md)
-      + [iOS-metadatanycklar](use-cases/track-av-playback/impl-std-metadata/ios-metadata-keys.md)
-      + Implementera standardmetadata i JavaScript {#impl-std-md-js}
-         + [Implementera standardmetadata i JavaScript 2.x](use-cases/track-av-playback/impl-std-metadata/impl-std-md-js/impl-std-metadata-js.md)
-         + [Implementera standardmetadata i JavaScript 3.x](use-cases/track-av-playback/impl-std-metadata/impl-std-md-js/impl-std-metadata-js3.md)
-      + [Implementera standardmetadata i Chromecast](use-cases/track-av-playback/impl-std-metadata/impl-std-metadata-chromecast.md)
-      + [Standardmetadataparametrar – Chromecast](use-cases/track-av-playback/impl-std-metadata/chromecast-metadata.md)
-      + [Implementera standardmetadata i Roku](use-cases/track-av-playback/impl-std-metadata/impl-std-metadata-roku.md)
-      + [Standardmetadataparametrar – Roku](use-cases/track-av-playback/impl-std-metadata/roku-metadata.md)
-   + Spåra annonser {#track-ads}
-      + [Översikt](use-cases/track-ads/track-ads-overview.md)
-      + [Spåra annonser i Android](use-cases/track-ads/track-ads-android.md)
-      + [Spåra annonser i iOS](use-cases/track-ads/track-ads-ios.md)
-      + Spåra annonser i JavaScript {#track-ads-js}
-         + [Spåra annonser i JavaScript 2.x](use-cases/track-ads/track-ads-js/track-ads-js.md)
-         + [Spåra annonser i JavaScript 3.x](use-cases/track-ads/track-ads-js/track-ads-js3.md)
-      + [Spåra annonser i Chromecast](use-cases/track-ads/track-ads-chromecast.md)
-      + [Spåra annonser i Roku](use-cases/track-ads/track-ads-roku.md)
-      + Implementera standardmetadata för annonser {#impl-std-ad-metadata}
-         + [Implementera standardmetadata för annonser i Android](use-cases/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-android.md)
-         + [Implementera standardmetadata för annonser i iOS](use-cases/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-ios.md)
-         + Implementera standardmetadata för annonser i JavaScript {#impl-std-ad-md-js}
-            + [Implementera standardmetadata för annonser i JavaScript 2.x](use-cases/track-ads/impl-std-ad-metadata/impl-std-ad-md-js/impl-std-ad-metadata-js.md)
-            + [Implementera standardmetadata för annonser i JavaScript 3.x](use-cases/track-ads/impl-std-ad-metadata/impl-std-ad-md-js/impl-std-ad-metadata-js3.md)
-         + [Implementera standardmetadata för annonser i Roku](use-cases/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-roku.md)
-   + Spåra kapitel och segment {#track-chapters}
-      + [Översikt](use-cases/track-chapters/track-chapters-overview.md)
-      + [Spåra kapitel och segment i Android](use-cases/track-chapters/track-chapters-android.md)
-      + [Spåra kapitel och segment i iOS](use-cases/track-chapters/track-chapters-ios.md)
-      + Spåra kapitel och segment i JavaScript {#track-chapters-js}
-         + [Spåra kapitel och segment i JavaScript 2.x](use-cases/track-chapters/track-chapters-js/track-chapters-js.md)
-         + [Spåra kapitel och segment i JavaScript 3.x](use-cases/track-chapters/track-chapters-js/track-chapters-js3.md)
-      + [Spåra kapitel och segment i Chromecast](use-cases/track-chapters/track-chapters-chromecast.md)
-      + [Spåra kapitel och segment i Roku](use-cases/track-chapters/track-chapters-roku.md)
-   + Spåra upplevelsekvalitet {#track-qos}
-      + [Översikt](use-cases/track-qos/track-qos-overview.md)
-      + [Spåra upplevelsekvalitet i Android](use-cases/track-qos/track-qos-android.md)
-      + [Spåra upplevelsekvalitet i iOS](use-cases/track-qos/track-qos-ios.md)
-      + Spåra upplevelsekvalitet i JavaScript {#track-qos-js}
-         + [Spåra upplevelsekvalitet i JavaScript 2.x](use-cases/track-qos/track-qos-js/track-qos-js.md)
-         + [Spåra upplevelsekvalitet i JavaScript 3.x](use-cases/track-qos/track-qos-js/track-qos-js3.md)
-      + [Spåra upplevelsekvalitet i Chromecast](use-cases/track-qos/track-qos-chromecast.md)
-      + [Spåra upplevelsekvalitet i Roku](use-cases/track-qos/track-qos-roku.md)
-   + Spåra fel {#track-errors}
-      + [Översikt](use-cases/track-errors/track-errors-overview.md)
-      + [Spåra fel i Android](use-cases/track-errors/track-errors-android.md)
-      + [Spåra fel i iOS](use-cases/track-errors/track-errors-ios.md)
-      + Spåra fel i JavaScript {#track-errors-js}
-         + [Spåra fel i JavaScript 2.x](use-cases/track-errors/track-errors-js/track-errors-js.md)
-         + [Spåra fel i JavaScript 3.x](use-cases/track-errors/track-errors-js/track-errors-js3.md)
-      + [Spåra fel i Chromecast](use-cases/track-errors/track-errors-chromecast.md)
-      + [Spåra fel i Roku](use-cases/track-errors/track-errors-roku.md)
-   + Spåra scenarier {#tracking-scenarios}
-      + [VOD-uppspelning utan annonser](use-cases/tracking-scenarios/vod-no-intrs-details.md)
-      + [VOD-uppspelning med inledande annonser](use-cases/tracking-scenarios/vod-preroll-ads.md)
-      + [VOD-uppspelning med överhoppade annonser](use-cases/tracking-scenarios/vod-skipped-ads.md)
-      + [VOD-uppspelning med ett kapitel](use-cases/tracking-scenarios/vod-one-chapter.md)
-      + [VOD-uppspelning med ett överhoppat kapitel](use-cases/tracking-scenarios/vod-skipped-chapter.md)
-      + [VOD-uppspelning med sökning i huvudinnehåll](use-cases/tracking-scenarios/vod-seeking.md)
-      + [VOD-uppspelning med buffring](use-cases/tracking-scenarios/vod-buffering.md)
-      + [Flera parallella VOD-spårare](use-cases/tracking-scenarios/vod-multi-trackers.md)
-      + [VOD – en spårare för flera sessioner](use-cases/tracking-scenarios/vod-multi-track-one-session.md)
-      + [Live-huvudinnehåll](use-cases/tracking-scenarios/live-main-content.md)
-      + [Live-huvudinnehåll med sekventiell spårning](use-cases/tracking-scenarios/live-sequential.md)
 + Rapportering {#media-reports}
    + [Aktivera medierapporter](reporting/media-reports-enable.md)
    + [Om segment](reporting/segments.md)
@@ -233,3 +141,95 @@ ht-degree: 0%
    + [Spårnings-API:er 1x till 2x](legacy/va-1x-to-2x/1x-2x-api-change.md)
    + [Äldre - Introduktion till AVA](legacy/intro-to-ava/implementation-paths/implementation-paths.md)
    + [Klientsidans sökväg](legacy/intro-to-ava/implementation-paths/client-side-path.md)
+   + Spårning {#track-av-playback}
+      + [Översikt](use-cases/track-av-playback/track-core-overview.md)
+      + Spåra direktuppspelning av media {#track-core}
+         + [Spåra grundläggande uppspelning i Android](use-cases/track-av-playback/track-core/track-core-android.md)
+         + [Spåra grundläggande uppspelning i iOS](use-cases/track-av-playback/track-core/track-core-ios.md)
+         + Spåra grundläggande uppspelning i JavaScript {#track-core-javascript}
+            + [Spåra grundläggande uppspelning i JavaScript 2.x](use-cases/track-av-playback/track-core/track-core-javascript/track-core-js.md)
+            + [Spåra grundläggande uppspelning i JavaScript 3.x](use-cases/track-av-playback/track-core/track-core-javascript/track-core-js3.md)
+         + [Spåra grundläggande uppspelning i Chromecast](use-cases/track-av-playback/track-core/track-core-chromecast.md)
+         + [Spåra grundläggande uppspelning i Roku](use-cases/track-av-playback/track-core/track-core-roku.md)
+      + Spåra buffring {#track-buffering}
+         + [Spåra buffring i Android](use-cases/track-av-playback/track-buffering/track-buffering-android.md)
+         + [Spåra buffring i iOS](use-cases/track-av-playback/track-buffering/track-buffering-ios.md)
+         + Spåra buffring i JavaScript {#track-buffering-js}
+            + [Spåra buffring i JavaScript 2.x](use-cases/track-av-playback/track-buffering/track-buffering-js/track-buffering-js.md)
+            + [Spåra buffring i JavaScript 3.x](use-cases/track-av-playback/track-buffering/track-buffering-js/track-buffering-js3.md)
+         + [Spåra buffring i Chromecast](use-cases/track-av-playback/track-buffering/track-buffering-chromecast.md)
+         + [Spåra buffring i Roku](use-cases/track-av-playback/track-buffering/track-buffering-roku.md)
+      + Spåra sökning {#track-seeking}
+         + [Spåra sökning i Android](use-cases/track-av-playback/track-seeking/track-seeking-android.md)
+         + [Spåra sökning i iOS](use-cases/track-av-playback/track-seeking/track-seeking-ios.md)
+         + Spåra sökning i JavaScript {#track-seeking-js}
+            + [Spåra sökning i JavaScript 2.x](use-cases/track-av-playback/track-seeking/track-seeking-js/track-seeking-js.md)
+            + [Spåra sökning i JavaScript 3.x](use-cases/track-av-playback/track-seeking/track-seeking-js/track-seeking-js3.md)
+         + [Spåra sökning i Chromecast](use-cases/track-av-playback/track-seeking/track-seeking-chromecast.md)
+         + [Spåra sökning i Roku](use-cases/track-av-playback/track-seeking/track-seeking-roku.md)
+      + Implementera standardmetadata {#impl-std-metadata}
+         + [Implementera standardmetadata i Android](use-cases/track-av-playback/impl-std-metadata/impl-std-metadata-android.md)
+         + [Implementera standardmetadata i iOS](use-cases/track-av-playback/impl-std-metadata/impl-std-metadata-ios.md)
+         + [iOS-metadatanycklar](use-cases/track-av-playback/impl-std-metadata/ios-metadata-keys.md)
+         + Implementera standardmetadata i JavaScript {#impl-std-md-js}
+            + [Implementera standardmetadata i JavaScript 2.x](use-cases/track-av-playback/impl-std-metadata/impl-std-md-js/impl-std-metadata-js.md)
+            + [Implementera standardmetadata i JavaScript 3.x](use-cases/track-av-playback/impl-std-metadata/impl-std-md-js/impl-std-metadata-js3.md)
+         + [Implementera standardmetadata i Chromecast](use-cases/track-av-playback/impl-std-metadata/impl-std-metadata-chromecast.md)
+         + [Standardmetadataparametrar – Chromecast](use-cases/track-av-playback/impl-std-metadata/chromecast-metadata.md)
+         + [Implementera standardmetadata i Roku](use-cases/track-av-playback/impl-std-metadata/impl-std-metadata-roku.md)
+         + [Standardmetadataparametrar – Roku](use-cases/track-av-playback/impl-std-metadata/roku-metadata.md)
+      + Spåra annonser {#track-ads}
+         + [Översikt](use-cases/track-ads/track-ads-overview.md)
+         + [Spåra annonser i Android](use-cases/track-ads/track-ads-android.md)
+         + [Spåra annonser i iOS](use-cases/track-ads/track-ads-ios.md)
+         + Spåra annonser i JavaScript {#track-ads-js}
+            + [Spåra annonser i JavaScript 2.x](use-cases/track-ads/track-ads-js/track-ads-js.md)
+            + [Spåra annonser i JavaScript 3.x](use-cases/track-ads/track-ads-js/track-ads-js3.md)
+         + [Spåra annonser i Chromecast](use-cases/track-ads/track-ads-chromecast.md)
+         + [Spåra annonser i Roku](use-cases/track-ads/track-ads-roku.md)
+         + Implementera standardmetadata för annonser {#impl-std-ad-metadata}
+            + [Implementera standardmetadata för annonser i Android](use-cases/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-android.md)
+            + [Implementera standardmetadata för annonser i iOS](use-cases/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-ios.md)
+            + Implementera standardmetadata för annonser i JavaScript {#impl-std-ad-md-js}
+               + [Implementera standardmetadata för annonser i JavaScript 2.x](use-cases/track-ads/impl-std-ad-metadata/impl-std-ad-md-js/impl-std-ad-metadata-js.md)
+               + [Implementera standardmetadata för annonser i JavaScript 3.x](use-cases/track-ads/impl-std-ad-metadata/impl-std-ad-md-js/impl-std-ad-metadata-js3.md)
+            + [Implementera standardmetadata för annonser i Roku](use-cases/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-roku.md)
+      + Spåra kapitel och segment {#track-chapters}
+         + [Översikt](use-cases/track-chapters/track-chapters-overview.md)
+         + [Spåra kapitel och segment i Android](use-cases/track-chapters/track-chapters-android.md)
+         + [Spåra kapitel och segment i iOS](use-cases/track-chapters/track-chapters-ios.md)
+         + Spåra kapitel och segment i JavaScript {#track-chapters-js}
+            + [Spåra kapitel och segment i JavaScript 2.x](use-cases/track-chapters/track-chapters-js/track-chapters-js.md)
+            + [Spåra kapitel och segment i JavaScript 3.x](use-cases/track-chapters/track-chapters-js/track-chapters-js3.md)
+         + [Spåra kapitel och segment i Chromecast](use-cases/track-chapters/track-chapters-chromecast.md)
+         + [Spåra kapitel och segment i Roku](use-cases/track-chapters/track-chapters-roku.md)
+      + Spåra upplevelsekvalitet {#track-qos}
+         + [Översikt](use-cases/track-qos/track-qos-overview.md)
+         + [Spåra upplevelsekvalitet i Android](use-cases/track-qos/track-qos-android.md)
+         + [Spåra upplevelsekvalitet i iOS](use-cases/track-qos/track-qos-ios.md)
+         + Spåra upplevelsekvalitet i JavaScript {#track-qos-js}
+            + [Spåra upplevelsekvalitet i JavaScript 2.x](use-cases/track-qos/track-qos-js/track-qos-js.md)
+            + [Spåra upplevelsekvalitet i JavaScript 3.x](use-cases/track-qos/track-qos-js/track-qos-js3.md)
+         + [Spåra upplevelsekvalitet i Chromecast](use-cases/track-qos/track-qos-chromecast.md)
+         + [Spåra upplevelsekvalitet i Roku](use-cases/track-qos/track-qos-roku.md)
+      + Spåra fel {#track-errors}
+         + [Översikt](use-cases/track-errors/track-errors-overview.md)
+         + [Spåra fel i Android](use-cases/track-errors/track-errors-android.md)
+         + [Spåra fel i iOS](use-cases/track-errors/track-errors-ios.md)
+         + Spåra fel i JavaScript {#track-errors-js}
+            + [Spåra fel i JavaScript 2.x](use-cases/track-errors/track-errors-js/track-errors-js.md)
+            + [Spåra fel i JavaScript 3.x](use-cases/track-errors/track-errors-js/track-errors-js3.md)
+         + [Spåra fel i Chromecast](use-cases/track-errors/track-errors-chromecast.md)
+         + [Spåra fel i Roku](use-cases/track-errors/track-errors-roku.md)
+      + Spåra scenarier {#tracking-scenarios}
+         + [VOD-uppspelning utan annonser](use-cases/tracking-scenarios/vod-no-intrs-details.md)
+         + [VOD-uppspelning med inledande annonser](use-cases/tracking-scenarios/vod-preroll-ads.md)
+         + [VOD-uppspelning med överhoppade annonser](use-cases/tracking-scenarios/vod-skipped-ads.md)
+         + [VOD-uppspelning med ett kapitel](use-cases/tracking-scenarios/vod-one-chapter.md)
+         + [VOD-uppspelning med ett överhoppat kapitel](use-cases/tracking-scenarios/vod-skipped-chapter.md)
+         + [VOD-uppspelning med sökning i huvudinnehåll](use-cases/tracking-scenarios/vod-seeking.md)
+         + [VOD-uppspelning med buffring](use-cases/tracking-scenarios/vod-buffering.md)
+         + [Flera parallella VOD-spårare](use-cases/tracking-scenarios/vod-multi-trackers.md)
+         + [VOD – en spårare för flera sessioner](use-cases/tracking-scenarios/vod-multi-track-one-session.md)
+         + [Live-huvudinnehåll](use-cases/tracking-scenarios/live-main-content.md)
+         + [Live-huvudinnehåll med sekventiell spårning](use-cases/tracking-scenarios/live-sequential.md)
