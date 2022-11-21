@@ -4,13 +4,13 @@ description: Kom igång med Adobe Analytics för direktuppspelningsmedia.
 uuid: null
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+exl-id: 660aa29a-2a3d-4a4f-acd6-471551d1047b
+source-git-commit: 8b939da2374acb5d573a553c848ba880345e64b5
 workflow-type: tm+mt
-source-wordcount: '444'
+source-wordcount: '439'
 ht-degree: 1%
 
 ---
-
 
 # Komma igång {#getting-started}
 
@@ -47,10 +47,6 @@ The **Media Collection API:er** gör att ni kan anpassa implementeringen av med
 Mer information om hur du använder API:er för mediainsamling finns i [API-dokumentation för strömmande media](/help/implementation/media-collection-api/mc-api-overview.md).
 
 ## Adobe Extensions {#adobe-extensions}
-
->[!NOTE]
->
->BEHÖVER INTRO FÖR TILLÄGG
 
 * The [**Adobe Media Analytics för ljud- och videotillägg**](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/media-analytics/overview.html?lang=en) (Media Analytics-tillägg) krävs för implementeringar av iOS och tvOS. Den innehåller funktioner för att lägga till spårningsinstansen till en taggplats eller ett -projekt. För MA-tillägget krävs också Analytics Extension och Experience Cloud ID Extension.
 
