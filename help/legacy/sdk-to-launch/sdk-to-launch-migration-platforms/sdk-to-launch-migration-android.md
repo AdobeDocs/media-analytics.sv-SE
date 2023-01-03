@@ -4,7 +4,7 @@ description: Lär dig hur du migrerar från Media SDK till Launch för Android.
 exl-id: 26764835-4781-417b-a6c0-ea6ae78d76ae
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: fb09280ae6fb9f0ab7e67bd6ae134e6e26f88ec8
 workflow-type: tm+mt
 source-wordcount: '408'
 ht-degree: 0%
@@ -45,7 +45,7 @@ Media-tillägget använder de konfigurerade parametrarna för spårning.
 
 ![](assets/launch_config_mobile.png)
 
-[Använda mobiltillägg](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics)
+[Använda mobiltillägg](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/)
 
 ## Skapa spårare
 
@@ -87,7 +87,7 @@ MediaHeartbeatDelegate delegate = new MediaHeartbeatDelegate() {
 
 ### Starta tillägg
 
-[Media API-referens - Skapa en mediaspårare](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics/media-api-reference#create-a-media-tracker)
+[Media API-referens - Skapa en mediaspårare](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/api-reference/#createtracker)
 
 Innan du skapar spåraren bör du registrera medietillägget och de beroende tilläggen med mobilkärnan.
 
@@ -138,12 +138,12 @@ I den fristående Media SDK:n skickar du ett delegatobjekt som implementerar
 Implementeringen bör uppdatera spelarens spelhuvud genom att anropa
 `updateCurrentPlayhead` metod som exponeras av spåraren. För korrekt spårning bör du anropa den här metoden minst en gång per sekund.
 
-[Media API-referens - Uppdatera aktuell spelare](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics/media-api-reference#updatecurrentplayhead)
+[Media API-referens - Uppdatera aktuell spelare](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/api-reference/#updatecurrentplayhead)
 
 Implementeringen bör uppdatera QoE-informationen genom att anropa `updateQoEObject`
 metod som exponeras av spåraren. Vi förväntar oss att den här metoden anropas när det sker en ändring av kvalitetsmåtten.
 
-[Media API-referens - Uppdatera QoE-objekt](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics/media-api-reference#updateqoeobject)
+[Media API-referens - Uppdatera QoE-objekt](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/api-reference/#createqoeobject)
 
 ## Skicka standardmedier/annonsmetadata
 

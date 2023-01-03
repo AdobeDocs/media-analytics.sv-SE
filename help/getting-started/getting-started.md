@@ -1,20 +1,20 @@
 ---
 title: Komma igång
-description: Kom igång med Adobe Analytics för direktuppspelningsmedia.
+description: Kom igång med Adobe Analytics for Streaming Media.
 uuid: null
 feature: Media Analytics
 role: User, Admin, Data Engineer
 exl-id: 660aa29a-2a3d-4a4f-acd6-471551d1047b
-source-git-commit: 8b939da2374acb5d573a553c848ba880345e64b5
+source-git-commit: b022bed6b7be0cc97caaaf6b7bbc42474a57b400
 workflow-type: tm+mt
-source-wordcount: '439'
+source-wordcount: '298'
 ht-degree: 1%
 
 ---
 
 # Komma igång {#getting-started}
 
-Adobe Analytics for Streaming Media har två huvudsakliga implementeringsmetoder: Media SDK och Media Collection API:er.
+Adobe Analytics for Streaming Media har två huvudsakliga implementeringsmetoder, Media SDK:er och Media Collection API:er.
 
 ![metoder](assets/getting-started2.png)
 
@@ -27,7 +27,7 @@ Adobe Analytics Streaming Media finns för följande medieplattformar:
 * Över toppen
 * Alla anslutna enheter som kan användas för direktuppspelningsmedia eller en server-till-server-integrering
 
-Mer information finns i [Enheter och plattformar som stöds](#_Supported_devices_and).
+Mer information finns i [Enheter och plattformar som stöds](/help/getting-started/supported-devices.md).
 
 >[!IMPORTANT]
 >
@@ -45,11 +45,3 @@ Mer information om hur du hämtar och installerar SDK:er för media finns i [Hä
 The **Media Collection API:er** gör att ni kan anpassa implementeringen av medieanalyser. Använd API:erna för Media Collection för att direkt anropa Adobe-servrar för att utföra nästan alla åtgärder du kan utföra med hjälp av SDK:er med mera. Anpassa din datainsamling för att skapa rapporter som utforskar, får insikter eller besvarar viktiga frågor om dina strömmande mediedata.
 
 Mer information om hur du använder API:er för mediainsamling finns i [API-dokumentation för strömmande media](/help/implementation/media-collection-api/mc-api-overview.md).
-
-## Adobe Extensions {#adobe-extensions}
-
-* The [**Adobe Media Analytics för ljud- och videotillägg**](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/media-analytics/overview.html?lang=en) (Media Analytics-tillägg) krävs för implementeringar av iOS och tvOS. Den innehåller funktioner för att lägga till spårningsinstansen till en taggplats eller ett -projekt. För MA-tillägget krävs också Analytics Extension och Experience Cloud ID Extension.
-
-* [Analytics Extension v1.6 eller senare](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/analytics/overview.html?lang=en)- Med det här tillägget kan du läsa in JavaScript-biblioteket för Adobe Experience Platform Web SDK för att skicka data till lösningar från Adobe.
-
-* [Experience Cloud ID-tillägg](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/id-service/overview.html?lang=en)- Det här tillägget implementerar Experience Cloud ID-tjänsten som identifierar besökare över alla Experience Cloud-lösningar. Experience Cloud ID-tjänsten är ett personaliseringstillägg i Adobe Experience Platform.

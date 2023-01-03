@@ -5,9 +5,9 @@ uuid: 7e60c7bd-8dba-4c7a-9c3c-0c634b815397
 exl-id: 64f5ef2b-7850-43d8-8f32-3d008ea4f156
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: d2d0f34c64ecb2a900412d5959449c8c36328730
 workflow-type: tm+mt
-source-wordcount: '358'
+source-wordcount: '362'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 Du kan kontrollera om spårningsaktivitet tillåts på en viss enhet:
 
-* **Mobilappar -** VA-biblioteket respekterar `AdobeMobile` bibliotekets inställningar för sekretess och avanmälan. Om du vill avanmäla dig från spårning måste du använda `AdobeMobile` bibliotek. Mer information om `AdobeMobile` bibliotekets avanmälan och sekretessinställningar, se [Inställningar för avanmälan och sekretess](https://experienceleague.adobe.com/docs/mobile-services/android/gdpr-privacy-android/privacy.html).
+* **Mobilappar -** Media Extensions respekterar sekretessinställningarna i datainsamling. Om du vill avanmäla dig från spårning måste du konfigurera sekretess till [Utvalt i taggar](https://developer.adobe.com/client-sdks/documentation/getting-started/create-a-mobile-property/#create-a-mobile-property) eller [Uppdatera sekretessstatus för Mobile SDK](https://developer.adobe.com/client-sdks/documentation/privacy-and-gdpr/#getprivacystatus).
 * **JavaScript-/webbläsarappar -** VA-biblioteket respekterar `VisitorAPI` sekretess- och alternativinställningar. Om du vill välja bort spårning måste du avanmäla dig från Visitor API-tjänsten. Mer information om avanmälan och sekretess finns på [Adobe Experience Platform identitetstjänst.](https://experienceleague.adobe.com/docs/id-service/using/home.html).
 * **OTT-appar (Chromecast, Roku) -** OTT SDK:er tillhandahåller GDPR-klara API:er som gör att du kan ange `opt` statusflaggor för datainsamling och överföring samt för hämtning av lokalt lagrade identiteter.
 

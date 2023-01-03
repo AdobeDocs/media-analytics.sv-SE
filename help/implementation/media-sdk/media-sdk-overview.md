@@ -1,15 +1,15 @@
 ---
 title: Så här implementerar du Adobe Streaming Media SDK
-description: Lär dig hur du implementerar Adobe Analytics för direktuppspelande media med Media SDK:er.
+description: Lär dig hur du implementerar Adobe Analytics för direktuppspelning av media med hjälp av Media SDK:er.
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+exl-id: dc1b9fe0-6c75-4f93-a558-a3f3186bcf22
+source-git-commit: 85e1d5223cec7168bbf592d941e6a5aece249459
 workflow-type: tm+mt
 source-wordcount: '202'
 ht-degree: 0%
 
 ---
-
 
 # Media SDK - översikt {#implementation-overview}
 

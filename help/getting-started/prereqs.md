@@ -1,13 +1,13 @@
 ---
 title: Lär dig om krav för direktuppspelande media
-description: Kom igång med Adobe Analytics Streaming Media. Lär dig vad du behöver för att implementera Adobe Analytics för direktuppspelningsmedia.
+description: Kom igång med Adobe Analytics Streaming Media. Lär dig vad ni behöver för att implementera Adobe Analytics för direktuppspelande media.
 uuid: 4c0b37f3-8615-4cc0-b9c9-eeb029067064
 exl-id: 85ab1dbd-f4a7-4f11-afc9-8d5000e2de70
 feature: "Media Analytics, System Requirements"
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: b022bed6b7be0cc97caaaf6b7bbc42474a57b400
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '486'
 ht-degree: 0%
 
 ---
@@ -27,10 +27,10 @@ Be din Adobe Analytics-representant om URL:en för mediespårningsservern. Det h
 `collection-api-server` URL för Mobile SDK, JavaScript SDK och spårningsservern utan samlings-api för Roku. Domännamn för API-implementering är: `[your_namespace].hb-api.omtrdc.net`.
 
 1. **Hämta aktuell Media SDK eller implementera nödvändiga tillägg**<br>
-Beroende på implementeringsvägen, [ladda ned aktuell SDK](download-sdks.md) för webb, mobiler och plattformar som ligger ovanpå varandra. De tillägg som krävs måste implementeras för att Adobe Analytics ska kunna aktiveras för direktuppspelningsmedia. Mer information om obligatoriska tillägg finns i [Adobe Extensions](download-sdks.md#media-extension). (behöver klargöras för att ladda ned Media SDK eller Get the Extension)
+Beroende på implementeringsvägen, [ladda ned aktuell SDK](download-sdks.md) för webb, mobiler och plattformar som ligger ovanpå varandra. De tillägg som krävs måste implementeras för att Adobe Analytics ska kunna aktiveras för sökvägar för medietillägg för direktuppspelning.
 
 1. **Aktivera Adobe Analytics-rapporter**<br>
-Om du vill aktivera rapporter i Analytics och visa innehåll och annonsuppgifter som du samlar in måste du aktivera rapporter i Analytics. Se [Aktivering av medierapporter.](/help/reporting/media-reports-enable.md).
+Om du vill aktivera rapporter i Analytics och visa innehåll och annonsuppgifter som du samlar in måste du aktivera rapporter i Analytics. Se [Aktivera medierapporter](/help/reporting/media-reports-enable.md).
 
 1. **Aktivera Experience Cloud**<br>
 

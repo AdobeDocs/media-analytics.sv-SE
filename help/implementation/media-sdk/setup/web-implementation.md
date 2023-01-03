@@ -3,20 +3,21 @@ title: Konfigurera en webbimplementering för Analytics for Streaming Media
 description: Lär dig hur du implementerar Adobe Streaming Media för webbprogram.
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+exl-id: aed561d0-defc-4be5-87d3-0f331cdfab34
+source-git-commit: 85e1d5223cec7168bbf592d941e6a5aece249459
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '449'
 ht-degree: 2%
 
 ---
 
-
 # Installera webb-SDK:er {#install-web-sdks}
 
-Konfigurera Media SDK v3.x för JavaScript >> vad Calis vill ha på nedladdningssidan/länken
+I det här avsnittet finns information om hur du installerar den fristående SDK:n för webben och konfigurerar JavaScript.
 
-Det här avsnittet innehåller information om hur du installerar web SDK och konfigurerar JavaScript.
+* [Fristående webb-SDK](/help/implementation/media-sdk/setup/web-implementation.md)
 
+* [Webbtillägg SDK](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/media-analytics-3x/overview.html?lang=en){target=_blank}
 
 ## Förutsättningar {#prerequesites}
 

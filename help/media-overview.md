@@ -5,9 +5,9 @@ uuid: b3cbe240-b94d-42b8-a99c-0280334aaa14
 exl-id: 826530f7-2c39-41ef-b3b4-d3f44b46858f
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: b022bed6b7be0cc97caaaf6b7bbc42474a57b400
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '531'
 ht-degree: 9%
 
 ---
@@ -24,7 +24,7 @@ Ni kan mäta viktiga leveransvärden som är relaterade till Experience Quality 
 
 ## Så här fungerar det
 
-Spårningsdata för direktuppspelande media samlas in från en spelare med Media SDK, Media Collection API:er eller Media Extensions (med taggar). Alla detaljerade data (upp till 10 sekunder) skickas till tjänsten Media Analytics som samlar in och bearbetar data för varje enskild uppspelningssession. När uppspelningssessionen är slut skickas de beräknade spårningsdata till Adobe Analytics för lagring och rapportering. Med Adobe Customer Journey Analytics (CJA)-implementeringar kan data skickas till CJA med hjälp av ADC (Analytics Data Connector) så att kunderna kan använda CJA som rapporteringsverktyg.
+Spårningsdata för direktuppspelande media samlas in från en spelare med hjälp av Media SDK:er eller Adobe Experience Platform Media Extensions och Media Collection API:er. Alla detaljerade data (upp till 10 sekunder) skickas till tjänsten Media Analytics som samlar in och bearbetar data för varje enskild uppspelningssession. När uppspelningssessionen är slut skickas de beräknade spårningsdata till Adobe Analytics för lagring och rapportering. Med Adobe Customer Journey Analytics (CJA)-implementeringar kan data skickas till CJA med hjälp av ADC (Analytics Data Connector) så att kunderna kan använda CJA som rapporteringsverktyg.
 
 <!-- ![streaming media process](./assets/streaming-process1.png) -->
 

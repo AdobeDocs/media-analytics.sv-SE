@@ -4,19 +4,19 @@ description: Lär dig mer om implementeringsvägar för Streaming Media.
 uuid: null
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+exl-id: ed9297b1-6487-4099-bc62-0c3a40572255
+source-git-commit: 85e1d5223cec7168bbf592d941e6a5aece249459
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 0%
 
 ---
 
-
 # Implementera direktuppspelningsmedia för Adobe Analytics
 
 Vilken implementeringsväg du följer beror på om du väljer att använda den inbyggda logiken i Media SDK (standard, rekommenderad implementering) eller om du väljer att rulla din egen och använda den enkla, men ändå kraftfulla och anpassningsbara Media Collection API:n (RESTful).
 
-Välj implementeringssökväg beroende på vilka plattformar som stöds. Vissa spelare stöds inte av Media SDK:er eller Adobe Experience Platform Media SDK, och API:erna för Media Collection är ett sätt att stödja dessa spelare. Mer information om enheter som stöds finns i [Enheter och plattformar som stöds](/help/getting-started/supported-devices.md).
+Välj implementeringssökväg beroende på vilka plattformar som stöds. Vissa spelare stöds inte av Media SDK eller Adobe Experience Platform Media Extensions. Media Collection-API:erna ger stöd för dessa spelare. Mer information om enheter som stöds finns i [Enheter och plattformar som stöds](/help/getting-started/supported-devices.md).
 
 ![Medieflöde](media-sdk/assets/choose-media-flow2.png)
 
