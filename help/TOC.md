@@ -5,10 +5,10 @@ user-guide-title: Adobe Analytics for Streaming Media
 breadcrumb-title: Media Analytics Guide
 user-guide-description: Implementera Adobe Analytics för direktuppspelningsmedia. Innehåller Media SDK och Media Collection API.
 sub-product: media analytics
-source-git-commit: d1e7a74a03c68e08987f03a295edc69989d9a4c6
+source-git-commit: f25a661c9ad4af1aa1cd97854c26fda44cc6816e
 workflow-type: tm+mt
-source-wordcount: '887'
-ht-degree: 69%
+source-wordcount: '894'
+ht-degree: 68%
 
 ---
 
@@ -23,7 +23,13 @@ ht-degree: 69%
    + [SDK, Libraries och Extensions](getting-started/download-sdks.md)
    + [Enheter som stöds](getting-started/supported-devices.md)
    + [Förutsättningar](getting-started/prereqs.md)
-   + [Supportslut](additional-resources/end-of-support-faqs.md)
+   + Supportslut {#end-of-support}
+      + [Stöd för Media Analytics Mobile SDK upphör](additional-resources/end-of-support-faqs.md)
+      + Äldre - Media SDK för att starta migrering {#sdk-to-launch}
+      + [Översikt](legacy/sdk-to-launch/sdk-to-launch-migration.md)
+      + [Android - Media SDK to Launch](legacy/sdk-to-launch/sdk-to-launch-migration-platforms/sdk-to-launch-migration-android.md)
+      + [iOS - Media SDK to Launch](legacy/sdk-to-launch/sdk-to-launch-migration-platforms/sdk-to-launch-migration-ios.md)
+      + [JavaScript - Media SDK to Launch](legacy/sdk-to-launch/sdk-to-launch-migration-platforms/sdk-to-launch-migration-js.md)
    + [Dokumentation för direktuppspelande media](getting-started/implementation-documentation.md)
 + Implementering {#implementation}
    + [Implementeringsöversikt](implementation/overview.md)
@@ -160,11 +166,6 @@ ht-degree: 69%
       + [Konfigurera iOS](legacy/media-sdk/setup/set-up-ios.md)
       + Konfigurera JavaScript {#setup-javascript}
          + [Konfigurera JavaScript 3.x](legacy/media-sdk/setup/setup-javascript/set-up-js-3.md)
-   + Äldre - Media SDK för att starta migrering {#sdk-to-launch}
-      + [Översikt](legacy/sdk-to-launch/sdk-to-launch-migration.md)
-      + [Android - Media SDK to Launch](legacy/sdk-to-launch/sdk-to-launch-migration-platforms/sdk-to-launch-migration-android.md)
-      + [iOS - Media SDK to Launch](legacy/sdk-to-launch/sdk-to-launch-migration-platforms/sdk-to-launch-migration-ios.md)
-      + [JavaScript - Media SDK to Launch](legacy/sdk-to-launch/sdk-to-launch-migration-platforms/sdk-to-launch-migration-js.md)
    + [Om mätning av pulsslag](legacy/heartbeat-measurement.md)
    + [Adobe Primetime och Streaming Media Analytics](legacy/intro-to-ava/implementation-paths/primetime-path.md)
    + [Adobe Audience Management Enabled](legacy/intro-to-ava/am-enablement.md)
