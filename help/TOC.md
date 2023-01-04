@@ -5,7 +5,7 @@ user-guide-title: Adobe Analytics for Streaming Media
 breadcrumb-title: Media Analytics Guide
 user-guide-description: Implementera Adobe Analytics för direktuppspelningsmedia. Innehåller Media SDK och Media Collection API.
 sub-product: media analytics
-source-git-commit: a9366d5bf590f16b193c7e2905cadca0f7afd636
+source-git-commit: d1e7a74a03c68e08987f03a295edc69989d9a4c6
 workflow-type: tm+mt
 source-wordcount: '887'
 ht-degree: 69%
@@ -31,8 +31,8 @@ ht-degree: 69%
       + [Översikt över Media SDK](implementation/media-sdk/media-sdk-overview.md)
       + Installera och konfigurera {#setup}
          + Installera web SDK:er {#install-web-sdk}
-            + [Implementera Analytics med JavaScript](implementation/media-sdk/setup/web-implementation.md)
-            + [Implementera Analytics med Media Analytics-tillägget](implementation/media-sdk/setup/web-implementation-tags.md)
+            + [Installera Analytics med JavaScript](implementation/media-sdk/setup/web-implementation.md)
+            + [Installera Analytics med Media Analytics-tillägget](implementation/media-sdk/setup/web-implementation-tags.md)
          + [Installera mobil-SDK](implementation/media-sdk/setup/mobile-implementation.md)
          + Installera OTT SDK:er {#ott-setup}
             + [Installera Chromecast SDK](implementation/media-sdk/setup/set-up-chromecast.md)
