@@ -4,20 +4,18 @@ description: Lär dig hur du implementerar Adobe Streaming Media för webbprogra
 feature: Media Analytics
 role: User, Admin, Data Engineer
 exl-id: aed561d0-defc-4be5-87d3-0f331cdfab34
-source-git-commit: 85e1d5223cec7168bbf592d941e6a5aece249459
+source-git-commit: d0ea5f9d8ee61475aa40c606fb79659dfd6b3870
 workflow-type: tm+mt
-source-wordcount: '449'
-ht-degree: 2%
+source-wordcount: '453'
+ht-degree: 3%
 
 ---
 
-# Installera webb-SDK:er {#install-web-sdks}
+# Implementera Analytics med JavaScript {#install-web-sdks}
 
-I det här avsnittet finns information om hur du installerar den fristående SDK:n för webben och konfigurerar JavaScript.
+Informationen på den här sidan beskriver hur du installerar den fristående SDK:n för webben och konfigurerar JavaScript.
 
-* [Fristående webb-SDK](/help/implementation/media-sdk/setup/web-implementation.md)
-
-* [Webbtillägg SDK](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/media-analytics-3x/overview.html?lang=en){target=_blank}
+Du kan också använda Adobe Media Analytics-tillägget för att implementera Analytics, enligt beskrivningen i [Implementera Analytics med Media Analytics-tillägget](/help/implementation/media-sdk/setup/web-implementation-tags.md).
 
 ## Förutsättningar {#prerequesites}
 
