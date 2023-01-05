@@ -5,7 +5,7 @@ user-guide-title: Adobe Analytics for Streaming Media
 breadcrumb-title: Media Analytics Guide
 user-guide-description: Implementera Adobe Analytics för direktuppspelningsmedia. Innehåller Media SDK och Media Collection API.
 sub-product: media analytics
-source-git-commit: 97d5d1df35bb282cac803500e1ddd72d654aef6e
+source-git-commit: 9ff1cf4f622f9f2d34275297ffbc3ebf92c2f1ba
 workflow-type: tm+mt
 source-wordcount: '894'
 ht-degree: 68%
@@ -20,9 +20,10 @@ ht-degree: 68%
    + [Versionsinformation för direktuppspelande media](additional-resources/release-notes.md)
 + Komma igång {#getting-started}
    + [Översikt](getting-started/getting-started.md)
-   + [SDK, Libraries och Extensions](getting-started/download-sdks.md)
-   + [Enheter som stöds](getting-started/supported-devices.md)
    + [Förutsättningar](getting-started/prereqs.md)
+   + [Enheter som stöds](getting-started/supported-devices.md)
+   + [Dokumentation för direktuppspelande media](getting-started/implementation-documentation.md)
+   + [SDK, Libraries och Extensions](getting-started/download-sdks.md)
    + Supportslut {#end-of-support}
       + [Stöd för Media Analytics Mobile SDK upphör](additional-resources/end-of-support-faqs.md)
       + Äldre - Media SDK för att starta migrering {#sdk-to-launch}
@@ -30,7 +31,6 @@ ht-degree: 68%
          + [Android - Media SDK to Launch](legacy/sdk-to-launch/sdk-to-launch-migration-platforms/sdk-to-launch-migration-android.md)
          + [iOS - Media SDK to Launch](legacy/sdk-to-launch/sdk-to-launch-migration-platforms/sdk-to-launch-migration-ios.md)
          + [JavaScript - Media SDK to Launch](legacy/sdk-to-launch/sdk-to-launch-migration-platforms/sdk-to-launch-migration-js.md)
-   + [Dokumentation för direktuppspelande media](getting-started/implementation-documentation.md)
 + Implementering {#implementation}
    + [Implementeringsöversikt](implementation/overview.md)
    + Media SDKs - implementering {#media-sdk}
