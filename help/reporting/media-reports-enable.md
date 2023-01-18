@@ -5,9 +5,9 @@ uuid: d306068d-a308-4b6e-8a72-742dda0de428
 exl-id: 686d88a5-79b6-4936-ba9e-8f834ef330d1
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: e0a8d2d16a746a717d54bdb171f66f3a7d112251
 workflow-type: tm+mt
-source-wordcount: '914'
+source-wordcount: '904'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 Varje rapportsvit som samlar in mediemätningar måste konfigureras innan mediedata skickas.
 
-Avancerade kunder kan bara använda mediepanelerna i Analysis Workspace efter att Media Core har aktiverats och spårning har aktiverats för [Upplevelsekvalitet](https://experienceleague.adobe.com/docs/media-analytics/using/sdk-implement/track-qos/track-qos-overview.html?lang=en).
+Avancerade kunder kan bara använda mediepanelerna i Analysis Workspace efter att Media Core har aktiverats och spårning har aktiverats för [Upplevelsekvalitet](/help/use-cases/track-qos/track-qos-overview.md).
 
 >[!TIP]
 >
