@@ -4,24 +4,23 @@ description: Det här avsnittet innehåller frågor och svar om att stödet för
 exl-id: 9601ec17-8421-49d0-9d81-1cfa5e8f37cf
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: b022bed6b7be0cc97caaaf6b7bbc42474a57b400
+source-git-commit: b955b20495a504020a214c3a9e32b676701ee4cc
 workflow-type: tm+mt
-source-wordcount: '691'
+source-wordcount: '617'
 ht-degree: 0%
 
 ---
 
 # Vanliga frågor om supporten för Media Analytics Mobile SDK
 
-När stödet för version 4 Mobile SDK upphör den 31 augusti 2021 upphör även stödet för Media Analytics Mobile SDK:er för iOS och Android. Efter den 31 augusti 2021 kommer Adobe inte att tillhandahålla korrigeringar, OS-relaterade uppdateringar eller stöd för Media Analytics Mobile SDK.  Under migreringen till dessa nya Experience Platform SDK:er bör du tänka på att [Media Analytics-tillägg](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/) måste implementeras för att aktivera Adobe Analytics för direktuppspelningsmedia.
+När stödet för version 4 Mobile SDK upphörde den 31 augusti 2021 upphörde även Adobe stödet för Media Analytics Mobile SDK för iOS och Android. (Detta inkluderar inte Media Analytics SDK för webben (JS) och OTT-plattformar som Chromecast och Roku, som fortfarande stöds.)
 
->[!NOTE]
->Adobe Experience Platform Launch har omklassificerats som en serie datainsamlingstekniker i Experience Platform. Som ett resultat av detta har flera terminologiska förändringar införts i produktdokumentationen. Se följande [dokument](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=en) för en konsoliderad hänvisning till terminologiska förändringar.
+Det innebär att Adobe inte längre tillhandahåller korrigeringar, OS-relaterade uppdateringar eller stöd för Media Analytics Mobile SDK. När du migrerar till de nya SDK:erna för Experience Platform bör du tänka på att [Media Analytics-tillägg](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/) måste implementeras för att Adobe Analytics ska kunna aktiveras för direktuppspelningsmedia.
 
 
 ## De fem viktigaste sakerna att veta
 
-1. Stöd för v4 SDK:er för mobiler kommer inte längre att finnas efter den 31 augusti 2021. Du bör migrera till Adobe Experience Platform (AEP) Mobile SDK för iOS och Android. Mer information finns i [Version 4 SDK för mobiler - frågor och svar](https://developer.adobe.com/client-sdks/documentation/v4-end-of-life-faq/).
+1. Mobile v4 SDK:er stöds inte längre per den 31 augusti 2021. Du bör migrera till Adobe Experience Platform (AEP) Mobile SDK för iOS och Android. Mer information finns i [Version 4 SDK för mobiler - frågor och svar](https://developer.adobe.com/client-sdks/documentation/v4-end-of-life-faq/).
 
 1. Analyser för Streaming Media-implementering kräver AEP Mobile SDK och användning av tilläggen Analytics och Media Analytics. Från och med 1 september 2021 bör du använda de nya AEP Mobile SDK:erna och tilläggen.  Media Analytics-tillägg konfigureras med Adobe-taggar (datainsamling). Mer information finns i [Migrering från fristående Media SDK till Adobe Launch](/help/legacy/sdk-to-launch/sdk-to-launch-migration.md)
 
@@ -29,9 +28,7 @@ När stödet för version 4 Mobile SDK upphör den 31 augusti 2021 upphör även
 
 1. Roku och Chromecast SDK är fortfarande tillgängliga för Analytics för Streaming Media-kunder. Roku- och Chromecast-SDK:erna kommer att fortsätta förbättras och stödjas som fristående SDK:er. Om du använder JS SDK för Media Analytics kan du fortsätta använda den fristående SDK:n eller aktivera Media Analytics-tillägget med Adobe Data Collection (tidigare Adobe Launch).
 
-1. Före den 1 september 2021 får Adobe efter eget gottfinnande ta fram nya korrigeringar för problem med stor teknisk inverkan eller affärsexponering. På grundval av kundernas synpunkter kommer Adobe att fastställa graden av påverkan, exponering och efterföljande aktiviteter.
-
-Kontakta din Customer Success Manager på Adobe om du har några frågor.
+Kontakta ditt kontoteam på Adobe om du har några frågor.
 
 ## Vanliga frågor
 
