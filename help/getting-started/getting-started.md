@@ -5,10 +5,10 @@ uuid: null
 feature: Media Analytics
 role: User, Admin, Data Engineer
 exl-id: 660aa29a-2a3d-4a4f-acd6-471551d1047b
-source-git-commit: b022bed6b7be0cc97caaaf6b7bbc42474a57b400
+source-git-commit: 0c1382c9c4f1488fba81575097d154301a9b8e70
 workflow-type: tm+mt
-source-wordcount: '298'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -31,7 +31,7 @@ Mer information finns i [Enheter och plattformar som stöds](/help/getting-start
 
 >[!IMPORTANT]
 >
->Om du vill implementera Adobe Analytics Streaming Media kontaktar du säljaren eller kontohanteraren på Adobe för att kontrollera att Streaming Media ingår i produktportföljen.
+>Om du vill implementera Adobe Analytics Streaming Media kontaktar du säljaren på Adobe eller kontoteamet på Adobe för att försäkra dig om att Streaming Media ingår i din produktportfölj.
 
 ## Media SDK för direktuppspelande media {#media-sdks}
 

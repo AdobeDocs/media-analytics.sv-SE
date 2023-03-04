@@ -5,9 +5,9 @@ uuid: 4c0b37f3-8615-4cc0-b9c9-eeb029067064
 exl-id: 85ab1dbd-f4a7-4f11-afc9-8d5000e2de70
 feature: "Media Analytics, System Requirements"
 role: User, Admin, Data Engineer
-source-git-commit: b022bed6b7be0cc97caaaf6b7bbc42474a57b400
+source-git-commit: 0c1382c9c4f1488fba81575097d154301a9b8e70
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 Så här implementerar du Adobe Analytics för direktuppspelningsmedia:
 
 1. **Bekräfta prismodellen för strömmande media**<br>
-Den aktuella prismodellen bygger på videoströmmar. Kontakta vid behov din säljare eller kontoansvarige för att signera en ny försäljningsorder eftersom Streaming Media Analytics säljs separat från Adobe Analytics.
+Den aktuella prismodellen bygger på videoströmmar. Om det behövs kan du kontakta din säljrepresentant eller kontoteamet på Adobe för att signera en ny försäljningsorder eftersom Streaming Media Analytics säljs separat från Adobe Analytics.
 
 1. **Bekräfta att du implementerar Adobe Analytics**<br>
 Streaming Media för Adobe Analytics kräver också en grundläggande Adobe Analytics-implementering. Se [Implementera Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/home.html) för mer information.

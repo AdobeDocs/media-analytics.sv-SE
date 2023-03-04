@@ -4,9 +4,9 @@ description: Läs om Adobe Primetime lösning och hur den kan tjäna pengar på 
 exl-id: 756e4e62-35b3-42a2-93f5-81531e1c9cc8
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: 0c1382c9c4f1488fba81575097d154301a9b8e70
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '257'
 ht-degree: 1%
 
 ---
@@ -31,4 +31,4 @@ TVSDK är redan integrerat med Media SDK, vilket gör implementeringen mycket en
 
 >[!NOTE]
 >
->För den här implementeringsvägen måste kunderna kontakta sin säljare/kontoansvarige för att signera en ny försäljningsorder, eftersom Media Analytics har en unik SKU och ändringar från en prismodell som baseras på serveranrop till en modell som baseras på medieströmmar. Kontakta även din säljare/kontoansvarige för att diskutera inköp av TVSDK.
+>För den här implementeringsvägen måste kunderna kontakta sin säljare/kontogrupp på Adobe för att signera en ny försäljningsorder, eftersom Media Analytics har en unik SKU och ändringar från en prismodell som baseras på serversamtal till en modell som baseras på medieströmmar. Kontakta även din säljare/kontoansvarige för att diskutera inköp av TVSDK.

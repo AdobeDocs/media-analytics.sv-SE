@@ -4,9 +4,9 @@ description: Läs mer om implementeringsvägar för Adobe Streaming Media, inklu
 exl-id: eee70e62-ba45-440a-8ce1-e151b66d2c1f
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: 9ba64b68efec5dd8b52010ac1a13afd7703448d0
+source-git-commit: 0c1382c9c4f1488fba81575097d154301a9b8e70
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 **DET HÄR INNEHÅLLET FLYTTADES TILL DEN AKTUELLA IMPLEMENTERINGSBANFILEN**
 
-För varje implementeringsväg måste kunderna kontakta sin säljare/kontoansvarige för att signera en ny försäljningsorder eftersom Streaming Media Analytics har en unik SKU och ändringar från en prismodell som baseras på serveranrop till en modell som baseras på videoströmmar.
+För varje implementeringsväg måste kunderna kontakta sin säljare/kontogrupp på Adobe för att signera en ny försäljningsorder eftersom Streaming Media Analytics har en unik SKU och ändringar från en prismodell som baseras på serversamtal till en modell som baseras på videoströmmar.
 
 ## Adobe Experience Platform Data Collection med tillägget Adobe Media Analytics
 
