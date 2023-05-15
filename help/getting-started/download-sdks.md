@@ -5,10 +5,10 @@ uuid: a619fbb8-693e-4583-8dad-0ff875e715f8
 exl-id: d211fa2e-d5b0-4e9f-bdb7-eda838194f3d
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: 5c0195ab6945b65cd37f2e8fd9ddc8c8e91507f0
+source-git-commit: 0c02fec77d6484774ea81e997529accddb19d175
 workflow-type: tm+mt
-source-wordcount: '366'
-ht-degree: 3%
+source-wordcount: '405'
+ht-degree: 2%
 
 ---
 
@@ -24,7 +24,7 @@ Taggar i Adobe Experience Platform är nästa generation av funktioner för hant
 >Mer information om hur du hämtar äldre SDK:er finns i [Äldre - Hämta SDK:er](/help/legacy/legacy-download-sdks.md).<br>
 >Viktig information om att supporten upphör finns i [Vanliga frågor och svar om supporten upphör](/help/additional-resources/end-of-support-faqs.md).
 
-## Media SDK och Mobile Libraries {#media-sdks-libraries}
+## Media SDK och mobila bibliotek {#media-sdks-libraries}
 
 ### Webbimplementering {#download-web-sdk}
 
@@ -32,13 +32,16 @@ Taggar i Adobe Experience Platform är nästa generation av funktioner för hant
 |:---:|---|---|---|---|
 | ![JavaScript-ikon](assets/javascript-icon.png) | Webb - [Media SDK för JS v3.0.2](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/js-v3.0.2) | [JavaScript API-referens](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/index.html) | [Installera Analytics med JavaScript](/help/implementation/media-sdk/setup/web-implementation.md) | [Media SDK för JS v3.0.2 - exempel](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/sdks/js/3.x) |
 | ![JavaScript-ikon](assets/javascript-icon.png) | Webb - Medietillägg |  | [Adobe Media Analytics (3.x SDK) for Audio and Video extension - using Tags (Data Collection)](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/media-analytics-3x/overview.html?lang=en) | [Adobe Media Analytics (3.x SDK) for Audio and Video Extension Sample](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/samples/launch/js/3.x) |
+| ![JavaScript-ikon](assets/javascript-icon.png) | Webb - Experience Platform Edge (kommer snart) |  | [Installera Analytics med Experience Platform Edge](/help/implementation/media-sdk/implementation-edge.md) |  |
 
 ### Mobilimplementering {#get-mobile-extension}
 
 | Plattform som stöds | Version |  Dokumentation   |  Exempel  |
 |:---:|---|---|---|
 | ![Android-ikon](assets/android-icon.png) | Android - medietillägg | [Mobile SDK-dokumentation](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/) | [Adobe Analytics - Media Analytics for Audio and Video Sample](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/samples/launch/mobile/android) |
-| ![Apple iOS, ikon](assets/ios-icon.png)<br>lägg till tvOS-ikon | iOS/tvOS - medietillägg | [Mobile SDK-dokumentation](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/) | [Adobe Analytics - Media Analytics for Audio and Video Sample](https://github.com/adobe/aepsdk-media-ios/tree/main/TestApp) |
+| ![Apple iOS, ikon ](assets/ios-icon.png)<br>**tvOS** | iOS/tvOS - medietillägg | [Mobile SDK-dokumentation](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/) | [Adobe Analytics - Media Analytics for Audio and Video Sample](https://github.com/adobe/aepsdk-media-ios/tree/main/TestApp) |
+| ![Android-ikon](assets/android-icon.png) | Android - Experience Platform Edge | [Installera Analytics med Experience Platform Edge](/help/implementation/media-sdk/implementation-edge.md) |  |
+| ![Apple iOS, ikon ](assets/ios-icon.png)<br>**tvOS** | iOS/tvOS - Experience Platform Edge | [Installera Analytics med Experience Platform Edge](/help/implementation/media-sdk/implementation-edge.md) |  |
 
 ### Ovanför implementering {#download-ott-libraries}
 

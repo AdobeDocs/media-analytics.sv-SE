@@ -5,9 +5,9 @@ user-guide-title: Adobe Analytics for Streaming Media
 breadcrumb-title: Användarhandbok om Media Analytics
 user-guide-description: Implementera Adobe Analytics for Streaming Media. Innehåller Media SDK och Media Collection API.
 sub-product: media analytics
-source-git-commit: 5c0195ab6945b65cd37f2e8fd9ddc8c8e91507f0
+source-git-commit: 9b448c75604abe2683ab4d522a7197dfe1af55be
 workflow-type: tm+mt
-source-wordcount: '895'
+source-wordcount: '902'
 ht-degree: 70%
 
 ---
@@ -40,6 +40,7 @@ ht-degree: 70%
             + [Installera Analytics med JavaScript](implementation/media-sdk/setup/web-implementation.md)
             + [Installera Analytics med Media Analytics-tillägget](implementation/media-sdk/setup/web-implementation-tags.md)
          + [Installera mobil-SDK](implementation/media-sdk/setup/mobile-implementation.md)
+         + [Installera Analytics med Adobe Experience Platform Edge](implementation/media-sdk/implementation-edge.md)
          + Installera OTT SDK:er {#ott-setup}
             + [Installera Chromecast SDK](implementation/media-sdk/setup/set-up-chromecast.md)
             + [Installera Roku SDK](implementation/media-sdk/setup/set-up-roku.md)
@@ -193,19 +194,19 @@ ht-degree: 70%
       + [Spåra grundläggande uppspelning i iOS](use-cases/track-av-playback/track-core/track-core-ios.md)
       + Spåra grundläggande uppspelning i JavaScript {#track-core-javascript}
          + [Spåra grundläggande uppspelning i JavaScript 2.x](use-cases/track-av-playback/track-core/track-core-javascript/track-core-js.md)
-      + [Spåra buffring i Android](use-cases/track-av-playback/track-buffering/track-buffering-android.md)
-      + [Spåra buffring i iOS](use-cases/track-av-playback/track-buffering/track-buffering-ios.md)
-      + Spåra buffring i JavaScript {#track-buffering-js}
-         + [Spåra buffring i JavaScript 2.x](use-cases/track-av-playback/track-buffering/track-buffering-js/track-buffering-js.md)
-      + [Spåra sökning i Android](use-cases/track-av-playback/track-seeking/track-seeking-android.md)
-      + [Spåra sökning i iOS](use-cases/track-av-playback/track-seeking/track-seeking-ios.md)
-      + Spåra sökning i JavaScript {#track-seeking-js}
-         + [Spåra sökning i JavaScript 2.x](use-cases/track-av-playback/track-seeking/track-seeking-js/track-seeking-js.md)
-      + [Implementera standardmetadata i Android](use-cases/track-av-playback/impl-std-metadata/impl-std-metadata-android.md)
-      + [Implementera standardmetadata i iOS](use-cases/track-av-playback/impl-std-metadata/impl-std-metadata-ios.md)
-      + [iOS-metadatanycklar](use-cases/track-av-playback/impl-std-metadata/ios-metadata-keys.md)
-      + Implementera standardmetadata i JavaScript {#impl-std-md-js}
-         + [Implementera standardmetadata i JavaScript 2.x](use-cases/track-av-playback/impl-std-metadata/impl-std-md-js/impl-std-metadata-js.md)
+         + [Spåra buffring i Android](use-cases/track-av-playback/track-buffering/track-buffering-android.md)
+         + [Spåra buffring i iOS](use-cases/track-av-playback/track-buffering/track-buffering-ios.md)
+         + Spåra buffring i JavaScript {#track-buffering-js}
+            + [Spåra buffring i JavaScript 2.x](use-cases/track-av-playback/track-buffering/track-buffering-js/track-buffering-js.md)
+         + [Spåra sökning i Android](use-cases/track-av-playback/track-seeking/track-seeking-android.md)
+         + [Spåra sökning i iOS](use-cases/track-av-playback/track-seeking/track-seeking-ios.md)
+         + Spåra sökning i JavaScript {#track-seeking-js}
+            + [Spåra sökning i JavaScript 2.x](use-cases/track-av-playback/track-seeking/track-seeking-js/track-seeking-js.md)
+         + [Implementera standardmetadata i Android](use-cases/track-av-playback/impl-std-metadata/impl-std-metadata-android.md)
+         + [Implementera standardmetadata i iOS](use-cases/track-av-playback/impl-std-metadata/impl-std-metadata-ios.md)
+         + [iOS-metadatanycklar](use-cases/track-av-playback/impl-std-metadata/ios-metadata-keys.md)
+         + Implementera standardmetadata i JavaScript {#impl-std-md-js}
+            + [Implementera standardmetadata i JavaScript 2.x](use-cases/track-av-playback/impl-std-metadata/impl-std-md-js/impl-std-metadata-js.md)
       + Spåra annonser {#track-ads}
          + [Spåra annonser i Android](use-cases/track-ads/track-ads-android.md)
          + [Spåra annonser i iOS](use-cases/track-ads/track-ads-ios.md)

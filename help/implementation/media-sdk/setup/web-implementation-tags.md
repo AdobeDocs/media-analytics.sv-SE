@@ -4,14 +4,14 @@ description: Lär dig hur du implementerar Adobe Streaming Media för webbprogra
 feature: Media Analytics
 role: User, Admin, Data Engineer
 exl-id: 05c68b0a-f387-4bcc-8792-f6b1caa40706
-source-git-commit: a6dba33839bba976b67a9b1e9669fce266d1cabd
+source-git-commit: 9d7886a67e426089977cbe322d310c36604646d0
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '122'
 ht-degree: 0%
 
 ---
 
-# Installera Analytics med Media Analytics-tillägget
+# Installera Media Analytics med Media Analytics-tillägget
 
 Ni kan använda Adobe Media Analytics-tillägget för att implementera Analytics. Media Analytics-tillägget lägger till JavaScript Media SDK (Media 3.x SDK). Det här tillägget innehåller funktioner för att lägga till Media Tracker-instansen till en tagghanterad plats eller ett tagghanterat projekt.
 
