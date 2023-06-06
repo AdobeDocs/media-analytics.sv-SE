@@ -5,9 +5,9 @@ uuid: 0718689d-9602-4e3f-833c-8297aae1d909
 exl-id: 82d3e5d7-4f88-425c-8bdb-e9101fc1db92
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: cdc5ea361829c749dfbb457288ac5ba51a530961
 workflow-type: tm+mt
-source-wordcount: '703'
+source-wordcount: '702'
 ht-degree: 0%
 
 ---
@@ -147,4 +147,4 @@ POST /api/v1/sessions HTTP/1.1
 
 ## API-referens för mediespårare
 
-Mer information om hur du konfigurerar hämtat innehåll finns i [API-referens för mediespårare](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics/media-api-reference#media-api-reference).
+Mer information om hur du konfigurerar hämtat innehåll finns i [API-referens för mediespårare](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/api-reference/).

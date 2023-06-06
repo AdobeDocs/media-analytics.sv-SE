@@ -6,7 +6,7 @@ description: Lär dig hur du migrerar från Media SDK till Launch.
 exl-id: 5350bbe9-c34f-46d9-a4c4-dbccdbed0bb0
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: cdc5ea361829c749dfbb457288ac5ba51a530961
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 1%
@@ -26,7 +26,7 @@ Tillägg är tillgängliga för Launch-kunder i en app-store-upplevelse, så att
 Adobe Media Analytics för ljud och video finns som ett Launch-tillägg för både webb och mobiler:
 
 * [Dokumentation för Web Launch](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/media-analytics/overview.html)
-* [Dokumentation för Mobile Launch](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics)
+* [Dokumentation för Mobile Launch](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/)
 
 ## Plattformar
 

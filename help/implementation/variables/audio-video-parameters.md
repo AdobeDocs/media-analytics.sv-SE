@@ -5,9 +5,9 @@ uuid: fdacfb8b-db3e-46fb-b9ad-c3a749555b2a
 exl-id: 9dc84377-6eca-482f-89e7-c4008d1c0f07
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: cdc5ea361829c749dfbb457288ac5ba51a530961
 workflow-type: tm+mt
-source-wordcount: '7004'
+source-wordcount: '7002'
 ht-degree: 1%
 
 ---
@@ -130,7 +130,7 @@ public static MediaObject createMediaObject(java.lang.String name,
 
 |   Implementering   | Nätverksparametrar | Rapportering |
 | --- | --- |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <ul> <li> **SDK-nyckel:**<br/> `config.downloadedcontent` </li> <li> **API-nyckel:**<br/> Hämtat från backend </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **Typ:**<br/> boolesk </li> <li> **Skickat med:**<br/> Mediestart, stäng media </li> <li> **Min. SDK-version:** <br/>Starta Android- och iOS-tillägget v1.1.0 </li> <li> **Exempelvärde:**<br/> true </li> <li> **Beskrivning:**<br/> Ange som true när träffen genereras på grund av uppspelning av en hämtad mediesession. Finns inte när det hämtade innehållet inte spelas upp.<br/><br/>[Starta](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics/media-api-reference#create-a-media-tracker-with-optional-configuration)  </li></ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.downloaded) </li> <li> **Hjärtslag:**<br/> (s:meta:a.media.downloaded) </li> </ul> | <ul> <li> **Tillgängligt:**<br/> Använd anpassad bearbetningsregel </li> <li> **Reserverad variabel:**<br/> Ej tillämpligt </li> <li> **Rapportnamn:**<br/> Egen </li> <li> **Kontextdata:**<br/> (a.media.downloaded) </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.downloaded) </li> <li> **Sökväg till XDM-fält:**<br/> media.mediaTimed.primaryAssetViewDetails.<br/>downloadedPlayback </li> <li> **Sökväg till Reporting XDM-fält:**<br/> mediaReporting.sessionDetails.isDownloaded </li> </ul> |
+| <ul> <li> **SDK-nyckel:**<br/> `config.downloadedcontent` </li> <li> **API-nyckel:**<br/> Hämtat från backend </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **Typ:**<br/> boolesk </li> <li> **Skickat med:**<br/> Mediestart, stäng media </li> <li> **Min. SDK-version:** <br/>Starta Android- och iOS-tillägget v1.1.0 </li> <li> **Exempelvärde:**<br/> true </li> <li> **Beskrivning:**<br/> Ange som true när träffen genereras på grund av uppspelning av en hämtad mediesession. Finns inte när det hämtade innehållet inte spelas upp.<br/><br/>[Starta](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/)  </li></ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.downloaded) </li> <li> **Hjärtslag:**<br/> (s:meta:a.media.downloaded) </li> </ul> | <ul> <li> **Tillgängligt:**<br/> Använd anpassad bearbetningsregel </li> <li> **Reserverad variabel:**<br/> Ej tillämpligt </li> <li> **Rapportnamn:**<br/> Egen </li> <li> **Kontextdata:**<br/> (a.media.downloaded) </li> <li> **Datafeed:**<br/> Ej tillämpligt </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.downloaded) </li> <li> **Sökväg till XDM-fält:**<br/> media.mediaTimed.primaryAssetViewDetails.<br/>downloadedPlayback </li> <li> **Sökväg till Reporting XDM-fält:**<br/> mediaReporting.sessionDetails.isDownloaded </li> </ul> |
 
 ### Innehållsspelarens namn
 

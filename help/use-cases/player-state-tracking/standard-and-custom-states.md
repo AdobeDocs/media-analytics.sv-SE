@@ -4,9 +4,9 @@ description: Läs om funktionen för spårning av spelartillstånd, inklusive kr
 exl-id: 3c492055-d471-4147-aa78-b058d6b931f4
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: cdc5ea361829c749dfbb457288ac5ba51a530961
 workflow-type: tm+mt
-source-wordcount: '279'
+source-wordcount: '278'
 ht-degree: 0%
 
 ---
@@ -42,4 +42,4 @@ Data beräknas på samma sätt för standardtillstånd och anpassade tillstånd,
 
 Med möjligheten att skapa anpassade lägen kan du hämta anpassade åtgärder och uppdatera anpassade metadata under en uppspelningssession.
 
-Mer information om hur du skapar anpassade lägen finns i [Referenshandbok för Media-API: `createStateObject`](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics/media-api-reference#createstateobject)
+Mer information om hur du skapar anpassade lägen finns i [Referenshandbok för Media-API: `createStateObject`](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/api-reference/)

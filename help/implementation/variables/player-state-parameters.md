@@ -5,9 +5,9 @@ uuid: 2a6b9247-a694-46e9-98e1-424c08c27ec2
 exl-id: cd51ed3a-fe37-41e9-8243-dfd9deb514c1
 feature: "Media Analytics, Variables"
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: cdc5ea361829c749dfbb457288ac5ba51a530961
 workflow-type: tm+mt
-source-wordcount: '2331'
+source-wordcount: '2329'
 ht-degree: 1%
 
 ---
@@ -159,6 +159,6 @@ Spårningsfunktionerna för spelartillstånd kan kopplas till ett ljud- eller vi
 
 ## Relaterade API:er {#related_apis_section}
 
-* Android - [createStateObject](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics/media-api-reference#createstateobject)
-* iOS - [createStateObjectWithName](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics/media-api-reference#createstateobject)
+* Android - [createStateObject](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/api-reference/)
+* iOS - [createStateObjectWithName](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/api-reference/)
 * Javascript - [createStateObject](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/APIReference.html)

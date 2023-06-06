@@ -3,13 +3,13 @@ title: Åtkomst till länkar till äldre - SDK för media
 description: Länkar till äldre SDK-hämtningar för tillgängliga plattformar, inklusive Android, iOS, JavaScript, Chromecast och Roku.
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+exl-id: d1066f05-f46f-46fa-897f-039657704d05
+source-git-commit: cdc5ea361829c749dfbb457288ac5ba51a530961
 workflow-type: tm+mt
-source-wordcount: '331'
+source-wordcount: '334'
 ht-degree: 4%
 
 ---
-
 
 # Äldre - Ladda ned SDK:er{#legacy-download-sdks}
 
@@ -27,7 +27,7 @@ Adobe Data Collection med Media Analytics-tillägget har följande krav:
 * Du måste vara kund hos Adobe Experience Cloud.
 * Du måste distribuera datainsamling eller DTM-inbäddningskod på dina webbsidor.
 * Du måste konfigurera [Analystillägg](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/analytics/overview.html).
-* Du måste konfigurera [Adobe Media Analytics för start av ljud och video](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics).
+* Du måste konfigurera [Adobe Media Analytics för ljud- och videotillägg](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/media-analytics/overview.html).
 * Du måste konfigurera [Experience Cloud ID-tillägg](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/id-service/overview.html).
 
 ## Ladda ned 2.x Media SDKs {#download-2x-sdks}
