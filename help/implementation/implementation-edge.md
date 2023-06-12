@@ -4,9 +4,9 @@ description: Lär dig hur du implementerar direktuppspelningsmedia för Adobe.
 feature: Media Analytics
 role: User, Admin, Data Engineer
 exl-id: 29d58b41-9a49-4b71-bdc5-4e2848cd3236
-source-git-commit: e3380ad898b551b6e0bbf5624d8419c5a95496f6
+source-git-commit: bcab6a94547b79a565dc2303ab640dc1b8994bd4
 workflow-type: tm+mt
-source-wordcount: '1888'
+source-wordcount: '1879'
 ht-degree: 0%
 
 ---
@@ -344,7 +344,7 @@ Så här skapar och konfigurerar du ett schema:
 
 ## Skicka data till Experience Platform Edge med AEP Mobile SDK
 
-Du kan använda Adobe Experience Platform mobil-SDK för att skicka mobildata till Experience Platform Edge. (Du kan också använda en anpassad implementering av edge-API:erna.<!-- I guess we don't need/want to document this? -->)
+Du kan använda Adobe Experience Platform mobil-SDK för att skicka mobildata till Experience Platform Edge. (Du kan också använda en anpassad implementering av edge-API:erna.<!-- Waiting for link from John -->)
 
 Använd följande dokumentationsresurser för att slutföra implementeringen av både iOS och Android:
 
@@ -352,5 +352,5 @@ Använd följande dokumentationsresurser för att slutföra implementeringen av 
 
 * [API-referens](https://developer.adobe.com/client-sdks/documentation/media-for-edge-network/api-reference/)
 
-* [Migrera till Adobe Streaming Media för Edge Network-tillägg](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/migration-guide/) (För användare som migrerar från medietillägget till Edge)
+* [Migrera till Adobe Streaming Media för Edge Network-tillägg](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/migration-guide/)
 
