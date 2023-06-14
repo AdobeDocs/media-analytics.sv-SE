@@ -4,9 +4,9 @@ description: Lär dig hur du implementerar direktuppspelningsmedia för Adobe.
 feature: Media Analytics
 role: User, Admin, Data Engineer
 exl-id: 29d58b41-9a49-4b71-bdc5-4e2848cd3236
-source-git-commit: bcab6a94547b79a565dc2303ab640dc1b8994bd4
+source-git-commit: 1280c0851094234b308e69ba2be3da21dfdc1302
 workflow-type: tm+mt
-source-wordcount: '1879'
+source-wordcount: '1935'
 ht-degree: 0%
 
 ---
@@ -344,7 +344,7 @@ Så här skapar och konfigurerar du ett schema:
 
 ## Skicka data till Experience Platform Edge med AEP Mobile SDK
 
-Du kan använda Adobe Experience Platform mobil-SDK för att skicka mobildata till Experience Platform Edge. (Du kan också använda en anpassad implementering av edge-API:erna.<!-- Waiting for link from John -->)
+Du kan använda Adobe Experience Platform mobil-SDK för att skicka mobildata till Experience Platform Edge.
 
 Använd följande dokumentationsresurser för att slutföra implementeringen av både iOS och Android:
 
@@ -354,3 +354,13 @@ Använd följande dokumentationsresurser för att slutföra implementeringen av 
 
 * [Migrera till Adobe Streaming Media för Edge Network-tillägg](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/migration-guide/)
 
+
+Du kan också använda en anpassad implementering av Edge-API:erna med följande resurser:
+
+* [Översikt över API för Media Edge](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/overview.html)
+
+* [Komma igång med API för Media Edge](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/getting-started.html)
+
+* [Felsökningsguide för Media Edge API](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/troubleshooting.html)
+
+* [Använda Open API-specifikationsfilen för Media Edge API:er](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/swagger.html)
