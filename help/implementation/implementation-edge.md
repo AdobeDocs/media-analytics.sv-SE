@@ -4,9 +4,9 @@ description: Lär dig hur du implementerar direktuppspelningsmedia för Adobe.
 feature: Media Analytics
 role: User, Admin, Data Engineer
 exl-id: 29d58b41-9a49-4b71-bdc5-4e2848cd3236
-source-git-commit: 1280c0851094234b308e69ba2be3da21dfdc1302
+source-git-commit: 547c47b09b2cc18ee155953eaad314599fa8d749
 workflow-type: tm+mt
-source-wordcount: '1935'
+source-wordcount: '1833'
 ht-degree: 0%
 
 ---
@@ -15,45 +15,17 @@ ht-degree: 0%
 
 Med Adobe Experience Platform Edge kan ni skicka data till flera produkter på en central plats. Experience Edge vidarebefordrar lämplig information till önskade produkter. Med det här konceptet kan ni konsolidera implementeringsinsatser, särskilt genom att sprida flera datalösningar.
 
-Följande bild visar en Media Analytics-implementering som använder Experience Platform Edge:
+Följande bild visar hur en Media Analytics-implementering kan använda Experience Platform Edge för att göra data tillgängliga i Analysis Workspace, antingen i Adobe Analytics eller Customer Journey Analytics:
 
-![Kantimplementering](assets/media-analytics-implementation-overview.png)
+![CJA-arbetsflöde](assets/cja-implementation.png)
+
+En översikt över alla implementeringsalternativ, inklusive implementeringsmetoder som inte använder Experience Platform Edge, finns i [Implementera direktuppspelningsmedia för Adobe Analytics eller Customer Journey Analytics](/help/implementation/overview.md).
 
 >[!IMPORTANT]
 >
->För närvarande kan du bara skicka data till Experience Edge med Adobe Experience Platform Mobile SDK.
+>Direktuppspelningsmedia är ännu inte integrerat med AEP Web SDK.
 
-
-<!-- Replace the above sentence with this after it web releases: You can send data to Experience Edge using any of the following implementation methods:
-
-* Adobe Experience Platform Web SDK (Coming soon)
-* Adobe Experience Platform Mobile SDK
-* Edge Network Server API
-
-Regardless of which Experience Edge implementation method you use for configuring media tracking, you must first complete the following sections:
-
--->
-
-Fyll i följande avsnitt för att implementera Media Analytics med Experience Platform Edge:
-
-* [Definiera en rapportsvit](#define-a-report-suite)
-* [Konfigurera schemat i Adobe Experience Platform](#set-up-the-schema-in-adobe-experience-platform)
-* [Skapa en datauppsättning i Adobe Experience Platform](#create-a-dataset-in-adobe-experience-platform)
-* [Konfigurera ett datastream i Adobe Experience Platform](#configure-a-datastream-in-adobe-experience-platform)
-* [Skapa en anslutning i Customer Journey Analytics](#create-a-connection-in-customer-journey-analytics)
-* [Skapa en datavy i Customer Journey Analytics](#create-a-data-view-in-customer-journey-analytics)
-* [Skapa och konfigurera ett projekt i Customer Journey Analytics](#create-and-configure-a-project-in-customer-journey-analytics)
-* [Skicka data till Experience Platform Edge med Edge Extension](#send-data-to-experience-platform-edge-with-the-edge-extension)
-
-## Definiera en rapportsvit
-
->[!NOTE]
->
->Du behöver bara skapa en rapportserie om du använder Adobe Analytics. Du behöver ingen rapportsvit om du tänker använda Customer Journey Analytics för rapportering.
-
-Om du tänker använda Adobe Analytics för rapportering måste du ha en rapportsserie som du kan använda med implementeringen av Streaming Media. Mer information om hur du definierar en rapportsserie finns i [Report Suite Manager](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/report-suites-admin.html?lang=en).
-
-När en rapportsvit har definierats kan du fortsätta med [Konfigurera schemat i Adobe Experience Platform](#set-up-the-schema-in-adobe-experience-platform).
+Oavsett om du använder Mobile SDK eller API:t för att implementera direktuppspelningsmedia med Experience Edge måste du först slutföra följande avsnitt:
 
 ## Konfigurera schemat i Adobe Experience Platform
 
@@ -353,7 +325,6 @@ Använd följande dokumentationsresurser för att slutföra implementeringen av 
 * [API-referens](https://developer.adobe.com/client-sdks/documentation/media-for-edge-network/api-reference/)
 
 * [Migrera till Adobe Streaming Media för Edge Network-tillägg](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/migration-guide/)
-
 
 Du kan också använda en anpassad implementering av Edge-API:erna med följande resurser:
 

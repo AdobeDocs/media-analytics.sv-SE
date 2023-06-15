@@ -1,25 +1,63 @@
 ---
-title: Implementera direktuppspelningsmedia för Adobe Analytics
+title: Implementera direktuppspelningsmedia för Adobe Analytics eller Customer Journey Analytics
 description: Lär dig mer om implementeringsvägar för Streaming Media.
 uuid: null
 feature: Media Analytics
 role: User, Admin, Data Engineer
 exl-id: ed9297b1-6487-4099-bc62-0c3a40572255
-source-git-commit: 85e1d5223cec7168bbf592d941e6a5aece249459
+source-git-commit: ade20d7ae3cbb525b3a8390a27e1d93201d83003
 workflow-type: tm+mt
-source-wordcount: '138'
+source-wordcount: '396'
 ht-degree: 0%
 
 ---
 
-# Implementera direktuppspelningsmedia för Adobe Analytics
+# Implementera direktuppspelningsmedia för Adobe Analytics eller Customer Journey Analytics
 
-Vilken implementeringsväg du följer beror på om du väljer att använda den inbyggda logiken i Media SDK (standard, rekommenderad implementering) eller om du väljer att rulla din egen och använda den enkla, men ändå kraftfulla och anpassningsbara Media Collection API:n (RESTful).
+Det finns olika sätt att implementera Streaming Media. En detaljerad jämförelse av enheter och plattformar som stöds för de implementeringsmetoder som beskrivs på den här sidan finns på [Enheter och plattformar som stöds](/help/getting-started/supported-devices.md).
 
-Välj implementeringssökväg beroende på vilka plattformar som stöds. Vissa spelare stöds inte av Media SDK eller Adobe Experience Platform Media Extensions. Media Collection-API:erna ger stöd för dessa spelare. Mer information om enheter som stöds finns i [Enheter och plattformar som stöds](/help/getting-started/supported-devices.md).
+## Implementeringsmetoder för Edge
 
-![Medieflöde](media-sdk/assets/choose-media-flow2.png)
+I de flesta fall rekommenderar vi att du använder Edge när du implementerar Media Analytics för alla nya Adobe Analytics- och Customer Journey Analytics-kunder (CJA).
 
-Mer information om hur du hämtar och installerar SDK:er och tillägg för Media finns i [Hämta SDK:er för media, tillägg med hjälp av taggar och OTT SDK:er](/help/getting-started/download-sdks.md).
+* **Media för Edge Network SDK / Extension:** Samlar in data från iOS- och Android-enheter och skickar dem till Edge. Data kan sedan skickas antingen till CJA eller Adobe Analytics.
 
-Mer information om hur du använder API:er för mediainsamling finns i [Media Collection API:er](media-collection-api/mc-api-overview.md).
+  Mer information om media för Edge Network SDK / Exention finns i [Installera Media Analytics med Experience Platform Edge](/help/implementation/implementation-edge.md).
+
+  >[!NOTE]
+  >
+  >Den här implementeringsmetoden stöder för närvarande inte Web SDK eller Roku. Båda stöds dock vid implementering med Media Edge API.
+
+* **Media Edge API:** Kan anpassas för att samla in data från alla enheter och format (inklusive mobila enheter, webbenheter och toppmoderna enheter) och skicka data till Edge. Data kan sedan skickas antingen till CJA eller Adobe Analytics.
+
+  <!-- For more information about the Media Edge API, see (link to John's docs when they're ready) -->
+
+![CJA-arbetsflöde](assets/cja-implementation.png)
+
+## Andra implementeringsmetoder
+
+I de flesta fall rekommenderas de implementeringsmetoder för Edge som beskrivs ovan för både CJA och Adobe Analytics, särskilt för nya implementeringar.
+
+Förutom implementeringsmetoderna för Edge finns det andra implementeringsmetoder. Dessa implementeringsmetoder har ursprungligen utformats för användning med Adobe Analytics. Kunder med någon av följande implementeringsmetoder kan dock fortfarande göra data tillgängliga i CJA genom att skapa en [Källanslutning för analys](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/adobe-applications/analytics.html).
+
+* **Medietillägg med taggar:** Tillägget Adobe Media Analytics for Audio och Video innehåller funktioner för att lägga till Media Tracker-instansen till en tagghanteringsaktiverad webbplats eller ett tagghanterat projekt. Data skickas till Adobe Analytics.
+
+  Information om hur du installerar, konfigurerar och implementerar medietillägget med taggar finns i [Adobe Media Analytics (3.x SDK) for Audio and Video extension overview](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/media-analytics-3x/overview.html).
+
+* **Media SDK:**  Data skickas till Adobe Analytics.
+
+  Mer information om hur du hämtar och installerar SDK:er och tillägg för Media finns i [Hämta SDK:er för media, tillägg med hjälp av taggar och OTT SDK:er](/help/getting-started/download-sdks.md).
+
+* **Media Collection API:** Spåra ljud- och videohändelser med RESTful HTTP-anrop. Data skickas till Adobe Analytics.
+
+  Mer information om hur du använder API:er för mediainsamling finns i [Media Collection API:er](media-collection-api/mc-api-overview.md).
+
+
+![Arbetsflöde för analyser](assets/analytics-implementation.png)
+
+<!--
+(Not sure if we need the following paragraph and graphic. Paragraph is somewhat redundant with the intro paragraph of this article)
+Choose the implementation method depending on the supported platforms. Some players are not supported by the Media SDKs or the Adobe Experience Platform Media Extensions. The Media Collection APIs provide a way to support those players. For information on supported devices, see [Supported devices and platforms](/help/getting-started/supported-devices.md).
+
+![Media Flow](media-sdk/assets/choose-media-flow2.png)
+-->

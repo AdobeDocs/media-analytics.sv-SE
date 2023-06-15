@@ -3,9 +3,10 @@ title: Konfigurera en mobil SDK med taggar för direktuppspelningsmedia
 description: Lär dig hur du implementerar Adobe Streaming Media för mobilappar.
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+exl-id: b4944b5f-cbae-4efc-9ef7-962d3f342240
+source-git-commit: 1e4babe0df218342fc4836155139d908ba113510
 workflow-type: tm+mt
-source-wordcount: '187'
+source-wordcount: '195'
 ht-degree: 0%
 
 ---
@@ -16,7 +17,9 @@ Installera och konfigurera följande för att implementera direktuppspelningsmed
 
 * **Adobe Experience Platform Mobile SDK**
 
-   Om du vill samla in data använder du Taggar i Adobe Experience Platform. Taggar i Adobe Experience Platform är en tagghanteringslösning som gör att ni kan driftsätta Analytics-kod tillsammans med andra taggningskrav.
+  Använd något av följande för att samla in data:
+   * Taggar i Adobe Experience Platform. Taggar i Adobe Experience Platform är en tagghanteringslösning som gör att ni kan driftsätta Analytics-kod tillsammans med andra taggningskrav.
+   * Adobe Experience Platform Edge
 
 * **Media SDK för Android** eller **Media SDK för iOS**
 
@@ -26,7 +29,7 @@ Information om hur du hämtar SDK:er och om du vill ha ytterligare dokumentation
 
 * **Hämta giltiga konfigurationsparametrar**
 
-   Dessa parametrar kan hämtas från en Adobe-representant när du har konfigurerat ditt analyskonto.
+  Dessa parametrar kan hämtas från en Adobe-representant när du har konfigurerat ditt analyskonto.
 
 * **Inkludera följande API:er i mediespelaren**
 
