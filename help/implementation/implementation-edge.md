@@ -4,9 +4,9 @@ description: Lär dig hur du implementerar direktuppspelningsmedia för Adobe.
 feature: Media Analytics
 role: User, Admin, Data Engineer
 exl-id: 29d58b41-9a49-4b71-bdc5-4e2848cd3236
-source-git-commit: b57db92ae4ce01e259424e3d71e36311af88ccac
+source-git-commit: 008f5a694ffa6416c0ff64f4f0ba06bf807ff5a6
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1774'
 ht-degree: 0%
 
 ---
@@ -46,60 +46,61 @@ Så här skapar och konfigurerar du ett schema:
 
    ![Tillagda fältgrupper](assets/schema-field-groups-added.png)
 
-
-Följande steg i det här avsnittet är valfria och begäranden till Media Edge API fungerar även utan att de angivna fälten i AEP-schemagränssnittet döljs.
-Men om du döljer fälten blir det enklare att läsa och förstå schemat eftersom de dolda fälten inte används av API:t för mediekant.
-Följande steg avser endast fälten i `MediaAnalytics Interaction Details` fältgrupp.
-
-1. I [!UICONTROL **Struktur**] markerar du `Media Collection Details` fält, markera [!UICONTROL **Hantera relaterade fält**] uppdaterar du sedan schemat enligt följande:
-
-   ![manage-related-fields](assets/manage-related-fields.png)
-
-   * I `Media Collection Details` fält, dölj `List Of States` fält.
-
-     ![dölj mediesamlingslägen](assets/schema-hide-media-collection-states.png)
-
-   * I `Media Collection Details` > `Advertising Details` fält, dölj följande rapporteringsfält: `Ad Completed`, `Ad Started`och `Ad Time Played`.
-
-   * I `Media Collection Details` > `Advertising Pod Details` fält, dölj följande rapporteringsfält: `Ad Break ID`
-
-   * I `Media Collection Details` > `Chapter Details` fält, dölj följande rapporteringsfält: `Chapter ID`, `Chapter Completed`, `Chapter Started`och `Chapter Time Played`.
-
-   * I `Media Collection Details` > `Qoe Data Details` fält, dölj följande rapporteringsfält: `Average Bitrate`, `Average Bitrate Bucket`, `Bitrate Changes`, `Buffer Events`, `Total Buffer Duration`, `Errors`, `External Error IDs`, `Bitrate Change Impacted Streams`, `Buffer Impacted Streams`, `Dropped Frame Impacted Streams`, `Error Impacted Streams`, `Stalling Impacted Streams`, `Drops Before Starts`, `Media SDK Error IDs`, `Player SDK Error IDs`, `Stalling Events`och `Total Stalling Duration`.
-
-   * I `Media Collection Details` > `Session Details` fält, dölj följande rapporteringsfält: `Media Session ID`, `Ad Count`, `Average Minute Audience`, `Chapter Count`, `Estimated Streams`, `Pause Impacted Streams`, `10% Progress Marker`, `25% Progress Marker`, `50% Progress Marker`, `75% Progress Marker`, `95% Progress Marker`, `Media Segment Views`, `Content Completes`, `Media Downloaded Flag`, `Federated Data`, `Content Starts`, `Media Starts`, `Pause Events`, `Total Pause Duration`, `Media Session Server Timeout`, `Video Segment`, `Content Time Spent`, `Media Time Spent`, `Unique Time Played`, `Pev3`och `Pccr`.
-
-   * I `Media Collection Details` > `List Of States End` och `Media Collection Details` > `List Of States Start` fält, dölj följande rapporteringsfält: `Player State Count`, `Player State Set`och `Player State Time`.
-
-     ![fält som ska döljas](assets/schema-hide-listofstates.png)
-
 1. Välj [!UICONTROL **Bekräfta**] för att spara ändringarna.
 
-1. I [!UICONTROL **Struktur**] markerar du `List Of Media Collection Downloaded Content Events` fält, markera [!UICONTROL **Hantera relaterade fält**] uppdaterar du sedan schemat enligt följande:
+1. (Valfritt) Du kan dölja vissa fält som inte används av API:t för mediekant. Om du döljer dessa fält blir schemat enklare att läsa och förstå, men det är inte nödvändigt. Dessa fält refererar endast till fälten i `MediaAnalytics Interaction Details` fältgrupp.
 
-   * I `List Of Media Collection Downloaded Content Events` > `Media Details` fält, dölj `List Of States` fält.
++++ Expandera här om du vill visa instruktioner för fält som du kan dölja.
 
-   * I `List Of Media Collection Downloaded Content Events` > `Media Details` > `Advertising Details` fält, dölj följande rapporteringsfält: `Ad Completed`, `Ad Started`och `Ad Time Played`.
+   1. I [!UICONTROL **Struktur**] markerar du `Media Collection Details` fält, markera [!UICONTROL **Hantera relaterade fält**] uppdaterar du sedan schemat enligt följande:
 
-   * I `List Of Media Collection Downloaded Content Events` > `Media Details` > `Advertising Pod Details` fält, dölj följande rapporteringsfält: `Ad Break ID`
+      ![manage-related-fields](assets/manage-related-fields.png)
 
-   * I `List Of Media Collection Downloaded Content Events` > `Media Details` > `Chapter Details` fält, dölj följande rapporteringsfält: `Chapter ID`, `Chapter Completed`, `Chapter Started`och `Chapter Time Played`.
+      * I `Media Collection Details` fält, dölj `List Of States` fält.
 
-   * I `List Of Media Collection Downloaded Content Events` > `Media Details` > `Qoe Data Details` fält, dölj följande rapporteringsfält: `Average Bitrate`, `Average Bitrate Bucket`, `Bitrate Changes`, `Buffer Events`, `Total Buffer Duration`, `Errors`, `External Error IDs`, `Bitrate Change Impacted Streams`, `Buffer Impacted Streams`, `Dropped Frame Impacted Streams`, `Error Impacted Streams`, `Stalling Impacted Streams`, `Drops Before Starts`, `Media SDK Error IDs`, `Player SDK Error IDs`, `Stalling Events`och `Total Stalling Duration`.
+        ![dölj mediesamlingslägen](assets/schema-hide-media-collection-states.png)
 
-   * I `List Of Media Collection Downloaded Content Events` > `Media Details` > `Session Details` fält, dölj följande rapporteringsfält: `Media Session ID`, `Ad Count`, `Average Minute Audience`, `Chapter Count`, `Estimated Streams`, `Pause Impacted Streams`, `10% Progress Marker`, `25% Progress Marker`, `50% Progress Marker`, `75% Progress Marker`, `95% Progress Marker`, `Media Segment Views`, `Content Completes`, `Media Downloaded Flag`, `Federated Data`, `Content Starts`, `Media Starts`, `Pause Events`, `Total Pause Duration`, `Media Session Server Timeout`, `Video Segment`, `Content Time Spent`, `Media Time Spent`, `Unique Time Played`, `Pev3`och `Pccr`.
+      * I `Media Collection Details` > `Advertising Details` fält, dölj följande rapporteringsfält: `Ad Completed`, `Ad Started`och `Ad Time Played`.
 
-   * I `List Of Media Collection Downloaded Content Events` > `Media Details` > `List Of States End` och `Media Collection Details` > `List Of States Start` fält, dölj följande rapporteringsfält: `Player State Count`, `Player State Set`och `Player State Time`.
+      * I `Media Collection Details` > `Advertising Pod Details` fält, dölj följande rapporteringsfält: `Ad Break ID`
 
-   * I `List Of Media Collection Downloaded Content Events` > `Media Details`  fält, dölj `Media Session ID` fält.
+      * I `Media Collection Details` > `Chapter Details` fält, dölj följande rapporteringsfält: `Chapter ID`, `Chapter Completed`, `Chapter Started`och `Chapter Time Played`.
 
-1. Välj [!UICONTROL **Bekräfta**] för att spara ändringarna.
+      * I `Media Collection Details` > `Qoe Data Details` fält, dölj följande rapporteringsfält: `Average Bitrate`, `Average Bitrate Bucket`, `Bitrate Changes`, `Buffer Events`, `Total Buffer Duration`, `Errors`, `External Error IDs`, `Bitrate Change Impacted Streams`, `Buffer Impacted Streams`, `Dropped Frame Impacted Streams`, `Error Impacted Streams`, `Stalling Impacted Streams`, `Drops Before Starts`, `Media SDK Error IDs`, `Player SDK Error IDs`, `Stalling Events`och `Total Stalling Duration`.
 
-1. I [!UICONTROL **Struktur**] markerar du `Media Reporting Details` fält, markera [!UICONTROL **Hantera relaterade fält**] uppdaterar du sedan schemat enligt följande:
+      * I `Media Collection Details` > `Session Details` fält, dölj följande rapporteringsfält: `Media Session ID`, `Ad Count`, `Average Minute Audience`, `Chapter Count`, `Estimated Streams`, `Pause Impacted Streams`, `10% Progress Marker`, `25% Progress Marker`, `50% Progress Marker`, `75% Progress Marker`, `95% Progress Marker`, `Media Segment Views`, `Content Completes`, `Media Downloaded Flag`, `Federated Data`, `Content Starts`, `Media Starts`, `Pause Events`, `Total Pause Duration`, `Media Session Server Timeout`, `Video Segment`, `Content Time Spent`, `Media Time Spent`, `Unique Time Played`, `Pev3`och `Pccr`.
 
-   * I `Media Reporting Details` fält, dölj följande fält: `Error Details`, `List Of States End`, `List of States Start`och `Media Session ID`.
+      * I `Media Collection Details` > `List Of States End` och `Media Collection Details` > `List Of States Start` fält, dölj följande rapporteringsfält: `Player State Count`, `Player State Set`och `Player State Time`.
 
-1. Välj [!UICONTROL **Bekräfta**] > [!UICONTROL **Spara**]  för att spara ändringarna.
+        ![fält som ska döljas](assets/schema-hide-listofstates.png)
+
+   1. Välj [!UICONTROL **Bekräfta**] för att spara ändringarna.
+
+   1. I [!UICONTROL **Struktur**] markerar du `List Of Media Collection Downloaded Content Events` fält, markera [!UICONTROL **Hantera relaterade fält**] uppdaterar du sedan schemat enligt följande:
+
+      * I `List Of Media Collection Downloaded Content Events` > `Media Details` fält, dölj `List Of States` fält.
+
+      * I `List Of Media Collection Downloaded Content Events` > `Media Details` > `Advertising Details` fält, dölj följande rapporteringsfält: `Ad Completed`, `Ad Started`och `Ad Time Played`.
+
+      * I `List Of Media Collection Downloaded Content Events` > `Media Details` > `Advertising Pod Details` fält, dölj följande rapporteringsfält: `Ad Break ID`
+
+      * I `List Of Media Collection Downloaded Content Events` > `Media Details` > `Chapter Details` fält, dölj följande rapporteringsfält: `Chapter ID`, `Chapter Completed`, `Chapter Started`och `Chapter Time Played`.
+
+      * I `List Of Media Collection Downloaded Content Events` > `Media Details` > `Qoe Data Details` fält, dölj följande rapporteringsfält: `Average Bitrate`, `Average Bitrate Bucket`, `Bitrate Changes`, `Buffer Events`, `Total Buffer Duration`, `Errors`, `External Error IDs`, `Bitrate Change Impacted Streams`, `Buffer Impacted Streams`, `Dropped Frame Impacted Streams`, `Error Impacted Streams`, `Stalling Impacted Streams`, `Drops Before Starts`, `Media SDK Error IDs`, `Player SDK Error IDs`, `Stalling Events`och `Total Stalling Duration`.
+
+      * I `List Of Media Collection Downloaded Content Events` > `Media Details` > `Session Details` fält, dölj följande rapporteringsfält: `Media Session ID`, `Ad Count`, `Average Minute Audience`, `Chapter Count`, `Estimated Streams`, `Pause Impacted Streams`, `10% Progress Marker`, `25% Progress Marker`, `50% Progress Marker`, `75% Progress Marker`, `95% Progress Marker`, `Media Segment Views`, `Content Completes`, `Media Downloaded Flag`, `Federated Data`, `Content Starts`, `Media Starts`, `Pause Events`, `Total Pause Duration`, `Media Session Server Timeout`, `Video Segment`, `Content Time Spent`, `Media Time Spent`, `Unique Time Played`, `Pev3`och `Pccr`.
+
+      * I `List Of Media Collection Downloaded Content Events` > `Media Details` > `List Of States End` och `Media Collection Details` > `List Of States Start` fält, dölj följande rapporteringsfält: `Player State Count`, `Player State Set`och `Player State Time`.
+
+      * I `List Of Media Collection Downloaded Content Events` > `Media Details`  fält, dölj `Media Session ID` fält.
+
+   1. Välj [!UICONTROL **Bekräfta**] för att spara ändringarna.
+
+   1. I [!UICONTROL **Struktur**] markerar du `Media Reporting Details` fält, markera [!UICONTROL **Hantera relaterade fält**] uppdaterar du sedan schemat enligt följande:
+
+      * I `Media Reporting Details` fält, dölj följande fält: `Error Details`, `List Of States End`, `List of States Start`och `Media Session ID`.
+
+   1. Välj [!UICONTROL **Bekräfta**] > [!UICONTROL **Spara**]  för att spara ändringarna.
 
 1. Fortsätt med [Skapa en datauppsättning i Adobe Experience Platform](#create-a-dataset-in-adobe-experience-platform).
 
