@@ -5,9 +5,9 @@ uuid: null
 feature: Media Analytics
 role: User, Admin, Data Engineer
 exl-id: ed9297b1-6487-4099-bc62-0c3a40572255
-source-git-commit: ade20d7ae3cbb525b3a8390a27e1d93201d83003
+source-git-commit: 355b3b079d53ae8e83822f61fc79e60e47f6d715
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '403'
 ht-degree: 0%
 
 ---
@@ -18,9 +18,9 @@ Det finns olika sätt att implementera Streaming Media. En detaljerad jämförel
 
 ## Implementeringsmetoder för Edge
 
-I de flesta fall rekommenderar vi att du använder Edge när du implementerar Media Analytics för alla nya Adobe Analytics- och Customer Journey Analytics-kunder (CJA).
+I de flesta fall rekommenderar vi att du använder Edge när du implementerar Media Analytics för alla nya Adobe Analytics- och Customer Journey Analytics-kunder.
 
-* **Media för Edge Network SDK / Extension:** Samlar in data från iOS- och Android-enheter och skickar dem till Edge. Data kan sedan skickas antingen till CJA eller Adobe Analytics.
+* **Media för Edge Network SDK / Extension:** Samlar in data från iOS- och Android-enheter och skickar dem till Edge. Data kan sedan skickas till Customer Journey Analytics eller Adobe Analytics.
 
   Mer information om media för Edge Network SDK / Exention finns i [Installera Media Analytics med Experience Platform Edge](/help/implementation/implementation-edge.md).
 
@@ -28,7 +28,7 @@ I de flesta fall rekommenderar vi att du använder Edge när du implementerar Me
   >
   >Den här implementeringsmetoden stöder för närvarande inte Web SDK eller Roku. Båda stöds dock vid implementering med Media Edge API.
 
-* **Media Edge API:** Kan anpassas för att samla in data från alla enheter och format (inklusive mobila enheter, webbenheter och toppmoderna enheter) och skicka data till Edge. Data kan sedan skickas antingen till CJA eller Adobe Analytics.
+* **Media Edge API:** Kan anpassas för att samla in data från alla enheter och format (inklusive mobila enheter, webbenheter och toppmoderna enheter) och skicka data till Edge. Data kan sedan skickas till Customer Journey Analytics eller Adobe Analytics.
 
   <!-- For more information about the Media Edge API, see (link to John's docs when they're ready) -->
 
@@ -36,9 +36,9 @@ I de flesta fall rekommenderar vi att du använder Edge när du implementerar Me
 
 ## Andra implementeringsmetoder
 
-I de flesta fall rekommenderas de implementeringsmetoder för Edge som beskrivs ovan för både CJA och Adobe Analytics, särskilt för nya implementeringar.
+I de flesta fall rekommenderas de implementeringsmetoder för Edge som beskrivs ovan för både Customer Journey Analytics och Adobe Analytics, särskilt för nya implementeringar.
 
-Förutom implementeringsmetoderna för Edge finns det andra implementeringsmetoder. Dessa implementeringsmetoder har ursprungligen utformats för användning med Adobe Analytics. Kunder med någon av följande implementeringsmetoder kan dock fortfarande göra data tillgängliga i CJA genom att skapa en [Källanslutning för analys](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/adobe-applications/analytics.html).
+Förutom implementeringsmetoderna för Edge finns det andra implementeringsmetoder. Dessa implementeringsmetoder har ursprungligen utformats för användning med Adobe Analytics. Kunder med någon av följande implementeringsmetoder kan dock fortfarande göra data tillgängliga i Customer Journey Analytics genom att skapa en [Källanslutning för analys](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/adobe-applications/analytics.html).
 
 * **Medietillägg med taggar:** Tillägget Adobe Media Analytics for Audio och Video innehåller funktioner för att lägga till Media Tracker-instansen till en tagghanteringsaktiverad webbplats eller ett tagghanterat projekt. Data skickas till Adobe Analytics.
 
