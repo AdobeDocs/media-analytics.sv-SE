@@ -5,9 +5,9 @@ user-guide-title: Adobe Analytics for Streaming Media
 breadcrumb-title: Användarhandbok om Media Analytics
 user-guide-description: Implementera Adobe Analytics for Streaming Media. Innehåller Media SDK och Media Collection API.
 sub-product: media analytics
-source-git-commit: 129818d73bdcc63fcf922d295e3f360ab1375dbe
+source-git-commit: a26e4e283646e5ceb352f357789748f376f5c747
 workflow-type: tm+mt
-source-wordcount: '902'
+source-wordcount: '904'
 ht-degree: 70%
 
 ---
@@ -33,36 +33,39 @@ ht-degree: 70%
          + [JavaScript - Media SDK to Launch](legacy/sdk-to-launch/sdk-to-launch-migration-platforms/sdk-to-launch-migration-js.md)
 + Implementering {#implementation}
    + [Implementeringsöversikt](implementation/overview.md)
-   + Media SDKs - implementering {#media-sdk}
-      + [Översikt över Media SDK](implementation/media-sdk/media-sdk-overview.md)
-      + Installera och konfigurera {#setup}
-         + Installera web SDK:er {#install-web-sdk}
-            + [Installera Analytics med JavaScript](implementation/media-sdk/setup/web-implementation.md)
-            + [Installera Analytics med Media Analytics-tillägget](implementation/media-sdk/setup/web-implementation-tags.md)
-         + [Installera mobil-SDK](implementation/media-sdk/setup/mobile-implementation.md)
-         + Installera OTT SDK:er {#ott-setup}
+   + [Översikt över Media SDK](/help/implementation/media-sdk-overview.md)
+   + Edge-implementeringar (rekommenderas) {#edge-recommended}
+      + Media Edge SDKs/Extension {#media-edge-sdk}
+         + [Installation av Media Edge SDK/Extension](/help/implementation/edge/implementation-edge.md)
+         + [Media Edge Mobile SDKs](/help/implementation/edge/edge-mobile-sdk.md)
+      + [Media Edge API](/help/implementation/edge/implementation-edge-api.md)
+   + Implementeringar endast för Adobe Analytics {#analytics-only}
+      + Media SDK:er/tillägg {#media-sdk}
+         + [JavaScript Web SDK](implementation/media-sdk/setup/web-implementation.md)
+         + [Media Analytics-tillägg](implementation/media-sdk/setup/web-implementation-tags.md)
+         + [SDK för mobiler](implementation/media-sdk/setup/mobile-implementation.md)
+         + OTT SDKs {#ott-setup}
             + [Installera Chromecast SDK](implementation/media-sdk/setup/set-up-chromecast.md)
             + [Installera Roku SDK](implementation/media-sdk/setup/set-up-roku.md)
-   + [Installera Analytics med Adobe Experience Platform Edge](implementation/implementation-edge.md)
-   + Media Collection APIs - implementering {#streaming-media-apis}
-      + [Media Collection](implementation/media-collection-api/mc-api-overview.md)
-      + [API - snabbstart](implementation/media-collection-api/mc-api-impl/mc-api-quick-start.md)
-      + [Sessionsbegäran](implementation/media-collection-api/mc-api-ref/mc-api-sessions-req.md)
-      + [Händelsebegäran](implementation/media-collection-api/mc-api-ref/mc-api-events-req.md)
-      + [Parametrar för begäran](implementation/media-collection-api/mc-api-ref/mc-api-req-params.md)
-      + [Händelsetyper och beskrivningar](implementation/media-collection-api/mc-api-ref/mc-api-event-types.md)
-      + Implementera API {#mc-api-impl}
-         + [Ange typ av HTTP-begäran i spelaren](implementation/media-collection-api/mc-api-impl/mc-api-set-http-req.md)
-         + [Hämta ett sessions-ID](implementation/media-collection-api/mc-api-impl/mc-api-obtain-sid.md)
-         + [Implementera en händelsebegäran](implementation/media-collection-api/mc-api-impl/mc-api-impl-events-req.md)
-         + [JSON-valideringsscheman](implementation/media-collection-api/mc-api-ref/mc-api-json-validation.md)
-         + [Validera en händelsebegäran](implementation/media-collection-api/mc-api-impl/mc-api-validate-reqs.md)
-         + [Skicka pinghändelser](implementation/media-collection-api/mc-api-impl/mc-api-sed-pings.md)
-         + [Skicka QoE-data](implementation/media-collection-api/mc-api-impl/mc-api-sending-qoe.md)
-         + [Stöd för anpassade metadata](implementation/media-collection-api/mc-api-impl/mc-api-custom-meta.md)
-         + [Timeoutvillkor](implementation/media-collection-api/mc-api-impl/mc-api-timeout.md)
-         + [Styra händelseförloppet](implementation/media-collection-api/mc-api-impl/mc-api-ctrl-order.md)
-         + [Köa händelser när sessioner svarar långsamt](implementation/media-collection-api/mc-api-impl/mc-api-queuing.md)
+      + Media Collection APIs - implementering {#streaming-media-apis}
+         + [Media Collection](implementation/media-collection-api/mc-api-overview.md)
+         + [API - snabbstart](implementation/media-collection-api/mc-api-impl/mc-api-quick-start.md)
+         + [Sessionsbegäran](implementation/media-collection-api/mc-api-ref/mc-api-sessions-req.md)
+         + [Händelsebegäran](implementation/media-collection-api/mc-api-ref/mc-api-events-req.md)
+         + [Parametrar för begäran](implementation/media-collection-api/mc-api-ref/mc-api-req-params.md)
+         + [Händelsetyper och beskrivningar](implementation/media-collection-api/mc-api-ref/mc-api-event-types.md)
+         + Implementera API {#mc-api-impl}
+            + [Ange typ av HTTP-begäran i spelaren](implementation/media-collection-api/mc-api-impl/mc-api-set-http-req.md)
+            + [Hämta ett sessions-ID](implementation/media-collection-api/mc-api-impl/mc-api-obtain-sid.md)
+            + [Implementera en händelsebegäran](implementation/media-collection-api/mc-api-impl/mc-api-impl-events-req.md)
+            + [JSON-valideringsscheman](implementation/media-collection-api/mc-api-ref/mc-api-json-validation.md)
+            + [Validera en händelsebegäran](implementation/media-collection-api/mc-api-impl/mc-api-validate-reqs.md)
+            + [Skicka pinghändelser](implementation/media-collection-api/mc-api-impl/mc-api-sed-pings.md)
+            + [Skicka QoE-data](implementation/media-collection-api/mc-api-impl/mc-api-sending-qoe.md)
+            + [Stöd för anpassade metadata](implementation/media-collection-api/mc-api-impl/mc-api-custom-meta.md)
+            + [Timeoutvillkor](implementation/media-collection-api/mc-api-impl/mc-api-timeout.md)
+            + [Styra händelseförloppet](implementation/media-collection-api/mc-api-impl/mc-api-ctrl-order.md)
+            + [Köa händelser när sessioner svarar långsamt](implementation/media-collection-api/mc-api-impl/mc-api-queuing.md)
    + Variabler {#variables}
       + [Parametrar för direktuppspelande media](implementation/variables/audio-video-parameters.md)
       + [Annonsparametrar](implementation/variables/ad-parameters.md)

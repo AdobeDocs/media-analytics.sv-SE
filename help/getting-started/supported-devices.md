@@ -4,7 +4,7 @@ description: "Lär dig mer om de vanligaste enheterna som iOS, Android, OTT-enhe
 exl-id: 169ff7b9-e577-45b7-8927-74bdcccc0a77
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: deae677d9e8b4dc241765cf5d168fcd71b9c8310
+source-git-commit: a26e4e283646e5ceb352f357789748f376f5c747
 workflow-type: tm+mt
 source-wordcount: '307'
 ht-degree: 10%
@@ -25,7 +25,7 @@ För enheter som för närvarande inte har SDK-stöd eller i situationer där du
 
 Tabellen nedan visar de enheter som stöds för närvarande. Om en enhet inte finns med i listan kontaktar du kundtjänst eller lösningskonsult för att få information om enhetens status.
 
-Mer information om hur du implementerar Media på Edge finns i [Installera Media Analytics med Experience Platform Edge](/help/implementation/implementation-edge.md).
+Mer information om hur du implementerar Media på Edge finns i [Installera Media Analytics med Experience Platform Edge](/help/implementation/edge/implementation-edge.md).
 
 | Strömmande plattformar och enheter | | Media för Edge Network SDK/Extension | Media Edge API | Media Extension med taggar eller AEP Mobile SDK | Media SDK | Media Collection API |
 |:---|:---|:---:|:---:|:---:|:---:|:---:|

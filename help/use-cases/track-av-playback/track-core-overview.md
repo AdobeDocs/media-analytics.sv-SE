@@ -5,7 +5,7 @@ uuid: 7b8e2f76-bc4e-4721-8933-3e4453b01788
 exl-id: 98ad2783-c9e3-48de-88df-8549f26114a0
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: a26e4e283646e5ceb352f357789748f376f5c747
 workflow-type: tm+mt
 source-wordcount: '896'
 ht-degree: 0%
@@ -66,7 +66,7 @@ Avbryt ändringar
 
 >[!TIP]
 >
->Spelhuvudets position anges som en del av konfigurerings- och konfigurationskoden. Mer information om `getCurrentPlayheadTime`, se [Översikt: Allmänna riktlinjer för genomförandet.](/help/implementation/media-sdk/media-sdk-overview.md)
+>Spelhuvudets position anges som en del av konfigurerings- och konfigurationskoden. Mer information om `getCurrentPlayheadTime`, se [Översikt: Allmänna riktlinjer för genomförandet.](/help/implementation/media-sdk-overview.md)
 
 
 ## Implementera {#implement}
@@ -107,13 +107,13 @@ Avbryt ändringar
 
    * **Standardmetadata -**
 
-      >[!NOTE]
-      >
-      >Det är valfritt att bifoga standardmetadataobjektet till medieobjektet.
+     >[!NOTE]
+     >
+     >Det är valfritt att bifoga standardmetadataobjektet till medieobjektet.
 
-      Instansiera ett metadataobjekt av standardtyp, fyll i önskade variabler och ange metadataobjektet i objektet Mediepulsslag.
+     Instansiera ett metadataobjekt av standardtyp, fyll i önskade variabler och ange metadataobjektet i objektet Mediepulsslag.
 
-      Se den omfattande listan med metadata här: [Parametrar för ljud och video.](../../implementation/variables/audio-video-parameters.md)
+     Se den omfattande listan med metadata här: [Parametrar för ljud och video.](../../implementation/variables/audio-video-parameters.md)
 
    * **Anpassade metadata -** Skapa ett variabelobjekt för de anpassade variablerna och fyll i med data för det här innehållet.
 
