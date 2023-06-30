@@ -5,9 +5,9 @@ uuid: b3cbe240-b94d-42b8-a99c-0280334aaa14
 exl-id: 826530f7-2c39-41ef-b3b4-d3f44b46858f
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: 355b3b079d53ae8e83822f61fc79e60e47f6d715
+source-git-commit: c546a8cf4cf471d47e1ae43661821f3c3a6b4a44
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '563'
 ht-degree: 8%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 8%
 
 ![Banderoll](./assets/media_analytics_banner.png)
 
-Adobe Analytics for Streaming Media är ett tillägg till Adobe Analytics som innehåller kraftfulla mätverktyg för ljud, video och reklam. Med Analytics for Streaming Media får ni nästan detaljrika detaljer om varaktighet, stopp och start i realtid så att ni kan utvärdera och kombinera video- och ljudmätvärden. Med dessa insikter kan ni förstå kundernas tittande och avlyssningsvanor och öka engagemanget med personaliserade rekommendationer.
+Adobe Analytics for Streaming Media är ett tillägg till Adobe Analytics och Customer Journey Analytics som innehåller kraftfulla mätverktyg för ljud, video och reklam. Med Analytics for Streaming Media får ni nästan detaljrika detaljer om varaktighet, stopp och start i realtid så att ni kan utvärdera och kombinera video- och ljudmätvärden. Med dessa insikter kan ni förstå kundernas tittande och avlyssningsvanor och öka engagemanget med personaliserade rekommendationer.
 
 Med Adobe Analytics for Streaming Media kan ni spåra hela kundresan på hela webbplatsen och i era direktuppspelningsappar. Ni kan kombinera Streaming Media-statistik med andra Adobe Analytics-funktioner, som Audience Analytics, Mobile eller Cross-Device Analytics. Mätvärdena kan enkelt integreras i Adobe Analytics Reports och andra Adobe Experience Platform-produkter. Med mediemätning kan ni kategorisera data i flera dimensioner och segment och samla in alla metadata ni behöver för att göra en fullständig och detaljerad analys. Sedan kan ni analysera data och attribuera framgångsmått för helt konsumerad media, genomsnittlig tid som tillbringats på platsen och slutförda annonser.
 

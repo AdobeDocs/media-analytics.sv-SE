@@ -2,8 +2,9 @@
 title: Versionsinformation om Adobe Analytics for Streaming Media
 description: Se versionsinformationen för Adobe Analytics.
 feature: Release Notes
+role: User, Admin, Data Engineer
 exl-id: ef068aa6-fdf4-4a5c-b5d0-b93ad31894e8
-source-git-commit: a26e4e283646e5ceb352f357789748f376f5c747
+source-git-commit: c546a8cf4cf471d47e1ae43661821f3c3a6b4a44
 workflow-type: tm+mt
 source-wordcount: '925'
 ht-degree: 7%
