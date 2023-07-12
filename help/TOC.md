@@ -5,9 +5,9 @@ user-guide-title: Adobe Analytics for Streaming Media
 breadcrumb-title: Användarhandbok om Media Analytics
 user-guide-description: Implementera Adobe Analytics for Streaming Media. Innehåller Media SDK och Media Collection API.
 sub-product: media analytics
-source-git-commit: a26e4e283646e5ceb352f357789748f376f5c747
+source-git-commit: cb45048d77edc188b5fdbd60ae89c165ff9befa0
 workflow-type: tm+mt
-source-wordcount: '904'
+source-wordcount: '900'
 ht-degree: 70%
 
 ---
@@ -169,7 +169,7 @@ ht-degree: 70%
       + [Konfigurera Android](legacy/media-sdk/setup/set-up-android.md)
       + [Konfigurera iOS](legacy/media-sdk/setup/set-up-ios.md)
       + Konfigurera JavaScript {#setup-javascript}
-         + [Konfigurera JavaScript 3.x](legacy/media-sdk/setup/setup-javascript/set-up-js-3.md)
+         + [Konfigurera JavaScript 2.x](legacy/media-sdk/setup/setup-javascript/set-up-js-2.md)
    + [Om mätning av pulsslag](legacy/heartbeat-measurement.md)
    + [Adobe Primetime och Streaming Media Analytics](legacy/intro-to-ava/implementation-paths/primetime-path.md)
    + [Adobe Audience Management Enabled](legacy/intro-to-ava/am-enablement.md)
@@ -187,7 +187,6 @@ ht-degree: 70%
       + Felsökning {#debugging}
          + [SDK-felsökning](legacy/validation/debugging/sdk-debugging.md)
    + [Äldre migrering: VHL 1.x till VHL 2.x](legacy/va-1x-to-2x/mig-1x-2x-overview.md)
-   + [Konfigurera JavaScript 2.x](legacy/media-sdk/setup/setup-javascript/set-up-js-2.md)
    + [Kodjämförelse v1.x till v2.x](legacy/va-1x-to-2x/code-comparison-1x-2x.md)
    + [Spårnings-API:er 1x till 2x](legacy/va-1x-to-2x/1x-2x-api-change.md)
    + [Äldre - Introduktion till AVA](legacy/intro-to-ava/implementation-paths/implementation-paths.md)
