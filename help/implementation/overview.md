@@ -5,9 +5,9 @@ uuid: null
 feature: Media Analytics
 role: User, Admin, Data Engineer
 exl-id: ed9297b1-6487-4099-bc62-0c3a40572255
-source-git-commit: a26e4e283646e5ceb352f357789748f376f5c747
+source-git-commit: 984f058fda15b1c5e960e4c8d8e2378308d2b541
 workflow-type: tm+mt
-source-wordcount: '398'
+source-wordcount: '471'
 ht-degree: 0%
 
 ---
@@ -44,11 +44,13 @@ Förutom implementeringsmetoderna för Edge finns det andra implementeringsmetod
 
   Information om hur du installerar, konfigurerar och implementerar medietillägget med taggar finns i [Adobe Media Analytics (3.x SDK) for Audio and Video extension overview](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/media-analytics-3x/overview.html).
 
-* **Media SDK:**  Data skickas till Adobe Analytics.
+* **Media SDK:**  Med Media SDK kan du mäta flera mediaplattformar, inklusive webbplatser, mobiltelefoner, anslutna TV-apparater, surfplattor, OTT-enheter, digitalboxar och spelkonsoler. (Mer information finns i [Enheter och plattformar som stöds](/help/getting-started/supported-devices.md).)
+
+  Media SDK:er använder Media Collection-API:erna för spårning. Data skickas till Adobe Analytics.
 
   Mer information om hur du hämtar och installerar SDK:er och tillägg för Media finns i [Hämta SDK:er för media, tillägg med hjälp av taggar och OTT SDK:er](/help/getting-started/download-sdks.md).
 
-* **Media Collection API:** Spåra ljud- och videohändelser med RESTful HTTP-anrop. Data skickas till Adobe Analytics.
+* **Media Collection-API:er:** Eftersom API:erna för Media Collection är anpassningsbara kan de användas för program som kräver anpassade spårningsfunktioner och för enheter som inte stöds av Media SDK:er. Media Collection-API:erna spårar ljud- och videohändelser med RESTful HTTP-anrop. Data skickas till Adobe Analytics.
 
   Mer information om hur du använder API:er för mediainsamling finns i [Media Collection API:er](media-collection-api/mc-api-overview.md).
 

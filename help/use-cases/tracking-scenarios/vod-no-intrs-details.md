@@ -5,7 +5,7 @@ uuid: ee2a1b79-2c2f-42e1-8e81-b62bbdd0d8cb
 exl-id: 9e2240f0-da8d-4dcc-9d44-0f121c60d924
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: 57b4120518a6fecf6a9751f944d5bd20f04b15fe
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 1%
@@ -105,17 +105,17 @@ _mediaHeartbeat.trackPlay();
 ....... 
 ....... 
 
-// 3. Call trackComplete() when the playback reaches the end,  
-//    i.e., when the media completes and finishes playing.  
-_mediaHeartbeat.trackComplete(); 
-
-........ 
-........ 
-
-// 4. Call trackSessionEnd() when the playback session is over.  
-//    This method must be called even if the user does not watch  
-//    the media to completion.  
+// 3. Call trackSessionEnd() when the playback session ends prior to the  
+//    media completing to the finish. This method must be called when   
+//    playback ends if the user does not watch the media to completion. When trackSessionEnd is used, trackComplete should not be called. 
 _mediaHeartbeat.trackSessionEnd(); 
+
+........ 
+........ 
+
+// 4. Call trackComplete() when the playback reaches the end and   
+//    completes, i.e., when the media finishes because it is played to completion. When trackComplete is used, trackSessionEnd does not need to be called.
+_mediaHeartbeat.trackComplete(); 
 
 ........ 
 ........ 
