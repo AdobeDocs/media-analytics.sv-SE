@@ -5,9 +5,9 @@ user-guide-title: Adobe Analytics for Streaming Media
 breadcrumb-title: Användarhandbok om Media Analytics
 user-guide-description: Implementera Adobe Analytics for Streaming Media. Innehåller Media SDK och Media Collection API.
 sub-product: media analytics
-source-git-commit: b807359636e17bf36e33ca20e9dc4dee4d7f2a8f
+source-git-commit: b33a6205d5c6921c4ee0fcfc968593c62461c2a0
 workflow-type: tm+mt
-source-wordcount: '896'
+source-wordcount: '895'
 ht-degree: 70%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 70%
    + [Förutsättningar](getting-started/prereqs.md)
    + [Enheter som stöds](getting-started/supported-devices.md)
    + [Dokumentation för direktuppspelande media](getting-started/implementation-documentation.md)
-   + [SDK, Libraries och Extensions](getting-started/download-sdks.md)
+   + [SDK:er, bibliotek och tillägg](getting-started/download-sdks.md)
    + Supportslut {#end-of-support}
       + [Stöd för Media Analytics Mobile SDK upphör](additional-resources/end-of-support-faqs.md)
       + Äldre - fristående Media SDK för att starta migrering {#sdk-to-launch}
@@ -113,49 +113,48 @@ ht-degree: 70%
       + [OTT och Audience Manager](use-cases/analytics-with-ott/ott-am.md)
       + [OTT och Experience Cloud](use-cases/analytics-with-ott/ott-experience-cloud.md)
 + Spårning {#tracking}
-   + Spårning {#track-av-playback}
-      + [Översikt](use-cases/track-av-playback/track-core-overview.md)
-      + Spåra direktuppspelning av media {#track-core}
-         + [Spåra grundläggande uppspelning i JavaScript 3.x](use-cases/track-av-playback/track-core/track-core-javascript/track-core-js3.md)
-         + [Spåra grundläggande uppspelning i Chromecast](use-cases/track-av-playback/track-core/track-core-chromecast.md)
-         + [Spåra grundläggande uppspelning i Roku](use-cases/track-av-playback/track-core/track-core-roku.md)
-      + Spåra buffring {#track-buffering}
-         + [Spåra buffring i JavaScript 3.x](use-cases/track-av-playback/track-buffering/track-buffering-js/track-buffering-js3.md)
-         + [Spåra buffring i Chromecast](use-cases/track-av-playback/track-buffering/track-buffering-chromecast.md)
-         + [Spåra buffring i Roku](use-cases/track-av-playback/track-buffering/track-buffering-roku.md)
-      + Spåra sökning {#track-seeking}
-         + [Spåra sökning i JavaScript 3.x](use-cases/track-av-playback/track-seeking/track-seeking-js/track-seeking-js3.md)
-         + [Spåra sökning i Chromecast](use-cases/track-av-playback/track-seeking/track-seeking-chromecast.md)
-         + [Spåra sökning i Roku](use-cases/track-av-playback/track-seeking/track-seeking-roku.md)
-      + Implementera standardmetadata {#impl-std-metadata}
-         + [Implementera standardmetadata i JavaScript 3.x](use-cases/track-av-playback/impl-std-metadata/impl-std-md-js/impl-std-metadata-js3.md)
-         + [Implementera standardmetadata i Chromecast](use-cases/track-av-playback/impl-std-metadata/impl-std-metadata-chromecast.md)
-         + [Standardmetadataparametrar – Chromecast](use-cases/track-av-playback/impl-std-metadata/chromecast-metadata.md)
-         + [Implementera standardmetadata i Roku](use-cases/track-av-playback/impl-std-metadata/impl-std-metadata-roku.md)
-         + [Standardmetadataparametrar – Roku](use-cases/track-av-playback/impl-std-metadata/roku-metadata.md)
-      + Spåra annonser {#track-ads}
-         + [Översikt](use-cases/track-ads/track-ads-overview.md)
-         + [Spåra annonser i JavaScript 3.x](use-cases/track-ads/track-ads-js/track-ads-js3.md)
-         + [Spåra annonser i Chromecast](use-cases/track-ads/track-ads-chromecast.md)
-         + [Spåra annonser i Roku](use-cases/track-ads/track-ads-roku.md)
-         + Implementera standardmetadata för annonser {#impl-std-ad-metadata}
-            + [Implementera standardmetadata för annonser i JavaScript 3.x](use-cases/track-ads/impl-std-ad-metadata/impl-std-ad-md-js/impl-std-ad-metadata-js3.md)
-            + [Implementera standardmetadata för annonser i Roku](use-cases/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-roku.md)
-      + Spåra kapitel och segment {#track-chapters}
-         + [Översikt](use-cases/track-chapters/track-chapters-overview.md)
-         + [Spåra kapitel och segment i JavaScript 3.x](use-cases/track-chapters/track-chapters-js/track-chapters-js3.md)
-         + [Spåra kapitel och segment i Chromecast](use-cases/track-chapters/track-chapters-chromecast.md)
-         + [Spåra kapitel och segment i Roku](use-cases/track-chapters/track-chapters-roku.md)
-      + Spåra upplevelsekvalitet {#track-qos}
-         + [Översikt](use-cases/track-qos/track-qos-overview.md)
-         + [Spåra upplevelsekvalitet i JavaScript 3.x](use-cases/track-qos/track-qos-js/track-qos-js3.md)
-         + [Spåra upplevelsekvalitet i Chromecast](use-cases/track-qos/track-qos-chromecast.md)
-         + [Spåra upplevelsekvalitet i Roku](use-cases/track-qos/track-qos-roku.md)
-      + Spåra fel {#track-errors}
-         + [Översikt](use-cases/track-errors/track-errors-overview.md)
-         + [Spåra fel i JavaScript 3.x](use-cases/track-errors/track-errors-js/track-errors-js3.md)
-         + [Spåra fel i Chromecast](use-cases/track-errors/track-errors-chromecast.md)
-         + [Spåra fel i Roku](use-cases/track-errors/track-errors-roku.md)
+   + [Översikt](use-cases/track-av-playback/track-core-overview.md)
+   + Spåra direktuppspelning av media {#track-core}
+      + [Spåra grundläggande uppspelning i JavaScript 3.x](use-cases/track-av-playback/track-core/track-core-javascript/track-core-js3.md)
+      + [Spåra grundläggande uppspelning i Chromecast](use-cases/track-av-playback/track-core/track-core-chromecast.md)
+      + [Spåra grundläggande uppspelning i Roku](use-cases/track-av-playback/track-core/track-core-roku.md)
+   + Spåra buffring {#track-buffering}
+      + [Spåra buffring i JavaScript 3.x](use-cases/track-av-playback/track-buffering/track-buffering-js/track-buffering-js3.md)
+      + [Spåra buffring i Chromecast](use-cases/track-av-playback/track-buffering/track-buffering-chromecast.md)
+      + [Spåra buffring i Roku](use-cases/track-av-playback/track-buffering/track-buffering-roku.md)
+   + Spåra sökning {#track-seeking}
+      + [Spåra sökning i JavaScript 3.x](use-cases/track-av-playback/track-seeking/track-seeking-js/track-seeking-js3.md)
+      + [Spåra sökning i Chromecast](use-cases/track-av-playback/track-seeking/track-seeking-chromecast.md)
+      + [Spåra sökning i Roku](use-cases/track-av-playback/track-seeking/track-seeking-roku.md)
+   + Implementera standardmetadata {#impl-std-metadata}
+      + [Implementera standardmetadata i JavaScript 3.x](use-cases/track-av-playback/impl-std-metadata/impl-std-md-js/impl-std-metadata-js3.md)
+      + [Implementera standardmetadata i Chromecast](use-cases/track-av-playback/impl-std-metadata/impl-std-metadata-chromecast.md)
+      + [Standardmetadataparametrar – Chromecast](use-cases/track-av-playback/impl-std-metadata/chromecast-metadata.md)
+      + [Implementera standardmetadata i Roku](use-cases/track-av-playback/impl-std-metadata/impl-std-metadata-roku.md)
+      + [Standardmetadataparametrar – Roku](use-cases/track-av-playback/impl-std-metadata/roku-metadata.md)
+   + Spåra annonser {#track-ads}
+      + [Översikt](use-cases/track-ads/track-ads-overview.md)
+      + [Spåra annonser i JavaScript 3.x](use-cases/track-ads/track-ads-js/track-ads-js3.md)
+      + [Spåra annonser i Chromecast](use-cases/track-ads/track-ads-chromecast.md)
+      + [Spåra annonser i Roku](use-cases/track-ads/track-ads-roku.md)
+      + Implementera standardmetadata för annonser {#impl-std-ad-metadata}
+         + [Implementera standardmetadata för annonser i JavaScript 3.x](use-cases/track-ads/impl-std-ad-metadata/impl-std-ad-md-js/impl-std-ad-metadata-js3.md)
+         + [Implementera standardmetadata för annonser i Roku](use-cases/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-roku.md)
+   + Spåra kapitel och segment {#track-chapters}
+      + [Översikt](use-cases/track-chapters/track-chapters-overview.md)
+      + [Spåra kapitel och segment i JavaScript 3.x](use-cases/track-chapters/track-chapters-js/track-chapters-js3.md)
+      + [Spåra kapitel och segment i Chromecast](use-cases/track-chapters/track-chapters-chromecast.md)
+      + [Spåra kapitel och segment i Roku](use-cases/track-chapters/track-chapters-roku.md)
+   + Spåra upplevelsekvalitet {#track-qos}
+      + [Översikt](use-cases/track-qos/track-qos-overview.md)
+      + [Spåra upplevelsekvalitet i JavaScript 3.x](use-cases/track-qos/track-qos-js/track-qos-js3.md)
+      + [Spåra upplevelsekvalitet i Chromecast](use-cases/track-qos/track-qos-chromecast.md)
+      + [Spåra upplevelsekvalitet i Roku](use-cases/track-qos/track-qos-roku.md)
+   + Spåra fel {#track-errors}
+      + [Översikt](use-cases/track-errors/track-errors-overview.md)
+      + [Spåra fel i JavaScript 3.x](use-cases/track-errors/track-errors-js/track-errors-js3.md)
+      + [Spåra fel i Chromecast](use-cases/track-errors/track-errors-chromecast.md)
+      + [Spåra fel i Roku](use-cases/track-errors/track-errors-roku.md)
 + Integritet och säkerhet {#streaming-media-privacy}
    + [Inställningar för avanmälan och sekretess](privacy/opt-out-privacy.md)
    + [Säkerhet](privacy/security.md)
