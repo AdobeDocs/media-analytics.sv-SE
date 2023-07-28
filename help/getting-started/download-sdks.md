@@ -1,18 +1,18 @@
 ---
-title: Få tillgång till länkar för att ladda ned SDK:er för Media Analytics
+title: Få tillgång till länkar för att hämta SDK:er för medieanalys
 description: Länkar till SDK-nedladdningar för tillgängliga plattformar, inklusive Android, iOS, JavaScript, Chromecast och Roku.
 uuid: a619fbb8-693e-4583-8dad-0ff875e715f8
 exl-id: d211fa2e-d5b0-4e9f-bdb7-eda838194f3d
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a26e4e283646e5ceb352f357789748f376f5c747
+source-git-commit: 8a0f2c0b367b48ee5ac94e7fc6bcd0eadafbc5d8
 workflow-type: tm+mt
-source-wordcount: '405'
-ht-degree: 2%
+source-wordcount: '472'
+ht-degree: 9%
 
 ---
 
-# Hämta SDK:er för media, tillägg med hjälp av taggar och OTT SDK:er {#download-sdks}
+# Hämta SDK:er för media, tillägg med taggar och OTT SDK:er {#download-sdks}
 
 Informationen på den här sidan innehåller länkar för att hämta aktuella media-SDK:er och hämta medietillägg som använder taggar.
 
@@ -21,31 +21,31 @@ Taggar i Adobe Experience Platform är nästa generation av funktioner för hant
 
 >[!NOTE]
 >
->Mer information om hur du hämtar äldre SDK:er finns i [Äldre - Hämta SDK:er](/help/legacy/legacy-download-sdks.md).<br>
+>Mer information om hur du hämtar äldre SDK:er finns i [Äldre - Ladda ned SDK:er](/help/legacy/legacy-download-sdks.md).<br>
 >Viktig information om att supporten upphör finns i [Vanliga frågor och svar om supporten upphör](/help/additional-resources/end-of-support-faqs.md).
 
 ## Media SDK och mobila bibliotek {#media-sdks-libraries}
 
 ### Webbimplementering {#download-web-sdk}
 
-| Plattform som stöds | Version |  API:er   |  Dokumentation  |  Exempel  |
-|:---:|---|---|---|---|
-| ![JavaScript-ikon](assets/javascript-icon.png) | Webb - [Media SDK för JS v3.0.2](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/js-v3.0.2) | [JavaScript API-referens](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/index.html) | [Installera Analytics med JavaScript](/help/implementation/media-sdk/setup/web-implementation.md) | [Media SDK för JS v3.0.2 - exempel](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/sdks/js/3.x) |
-| ![JavaScript-ikon](assets/javascript-icon.png) | Webb - Medietillägg |  | [Adobe Media Analytics (3.x SDK) for Audio and Video extension - using Tags (Data Collection)](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/media-analytics-3x/overview.html?lang=en) | [Adobe Media Analytics (3.x SDK) for Audio and Video Extension Sample](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/samples/launch/js/3.x) |
-| ![JavaScript-ikon](assets/javascript-icon.png) | Webb - Experience Platform Edge (kommer snart) |  | [Installera Analytics med Experience Platform Edge](/help/implementation/edge/implementation-edge.md) | |
+| Plattform som stöds | Lösningar | Implementeringsmetod | Version |  API:er   |  Dokumentation  |  Exempel  |
+|:---:|---|---|---|---| ---| ---|
+| ![JavaScript-ikon](assets/javascript-icon.png) | Adobe Analytics | Endast analyser | Webb - [Media SDK för JS v3.0.2](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/js-v3.0.2) | [JavaScript API-referens](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/index.html) | [Installera Media Analytics med JavaScript](/help/implementation/media-sdk/setup/web-implementation.md) | [Media SDK för JS v3.0.2 - exempel](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/sdks/js/3.x) |
+| ![JavaScript-ikon](assets/javascript-icon.png) | Adobe Analytics | Endast analyser | Webb - Medietillägg |  | [Adobe Media Analytics (3.x SDK) for Audio and Video extension - using Tags (Data Collection)](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/media-analytics-3x/overview.html?lang=en) | [Adobe Media Analytics (3.x SDK) for Audio and Video Extension Sample](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/samples/launch/js/3.x) |
+| ![JavaScript-ikon](assets/javascript-icon.png) | <p>Adobe Analytics</p><p>Customer Journey Analytics</p><p>Adobe Journey Optimizer</p><p>Real-Time CDP</p> | Kant | Webb - Experience Platform Edge (kommer snart) |  | [Installera Media Analytics med Experience Platform Edge](/help/implementation/edge/implementation-edge.md) | |
 
 ### Mobilimplementering {#get-mobile-extension}
 
-| Plattform som stöds | Version |  Dokumentation   |  Exempel  |
-|:---:|---|---|---|
-| ![Android-ikon](assets/android-icon.png) | Android - medietillägg | [Mobile SDK-dokumentation](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/) | [Adobe Analytics - Media Analytics for Audio and Video Sample](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/samples/launch/mobile/android) |
-| ![Apple iOS, ikon ](assets/ios-icon.png)<br>**tvOS** | iOS/tvOS - medietillägg | [Mobile SDK-dokumentation](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/) | [Adobe Analytics - Media Analytics for Audio and Video Sample](https://github.com/adobe/aepsdk-media-ios/tree/main/TestApp) |
-| ![Android-ikon](assets/android-icon.png) | Android - Experience Platform Edge | [Installera Analytics med Experience Platform Edge](/help/implementation/edge/implementation-edge.md) | |
-| ![Apple iOS, ikon ](assets/ios-icon.png)<br>**tvOS** | iOS/tvOS - Experience Platform Edge | [Installera Analytics med Experience Platform Edge](/help/implementation/edge/implementation-edge.md) |  |
+| Plattform som stöds | Lösningar | Implementeringsmetod | Version |  Dokumentation   |  Exempel  |
+|:---:|---|---|---|---|---|
+| ![Android-ikon](assets/android-icon.png) | Adobe Analytics | Endast analyser | Android - medietillägg | [Mobile SDK-dokumentation](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/) | [Adobe Analytics - Media Analytics for Audio and Video Sample](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/samples/launch/mobile/android) |
+| ![Apple iOS, ikon ](assets/ios-icon.png)<br>**tvOS** | Adobe Analytics | Endast analyser | iOS/tvOS - medietillägg | [Mobile SDK-dokumentation](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/) | [Adobe Analytics - Media Analytics for Audio and Video Sample](https://github.com/adobe/aepsdk-media-ios/tree/main/TestApp) |
+| ![Android-ikon](assets/android-icon.png) | <p>Adobe Analytics</p><p>Customer Journey Analytics</p><p>Adobe Journey Optimizer</p><p>Real-Time CDP</p> | Kant | Android - Experience Platform Edge | [Installera Media Analytics med Experience Platform Edge](/help/implementation/edge/implementation-edge.md) | |
+| ![Apple iOS, ikon ](assets/ios-icon.png)<br>**tvOS** | <p>Adobe Analytics</p><p>Customer Journey Analytics</p><p>Adobe Journey Optimizer</p><p>Real-Time CDP</p> | Kant | iOS/tvOS - Experience Platform Edge | [Installera Media Analytics med Experience Platform Edge](/help/implementation/edge/implementation-edge.md) |  |
 
 ### Ovanför implementering {#download-ott-libraries}
 
-| Plattform som stöds | Version |  API:er   |  Dokumentation  |
-|:---:|---|---|---|
-| ![Chromecast-ikon](assets/chromecast-icon.png) | [SDK för Chromecast v3.0.3](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/chromecast-v3.0.3) | [API-referens för Chromecast](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/) | [Konfigurera Mobile SDK v3.x för Chromecast](/help/implementation/media-sdk/setup/set-up-chromecast.md) |
-| ![Roku-ikon](assets/roku-icon.png) | [SDK för Roku v2.2.6](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/roku-v2.2.6) | [Referens för Roku-API](/help/implementation/media-sdk/setup/set-up-roku.md) | [Konfigurera Mobile SDK v2.x för Roku](/help/implementation/media-sdk/setup/set-up-roku.md) |
+| Plattform som stöds | Lösningar | Implementeringsmetod | Version |  API:er   |  Dokumentation  |
+|:---:|---|---|---|---|---|
+| ![Chromecast-ikon](assets/chromecast-icon.png) | Adobe Analytics | Endast analyser | [SDK för Chromecast v3.0.3](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/chromecast-v3.0.3) | [API-referens för Chromecast](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/) | [Konfigurera Mobile SDK v3.x för Chromecast](/help/implementation/media-sdk/setup/set-up-chromecast.md) |
+| ![Roku-ikon](assets/roku-icon.png) | Adobe Analytics | Endast analyser | [SDK för Roku v2.2.6](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/roku-v2.2.6) | [Roku API-referens](/help/implementation/media-sdk/setup/set-up-roku.md) | [Konfigurera Mobile SDK v2.x för Roku](/help/implementation/media-sdk/setup/set-up-roku.md) |

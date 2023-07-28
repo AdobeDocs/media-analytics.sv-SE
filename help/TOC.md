@@ -5,9 +5,9 @@ user-guide-title: Adobe Analytics for Streaming Media
 breadcrumb-title: Användarhandbok om Media Analytics
 user-guide-description: Implementera Adobe Analytics for Streaming Media. Innehåller Media SDK och Media Collection API.
 sub-product: media analytics
-source-git-commit: b33a6205d5c6921c4ee0fcfc968593c62461c2a0
+source-git-commit: 8a0f2c0b367b48ee5ac94e7fc6bcd0eadafbc5d8
 workflow-type: tm+mt
-source-wordcount: '895'
+source-wordcount: '897'
 ht-degree: 70%
 
 ---
@@ -33,11 +33,13 @@ ht-degree: 70%
 + Implementering {#implementation}
    + [Implementeringsöversikt](implementation/overview.md)
    + Edge-implementeringar (rekommenderas) {#edge-recommended}
+      + [Förutsättningar](/help/implementation/edge/prerequisites-edge.md)
       + Media Edge SDKs/Extension {#media-edge-sdk}
          + [Installation av Media Edge SDK/Extension](/help/implementation/edge/implementation-edge.md)
          + [Media Edge Mobile SDKs](/help/implementation/edge/edge-mobile-sdk.md)
       + [Media Edge API](/help/implementation/edge/implementation-edge-api.md)
    + Implementeringar endast för Adobe Analytics {#analytics-only}
+      + [Förutsättningar](/help/implementation/media-sdk/setup/prerequisites-analytics.md)
       + Media SDK:er/tillägg {#media-sdk}
          + [JavaScript Web SDK](implementation/media-sdk/setup/web-implementation.md)
          + [Media Analytics-tillägg](implementation/media-sdk/setup/web-implementation-tags.md)

@@ -5,46 +5,44 @@ uuid: 4c0b37f3-8615-4cc0-b9c9-eeb029067064
 exl-id: 85ab1dbd-f4a7-4f11-afc9-8d5000e2de70
 feature: "Media Analytics, System Requirements"
 role: User, Admin, Data Engineer
-source-git-commit: 0c1382c9c4f1488fba81575097d154301a9b8e70
+source-git-commit: 8a0f2c0b367b48ee5ac94e7fc6bcd0eadafbc5d8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '433'
 ht-degree: 0%
 
 ---
 
-# Förutsättningar{#prerequisites}
+# Förutsättningar {#prerequisites}
 
-Så här implementerar du Adobe Analytics för direktuppspelningsmedia:
+Innan du börjar implementera Streaming Media utför du följande uppgifter:
+
+1. **Granska översikt över Streaming Media**<br>
+Innan du börjar implementera Streaming Media ska du granska [Översikt över direktuppspelningsmedia](/help/media-overview.md) för att säkerställa att Streaming Media uppfyller era behov.
 
 1. **Bekräfta prismodellen för strömmande media**<br>
 Den aktuella prismodellen bygger på videoströmmar. Om det behövs kan du kontakta din säljrepresentant eller kontoteamet på Adobe för att signera en ny försäljningsorder eftersom Streaming Media Analytics säljs separat från Adobe Analytics.
 
-1. **Bekräfta att du implementerar Adobe Analytics**<br>
-Streaming Media för Adobe Analytics kräver också en grundläggande Adobe Analytics-implementering. Se [Implementera Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/home.html) för mer information.
-
-1. **Hämta URL:en för mediespårningsservern**<br>
-Be din Adobe Analytics-representant om URL:en för mediespårningsservern. Det här är 
-`collection-api-server` URL för Mobile SDK, JavaScript SDK och spårningsservern utan samlings-api för Roku. Domännamn för API-implementering är: `[your_namespace].hb-api.omtrdc.net`.
-
-1. **Hämta aktuell Media SDK eller implementera nödvändiga tillägg**<br>
-Beroende på implementeringsvägen, [ladda ned aktuell SDK](download-sdks.md) för webb, mobiler och plattformar som ligger ovanpå varandra. De tillägg som krävs måste implementeras för att Adobe Analytics ska kunna aktiveras för sökvägar för medietillägg för direktuppspelning.
-
 1. **Aktivera Adobe Analytics-rapporter**<br>
 Om du vill aktivera rapporter i Analytics och visa innehåll och annonsuppgifter som du samlar in måste du aktivera rapporter i Analytics. Se [Aktivera medierapporter](/help/reporting/media-reports-enable.md).
 
-1. **Aktivera Experience Cloud**<br>
+1. **Implementera Adobe Experience Platform Identity Service i Experience Cloud**
 
+   The **Identitetstjänst** används för att skapa ett gemensamt identifieringsramverk för bastjänsterna, lösningarna, kundattributen och målgrupperna i bastjänsten för Experience Cloud. Det fungerar genom att tilldela ett unikt, beständigt ID till en besökare. När din organisation implementerar ID-tjänsten kan du med detta ID identifiera samma besökare och deras data i olika Experience Cloud-lösningar.
 
-## Implementera Adobe Experience Platform Identity Service. {#implement-id}
+   ![ID-tjänstgrafik](assets/mc_id_service_graphic.png)
 
-The **Identitetstjänst** används för att skapa ett gemensamt identifieringsramverk för bastjänsterna, lösningarna, kundattributen och målgrupperna i bastjänsten för Experience Cloud. Det fungerar genom att tilldela ett unikt, beständigt ID till en besökare. När din organisation implementerar ID-tjänsten kan du med detta ID identifiera samma besökare och deras data i olika Experience Cloud-lösningar.
+   ID-tjänsten kan även ersätta olika lösningsspecifika ID:n (till exempel Analytics AID). Via [Kund-ID och autentiseringstillstånd](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html) Med ID-tjänsten kan du skicka in dina egna kund-ID:n till Experience Cloud. Tänk dock på att ID-tjänsten bara fungerar med de lösningar som du redan har prenumererat på. Om du inte är registrerad för åtkomst till andra produkter ger ID-tjänsten inte åtkomst.
 
-![ID-tjänstgrafik](assets/mc_id_service_graphic.png)
+   ID-tjänsten är en integrerad komponent i många Experience Cloud-funktioner, förbättringar och tjänster. För närvarande stöder ID-tjänsten [Analyser,](https://www.adobe.com/marketing-cloud/web-analytics.html) [Audience Manager,](https://www.adobe.com/marketing-cloud/data-management-platform.html) och [Mål.](https://www.adobe.com/marketing-cloud/testing-targeting.html)
 
-ID-tjänsten kan även ersätta olika lösningsspecifika ID:n (till exempel Analytics AID). Via [Kund-ID och autentiseringstillstånd](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html) kan du med ID-tjänsten skicka dina egna kund-ID:n till Experience Cloud. Tänk dock på att ID-tjänsten bara fungerar med de lösningar som du redan har prenumererat på. Om du inte är registrerad för åtkomst till andra produkter ger ID-tjänsten inte åtkomst.
+   Om du inte har implementerat ID-tjänsten är det dags att börja fundera på en migreringsstrategi nu. Mer information om ID-tjänstens betydelse och roll finns i [Varför identitetstjänsten ska finnas på din radardator.](https://theblog.adobe.com/why-new-adobe-marketing-cloud-id-service-should-be-on-your-radar/)
 
-ID-tjänsten är en integrerad komponent i många Experience Cloud-funktioner, förbättringar och tjänster. För närvarande stöder ID-tjänsten [Analyser,](https://www.adobe.com/marketing-cloud/web-analytics.html) [Audience Manager,](https://www.adobe.com/marketing-cloud/data-management-platform.html) och [Mål.](https://www.adobe.com/marketing-cloud/testing-targeting.html)
+   Mer information om Experience Cloud-ID finns i [Experience Cloud ID - översikt](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html) och [Adobe Experience Platform Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html).
 
-Om du inte har implementerat ID-tjänsten är det dags att börja fundera på en migreringsstrategi nu. Mer information om ID-tjänstens betydelse och roll finns i [Varför identitetstjänsten ska finnas på din radardator.](https://theblog.adobe.com/why-new-adobe-marketing-cloud-id-service-should-be-on-your-radar/)
+1. **Visa ytterligare krav för implementeringsmetoden**
 
-Mer information om Experience Cloud-ID finns i [Experience Cloud ID - översikt](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html) och [Adobe Experience Platform Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html).
+   Beroende på hur du planerar att implementera Streaming Media kan du visa förutsättningarna för någon av följande implementeringsmetoder:
+
+   * [Förutsättningar för implementering av endast Adobe Analytics](/help/implementation/media-sdk/setup/prerequisites-analytics.md)
+
+   * Krav för Edge-implementeringar
