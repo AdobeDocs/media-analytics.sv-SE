@@ -5,9 +5,9 @@ uuid: 4c0b37f3-8615-4cc0-b9c9-eeb029067064
 exl-id: 85ab1dbd-f4a7-4f11-afc9-8d5000e2de70
 feature: "Media Analytics, System Requirements"
 role: User, Admin, Data Engineer
-source-git-commit: 60702b2cf466df7a1b328743c5d5f4c1834d9554
+source-git-commit: b12e6547ef32bfad7e8d6787a26d6467bcfeb23c
 workflow-type: tm+mt
-source-wordcount: '433'
+source-wordcount: '442'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Innan du börjar implementera Streaming Media utför du följande uppgifter:
 Innan du börjar implementera Streaming Media ska du granska [Översikt över direktuppspelningsmedia](/help/media-overview.md) för att säkerställa att Streaming Media uppfyller era behov.
 
 1. **Bekräfta prismodellen för strömmande media**<br>
-Den aktuella prismodellen bygger på videoströmmar. Om det behövs kan du kontakta din säljrepresentant eller kontoteamet på Adobe för att signera en ny försäljningsorder eftersom Streaming Media Analytics säljs separat från Adobe Analytics.
+Den aktuella prismodellen bygger på videoströmmar. Om det behövs kontaktar du din säljare eller ditt kontoteam på Adobe, eftersom Streaming Media säljs separat som ett tillägg till Adobe Analytics.<!--update when media SKUs are added to other AEP apps -->
 
 1. **Aktivera Adobe Analytics-rapporter**<br>
 Om du vill aktivera rapporter i Analytics och visa innehåll och annonsuppgifter som du samlar in måste du aktivera rapporter i Analytics. Se [Aktivera medierapporter](/help/reporting/media-reports-enable.md).
@@ -46,3 +46,5 @@ Om du vill aktivera rapporter i Analytics och visa innehåll och annonsuppgifter
    * [Förutsättningar för implementering av endast Adobe Analytics](/help/implementation/media-sdk/setup/prerequisites-analytics.md)
 
    * [Krav för Edge-implementeringar](/help/implementation/edge/prerequisites-edge.md)
+
+   Använd [Implementeringsöversikt](/help/implementation/overview.md) för att avgöra vilken implementeringsmetod som är rätt för dig.
