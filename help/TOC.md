@@ -5,10 +5,10 @@ user-guide-title: Adobe Analytics for Streaming Media
 breadcrumb-title: Användarhandbok om Media Analytics
 user-guide-description: Implementera Adobe Analytics for Streaming Media. Innehåller Media SDK och Media Collection API.
 sub-product: media analytics
-source-git-commit: 8a0f2c0b367b48ee5ac94e7fc6bcd0eadafbc5d8
+source-git-commit: ee147c2446162257b03f2f0b972e591435d787a9
 workflow-type: tm+mt
 source-wordcount: '897'
-ht-degree: 70%
+ht-degree: 68%
 
 ---
 
@@ -75,21 +75,22 @@ ht-degree: 70%
       + [Beräknade mätvärden](implementation/variables/calculated-metrics.md)
 + Rapportering {#media-reports}
    + [Aktivera medierapporter](reporting/media-reports-enable.md)
-   + [Om segment](reporting/segments.md)
-   + Standardrapporter för media {#media-default-reports}
-      + [Översikt över standardrapporter](reporting/reports-and-analytics/default-reports-overview.md)
-      + [Medieöversikt](reporting/reports-and-analytics/media-reports-overview.md)
-      + [Medieinformation](reporting/reports-and-analytics/media-reports-detail.md)
-      + [Media Daypart-rapport](reporting/reports-and-analytics/media-reports-daypart.md)
-      + [Rapport över samtidiga visningsprogram för media](reporting/reports-and-analytics/media-concurrent-viewers-reports.md)
-   + Paneler för mediearbetsyta {#media-workspace-panels}
+   + Mediepaneler i arbetsytan {#media-workspace-panels}
       + [Panelen Mediegenomsnitt för miniatyrmålgrupp](reporting/workspace/average-minute-audience.md)
       + [Panelen för samtidiga medieanvändare](reporting/workspace/media-concurrent-viewers-overview.md)
       + [Medieuppspelningstid spenderad panel](reporting/workspace/media-playback-time-spent.md)
-   + [Mallar för mediearbetsyta](reporting/workspace/media-workspace-templates.md)
-   + [Hämta data för samtidiga visningsprogram via API](reporting/reports-and-analytics/get-concurrent-json20.md)
-   + [Hämta mediespelningstid för spenderade data via API](reporting/reports-and-analytics/get-mediaplaybacktimespent-json20.md)
-+ Användningsexempel {#media-use-cases}
+   + [Medierapporter i arbetsytan](reporting/workspace/media-workspace-templates.md)
+   + [Mediesegment](reporting/segments.md)
+   + Standardmedierapporter {#media-default-reports}
+      + [Översikt över standardrapporter](reporting/reports-and-analytics/default-reports-overview.md)
+      + [Översikt över media](reporting/reports-and-analytics/media-reports-overview.md)
+      + [Medieinformation](reporting/reports-and-analytics/media-reports-detail.md)
+      + [Rapport om mediadagar](reporting/reports-and-analytics/media-reports-daypart.md)
+      + [Rapport över visningsprogram för parallella medier](reporting/reports-and-analytics/media-concurrent-viewers-reports.md)
+   + Media-API {#media-api}
+      + [Hämta data från samtidiga visningsprogram](reporting/reports-and-analytics/get-concurrent-json20.md)
+      + [Hämta tidsåtgång för mediauppspelning spenderade data](reporting/reports-and-analytics/get-mediaplaybacktimespent-json20.md)
++ Användningsfall {#media-use-cases}
    + [Användningsexempel för Media SDK](use-cases/cookbook/sdk-cookbook-overview.md)
    + Spårning av spelarens tillstånd {#player-state-tracking}
       + [Översikt](use-cases/player-state-tracking/player-state-overview.md)

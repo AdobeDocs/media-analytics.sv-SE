@@ -5,25 +5,41 @@ uuid: 0024b06a-eaf5-4d2e-be45-aeda9d0554c1
 exl-id: a835f86a-a93a-4a56-91f4-14628cf48214
 feature: "Media Analytics, Workspace Basics"
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: 41de1573b001deb65f525af9c5c648d85cac8629
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '342'
 ht-degree: 0%
 
 ---
 
-# Mallar för arbetsytan Media{#media-workspace-templates}
+# Medierapporter i Analysis Workspace {#media-workspace-templates}
 
-Med Adobe Analytics Workspace kan du snabbt skapa kontrollpaneler för analys av spårningsdata. När du skapar ett nytt projekt, eller när du går in på Workspace för att hantera ett befintligt projekt, kan du välja bland standardmallar som täcker vanliga allmänna spårningsscenarier, som t.ex. förvärv, direktuppspelning av media med mera. Du kan också skapa, ändra och spara egna mallar.
+>[!NOTE]
+>
+>*Rapporter* i Workspace kallades tidigare *mallar*.
 
-Du arbetar med mallar från fliken Arbetsyta i Adobe Analytics när du skapar eller hanterar ett projekt. När du först besöker Workspace får du tillgång till alternativen att skapa ett nytt projekt eller öppna ett befintligt projekt:
+Analysis Workspace erbjuder en uppsättning färdiga rapporter som är tillgängliga som standard och som du kan använda för att analysera data. Mer information om alla standardrapporter som är tillgängliga finns i [Visa rapporter](https://experienceleague.adobe.com/docs/analytics/analyze/landing.html?lang=en#menus) in [Adobe Analytics landningssida](https://experienceleague.adobe.com/docs/analytics/analyze/landing.html).
 
-* **Skapa ett nytt projekt -** När du klickar på **[!UICONTROL Create New Project]** visas en dialogruta där du kan välja bland mallarna (inklusive Standard och Egen) i arbetsytan:
+Vissa av dessa rapporter är särskilt användbara för att analysera Streaming Media-data, vilket beskrivs i följande avsnitt.
 
-   ![](/help/reporting/assets/all-templates-audio.png)
+## Förstå standardmedierapporter
 
-   Om du t.ex. väljer **[!UICONTROL Audio Consumption]** visas ett projekt med följande ljudorienterade kontrollpanel:
+Nedan följer en lista över standardrapporter som är användbara när direktuppspelningsmediedata analyseras:
 
-   ![](/help/reporting/assets/aa-workspace.png)
+* [!UICONTROL **Konsumtion av mediainnehåll**]: Skapar en rapport som visar vilket innehåll som konsumeras mest och engagerande användare.
 
-* **Hantera projekt -** I ett befintligt projekt kan du ändra datapresentationen och Spara som för att skapa en egen samling med anpassade mallar.
+* [!UICONTROL **Direktuppspelad medieförbrukning**]: Skapar en rapport med en kontrollpanel, vilket visas i exemplet nedan.
+
+* [!UICONTROL **Media Recency, frequency, loyalty**]: Skapar en rapport som visar senaste besök (hur många dagar sedan senaste besök), frekvens (hur många besök per besökare) och lojalitet (hur ofta kohorter med användare återvänder till webbplatsen)
+
+Om du till exempel väljer  [!UICONTROL **Direktuppspelad medieförbrukning**] en rapport visas ett projekt med följande kontrollpanel:
+
+![](/help/reporting/assets/aa-workspace.png)
+
+## Använd standardmedierapporter
+
+Du kan använda standardmedierapporter på följande sätt: när du skapar ett nytt projekt. Du kan också göra det eller när du ändrar ett befintligt projekt.
+
+* **När du skapar ett nytt projekt:** Mer information om hur du skapar ett nytt projekt från en standardrapport finns i [Skapa ett projekt från ett tomt projekt eller en rapport](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/build-workspace-project/create-projects.html?lang=en#create-a-project-from-a-blank-project-or-a-report) in [Skapa projekt i Analysis Workspace](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/build-workspace-project/create-projects.html?lang=en#create-a-project-from-a-blank-project-or-a-report).
+
+* **När du skapar en anpassad företagsrapport:** Mer information om hur du skapar en anpassad företagsrapport finns i [Skapa en anpassad företagsrapport](https://experienceleague.adobe.com/docs/analytics/analyze/landing.html?lang=en#company-report) in [Adobe Analytics landningssida](https://experienceleague.adobe.com/docs/analytics/analyze/landing.html).

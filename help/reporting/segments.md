@@ -5,29 +5,29 @@ uuid: 61906b8c-3362-4463-82be-fe0e741a5eb3
 exl-id: a450801c-0d6b-4e2a-8662-f00aaaa6e4e0
 feature: "Media Analytics, Segmentation"
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: b15a81dc8f08e94c9b80d66019f3d0fe95ef5a74
 workflow-type: tm+mt
-source-wordcount: '204'
+source-wordcount: '205'
 ht-degree: 6%
 
 ---
 
-# Segment{#segments}
+# Mediesegment{#segments}
 
 Med segment kan du identifiera undergrupper av besökare baserat på egenskaper eller webbplatsinteraktioner. Med direktuppspelade mediesegment kan du identifiera typ av besöksström, till exempel ljud-, live- eller poddsändningsströmmar. Mer information om Adobe Analytics-segment finns i [Om segment och behållare](https://experienceleague.adobe.com/docs/analytics/components/segmentation/seg-overview.html?lang=en) i Adobe Analytics Components Guide.
 
 >[!NOTE]
 >
->Dessa rapporteringssegment som är kopplade till Media Stream Type introducerades den 18 mars 2018 tillsammans med `streamType` parameter.
+>Dessa rapporteringssegment som är kopplade till Media Stream Type introducerades den 18 september tillsammans med `streamType` parameter.
 
 | Segment | Beskrivning | Regel |
 |---|---|---|
 | Medieströmtyp: Alla | Segmentera alla *media* strömdata | &quot;Innehåll (ID) finns&quot; |
-| Medieströmtyp: Ljud | Segmentera alla *ljud* strömdata | &quot;Innehåll (ID) finns&quot; AND &quot;Media Stream Type = `audio`&quot; |
+| Typ av medieström: Ljud | Segmentera alla *ljud* strömdata | &quot;Innehåll (ID) finns&quot; AND &quot;Media Stream Type = `audio`&quot; |
 | Medieströmtyp: Video | Segmentera alla *video* strömdata | &quot;Innehåll (ID) finns&quot; AND &quot;Media Stream Type != `audio`&quot; |
 | Medieinnehållstyp: VoD | Segmentera allt VoD-innehåll | &quot;Innehållstyp = `vod`&quot; |
 | Medieinnehållstyp: Live | Segmentera allt Live-innehåll | &quot;Innehållstyp = `live`&quot; |
 | Medieinnehållstyp: Linjär | Segmentera allt linjärt innehåll | &quot;Innehållstyp = `linear`&quot; |
-| Medieinnehållstyp: Podcast | Segmentera allt innehåll i poddsändning | &quot;Innehållstyp = `podcast`&quot; |
+| Medieinnehållstyp: poddsändning | Segmentera allt innehåll i poddsändning | &quot;Innehållstyp = `podcast`&quot; |
 | Medieinnehållstyp: Ljudbok | Segmentera allt innehåll i ljudboken | &quot;Innehållstyp = `audiobook`&quot; |
 | Medieinnehållstyp: AoD | Segmentera allt AoD-innehåll | &quot;Innehållstyp = `aod`&quot; |
