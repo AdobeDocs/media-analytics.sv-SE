@@ -4,7 +4,7 @@ description: Lär dig hur du implementerar huvudspårning med Media SDK i en web
 exl-id: f3145450-82ba-4790-91a4-9d2cc97bbaa5
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: 59e03f550a35edecc949f7ef5e70c1cb2a784725
 workflow-type: tm+mt
 source-wordcount: '645'
 ht-degree: 0%
@@ -16,7 +16,8 @@ ht-degree: 0%
 Denna dokumentation behandlar spårning i version 3.x av SDK.
 
 >[!IMPORTANT]
-> Om du implementerar en tidigare version av SDK kan du hämta utvecklarhandböckerna här: [Hämta SDK:er](/help/getting-started/download-sdks.md)
+>
+>Om du implementerar en tidigare version av SDK kan du hämta utvecklarhandböckerna här: [Hämta SDK:er](/help/getting-started/download-sdks.md)
 
 1. **Inledande spårningsinställning**
 
@@ -29,8 +30,8 @@ Denna dokumentation behandlar spårning i version 3.x av SDK.
    | `name` | string | En sträng som inte är tom motsvarar medienamnet. |
    | `id` | string | En sträng som inte är tom och som betecknar en unik medieidentifierare. |
    | `length` | tal | Positivt tal som anger mediets längd i sekunder. Använd 0 om längden är okänd. |
-   | `streamType` | string |  |
-   | `mediaType` |  | Typ av media (ljud eller video). |
+   | `streamType` | string |   |
+   | `mediaType` | | Typ av media (ljud eller video). |
 
    **`StreamType`konstanter:**
 
@@ -60,32 +61,32 @@ Denna dokumentation behandlar spårning i version 3.x av SDK.
 
    * **Standardmetadata**
 
-      >[!NOTE]
-      >
-      >Det är valfritt att bifoga standardmetadata.
+     >[!NOTE]
+     >
+     >Det är valfritt att bifoga standardmetadata.
 
       * API-referens för metadata för media - [Standardmetadatanycklar - JavaScript](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript)
 
-         Se alla tillgängliga metadata här: [Parametrar för ljud och video](/help/implementation/variables/audio-video-parameters.md)
+        Se alla tillgängliga metadata här: [Parametrar för ljud och video](/help/implementation/variables/audio-video-parameters.md)
+
    * **Anpassade metadata**
 
-      Skapa ett variabelobjekt för de anpassade variablerna och fyll i med data för mediet. Exempel:
+     Skapa ett variabelobjekt för de anpassade variablerna och fyll i med data för mediet. Exempel:
 
-      ```js
-      /* Set context data */
-       var contextData = {};
-      
-       //Standard metadata
-       contextData[ADB.Media.VideoMetadataKeys] = "Sample Episode";
-       contextData[ADB.Media.VideoMetadataKeys] = "Sample Show";
-      
-       //Custom metadata
-       contextData["isUserLoggedIn"] = "false";
-       contextData["tvStation"] = "Sample TV Station";
-      ```
+     ```js
+     /* Set context data */
+      var contextData = {};
+     
+      //Standard metadata
+      contextData[ADB.Media.VideoMetadataKeys] = "Sample Episode";
+      contextData[ADB.Media.VideoMetadataKeys] = "Sample Show";
+     
+      //Custom metadata
+      contextData["isUserLoggedIn"] = "false";
+      contextData["tvStation"] = "Sample TV Station";
+     ```
 
-
-1. **Spåra avsikten att starta uppspelningen**
+1. **Spåra avsikten att starta uppspelning**
 
    Om du vill börja spåra en mediesession ringer du `trackSessionStart` på Media Heartbeat-instansen:
 
@@ -125,7 +126,7 @@ Denna dokumentation behandlar spårning i version 3.x av SDK.
    tracker.trackPlay();
    ```
 
-1. **Spåra slutförd uppspelning**
+1. **Spåra uppspelningen**
 
    Identifiera händelsen från mediespelaren för att slutföra uppspelningen, där användaren har tittat på innehållet tills slutet, och anropa `trackComplete`:
 
@@ -159,7 +160,7 @@ Denna dokumentation behandlar spårning i version 3.x av SDK.
 
    * Användaren träffar uttryckligen paus i appen.
    * Spelaren försätts i pausläget.
-   * (*Mobilappar*) - Användaren placerar programmet i bakgrunden, men du vill att sessionen ska vara öppen i appen.
+   * (*Mobilappar*) - Användaren placerar programmet i bakgrunden, men du vill att sessionen ska vara öppen.
    * (*Mobilappar*) - Alla typer av systemavbrott inträffar som gör att ett program backjordas. Användaren får t.ex. ett samtal eller ett popup-fönster från ett annat program inträffar, men du vill att sessionen ska vara aktiv så att användaren kan återuppta mediet från den punkt då det avbröts.
 
 1. Identifiera händelsen från spelaren för uppspelning och/eller återupptagning från paus och samtal `trackPlay`:

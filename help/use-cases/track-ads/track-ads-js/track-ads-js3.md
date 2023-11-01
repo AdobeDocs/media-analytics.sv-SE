@@ -4,9 +4,9 @@ description: Implementera annonsspårning i webbläsarprogram (JS) med Media SDK
 exl-id: 6b34b2c0-5e50-471a-b52c-b9c760fa3169
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: fd9f0a7f4592c01082bcad015351d9128df2f8c9
 workflow-type: tm+mt
-source-wordcount: '362'
+source-wordcount: '394'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ Följande instruktioner ger vägledning vid implementering med 3.x SDK:er.
 
 >[!IMPORTANT]
 >
->Om du implementerar en tidigare version av SDK kan du hämta utvecklarhandböckerna här: [Hämta SDK:er.](/help/getting-started/download-sdks.md)
+>Om du implementerar en tidigare version av SDK kan du hämta utvecklarhandböckerna här: [Ladda ned SDK:er.](/help/getting-started/download-sdks.md)
 
 ## Konstanter för annonsspårning
 
@@ -77,24 +77,24 @@ Följande instruktioner ger vägledning vid implementering med 3.x SDK:er.
                                    <LENGTH>);
    ```
 
-1. Du kan också bifoga standard- och/eller annonsmetadata till mediespårningssessionen via kontextdatavariabler.
+1. (Valfritt) Koppla standard- och/eller annonsmetadata till mediespårningssessionen via kontextdatavariabler.
 
    * [Implementera standardmetadata för annonser i JavaScript](/help/use-cases/track-ads/impl-std-ad-metadata/impl-std-ad-md-js/impl-std-ad-metadata-js3.md)
    * **Anpassade annonsmetadata -** För anpassade metadata skapar du ett variabelobjekt för de anpassade datavariablerna och fyller i med data för den aktuella annonsen:
 
-      ```js
-      /* Set context data */
-      // Standard metadata keys provided by adobe.
-      adMetadata[ADB.Media.AdMetadataKeys]  ="Sample Advertiser";
-      adMetadata[ADB.Media.AdMetadataKeys] = "Sample Campaign";
-      
-      // Custom metadata keys
-      adMetadata["affiliate"] = "Sample affiliate";
-      adMetadata["campaign"] = "Sample ad campaign";
-      adMetadata["creative"] = "Sample creative";
-      ```
+     ```js
+     /* Set context data */
+     // Standard metadata keys provided by adobe.
+     adMetadata[ADB.Media.AdMetadataKeys]  ="Sample Advertiser";
+     adMetadata[ADB.Media.AdMetadataKeys] = "Sample Campaign";
+     
+     // Custom metadata keys
+     adMetadata["affiliate"] = "Sample affiliate";
+     adMetadata["campaign"] = "Sample ad campaign";
+     adMetadata["creative"] = "Sample creative";
+     ```
 
-1. Utlysning `trackEvent()` med `AdStart` i `MediaHeartbeat` -instans för att börja spåra annonsuppspelningen.
+1. Utlysning `trackEvent()` med `AdStart` -händelsen i `MediaHeartbeat` -instans för att börja spåra annonsuppspelningen.
 
    Ta med en referens till din anpassade metadatavariabel (eller ett tomt objekt) som den tredje parametern i händelseanropet:
 
@@ -104,7 +104,7 @@ Följande instruktioner ger vägledning vid implementering med 3.x SDK:er.
    };
    ```
 
-1. När annonsuppspelningen är slut ringer du `trackEvent()` med `AdComplete` händelse:
+1. När annonsuppspelningen når slutet av annonsen ringer du `trackEvent()` med `AdComplete` händelse:
 
    ```js
    _onAdComplete = function() {
@@ -130,3 +130,33 @@ Följande instruktioner ger vägledning vid implementering med 3.x SDK:er.
    ```
 
 Se spårningsscenariot [VOD-uppspelning med pre-roll-annonser](/help/use-cases/tracking-scenarios/vod-preroll-ads.md) för mer information.
+
+## Detaljerad annonshantering
+
+Du kan ställa in detaljerad annonsspårning för att aktivera `1 second` annonsspårning.
+
+Den här informationen måste anges när en spårningssession startas.
+
+>[!NOTE]
+>
+>   Standardintervallet för annonsväxling är `10 seconds`.
+
+
+**Syntax**
+
+```javascript
+ADB.Media.MediaObjectKey = {
+   GranularAdTracking: "media.granularadtracking"
+   }
+```
+
+**Exempel**
+
+```javascript
+var mediaObject = ADB.Media.createMediaObject("media-name", "media-id", 60, ADB.Media.StreamType.VOD, ADB.Media.MediaType.Video);
+
+// Enable granular ad tracking
+mediaObject[ADB.Media.MediaObjectKey.GranularAdTracking] = true;
+
+tracker.trackSessionStart(mediaObject);
+```
