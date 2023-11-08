@@ -5,9 +5,9 @@ uuid: a8aa7b3c-2d39-44d7-8ebc-b101d130101f
 exl-id: 5272c0ce-4e3d-48c6-bfa6-94066ccbf9ac
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: c308dba2d7cf07b89bf124bd6e5f972c253c9f18
 workflow-type: tm+mt
-source-wordcount: '771'
+source-wordcount: '792'
 ht-degree: 1%
 
 ---
@@ -17,6 +17,7 @@ ht-degree: 1%
 I den här dokumentationen beskrivs spårning i version 2.x av SDK.
 
 >[!IMPORTANT]
+>
 >Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandböcker här: [Hämta SDK:er](/help/getting-started/download-sdks.md)
 
 1. **Inledande spårningsinställning**
@@ -105,20 +106,21 @@ I den här dokumentationen beskrivs spårning i version 2.x av SDK.
 
 [Implementera standardmetadata i Roku](/help/use-cases/track-av-playback/impl-std-metadata/impl-std-metadata-roku.md)
 
-      >[!NOTE]
-      >Det är valfritt att bifoga standardmetadataobjektet för video till mediaobjektet.
+     >[!NOTE]
+     >
+     >Det är valfritt att bifoga standardmetadataobjektet för video till mediaobjektet.
 
    * **Anpassade metadata**
 
-      Skapa ett variabelobjekt för de anpassade variablerna och fyll i med data för videon. Exempel:
+     Skapa ett variabelobjekt för de anpassade variablerna och fyll i med data för videon. Exempel:
 
-      ```
-      mediaContextData = {}
-      mediaContextData["cmk1"] = "cmv1"
-      mediaContextData["cmk2"] = "cmv2"
-      ```
+     ```
+     mediaContextData = {}
+     mediaContextData["cmk1"] = "cmv1"
+     mediaContextData["cmk2"] = "cmv2"
+     ```
 
-1. **Spåra avsikten att starta uppspelningen**
+1. **Spåra avsikten att starta uppspelning**
 
    Om du vill börja spåra en mediesession ringer du `trackSessionStart` på Media Heartbeat-instansen:
 
@@ -127,17 +129,20 @@ I den här dokumentationen beskrivs spårning i version 2.x av SDK.
    ```
 
    >[!TIP]
+   >
    >Det andra värdet är det anpassade namnet på videometadataobjektet som du skapade i steg 2.
 
    >[!IMPORTANT]
+   >
    >`trackSessionStart` spårar användarens avsikt att spela upp, inte början av uppspelningen. Detta API används för att läsa in videodata/metadata och för att beräkna QoS-måttet för tiden till start (tidsintervallet mellan `trackSessionStart` och `trackPlay`).
 
    >[!NOTE]
+   >
    >Om du inte använder anpassade videometadata skickar du ett tomt objekt för `data` argument i `trackSessionStart`, vilket visas i kommenteringsraden i iOS-exemplet ovan.
 
 1. **Spåra faktiskt uppspelningsstart**
 
-   Identifiera händelsen från videospelaren i början av videouppspelningen, där den första bildrutan i videon återges på skärmen, och anropa `trackPlay`:
+   Identifiera händelsen från videospelaren i början av videouppspelningen, där videons första bildruta återges på skärmen, och anropa `trackPlay`:
 
    ```
    ADBMobile().mediaTrackPlay()
@@ -145,14 +150,20 @@ I den här dokumentationen beskrivs spårning i version 2.x av SDK.
 
 1. **Uppdatera spelhuvudets värde**
 
-   När mediespelhuvudet ändras meddelas SDK genom att anropa `mediaUpdatePlayhead` API. <br /> För video-on-demand (VOD) anges värdet i sekunder från mediaobjektets början. <br /> Om spelaren inte anger information om innehållets varaktighet för direktuppspelning kan värdet anges som antalet sekunder sedan midnatt UTC den dagen. <br /> Obs! När du använder förloppsmarkörer krävs innehållets längd och spelhuvudet måste uppdateras som antal sekunder från början av medieobjektet, med början från 0.
-
+   Meddela SDK när mediespelhuvudet ändras genom att anropa `mediaUpdatePlayhead` API. <br /> För video-on-demand (VOD) anges värdet i sekunder från mediaobjektets början. <br /> Om spelaren inte anger information om innehållets varaktighet för direktuppspelning kan värdet anges som antalet sekunder sedan midnatt UTC den dagen.
 
    ```
    ADBMobile().mediaUpdatePlayhead(position)
    ```
 
-1. **Spåra slutförd uppspelning**
+   >[!NOTE]
+   >
+   >Tänk på följande när du anropar `mediaUpdatePlayhead` API:
+   >* När du använder förloppsmarkörer krävs innehållets längd och spelhuvudet måste uppdateras som antal sekunder från början av medieobjektet, med början från 0.
+   >* När du använder medie-SDK:er måste du anropa `mediaUpdatePlayhead` API minst en gång per sekund.
+
+
+1. **Spåra uppspelningen**
 
    Identifiera händelsen från videospelaren för att slutföra videouppspelningen, där användaren har tittat på innehållet tills slutet, och anropa `trackComplete`:
 
@@ -162,7 +173,7 @@ I den här dokumentationen beskrivs spårning i version 2.x av SDK.
 
 1. **Spåra slutet av sessionen**
 
-   Identifiera händelsen från videospelaren för borttagning/stängning av videouppspelningen, där användaren stänger videon och/eller videon är klar och har tagits bort, och anropa `trackSessionEnd`:
+   Identifiera händelsen från videospelaren för borttagning/stängning av videouppspelningen, där användaren stänger videon och/eller videon är slutförd och har tagits bort, och anropa `trackSessionEnd`:
 
    ```
    ADBMobile().mediaTrackSessionEnd()
@@ -185,7 +196,7 @@ I den här dokumentationen beskrivs spårning i version 2.x av SDK.
 
    * Användaren träffar uttryckligen paus i appen.
    * Spelaren försätts i pausläget.
-   * (*Mobilappar*) - Användaren placerar programmet i bakgrunden, men du vill att sessionen ska vara öppen i appen.
+   * (*Mobilappar*) - Användaren placerar programmet i bakgrunden, men du vill att sessionen ska vara öppen.
    * (*Mobilappar*) - Alla typer av systemavbrott inträffar som gör att ett program backjordas. Användaren får t.ex. ett samtal eller ett popup-fönster från ett annat program inträffar, men du vill att sessionen ska vara aktiv så att användaren kan återuppta videon från avbrottet.
 
 1. Identifiera händelsen från spelaren för videouppspelning och/eller videouppspelning från paus och samtal `trackPlay`:

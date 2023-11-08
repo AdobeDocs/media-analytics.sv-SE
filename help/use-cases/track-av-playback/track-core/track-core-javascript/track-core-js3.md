@@ -4,9 +4,9 @@ description: Lär dig hur du implementerar huvudspårning med Media SDK i en web
 exl-id: f3145450-82ba-4790-91a4-9d2cc97bbaa5
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: 59e03f550a35edecc949f7ef5e70c1cb2a784725
+source-git-commit: c308dba2d7cf07b89bf124bd6e5f972c253c9f18
 workflow-type: tm+mt
-source-wordcount: '645'
+source-wordcount: '755'
 ht-degree: 0%
 
 ---
@@ -125,6 +125,20 @@ Denna dokumentation behandlar spårning i version 3.x av SDK.
    ```js
    tracker.trackPlay();
    ```
+
+1. **Uppdatera spelhuvudets värde**
+
+   Meddela SDK när mediespelhuvudet ändras genom att anropa `mediaUpdatePlayhead` API. <br /> För video-on-demand (VOD) anges värdet i sekunder från mediaobjektets början. <br /> Om spelaren inte anger information om innehållets varaktighet för direktuppspelning kan värdet anges som antalet sekunder sedan midnatt UTC den dagen.
+
+   ```
+   tracker.updatePlayhead(position)
+   ```
+
+   >[!NOTE]
+   >
+   >Tänk på följande när du anropar `tracker.updatePlayhead` API:
+   >* När du använder förloppsmarkörer krävs innehållets längd och spelhuvudet måste uppdateras som antal sekunder från början av medieobjektet, med början från 0.
+   >* När du använder medie-SDK:er måste du anropa `tracker.updatePlayhead` API minst en gång per sekund.
 
 1. **Spåra uppspelningen**
 

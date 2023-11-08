@@ -5,7 +5,7 @@ uuid: ab5fab95-76ed-4ae6-aedb-2e66eece7607
 exl-id: d5f5a3f0-f1e0-4d68-af7f-88a30faed0db
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: c308dba2d7cf07b89bf124bd6e5f972c253c9f18
 workflow-type: tm+mt
 source-wordcount: '708'
 ht-degree: 2%
@@ -16,6 +16,7 @@ ht-degree: 2%
 
 I den här dokumentationen beskrivs spårning i version 2.x av SDK.
 >[!IMPORTANT]
+>
 >Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandboken för Android här: [Hämta SDK:er](/help/getting-started/download-sdks.md)
 
 1. **Inledande spårningsinställning**
@@ -61,28 +62,28 @@ I den här dokumentationen beskrivs spårning i version 2.x av SDK.
 
    * **Standardmetadata**
 
-      [Implementera standardmetadata i Android](/help/use-cases/track-av-playback/impl-std-metadata/impl-std-metadata-android.md)
+     [Implementera standardmetadata i Android](/help/use-cases/track-av-playback/impl-std-metadata/impl-std-metadata-android.md)
 
-      >[!NOTE]
-      >
-      >Det är valfritt att bifoga standardmetadataobjektet till medieobjektet.
+     >[!NOTE]
+     >
+     >Det är valfritt att bifoga standardmetadataobjektet till medieobjektet.
 
       * API-referens för metadata för media - [Standardmetadatanycklar - Android](https://adobe-marketing-cloud.github.io/media-sdks/reference/android/com/adobe/primetime/va/simple/MediaHeartbeat.VideoMetadataKeys.html)
       * Här finns en omfattande uppsättning videometadata: [Parametrar för ljud och video](/help/implementation/variables/audio-video-parameters.md)
+
    * **Anpassade metadata**
 
-      Skapa en ordlista för de anpassade variablerna och fyll i med data för mediet. Exempel:
+     Skapa en ordlista för de anpassade variablerna och fyll i med data för mediet. Exempel:
 
-      ```java
-      HashMap<String, String> mediaMetadata =  
-        new HashMap<String, String>();
-      mediaMetadata.put("isUserLoggedIn", "false");
-      mediaMetadata.put("tvStation", "Sample TV Station");
-      mediaMetadata.put("programmer", "Sample programmer");
-      ```
+     ```java
+     HashMap<String, String> mediaMetadata =  
+       new HashMap<String, String>();
+     mediaMetadata.put("isUserLoggedIn", "false");
+     mediaMetadata.put("tvStation", "Sample TV Station");
+     mediaMetadata.put("programmer", "Sample programmer");
+     ```
 
-
-1. **Spåra avsikten att starta uppspelningen**
+1. **Spåra avsikten att starta uppspelning**
 
    Om du vill börja spåra en mediesession ringer du `trackSessionStart` på Media Heartbeat-instansen. Exempel:
 
@@ -115,7 +116,7 @@ I den här dokumentationen beskrivs spårning i version 2.x av SDK.
    }
    ```
 
-1. **Spåra slutförd uppspelning**
+1. **Spåra uppspelningen**
 
    Identifiera händelsen från mediespelaren för att slutföra medieuppspelningen, där användaren har tittat på innehållet tills slutet, och ring `trackComplete`:
 
@@ -157,7 +158,7 @@ I den här dokumentationen beskrivs spårning i version 2.x av SDK.
 
    * Användaren träffar uttryckligen paus i appen.
    * Spelaren försätts i pausläget.
-   * (*Mobilappar*) - Användaren placerar programmet i bakgrunden, men du vill att sessionen ska vara öppen i appen.
+   * (*Mobilappar*) - Användaren placerar programmet i bakgrunden, men du vill att sessionen ska vara öppen.
    * (*Mobilappar*) - Alla typer av systemavbrott inträffar som gör att ett program backjordas. Användaren får t.ex. ett samtal eller ett popup-fönster från ett annat program inträffar, men du vill att sessionen ska vara aktiv så att användaren kan återuppta mediet från den punkt då det avbröts.
 
 1. Identifiera händelsen från spelaren för uppspelning av media och/eller återupptagning av media från paus och samtal `trackPlay`.

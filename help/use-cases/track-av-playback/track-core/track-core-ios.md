@@ -5,7 +5,7 @@ uuid: bdc0e05c-4fe5-430e-aee2-f331bc59ac6b
 exl-id: 5c6b36b3-a421-45a4-a65e-4eb57513ca4a
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: c308dba2d7cf07b89bf124bd6e5f972c253c9f18
 workflow-type: tm+mt
 source-wordcount: '711'
 ht-degree: 2%
@@ -17,6 +17,7 @@ ht-degree: 2%
 I den här dokumentationen beskrivs spårning i version 2.x av SDK.
 
 >[!IMPORTANT]
+>
 >Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandböcker här: [Hämta SDK:er](/help/getting-started/download-sdks.md)
 
 1. **Inledande spårningsinställning**
@@ -38,7 +39,7 @@ I den här dokumentationen beskrivs spårning i version 2.x av SDK.
    | Konstantnamn | Beskrivning |
    |---|---|
    | `ADBMediaHeartbeatStreamTypeVOD` | Strömtyp för Video on Demand |
-   | `ADBMediaHeartbeatStreamTypeLIVE` | Strömtyp för Live-innehåll |
+   | `ADBMediaHeartbeatStreamTypeLIVE` | Direktuppspelningstyp för Live-innehåll |
    | `ADBMediaHeartbeatStreamTypeLINEAR` | Strömtyp för linjärt innehåll |
    | `ADBMediaHeartbeatStreamTypeAOD` | Strömtyp för ljud på begäran |
    | `ADBMediaHeartbeatStreamTypeAUDIOBOOK` | Strömtyp för ljudbok |
@@ -70,26 +71,25 @@ I den här dokumentationen beskrivs spårning i version 2.x av SDK.
 
       * [Implementera standardmetadata i iOS](/help/use-cases/track-av-playback/impl-std-metadata/impl-std-metadata-ios.md)
       * **Metadataknappar för video**
-
-         [iOS metadatanycklar](/help/use-cases/track-av-playback/impl-std-metadata/ios-metadata-keys.md)
+        [iOS metadatanycklar](/help/use-cases/track-av-playback/impl-std-metadata/ios-metadata-keys.md)
 
       * Se den omfattande listan med videometadata här: [Parametrar för ljud och video](/help/implementation/variables/audio-video-parameters.md)
-      >[!NOTE]
-      >
-      >Det är valfritt att bifoga standardmetadataobjektet för video till mediaobjektet.
+
+     >[!NOTE]
+     >
+     >Det är valfritt att bifoga standardmetadataobjektet för video till mediaobjektet.
 
    * **Anpassade metadata**
 
-      Skapa ett variabelobjekt för de anpassade variablerna och fyll i med data för videon. Exempel:
+     Skapa ett variabelobjekt för de anpassade variablerna och fyll i med data för videon. Exempel:
 
-      ```
-      NSMutableDictionary *videoMetadata = [[NSMutableDictionary alloc] init];
-      [videoMetadata setObject:@"false" forKey:@"isUserLoggedIn"];
-      [videoMetadata setObject:@"Sample TV station" forKey:@"tvStation"];
-      ```
+     ```
+     NSMutableDictionary *videoMetadata = [[NSMutableDictionary alloc] init];
+     [videoMetadata setObject:@"false" forKey:@"isUserLoggedIn"];
+     [videoMetadata setObject:@"Sample TV station" forKey:@"tvStation"];
+     ```
 
-
-1. **Spåra avsikten att starta uppspelningen**
+1. **Spåra avsikten att starta uppspelning**
 
    Om du vill börja spåra en mediesession ringer du `trackSessionStart` på Media Heartbeat-instansen.
 
@@ -114,7 +114,7 @@ I den här dokumentationen beskrivs spårning i version 2.x av SDK.
 
 1. **Spåra faktiskt uppspelningsstart**
 
-   Identifiera händelsen från videospelaren i början av videouppspelningen, där den första bildrutan i videon återges på skärmen, och anropa `trackPlay`:
+   Identifiera händelsen från videospelaren i början av videouppspelningen, där videons första bildruta återges på skärmen, och anropa `trackPlay`:
 
    ```
    - (void)onVideoPlay:(NSNotification *)notification {
@@ -122,7 +122,7 @@ I den här dokumentationen beskrivs spårning i version 2.x av SDK.
    }
    ```
 
-1. **Spåra slutförd uppspelning**
+1. **Spåra uppspelningen**
 
    Identifiera händelsen från videospelaren för att slutföra videouppspelningen, där användaren har tittat på innehållet tills slutet, och anropa `trackComplete`:
 
@@ -134,7 +134,7 @@ I den här dokumentationen beskrivs spårning i version 2.x av SDK.
 
 1. **Spåra slutet av sessionen**
 
-   Identifiera händelsen från videospelaren för borttagning/stängning av videouppspelningen, där användaren stänger videon och/eller videon är klar och har tagits bort, och anropa `trackSessionEnd`:
+   Identifiera händelsen från videospelaren för borttagning/stängning av videouppspelningen, där användaren stänger videon och/eller videon är slutförd och har tagits bort, och anropa `trackSessionEnd`:
 
    ```
    - void)onMainVideoUnloaded:(NSNotification *)notification {
@@ -162,7 +162,7 @@ I den här dokumentationen beskrivs spårning i version 2.x av SDK.
 
    * Användaren träffar uttryckligen paus i appen.
    * Spelaren försätts i pausläget.
-   * (*Mobilappar*) - Användaren placerar programmet i bakgrunden, men du vill att sessionen ska vara öppen i appen.
+   * (*Mobilappar*) - Användaren placerar programmet i bakgrunden, men du vill att sessionen ska vara öppen.
    * (*Mobilappar*) - Alla typer av systemavbrott inträffar som gör att ett program backjordas. Användaren får t.ex. ett samtal eller ett popup-fönster från ett annat program inträffar, men du vill att sessionen ska vara aktiv så att användaren kan återuppta videon från avbrottet.
 
 1. Identifiera händelsen från spelaren för videouppspelning och/eller videouppspelning från paus och samtal `trackPlay`:
