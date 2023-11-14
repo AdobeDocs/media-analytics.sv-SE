@@ -1,12 +1,12 @@
 ---
-title: Lär dig mer om vanliga frågor och svar om SDK för Media Analytics
+title: Lär dig mer om vanliga frågor och svar om Media Analytics SDK
 description: Det här avsnittet innehåller frågor och svar om att stödet för SDK:er för Media Analytics har upphört.
 exl-id: 9601ec17-8421-49d0-9d81-1cfa5e8f37cf
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: b955b20495a504020a214c3a9e32b676701ee4cc
+source-git-commit: c00c9850d5ea924cef6b4842ecb770df1e78eb21
 workflow-type: tm+mt
-source-wordcount: '617'
+source-wordcount: '602'
 ht-degree: 0%
 
 ---
@@ -15,18 +15,18 @@ ht-degree: 0%
 
 När stödet för version 4 Mobile SDK upphörde den 31 augusti 2021 upphörde även Adobe stödet för Media Analytics Mobile SDK för iOS och Android. (Detta inkluderar inte Media Analytics SDK för webben (JS) och OTT-plattformar som Chromecast och Roku, som fortfarande stöds.)
 
-Det innebär att Adobe inte längre tillhandahåller korrigeringar, OS-relaterade uppdateringar eller stöd för Media Analytics Mobile SDK. När du migrerar till de nya SDK:erna för Experience Platform bör du tänka på att [Media Analytics-tillägg](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/) måste implementeras för att Adobe Analytics ska kunna aktiveras för direktuppspelningsmedia.
+Det innebär att Adobe inte längre tillhandahåller korrigeringar, OS-relaterade uppdateringar eller stöd för Media Analytics Mobile SDK. När du migrerar till de nya SDK:erna för Experience Platform bör du tänka på att [Media Analytics-tillägg](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/) måste implementeras för att aktivera Adobe Analytics per contenuti in streaming.
 
 
 ## De fem viktigaste sakerna att veta
 
-1. Mobile v4 SDK:er stöds inte längre per den 31 augusti 2021. Du bör migrera till Adobe Experience Platform (AEP) Mobile SDK för iOS och Android. Mer information finns i [Version 4 SDK för mobiler - frågor och svar](https://developer.adobe.com/client-sdks/documentation/v4-end-of-life-faq/).
+1. Mobile v4 SDK:er stöds inte längre per den 31 augusti 2021. Du bör migrera till Adobe Experience Platform (AEP) Mobile SDK för iOS och Android.
 
-1. Analyser för Streaming Media-implementering kräver AEP Mobile SDK och användning av tilläggen Analytics och Media Analytics. Från och med 1 september 2021 bör du använda de nya AEP Mobile SDK:erna och tilläggen.  Media Analytics-tillägg konfigureras med Adobe-taggar (datainsamling). Mer information finns i [Migrering från fristående Media SDK till Adobe Launch](/help/legacy/sdk-to-launch/sdk-to-launch-migration.md)
+1. Analytics per contenuti in streaming-implementering kräver AEP Mobile SDK och användning av tilläggen Analytics och Media Analytics. Från och med 1 september 2021 bör du använda de nya AEP Mobile SDK:erna och tilläggen.  Media Analytics-tillägg konfigureras med Adobe-taggar (datainsamling). Mer information finns i [Migrering från fristående Media SDK till Adobe Launch](/help/legacy/sdk-to-launch/sdk-to-launch-migration.md)
 
 1. Funktionsutvecklingen för Media Analytics SDK:er för iOS och Android har upphört. Nya funktioner som introducerades från och med hösten 2019 aktiveras med Media Analytics-tilläggen och Media Collection API.
 
-1. Roku och Chromecast SDK är fortfarande tillgängliga för Analytics för Streaming Media-kunder. Roku- och Chromecast-SDK:erna kommer att fortsätta förbättras och stödjas som fristående SDK:er. Om du använder JS SDK för Media Analytics kan du fortsätta använda den fristående SDK:n eller aktivera Media Analytics-tillägget med Adobe Data Collection (tidigare Adobe Launch).
+1. Roku och Chromecast SDK är fortfarande tillgängliga för Analytics per contenuti in streaming-kunder. Roku- och Chromecast-SDK:erna kommer att fortsätta förbättras och stödjas som fristående SDK:er. Om du använder JS SDK för Media Analytics kan du fortsätta använda den fristående SDK:n eller aktivera Media Analytics-tillägget med Adobe Data Collection (tidigare Adobe Launch).
 
 Kontakta ditt kontoteam på Adobe om du har några frågor.
 
@@ -44,7 +44,7 @@ Kontakta ditt kontoteam på Adobe om du har några frågor.
 
 [Media Analytics-tillägg: Android-migrering](/help/legacy/sdk-to-launch/sdk-to-launch-migration-platforms/sdk-to-launch-migration-android.md)
 
-[Media Analytics-tillägg: Migrering från iOS](/help/legacy/sdk-to-launch/sdk-to-launch-migration-platforms/sdk-to-launch-migration-ios.md)
+[Media Analytics-tillägg: iOS-migrering](/help/legacy/sdk-to-launch/sdk-to-launch-migration-platforms/sdk-to-launch-migration-ios.md)
 
    [Media Analytics-tillägg: nya implementeringar](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/)
 
@@ -54,7 +54,7 @@ Kontakta ditt kontoteam på Adobe om du har några frågor.
 
 1. **Påverkar detta slutet på stödet SDK för tvOS?**
 
-   Ja, för tvOS (version 10+) rekommenderas att implementeringen migreras till Media Analytics-tilläggen. Mer information finns i [Migrering från fristående Media SDK till Adobe Launch - iOS](/help/legacy/sdk-to-launch/sdk-to-launch-migration-platforms/sdk-to-launch-migration-ios.md).
+   Ja, för tvOS (version 10+) rekommenderas att migrera till Media Analytics-tilläggen. Mer information finns i [Migrering från fristående Media SDK till Adobe Launch - iOS](/help/legacy/sdk-to-launch/sdk-to-launch-migration-platforms/sdk-to-launch-migration-ios.md).
 
 1. **Påverkar detta slutet på stödet SDK för Fire TV och AndroidTV &#x200B;?**
 
