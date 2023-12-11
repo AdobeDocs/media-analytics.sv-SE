@@ -1,17 +1,17 @@
 ---
-title: Medieuppspelningstid tillagd
+title: Medieuppspelningstid spenderad
 description: Lär dig hur du använder panelen Medieuppspelningstid för spenderad tid för att analysera hur lång uppspelningstid som har använts och för att förstå maximal samtidighet och var bortfall har inträffat.
 feature: Media Analytics, Workspace Basics
-role: User, Admin, Data Engineer
+role: User, Admin
 exl-id: 958b4968-0f52-464c-81e0-5ab9b84aaa9c
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: 7eeee7f035e5d9e7e327e60910c78bbdf02abff8
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '215'
 ht-degree: 0%
 
 ---
 
-# Medieuppspelningstid tillagd {#media-playback-time-spent}
+# Medieuppspelningstid spenderad {#media-playback-time-spent}
 
 Genom att analysera hur lång uppspelningstid som spenderas kan du förstå var maximal samtidighet inträffade eller var bortfall inträffade. Medieuppspelningstiden ger värdefull insikt i innehållets kvalitet, tittarnas engagemang och hur innehållet påverkar tittandet över tid. Funktionen för mediouppspelning hjälper till med felsökning eller planering av volym eller skala.
 

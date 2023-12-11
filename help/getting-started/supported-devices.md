@@ -1,19 +1,19 @@
 ---
 title: Lär dig mer om enheter och plattformar som stöds
-description: "Lär dig mer om de vanligaste enheterna som iOS, Android, OTT-enheter och JavaScript-webbläsare som Adobe Analytics för Streaming Media stöder."
+description: "Lär dig mer om de vanligaste enheterna som iOS, Android, OTT-enheter och JavaScript-webbläsare som Adobe Analytics per contenuti in streaming stöder."
 exl-id: 169ff7b9-e577-45b7-8927-74bdcccc0a77
 feature: Media Analytics
-role: User, Admin, Data Engineer
-source-git-commit: a26e4e283646e5ceb352f357789748f376f5c747
+role: User, Admin
+source-git-commit: 7eeee7f035e5d9e7e327e60910c78bbdf02abff8
 workflow-type: tm+mt
 source-wordcount: '307'
-ht-degree: 10%
+ht-degree: 6%
 
 ---
 
 # Enheter och plattformar som stöds {#devices-supported}
 
-Adobe Analytics for Streaming Media har stöd för alla större enheter:
+Adobe Analytics per contenuti in streaming har stöd för alla större enheter:
 
 * iOS- och Android-smartphones och surfplattor
 * OTT-enheter för Roku, Fire TV och Android TV
@@ -32,7 +32,7 @@ Mer information om hur du implementerar Media på Edge finns i [Installera Media
 | Webb/mobil | | | | | |
 | | JavaScript-webbläsare | (Kommer snart) | ![Stöds](/help/assets/icon-blue-check.png) | ![Stöds](/help/assets/icon-blue-check.png) | ![Stöds](/help/assets/icon-blue-check.png) | ![Stöds](/help/assets/icon-blue-check.png) |
 | Mobilapp | | | | | |
-| | iOS-enheter | ![Stöds](/help/assets/icon-blue-check.png) | ![Stöds](/help/assets/icon-blue-check.png) | ![Stöds](/help/assets/icon-blue-check.png) | | ![Stöds](/help/assets/icon-blue-check.png) | |
+| | iOS Devices | ![Stöds](/help/assets/icon-blue-check.png) | ![Stöds](/help/assets/icon-blue-check.png) | ![Stöds](/help/assets/icon-blue-check.png) | | ![Stöds](/help/assets/icon-blue-check.png) | |
 | | Android-enheter | ![Stöds](/help/assets/icon-blue-check.png) | ![Stöds](/help/assets/icon-blue-check.png) | ![Stöds](/help/assets/icon-blue-check.png) | | ![Stöds](/help/assets/icon-blue-check.png) |
 | | Windows-enheter | | ![Stöds](/help/assets/icon-blue-check.png) | | | ![Stöds](/help/assets/icon-blue-check.png) |
 | OTT | | | | | | |
@@ -40,7 +40,7 @@ Mer information om hur du implementerar Media på Edge finns i [Installera Media
 | | Roku | (Under planering) | ![Stöds](/help/assets/icon-blue-check.png) | | ![Stöds](/help/assets/icon-blue-check.png)<br>(BrightScript) | ![Stöds](/help/assets/icon-blue-check.png)<br>(inbyggt) |
 | | Fire TV (Fire OS) | ![Stöds](/help/assets/icon-blue-check.png) | ![Stöds](/help/assets/icon-blue-check.png) | ![Stöds](/help/assets/icon-blue-check.png) | | ![Stöds](/help/assets/icon-blue-check.png) |
 | | Android TV | ![Stöds](/help/assets/icon-blue-check.png) | ![Stöds](/help/assets/icon-blue-check.png) | ![Stöds](/help/assets/icon-blue-check.png) | | ![Stöds](/help/assets/icon-blue-check.png) |
-| | Chromecast | | ![Stöds](/help/assets/icon-blue-check.png) | | ![Stöds](/help/assets/icon-blue-check.png) | ![Stöds](/help/assets/icon-blue-check.png) |
+| | Kromecast | | ![Stöds](/help/assets/icon-blue-check.png) | | ![Stöds](/help/assets/icon-blue-check.png) | ![Stöds](/help/assets/icon-blue-check.png) |
 | | Spelkonsoler (t.ex. Xbox ONE, Sony PS3/PS4) | | ![Stöds](/help/assets/icon-blue-check.png) | | | ![Stöds](/help/assets/icon-blue-check.png) |
 | | Ange övre rutor (t.ex. xfinity X1) | | ![Stöds](/help/assets/icon-blue-check.png) | | | ![Stöds](/help/assets/icon-blue-check.png) |
 | | Smarta TV-apparater (t.ex. Samsung, LG, Sony, Vizio) | | ![Stöds](/help/assets/icon-blue-check.png) | | | ![Stöds](/help/assets/icon-blue-check.png) |

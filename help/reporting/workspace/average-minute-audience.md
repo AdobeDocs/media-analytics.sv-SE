@@ -2,11 +2,11 @@
 title: Medie - genomsnittlig minutmålgrupp
 description: Lär dig hur du använder panelen Media Average Minute Audience för att analysera en genomsnittlig minutmålgrupp för ett visst innehåll eller under en anpassad tidsperiod.
 feature: Media Analytics, Workspace Basics
-role: User, Admin, Data Engineer
+role: User, Admin
 exl-id: af4d430c-1349-4606-b587-da5d40e0fe4b
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: 7eeee7f035e5d9e7e327e60910c78bbdf02abff8
 workflow-type: tm+mt
-source-wordcount: '264'
+source-wordcount: '255'
 ht-degree: 0%
 
 ---

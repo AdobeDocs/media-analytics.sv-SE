@@ -4,8 +4,8 @@ description: Använd kontrollpanelen Medieöversikt för att visa aggregerade m�
 uuid: bdbd998f-9b5e-40c9-a8ea-12dfa5acd35c
 exl-id: 4fe91372-da41-44c5-bea9-2bba762512ef
 feature: "Media Analytics, Reports & Analytics Basics"
-role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+role: User, Admin
+source-git-commit: 7eeee7f035e5d9e7e327e60910c78bbdf02abff8
 workflow-type: tm+mt
 source-wordcount: '107'
 ht-degree: 0%
@@ -34,7 +34,7 @@ Visa snabbt mediemått per enhet eller land:
 
 ## Medieprestanda {#media-performance}
 
-Klicka och dra om du vill zooma in och hovra sedan om du vill visa detaljerade mått för specifika medier. Klicka på  ![](assets/video-overview-report-revert.png)
+Klicka och dra om du vill zooma in och hovra sedan om du vill visa detaljerade mått för specifika medier. Klicka  ![](assets/video-overview-report-revert.png)
 
 om du vill återställa vyn när du har zoomat.
 
