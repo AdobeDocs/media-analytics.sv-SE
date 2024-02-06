@@ -5,9 +5,9 @@ uuid: bc4f75a7-ea22-47eb-a50d-5f41274c6d41
 exl-id: f2919e69-8b03-45b4-b9cd-365222a061e0
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: 06f24e828fb7795d55599ea1fa7913182dd357e6
 workflow-type: tm+mt
-source-wordcount: '353'
+source-wordcount: '364'
 ht-degree: 0%
 
 ---
@@ -79,9 +79,9 @@ Signalerar att ett fel har inträffat.
 
 ## sessionEnd
 
-Detta används för att meddela Media Analytics-backend-objektet att omedelbart stänga sessionen när användaren har avbrutit sin visning av innehållet och det är osannolikt att de kommer att returnera det.
+Detta används för att meddela Media Analytics-backend-objektet att omedelbart stänga sessionen när användaren har avbrutit sin visning av innehållet och det är osannolikt att de kommer att returnera.
 
-Om du inte skickar en `sessionEnd`, går en övergiven session normalt ut (efter att inga händelser har tagits emot under 10 minuter eller när ingen spelhuvudrörelse inträffar under 30 minuter) och sessionen tas bort av serverdelen.
+Om en `sessionEnd` skickas inte, en övergiven session kommer att [timeout normalt](../mc-api-impl/mc-api-timeout.md) (antingen efter att inga händelser har tagits emot under 10 minuter eller när ingen spelhuvudrörelse inträffar under 30 minuter). Dessutom kommer alla efterföljande mediaanrop som görs med detta sessions-ID att tas bort.
 
 ## sessionComplete
 
