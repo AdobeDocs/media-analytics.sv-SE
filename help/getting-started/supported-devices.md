@@ -4,9 +4,9 @@ description: "Lär dig mer om de vanligaste enheterna som iOS, Android, OTT-enhe
 exl-id: 169ff7b9-e577-45b7-8927-74bdcccc0a77
 feature: Media Analytics
 role: User, Admin
-source-git-commit: 7eeee7f035e5d9e7e327e60910c78bbdf02abff8
+source-git-commit: 1cc995959aa9070f895e0d03be62533bd3a0ca0d
 workflow-type: tm+mt
-source-wordcount: '307'
+source-wordcount: '306'
 ht-degree: 6%
 
 ---
@@ -37,7 +37,7 @@ Mer information om hur du implementerar Media på Edge finns i [Installera Media
 | | Windows-enheter | | ![Stöds](/help/assets/icon-blue-check.png) | | | ![Stöds](/help/assets/icon-blue-check.png) |
 | OTT | | | | | | |
 | | Apple TV (tvOS) | ![Stöds](/help/assets/icon-blue-check.png) | ![Stöds](/help/assets/icon-blue-check.png) | ![Stöds](/help/assets/icon-blue-check.png) | | ![Stöds](/help/assets/icon-blue-check.png) |
-| | Roku | (Under planering) | ![Stöds](/help/assets/icon-blue-check.png) | | ![Stöds](/help/assets/icon-blue-check.png)<br>(BrightScript) | ![Stöds](/help/assets/icon-blue-check.png)<br>(inbyggt) |
+| | Roku | ![Stöds](/help/assets/icon-blue-check.png) | ![Stöds](/help/assets/icon-blue-check.png) | | ![Stöds](/help/assets/icon-blue-check.png)<br>(BrightScript) | ![Stöds](/help/assets/icon-blue-check.png)<br>(inbyggt) |
 | | Fire TV (Fire OS) | ![Stöds](/help/assets/icon-blue-check.png) | ![Stöds](/help/assets/icon-blue-check.png) | ![Stöds](/help/assets/icon-blue-check.png) | | ![Stöds](/help/assets/icon-blue-check.png) |
 | | Android TV | ![Stöds](/help/assets/icon-blue-check.png) | ![Stöds](/help/assets/icon-blue-check.png) | ![Stöds](/help/assets/icon-blue-check.png) | | ![Stöds](/help/assets/icon-blue-check.png) |
 | | Kromecast | | ![Stöds](/help/assets/icon-blue-check.png) | | ![Stöds](/help/assets/icon-blue-check.png) | ![Stöds](/help/assets/icon-blue-check.png) |

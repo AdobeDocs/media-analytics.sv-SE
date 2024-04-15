@@ -4,9 +4,9 @@ description: Lär dig hur du implementerar direktuppspelningsmedia för Adobe me
 feature: Media Analytics
 role: User, Admin, Data Engineer
 exl-id: dfdb1415-105e-4c41-bedc-ecb85ed1b1d9
-source-git-commit: 68710e8d68266c62ded94a14892ddc78a0807a49
+source-git-commit: 798a2b155742476f0bf648b482c75e0b03449977
 workflow-type: tm+mt
-source-wordcount: '1734'
+source-wordcount: '1803'
 ht-degree: 0%
 
 ---
@@ -307,9 +307,11 @@ Så här skapar och konfigurerar du ett schema:
 
 1. Fortsätt med [Skicka data till Experience Platform Edge](#send-data-to-experience-platform-edge).
 
-## Skicka data till Experience Platform Edge med AEP Mobile SDK
+## Skicka data till Experience Platform Edge
 
-Du kan använda Adobe Experience Platform mobil-SDK för att skicka mobildata till Experience Platform Edge.
+Beroende på vilken typ av data du vill skicka till Experience Platform Edge kan du använda någon av följande metoder:
+
+### Mobil: Använd Adobe Experience Platform mobil SDK
 
 Använd följande dokumentationsresurser för att slutföra implementeringen av både iOS och Android:
 
@@ -319,7 +321,21 @@ Använd följande dokumentationsresurser för att slutföra implementeringen av 
 
 * [Migrera till Adobe Streaming Media för Edge Network-tillägg](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/migration-guide/)
 
-Du kan också använda en anpassad implementering av Edge-API:erna med följande resurser:
+### Roku: Adobe Experience Platform Roku SDK
+
+* [Kom igång](https://developer.adobe.com/client-sdks/documentation/media-for-edge-network/)
+
+* [Adobe Experience Platform Roku SDK](https://github.com/adobe/aepsdk-roku/tree/main)
+
+* [Migrera till Adobe Streaming Media för Edge Network-tillägg](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/migration-guide/) <!-- is the information here also applicable for Roku? -->
+
+### API: webb och andra
+
+API:t är för närvarande det enda sättet att skicka webbdata till Experience Platform Edge.
+
+API:t är också tillgängligt om du vill använda en anpassad implementering av Edge API:erna.
+
+Mer information om mediekant-API:t finns i följande resurser:
 
 * [Översikt över API för Media Edge](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/overview.html)
 
