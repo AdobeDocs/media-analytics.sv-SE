@@ -4,10 +4,10 @@ description: Se versionsinformationen för Adobe Analytics.
 feature: Release Notes
 role: User, Admin, Data Engineer
 exl-id: ef068aa6-fdf4-4a5c-b5d0-b93ad31894e8
-source-git-commit: 649438cebb6868d3d5799629317596c08c1c086f
+source-git-commit: 3c5fa1dd0cb795f0d908b7aa61d8c09f803e94f2
 workflow-type: tm+mt
-source-wordcount: '871'
-ht-degree: 7%
+source-wordcount: '971'
+ht-degree: 6%
 
 ---
 
@@ -31,6 +31,7 @@ Mer information om nya funktioner, korrigeringar och viktig information för adm
 
 | Funktion | Beskrivning | Måldatum |
 | ----------- | ---------- | ------- |
+| Skicka webbdata till Adobe Experience Platform Edge Network med Web SDK | Nu kan du [använda Adobe Experience Platform Web SDK för att skicka Streaming Media-webbdata till Adobe Experience Platform Edge Network](/help/implementation/edge/edge-web-sdk.md)så att ni kan skapa mer personaliserade kampanjer och leverera mer personaliserat innehåll, vilket resulterar i mer spårningsdata att rapportera om.<p>Den här förbättringen erbjuder en enhetlig insamlingsmetod för webblösningar i alla plattformslösningar, till exempel Customer Journey Analytics, RT-CDP, AJO och händelsevidarebefordran. Tidigare var det enda sättet att skicka Streaming Media-webbdata till Edge Network att använda Media Edge API. | 31 maj 2024 |
 | Skicka Roku-data till Adobe Experience Platform Edge | Nu när [installera Media Analytics med Experience Platform Edge](/help/implementation/edge/implementation-edge.md)kan du använda Adobe Experience Platform Roku SDK för att skicka direktuppspelningsmediedata till Adobe Experience Platform. | 12 april 2024 |
 | Media Collection: Integrering med Experience Edge (API och Mobile SDK) | Nu kan ni använda Experience Edge API och Mobile SDK för att implementera Streaming Media, vilket gör att ni kan skapa mer personaliserade kampanjer och leverera mer personaliserat innehåll, vilket resulterar i mer spårningsdata att rapportera om.<p>Den här förbättringen ger en enhetlig insamlingsmetod för alla lösningar, som Customer Journey Analytics, RT-CDP, AJO och händelsevidarebefordran.  [Läs mer](/help/implementation/edge/implementation-edge.md) | 12 maj 2023 |
 | Media Concurrent Viewer-panel | Förstå var maximal samtidighet inträffade eller var bortfall inträffade. Få värdefulla insikter om innehållets och tittarnas engagemang och hjälp med felsökning eller planering av volym och skala. [Läs mer](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/panels/media-concurrent-viewers.html?lang=en) | 9 augusti 2022 |

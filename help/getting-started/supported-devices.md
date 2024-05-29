@@ -4,9 +4,9 @@ description: "Lär dig mer om de vanligaste enheterna som iOS, Android, OTT-enhe
 exl-id: 169ff7b9-e577-45b7-8927-74bdcccc0a77
 feature: Media Analytics
 role: User, Admin
-source-git-commit: 1cc995959aa9070f895e0d03be62533bd3a0ca0d
+source-git-commit: b538b973509ee2a2c2010da300cbed1ce06ec2af
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '305'
 ht-degree: 6%
 
 ---
@@ -30,7 +30,7 @@ Mer information om hur du implementerar Media på Edge finns i [Installera Media
 | Strömmande plattformar och enheter | | Media för Edge Network SDK/Extension | Media Edge API | Media Extension med taggar eller AEP Mobile SDK | Media SDK | Media Collection API |
 |:---|:---|:---:|:---:|:---:|:---:|:---:|
 | Webb/mobil | | | | | |
-| | JavaScript-webbläsare | (Kommer snart) | ![Stöds](/help/assets/icon-blue-check.png) | ![Stöds](/help/assets/icon-blue-check.png) | ![Stöds](/help/assets/icon-blue-check.png) | ![Stöds](/help/assets/icon-blue-check.png) |
+| | JavaScript-webbläsare | ![Stöds](/help/assets/icon-blue-check.png) | ![Stöds](/help/assets/icon-blue-check.png) | ![Stöds](/help/assets/icon-blue-check.png) | ![Stöds](/help/assets/icon-blue-check.png) | ![Stöds](/help/assets/icon-blue-check.png) |
 | Mobilapp | | | | | |
 | | iOS Devices | ![Stöds](/help/assets/icon-blue-check.png) | ![Stöds](/help/assets/icon-blue-check.png) | ![Stöds](/help/assets/icon-blue-check.png) | | ![Stöds](/help/assets/icon-blue-check.png) | |
 | | Android-enheter | ![Stöds](/help/assets/icon-blue-check.png) | ![Stöds](/help/assets/icon-blue-check.png) | ![Stöds](/help/assets/icon-blue-check.png) | | ![Stöds](/help/assets/icon-blue-check.png) |

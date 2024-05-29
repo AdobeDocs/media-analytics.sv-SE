@@ -4,9 +4,9 @@ description: Lär dig hur du implementerar direktuppspelningsmedia för Adobe me
 feature: Media Analytics
 role: User, Admin, Data Engineer
 exl-id: dfdb1415-105e-4c41-bedc-ecb85ed1b1d9
-source-git-commit: 798a2b155742476f0bf648b482c75e0b03449977
+source-git-commit: 39869d5eeea02e81c204d995ac158b3e7b7541c7
 workflow-type: tm+mt
-source-wordcount: '1803'
+source-wordcount: '1833'
 ht-degree: 0%
 
 ---
@@ -17,15 +17,11 @@ Med Adobe Experience Platform Edge kan ni skicka data till flera produkter på e
 
 Följande bild visar hur en Media Analytics-implementering kan använda Experience Platform Edge för att göra data tillgängliga i Analysis Workspace, antingen i Adobe Analytics eller Customer Journey Analytics:
 
-![CJA-arbetsflöde](assets/cja-implementation.png)
+![CJA-arbetsflöde](assets/streaming-media-edge.png)
 
 En översikt över alla implementeringsalternativ, inklusive implementeringsmetoder som inte använder Experience Platform Edge, finns i [Implementera direktuppspelningsmedia för Adobe Analytics eller Customer Journey Analytics](/help/implementation/overview.md).
 
->[!IMPORTANT]
->
->Direktuppspelningsmedia är ännu inte integrerat med AEP Web SDK.
-
-Oavsett om du använder Mobile SDK eller API:t för att implementera direktuppspelningsmedia med Experience Edge måste du först slutföra följande avsnitt:
+Oavsett om du använder Adobe Experience Platform Web SDK, Adobe Experience Platform Mobile SDK, Adobe Experience Platform Roku SDK eller API för att implementera direktuppspelningsmedia med Experience Edge måste du först slutföra följande avsnitt:
 
 ## Konfigurera schemat i Adobe Experience Platform
 
@@ -35,7 +31,13 @@ Så här skapar och konfigurerar du ett schema:
 
 1. Börja skapa schemat enligt beskrivningen i Adobe Experience Platform [Skapa och redigera scheman i användargränssnittet](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html?lang=en).
 
-   När du skapar schemat väljer du [!UICONTROL **XDM ExperienceEvent**] från [!UICONTROL **Skapa schema**] listruta.
+1. På sidan Schemainformation när du skapar schemat väljer du [!UICONTROL **Experience Event**] när du väljer basklass för schemat.
+
+   ![Tillagda fältgrupper](assets/schema-experience-event.png)
+
+1. Välj [!UICONTROL **Nästa**].
+
+1. Ange ett visningsnamn och en beskrivning för schemat och välj sedan [!UICONTROL **Slutför**].
 
 1. I [!UICONTROL **Disposition**] området, i [!UICONTROL **Fältgrupper**] avsnitt, markera [!UICONTROL **Lägg till**] söker du efter och lägger till följande nya fältgrupper i schemat:
    * `Adobe Analytics ExperienceEvent Template`
@@ -46,7 +48,7 @@ Så här skapar och konfigurerar du ett schema:
 
    ![Tillagda fältgrupper](assets/schema-field-groups-added.png)
 
-1. Välj [!UICONTROL **Bekräfta**] för att spara ändringarna.
+1. Välj [!UICONTROL **Spara**] för att spara ändringarna.
 
 1. (Valfritt) Du kan dölja vissa fält som inte används av API:t för mediekant. Om du döljer dessa fält blir schemat enklare att läsa och förstå, men det är inte nödvändigt. Dessa fält refererar endast till fälten i `MediaAnalytics Interaction Details` fältgrupp.
 
@@ -141,7 +143,7 @@ Så här skapar och konfigurerar du ett schema:
 
       * [!UICONTROL **Adobe Analytics**] (om Adobe Analytics används)
 
-        Om du använder Adobe Analytics måste du definiera en rapportserie, enligt beskrivningen i avsnittet [Definiera en rapportsvit](#define-a-report-suite) i den här artikeln.
+        Om du använder Adobe Analytics måste du definiera en rapportsserie enligt beskrivningen i [Skapa en rapportsvit](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite).
 
       * [!UICONTROL **Adobe Experience Platform**] (om Customer Journey Analytics används)
 
@@ -311,7 +313,11 @@ Så här skapar och konfigurerar du ett schema:
 
 Beroende på vilken typ av data du vill skicka till Experience Platform Edge kan du använda någon av följande metoder:
 
-### Mobil: Använd Adobe Experience Platform mobil SDK
+### Webb: Använda Adobe Experience Platform Web SDK
+
+
+
+### Mobil: Använd Adobe Experience Platform Mobile SDK
 
 Använd följande dokumentationsresurser för att slutföra implementeringen av både iOS och Android:
 
