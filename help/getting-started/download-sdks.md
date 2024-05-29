@@ -5,9 +5,9 @@ uuid: a619fbb8-693e-4583-8dad-0ff875e715f8
 exl-id: d211fa2e-d5b0-4e9f-bdb7-eda838194f3d
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a9c772e77a2b049e6e4bd65877940b0398a23f7f
+source-git-commit: ad40260d29bd5b739184cb551f084565d05e65a7
 workflow-type: tm+mt
-source-wordcount: '418'
+source-wordcount: '426'
 ht-degree: 9%
 
 ---
@@ -32,7 +32,7 @@ Taggar i Adobe Experience Platform är nästa generation av funktioner för hant
 |:---:|---|---|---|---| ---| ---|
 | ![JavaScript-ikon ](assets/javascript-icon.png)</br>**JavaScript API** | Adobe Analytics | Endast analyser | Webb - [Media SDK för JS v3.0.2](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/js-v3.0.2) | [JavaScript API-referens](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/index.html) | [Installera Media Analytics med JavaScript](/help/implementation/media-sdk/setup/web-implementation.md) | [Media SDK för JS v3.0.2 - exempel](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/sdks/js/3.x) |
 | ![JavaScript-ikon ](assets/javascript-icon.png)</br>**JavaScript API** | Adobe Analytics | Endast analyser | Webb - Medietillägg |  | [Adobe Media Analytics (3.x SDK) for Audio and Video extension - using Tags (Data Collection)](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/media-analytics-3x/overview.html?lang=en) | [Adobe Media Analytics (3.x SDK) for Audio and Video Extension Sample](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/samples/launch/js/3.x) |
-| ![JavaScript-ikon ](assets/javascript-icon.png)</br>**JavaScript API** | <p>Adobe Analytics</p><p>Customer Journey Analytics</p><p>Adobe Journey Optimizer</p><p>Real-Time CDP</p> | Kant | Webb - Experience Platform Edge (kommer snart) |  | [Installera Media Analytics med Experience Platform Edge](/help/implementation/edge/implementation-edge.md) | |
+| </br>**Webb** | Adobe Analytics<p>Customer Journey Analytics</p><p>Adobe Journey Optimizer</p><p>Real-Time CDP</p> | Kant | Webb - Experience Platform Edge |  | [Installera Media Analytics med Experience Platform Edge](/help/implementation/edge/implementation-edge.md) <p>och</p><p>[Skicka webbdata till Edge med Adobe Experience Platform Web SDK](/help/implementation/edge/edge-web-sdk.md)</p> | |
 
 ### Mobilimplementering {#get-mobile-extension}
 

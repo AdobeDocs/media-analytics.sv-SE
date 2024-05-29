@@ -3,7 +3,7 @@ title: Skicka webbdata till Edge med Adobe Experience Platform Web SDK
 description: Lär dig hur du skickar mediedata för direktuppspelning från Adobe till Experience Platform Edge med Adobe Experience Platform Web SDK.
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: 4e6ae687175b45680d8de071dbc3011f18921a44
+source-git-commit: ad40260d29bd5b739184cb551f084565d05e65a7
 workflow-type: tm+mt
 source-wordcount: '524'
 ht-degree: 0%
@@ -75,7 +75,7 @@ För kunder som använder Media JS SDK erbjuder Web SDK en migreringsväg från 
 
 [!DNL Web SDK] innehåller ett kommando för att hämta en Media Analytics-spårare. Du kan använda det här kommandot för att skapa en objektinstans och sedan använda samma API:er som de som finns i [Media JS-bibliotek](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/APIReference.html), spåra mediahändelser.
 
-Se [`getMediaAnalyticsTracker`](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/getMediaAnalyticsTracker) dokumentation för fullständig information om vilka metoder som stöds.
+Se [`getMediaAnalyticsTracker`](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/getmediaanalyticstracker) dokumentation för fullständig information om vilka metoder som stöds.
 
 I kodutdraget nedan visas hur du hämtar mediaspårningsinstansen i Media JS.
 
