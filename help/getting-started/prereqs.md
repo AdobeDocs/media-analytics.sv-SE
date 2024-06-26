@@ -1,29 +1,29 @@
 ---
-title: Lär dig om krav för direktuppspelande media
-description: Kom igång med Adobe Analytics Streaming Media. Lär dig vad ni behöver för att implementera Adobe Analytics för direktuppspelande media.
+title: Lär dig mer om krav för tillägget Adobe Streaming Media Collection
+description: Kom igång med tillägget Streaming Media Collection. Lär dig vad du behöver för implementering.
 uuid: 4c0b37f3-8615-4cc0-b9c9-eeb029067064
 exl-id: 85ab1dbd-f4a7-4f11-afc9-8d5000e2de70
 feature: "Media Analytics, System Requirements"
 role: User, Admin, Data Engineer
-source-git-commit: b12e6547ef32bfad7e8d6787a26d6467bcfeb23c
+source-git-commit: 240fa48bdc738425e04cd29c27625c7dd612ff18
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '435'
 ht-degree: 0%
 
 ---
 
 # Förutsättningar {#prerequisites}
 
-Innan du börjar implementera Streaming Media utför du följande uppgifter:
+Innan du börjar implementera tillägget Adobe Streaming Media Collection utför du följande åtgärder:
 
-1. **Granska översikt över Streaming Media**<br>
-Innan du börjar implementera Streaming Media ska du granska [Översikt över direktuppspelningsmedia](/help/media-overview.md) för att säkerställa att Streaming Media uppfyller era behov.
+1. **Granska översikten över tillägget Streaming Media Collection**<br>
+Innan du börjar implementera tillägget Streaming Media Collection ska du granska [Översikt över tillägget Streaming Media Collection](/help/media-overview.md) för att säkerställa att den uppfyller dina behov.
 
-1. **Bekräfta prismodellen för strömmande media**<br>
-Den aktuella prismodellen bygger på videoströmmar. Om det behövs kontaktar du din säljare eller ditt kontoteam på Adobe, eftersom Streaming Media säljs separat som ett tillägg till Adobe Analytics.<!--update when media SKUs are added to other AEP apps -->
+1. **Bekräfta din prismodell**<br>
+Den aktuella prismodellen för tillägget Adobe Streaming Media Collection baseras på videoströmmar. Kontakta vid behov din försäljningsrepresentant eller kontoteamet på Adobe eftersom tillägget säljs separat för Adobe Analytics och Adobe Experience Platform.
 
 1. **Aktivera Adobe Analytics-rapporter**<br>
-Om du vill aktivera rapporter i Analytics och visa innehåll och annonsuppgifter som du samlar in måste du aktivera rapporter i Analytics. Se [Aktivera medierapporter](/help/reporting/media-reports-enable.md).
+Om du vill aktivera rapporter i Analytics eller Customer Journey Analytics och visa innehåll och annonsuppgifter som du samlar in måste du aktivera rapporter. Se [Aktivera medierapporter](/help/reporting/media-reports-enable.md).
 
 1. **Implementera Adobe Experience Platform Identity Service i Experience Cloud**
 
@@ -41,7 +41,7 @@ Om du vill aktivera rapporter i Analytics och visa innehåll och annonsuppgifter
 
 1. **Visa ytterligare krav för implementeringsmetoden**
 
-   Beroende på hur du planerar att implementera Streaming Media kan du visa förutsättningarna för någon av följande implementeringsmetoder:
+   Beroende på hur du tänker implementera tillägget för Streaming Media Collection kan du visa förutsättningarna för någon av följande implementeringsmetoder:
 
    * [Förutsättningar för implementering av endast Adobe Analytics](/help/implementation/media-sdk/setup/prerequisites-analytics.md)
 

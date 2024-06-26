@@ -5,7 +5,7 @@ uuid: 0024b06a-eaf5-4d2e-be45-aeda9d0554c1
 exl-id: a835f86a-a93a-4a56-91f4-14628cf48214
 feature: "Media Analytics, Workspace Basics"
 role: User, Admin
-source-git-commit: 7eeee7f035e5d9e7e327e60910c78bbdf02abff8
+source-git-commit: 4ed604cb1969212421fecd40996d7b25af50a2b2
 workflow-type: tm+mt
 source-wordcount: '296'
 ht-degree: 0%
@@ -16,15 +16,15 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->*Rapporter* i Workspace kallades tidigare *mallar*.
+>*Rapporter* i Workspace tidigare kallades *mallar*.
 
 Analysis Workspace erbjuder en uppsättning färdiga rapporter som är tillgängliga som standard och som du kan använda för att analysera data. Mer information om alla standardrapporter som är tillgängliga finns i [Visa rapporter](https://experienceleague.adobe.com/docs/analytics/analyze/landing.html?lang=en#menus) in [Adobe Analytics landningssida](https://experienceleague.adobe.com/docs/analytics/analyze/landing.html).
 
-Vissa av dessa rapporter är särskilt användbara för att analysera Streaming Media-data, vilket beskrivs i följande avsnitt.
+Vissa av dessa rapporter är särskilt användbara för att analysera data från direktuppspelande media, vilket beskrivs i följande avsnitt.
 
 ## Förstå standardmedierapporter
 
-Nedan följer en lista över standardrapporter som är användbara när direktuppspelningsmediedata analyseras:
+Nedan följer en lista över standardrapporter som är användbara vid analys av direktuppspelningsmediedata:
 
 * [!UICONTROL **Konsumtion av mediainnehåll**]: Skapar en rapport som visar vilket innehåll som konsumeras mest och engagerande användare.
 

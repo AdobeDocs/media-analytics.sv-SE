@@ -1,13 +1,13 @@
 ---
-title: Spåra nedladdat innehåll offline i Adobe Streaming Media
+title: Spåra nedladdat innehåll offline i tillägget Streaming Media Collection
 description: Lär dig hur du använder funktionen Hämtat innehåll för att spåra medieförbrukning när en användare är offline.
 uuid: 0718689d-9602-4e3f-833c-8297aae1d909
 exl-id: 82d3e5d7-4f88-425c-8bdb-e9101fc1db92
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: cdc5ea361829c749dfbb457288ac5ba51a530961
+source-git-commit: 4ed604cb1969212421fecd40996d7b25af50a2b2
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '697'
 ht-degree: 0%
 
 ---
@@ -22,26 +22,26 @@ Jämför de två metoderna:
 
 * Online
 
-   Med den här realtidsmetoden skickar mediespelaren spårningsdata för varje spelarhändelse och skickar nätverkssamtal var tionde sekund (varje sekund för annonser), en i taget till baksidan.
+  Med den här realtidsmetoden skickar mediespelaren spårningsdata för varje spelarhändelse och skickar nätverkssamtal var tionde sekund (varje sekund för annonser), en i taget till baksidan.
 
 * Offline (funktionen Hämtat innehåll)
 
-   Med denna gruppbearbetningsmetod måste samma sessionshändelser genereras, men de lagras på enheten tills de skickas till back end som en enda session (se exemplet nedan).
+  Med denna gruppbearbetningsmetod måste samma sessionshändelser genereras, men de lagras på enheten tills de skickas till back end som en enda session (se exemplet nedan).
 
 Varje strategi har sina fördelar och nackdelar:
-* Scenariot online spåras i realtid. Detta kräver en anslutningskontroll före varje nätverksanrop.
+* Onlinescenariot spåras i realtid. Detta kräver en anslutningskontroll före varje nätverksanrop.
 * Offlinescenariot (funktionen Hämtat innehåll) behöver bara en nätverksanslutningskontroll, men kräver också större minnesutrymme på enheten.
 
 ## Implementering {#implementation}
 
 ### Plattformar som stöds
 
-Innehållsspårning stöds på mobilenheter med iOS och Android.
+Spårning av innehåll stöds på mobilenheter från iOS och Android.
 
 ### Händelsescheman
 
-Funktionen för nedladdat innehåll är en offlineversion av (standard) API:t för onlinematerial, så händelsedata som spelaren batchar och skickar till back end måste använda samma händelsescheman som du använder när du ringer online. Mer information om dessa scheman finns i:
-* [Översikt;](/help/implementation/media-collection-api/mc-api-overview.md)
+Funktionen för nedladdat innehåll är en offlineversion av (standard) API:t för onlinematerial, så händelsedata som spelaren batchar och skickar till back end måste använda samma händelsescheman som du använder när du gör onlineanrop. Mer information om dessa scheman finns i:
+* [Översikt](/help/implementation/media-collection-api/mc-api-overview.md)
 * [Validerar händelsebegäranden](/help/implementation/media-collection-api/mc-api-impl/mc-api-validate-reqs.md)
 
 ### Ordning för händelser
@@ -53,7 +53,7 @@ Funktionen för nedladdat innehåll är en offlineversion av (standard) API:t f�
 ### Svarskoder
 
 * 201 - Skapad: Slutförd begäran; data är giltiga och sessionen skapades och kommer att bearbetas.
-* 400 - Ogiltig begäran; Schemavalideringen misslyckades, alla data ignoreras och inga sessionsdata bearbetas.
+* 400 - Felaktig begäran; schemavalidering misslyckades, alla data ignoreras och inga sessionsdata bearbetas.
 
 ## Integrering med Adobe Analytics {#integration-with-adobe-analtyics}
 
@@ -109,7 +109,7 @@ POST /api/v1/downloaded HTTP/1.1
 
 >[!IMPORTANT]
 >
->Det hämtade innehållet kunde tidigare även skickas till `/api/v1/sessions` API. Det här sättet att spåra hämtat innehåll är **föråldrad** och **borttagen** i framtiden.
+>Det hämtade innehållet kunde tidigare även skickas till `/api/v1/sessions` API. Det här sättet att spåra hämtat innehåll är **inaktuell** och **borttagen** i framtiden.
 
 
 The `/api/v1/sessions` API accepterar endast sessionsinitieringshändelser.

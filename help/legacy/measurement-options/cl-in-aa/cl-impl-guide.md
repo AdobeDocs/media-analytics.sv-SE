@@ -1,23 +1,23 @@
 ---
 title: Implementering av anpassad länk förklaras
-description: Lär dig hur du implementerar spårning av anpassade länkar i Streaming Media Analytics.
+description: Lär dig hur du implementerar spårning av anpassade länkar i tillägget för direktuppspelad mediesamling.
 uuid: 83315e73-20ca-4db5-9d43-33daade45a13
 exl-id: ee6f931a-ef80-4ebe-8ccb-cdbf970516e6
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: 4ed604cb1969212421fecd40996d7b25af50a2b2
 workflow-type: tm+mt
-source-wordcount: '200'
-ht-degree: 2%
+source-wordcount: '178'
+ht-degree: 0%
 
 ---
 
-# Implementeringshandbok för anpassade länkar{#custom-link-implementation-guide}
+# Implementeringshandbok för anpassad länk{#custom-link-implementation-guide}
 
 Anpassad videospårning använder manuell länkspårning med anpassad länkkod i Analytics `appMeasurement`.
 Oftast används videouppföljning för anpassade videolänkar på plattformar och enheter där minimal videomätning krävs.
 
-* I JavaScript: den `s.tl()` function
+* I JavaScript: `s.tl()` function
 * I mobilappar: [trackAction(), Android](https://experienceleague.adobe.com/docs/mobile-services/android/analytics-android/actions.html), [trackAction(), iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/analytics-ios/actions.html), [trackAction() OTT](/help/use-cases/analytics-with-ott/track-app-actions.md)
 * I API:t för datainmatning: [linktype-tagg](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/reference/r_supported_tags.md)
 

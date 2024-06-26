@@ -4,18 +4,18 @@ description: Det här avsnittet innehåller frågor och svar om att stödet för
 exl-id: 9601ec17-8421-49d0-9d81-1cfa5e8f37cf
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: c00c9850d5ea924cef6b4842ecb770df1e78eb21
+source-git-commit: 4ed604cb1969212421fecd40996d7b25af50a2b2
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '601'
 ht-degree: 0%
 
 ---
 
 # Vanliga frågor om supporten för Media Analytics Mobile SDK
 
-När stödet för version 4 Mobile SDK upphörde den 31 augusti 2021 upphörde även Adobe stödet för Media Analytics Mobile SDK för iOS och Android. (Detta inkluderar inte Media Analytics SDK för webben (JS) och OTT-plattformar som Chromecast och Roku, som fortfarande stöds.)
+När stödet för version 4 Mobile SDK upphörde den 31 augusti 2021 upphörde även stödet för Media Analytics Mobile SDK för iOS och Android. (Detta inkluderar inte Media Analytics SDK för webben (JS) och OTT-plattformar som Chromecast och Roku, som fortfarande stöds.)
 
-Det innebär att Adobe inte längre tillhandahåller korrigeringar, OS-relaterade uppdateringar eller stöd för Media Analytics Mobile SDK. När du migrerar till de nya SDK:erna för Experience Platform bör du tänka på att [Media Analytics-tillägg](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/) måste implementeras för att aktivera Adobe Analytics per contenuti in streaming.
+Det innebär att Adobe inte längre tillhandahåller korrigeringar, OS-relaterade uppdateringar eller stöd för Media Analytics Mobile SDK. När du migrerar till de nya SDK:erna för Experience Platform bör du tänka på att [Media Analytics-tillägg](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/) måste implementeras för att aktivera tillägget Adobe Streaming Media Collection.
 
 
 ## De fem viktigaste sakerna att veta

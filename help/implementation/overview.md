@@ -1,40 +1,40 @@
 ---
-title: Implementera direktuppspelningsmedia för Adobe Analytics eller Customer Journey Analytics
-description: Lär dig mer om implementeringsvägar för direktuppspelande media.
+title: Implementera tillägget Direktuppspelning av mediasamling
+description: Läs mer om implementeringssökvägarna för tillägget Streaming Media Collection.
 uuid: null
 feature: Media Analytics
 role: User, Admin, Data Engineer
 exl-id: ed9297b1-6487-4099-bc62-0c3a40572255
-source-git-commit: 39869d5eeea02e81c204d995ac158b3e7b7541c7
+source-git-commit: 4ed604cb1969212421fecd40996d7b25af50a2b2
 workflow-type: tm+mt
-source-wordcount: '452'
+source-wordcount: '459'
 ht-degree: 0%
 
 ---
 
-# Implementera direktuppspelningsmedia för Adobe Analytics eller Customer Journey Analytics
+# Implementera tillägget Direktuppspelning av mediasamling
 
-Det finns olika sätt att implementera Streaming Media. En detaljerad jämförelse av enheter och plattformar som stöds för de implementeringsmetoder som beskrivs på den här sidan finns på [Enheter och plattformar som stöds](/help/getting-started/supported-devices.md).
+Det finns olika sätt att implementera tillägget Adobe Streaming Media Collection. En detaljerad jämförelse av enheter och plattformar som stöds för de implementeringsmetoder som beskrivs på den här sidan finns på [Enheter och plattformar som stöds](/help/getting-started/supported-devices.md).
 
-## Implementeringsmetoder för Edge
+## Edge implementeringsmetoder
 
-Vi rekommenderar att du använder Edge när du implementerar Media Analytics för alla nya Adobe Analytics- och Customer Journey Analytics-kunder.
+Vi rekommenderar att du använder Edge när du implementerar tillägget Streaming Media Collection för alla nya Adobe Analytics- och Customer Journey Analytics-kunder.
 
 * **Media för Edge Network SDK/Extension:** Samlar in data från webben, iOS- och Android-enheter eller Roku-enheter och skickar dem till Edge Network. Data kan sedan skickas till Customer Journey Analytics eller Adobe Analytics.
 
-  Mer information om media för Edge Network SDK/Extension finns i [Installera Media Analytics med Experience Platform Edge](/help/implementation/edge/implementation-edge.md).
+  Mer information om media för Edge Network SDK/Extension finns i [Implementera tillägget Streaming Media Collection med Edge Network](/help/implementation/edge/implementation-edge.md).
 
 * **Media Edge API:** Kan anpassas för att samla in data från alla enheter och format (inklusive mobila enheter, webbenheter och toppmoderna enheter) och skicka data till Edge Network. Data kan sedan skickas till Customer Journey Analytics eller Adobe Analytics.
 
-  Mer information om Media Edge API finns i [Översikt över API för Media Edge](https://developer.adobe.com/cja-apis/docs/endpoints/media-edge/).
+  Mer information om Media Edge API finns i [Översikt över Edge API](https://developer.adobe.com/cja-apis/docs/endpoints/media-edge/).
 
 ![CJA-arbetsflöde](assets/streaming-media-edge.png)
 
 ## Implementeringsmetoder som endast fungerar i Adobe Analytics
 
-De implementeringsmetoder för Edge som beskrivs ovan rekommenderas för både Customer Journey Analytics och Adobe Analytics, särskilt för nya implementeringar.
+Edge implementeringsmetoder som beskrivs ovan rekommenderas för både Customer Journey Analytics och Adobe Analytics, särskilt för nya implementeringar.
 
-Förutom implementeringsmetoderna för Edge finns det andra implementeringsmetoder. Dessa implementeringsmetoder har utformats för användning med Adobe Analytics. Befintliga kunder med någon av följande implementeringsmetoder kan dock fortfarande göra data tillgängliga i Customer Journey Analytics genom att skapa en [Källanslutning för analys](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/adobe-applications/analytics.html).
+Förutom Edge implementeringsmetoder finns det andra implementeringsmetoder. Dessa implementeringsmetoder har utformats för användning med Adobe Analytics. Befintliga kunder med någon av följande implementeringsmetoder kan dock fortfarande göra data tillgängliga i Customer Journey Analytics genom att skapa en [Källanslutning för analys](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/adobe-applications/analytics.html).
 
 * **Medietillägg med taggar:** Tillägget Adobe Media Analytics for Audio och Video innehåller funktioner för att lägga till Media Tracker-instansen till en tagghanteringsaktiverad webbplats eller ett tagghanterat projekt. Data skickas till Adobe Analytics.
 

@@ -5,9 +5,9 @@ uuid: 15c07131-77d7-4a97-92c6-0a190c6b08d3
 exl-id: b5eb8be7-4b85-4ba7-9216-dd691be7ba46
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: 2ce09eafeb8def909ae2a8ae7cc09a88b2f663af
 workflow-type: tm+mt
-source-wordcount: '199'
+source-wordcount: '201'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ Följande instruktioner ger vägledning vid implementering med 2.x SDK:er.
 
 >[!IMPORTANT]
 >
-> Om du implementerar en 1.x-version av SDK kan du hämta utvecklarhandboken här: [Hämta SDK:er.](/help/getting-started/download-sdks.md)
+> Om du implementerar en 1.x-version av SDK kan du hämta utvecklarhandboken här: [Ladda ned SDK:er.](/help/getting-started/download-sdks.md)
 
 ## Implementera standardannonsmetadata
 
@@ -56,13 +56,13 @@ Följande instruktioner ger vägledning vid implementering med 2.x SDK:er.
    chapterContextData["seg_info"] = "seg_info"
    ```
 
-1. Börja spåra kapiteluppspelningen genom att anropa `ChapterStart` i `MediaHeartbeat` instans:
+1. Börja spåra kapiteluppspelningen genom att anropa `ChapterStart` -händelsen i `MediaHeartbeat` instans:
 
    ```
    ADBMobile().mediaTrackEvent(MEDIA_CHAPTER_START, chapterInfo, chapterContextData)
    ```
 
-1. Anropa `ChapterComplete` i `MediaHeartbeat` -instans.
+1. När uppspelningen når kapitelslutsgränsen, som definieras av din egen kod, anropar du `ChapterComplete` -händelsen i `MediaHeartbeat` -instans.
 
    ```
    chapterContextData = {}

@@ -1,24 +1,24 @@
 ---
-title: Så här konfigurerar du Media SDK på iOS
+title: Konfigurera Media SDK på iOS
 description: Följ de här stegen för att konfigurera Media SDK-programmet på iOS.
 uuid: a1c6be79-a6dc-47b6-93b3-ac7b42f1f3eb
 exl-id: fe7662b5-1700-4bd6-b542-66aa8493459d
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: 4ed604cb1969212421fecd40996d7b25af50a2b2
 workflow-type: tm+mt
-source-wordcount: '739'
-ht-degree: 5%
+source-wordcount: '732'
+ht-degree: 3%
 
 ---
 
 # Konfigurera iOS{#set-up-ios}
 
-Lär dig hur du konfigurerar Streaming Media Analytics för iOS-enheter.
+Lär dig hur du konfigurerar tillägget Streaming Media Collection för iOS-enheter.
 
 >[!IMPORTANT]
 >
->När stödet för version 4 Mobile SDK upphör den 31 augusti 2021 upphör även stödet för Media Analytics SDK för iOS och Android i Adobe.  Mer information finns i [Vanliga frågor om supporten för Media Analytics SDK](/help/additional-resources/end-of-support-faqs.md).
+>När stödet för version 4 Mobile SDK upphör den 31 augusti 2021 upphör även stödet för Media Analytics SDK för iOS och Android.  Mer information finns i [Vanliga frågor om supporten för Media Analytics SDK](/help/additional-resources/end-of-support-faqs.md).
 
 ## Förutsättningar
 
@@ -27,9 +27,9 @@ Dessa parametrar kan hämtas från en Adobe-representant när du har konfigurera
 * **Implementera ADBMobil för iOS i ditt program**
 Mer information om Adobe Mobile SDK-dokumentationen finns i [iOS SDK 4.x for Experience Cloud Solutions.](https://experienceleague.adobe.com/docs/mobile-services/ios/overview.html)
 
-   >[!IMPORTANT]
-   >
-   >Från och med iOS 9 introducerade Apple en funktion som kallas ATS (App Transport Security). Den här funktionen syftar till att förbättra nätverkssäkerheten genom att säkerställa att dina appar endast använder protokoll och ciphers som följer branschstandard. Den här funktionen är aktiverad som standard, men du har konfigurationsalternativ som ger dig möjlighet att arbeta med ATS. Mer information om ATS finns i [Transportsäkerhet för appar.](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/app-transport-security.html)
+  >[!IMPORTANT]
+  >
+  >Från och med iOS 9 introducerade Apple en funktion som kallas ATS (App Transport Security). Den här funktionen syftar till att förbättra nätverkssäkerheten genom att säkerställa att dina appar endast använder protokoll och ciphers som följer branschstandard. Den här funktionen är aktiverad som standard, men du har konfigurationsalternativ som ger dig möjlighet att arbeta med ATS. Mer information om ATS finns i [Transportsäkerhet för appar.](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/app-transport-security.html)
 
 * **Tillhandahåll följande funktioner i din mediespelare:**
 
@@ -55,19 +55,20 @@ Mer information om Adobe Mobile SDK-dokumentationen finns i [iOS SDK 4.x for Exp
 
       * `ADBMediaHeartbeat.h`: Objektiv-C-huvudfilen som används för iOS API:er för pulsslagsspårning.
       * `ADBMediaHeartbeatConfig.h`: Mål-C-huvudfilen för SDK-konfigurationen.
-      * `MediaSDK.a`: En streckkodsaktiverad binär fet som innehåller biblioteksbyggen för iOS-enheter (armv7, armv7s, arm64) och simulatorer (i386 och x86_64).
+      * `MediaSDK.a`: En bitkodsstyrd binär fet som innehåller biblioteksbyggen för iOS-enheter (armv7, armv7s, arm64) och simulatorer (i386 och x86_64).
 
-         Den här binärfilen bör länkas när målet är avsett för en iOS-app.
+        Den här binärfilen bör länkas när målet är avsett för en iOS-app.
 
-      * `MediaSDK_TV.a`: En streckkodsaktiverad binärfil som innehåller biblioteket för nya Apple TV-enheter (arm64) och simulator (x86_64).
+      * `MediaSDK_TV.a`: En bitkodsaktiverad binär fet binärfil som innehåller biblioteket för nya Apple TV-enheter (arm64) och simulator (x86_64).
 
-         Den här binärfilen bör länkas när målet är avsett för en Apple TV-app (tvOS).
+        Den här binärfilen bör länkas när målet är avsett för en Apple TV-app (tvOS).
+
    1. Lägg till biblioteket i ditt projekt:
 
       1. Starta Xcode IDE och öppna appen.
       1. I **[!UICONTROL Project Navigator]**, dra `libs` och släpp den under projektet.
 
-      1. Se till att **[!UICONTROL Copy Items if Needed]** kryssrutan är markerad, **[!UICONTROL Create Groups]** är markerat och ingen av kryssrutorna i **[!UICONTROL Add to Target]** är markerade.
+      1. Se till att **[!UICONTROL Copy Items if Needed]** kryssrutan är markerad **[!UICONTROL Create Groups]** är markerat och ingen av kryssrutorna i **[!UICONTROL Add to Target]** är markerade.
 
       ![Välj alternativ](assets/choose-options_ios.png)
 
@@ -87,11 +88,8 @@ Mer information om Adobe Mobile SDK-dokumentationen finns i [iOS SDK 4.x for Exp
          * **MediaSDK_TV.a**
          * **libsqlite3.0.tbd**
          * **SystemConfiguration.framework**
+
       1. Verifiera att appen byggs utan fel.
-
-
-
-
 
 1. Importera biblioteket.
 
@@ -155,11 +153,11 @@ Mer information om Adobe Mobile SDK-dokumentationen finns i [iOS SDK 4.x for Exp
 
    >[!IMPORTANT]
    >
-   >Se till att `ADBMediaHeartbeat` -instansen är tillgänglig och *avallokeras inte förrän sessionen är slut*. Den här instansen används för alla följande spårningshändelser.
+   >Se till att `ADBMediaHeartbeat` -instansen är tillgänglig och *inte frigörs förrän i slutet av sessionen*. Den här instansen kommer att användas för alla följande spårningshändelser.
 
 ## Migrera från version 1.x till 2.x i iOS {#migrate-to-two-x}
 
-I version 2.x konsolideras alla publika metoder i `ADBMediaHeartbeat` för utvecklare. Alla konfigurationer har konsoliderats i `ADBMediaHeartbeatConfig` klassen.
+I version 2.x konsolideras alla publika metoder i `ADBMediaHeartbeat` för att underlätta för utvecklare. Alla konfigurationer har konsoliderats i `ADBMediaHeartbeatConfig` klassen.
 
 Mer information om hur du migrerar från 1.x till 2.x finns i dokumentationen för den äldre implementeringen.)
 
@@ -171,7 +169,7 @@ Utför följande steg i Xcode-projektet. Den här guiden är skriven under föru
 
 1. Dra `VideoHeartbeat_TV.a` biblioteksfil i projektets `lib` mapp.
 
-1. Expandera avsnittet **[!UICONTROL Link Binary with Libraries]** på fliken **[!UICONTROL Build Phases]** i målet för din tvOS-app och lägg till följande bibliotek:
+1. I **[!UICONTROL Build Phases]** för din tvOS-app **[!UICONTROL Link Binary with Libraries]** och lägga till följande bibliotek:
 
    * `MediaSDK_TV.a`
    * `AdobeMobileLibrary_TV.a`

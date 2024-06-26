@@ -5,10 +5,10 @@ uuid: 06fefedb-b0c8-4f7d-90c8-e374cdde1695
 exl-id: a175332e-0bdc-44aa-82cb-b3f879e7abfc
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: 4ed604cb1969212421fecd40996d7b25af50a2b2
 workflow-type: tm+mt
 source-wordcount: '618'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
@@ -19,8 +19,8 @@ När du har laddat ned Media SDK för din videoapp eller spelare följer du info
 
 ## Allmänna riktlinjer för genomförandet {#general-implementation-guidelines}
 
-Det finns tre SDK-huvudkomponenter som används för spårning av direktuppspelande media i Adobe:
-* Konfig för pulsslag i media - `MediaHeartbeatConfig` innehåller de grundläggande inställningarna för rapportering.
+Det finns tre SDK-huvudkomponenter som används för att spåra med tillägget Streaming Media Collection:
+* Konfig för pulsslag - Media `MediaHeartbeatConfig` innehåller de grundläggande inställningarna för rapportering.
 * Media Heartbeat Delegate - `MediaHeartbeatDelegate` styr uppspelningstiden och QoS-objektet.
 * Mediepulsslag - `MediaHeartbeat` är det primära biblioteket som innehåller medlemmar och metoder.
 
@@ -28,7 +28,7 @@ Det finns tre SDK-huvudkomponenter som används för spårning av direktuppspela
 
 Slutför följande implementeringssteg om du vill konfigurera och använda Streaming Media SDK:
 
-1. Skapa en `MediaHeartbeatConfig` och ange parametervärden för konfigurationen.
+1. Skapa en `MediaHeartbeatConfig` -instans och ange värden för konfigurationsparametrar.
 
    |  Variabelnamn  | Beskrivning  | Obligatoriskt |  Standardvärde  |
    |---|---|:---:|---|
@@ -72,7 +72,7 @@ Slutför följande implementeringssteg om du vill konfigurera och använda Strea
 
 1. Kombinera alla bitar.
 
-   I följande exempelkod används JavaScript 2.x SDK för en HTML5-videospelare:
+   I följande exempelkod används JavaScript 2.x SDK för en videospelare i HTML 5:
 
    ```javascript
    // Create local references to the heartbeat classes
@@ -120,11 +120,11 @@ Spåra implementeringar med Media Analytics genererar två typer av spårningsan
 * **Adobe Analytics-server (AppMeasurement)**
 Mer information om alternativ för spårning av server finns i [Fyll i variablerna trackingServer och trackingServerSecure korrekt.](https://helpx.adobe.com/analytics/kb/determining-data-center.html)
 
-   >[!IMPORTANT]
-   >
-   >Det krävs en RDC-spårningsserver eller CNAME som kan matchas till en RDC-server för Experience Cloud Visitor ID-tjänsten.
+  >[!IMPORTANT]
+  >
+  >Det krävs en RDC-spårningsserver eller CNAME som kan matchas till en RDC-server för Experience Cloud Visitor ID-tjänsten.
 
-   Analysspårningsservern ska sluta med &quot;`.sc.omtrdc.net`eller vara CNAME.
+  Analysspårningsservern ska sluta med &quot;`.sc.omtrdc.net`eller vara CNAME.
 
 * ** Media Analytics-server (Heartbeats)** Den har alltid formatet &quot;`[your_namespace].hb.omtrdc.net`&quot;. Värdet för`[your_namespace]`&quot; anger ditt företag och tillhandahålls av Adobe.
 

@@ -1,17 +1,17 @@
 ---
-title: Vad är Media Stream Attribution?
+title: Vad är medieströmsattribuering?
 description: Lär dig hur du länkar programåtgärder till mediespårningsdata utan att behöva använda ytterligare bearbetningsregler och anpassade variabler.
 exl-id: 75cc9088-776d-4b10-b358-9fff956a7eb7
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: 4ed604cb1969212421fecd40996d7b25af50a2b2
 workflow-type: tm+mt
-source-wordcount: '231'
+source-wordcount: '233'
 ht-degree: 1%
 
 ---
 
-# Attribution för medieström {#media-stream-attribution}
+# Attribut för medieström {#media-stream-attribution}
 
 Med Media Stream Attribution kan ni länka programåtgärder till mediaspårningsdata utan att behöva använda ytterligare bearbetningsregler och anpassade variabler.
 
@@ -23,11 +23,11 @@ Om du vill aktivera den här funktionen för en viss rapport aktiverar du medies
 
 >[!NOTE]
 >
->Mediemätningarna är _not_ som kan användas utanför mediespårning eftersom de flesta av dessa beräknas med Streaming Media Analytics baserat på pulsslagshändelser. Det är också viktigt att mediemätningarna inte påverkas av olika implementeringar.
+>Mediemätningarna är _not_ som kan användas utanför mediespårning eftersom de flesta av dessa beräknas av tillägget Streaming Media Collection baserat på pulsslagshändelser. Det är också viktigt att mediemätningarna inte påverkas av olika implementeringar.
 
 ## Använda attribut för medieström
 
-I JavaScript-exemplet nedan genereras ett anpassat länkspårningsanrop som har namnet inställt på&quot;Hero Banner&quot;.
+I JavaScript-exemplet nedan genereras ett anrop för spårning av anpassade länkar med namnet&quot;Hero Banner&quot;.
 
 ```javascript
 s.contextData["a.media.show"]="Mi Amore"
@@ -38,7 +38,7 @@ I Analytics-rapporter kan ni använda `Show` eVar för att dela upp data, så ka
 
 ![](/assets/myShow-rpt-1.png)
 
-## Användningsexempel
+## Användningsfall
 
 I följande exempel visas användningsexempel för följande:
 

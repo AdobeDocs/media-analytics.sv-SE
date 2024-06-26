@@ -1,13 +1,13 @@
 ---
 title: Skicka Ping-händelser
-description: Ping-händelser är takten i Streaming Media Analytics. Lär dig hur du skickar en tidsbestämd ping för huvudinnehåll eller annonsspårning.
+description: Ping-händelser är pulsslag för Streaming Media Collection Add-on. Lär dig hur du skickar en tidsbestämd ping för huvudinnehåll eller annonsspårning.
 uuid: c92c1a92-3af6-4474-9e42-ffb8f6c94b33
 exl-id: 0a645363-26d5-41e7-aa16-c775253e2b1d
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: e84864164adf056f47f24d65f0400c89d53d1630
+source-git-commit: 240fa48bdc738425e04cd29c27625c7dd612ff18
 workflow-type: tm+mt
-source-wordcount: '107'
+source-wordcount: '111'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 **Du måste utlösa pinghändelser var 10:e sekund, med början efter 10 sekunder av uppspelningen, oavsett andra API-händelser som du har skickat. Detta gäller både huvudinnehåll och annonsspårning.**
 
-ping-händelserna är bokstavligen&quot;hjärtslagen&quot; i Media Analytics. De enda parametrar som krävs för ett ping-anrop är `eventType: ping` tillsammans med `playerTime` objekt (spelhuvudets position och tidsstämpel).
+ping-händelserna är&quot;pulsslag&quot; i tillägget Streaming Media Collection. De enda parametrar som krävs för ett ping-anrop är `eventType: ping` tillsammans med `playerTime` objekt (spelhuvudets position och tidsstämpel).
 
 I följande kodutdrag visas ett sätt att implementera en tidsbestämd pingmekanism för huvudinnehållet (10 sekunder):
 

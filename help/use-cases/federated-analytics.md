@@ -1,21 +1,21 @@
 ---
 title: Federated Analytics
-description: Federated Analytics-tjänsten tillhandahåller ett system för delning av Adobe Analytics för direktuppspelande mediedata mellan två partners.
+description: Federated Analytics-tjänsten tillhandahåller ett system för delning av strömmande mediedata mellan två partners.
 uuid: a82ace81-c2f6-4799-9a62-4c6a737a7dab
 exl-id: 81970370-663c-49d5-b13c-628d294be178
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: 2ce09eafeb8def909ae2a8ae7cc09a88b2f663af
 workflow-type: tm+mt
-source-wordcount: '552'
-ht-degree: 92%
+source-wordcount: '556'
+ht-degree: 77%
 
 ---
 
 # Federated Analytics{#federated-analytics}
 
-Tjänsten Federated Analytics är ett system för att dela Adobe Media Analytics-data (ljud och video) mellan två parter.
-De standardiserade mätdata som skapas med Media Analytics är ett kännetecken för Federated Analytics, vilket gör att samma data kan samlas in i en enda rapport från flera olika källor.
+Federated Analytics-tjänsten tillhandahåller ett system för delning av strömmande mediedata (ljud och video) mellan två partners.
+De standardiserade mätdata som skapas av tillägget Streaming Media Collection är ett kännetecken för Federated Analytics, vilket gör att samma data kan flöda in i en enda rapport från flera olika källor.
 Tack vare de regler och den logik som styr Federated Analytics kan data enkelt styras och personaliseras för att uppfylla behoven för varje partner.
 Med Federated Analytics blir ljud- och videomätningarna effektivare, smidigare och mer användbara.
 
@@ -41,13 +41,13 @@ Med Federated Analytics blir ljud- och videomätningarna effektivare, smidigare 
 * **Avtal om medieströmmar:** Mottagaren och avsändaren måste ha ingått avtal med Adobe Analytics för medieströmmar innan de får tillgång till ljud- och videodata i Adobe Analytics. Kontakta ditt kontoteam om du vill ha mer information.
 * **Federationstillägg:** Varje avsändare och mottagare måste ha undertecknat ett tillägg med Adobe innan data skickas eller tas emot. Ett tillägg per kund krävs, inte ett tillägg per partnerskap. Kontakta ditt kontoteam om du vill ha mer information.
 
-* **Implementering av medieanalys:** Avsändaren måste ha Media Analytics implementerat för alla spelare som ska ingå i den federerade datauppsättningen. Endast Media Analytics-data kan federeras. Se dokumentationen: [Mäta direktuppspelningsmedia i Adobe Analytics](/help/media-overview.md)
+* **Implementering av tillägget för direktuppspelad mediainsamling:** Avsändaren måste ha tillägget Streaming Media Collection implementerat på alla spelare som ska ingå i den federerade datauppsättningen. Endast direktuppspelande mediedata är tillgängliga för federation. Mer information finns i [Adobe Streaming Media Collection - översikt](/help/media-overview.md).
 
 * **Konsultavtal med Adobe:** Vid den inledande konfigureringen av regler för federering är det praktiskt att samarbeta med våra konsulter för att granska data och skapa datadelningsavtalet.
 
 ## Hämta Federated Analytics-formuläret
 
-Ladda ned och fyll i [Federationsregelavtal](assets/federated_analytics_form.pdf) formulär.
+Om du vill delta i Federated Analytics hämtar och fyller du i [Federationsregelavtal](assets/federated_analytics_form.pdf) formulär.
 
 ## Process {#process}
 

@@ -5,28 +5,28 @@ uuid: d664e394-02a2-4985-bbad-be1bcc44fb2b
 exl-id: 5dfe3407-2858-48c0-a70c-8ea87967ac47
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: 4ed604cb1969212421fecd40996d7b25af50a2b2
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '571'
 ht-degree: 0%
 
 ---
 
 # Konfigurera Mobile SDK v3.x för Chromecast {#set-up-chromecast}
 
-I det här avsnittet beskrivs förutsättningarna för att konfigurera en Chromecast-installation för direktuppspelningsmedia.
+I det här avsnittet beskrivs förutsättningarna för att konfigurera en Chromecast-installation för tillägget Direktuppspelad mediasamling.
 
 ## Förutsättningar
 
 * **Hämta giltiga konfigurationsparametrar**
 
-   Dessa parametrar kan hämtas från en Adobe-representant när du har konfigurerat ditt medieanalyskonto.
+  Dessa parametrar kan hämtas från en Adobe-representant när du har konfigurerat ditt medieanalyskonto.
 * **Inkludera följande API:er i mediespelaren**
 
    * *Ett API för att prenumerera på spelarhändelser* - Media SDK kräver att du anropar en uppsättning enkla API:er när händelser inträffar i spelaren.
    * *Ett API som tillhandahåller spelarinformation* - Den här informationen innehåller information som medienamnet och spelhuvudets position.
 
-Adobe Mobile-tjänster har ett nytt användargränssnitt som samlar funktioner för mobilmarknadsföring för mobilappar från hela Adobe Marketing Cloud. Från början erbjuder mobiltjänsten smidig integrering av funktioner för appanalys och målinriktning för Adobe Analytics- och Adobe Target-lösningarna. Läs mer på [Adobe Mobile Services-dokumentation.](https://experienceleague.adobe.com/docs/mobile-services/using/home.html)
+Adobe Mobile-tjänster har ett nytt användargränssnitt som samlar funktioner för mobilmarknadsföring för mobilappar från hela Adobe Marketing Cloud. Från början erbjuder mobiltjänsten smidig integrering av funktioner för appanalys och målinriktning för Adobe Analytics- och Adobe Target-lösningarna. Läs mer på [Dokumentation för Adobe Mobile Services.](https://experienceleague.adobe.com/docs/mobile-services/using/home.html)
 
 Med Adobe Mobile Library for Chromecast v3.x for Experience Cloud Solutions kan ni mäta Chromecast-applikationer som skrivits i JavaScript, utnyttja och samla in målgruppsdata via målgruppshantering och mäta videoengagemang.
 
@@ -38,11 +38,12 @@ Med Adobe Mobile Library for Chromecast v3.x for Experience Cloud Solutions kan 
 
       * `adbmobile-chromecast.min.js`:
 
-         Den här biblioteksfilen inkluderas i din Chromecast-appkällmapp.
+        Den här biblioteksfilen inkluderas i din Chromecast-appkällmapp.
 
       * `ADBMobileConfig` config
 
-         Den här SDK-konfigurationsfilen är anpassad för ditt program. Ett exempel `ADBMobileConfig` SDK (under `samples/`). Hämta rätt inställningar från en Adobe-representant.
+        Den här SDK-konfigurationsfilen är anpassad för ditt program. Ett exempel `ADBMobileConfig` SDK (under `samples/`). Hämta rätt inställningar från en Adobe-representant.
+
    1. Lägg till biblioteksfilen i `index.html` och skapa `ADBMobileConfig` global variabel enligt följande (den globala variabeln som används för att konfigurera Adobe Mobile för Media Analytics har en exklusiv nyckel med namnet `mediaHeartbeat`):
 
       ```js
@@ -91,6 +92,7 @@ Med Adobe Mobile Library for Chromecast v3.x for Experience Cloud Solutions kan 
       >If `mediaHeartbeat` är felaktigt konfigurerad, mediemodulen försätts i ett feltillstånd och kommer att sluta skicka spårningsanrop.
 
       ADBMoble Config-parametrar för nyckeln mediaHeartbeat:
+
    | Konfigurationsparameter | Beskrivning     |
    | --- | --- |
    | `server` | Sträng som representerar URL:en för spårningsslutpunkten på backend-objektet. |
@@ -99,7 +101,7 @@ Med Adobe Mobile Library for Chromecast v3.x for Experience Cloud Solutions kan 
    | `ssl` | Boolean som representerar om SSL ska användas för att spåra anrop. |
    | `ovp` | Sträng som representerar namnet på videospelarleverantören. |
    | `sdkversion` | Sträng som representerar den aktuella versionen av programmet/SDK. |
-   | `playerName` | En sträng som representerar spelarens namn. |
+   | `playerName` | Sträng som representerar spelarens namn. |
 
 
 1. Konfigurera Experience Cloud Visitor-ID.
@@ -130,8 +132,8 @@ Med Adobe Mobile Library for Chromecast v3.x for Experience Cloud Solutions kan 
 
    | Metod | Beskrivning |
    | --- | --- |
-   | `getMarketingCloudID()` | Hämtar Experience Cloud Visitor-ID:t från Visitor ID-tjänsten.  <br/><br/>`ADBMobile.visitor.getMarketingCloudID();` |
-   | `syncIdentifiers()` | Med besökar-ID:t för Experience Cloud kan du ange ytterligare kund-ID:n som kan kopplas till varje besökare. Besökar-API:t godkänner flera kund-ID:n för samma besökare och en kundtypsidentifierare för att skilja omfattningen för olika kund-ID:n åt. Den här metoden motsvarar `setCustomerIDs()` i JavaScript-biblioteket.  Exempel: <br/><br/>`var identifiers = {};` <br/><br/>`identifiers["idType"] = "idValue";` <br/><br/>`ADBMobile.visitor.syncIdentifiers(identifiers);` |
+   | `getMarketingCloudID()` | Hämtar Experience Cloud Visitor-ID:t från Visitor-ID-tjänsten.  <br/><br/>`ADBMobile.visitor.getMarketingCloudID();` |
+   | `syncIdentifiers()` | Med besökar-ID:t för Experience Cloud kan du ange ytterligare kund-ID:n som kan kopplas till varje besökare. Besökar-API:t godkänner flera kund-ID:n för samma besökare och en kundtypsidentifierare för att skilja omfattningen för olika kund-ID:n åt. Den här metoden motsvarar `setCustomerIDs()` i JavaScript bibliotek.  Till exempel: <br/><br/>`var identifiers = {};` <br/><br/>`identifiers["idType"] = "idValue";` <br/><br/>`ADBMobile.visitor.syncIdentifiers(identifiers);` |
 
 1. Implementera MediaDelegate-protokollet för spårning av media
 

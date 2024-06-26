@@ -5,9 +5,9 @@ uuid: 904dfda0-4782-41da-b4ab-212e81156633
 exl-id: b8de88d0-3a93-4776-b372-736bf979ee26
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: 2ce09eafeb8def909ae2a8ae7cc09a88b2f663af
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '666'
 ht-degree: 1%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 1%
 
 ## Förutsättningar {#roku-prerequisites}
 
-* **Hämta giltiga konfigurationsparametrar för Media Analytics**
+* **Hämta giltiga konfigurationsparametrar för tillägget Streaming Media Collection**
 
-   Dessa parametrar kan hämtas från en Adobe-representant när du har konfigurerat ditt medieanalyskonto.
+  Dessa parametrar kan hämtas från en Adobe-representant när du har konfigurerat Adobe-direktuppspelningstillägget för Media Collection.
 * **Inkludera följande API:er i mediespelaren**
 
    * _Ett API för att prenumerera på spelarhändelser_ - Media SDK kräver att du anropar en uppsättning enkla API:er när händelser inträffar i spelaren.
@@ -30,14 +30,15 @@ Med Roku SDK 2.x för Experience Cloud Solutions kan du mäta Roku-applikationer
 
 1. Lägg till [nedladdad](/help/getting-started/download-sdks.md) Roku-bibliotek till ditt projekt.
 
-   1. The `AdobeMobileLibrary-2.*-Roku.zip` hämtningsfilen består av följande programvarukomponenter:
+   1. The `AdobeMobileLibrary-2.*-Roku.zip` nedladdningsfilen består av följande programvarukomponenter:
 
       * `adbmobile.brs`: Den här biblioteksfilen inkluderas i Roku-appens källmapp.
 
       * `ADBMobileConfig.json`: Den här SDK-konfigurationsfilen är anpassad för ditt program.
+
    1. Lägg till biblioteksfilen och JSON-konfigurationsfilen i projektkällan.
 
-      JSON som används för att konfigurera Adobe Mobile har en exklusiv nyckel för medieanalys som kallas `mediaHeartbeat`. Här tillhör konfigurationsparametrarna för medieanalysen.
+      JSON som används för att konfigurera Adobe Mobile har en exklusiv nyckel för medieanalys som kallas `mediaHeartbeat`. Det är här som konfigurationsparametrarna för medieanalys hör hemma.
 
       >[!TIP]
       >
@@ -94,12 +95,11 @@ Med Roku SDK 2.x för Experience Cloud Solutions kan du mäta Roku-applikationer
       | `ssl` | Boolean som representerar om SSL ska användas för att spåra anrop. |
       | `ovp` | Sträng som representerar namnet på videospelarleverantören. |
       | `sdkversion` | Sträng som representerar den aktuella versionen av programmet/SDK. |
-      | `playerName` | En sträng som representerar spelarens namn. |
+      | `playerName` | Sträng som representerar spelarens namn. |
 
       >[!IMPORTANT]
       >
       >If `mediaHeartbeat` är felaktigt konfigurerad, kommer mediemodulen (VHL) att försättas i ett feltillstånd och kommer att sluta skicka spårningsanrop.
-
 
 1. Konfigurera Experience Cloud Visitor-ID.
 
@@ -129,9 +129,9 @@ Med Roku SDK 2.x för Experience Cloud Solutions kan du mäta Roku-applikationer
 
    |  Metod   | Beskrivning |
    | --- | --- |
-   | `visitorMarketingCloudID` | Hämtar besökar-ID:t för Experience Cloud från besökarens ID-tjänst.  <br/><br/>`ADBMobile().visitorMarketingCloudID()` |
-   | `visitorSyncIdentifiers` | Med besökar-ID:t för Experience Cloud kan du ange ytterligare kund-ID:n som kan kopplas till varje besökare. Besökar-API:t godkänner flera kund-ID:n för samma besökare och en kundtypsidentifierare för att skilja omfattningen för olika kund-ID:n åt. Den här metoden motsvarar `setCustomerIDs`. Exempel: <br/><br/>`identifiers={}` <br/>`identifiers["idType"]="idValue"` <br/>`ADBMobile().visitorSyncIdentifiers(identifiers)` |
-   | `setAdvertisingIdentifier` | Används för att ange Roku-ID för annonsering (RIDA) på SDK. Exempel: <br/><br/> `ADBMobile().setAdvertisingIdentifier(`<br/>  `"<sample_roku_identifier_for_advertising>")` <br/><br/><br/>Hämta Roku-ID:t för annonsering (RIDA) med Roku SDK [getRIDA()](https://developer.roku.com/docs/references/brightscript/interfaces/ifdeviceinfo.md#getrida-as-dynamic) API. |
+   | `visitorMarketingCloudID` | Hämtar besökar-ID:t för Experience Cloud från besökar-ID-tjänsten.  <br/><br/>`ADBMobile().visitorMarketingCloudID()` |
+   | `visitorSyncIdentifiers` | Med besökar-ID:t för Experience Cloud kan du ange ytterligare kund-ID:n som kan kopplas till varje besökare. Besökar-API:t godkänner flera kund-ID:n för samma besökare och en kundtypsidentifierare för att skilja omfattningen för olika kund-ID:n åt. Den här metoden motsvarar `setCustomerIDs`. Till exempel: <br/><br/>`identifiers={}` <br/>`identifiers["idType"]="idValue"` <br/>`ADBMobile().visitorSyncIdentifiers(identifiers)` |
+   | `setAdvertisingIdentifier` | Används för att ange Roku-ID för Advertising (RIDA) på SDK:n. Till exempel: <br/><br/> `ADBMobile().setAdvertisingIdentifier(`<br/>  `"<sample_roku_identifier_for_advertising>")` <br/><br/><br/>Hämta Roku-ID för Advertising (RIDA) med Roku SDK [getRIDA()](https://developer.roku.com/docs/references/brightscript/interfaces/ifdeviceinfo.md#getrida-as-dynamic) API. |
    | `getAllIdentifiers` | Returnerar en lista med alla identifierare som lagras av SDK, inklusive Analytics, Visitor, Audience Manager och anpassade identifierare. <br/><br/> `identifiers = ADBMobile().getAllIdentifiers()` |
    <!--
     Roku Api Reference:
@@ -153,7 +153,7 @@ Med Roku SDK 2.x för Experience Cloud Solutions kan du mäta Roku-applikationer
    |  Konstant   | Beskrivning |
    | --- | --- |
    | `PRIVACY_STATUS_OPT_IN` | En konstant som ska skickas när setPrivacyStatus anropas för att anmäla sig. <br/><br/>`optInString = ADBMobile().PRIVACY_STATUS_OPT_IN` |
-   | `PRIVACY_STATUS_OPT_OUT` | En konstant som ska skickas när setPrivacyStatus anropas för att avanmäla sig. <br/><br/>`optOutString = ADBMobile().PRIVACY_STATUS_OPT_OUT` |
+   | `PRIVACY_STATUS_OPT_OUT` | En konstant som ska skickas när setPrivacyStatus anropas för avanmälan. <br/><br/>`optOutString = ADBMobile().PRIVACY_STATUS_OPT_OUT` |
 
    |  Metod   | Beskrivning |
    | --- | --- |
@@ -162,7 +162,7 @@ Med Roku SDK 2.x för Experience Cloud Solutions kan du mäta Roku-applikationer
 
    >[!IMPORTANT]
    >
-   >Se till att du ringer `processMessages` och `processMediaMessages` funktionen i huvudhändelseslingan var 250:e ms för att säkerställa att SDK skickar ut pingarna korrekt.
+   >Se till att du ringer `processMessages` och `processMediaMessages` funktionen i huvudhändelseslingan var 250:e ms för att säkerställa att SDK skickar ut pingarna på rätt sätt.
 
    |  Metod   | Beskrivning |
    | --- | --- |

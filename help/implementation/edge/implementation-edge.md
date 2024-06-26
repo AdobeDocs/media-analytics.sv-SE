@@ -1,27 +1,27 @@
 ---
-title: Installera Media Analytics med Experience Platform Edge
-description: Lär dig hur du implementerar direktuppspelningsmedia för Adobe med Experience Platform Edge.
+title: Implementera tillägget Streaming Media Collection med Edge Network
+description: Lär dig hur tillägget Streaming Media Collection kan implementeras med Experience Platform Edge.
 feature: Media Analytics
 role: User, Admin, Data Engineer
 exl-id: dfdb1415-105e-4c41-bedc-ecb85ed1b1d9
-source-git-commit: ad40260d29bd5b739184cb551f084565d05e65a7
+source-git-commit: 4ed604cb1969212421fecd40996d7b25af50a2b2
 workflow-type: tm+mt
-source-wordcount: '1858'
+source-wordcount: '1879'
 ht-degree: 0%
 
 ---
 
-# Installera Media Analytics med Experience Platform Edge
+# Implementera tillägget Streaming Media Collection med Edge Network
 
-Med Adobe Experience Platform Edge kan ni skicka data till flera produkter på en central plats. Experience Edge vidarebefordrar lämplig information till önskade produkter. Med det här konceptet kan ni konsolidera implementeringsinsatser, särskilt genom att sprida flera datalösningar.
+Med Adobe Experience Platform Edge Network kan du skicka data till flera produkter på en central plats. Upplev att Edge vidarebefordrar lämplig information till de önskade produkterna. Med det här konceptet kan ni konsolidera implementeringsinsatser, särskilt genom att sprida flera datalösningar.
 
-Följande bild visar hur en Media Analytics-implementering kan använda Experience Platform Edge för att göra data tillgängliga i Analysis Workspace, antingen i Adobe Analytics eller Customer Journey Analytics:
+Följande bild visar hur tillägget Adobe Streaming Media Collection kan implementeras för att använda Experience Platform Edge för att göra data tillgängliga i Analysis Workspace, antingen i Adobe Analytics eller Customer Journey Analytics:
 
 ![CJA-arbetsflöde](assets/streaming-media-edge.png)
 
-En översikt över alla implementeringsalternativ, inklusive implementeringsmetoder som inte använder Experience Platform Edge, finns i [Implementera direktuppspelningsmedia för Adobe Analytics eller Customer Journey Analytics](/help/implementation/overview.md).
+En översikt över alla implementeringsalternativ, inklusive implementeringsmetoder som inte använder Experience Platform Edge, finns i [Implementera tillägget Direktuppspelning av mediasamling](/help/implementation/overview.md).
 
-Oavsett om du använder Adobe Experience Platform Web SDK, Adobe Experience Platform Mobile SDK, Adobe Experience Platform Roku SDK eller API för att implementera direktuppspelningsmedia med Experience Edge måste du först slutföra följande avsnitt:
+Oavsett om du använder Adobe Experience Platform Web SDK, Adobe Experience Platform Mobile SDK, Adobe Experience Platform Roku SDK eller API för att implementera Streaming Media Collection Add-on med Experience Edge måste du först slutföra följande avsnitt:
 
 ## Konfigurera schemat i Adobe Experience Platform
 
@@ -50,7 +50,7 @@ Så här skapar och konfigurerar du ett schema:
 
 1. Välj [!UICONTROL **Spara**] för att spara ändringarna.
 
-1. (Valfritt) Du kan dölja vissa fält som inte används av API:t för mediekant. Om du döljer dessa fält blir schemat enklare att läsa och förstå, men det är inte nödvändigt. Dessa fält refererar endast till fälten i `MediaAnalytics Interaction Details` fältgrupp.
+1. (Valfritt) Du kan dölja vissa fält som inte används av API:t för Media Edge. Om du döljer dessa fält blir schemat enklare att läsa och förstå, men det är inte nödvändigt. Dessa fält refererar endast till fälten i `MediaAnalytics Interaction Details` fältgrupp.
 
 +++ Expandera här om du vill visa instruktioner för fält som du kan dölja.
 
@@ -170,7 +170,7 @@ Så här skapar och konfigurerar du ett schema:
 
 1. Skapa en anslutning enligt beskrivningen i Customer Journey Analytics [Skapa en anslutning](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-connections/create-connection.html?lang=en).
 
-   När du skapar anslutningen krävs följande konfigurationsval för implementering av direktuppspelningsmedia:
+   När du skapar anslutningen krävs följande konfigurationsalternativ för att implementera tillägget för direktuppspelad mediasamling:
 
    1. Välj den datauppsättning som du skapade tidigare, enligt beskrivningen i [Skapa en datauppsättning i Adobe Experience Platform](#create-a-dataset-in-adobe-experience-platform).
 
@@ -188,7 +188,7 @@ Så här skapar och konfigurerar du ett schema:
 
 1. Skapa en datavy enligt beskrivningen i [Skapa eller redigera en datavy](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/create-dataview.html?lang=en).
 
-   När du skapar datavyn krävs följande konfigurationsval för implementering av direktuppspelningsmedia:
+   När du skapar datavyn krävs följande konfigurationsalternativ för att implementera tillägget för direktuppspelad mediasamling:
 
    1. I [!UICONTROL **Anslutning**] markerar du anslutningen som du skapade tidigare, enligt beskrivningen i [Skapa en anslutning i Customer Journey Analytics](#create-a-connection-in-customer-journey-analytics).
 
@@ -275,7 +275,7 @@ Så här skapar och konfigurerar du ett schema:
 
 1. Se till att du har skapat en datavy i Customer Journey Analytics enligt beskrivningen i [Skapa en datavy i Customer Journey Analytics](#create-a-new-data-view-in-customer-journey-analytics).
 
-1. I Customer Journey Analytics, på [!UICONTROL **Arbetsyta**] -fliken, i [!UICONTROL **Projekt**] område, markera [!UICONTROL **Skapa projekt**].
+1. I Customer Journey Analytics, på [!UICONTROL **Workspace**] -fliken, i [!UICONTROL **Projekt**] område, markera [!UICONTROL **Skapa projekt**].
 
 1. Välj [!UICONTROL **Tomt projekt**] > [!UICONTROL **Skapa**].
 
@@ -343,13 +343,13 @@ Använd följande dokumentationsresurser för att slutföra implementeringen av 
 
 API:t är för närvarande det enda sättet att skicka webbdata till Experience Platform Edge.
 
-API:t är också tillgängligt om du vill använda en anpassad implementering av Edge API:erna.
+API:t är också tillgängligt om du vill använda en anpassad implementering av Edge API:er.
 
-Mer information om mediekant-API:t finns i följande resurser:
+Mer information om mediet-API:t för Edge finns i följande resurser:
 
-* [Översikt över API för Media Edge](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/overview.html)
+* [Översikt över Edge API](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/overview.html)
 
-* [Komma igång med API för Media Edge](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/getting-started.html)
+* [Komma igång med Edge API](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/getting-started.html)
 
 * [Felsökningsguide för Media Edge API](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/troubleshooting.html)
 

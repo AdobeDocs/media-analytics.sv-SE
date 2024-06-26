@@ -1,11 +1,12 @@
 ---
 title: Skicka webbdata till Edge med Adobe Experience Platform Web SDK
-description: Lär dig hur du skickar mediedata för direktuppspelning från Adobe till Experience Platform Edge med Adobe Experience Platform Web SDK.
+description: Lär dig hur du skickar Adobe Streaming Media-data till Experience Platform Edge med Adobe Experience Platform Web SDK.
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: ad40260d29bd5b739184cb551f084565d05e65a7
+exl-id: de40ebd9-46be-4a52-866f-7bb2589fce28
+source-git-commit: 4ed604cb1969212421fecd40996d7b25af50a2b2
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '527'
 ht-degree: 0%
 
 ---
@@ -22,14 +23,14 @@ För kunder som använder Media JS SDK erbjuder Web SDK en migreringsväg från 
 
 Använd `streamingMedia` som ingår i Web SDK, måste du uppfylla följande krav:
 
-* Innan du kan skicka data från Media Analytics till Edge måste du först slutföra stegen i [Installera Media Analytics med Experience Platform Edge](/help/implementation/edge/implementation-edge.md).
+* Innan du kan skicka strömmande mediedata till Edge måste du slutföra stegen i [Installera tillägget Streaming Media Collection med Experience Platform Edge](/help/implementation/edge/implementation-edge.md).
 * Kontrollera att du har tillgång till Adobe Experience Platform och/eller Adobe Analytics.
 * Du måste använda Web SDK version 2.20.0 eller senare. Se [Web SDK - installationsöversikt](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/install/overview) om du vill lära dig hur du installerar den senaste versionen.
 * Aktivera **[[!UICONTROL Media Analytics]](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/configure)** för den datastream du använder.
 * Kontrollera att schemat som används av din datastream innehåller schemafälten för mediesamlingen.
 * Konfigurera funktionen Direktuppspelning av media i Web SDK-konfigurationen, som visas på den här sidan, antingen via [taggtillägg](#tag-extension) eller via [JavaScript-bibliotek](#library).
 
-Följ stegen som beskrivs på den här sidan för att migrera din Analytics per contenuti in streaming-implementering från Media JS till Web SDK.
+Följ stegen som beskrivs på den här sidan för att migrera implementeringen av tillägget Streaming Media Collection från Media JS till Web SDK.
 
 ### Steg 1: Installera Experience Platform Web SDK
 

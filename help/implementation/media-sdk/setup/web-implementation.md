@@ -1,31 +1,31 @@
 ---
-title: Konfigurera en webbimplementering för Analytics for Streaming Media
+title: Konfigurera en webbimplementering för Analytics per contenuti in streaming
 description: Lär dig hur du implementerar Adobe Streaming Media för webbprogram.
 feature: Media Analytics
 role: User, Admin, Data Engineer
 exl-id: aed561d0-defc-4be5-87d3-0f331cdfab34
-source-git-commit: 9d7886a67e426089977cbe322d310c36604646d0
+source-git-commit: 4ed604cb1969212421fecd40996d7b25af50a2b2
 workflow-type: tm+mt
-source-wordcount: '454'
-ht-degree: 2%
+source-wordcount: '442'
+ht-degree: 1%
 
 ---
 
-# Installera Media Analytics med JavaScript {#install-web-sdks}
+# Installera Media SDK med JavaScript {#install-web-sdks}
 
-Informationen på den här sidan beskriver hur du installerar den fristående SDK:n för webben och konfigurerar JavaScript.
+Informationen på den här sidan beskriver hur du installerar den fristående SDK för webben och konfigurerar JavaScript.
 
-Du kan också använda Adobe Media Analytics-tillägget för att implementera Analytics, enligt beskrivningen i [Implementera Analytics med Media Analytics-tillägget](/help/implementation/media-sdk/setup/web-implementation-tags.md).
+Du kan också använda Adobe Media Analytics-tillägget för att implementera Adobe Streaming Media Collection-tillägget enligt beskrivningen i [Implementera Analytics med Media Analytics-tillägget](/help/implementation/media-sdk/setup/web-implementation-tags.md).
 
 ## Förutsättningar {#prerequesites}
 
 * **Hämta giltiga konfigurationsparametrar**
 
-   Dessa parametrar kan hämtas från en Adobe-representant när du har konfigurerat ditt analyskonto.
+  Dessa parametrar kan hämtas från en Adobe-representant när du har konfigurerat ditt analyskonto.
 
 * **Implementera `AppMeasurement` och `Experience Cloud Identity Service` för JavaScript i ditt medieprogram**
 
-   Mer information finns i [Implementera analys med JavaScript](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html) och [Implementera Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-analytics.html).
+  Mer information finns i [Implementera analys med JavaScript](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html) och [Implementera Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-analytics.html).
 
 * **Inkludera följande API:er i mediespelaren**
 
@@ -41,7 +41,7 @@ Du kan också använda Adobe Media Analytics-tillägget för att implementera An
 
    1. Värd för `MediaSDK.js` -fil.
 
-      Denna JavaScript-huvudfil måste finnas på en webbserver som är tillgänglig för alla sidor på din plats. Du behöver sökvägen till de här filerna för nästa steg.
+      Den här JavaScript-huvudfilen måste finnas på en webbserver som är tillgänglig för alla sidor på webbplatsen. Du behöver sökvägen till de här filerna för nästa steg.
 
    1. Referens `MediaSDK.js` på alla webbplatssidor.
 
@@ -59,7 +59,7 @@ Du kan också använda Adobe Media Analytics-tillägget för att implementera An
 
 1. Skapa en instans av `AppMeasurement` och konfigurera `visitor`.
 
-   Konfiguration av Media SDK kräver en instans av `AppMeasurement` med `visitor` konfigurerad.
+   Konfigurationen av Media SDK kräver en instans av `AppMeasurement` med `visitor` konfigurerad.
 
    ```js
     var appMeasurement = new AppMeasurement("<rsid>");

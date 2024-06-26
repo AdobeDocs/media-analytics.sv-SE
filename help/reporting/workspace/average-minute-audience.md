@@ -4,7 +4,7 @@ description: Lär dig hur du använder panelen Media Average Minute Audience fö
 feature: Media Analytics, Workspace Basics
 role: User, Admin
 exl-id: af4d430c-1349-4606-b587-da5d40e0fe4b
-source-git-commit: 7eeee7f035e5d9e7e327e60910c78bbdf02abff8
+source-git-commit: 2ce09eafeb8def909ae2a8ae7cc09a88b2f663af
 workflow-type: tm+mt
 source-wordcount: '255'
 ht-degree: 0%
@@ -22,4 +22,4 @@ I Analysis Workspace är den genomsnittliga minuten den tid som går åt till at
 
 Panelen Mediets genomsnittliga minutmålgrupp ger en genomsnittlig minutvis målgruppsanalys utifrån det specifika innehåll som valts om varaktigheten görs tillgänglig med hjälp av klassificeringar.
 
-Panelen Minut-målgrupp innehåller även analyser under en viss tidsperiod som kan filtreras efter visst innehåll, oavsett om varaktigheten är tillgänglig med hjälp av klassificeringar eller inte. Navigera till en rapportsserie med Media Analytics-komponenter aktiverade för att få tillgång till panelen Mediemådets genomsnittliga målgrupp. Klicka sedan på panelikonen längst till vänster och dra panelen till ditt Analysis Workspace-projekt. [Läs mer …](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/average-minute-audience-panel.html?lang=en)
+Panelen Minut-målgrupp innehåller även analyser under en viss tidsperiod som kan filtreras efter visst innehåll, oavsett om varaktigheten är tillgänglig med hjälp av klassificeringar eller inte. Navigera till en rapportsserie med mediekomponenter för direktuppspelande media aktiverade för att få tillgång till panelen Mediemål för minimal publik. Klicka sedan på panelikonen längst till vänster och dra panelen till ditt Analysis Workspace-projekt. [Läs mer …](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/average-minute-audience-panel.html?lang=en)

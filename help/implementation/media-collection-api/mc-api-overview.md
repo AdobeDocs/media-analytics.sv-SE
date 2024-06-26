@@ -6,20 +6,20 @@ uuid: c14bdbef-5846-4d31-8a14-8e9e0e9c9861
 exl-id: 58430636-7fab-433a-8ead-52ccaa45d920
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: 240fa48bdc738425e04cd29c27625c7dd612ff18
 workflow-type: tm+mt
 source-wordcount: '357'
 ht-degree: 0%
 
 ---
 
-# Översikt över Media Collection API{#overview}
+# Översikt över Media Collection API {#overview}
 
 Media Collection API är ett Adobe RESTful-alternativ till Media SDK på klientsidan. Med Media Collection API kan spelaren spåra ljud- och videohändelser med RESTful HTTP-anrop.
 
 Media Collection API är i princip ett kort som fungerar som en serverversion av Media SDK. Detta innebär att vissa aspekter av Media SDK-dokumentationen också är relevanta för Media Collection API. Till exempel använder båda lösningarna samma [Parametrar för direktuppspelande media](../variables/audio-video-parameters.md)och de insamlade spårningsdata för direktuppspelande media leder till samma [Rapportering och analys.](/help/reporting/media-reports-enable.md)
 
-## Dataflöden för medieuppföljning {#media-tracking-data-flows}
+## Dataflöden för mediespårning {#media-tracking-data-flows}
 
 En mediespelare som implementerar API:t för Media Collection gör RESTful API-spårningsanrop direkt till bakomliggande mediaspårningsserver, medan en spelare som implementerar Media SDK gör spårningsanrop till SDK API:er inuti spelarappen. En effekt av att anropa via webben är att spelaren som implementerar API:t för Media Collection måste hantera en del av bearbetningen som Media SDK hanterar automatiskt. (Information i [Implementering av mediainsamling.](mc-api-impl/mc-api-quick-start.md))
 
@@ -37,11 +37,11 @@ Spårningsdata som hämtas med Media Collection API skickas och bearbetas först
 
 * **`sessions`-** Upprättar en session med servern och returnerar ett sessions-ID som används i efterföljande `events` samtal. Din app anropar detta en gång i början av en spårningssession.
 
-   `{uri}/api/v1/sessions`
+  `{uri}/api/v1/sessions`
 
 * **`events`-** Skickar mediespårningsdata.
 
-   `{uri}/api/v1/sessions/{session-id}/events`
+  `{uri}/api/v1/sessions/{session-id}/events`
 
 ### Begärandetext {#mc-api-request-body}
 

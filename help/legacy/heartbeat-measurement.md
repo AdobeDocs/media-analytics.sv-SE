@@ -3,18 +3,19 @@ title: Om mätning av hjärtslag
 description: Lär dig hur hjärtslag används för att samla in videostatistik.
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+exl-id: 180dd9b1-877a-4ec1-8e81-c293800069c0
+source-git-commit: 4ed604cb1969212421fecd40996d7b25af50a2b2
 workflow-type: tm+mt
-source-wordcount: '311'
+source-wordcount: '315'
 ht-degree: 26%
 
 ---
 
 # Om mätning av pulsslag
 
-Adobe Analytics använder&quot;hjärtslag&quot; för att samla in videostatistik. Under videouppspelningen skickas pulsslag till en spårningsserver för att mäta uppspelningstiden. Pulsslagsanropen skickas var tionde sekund. Pulsslagen genererar detaljerad statistik om videoengagemang och mer korrekta rapporter om videobortfall. Adobe Analytics för direktuppspelande media-mått fångar pulsen med Adobe Launch med Media Analytics-tillägget, Media SDK och Media Collection API. Komponenterna `AppMeasurement` och `VisitorID` används för att ta emot videodata.
+Tillägget Adobe Streaming Media Collection använder&quot;hjärtslag&quot; för att samla in videostatistik. Under videouppspelningen skickas pulsslag till en spårningsserver för att mäta uppspelningstiden. Pulsslagsanropen skickas var tionde sekund. Pulsslagen genererar detaljerad statistik om videoengagemang och mer korrekta rapporter om videobortfall. Direktuppspelande media-mått fångar takten med Adobe Launch med Media Analytics-tillägget, Media SDK och Media Collection API. Komponenterna `AppMeasurement` och `VisitorID` används för att ta emot videodata.
 
-Att använda pulsslag Adobe Analytics för direktuppspelande media ger följande fördelar:
+Att använda pulsslag i tillägget Streaming Media Collection ger följande fördelar:
 
 | Funktion | Beskrivning |
 |---|---|
@@ -24,4 +25,4 @@ Att använda pulsslag Adobe Analytics för direktuppspelande media ger följande
 | Priser | Genomskinlig spårning efter medieström (enkel) |
 | Implementering och support | Effektiv konfiguration med pågående uppdateringar och förbättringar. Med en smidig implementeringsprocess kan du snabbt mappa variabler via spelar-API:t och validera implementeringar med Adobe Debug Tool för att säkerställa att alla nödvändiga variabler spåras korrekt. |
 | Partnerdelning | Federated Analytics och Certified Metrics. Med delade data via Federated Analytics kan ni utnyttja våra branschledande funktioner för mediedelning för att utvärdera data enhetligt i alla mediedistributionspartners - operatörer, programmerare och distributörer. |
-| Avancerad spårning | Spårning av hämtat innehåll, spårning av felåterställning och samtidiga visningsprogram. Du kan spåra direktuppspelat medieinnehåll som har laddats ned och spelats upp på en enhet oavsett dess anslutningsmöjligheter. |
+| Avancerad spårning | Hämtade innehållsspårning, spårning av felåterställning och samtidiga visningsprogram. Du kan spåra direktuppspelat medieinnehåll som har laddats ned och spelats upp på en enhet oavsett dess anslutningsmöjligheter. |

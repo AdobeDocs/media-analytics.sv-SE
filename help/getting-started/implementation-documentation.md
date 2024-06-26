@@ -5,20 +5,20 @@ uuid: null
 feature: Media Analytics
 role: User, Admin, Data Engineer
 exl-id: c37aeea2-7c8f-4815-ae28-634ae691e84f
-source-git-commit: ad40260d29bd5b739184cb551f084565d05e65a7
+source-git-commit: 240fa48bdc738425e04cd29c27625c7dd612ff18
 workflow-type: tm+mt
-source-wordcount: '255'
-ht-degree: 4%
+source-wordcount: '259'
+ht-degree: 3%
 
 ---
 
-# Implementeringsdokumentation för direktuppspelande media {#streaming-media-documentation}
+# Implementeringsdokumentation för Streaming Media Collection Add-on {#streaming-media-documentation}
 
-Adobe Analytics per contenuti in streaming dokumentation finns på flera produktwebbplatser. Beroende på hur du implementerar Streaming Media Analytics kan du behöva referera till en eller flera dokumentationsuppsättningar.
+Dokumentationen för tillägget Streaming Media Collection finns på flera produktwebbplatser. Beroende på hur du implementerar samlingen med direktuppspelade media kan du behöva referera till en eller flera dokumentationsuppsättningar.
 
 Använd informationen i följande tabell för att hitta dokumentation om den implementeringsmetod du valt.
 
-## Implementeringsdokumentation för direktuppspelande media {#media-documentation}
+## Implementeringsdokumentation {#media-documentation}
 
 | Implementering | Dokumentation |
 |:-----------------------:|----------------|
@@ -29,7 +29,7 @@ Använd informationen i följande tabell för att hitta dokumentation om den imp
 
 ## Ytterligare dokumentation {#additional-documentation}
 
-Tabellen nedan innehåller dokumentation om Adobe-produkter som används med Streaming Media Analytics.
+Tabellen nedan visar dokumentation om Adobe-produkter som används med tillägget Streaming Media Collection.
 
 | Produkt | Dokumentation |
 |:-----------------------:|----------------|
