@@ -119,15 +119,15 @@ ht-degree: 12%
 + Spårning {#tracking}
    + [Översikt](use-cases/track-av-playback/track-core-overview.md)
    + Spåra direktuppspelning av media {#track-core}
-      + [Spåra kärnuppspelning på JavaScript 3.x](use-cases/track-av-playback/track-core/track-core-javascript/track-core-js3.md)
+      + [Spåra kärnuppspelning i JavaScript 3.x](use-cases/track-av-playback/track-core/track-core-javascript/track-core-js3.md)
       + [Spåra kärnuppspelning på Chromecast](use-cases/track-av-playback/track-core/track-core-chromecast.md)
       + [Spåra kärnuppspelning på Roku](use-cases/track-av-playback/track-core/track-core-roku.md)
    + Spåra buffring {#track-buffering}
-      + [Track Buffering på JavaScript 3.x](use-cases/track-av-playback/track-buffering/track-buffering-js/track-buffering-js3.md)
+      + [Track Buffering on JavaScript 3.x](use-cases/track-av-playback/track-buffering/track-buffering-js/track-buffering-js3.md)
       + [Track Buffering on Chromecast](use-cases/track-av-playback/track-buffering/track-buffering-chromecast.md)
       + [Track Buffering på Roku](use-cases/track-av-playback/track-buffering/track-buffering-roku.md)
    + Spåra sökning {#track-seeking}
-      + [Spåra sökning på JavaScript 3.x](use-cases/track-av-playback/track-seeking/track-seeking-js/track-seeking-js3.md)
+      + [Spåra sökning i JavaScript 3.x](use-cases/track-av-playback/track-seeking/track-seeking-js/track-seeking-js3.md)
       + [Spåra sökning på Chromecast](use-cases/track-av-playback/track-seeking/track-seeking-chromecast.md)
       + [Spåra sökning på Roku](use-cases/track-av-playback/track-seeking/track-seeking-roku.md)
    + Implementera standardmetadata {#impl-std-metadata}
@@ -142,7 +142,7 @@ ht-degree: 12%
       + [Spåra annonser på Chromecast](use-cases/track-ads/track-ads-chromecast.md)
       + [Spåra annonser på Roku](use-cases/track-ads/track-ads-roku.md)
       + Implementera standardmetadata för annonser {#impl-std-ad-metadata}
-         + [Lägg in standardmetadata i JavaScript 3.x](use-cases/track-ads/impl-std-ad-metadata/impl-std-ad-md-js/impl-std-ad-metadata-js3.md)
+         + [Implementera standard- och metadata i JavaScript 3.x](use-cases/track-ads/impl-std-ad-metadata/impl-std-ad-md-js/impl-std-ad-metadata-js3.md)
          + [Implementera standardannonsmetadata på Roku](use-cases/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-roku.md)
    + Spåra kapitel och segment {#track-chapters}
       + [Översikt](use-cases/track-chapters/track-chapters-overview.md)
@@ -151,7 +151,7 @@ ht-degree: 12%
       + [Spåra kapitel och segment på Roku](use-cases/track-chapters/track-chapters-roku.md)
    + Spåra upplevelsekvalitet {#track-qos}
       + [Översikt](use-cases/track-qos/track-qos-overview.md)
-      + [Spåra upplevelsekvalitet på JavaScript 3.x](use-cases/track-qos/track-qos-js/track-qos-js3.md)
+      + [Spåra upplevelsekvalitet i JavaScript 3.x](use-cases/track-qos/track-qos-js/track-qos-js3.md)
       + [Spåra upplevelsekvalitet på Chromecast](use-cases/track-qos/track-qos-chromecast.md)
       + [Spåra upplevelsekvalitet på Roku](use-cases/track-qos/track-qos-roku.md)
    + Spåra fel {#track-errors}
@@ -196,15 +196,15 @@ ht-degree: 12%
       + [Spåra kärnuppspelning på Android](use-cases/track-av-playback/track-core/track-core-android.md)
       + [Spåra kärnuppspelning på iOS](use-cases/track-av-playback/track-core/track-core-ios.md)
       + Spåra grundläggande uppspelning i JavaScript {#track-core-javascript}
-         + [Spåra kärnuppspelning på JavaScript 2.x](use-cases/track-av-playback/track-core/track-core-javascript/track-core-js.md)
+         + [Spåra kärnuppspelning i JavaScript 2.x](use-cases/track-av-playback/track-core/track-core-javascript/track-core-js.md)
          + [Track Buffering på Android](use-cases/track-av-playback/track-buffering/track-buffering-android.md)
          + [Track Buffering på iOS](use-cases/track-av-playback/track-buffering/track-buffering-ios.md)
          + Spåra buffring i JavaScript {#track-buffering-js}
-            + [Track Buffering på JavaScript 2.x](use-cases/track-av-playback/track-buffering/track-buffering-js/track-buffering-js.md)
+            + [Track Buffering on JavaScript 2.x](use-cases/track-av-playback/track-buffering/track-buffering-js/track-buffering-js.md)
          + [Spåra sökning på Android](use-cases/track-av-playback/track-seeking/track-seeking-android.md)
          + [Spåra sökning på iOS](use-cases/track-av-playback/track-seeking/track-seeking-ios.md)
          + Spåra sökning i JavaScript {#track-seeking-js}
-            + [Spåra sökning på JavaScript 2.x](use-cases/track-av-playback/track-seeking/track-seeking-js/track-seeking-js.md)
+            + [Spåra sökning i JavaScript 2.x](use-cases/track-av-playback/track-seeking/track-seeking-js/track-seeking-js.md)
          + [Implementera standardmetadata på Android](use-cases/track-av-playback/impl-std-metadata/impl-std-metadata-android.md)
          + [Implementera standardmetadata på iOS](use-cases/track-av-playback/impl-std-metadata/impl-std-metadata-ios.md)
          + [iOS-metadatanycklar](use-cases/track-av-playback/impl-std-metadata/ios-metadata-keys.md)
@@ -218,7 +218,7 @@ ht-degree: 12%
             + [Implementera standardannonsmetadata på Android](use-cases/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-android.md)
             + [Implementera standardannonsmetadata på iOS](use-cases/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-ios.md)
             + Implementera standardmetadata för annonser i JavaScript {#impl-std-ad-md-js}
-               + [Lägg in standardmetadata i JavaScript 2.x](use-cases/track-ads/impl-std-ad-metadata/impl-std-ad-md-js/impl-std-ad-metadata-js.md)
+               + [Implementera standardannonsmetadata i JavaScript 2.x](use-cases/track-ads/impl-std-ad-metadata/impl-std-ad-md-js/impl-std-ad-metadata-js.md)
       + Spåra kapitel och segment {#track-chapters}
          + [Spåra kapitel och segment på Android](use-cases/track-chapters/track-chapters-android.md)
          + [Spåra kapitel och segment på iOS](use-cases/track-chapters/track-chapters-ios.md)
@@ -227,7 +227,7 @@ ht-degree: 12%
          + [Spåra upplevelsekvalitet på Android](use-cases/track-qos/track-qos-android.md)
          + [Spåra upplevelsekvalitet på iOS](use-cases/track-qos/track-qos-ios.md)
          + Spåra upplevelsekvalitet i JavaScript {#track-qos-js}
-            + [Spåra upplevelsekvalitet på JavaScript 2.x](use-cases/track-qos/track-qos-js/track-qos-js.md)
+            + [Spåra upplevelsekvalitet i JavaScript 2.x](use-cases/track-qos/track-qos-js/track-qos-js.md)
       + Spåra fel {#track-errors}
          + [Spåra fel i Android](use-cases/track-errors/track-errors-android.md)
          + [Spåra fel i iOS](use-cases/track-errors/track-errors-ios.md)
