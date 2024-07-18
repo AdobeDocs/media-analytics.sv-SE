@@ -1,5 +1,5 @@
 ---
-title: Validera en händelsebegäran
+title: Validerar händelsebegäranden
 description: Lär dig hur du använder JSON-valideringsschemat för att validera händelsebegäranden.
 uuid: 1fc92f21-b510-4c96-8ea2-47e819f4a96e
 exl-id: a78739da-9fc9-42e3-9181-1887fb3dd357
@@ -8,17 +8,17 @@ role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
 workflow-type: tm+mt
 source-wordcount: '121'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
 # Validerar händelsebegäranden{#validating-event-requests}
 
-JSON-begärandetexten för varje händelsetyp valideras på serverdelen med JSON-scheman. HTTP-svarstexten fylls i med ett felmeddelande när valideringen misslyckas för ett API-anrop.
+JSON-begärandetexten för varje händelsetyp valideras på serverdelen med JSON-scheman. HTTP-svarstexten innehåller ett felmeddelande när valideringen misslyckas för ett API-anrop.
 
-JSON-valideringsscheman för varje händelsetyp är allmänt tillgängliga här: `{uri}/api/v1/schemas/{eventType}` (t.ex. `{uri}/api/v1/schemas/sessionEnd`). Dessa JSON-valideringsscheman är den absoluta auktoriteten för att fastställa korrekta parametrar för begärande för varje typ av händelse.
+JSON-valideringsscheman för varje händelsetyp är offentligt tillgängliga här: `{uri}/api/v1/schemas/{eventType}` (t.ex. `{uri}/api/v1/schemas/sessionEnd`). Dessa JSON-valideringsscheman är den absoluta auktoriteten för att fastställa korrekta parametrar för begärande för varje typ av händelse.
 
-Till exempel svaret på en begäran om `sessionStart` valideringsschemat ser ut ungefär som det här exemplet (något formaterat för läsbarhet här):
+Svaret på en begäran om valideringsschemat `sessionStart` ser till exempel ut ungefär som det här exemplet (något formaterat för läsbarhet här):
 
 ```
 HTTP/1.1 200 OK

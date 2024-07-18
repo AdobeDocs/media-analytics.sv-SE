@@ -19,7 +19,7 @@ Följande bild visar hur tillägget Adobe Streaming Media Collection kan impleme
 
 ![CJA-arbetsflöde](assets/streaming-media-edge.png)
 
-En översikt över alla implementeringsalternativ, inklusive implementeringsmetoder som inte använder Experience Platform Edge, finns i [Implementera tillägget Direktuppspelning av mediasamling](/help/implementation/overview.md).
+En översikt över alla implementeringsalternativ, inklusive implementeringsmetoder som inte använder Experience Platform Edge, finns i [Implementera tillägget för direktuppspelad mediasamling](/help/implementation/overview.md).
 
 Oavsett om du använder Adobe Experience Platform Web SDK, Adobe Experience Platform Mobile SDK, Adobe Experience Platform Roku SDK eller API för att implementera Streaming Media Collection Add-on med Experience Edge måste du först slutföra följande avsnitt:
 
@@ -29,9 +29,9 @@ För att standardisera datainsamlingen för användning i olika program som utny
 
 Så här skapar och konfigurerar du ett schema:
 
-1. Börja skapa schemat enligt beskrivningen i Adobe Experience Platform [Skapa och redigera scheman i användargränssnittet](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html?lang=en).
+1. Börja skapa schemat enligt beskrivningen i [Skapa och redigera scheman i användargränssnittet](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html?lang=en) i Adobe Experience Platform.
 
-1. På sidan Schemainformation när du skapar schemat väljer du [!UICONTROL **Experience Event**] när du väljer basklass för schemat.
+1. Välj [!UICONTROL **Experience Event**] när du väljer basklass för schemat på sidan Schemainformation när du skapar schemat.
 
    ![Tillagda fältgrupper](assets/schema-experience-event.png)
 
@@ -39,125 +39,125 @@ Så här skapar och konfigurerar du ett schema:
 
 1. Ange ett visningsnamn och en beskrivning för schemat och välj sedan [!UICONTROL **Slutför**].
 
-1. I [!UICONTROL **Disposition**] området, i [!UICONTROL **Fältgrupper**] avsnitt, markera [!UICONTROL **Lägg till**] söker du efter och lägger till följande nya fältgrupper i schemat:
+1. I området [!UICONTROL **Disposition**] väljer du [!UICONTROL **Lägg till**] i avsnittet [!UICONTROL **Fältgrupper**] och sedan söker du efter och lägger till följande nya fältgrupper i schemat:
    * `Adobe Analytics ExperienceEvent Template`
    * `Implementation Details`
    * `MediaAnalytics Interaction Details`
 
-   När du har lagt till fältgrupperna bör de visas i [!UICONTROL **Fältgrupper**] enligt följande:
+   När du har lagt till fältgrupperna bör de visas i avsnittet [!UICONTROL **Fältgrupper**] enligt följande:
 
    ![Tillagda fältgrupper](assets/schema-field-groups-added.png)
 
-1. Välj [!UICONTROL **Spara**] för att spara ändringarna.
+1. Välj [!UICONTROL **Spara**] om du vill spara ändringarna.
 
-1. (Valfritt) Du kan dölja vissa fält som inte används av API:t för Media Edge. Om du döljer dessa fält blir schemat enklare att läsa och förstå, men det är inte nödvändigt. Dessa fält refererar endast till fälten i `MediaAnalytics Interaction Details` fältgrupp.
+1. (Valfritt) Du kan dölja vissa fält som inte används av API:t för Media Edge. Om du döljer dessa fält blir schemat enklare att läsa och förstå, men det är inte nödvändigt. Dessa fält refererar endast till fälten i fältgruppen `MediaAnalytics Interaction Details`.
 
 +++ Expandera här om du vill visa instruktioner för fält som du kan dölja.
 
-   1. I [!UICONTROL **Struktur**] markerar du `Media Collection Details` fält och sedan markera [!UICONTROL **Hantera relaterade fält**].
+   1. Markera fältet `Media Collection Details` i området [!UICONTROL **Struktur**] och välj sedan [!UICONTROL **Hantera relaterade fält**].
 
       ![manage-related-fields](assets/manage-related-fields.png)
 
-   1. Aktivera alternativet att [!UICONTROL **Visa visningsnamn för fält**] uppdaterar du sedan schemat enligt följande:
+   1. Aktivera alternativet [!UICONTROL **Visa visningsnamn för fält**] och uppdatera sedan schemat enligt följande:
 
-      * I `Media Collection Details` > `Advertising Details` fält, dölj följande rapporteringsfält: `Ad Completed`, `Ad Started`och `Ad Time Played`.
+      * I fältet `Media Collection Details` > `Advertising Details` döljer du följande rapporteringsfält: `Ad Completed`, `Ad Started` och `Ad Time Played`.
 
-      * I `Media Collection Details` > `Advertising Pod Details` fält, dölj följande rapporteringsfält: `Ad Break ID`
+      * I fältet `Media Collection Details` > `Advertising Pod Details` döljer du följande rapporteringsfält: `Ad Break ID`
 
-      * I `Media Collection Details` > `Chapter Details` fält, dölj följande rapporteringsfält: `Chapter Completed`, `Chapter ID`, `Chapter Started`och `Chapter Time Played`.
+      * I fältet `Media Collection Details` > `Chapter Details` döljer du följande rapporteringsfält: `Chapter Completed`, `Chapter ID`, `Chapter Started` och `Chapter Time Played`.
 
-      * I `Media Collection Details` fält, dölj `List Of States` fält.
+      * Dölj fältet `List Of States` i fältet `Media Collection Details`.
 
-        ![dölj mediesamlingslägen](assets/schema-hide-media-collection-states.png)
+        ![dölj mediesamlingens lägen](assets/schema-hide-media-collection-states.png)
 
-      * I `Media Collection Details` > `List Of States End` och `Media Collection Details` > `List Of States Start` fält, dölj följande rapporteringsfält: `Player State Count`, `Player State Set`och `Player State Time`.
+      * I fältet `Media Collection Details` > `List Of States End` och `Media Collection Details` > `List Of States Start` döljer du följande rapporteringsfält: `Player State Count`, `Player State Set` och `Player State Time`.
 
         ![fält att dölja](assets/schema-hide-listofstates.png)
 
-      * I `Media Collection Details` > `Qoe Data Details` fält, dölj följande rapporteringsfält: `Average Bitrate`, `Average Bitrate Bucket`, `Bitrate Change Impacted Streams`, `Bitrate Changes`, `Buffer Impacted Streams`, `Buffer Events`, `Dropped Frame Impacted Streams`, `Drops Before Starts`, `Errors`, `External Error IDs`, `Error Impacted Streams`, `Media SDK Error IDs`, `Player SDK Error IDs`, `Stalling Impacted Streams`, `Stalling Events`, `Total Buffer Duration`och `Total Stalling Duration`.
+      * I fältet `Media Collection Details` > `Qoe Data Details` döljer du följande rapporteringsfält: `Average Bitrate`, `Average Bitrate Bucket`, `Bitrate Change Impacted Streams`, `Bitrate Changes`, `Buffer Impacted Streams`, `Buffer Events`, `Dropped Frame Impacted Streams`, `Drops Before Starts`, `Errors`, `External Error IDs`, `Error Impacted Streams`, `Media SDK Error IDs`, `Player SDK Error IDs`, `Stalling Impacted Streams`, `Stalling Events`, `Total Buffer Duration` och {1 `Total Stalling Duration`.
 
-      * I `Media Collection Details` > `Session Details` fält, dölj följande rapporteringsfält: `10% Progress Marker`, `25% Progress Marker`, `50% Progress Marker`, `75% Progress Marker`, `95% Progress Marker`, `Ad Count`, `Average Minute Audience`, `Content Completes`, `Chapter Count`, `Content Starts`, `Content Time Spent`, `Estimated Streams`, `Federated Data`, `Media Segment Views`, `Media Downloaded Flag`, `Media Starts`, `Media Session ID`, `Media Session Server Timeout`, `Media Time Spent`, `Pause Events`, `Pause Impacted Streams`, `Pev3`, `Pccr`, `Total Pause Duration`, `Unique Time Played`och `Video Segment`.
+      * I fältet `Media Collection Details` > `Session Details` döljer du följande rapporteringsfält: `10% Progress Marker`, `25% Progress Marker`, `50% Progress Marker`, `75% Progress Marker`, `95% Progress Marker`, `Ad Count`, `Average Minute Audience`, `Content Completes`, `Chapter Count`, `Content Starts`, `Content Time Spent`, `Estimated Streams`, `Federated Data`, `Media Segment Views`, `Media Downloaded Flag`, `Media Starts`, {11 , `Media Session Server Timeout`, `Media Time Spent`, `Media Session ID`, `Pause Events`, `Pause Impacted Streams`, , `Pev3`, `Pccr`, `Total Pause Duration`, `Unique Time Played` och `Video Segment` .
 
-   1. Välj [!UICONTROL **Bekräfta**] för att spara ändringarna.
+   1. Välj [!UICONTROL **Bekräfta**] om du vill spara ändringarna.
 
-   1. I [!UICONTROL **Struktur**] område, aktivera alternativet att [!UICONTROL **Visa visningsnamn för fält**] väljer du `List Of Media Collection Downloaded Content Events` fält.
+   1. Aktivera alternativet [!UICONTROL **Visa visningsnamn för fält**] i området [!UICONTROL **Struktur**] och markera sedan fältet `List Of Media Collection Downloaded Content Events`.
 
-   1. Välj [!UICONTROL **Hantera relaterade fält**] uppdaterar du sedan schemat enligt följande:
+   1. Välj [!UICONTROL **Hantera relaterade fält**] och uppdatera sedan schemat enligt följande:
 
 
-      * I `List Of Media Collection Downloaded Content Events` > `Media Details` > `Advertising Details` fält, dölj följande rapporteringsfält: `Ad Completed`, `Ad Started`och `Ad Time Played`.
+      * I fältet `List Of Media Collection Downloaded Content Events` > `Media Details` > `Advertising Details` döljer du följande rapporteringsfält: `Ad Completed`, `Ad Started` och `Ad Time Played`.
 
-      * I `List Of Media Collection Downloaded Content Events` > `Media Details` > `Advertising Pod Details` fält, dölj följande rapporteringsfält: `Ad Break ID`
+      * I fältet `List Of Media Collection Downloaded Content Events` > `Media Details` > `Advertising Pod Details` döljer du följande rapporteringsfält: `Ad Break ID`
 
-      * I `List Of Media Collection Downloaded Content Events` > `Media Details` > `Chapter Details` fält, dölj följande rapporteringsfält: `Chapter Completed`, `Chapter ID`, `Chapter Started`och `Chapter Time Played`.
+      * I fältet `List Of Media Collection Downloaded Content Events` > `Media Details` > `Chapter Details` döljer du följande rapporteringsfält: `Chapter Completed`, `Chapter ID`, `Chapter Started` och `Chapter Time Played`.
 
-      * I `List Of Media Collection Downloaded Content Events` > `Media Details` fält, dölj `List Of States` fält.
+      * Dölj fältet `List Of States` i fältet `List Of Media Collection Downloaded Content Events` > `Media Details`.
 
-      * I `List Of Media Collection Downloaded Content Events` > `Media Details` > `List Of States End` och `Media Collection Details` > `List Of States Start` fält, dölj följande rapporteringsfält: `Player State Count`, `Player State Set`och `Player State Time`.
+      * Dölj följande rapporteringsfält i fälten `List Of Media Collection Downloaded Content Events` > `Media Details` > `List Of States End` och `Media Collection Details` > `List Of States Start`: `Player State Count`, `Player State Set` och `Player State Time`.
 
-      * I `List Of Media Collection Downloaded Content Events` > `Media Details` > `Qoe Data Details` fält, dölj följande rapporteringsfält: `Average Bitrate`, `Average Bitrate Bucket`, `Bitrate Change Impacted Streams`, `Bitrate Changes`, `Buffer Events`, `Buffer Impacted Streams`, `Drops Before Starts`, `Dropped Frame Impacted Streams`, `Error Impacted Streams`, `Errors`, `External Error IDs`, `Media SDK Error IDs`, `Player SDK Error IDs`, `Stalling Events`, `Stalling Impacted Streams`, `Total Buffer Duration`och `Total Stalling Duration`.
+      * I fältet `List Of Media Collection Downloaded Content Events` > `Media Details` > `Qoe Data Details` döljer du följande rapporteringsfält: `Average Bitrate`, `Average Bitrate Bucket`, `Bitrate Change Impacted Streams`, `Bitrate Changes`, `Buffer Events`, `Buffer Impacted Streams`, `Drops Before Starts`, `Dropped Frame Impacted Streams`, `Error Impacted Streams`, `Errors`, `External Error IDs`, `Media SDK Error IDs`, `Player SDK Error IDs`, `Stalling Events`, `Stalling Impacted Streams`, {11 `Total Buffer Duration` och `Total Stalling Duration`.
 
-      * I `List Of Media Collection Downloaded Content Events` > `Media Details` > `Session Details` fält, dölj följande rapporteringsfält: `10% Progress Marker`, `25% Progress Marker`, `50% Progress Marker`, `75% Progress Marker`, `95% Progress Marker`, `Ad Count`, `Average Minute Audience`, `Chapter Count`, `Content Completes`, `Content Starts`, `Content Time Spent`, `Estimated Streams`, `Federated Data`, `Media Downloaded Flag`, `Media Segment Views`, `Media Session ID`, `Media Session Server Timeout`, `Media Starts`, `Media Time Spent`, `Pause Events`, `Pause Impacted Streams`, `Pccr`, `Pev3`, `Total Pause Duration`, `Unique Time Played`och `Video Segment`.
+      * I fältet `List Of Media Collection Downloaded Content Events` > `Media Details` > `Session Details` döljer du följande rapporteringsfält: `10% Progress Marker`, `25% Progress Marker`, `50% Progress Marker`, `75% Progress Marker`, `95% Progress Marker`, `Ad Count`, `Average Minute Audience`, `Chapter Count`, `Content Completes`, `Content Starts`, `Content Time Spent`, `Estimated Streams`, `Federated Data`, `Media Downloaded Flag`, `Media Segment Views`, {11 , `Media Session Server Timeout`, `Media Starts`, `Media Session ID`, `Media Time Spent`, `Pause Events`, , `Pause Impacted Streams`, `Pccr`, `Pev3`, `Total Pause Duration`, `Unique Time Played` och `Video Segment` .
 
-      * I `List Of Media Collection Downloaded Content Events` > `Media Details`  fält, dölj `Media Session ID` fält.
+      * Dölj fältet `Media Session ID` i fältet `List Of Media Collection Downloaded Content Events` > `Media Details`.
 
-   1. Välj [!UICONTROL **Bekräfta**] för att spara ändringarna.
+   1. Välj [!UICONTROL **Bekräfta**] om du vill spara ändringarna.
 
-   1. I [!UICONTROL **Struktur**] markerar du `Media Reporting Details` fält, markera [!UICONTROL **Hantera relaterade fält**].
+   1. Markera fältet `Media Reporting Details` i området [!UICONTROL **Struktur**] och välj [!UICONTROL **Hantera relaterade fält**].
 
-   1. Aktivera alternativet att [!UICONTROL **Visa visningsnamn för fält**] uppdaterar du sedan schemat enligt följande:
+   1. Aktivera alternativet [!UICONTROL **Visa visningsnamn för fält**] och uppdatera sedan schemat enligt följande:
 
-      * I `Media Reporting Details` fält, dölj följande fält: `Error Details`, `List Of States End`, `List of States Start`och `Media Session ID`.
+      * Dölj följande fält i fältet `Media Reporting Details`: `Error Details`, `List Of States End`, `List of States Start` och `Media Session ID`.
 
-   1. Välj [!UICONTROL **Bekräfta**] > [!UICONTROL **Spara**]  för att spara ändringarna.
+   1. Välj [!UICONTROL **Bekräfta**] > [!UICONTROL **Spara**] om du vill spara ändringarna.
 
 1. Fortsätt med [Skapa en datauppsättning i Adobe Experience Platform](#create-a-dataset-in-adobe-experience-platform).
 
 ## Skapa en datauppsättning i Adobe Experience Platform
 
-1. Se till att du konfigurerar ett schema enligt beskrivningen i [Konfigurera schemat i Adobe Experience Platform](#set-up-the-schema-in-adobe-experience-platform).
+1. Kontrollera att du har konfigurerat ett schema enligt beskrivningen i [Konfigurera schemat i Adobe Experience Platform](#set-up-the-schema-in-adobe-experience-platform).
 
-1. Börja skapa datauppsättningen enligt beskrivningen i Adobe Experience Platform [Användargränssnittshandbok för datauppsättningar](https://experienceleague.adobe.com/docs/experience-platform/catalog/datasets/user-guide.html?lang=en#create).
+1. Börja skapa datauppsättningen enligt beskrivningen i [Användargränssnittsguiden för datauppsättningar](https://experienceleague.adobe.com/docs/experience-platform/catalog/datasets/user-guide.html?lang=en#create) i Adobe Experience Platform.
 
    När du väljer ett schema för datauppsättningen väljer du det schema som du skapade tidigare, vilket beskrivs i [Konfigurera schemat i Adobe Experience Platform](#set-up-the-schema-in-adobe-experience-platform).
 
-1. Fortsätt med [Konfigurera ett datastream i Customer Journey Analytics](#configure-a-datastream-in-adobe-experience-platform).
+1. Fortsätt med [Konfigurera en datastam i Customer Journey Analytics](#configure-a-datastream-in-adobe-experience-platform).
 
 ## Konfigurera ett datastream i Adobe Experience Platform
 
-1. Se till att du har skapat en datauppsättning enligt beskrivningen i [Skapa en datauppsättning i Adobe Experience Platform](#create-a-dataset-in-adobe-experience-platform).
+1. Kontrollera att du har skapat en datauppsättning enligt beskrivningen i [Skapa en datauppsättning i Adobe Experience Platform](#create-a-dataset-in-adobe-experience-platform).
 
-1. Skapa ett nytt datastream enligt beskrivningen i [Konfigurera ett datastream](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html?lang=en).
+1. Skapa en ny datastream enligt beskrivningen i [Konfigurera en datastream](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html?lang=en).
 
    När du skapar dataströmmen måste du göra följande konfigurationsval:
 
-   * I [!UICONTROL **Händelseschema**] när du skapar datastream måste du välja det schema som du skapade i [Konfigurera schemat i Adobe Experience Platform](#set-up-the-schema-in-adobe-experience-platform). Välj [!UICONTROL **Spara**].
+   * I fältet [!UICONTROL **Händelseschema**] när du skapar dataströmmen måste du markera schemat som du skapade i [Konfigurera schemat i Adobe Experience Platform](#set-up-the-schema-in-adobe-experience-platform). Välj [!UICONTROL **Spara**].
 
      >[!IMPORTANT]
      >
-         > Markera inte [!UICONTROL **Save and Add Mapping**] därför att detta resulterar i mappningsfel för tidsstämpelfältet.
+         >     Välj inte [!UICONTROL **Save and Add Mapping**] eftersom det leder till mappningsfel för tidsstämpelfältet.
      
-     ![Skapa datastream och välj schema](assets/datastream-create-schema.png)
+     ![Skapa dataström och välj schema](assets/datastream-create-schema.png)
 
    * Lägg till någon av följande tjänster i datastream, beroende på om du använder Adobe Analytics eller Customer Journey Analytics:
 
       * [!UICONTROL **Adobe Analytics**] (om Adobe Analytics används)
 
-        Om du använder Adobe Analytics måste du definiera en rapportsserie enligt beskrivningen i [Skapa en rapportsvit](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite).
+        Om du använder Adobe Analytics måste du definiera en rapportsserie, enligt beskrivningen i [Skapa en rapportsvit](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite).
 
       * [!UICONTROL **Adobe Experience Platform**] (om Customer Journey Analytics används)
 
      Mer information om hur du lägger till en tjänst i ett datastream finns i avsnittet&quot;Lägg till tjänster i ett datastream&quot; i [Konfigurera ett datastream](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html?lang=en#view-details).
 
-     ![Lägg till tjänsten Adobe Analytics](assets/datastream-add-service.png)
+     ![Lägg till Adobe Analytics-tjänsten](assets/datastream-add-service.png)
 
-   * Expandera [!UICONTROL **Avancerade alternativ**] och sedan aktivera [!UICONTROL **Medieanalys**] alternativ.
+   * Expandera [!UICONTROL **Avancerade alternativ**] och aktivera sedan alternativet [!UICONTROL **Medieanalys**].
 
-     ![Media Analytics, alternativ](assets/datastream-media-check.png)
+     ![Medieanalysalternativ](assets/datastream-media-check.png)
 
-1. Nu kan du implementera [Media Edge API](/help/implementation/edge/implementation-edge-api.md) eller [Media Edge SDK](/help/implementation/edge/edge-mobile-sdk.md) för att börja samla in data från medieanalyser.
+1. Du är nu redo att implementera [Media Edge API](/help/implementation/edge/implementation-edge-api.md) eller [Media Edge SDK](/help/implementation/edge/edge-mobile-sdk.md) för att börja samla in medieanalysdata.
 
-   När du har samlat in data kan du [Skapa en anslutning i Customer Journey Analytics](#create-a-connection-in-customer-journey-analytics).
+   När du har samlat in data kan du [skapa en anslutning i Customer Journey Analytics](#create-a-connection-in-customer-journey-analytics).
 
 ## Skapa en anslutning i Customer Journey Analytics
 
@@ -166,15 +166,15 @@ Så här skapar och konfigurerar du ett schema:
 >Följande procedur krävs bara om du använder Customer Journey Analytics.
 
 
-1. Se till att du har skapat en datastream enligt beskrivningen i [Konfigurera ett datastream i Customer Journey Analytics](#configure-a-datastream-in-adobe-experience-platform).
+1. Kontrollera att du har skapat en datastream enligt beskrivningen i [Konfigurera en datastream i Customer Journey Analytics](#configure-a-datastream-in-adobe-experience-platform).
 
-1. Skapa en anslutning enligt beskrivningen i Customer Journey Analytics [Skapa en anslutning](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-connections/create-connection.html?lang=en).
+1. I Customer Journey Analytics skapar du en anslutning enligt beskrivningen i [Skapa en anslutning](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-connections/create-connection.html?lang=en).
 
    När du skapar anslutningen krävs följande konfigurationsalternativ för att implementera tillägget för direktuppspelad mediasamling:
 
-   1. Välj den datauppsättning som du skapade tidigare, enligt beskrivningen i [Skapa en datauppsättning i Adobe Experience Platform](#create-a-dataset-in-adobe-experience-platform).
+   1. Markera den datauppsättning som du skapade tidigare, enligt beskrivningen i [Skapa en datauppsättning i Adobe Experience Platform](#create-a-dataset-in-adobe-experience-platform).
 
-   1. Se till att [!UICONTROL **Importera alla nya data**] inställningen är aktiverad.
+   1. Kontrollera att inställningen [!UICONTROL **Importera alla nya data**] är aktiverad.
 
 1. Fortsätt med [Skapa en datavy i Customer Journey Analytics](#create-a-new-data-view-in-customer-journey-analytics).
 
@@ -184,17 +184,17 @@ Så här skapar och konfigurerar du ett schema:
 >
 >Följande procedur krävs bara om du använder Customer Journey Analytics.
 
-1. Se till att du har skapat en anslutning i Customer Journey Analytics enligt beskrivningen i [Skapa en anslutning i Customer Journey Analytics](#create-a-connection-in-customer-journey-analytics).
+1. Kontrollera att du har skapat en anslutning i Customer Journey Analytics enligt beskrivningen i [Skapa en anslutning i Customer Journey Analytics](#create-a-connection-in-customer-journey-analytics).
 
-1. Skapa en datavy enligt beskrivningen i [Skapa eller redigera en datavy](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/create-dataview.html?lang=en).
+1. Skapa en datavy enligt beskrivningen i [Skapa eller redigera en datavy](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/create-dataview.html?lang=en) i kundreseanalyser.
 
    När du skapar datavyn krävs följande konfigurationsalternativ för att implementera tillägget för direktuppspelad mediasamling:
 
-   1. I [!UICONTROL **Anslutning**] markerar du anslutningen som du skapade tidigare, enligt beskrivningen i [Skapa en anslutning i Customer Journey Analytics](#create-a-connection-in-customer-journey-analytics).
+   1. I fältet [!UICONTROL **Anslutning**] markerar du anslutningen som du skapade tidigare, enligt beskrivningen i [Skapa en anslutning i Customer Journey Analytics](#create-a-connection-in-customer-journey-analytics).
 
       Det kan ta upp till 15 minuter innan anslutningen som du skapade är tillgänglig att välja.
 
-   1. På [!UICONTROL **Komponenter**] -fliken, i [!UICONTROL **Schemafält**] söker du efter varje komponent i tabellen nedan och drar den till [!UICONTROL **Mått**] -panelen. Om det finns flera fält med samma namn använder du XDM-sökvägen för att se till att det är rätt fält.
+   1. I avsnittet [!UICONTROL **Schemafält**] på fliken [!UICONTROL **Komponenter**] söker du efter varje komponent i tabellerna nedan och drar den till panelen [!UICONTROL **Metrisk**]. Om det finns flera fält med samma namn använder du XDM-sökvägen för att se till att det är rätt fält.
 
       **Huvudinnehåll - Innehållsmått**
 
@@ -211,7 +211,7 @@ Så här skapar och konfigurerar du ett schema:
       | Genomsnittlig målgrupp i minuter | mediaReporting.sessionDetails.averageMinuteAudience |
 
 
-      **Kapitel och annonser - versaler och annonser**
+      **Kapitel och annonser - statistik för kapitel och annonser**
 
       | Komponentnamn | XDM-sökväg |
       |----------|---------|
@@ -248,7 +248,7 @@ Så här skapar och konfigurerar du ett schema:
       | Spelarlägestid | mediaReporting.states.time |
 
 
-   1. Uppdatera etiketterna (i [!UICONTROL **Sammanhangsetiketter**] (nedrullningsbar meny) för komponenterna i följande tabell. Sök efter och dra komponenter som inte redan finns på mätpanelen till panelen.
+   1. Uppdatera etiketterna (i listrutan [!UICONTROL **Kontextetiketter**]) för komponenterna i följande tabell. Sök efter och dra komponenter som inte redan finns på mätpanelen till panelen.
 
       | Komponentnamn | Kontextetikett |
       |---------|----------|
@@ -258,7 +258,7 @@ Så här skapar och konfigurerar du ett schema:
       | Tid att starta | Media: Tid att starta |
       | Total pausvaraktighet | Media: Total paus |
 
-   1. Om du vill lägga till uppdelningar i ditt Customer Journey Analytics-projekt lägger du till följande dimensioner i [!UICONTROL **Dimensioner**] panel:
+   1. Om du vill lägga till uppdelningar i ditt Customer Journey Analytics-projekt lägger du till följande dimensioner på panelen [!UICONTROL **Dimensioner**]:
 
       | XDM-sökväg | Komponentnamn |
       |---------|----------|
@@ -275,7 +275,7 @@ Så här skapar och konfigurerar du ett schema:
 
 1. Se till att du har skapat en datavy i Customer Journey Analytics enligt beskrivningen i [Skapa en datavy i Customer Journey Analytics](#create-a-new-data-view-in-customer-journey-analytics).
 
-1. I Customer Journey Analytics, på [!UICONTROL **Workspace**] -fliken, i [!UICONTROL **Projekt**] område, markera [!UICONTROL **Skapa projekt**].
+1. I Customer Journey Analytics på fliken [!UICONTROL **Workspace**] i området [!UICONTROL **Projekt**] väljer du [!UICONTROL **Skapa projekt**].
 
 1. Välj [!UICONTROL **Tomt projekt**] > [!UICONTROL **Skapa**].
 
@@ -293,13 +293,13 @@ Så här skapar och konfigurerar du ett schema:
 
    ![Panelen Plattform](assets/player-state-panel.png)
 
-1. Välj **Panel** ikonen i den vänstra listen och dra sedan i [!UICONTROL **Medievisningsprogram för samtidig användning**] och [!UICONTROL **Medieuppspelningstid**] -panelen.
+1. Markera ikonen **Paneler** i den vänstra listen och dra sedan i panelen [!UICONTROL **Medievisningsprogram**] och panelen [!UICONTROL **Medieuppspelningstid**] .
 
    De två panelerna ska se ut så här:
 
    ![Panelen Medievisningsprogram för samtidig användning](assets/media-concurrent-viewers-panels.png)
 
-   ![Medieuppspelningstid som använts på panelen](assets/media-playback-time-spent-panels.png)
+   ![Medieuppspelningstid för panel](assets/media-playback-time-spent-panels.png)
 
 1. Dela projektet enligt beskrivningen i [Dela projekt](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/curate-share/share-projects.html?lang=en).
 
@@ -319,7 +319,7 @@ Beroende på vilken typ av data du vill skicka till Experience Platform Edge kan
 
 * [Skicka webbdata till Edge med Adobe Experience Platform Web SDK](/help/implementation/edge/edge-web-sdk.md)
 
-* [Migrera till Adobe Streaming Media för Edge Network-tillägg](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/migration-guide/)
+* [Migrera till direktuppspelningsmedia för Adobe för tillägget Edge Network](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/migration-guide/)
 
 ### Mobil: Använd Adobe Experience Platform Mobile SDK
 
@@ -329,7 +329,7 @@ Använd följande dokumentationsresurser för att slutföra implementeringen av 
 
 * [API-referens](https://developer.adobe.com/client-sdks/documentation/media-for-edge-network/api-reference/)
 
-* [Migrera till Adobe Streaming Media för Edge Network-tillägg](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/migration-guide/)
+* [Migrera till direktuppspelningsmedia för Adobe för tillägget Edge Network](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/migration-guide/)
 
 ### Roku: Adobe Experience Platform Roku SDK
 
@@ -337,7 +337,7 @@ Använd följande dokumentationsresurser för att slutföra implementeringen av 
 
 * [Adobe Experience Platform Roku SDK](https://github.com/adobe/aepsdk-roku/tree/main)
 
-* [Migrera till Adobe Streaming Media för Edge Network-tillägg](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/migration-guide/) <!-- is the information here also applicable for Roku? -->
+* [Migrera till direktuppspelningsmedia för Adobe för tillägget Edge Network](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/migration-guide/) <!-- is the information here also applicable for Roku? -->
 
 ### API: webb och andra
 
@@ -347,10 +347,10 @@ API:t är också tillgängligt om du vill använda en anpassad implementering av
 
 Mer information om mediet-API:t för Edge finns i följande resurser:
 
-* [Översikt över Edge API](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/overview.html)
+* [Översikt över Edge-API för media](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/overview.html)
 
-* [Komma igång med Edge API](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/getting-started.html)
+* [Komma igång med Edge-API för media](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/getting-started.html)
 
-* [Felsökningsguide för Media Edge API](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/troubleshooting.html)
+* [Felsökningsguide för Edge-API:t för media](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/troubleshooting.html)
 
 * [Använda Open API-specifikationsfilen för Media Edge API:er](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/swagger.html)

@@ -7,8 +7,8 @@ feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
 workflow-type: tm+mt
-source-wordcount: '295'
-ht-degree: 3%
+source-wordcount: '298'
+ht-degree: 1%
 
 ---
 
@@ -32,9 +32,9 @@ Följande anvisningar ger vägledning vid implementering med SDK:er för 2.x.
 
 ## Implementeringssteg
 
-1. Identifiera när annonsbrytningens gränser börjar, inklusive pre-roll, och skapa en `AdBreakObject` genom att använda annonsbrytningsinformationen.
+1. Identifiera när annonsbrytningsgränsen börjar, inklusive pre-roll, och skapa en `AdBreakObject` med hjälp av annonsbrytningsinformationen.
 
-   `AdBreakObject` referens:
+   `AdBreakObject`-referens:
 
    | Variabelnamn | Beskrivning | Obligatoriskt |
    | --- | --- | :---: |
@@ -50,14 +50,14 @@ Följande anvisningar ger vägledning vid implementering med SDK:er för 2.x.
    adBreakInfo.position = <POSITION>
    ```
 
-1. Utlysning `trackEvent()` med `AdBreakStart` i `MediaHeartbeat` -instans för att börja spåra annonsbrytningen:
+1. Anropa `trackEvent()` med `AdBreakStart` i `MediaHeartbeat`-instansen för att börja spåra annonsbrytningen:
 
    ```
    contextData = {}
    ADBMobile().mediaTrackEvent(MEDIA_AD_BREAK_START, adBreakInfo, contextData)
    ```
 
-1. Identifiera när annonsresursen börjar och skapa en `AdObject` -instans med annonsinformationen.
+1. Identifiera när annonsresursen startar och skapa en `AdObject`-instans med annonsinformationen.
 
    ```
    adInfo =  
@@ -69,22 +69,22 @@ Följande anvisningar ger vägledning vid implementering med SDK:er för 2.x.
 
 1. Du kan också bifoga standard- och/eller annonsmetadata till mediespårningssessionen via kontextdatavariabler.
 
-   * [Implementera standardmetadata för annonser i Roku](/help/use-cases/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-roku.md)
-   * **Anpassade annonsmetadata -** För anpassade metadata skapar du ett variabelobjekt för de anpassade datavariablerna och fyller i med data för den aktuella annonsresursen:
+   * [Implementera standardannonsmetadata på Roku](/help/use-cases/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-roku.md)
+   * **Anpassade annonseringsmetadata -** För anpassade metadata skapar du ett variabelobjekt för anpassade datavariabler och fyller i med data för den aktuella annonsobjektet:
 
-      ```
-      contextData = {}
-      contextData["adinfo1"] = "adinfo2"
-      contextData["adinfo2"] = "adinfo2"
-      ```
+     ```
+     contextData = {}
+     contextData["adinfo1"] = "adinfo2"
+     contextData["adinfo2"] = "adinfo2"
+     ```
 
-1. Utlysning `trackEvent()` med `AdStart` i `MediaHeartbeat` -instans för att börja spåra annonsuppspelningen:
+1. Anropa `trackEvent()` med händelsen `AdStart` i instansen `MediaHeartbeat` för att börja spåra annonsuppspelningen:
 
    ```
    ADBMobile().mediaTrackEvent(ADBMobile().MEDIA_AD_START, adInfo, contextData)
    ```
 
-1. När annonsuppspelningen når slutet av annonsen ringer du `trackEvent()` med `AdComplete` -händelse.
+1. När annonsobjektsuppspelningen når slutet av annonsen anropar du `trackEvent()` med händelsen `AdComplete`.
 
    ```
    standardAdMetadata = {}
@@ -92,19 +92,19 @@ Följande anvisningar ger vägledning vid implementering med SDK:er för 2.x.
    ADBMobile().mediaTrackEvent(ADBMobile().MEDIA_AD_COMPLETE, adInfo, contextData)
    ```
 
-1. Om annonsuppspelningen inte slutfördes eftersom användaren valde att hoppa över annonsen, ska du spåra `AdSkip` händelse:
+1. Om annonsuppspelningen inte slutfördes eftersom användaren valde att hoppa över annonsen, ska du spåra `AdSkip`-händelsen:
 
    ```
    contextData = {}
    ADBMobile().mediaTrackEvent(ADBMobile().MEDIA_AD_SKIP, adInfo, contextData
    ```
 
-1. Om det finns ytterligare annonser inom samma `AdBreak`, upprepa steg 3 till 7 igen.
-1. När annonsbrytningen är klar använder du `AdBreakComplete` händelse att spåra:
+1. Om det finns ytterligare annonser i samma `AdBreak` upprepar du steg 3 till 7 igen.
+1. När annonsbrytningen är klar använder du händelsen `AdBreakComplete` för att spåra:
 
    ```
    contextData = {}
    ADBMobile().mediaTrackEvent(MEDIA_AD_BREAK_COMPLETE, adBreakInfo, contextData)
    ```
 
-Se spårningsscenariot [VOD-uppspelning med pre-roll-annonser](/help/use-cases/tracking-scenarios/vod-preroll-ads.md) för mer information.
+Mer information finns i spårningsscenariot [VOD-uppspelning med pre-roll-annonser](/help/use-cases/tracking-scenarios/vod-preroll-ads.md).

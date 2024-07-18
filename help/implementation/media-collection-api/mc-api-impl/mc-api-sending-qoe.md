@@ -8,14 +8,14 @@ role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
 workflow-type: tm+mt
 source-wordcount: '55'
-ht-degree: 5%
+ht-degree: 0%
 
 ---
 
 # Skicka QoE-data{#sending-qoe-data}
 
-Alla händelser kan dekoreras med en extra JSON-nyckel som kallas `qoeData`, som placeras bredvid `params` i JSON-begärandetexten.
+Alla händelser kan dekoreras med en extra JSON-nyckel som heter `qoeData`, som placeras bredvid `params`-nyckeln i JSON-begärandetexten.
 
 >[!NOTE]
 >
->Du bör kontrollera [JSON-valideringsscheman](mc-api-validate-reqs.md) för att kontrollera parametertyper och om de är obligatoriska eller valfria.
+>Du bör kontrollera [JSON-valideringsscheman](mc-api-validate-reqs.md) för att verifiera parametertyper och om de är obligatoriska eller valfria.

@@ -13,7 +13,7 @@ ht-degree: 6%
 
 # Versionsinformation om tillägget Streaming Media Collection (maj 2023)
 
-**Senaste uppdatering**: 29 maj 2024
+**Senast uppdaterad**: 29 maj 2024
 
 ## Relaterade resurser
 
@@ -21,7 +21,7 @@ Mer information om nya funktioner, korrigeringar och viktig information för adm
 
 * [Versionsinformation för Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/release-notes/latest.html?lang=en)
 * [Versionsinformation för Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/releases/latest.html)
-* Den senaste releaseuppdateringen för [Adobe Experience Cloud](https://business.adobe.com/products/adobe-experience-cloud-products.html)
+* Den senaste releaseuppdateringen för [Adobe Experience Cloud-produkter](https://business.adobe.com/products/adobe-experience-cloud-products.html)
 
 * [Adobe Analytics självstudiekurser](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/overview.html?lang=en)
 
@@ -31,8 +31,8 @@ Mer information om nya funktioner, korrigeringar och viktig information för adm
 
 | Funktion | Beskrivning | Måldatum |
 | ----------- | ---------- | ------- |
-| Skicka webbdata till Adobe Experience Platform Edge Network med Web SDK | Nu kan du [använda Adobe Experience Platform Web SDK för att skicka webbdata för direktuppspelande media till Adobe Experience Platform Edge Network](/help/implementation/edge/edge-web-sdk.md)så att ni kan skapa mer personaliserade kampanjer och leverera mer personaliserat innehåll, vilket resulterar i mer spårningsdata att rapportera om.<p>Den här förbättringen erbjuder en enhetlig insamlingsmetod för webblösningar i alla plattformslösningar, till exempel Customer Journey Analytics, RT-CDP, AJO och händelsevidarebefordran. Tidigare var det enda sättet att skicka webbdata för direktuppspelade media till Edge Network att använda Media Edge API. | 29 maj 2024 |
-| Skicka Roku-data till Adobe Experience Platform Edge | Nu när [installera Streaming Media Collection-tillägget med Experience Platform Edge](/help/implementation/edge/implementation-edge.md)kan du använda Adobe Experience Platform Roku SDK för att skicka strömmande mediedata till Adobe Experience Platform. | 12 april 2024 |
+| Skicka webbdata till Adobe Experience Platform Edge Network med Web SDK | Du kan nu [använda Adobe Experience Platform Web SDK för att skicka webbdata för direktuppspelade media till Adobe Experience Platform Edge Network](/help/implementation/edge/edge-web-sdk.md), vilket gör att du kan skapa mer personaliserade kampanjer och tillhandahålla mer personaliserat innehåll, vilket resulterar i mer spårningsdata att rapportera om.<p>Den här förbättringen erbjuder en enhetlig insamlingsmetod för webblösningar i alla plattformslösningar, till exempel Customer Journey Analytics, RT-CDP, AJO och händelsevidarebefordran. Tidigare var det enda sättet att skicka webbdata för direktuppspelade media till Edge Network att använda Media Edge API. | 29 maj 2024 |
+| Skicka Roku-data till Adobe Experience Platform Edge | När du nu [installerar tillägget för direktuppspelad mediesamling med Experience Platform Edge](/help/implementation/edge/implementation-edge.md) kan du använda Adobe Experience Platform Roku SDK för att skicka direktuppspelande mediedata till Adobe Experience Platform. | 12 april 2024 |
 | Media Collection: Integrering med Experience Edge (API och Mobile SDK) | Nu kan ni använda Experience Edge API och Mobile SDK för att implementera tillägget Adobe Streaming Media Collection, så att ni kan skapa mer personaliserade kampanjer och leverera mer personaliserat innehåll, vilket resulterar i mer spårningsdata att rapportera om.<p>Den här förbättringen ger en enhetlig insamlingsmetod för alla lösningar, som Customer Journey Analytics, RT-CDP, AJO och händelsevidarebefordran.  [Läs mer](/help/implementation/edge/implementation-edge.md) | 12 maj 2023 |
 | Media Concurrent Viewer-panel | Förstå var maximal samtidighet inträffade eller var bortfall inträffade. Få värdefulla insikter om innehållets och tittarnas engagemang och hjälp med felsökning eller planering av volym och skala. [Läs mer](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/panels/media-concurrent-viewers.html?lang=en) | 9 augusti 2022 |
 | Medieuppspelningstid spenderad panel | Media Playback Time Spent ger värdefull insikt i tittarnas engagemang och gör det möjligt för medieorganisationer att få djupare och mer detaljerade insikter med användarengagemang varje minut genom avancerad tidsanalys med delningsfunktioner. Du kan se hur mycket tid du har lagt på att visa medieströmmar vid en viss tidpunkt. Du kan dela uppspelningens längd med olika granulariteter, inklusive nya 5- minuters-, 15- och 30-minutersgranulariteter. [Läs mer](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/panels/media-playback-timespent/media-playback-time-spent.html) | 9 augusti 2022 |
@@ -47,11 +47,11 @@ Mer information om nya funktioner, korrigeringar och viktig information för adm
 | Funktion | Beskrivning | Måldatum |
 | ----------- | ---------- | ------- |
 | Spårning av flera spelartillstånd | Använd API:t för Media Collection för att implementera spårning av flera spelarlägen. [Läs mer](https://experienceleague.adobe.com/docs/media-analytics/using/player-state-tracking/multiple-player-states.html) | September 2022 |
-| Namnändrade XDM-fält | Namnet på XDM-fältnamnen har ändrats för att bli konsekvent:<br>* Parametrar för ljud och video<br>* Ad-parametrar<br>* Kapitelparametrar<br>* Parametrar för spelartillstånd<br>* Kvalitetsparametrar | September 2022 |
+| Namnändrade XDM-fält | Namnet på XDM-fältnamn har ändrats för konsekvens:<br>* Ljud- och videoparametrar<br>* Lägg till parametrar<br>* Kapitelparametrar<br>* Parametrar för spelartillstånd<br>* Kvalitetsparametrar | September 2022 |
 | Device Co-op-referens | Borttagen referens till Adobe Experience Cloud Device Co-op och Experience Cloud ID-tjänstens krav. | Augusti 2022 |
-| Uppdaterade fältnamn och XDM-sökvägar för insamling och rapportering | Uppdaterade följande:<br>* Parametrar för ljud och video<br>* Ad-parametrar<br>* Kapitelparametrar<br>* Parametrar för spelartillstånd<br>* Kvalitetsparametrar | Augusti 2022 |
+| Uppdaterade fältnamn och XDM-sökvägar för insamling och rapportering | Uppdaterade följande:<br>* Ljud- och videoparametrar<br>* Annonsparametrar<br>* Kapitelparametrar<br>* Parametrar för spelartillstånd<br>* Kvalitetsparametrar | Augusti 2022 |
 | Genomsnittlig målgrupp i minuter | Media Analytics-kunder kan använda panelen för normal målgrupp för att få en bättre förståelse för den genomsnittliga materialförbrukningen. <br>Den genomsnittliga minuten-målgruppen möjliggör jämförelser av programmering oavsett längd eller genre. Dessutom kan ni jämföra eller lägga till den digitala genomsnittliga minuten-publiken med den linjära minuten-mätningen för tv. Panelen ger större flexibilitet för att mäta den genomsnittliga publiken för anpassade tidsperioder samt när tidsklassificeringen har uppdaterats.  [Läs mer](https://experienceleague.adobe.com/docs/media-analytics/using/media-reports/average-minute-audience.html?lang=en) | 16 mars 2022 |
-| Medieuppspelningstid spenderad panel | Lär dig hur mediaanvändarna kan se hur mycket tid de tittar på medieuppspelningstiden är, baserat på hur lång tid de tittar på under dagen och på en vald granularitet. <br>[Media Playback Time Spent Panel (självstudiekurs)](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/media-analytics/measuring-media-analytics/media-playback-time-spent-panel.html?lang=en) | Januari 2022 |
+| Medieuppspelningstid spenderad panel | Lär dig hur mediaanvändarna kan se hur mycket tid de tittar på medieuppspelningstiden är, baserat på hur lång tid de tittar på under dagen och på en vald granularitet. <br>[Panel för hur länge medieuppspelning används (självstudiekurs)](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/media-analytics/measuring-media-analytics/media-playback-time-spent-panel.html?lang=en) | Januari 2022 |
 
 
 ## *Tidigare versionsinformation*
@@ -59,7 +59,7 @@ Mer information om nya funktioner, korrigeringar och viktig information för adm
 | Funktion | Beskrivning | Måldatum eller uppdateringsdatum |
 | ----------- | ---------- | -------------- |
 | Medieuppspelningstid spenderad | Adobe Streaming Media Playback Time Spent ger värdefull insikt i tittarnas engagemang och gör det möjligt för medieorganisationer att få djupare och mer detaljerade insikter med användarinteraktion varje minut genom avancerad tidsanalys med delningsfunktioner. Du kan se hur mycket tid du har lagt på att visa medieströmmar vid en viss tidpunkt. Du kan dela uppspelningens längd med olika granulariteter, inklusive nya 5-, 15- och 30-minutersgranulariteter. [Läs mer …](/help/reporting/workspace/media-playback-time-spent.md) | September 2021 |
-| Media Concurrent Viewer panel i Analytics Workspace | Förstå var maximal samtidighet inträffade eller var bortfall inträffade. Få värdefulla insikter om innehållets och tittarnas engagemang och hjälp med felsökning eller planering av volym och skala. [Läs mer...](/help/reporting/workspace/media-concurrent-viewers-overview.md) <br><br>[Media Concurrent Viewers Panel i Analytics Workspace (självstudiekurs)](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/analysis-workspace/using-panels/media-concurrent-viewers-panel-in-analysis-workspace.html?lang=en#analysis-workspace) | September 2020 <br><br><br>Januari 2021 |
+| Media Concurrent Viewer panel i Analytics Workspace | Förstå var maximal samtidighet inträffade eller var bortfall inträffade. Få värdefulla insikter om innehållets och tittarnas engagemang och hjälp med felsökning eller planering av volym och skala. [Läs mer..](/help/reporting/workspace/media-concurrent-viewers-overview.md) <br><br>[Panelen Media Concurrent Viewer i Analytics Workspace (självstudiekurs)](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/analysis-workspace/using-panels/media-concurrent-viewers-panel-in-analysis-workspace.html?lang=en#analysis-workspace) | September 2020 <br><br><br>Januari 2021 |
 | Enheter och plattformar som stöds | Media Launch Extension med AEP SDK har nu stöd för följande OTT-enheter: <div><ul><li>Apple TV (tvOS)</li><li>Fire TV (Fire OS)</li><li>Android TV</li></ul></div> | Juni 2020 |
 
 

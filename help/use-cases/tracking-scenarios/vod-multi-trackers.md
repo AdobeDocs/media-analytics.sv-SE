@@ -8,19 +8,19 @@ role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
 workflow-type: tm+mt
 source-wordcount: '245'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
-# Flera parallella VOD-spårare{#vod-multiple-trackers-in-parallel}
+# Flera VOD-spår parallellt{#vod-multiple-trackers-in-parallel}
 
 ## Scenario {#scenario}
 
-I det här scenariot körs två sessioner parallellt för två separata media och två separata instanser av `MediaHeartbeat`.
+I det här scenariot körs två sessioner parallellt för två separata media och två separata instanser av `MediaHeartbeat` används.
 
-Detta scenario är identiskt med [VOD-uppspelning utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md) förutom att det finns två sessioner som körs parallellt för två separata medier. Var och en av dessa sessioner använder en separat instans av `MediaHeartbeat`.
+Detta scenario är identiskt med [VOD-uppspelningen utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md) -scenariot, förutom att det finns två sessioner som körs parallellt för två separata media. Var och en av sessionerna använder en separat instans av `MediaHeartbeat`.
 
-Om inget annat anges är nätverksanropen samma som [VOD-uppspelning utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md) scenario.
+Om inget annat anges är nätverksanropen samma som [VOD-uppspelningen utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md).
 
 ## Parametrar {#parameters}
 
@@ -28,7 +28,7 @@ Om inget annat anges är nätverksanropen samma som [VOD-uppspelning utan annons
 
 | Parameter | Värde | Anteckningar   |
 |---|---|---|
-| `s:event:sid` | Unikt sessions-ID | Ett unikt sessions-ID som finns i alla hjärtslagsnätverksanrop fram till `trackSessionEnd` -metoden anropas. |
+| `s:event:sid` | Unikt sessions-ID | Ett unikt sessions-ID som finns i alla hjärtslagsnätverksanrop tills metoden `trackSessionEnd` anropas. |
 
 ## Exempelkod {#sample-code}
 
@@ -112,7 +112,7 @@ protected void onCreate(Bundle savedInstanceState) {
 } 
 ```
 
-Båda förekomsterna av `MediaAnalyticsProvider` och `MediaHeartbeat` spåra två separata sessioner, var och en med sina egna unika sessions-ID:n. De två sessionerna i felsökningsverktyget eller felsökningsloggarna för Charles kan identifieras med hjälp av värdet för sessions-ID. Ställ in följande kod för att visa det här scenariot i Android:
+Båda förekomsterna av `MediaAnalyticsProvider` och `MediaHeartbeat` spårar två separata sessioner, var och en med sina egna unika sessions-ID:n. De två sessionerna i felsökningsverktyget eller felsökningsloggarna för Charles kan identifieras med hjälp av värdet för sessions-ID. Ställ in följande kod för att visa det här scenariot i Android:
 
 ```java
 // Set up mediaObject 
@@ -276,9 +276,9 @@ _mediaHeartbeat.trackSessionEnd();
 } 
 ```
 
-Båda förekomsterna av `MediaAnalyticsProvider` och `ADBMediaHeartbeat` spåra två separata sessioner, var och en med sina egna unika sessions-ID:n. De två sessionerna i felsökningsverktyget eller felsökningsloggarna för Charles kan identifieras med hjälp av värdet för sessions-ID.
+Båda förekomsterna av `MediaAnalyticsProvider` och `ADBMediaHeartbeat` spårar två separata sessioner, var och en med sina egna unika sessions-ID:n. De två sessionerna i felsökningsverktyget eller felsökningsloggarna för Charles kan identifieras med hjälp av värdet för sessions-ID.
 
-Om du vill visa det här scenariot i iOS ställer du in följande kod:
+Ställ in följande kod för att visa det här scenariot i iOS:
 
 ```
 // Set up mediaObject 
@@ -377,4 +377,4 @@ analyticsProvider2 = new MediaAnalyticsProvider(_player2);
 _player2.loadContent(URL_TO_MEDIA_2); 
 ```
 
-Båda förekomsterna av `MediaAnalyticsProvider` och `MediaHeartbeat` spåra två separata sessioner, var och en med sina egna unika sessions-ID:n. Du kan se de två sessionerna i felsökningsverktyget Charles.
+Båda förekomsterna av `MediaAnalyticsProvider` och `MediaHeartbeat` spårar två separata sessioner, var och en med sina egna unika sessions-ID:n. Du kan se de två sessionerna i felsökningsverktyget Charles.

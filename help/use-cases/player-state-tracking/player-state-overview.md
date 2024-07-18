@@ -6,7 +6,7 @@ feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
 workflow-type: tm+mt
-source-wordcount: '403'
+source-wordcount: '406'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ Spårning av spelartillstånd kräver något av följande för datainsamling:
 * Media JS SDK 3.0+
 * Chromecast 3.0 SDK for Adobe Marketing Cloud Solutions
 * Media Analytics-tillägg (som används med Adobe Experience Platform (AEP) SDK)
-   * Webb: Adobe Media Analytics (3.x SDK) för Audio och Video v1.0+
+   * Webb: Adobe Media Analytics (3.x SDK) för ljud och video v1.0+
    * Mobil: Adobe Media Analytics for Audio and Video v2.0+
 * Media Collection API
 
@@ -46,5 +46,5 @@ Innan du implementerar spårning av spelartillstånd bör du tänka på följand
 * Du kan mäta flera spelarlägen samtidigt.
 * Det högsta antalet spelarlägen som kan spåras under en uppspelning är 10.
 * Statusvärden för spelarstatus skickas till Analytics för att enbart rapportera om Media Close-anropet.
-* Kunskap om programstatus bevaras inte när ett läge har stoppats. När ett läge har avslutats måste läget startas igen för att spårningen ska kunna fortsätta. För varje nytt uppspelningsläge måste spelarens tillstånd startas igen.
+* Kunskap om programstatus bevaras inte när ett läge har stoppats. När ett läge har avslutats måste läget startas igen för att fortsätta spåra. För varje nytt uppspelningsläge måste spelarens tillstånd startas igen.
 * Spelartillstånd hämtas för varje enskild uppspelningssession - spelarläget beräknas inte för alla uppspelningar.

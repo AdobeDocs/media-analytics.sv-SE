@@ -7,7 +7,7 @@ feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
 workflow-type: tm+mt
-source-wordcount: '1329'
+source-wordcount: '1337'
 ht-degree: 4%
 
 ---
@@ -27,9 +27,9 @@ ht-degree: 4%
 
 | Begär nyckel  | Obligatoriskt | Begärantypnyckel | Aktivera... |  Beskrivning  |
 | --- | :---: | :---: | :---: | --- |
-| `visitor.marketingCloudOrgId` | Y | string | `sessionStart` | Organisations-ID för Experience Cloud. identifierar din organisation inom Adobe Experience Cloud ekosystem |
+| `visitor.marketingCloudOrgId` | Y | string | `sessionStart` | Organisations-ID för Experience Cloud; identifierar din organisation inom Adobe Experience Cloud ekosystem |
 | `visitor.marketingCloudUserId` | N | string | `sessionStart` | Det här är användar-ID:t för Experience Cloud (ECID). I de flesta fall är detta det ID som du bör använda för att identifiera en användare. Heartbeat `marketingCloudUserId` är lika med `MID` i Adobe Analytics. Den här parametern krävs inte tekniskt, men den är nödvändig för att få tillgång till appar i Experience Cloud-familjen. |
-| `visitor.aamLocationHint` | N | heltal | `sessionStart` | Tillhandahåller Adobe Audience Manager Edge-data - Om inget värde anges är värdet null. |
+| `visitor.aamLocationHint` | N | heltal | `sessionStart` | Anger data för Adobe Audience Manager Edge - Om inget värde anges är värdet null. |
 | `appInstallationId` | N | string | `sessionStart` | appInstallationId identifierar programmet och enheten unikt |
 
 ## Innehållsdata
@@ -60,7 +60,7 @@ ht-degree: 4%
 | `media.rating` | N | string | `sessionStart` | Betyg enligt definitionen i TV:s föräldrariktlinjer |
 | `media.originator` | N | string | `sessionStart` | Innehållets skapare |
 | `media.network` | N | string | `sessionStart` | Nätverks-/kanalnamn |
-| `media.showType` | N | string | `sessionStart` | Innehållstypen, uttryckt som ett heltal mellan 0 och 3: <ul> <li>0 - Hela avsnittet </li> <li>1 - Förhandsgranska </li> <li>2 - Klipp </li> <li>3 - Annan </li> </ul> |
+| `media.showType` | N | string | `sessionStart` | Innehållstypen, uttryckt som ett heltal mellan 0 och 3: <ul> <li>0 - Hela avsnittet </li> <li>1 - Förhandsgranska </li> <li>2 - Klipp </li> <li>3 - Övrigt </li> </ul> |
 | `media.adLoad` | N | string | `sessionStart` | Typen av annons som läses in |
 | `media.pass.mvpd` | N | string | `sessionStart` | Det MVPD som tillhandahålls av Adobe-autentisering |
 | `media.pass.auth` | N | string | `sessionStart` | Anger att användaren har autentiserats av Adobe (kan bara vara true om den har angetts) |
@@ -85,7 +85,7 @@ ht-degree: 4%
 | Begär nyckel  | Obligatoriskt | Begärantypnyckel | Aktivera... |  Beskrivning  |
 | --- | :---: | :---: | :---: | --- |
 | `media.ad.advertiser` | N | string | `adStart` | Företaget eller varumärket vars produkt finns i annonsen |
-| `media.ad.campaignId` | N | string | `adStart` | ID för annonskampanjen |
+| `media.ad.campaignId` | N | string | `adStart` | ID:t för annonskampanjen |
 | `media.ad.creativeId` | N | string | `adStart` | Annonspersonalens ID |
 | `media.ad.siteId` | N | string | `adStart` | Annonswebbplatsens ID |
 | `media.ad.creativeURL` | N | string | `adStart` | Webbadressen till annonsens kreatör |
@@ -120,7 +120,7 @@ ht-degree: 4%
 
 ### visitor.marketingCloudUserId
 
-Skicka användar-ID för Experience Cloud (kallas även för `MID` eller `MCID`) på `sessionStart` genom att lägga in det i `params` mappa med följande tangent: **visitor.marketingCloudUserId**. Detta är en användbar funktion om du redan har integrerat med andra Experience Cloud-produkter och redan har fått MCID.
+Skicka användar-ID:t för Experience Cloud (kallas även `MID` eller `MCID`) för `sessionStart`-anropet genom att inkludera det i `params`-kartan med följande nyckel: **visitor.marketingCloudUserId**. Detta är en användbar funktion om du redan har integrerat med andra Experience Cloud-produkter och redan har fått MCID.
 
 >[!NOTE]
 >
@@ -128,13 +128,13 @@ Skicka användar-ID för Experience Cloud (kallas även för `MID` eller `MCID`)
 
 ### appInstallationId
 
-* **Om du *inte* skicka `appInstallationId` värde -** MCID genereras inte längre av MA:s serverdel, utan Adobe Analytics förlitar sig på att göra detta. Adobe rekommenderar att du antingen skickar ett MCID om det är tillgängligt, eller en `appInstallationId` (tillsammans med det fortfarande obligatoriska `marketingCloudOrgId`) så att Media Collection API genererar MCID och skickar det på alla anrop.
+* **Om du *inte* skickar ett `appInstallationId`-värde -** så genererar inte längre MA-serverdelen ett MCID, utan Adobe Analytics måste då göra detta. Adobe rekommenderar att du antingen skickar ett MCID om det är tillgängligt, eller en `appInstallationId` (tillsammans med det fortfarande obligatoriska `marketingCloudOrgId`) så att Media Collection API genererar MCID och skickar det på alla anrop.
 
-* **Om du *do* pass `appInstallationId` värde -** MCID *kan* som genereras av bakomliggande hanteringssystem, om du skickar värden för `appInstallationId` och (obligatoriskt) `marketingCloudOrgId` parametrar. Om du får `appInstallationId` själv måste du behålla värdet på klientsidan. Den måste vara unik för appen på en enhet och måste vara beständig så länge appen inte installeras om.
+* **Om du *do* skickar `appInstallationId` värde -** MCID *kan* genereras av MA-serverdelen om du skickar värden för parametrarna `appInstallationId` och (krävs) `marketingCloudOrgId`. Om du skickar `appInstallationId` själv måste du behålla värdet på klientsidan. Den måste vara unik för appen på en enhet och måste vara beständig så länge appen inte installeras om.
 
 >[!NOTE]
 >
->The `appInstallationId` unikt identifierar appen *och enheten*. Det måste vara unikt för varje app på varje enhet, dvs. två användare som använder samma version av samma program på olika enheter måste skicka olika (unika) `appInstallationId`.
+>`appInstallationId` identifierar programmet *och enheten* unikt. Den måste vara unik för varje app på varje enhet, d.v.s. två användare som använder samma version av samma app på olika enheter måste skicka olika (unika) `appInstallationId`.
 
 <!-- Initially, there were no browser-based customers. In future this will be part of a two-bullet list, one bullet for Native Apps, the other for Browser apps. The .
 \<ul id="ul_iwc_fqt_pbb"\>
@@ -145,31 +145,31 @@ Skicka användar-ID för Experience Cloud (kallas även för `MID` eller `MCID`)
 
 Förutom att den är nödvändig för MCID-generering när detta inte anges, används den här parametern också som värde för utgivar-ID (baserat på vilket Media Analytics utför [federationsregelmatchning.](/help/use-cases/federated-analytics.md))
 
-### Analyserar äldre användar-ID (hjälp) och deklarerade användar-ID:n (customerID:n)
+### Analyserar äldre användar-ID (hjälp) och deklarerade användar-ID (customerID)
 
 * **analytics.aid:**
 
-   Värdet för den här nyckeln måste vara en sträng som representerar det äldre användar-ID:t för Analytics
+  Värdet för den här nyckeln måste vara en sträng som representerar det äldre användar-ID:t för Analytics
 * **visitor.customerID:**
 
-   Värdet för den här nyckeln måste vara ett objekt i följande format:
+  Värdet för den här nyckeln måste vara ett objekt i följande format:
 
-   ```js
-   "<<insert your ID name here>>": {  
-     "id": " <<insert your id here>>",  
-      "authState": <<insert one of 0, 1, 2>>
-   }
-   ```
+  ```js
+  "<<insert your ID name here>>": {  
+    "id": " <<insert your id here>>",  
+     "authState": <<insert one of 0, 1, 2>>
+  }
+  ```
 
-Observera att `visitor.customerIDs` kan ha ett valfritt antal objekt i det presenterade formatet.
+Observera att värdet `visitor.customerIDs` kan ha ett valfritt antal objekt i det angivna formatet.
 
 ### visitor.aamLocationHint
 
-Den här parametern anger vilken Adobe Audience Manager (AAM) Edge ska påverkas när Adobe Analytics skickar kunddata till Audience Manager. Om inget värde anges är värdet null. Detta är särskilt viktigt när slutanvändarna tenderar att använda sina enheter på geografiskt avlägsna platser (t.ex. USA-öst, USA-väst, Europa, Asien). Annars sprids användardata över flera AAM kanter.
+Den här parametern anger vilken Adobe Audience Manager (AAM) Edge som skulle påverkas när Adobe Analytics skickar kunddata till Audience Manager. Om inget värde anges är värdet null. Detta är särskilt viktigt när slutanvändarna tenderar att använda sina enheter på geografiskt avlägsna platser (t.ex. USA-öst, USA-väst, Europa, Asien). Annars sprids användardata över flera AAM kanter.
 
 ### media.resume
 
-Om appen avgör att en session stängdes och sedan återupptas vid ett senare tillfälle, t.ex. om användaren lämnade videon men så småningom kom tillbaka, och spelaren återupptog videon från spelhuvudet där den stoppades, kan du skicka ett booleskt (valfritt) **media.resume** parametern inuti parameterbucket för `sessionStart` ring.
+Om appen fastställer att en session stängdes och sedan återupptogs vid ett senare tillfälle, t.ex. om användaren lämnade videon men så småningom kom tillbaka, och spelaren återupptog videon från spelhuvudet där den stoppades, kan du skicka en valfri boolesk **media.resume**-parameter inuti parameterbegränsningen för anropet `sessionStart`.
 
 <!--
 | `media.uniqueTimePlayed` | N | Close | The value in seconds of the unique segments of content played during a session. Excludes time played on seek back scenarios in which a viewer is watching the same segment of the content multiple times.  |

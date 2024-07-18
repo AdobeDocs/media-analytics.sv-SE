@@ -6,8 +6,8 @@ feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: c308dba2d7cf07b89bf124bd6e5f972c253c9f18
 workflow-type: tm+mt
-source-wordcount: '394'
-ht-degree: 3%
+source-wordcount: '398'
+ht-degree: 1%
 
 ---
 
@@ -17,7 +17,7 @@ Följande instruktioner ger vägledning vid implementering med 3.x SDK:er.
 
 >[!IMPORTANT]
 >
->Om du implementerar en tidigare version av SDK kan du hämta utvecklarhandböckerna här: [Ladda ned SDK:er.](/help/getting-started/download-sdks.md)
+>Om du implementerar en tidigare version av SDK kan du hämta utvecklarguiderna här: [Hämta SDK:er.](/help/getting-started/download-sdks.md)
 
 ## Konstanter för annonsspårning
 
@@ -31,9 +31,9 @@ Följande instruktioner ger vägledning vid implementering med 3.x SDK:er.
 
 ## Implementeringssteg
 
-1. Identifiera när annonsbrytningens gränser börjar, inklusive pre-roll, och skapa en `AdBreakObject` genom att använda annonsbrytningsinformationen.
+1. Identifiera när annonsbrytningsgränsen börjar, inklusive pre-roll, och skapa en `AdBreakObject` med hjälp av annonsbrytningsinformationen.
 
-   `AdBreakObject` referens:
+   `AdBreakObject`-referens:
 
    | Variabelnamn | Typ | Beskrivning |
    | --- | --- | --- |
@@ -50,15 +50,15 @@ Följande instruktioner ger vägledning vid implementering med 3.x SDK:er.
                                       <START_TIME>);
    ```
 
-1. Utlysning `trackEvent()` med `AdBreakStart` i `MediaHeartbeat` -instans för att börja spåra annonsbrytningen:
+1. Anropa `trackEvent()` med `AdBreakStart` i `MediaHeartbeat`-instansen för att börja spåra annonsbrytningen:
 
    ```js
    tracker.trackEvent(ADB.Media.Event.AdBreakStart, adBreakObject);
    ```
 
-1. Identifiera när annonsen börjar och skapa en `AdObject` -instans med annonsinformationen.
+1. Identifiera när annonsen startar och skapa en `AdObject`-instans med annonsinformationen.
 
-   `AdObject` referens:
+   `AdObject`-referens:
 
    | Variabelnamn | Typ | Beskrivning |
    | --- | --- | --- |
@@ -79,8 +79,8 @@ Följande instruktioner ger vägledning vid implementering med 3.x SDK:er.
 
 1. (Valfritt) Koppla standard- och/eller annonsmetadata till mediespårningssessionen via kontextdatavariabler.
 
-   * [Implementera standardmetadata för annonser i JavaScript](/help/use-cases/track-ads/impl-std-ad-metadata/impl-std-ad-md-js/impl-std-ad-metadata-js3.md)
-   * **Anpassade annonsmetadata -** För anpassade metadata skapar du ett variabelobjekt för de anpassade datavariablerna och fyller i med data för den aktuella annonsen:
+   * [Implementera standardannonsmetadata på JavaScript](/help/use-cases/track-ads/impl-std-ad-metadata/impl-std-ad-md-js/impl-std-ad-metadata-js3.md)
+   * **Anpassade annonseringsmetadata -** För anpassade metadata skapar du ett variabelobjekt för anpassade datavariabler och fyller i med data för den aktuella annonsen:
 
      ```js
      /* Set context data */
@@ -94,7 +94,7 @@ Följande instruktioner ger vägledning vid implementering med 3.x SDK:er.
      adMetadata["creative"] = "Sample creative";
      ```
 
-1. Utlysning `trackEvent()` med `AdStart` -händelsen i `MediaHeartbeat` -instans för att börja spåra annonsuppspelningen.
+1. Anropa `trackEvent()` med händelsen `AdStart` i instansen `MediaHeartbeat` för att börja spåra annonsuppspelningen.
 
    Ta med en referens till din anpassade metadatavariabel (eller ett tomt objekt) som den tredje parametern i händelseanropet:
 
@@ -104,7 +104,7 @@ Följande instruktioner ger vägledning vid implementering med 3.x SDK:er.
    };
    ```
 
-1. När annonsuppspelningen når slutet av annonsen ringer du `trackEvent()` med `AdComplete` händelse:
+1. När annonsuppspelningen når slutet av annonsen anropar du `trackEvent()` med händelsen `AdComplete`:
 
    ```js
    _onAdComplete = function() {
@@ -112,7 +112,7 @@ Följande instruktioner ger vägledning vid implementering med 3.x SDK:er.
    };
    ```
 
-1. Om annonsuppspelningen inte slutfördes eftersom användaren valde att hoppa över annonsen, ska du spåra `AdSkip` händelse:
+1. Om annonsuppspelningen inte slutfördes eftersom användaren valde att hoppa över annonsen, ska du spåra `AdSkip`-händelsen:
 
    ```js
    _onAdSkip = function() {
@@ -120,8 +120,8 @@ Följande instruktioner ger vägledning vid implementering med 3.x SDK:er.
    };
    ```
 
-1. Om det finns ytterligare annonser inom samma `AdBreak`, upprepa steg 3 till 7 igen.
-1. När annonsbrytningen är klar använder du `AdBreakComplete` händelse att spåra:
+1. Om det finns ytterligare annonser i samma `AdBreak` upprepar du steg 3 till 7 igen.
+1. När annonsbrytningen är klar använder du händelsen `AdBreakComplete` för att spåra:
 
    ```js
    _onAdBreakComplete = function() {
@@ -129,13 +129,13 @@ Följande instruktioner ger vägledning vid implementering med 3.x SDK:er.
    };
    ```
 
-Se spårningsscenariot [VOD-uppspelning med pre-roll-annonser](/help/use-cases/tracking-scenarios/vod-preroll-ads.md) för mer information.
+Mer information finns i spårningsscenariot [VOD-uppspelning med pre-roll-annonser](/help/use-cases/tracking-scenarios/vod-preroll-ads.md).
 
 ## Detaljerad annonshantering
 
 Standardintervallet för annonsväxling är `10 seconds`.
 
-Du kan ställa in detaljerad annonsspårning för att aktivera `1 second` annonsspårning.
+Du kan konfigurera detaljerad annonsspårning för att aktivera annonsspårning för `1 second`.
 
 >[!IMPORTANT]
 >

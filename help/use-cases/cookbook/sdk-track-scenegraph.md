@@ -7,7 +7,7 @@ feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
 workflow-type: tm+mt
-source-wordcount: '1169'
+source-wordcount: '1152'
 ht-degree: 1%
 
 ---
@@ -39,18 +39,18 @@ Kopplingsbryggan är utformad för att fungera så här:
 
 **SceneGraph-program:**
 
-* Förbrukningar `AdobeMobileLibrary` API:er via SceneGraph-anslutningsbryggens API:er.
-* Registrering för svarsåteranrop på `adbmobileTask` för förväntade utdatavariabler.
+* Använder `AdobeMobileLibrary` API:er via API:erna för anslutning av SceneGraph.
+* Registrerar för svarsåteranrop på `adbmobileTask` för förväntade utdatavariabler.
 
 **AdobeMobileLibrary:**
 
 * Visar en uppsättning offentliga API:er (äldre), inklusive API:t för anslutningsbryggan.
 * Returnerar en instans av en SceneGraph-koppling som omsluter alla tidigare offentliga API:er.
-* kommunicerar med en `adbmobileTask` SceneGraph-nod för körning av API:er.
+* Kommunicerar med en `adbmobileTask` SceneGraph-nod för körning av API:er.
 
-**adbmobileTask Node:**
+**adbmobileTask-nod:**
 
-* En SceneGraph-aktivitetsnod som körs `AdobeMobileLibrary` API:er på en bakgrundstråd.
+* En SceneGraph-aktivitetsnod som kör `AdobeMobileLibrary` API:er på en bakgrundstråd.
 * Fungerar som ett ombud som returnerar data till programscener.
 
 ## Public SceneGraph APIs {#public-scenegraph-apis}
@@ -59,42 +59,42 @@ Kopplingsbryggan är utformad för att fungera så här:
 
 | Kategori | Metodnamn | Beskrivning |
 |---|---|---|
-| **Konstanter** |  |  |
+| **Konstanter** | |  |
 |  | `sceneGraphConstants` | Returnerar ett objekt som innehåller `SceneGraphConstants`. Se tabellen ovan för mer information. |
-|  |  |  |
-| **Felsökningsloggning** |  |  |
+|  | | |
+| **Felsökningsloggning** | | |
 |  | `setDebugLogging` | SceneGraph API för att ställa in felsökningsloggning på ADBMomobile SDK. |
 |  | `getDebugLogging` | SceneGraph API för att hämta felsökningsloggning från ADBMomobile SDK. |
-|  | Mer information finns i avsnittet Felsökningsloggning i äldre SDK. |  |
-|  |  |  |
-| **Sekretessstatus/avanmäl dig** |  |  |
+|  | Mer information finns i avsnittet Felsökningsloggning i äldre SDK. | |
+|  | | |
+| **Sekretessstatus / Avanmäl dig** | | |
 |  | `setPrivacyStatus` | SceneGraph API för att ange sekretessstatus för ADBMomobile SDK. |
 |  | `getPrivacyStatus` | SceneGraph API för att få sekretessstatus från ADBMomobile SDK. |
-|  | Mer information finns i avsnittet Avanmäl dig/Sekretessstatus i äldre SDK. |  |
-|  |  |  |
-| **Analytics**  |  |  |
+|  | Mer information finns i avsnittet Avanmäl dig/Sekretessstatus i äldre SDK. | |
+|  | | |
+| **Analytics**  | | |
 |  | `trackState` | SceneGraph API för att spåra status på ADBMomobile SDK. |
 |  | `trackAction` | SceneGraph API för att spåra åtgärder i ADBMomobile SDK. |
 |  | `trackingIdentifier` | SceneGraph API för att hämta en spårningsidentifierare från ADBMomobile SDK. |
 |  | `userIdentifier` | SceneGraph API för att hämta en användaridentifierare från ADBMomobile SDK. |
 |  | `setUserIdentifier` | SceneGraph API för att ange användaridentifieraren i ADBMomobile SDK. |
 |  | `getAllIdentifiers` | SceneGraph API hämtar alla användaridentiteter som är kända och beständiga av Roku SDK. |
-|  | Mer information finns i avsnittet Analytics (Analyser) i det äldre SDK:t. |  |
-|  |  |  |
-| **Experience Cloud** |  |  |
+|  | Mer information finns i avsnittet Analytics (Analyser) i det äldre SDK:t. | |
+|  | | |
+| **Experience Cloud** | | |
 |  | `visitorSyncIdentifiers` | SceneGraph API för att synkronisera Experience Cloud-identifierare på ADBMoble SDK. |
 |  | `visitorMarketingCloudID` | SceneGraph API för att hämta Visitor Experience Cloud ID från ADBMomobile SDK. |
-|  | Mer information finns i avsnittet Experience Cloud i den äldre SDK:n. |  |
-|  |  |  |
-| **Audience Manager** |  |  |
+|  | Mer information finns i avsnittet Experience Cloud i den äldre SDK:n. | |
+|  | | |
+| **Audience Manager** | | |
 |  | `audienceSubmitSignal` | SceneGraph API för att skicka en målgruppshanteringssignal med trait. |
 |  | `audienceVisitorProfile` | SceneGraph API för att hämta en besökarprofil för målgruppshanteraren från ADBMomobile SDK. |
-|  | `audienceDpid` | SceneGraph API för att hämta en målgrupp Dpid från ADBMomobile SDK. |
+|  | `audienceDpid` | SceneGraph API för att hämta en målgrupp-Dpid från ADBMomobile SDK. |
 |  | `audienceDpuuid` | SceneGraph API för att hämta en publik från ADBMomobile SDK. |
 |  | `audienceSetDpidAndDpuuid` | SceneGraph API för att ange målgrupp Dpid och Dpuuid på ADBMomobile SDK. |
-|  | Mer information finns i avsnittet Audience Manager i den äldre SDK:n. |  |
-|  |  |  |
-| **MediaHeartbeat** |  |  |
+|  | Mer information finns i avsnittet Audience Manager i den äldre SDK:n. | |
+|  | | |
+| **MediaHeartbeat** | | |
 |  | `mediaTrackLoad` | SceneGraph API för att läsa in videoinnehåll för MediaHeartbeat-spårning. |
 |  | mediaTrackStart | SceneGraph API för att starta videospårningssession med MediaHeartbeat. |
 |  | `mediaTrackUnload` | SceneGraph API för att ta bort videoinnehåll från MediaHeartbeat-spårning. |
@@ -102,24 +102,24 @@ Kopplingsbryggan är utformad för att fungera så här:
 |  | mediaTrackPause | SceneGraph API för att spåra pausat videoinnehåll. |
 |  | `mediaTrackComplete` | SceneGraph API för att spåra uppspelning slutförd för videoinnehåll. |
 |  | `mediaTrackError` | SceneGraph API för att spåra uppspelningsfel. |
-|  | mediaTrackEvent | SceneGraph API för att spåra uppspelningshändelser under spårning. Till exempel: Ads, Chapters. |
+|  | mediaTrackEvent | SceneGraph API för att spåra uppspelningshändelser under spårning. Till exempel: Annonser, kapitel. |
 |  | `mediaUpdatePlayhead` | SceneGraph API för att skicka uppdateringar av spelhuvudet till MediaHeartbeat under videospårning. |
 |  | `mediaUpdateQoS` | SceneGraph API för att skicka QoS-uppdateringar till MediaHeartbeat under videospårning. |
-|  | Mer information finns i avsnittet MediaHeartbeat i det äldre SDK:t. |  |
+|  | Mer information finns i avsnittet MediaHeartbeat i det äldre SDK:t. | |
 
 ### SceneGraphConstants
 
 | Konstantnamn | Beskrivning |
 |---|---|
-| `API_RESPONSE` | Används för att hämta svarsobjektet från `adbmobileTask` nod `adbmobileApiResponse` fält |
-| `DEBUG_LOGGING` | Används som `apiName` for `getDebugLogging` |
-| `PRIVACY_STATUS` | Används som `apiName` for `getPrivacyStatus` |
-| `TRACKING_IDENTIFIER` | Används som `apiName` for `trackingIdentifier` |
-| `USER_IDENTIFIER` | Används som `apiName` for `userIdentifier` |
-| `VISITOR_MARKETING_CLOUD_ID` | Används som `apiName` for `visitorMarketingCloudID` |
-| `AUDIENCE_VISITOR_PROFILE` | Används som `apiName` for `audienceVisitorProfile` |
-| `AUDIENCE_DPID` | Används som `apiName` for `audienceDpid` |
-| `AUDIENCE_DPUUID` | Används som `apiName` for `audienceDpuuid` |
+| `API_RESPONSE` | Används för att hämta svarsobjektet från `adbmobileTask`-nodens `adbmobileApiResponse`-fält |
+| `DEBUG_LOGGING` | Används som `apiName` för `getDebugLogging` |
+| `PRIVACY_STATUS` | Används som `apiName` för `getPrivacyStatus` |
+| `TRACKING_IDENTIFIER` | Används som `apiName` för `trackingIdentifier` |
+| `USER_IDENTIFIER` | Används som `apiName` för `userIdentifier` |
+| `VISITOR_MARKETING_CLOUD_ID` | Används som `apiName` för `visitorMarketingCloudID` |
+| `AUDIENCE_VISITOR_PROFILE` | Används som `apiName` för `audienceVisitorProfile` |
+| `AUDIENCE_DPID` | Används som `apiName` för `audienceDpid` |
+| `AUDIENCE_DPUUID` | Används som `apiName` för `audienceDpuuid` |
 
 ### adbmobileTask Node
 
@@ -134,7 +134,7 @@ Kopplingsbryggan är utformad för att fungera så här:
 <td> adbmobileApiCall </td>
 <td> assocarray </td>
 <td> Ogiltig </td>
-<td> Ändra INTE det här fältet och låt inte användas av programmet. Det här fältet används av ADBMomobile SceneGraphConnector för att dirigera API-anrop via SceneGraph-noder och för att hämta svar. Nyckeln/fältet är därför reserverat för AdobeMobileSDK för SceneGraph-kompatibilitet. <b>Viktigt:</b> Ändringar i det här fältet kan leda till att AdobeMobileSDK inte fungerar som det ska.</td>
+<td> Ändra INTE det här fältet och låt inte användas av programmet. Det här fältet används av ADBMomobile SceneGraphConnector för att dirigera API-anrop via SceneGraph-noder och för att hämta svar. Nyckeln/fältet är därför reserverat för AdobeMobileSDK för SceneGraph-kompatibilitet. <b>Viktigt!</b> Ändringar i det här fältet kan göra att AdobeMobileSDK inte fungerar som det ska.</td>
 </tr>
 <tr>
 <td> adbmobileApiResponse </td>
@@ -142,18 +142,28 @@ Kopplingsbryggan är utformad för att fungera så här:
 <td> Ogiltig </td>
 <td> Skrivskydda Alla API:er som körs på AdobeMobileSDK returnerar svar i det här fältet. Registrera dig för ett återanrop för att lyssna efter uppdateringar av det här fältet för att kunna ta emot svarsobjekt. Här följer formatet för svarsobjektet:  
 <pre>
-response = { "apiName" : &lt;scenegraphconstants.&gt;
-               API_NAME&gt; "returnValue : &lt;api_response&gt;
+response = {
+  "apiName" : &lt;SceneGraphConstants.
+               API_NAME&gt;
+  "returnValue : &lt;API_RESPONSE&gt;
 }</pre>
 En instans av det här svarsobjektet skickas för alla API-anrop på AdobeMobileSDK som förväntas returnera ett värde enligt API-referenshandboken. Ett API-anrop till exempel för visitorMarketingCloudID() returnerar följande svarsobjekt:
 <pre>
-response = { "apiName" : m. adbmobileConstants.
-              VISITOR_MARKETING_CLOUD_ID "returnValue : "07050x25671x3760x72644x14" }
+response = {
+  "apiName" : m.
+              adbmobileConstants.
+              VISITOR_MARKETING_CLOUD_ID  
+  "returnValue : "07050x25671x33760x72644x14"  
+}
 </pre>
 Eller så kan svarsdata vara ogiltiga:
 <pre>
-response = { "apiName" : m. adbmobileConstants.
-              VISITOR_MARKETING_CLOUD_ID "returnValue : invalid }
+response = {  
+  "apiName" : m.
+              adbmobileConstants.
+              VISITOR_MARKETING_CLOUD_ID  
+  "returnValue : invalid
+}
 </pre>
 </td>
 </tr>
@@ -175,27 +185,27 @@ Indata: Ingen\
 Returtyp: `SceneGraphConstants`
 
 >[!NOTE]
->Se `ADBMobileConnector` API-referens för mer information.
+>Mer information finns i API-referensen för `ADBMobileConnector`.
 
 ### ADBMomobile-konstanter
 
 |  Funktion  | Konstantnamn | Beskrivning   |
 |---|---|---|
-| Versionshantering | `version` | Konstant för att hämta AdobeMobileLibrary-versionsinformation |
+| Versioner | `version` | Konstant för att hämta AdobeMobileLibrary-versionsinformation |
 | Sekretess/avanmälan | `PRIVACY_STATUS_OPT_IN` | Konstant för sekretessstatus har valts i |
-|  | `PRIVACY_STATUS_OPT_OUT` | Konstant för sekretesstatus har avvalts |
-| MediaHeartbeat-konstanter | Se konstanterna på den här sidan: <br/><br/>[Mediets pulsslagmetoder.](/help/use-cases/track-av-playback/track-core/track-core-roku.md) | Använd dessa konstanter med MediaHeartbeat-API:er |
+|   | `PRIVACY_STATUS_OPT_OUT` | Konstant för sekretesstatus har avvalts |
+| MediaHeartbeat-konstanter | Se konstanterna på den här sidan: <br/><br/>[Metoder för pulsslag i media.](/help/use-cases/track-av-playback/track-core/track-core-roku.md) | Använd dessa konstanter med MediaHeartbeat-API:er |
 | Standardmetadata | Se konstanterna på den här sidan: <br/><br/>[Standardmetadataparametrar.](/help/use-cases/track-av-playback/impl-std-metadata/impl-std-metadata-roku.md) | Använd dessa konstanter för att bifoga standardmetadata för video/annonsering i MediaHeartbeat-API:er |
 
 
 
-Globalt definierat verktyg `MediaHeartbeat` API:er i AdobeMobileLibrary är tillgängliga *as* i SceneGraph-miljön eftersom de inte använder några komponenter med genomskinligt skript som inte är tillgängliga i SceneGraph-noder. Mer information om dessa metoder finns i tabellen nedan:
+Globalt definierade `MediaHeartbeat`-API:er för det äldre AdobeMobileLibrary är tillgängliga *som är* i SceneGraph-miljön eftersom de inte använder några Brightscript-komponenter som inte är tillgängliga i SceneGraph-noder. Mer information om dessa metoder finns i tabellen nedan:
 
 ### Globala metoder för MediaHeartbeat
 
 | Metod | Beskrivning |
 | --- | --- |
-| `adb_media_init_mediainfo` | Den här metoden returnerar ett initierat Media Information-objekt `Function adb_media_init_mediainfo(name As String, id As String, length As Double, streamType As String) As Object` |
+| `adb_media_init_mediainfo` | Den här metoden returnerar ett initierat medieinformationsobjekt `Function adb_media_init_mediainfo(name As String, id As String, length As Double, streamType As String) As Object` |
 | `adb_media_init_adinfo` | Den här metoden returnerar det initierade Ad Information-objektet `Function adb_media_init_adinfo(name As String, id As String, position As Double, length As Double) As Object` |
 | `adb_media_init_chapterinfo` | Den här metoden returnerar det initierade kapitelinformationsobjektet.  `Function adb_media_init_adbreakinfo(name As String, startTime as Double, position as Double) As Object` |
 | `adb_media_init_adbreakinfo` | Den här metoden returnerar initierat AdBreak Information-objekt.  `Function adb_media_init_chapterinfo(name As String, position As Double, length As Double, startTime As Double) As Object` |
@@ -203,29 +213,29 @@ Globalt definierat verktyg `MediaHeartbeat` API:er i AdobeMobileLibrary är till
 
 ## Implementering {#implementation}
 
-1. **Ladda ned Roku Library -** Ladda ned [det senaste Roku-biblioteket.](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/roku-v2.2.2)
+1. **Hämta Roku-biblioteket -** Hämta det [senaste Roku-biblioteket.](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/roku-v2.2.2)
 
 1. **Konfigurera utvecklingsmiljön**
 
-   1. Kopiera `adbmobile.brs` (AdobeMobileLibrary) i `pkg:/source/` katalog.
+   1. Kopiera `adbmobile.brs` (AdobeMobileLibrary) till katalogen `pkg:/source/`.
 
-   1. Om det finns stöd för Scene Graph kopierar du `adbmobileTask.brs` och `adbMobileTask.xml` i `pkg:/components/` katalog.
+   1. Kopiera `adbmobileTask.brs` och `adbMobileTask.xml` till din `pkg:/components/`-katalog om du vill ha stöd för scengrafik.
 
 1. **Initiera**
 
-   1. Importera `adbmobile.brs` in i din scen.
+   1. Importera `adbmobile.brs` till din scen.
 
       ```
       <script type="text/brightscript" uri="pkg:/source/adbmobile.brs" />
       ```
 
-   1. Skapa en instans av `adbmobileTask` i din scen.
+   1. Skapa en instans av noden `adbmobileTask` i scenen.
 
       ```
       m.adbmobileTask = createObject("roSGNode", "adbmobileTask")
       ```
 
-   1. Hämta en instans av `adbmobile` anslutning för SceneGraph med `adbmobileTask` -instans.
+   1. Hämta en instans av `adbmobile`-kopplingen för SceneGraph med instansen `adbmobileTask`.
 
       ```
       m.adbmobile = ADBMobile().getADBMobileConnectorInstance(m.adbmobileTask)

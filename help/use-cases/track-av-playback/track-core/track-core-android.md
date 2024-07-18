@@ -1,13 +1,13 @@
 ---
-title: Lär dig hur du spårar uppspelning i Android
-description: Lär dig hur du implementerar huvudspårning med Media SDK på Android.
+title: Lär dig spåra uppspelning i Android
+description: Lär dig implementera huvudspårning med Media SDK på Android.
 uuid: ab5fab95-76ed-4ae6-aedb-2e66eece7607
 exl-id: d5f5a3f0-f1e0-4d68-af7f-88a30faed0db
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: c308dba2d7cf07b89bf124bd6e5f972c253c9f18
 workflow-type: tm+mt
-source-wordcount: '708'
+source-wordcount: '689'
 ht-degree: 2%
 
 ---
@@ -21,7 +21,7 @@ I den här dokumentationen beskrivs spårning i version 2.x av SDK.
 
 1. **Inledande spårningsinställning**
 
-   Identifiera när användaren aktiverar uppspelningsavsikten (användaren klickar på play och/eller autoplay är aktiverat) och skapar en `MediaObject` -instans.
+   Identifiera när användaren aktiverar uppspelningsavsikten (användaren klickar på play och/eller autoplay är aktiverat) och skapar en `MediaObject`-instans.
 
    [createMediaObject API](https://adobe-marketing-cloud.github.io/media-sdks/reference/android/com/adobe/primetime/va/simple/MediaHeartbeat.html#createMediaObject-java.lang.String-java.lang.String-java.lang.Double-java.lang.String-com.adobe.primetime.va.simple.MediaHeartbeat.MediaType-)
 
@@ -69,7 +69,7 @@ I den här dokumentationen beskrivs spårning i version 2.x av SDK.
      >Det är valfritt att bifoga standardmetadataobjektet till medieobjektet.
 
       * API-referens för metadata för media - [Standardmetadatanycklar - Android](https://adobe-marketing-cloud.github.io/media-sdks/reference/android/com/adobe/primetime/va/simple/MediaHeartbeat.VideoMetadataKeys.html)
-      * Här finns en omfattande uppsättning videometadata: [Parametrar för ljud och video](/help/implementation/variables/audio-video-parameters.md)
+      * Se den omfattande uppsättningen tillgängliga videometadata här: [Ljud- och videoparametrar](/help/implementation/variables/audio-video-parameters.md)
 
    * **Anpassade metadata**
 
@@ -83,9 +83,9 @@ I den här dokumentationen beskrivs spårning i version 2.x av SDK.
      mediaMetadata.put("programmer", "Sample programmer");
      ```
 
-1. **Spåra avsikten att starta uppspelning**
+1. **Spåra avsikten att starta uppspelningen**
 
-   Om du vill börja spåra en mediesession ringer du `trackSessionStart` på Media Heartbeat-instansen. Exempel:
+   Om du vill börja spåra en mediesession anropar du `trackSessionStart` på instansen för pulsslag i media. Exempel:
 
    ```java
    public void onVideoLoad(Observable observable, Object data) {  
@@ -99,15 +99,15 @@ I den här dokumentationen beskrivs spårning i version 2.x av SDK.
 
    >[!IMPORTANT]
    >
-   >`trackSessionStart` spårar användarens avsikt att spela upp, inte början av uppspelningen. Detta API används för att läsa in mediedata/metadata och för att beräkna QoS-måttet för tiden till start (tidsintervallet mellan `trackSessionStart` och `trackPlay`).
+   >`trackSessionStart` spårar användarens avsikt att spela upp, inte början av uppspelningen. Detta API används för att läsa in mediedata/metadata och för att uppskatta QoS-måttet för tiden till start (tidsintervallet mellan `trackSessionStart` och `trackPlay`).
 
    >[!NOTE]
    >
-   >Om du inte använder anpassade mediadata skickar du ett tomt objekt för det andra argumentet i `trackSessionStart`.
+   >Om du inte använder anpassade mediametadata skickar du ett tomt objekt för det andra argumentet i `trackSessionStart`.
 
 1. **Spåra faktiskt uppspelningsstart**
 
-   Identifiera händelsen från mediespelaren i början av mediespelningen, där den första bildrutan i mediet återges på skärmen, och anropa `trackPlay`:
+   Identifiera händelsen från mediespelaren för början av mediespelningen, där den första bildrutan i mediet återges på skärmen, och anropa `trackPlay`:
 
    ```java
    // Video is rendered on the screen) and call trackPlay.  
@@ -118,7 +118,7 @@ I den här dokumentationen beskrivs spårning i version 2.x av SDK.
 
 1. **Spåra uppspelningen**
 
-   Identifiera händelsen från mediespelaren för att slutföra medieuppspelningen, där användaren har tittat på innehållet tills slutet, och ring `trackComplete`:
+   Identifiera händelsen från mediespelaren för att slutföra medieuppspelningen, där användaren har tittat på innehållet tills slutet och anropa `trackComplete`:
 
    ```java
    public void onVideoComplete(Observable observable, Object data) {
@@ -128,7 +128,7 @@ I den här dokumentationen beskrivs spårning i version 2.x av SDK.
 
 1. **Spåra slutet av sessionen**
 
-   Identifiera händelsen från mediespelaren för borttagning/stängning av mediespelningen, där användaren stänger mediet och/eller mediet är klart och har tagits bort, och anropa `trackSessionEnd`:
+   Identifiera händelsen från mediespelaren för borttagning/stängning av mediespelningen, där användaren stänger mediet och/eller mediet har slutförts och har tagits bort, och anropa `trackSessionEnd`:
 
    ```java
    // Closes the media and/or the media completed and unloaded,  
@@ -140,11 +140,11 @@ I den här dokumentationen beskrivs spårning i version 2.x av SDK.
 
    >[!IMPORTANT]
    >
-   >`trackSessionEnd` markerar slutet på en mediaspårningssession. Om sessionen har bevakats till slutet, där användaren har tittat på innehållet till slutet, måste du se till att `trackComplete` anropas före `trackSessionEnd`. Övriga `track*` API-anrop ignoreras efter `trackSessionEnd`, förutom `trackSessionStart` för en ny mediespårningssession.
+   >`trackSessionEnd` markerar slutet på en mediespårningssession. Om sessionen har bevakats till att slutföras, där användaren har tittat på innehållet till slutet, kontrollerar du att `trackComplete` anropas före `trackSessionEnd`. Alla andra `track*` API-anrop ignoreras efter `trackSessionEnd`, förutom `trackSessionStart` för en ny mediespårningssession.
 
 1. **Spåra alla möjliga pausscenarier**
 
-   Identifiera händelsen från mediespelaren för att pausa och ringa `trackPause`:
+   Identifiera händelsen från mediespelaren för att pausa media och anropa `trackPause`:
 
    ```java
    public void onVideoPause(Observable observable, Object data) {  
@@ -154,14 +154,14 @@ I den här dokumentationen beskrivs spårning i version 2.x av SDK.
 
    **Pausa scenarier**
 
-   Identifiera alla scenarier där videouppspelaren pausar och se till att `trackPause` anropas korrekt. Följande scenarier kräver alla ditt appsamtal `trackPause()`:
+   Identifiera alla scenarier i vilka videospelaren pausar och se till att `trackPause` anropas korrekt. Följande scenarier kräver att din app anropar `trackPause()`:
 
    * Användaren träffar uttryckligen paus i appen.
    * Spelaren försätts i pausläget.
-   * (*Mobilappar*) - Användaren placerar programmet i bakgrunden, men du vill att sessionen ska vara öppen.
+   * (*Mobilappar*) - Användaren placerar programmet i bakgrunden, men du vill att sessionen ska vara öppen i appen.
    * (*Mobilappar*) - Alla typer av systemavbrott inträffar som gör att ett program backjordas. Användaren får t.ex. ett samtal eller ett popup-fönster från ett annat program inträffar, men du vill att sessionen ska vara aktiv så att användaren kan återuppta mediet från den punkt då det avbröts.
 
-1. Identifiera händelsen från spelaren för uppspelning av media och/eller återupptagning av media från paus och samtal `trackPlay`.
+1. Identifiera händelsen från spelaren för uppspelning av media och/eller återupptagning av media från paus och anrop `trackPlay`.
 
    ```java
    // trackPlay()
@@ -172,9 +172,9 @@ I den här dokumentationen beskrivs spårning i version 2.x av SDK.
 
    >[!TIP]
    >
-   >Detta kan vara samma händelsekälla som användes i steg 4. Se till att varje `trackPause()` API-anrop har parats med följande `trackPlay()` API-anrop när medieuppspelningen återupptas.
+   >Detta kan vara samma händelsekälla som användes i steg 4. Kontrollera att varje `trackPause()` API-anrop är parat med ett följande `trackPlay()` API-anrop när medieuppspelningen återupptas.
 
 Mer information om hur du spårar uppspelning finns i följande:
 
-* Spårningsscenarier: [VOD-uppspelning utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md)
-* Exempelspelare som ingår i Android SDK för ett fullständigt spårningsexempel.
+* Spåra scenarier: [VOD-uppspelning utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md)
+* Exempelspelare som ingår i Android SDK för ett komplett spårningsexempel.

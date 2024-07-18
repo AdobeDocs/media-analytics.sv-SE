@@ -7,7 +7,7 @@ feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
 workflow-type: tm+mt
-source-wordcount: '198'
+source-wordcount: '200'
 ht-degree: 2%
 
 ---
@@ -18,13 +18,13 @@ Följande instruktioner ger vägledning vid implementering med 2.x SDK:er.
 
 >[!IMPORTANT]
 >
->Om du implementerar en 1.x-version av SDK kan du hämta utvecklarhandboken här: [Hämta SDK:er.](/help/getting-started/download-sdks.md)
+>Om du implementerar en 1.x-version av SDK kan du hämta utvecklarhandboken här: [Hämta SDK.](/help/getting-started/download-sdks.md)
 
 ## Implementera kapitelspårning
 
-1. Identifiera när kapitelstarthändelsen inträffar och skapa `ChapterObject` med hjälp av kapitelinformationen.
+1. Identifiera när kapitelstarthändelsen inträffar och skapa `ChapterObject`-instansen med hjälp av kapitelinformationen.
 
-   `ChapterObject` kapitelspårningsreferens:
+   Referens för `ChapterObject`-kapitelspårning:
 
    >[!NOTE]
    >
@@ -57,7 +57,7 @@ Följande instruktioner ger vägledning vid implementering med 2.x SDK:er.
    chapterMetadata.put("segmentInfo", "Sample Segment Info");
    ```
 
-1. Börja spåra kapiteluppspelningen genom att anropa `ChapterStart` i `MediaHeartbeat` instans:
+1. Om du vill börja spåra kapiteluppspelningen anropar du händelsen `ChapterStart` i instansen `MediaHeartbeat`:
 
    ```java
    public void onChapterStart(Observable observable, Object data) {  
@@ -67,7 +67,7 @@ Följande instruktioner ger vägledning vid implementering med 2.x SDK:er.
    }
    ```
 
-1. Anropa `ChapterComplete` i `MediaHeartbeat` instans:
+1. När uppspelningen når kapitelslutsgränsen, enligt definitionen i din egen kod, anropar du händelsen `ChapterComplete` i instansen `MediaHeartbeat`:
 
    ```java
    public void onChapterComplete(Observable observable, Object data) {  
@@ -75,7 +75,7 @@ Följande instruktioner ger vägledning vid implementering med 2.x SDK:er.
    }
    ```
 
-1. Om kapiteluppspelningen inte slutfördes på grund av att användaren valde att hoppa över kapitlet (till exempel om användaren söker utanför kapitelgränsen), anropar du `ChapterSkip` i MediaHeartbeat-instansen:
+1. Om kapiteluppspelningen inte slutfördes eftersom användaren valde att hoppa över kapitlet (till exempel om användaren söker utanför kapitelgränsen), anropar du händelsen `ChapterSkip` i MediaHeartbeat-instansen:
 
    ```java
    public void onChapterSkip(Observable observable, Object data) {  

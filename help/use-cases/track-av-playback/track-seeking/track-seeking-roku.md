@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Spåra sökning på Roku{#track-seeking-on-roku}
 
-Följande instruktioner ger vägledning för implementering i alla 2.x SDK:er.
+Följande anvisningar ger vägledning för implementering i alla 2.x SDK:er.
 
 >[!IMPORTANT]
 >
@@ -29,7 +29,7 @@ Följande instruktioner ger vägledning för implementering i alla 2.x SDK:er.
 
 ## Implementeringssökning
 
-1. Lyssna efter uppspelningssökningshändelser från mediespelaren och spåra sökning med hjälp av `SeekStart` -händelse.
+1. Lyssna efter uppspelningssökningshändelser från mediespelaren och spåra sökning med händelsen `SeekStart` vid sökningen efter starthändelser.
 
    ```
    seekContextData = {}
@@ -37,7 +37,7 @@ Följande instruktioner ger vägledning för implementering i alla 2.x SDK:er.
    ADBMobile().mediaTrackEvent(MEDIA_SEEK_START, seekInfo, seekContextData)
    ```
 
-1. Spåra slutet av sökningen med `SeekComplete` -händelse.
+1. Spåra slutet av sökningen med händelsen `SeekComplete` när du söker efter ett fullständigt meddelande från mediespelaren.
 
    ```
    seekContextData = {}
@@ -45,4 +45,4 @@ Följande instruktioner ger vägledning för implementering i alla 2.x SDK:er.
    ADBMobile().mediaTrackEvent(MEDIA_SEEK_COMPLETE, seekInfo, seekContextData)
    ```
 
-Se spårningsscenariot [VOD-uppspelning med sökning i huvudinnehållet](/help/use-cases/tracking-scenarios/vod-seeking.md) för mer information.
+Mer information finns i spårningsscenariot [VOD-uppspelning med sökning i huvudinnehållet](/help/use-cases/tracking-scenarios/vod-seeking.md).

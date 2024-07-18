@@ -8,11 +8,11 @@ role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
 workflow-type: tm+mt
 source-wordcount: '100'
-ht-degree: 9%
+ht-degree: 3%
 
 ---
 
-# Implementera standardmetadata i iOS{#implement-standard-metadata-on-ios}
+# Implementera standardmetadata på iOS{#implement-standard-metadata-on-ios}
 
 ## Metadatakonstanter
 
@@ -23,11 +23,11 @@ ht-degree: 9%
 ## Implementering
 
 1. Skapa en ordlista med standardvärdepar för metadata med `ADBStandardMetadataKeys`
-   [iOS metadatanycklar](/help/use-cases/track-av-playback/impl-std-metadata/ios-metadata-keys.md)
+   [IOS metadatanycklar](/help/use-cases/track-av-playback/impl-std-metadata/ios-metadata-keys.md)
 
-1. Ställ in standardmetadataordlistan på `MediaInfo` `ADBMediaObject` -instans med standardmetadatakonstanten för metadata.
+1. Ange standardmetadataordlistan för instansen `MediaInfo` `ADBMediaObject` med standardmetadatakonstanten för metadata.
 
-1. Ange detta `MediaInfo` när objektet anropades `trackSessionStart` API.
+1. Ange det här `MediaInfo`-objektet när `trackSessionStart`-API:t anropas.
 
 ### Exempel på implementering
 

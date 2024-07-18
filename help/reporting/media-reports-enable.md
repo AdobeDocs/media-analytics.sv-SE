@@ -16,18 +16,18 @@ ht-degree: 0%
 
 Varje rapportsvit som samlar in mediemätningar måste konfigureras innan mediedata skickas.
 
-Avancerade kunder kan bara använda mediepanelerna i Analysis Workspace efter att Media Core har aktiverats och spårning har aktiverats för [Upplevelsekvalitet](/help/use-cases/track-qos/track-qos-overview.md).
+Avancerade kunder kan bara använda mediepanelerna i Analysis Workspace efter att Media Core har aktiverats och spårning har aktiverats för [upplevelsekvalitet](/help/use-cases/track-qos/track-qos-overview.md).
 
 >[!TIP]
 >
 >För att kunna utnyttja de nya funktionerna bör befintliga kunder som använder direktuppspelade medier återaktivera mediespårning för sina RSID-enheter.
 
-1. I [Rapporter och analyser](https://my.omniture.com/login/) klicka **[!UICONTROL Admin > Report Suites].**
-1. Välj de rapportsviter där du samlar in mediedata och klicka på **[!UICONTROL Edit Settings > Media Management > Media Reporting].**
+1. I [Rapporter och analyser](https://my.omniture.com/login/) klickar du på **[!UICONTROL Admin > Report Suites].**
+1. Markera de rapportsviter där du samlar in mediedata och klicka på **[!UICONTROL Edit Settings > Media Management > Media Reporting].**
 
    ![](assets/media-reporting.png)
 
-1. På **[!UICONTROL Media Reporting]** sida, aktivera **[!UICONTROL Media Core],** och aktivera **[!UICONTROL Media Ads],** **[!UICONTROL Media Chapters],** och **[!UICONTROL Media Quality].**
+1. På sidan **[!UICONTROL Media Reporting]** aktiverar du **[!UICONTROL Media Core],** och kan aktivera **[!UICONTROL Media Ads],** **[!UICONTROL Media Chapters],** och **[!UICONTROL Media Quality].**
 
    Mediemätningen innehåller följande moduler:
 
@@ -35,7 +35,7 @@ Avancerade kunder kan bara använda mediepanelerna i Analysis Workspace efter at
 
      Huvudmediemätning används för medieinnehåll. Detta använder Solution (eller Custom) eVars för att hålla reda på innehåll, innehållstyp, innehållspelarens namn och innehållskanal. Lösningshändelser (eller anpassade händelser) kommer att användas för Media Starts, Content Starts, Content Completes och Content Time Spent.
 
-   * **Media Ads**
+   * **Medieannonser**
 
      Mätning av mediereklam används för mätning av annonser i medieinnehållet. Här används Solution Vvars för att mäta Ad, Ad Player Name, Ad Pod och Ad i Pod Position. Lösningshändelser kommer att användas för annonsstart, Ad Completes, Ad Time Spent och Video Time Spent.
 
@@ -47,7 +47,7 @@ Avancerade kunder kan bara använda mediepanelerna i Analysis Workspace efter at
 
      Videokvalitetsmätning används för att mäta innehållets kvalitet vid uppspelning. Detta använder Solution eVars för att lagra tid för start, bufferthändelser, total buffertvaraktighet, växlar för bithastighet, genomsnittlig bithastighet, fel och uteslutna bildrutor. Lösningshändelser kommer att användas för Tid att starta, Drops före start, Buffer-påverkade strömmar, Buffer Events, Total Buffer Duration, Bitrate Change Impached Streams, Bitrate Changes, Meg Bitrate, Error Impact Streams, Error Events, Dropped Frame Impached Streams och Dropped Frames.
 
-   * **Video- och videoredigeringsmetadata**
+   * **Metadata för video- och videoannonsering**
 
      Metadata kan bifogas till ett medium och/eller en annons för att ytterligare beskriva och kategorisera mediet/annonsen. Standardiserade medier och annonseringsmetadata samlas in via lösningens variabler och klassificeringar. Värden som ska ingå: Show, Season, Episod, Asset ID, Genre, First Air Date, First Digital Date, Content Rating, Originator, Network, Show Type, Ad Loads, MVPD, Authorized, Day Part, Media Session ID, Advertiser, Campaign ID och Creative ID.
 
@@ -59,17 +59,17 @@ Avancerade kunder kan bara använda mediepanelerna i Analysis Workspace efter at
 
    Om du ännu inte håller på att spåra annonser, kapitel eller uppspelningskvalitet kan du när som helst aktivera ytterligare alternativ.
 
-1. Klicka **[!UICONTROL Save].**
+1. Klicka på **[!UICONTROL Save].**
 
-   Om den här rapportsviten redan har konfigurerats för att samla in mediedata klickar du på **[!UICONTROL Save]** visas ytterligare en konfigurationssida. Om du ser **[!UICONTROL Media Core measurement]** fortsätter du till nästa steg.
+   Om den här rapportsviten redan har konfigurerats för att samla in mediedata visas ytterligare en konfigurationssida när du har klickat på **[!UICONTROL Save]**. Om sidan **[!UICONTROL Media Core measurement]** visas fortsätter du till nästa steg.
 
-1. (Villkorligt) På **[!UICONTROL Media Core measurement]** väljer du att fortsätta använda anpassade variabler eller väljer att använda lösningsvariabler.
+1. (Villkorligt) På sidan **[!UICONTROL Media Core measurement]** väljer du att fortsätta använda anpassade variabler eller väljer att använda lösningsvariabler.
 
    | Alternativ | Anteckningar |
    | --- | --- |
-   | Fortsätt använda anpassade variabler | Pros and Cons:<ul> <li> **Yrkesverksamma:** Innehållstrendningen fortsätter att fungera efter migreringen. </li> <li> **Kon:** Kräver att du behåller två anpassade eVars-variabler och tre anpassade händelser som tilldelats media. Du återanvänder en anpassad eVar och en anpassad händelse. </li> </ul> Så här fortsätter du använda anpassade variabler: <ol> <li>Välj **[!UICONTROL Use Custom Variables,]** klicka sedan på **[!UICONTROL Save.]** </li> <li>Mappa aktuella anpassade e-variabler och händelser när du uppmanas till det och klicka sedan på **[!UICONTROL Save:]** </li> </ol> |
-   | Migrera till lösningsvariabler | Pros and Cons:<ul> <li> **Yrkesverksamma:** Du återanvänder tre anpassade eVars-variabler och fyra anpassade händelser. </li> <li> **Kon:** Du förlorar **alla** historisk trender och jämförelse för medierapporter. Det innebär att du inte kan trenda innehållsvyer eller den innehållstid som spelas upp för datum innan du migrerar till pulsslag. </li> </ul> **Begränsning:**  Migrera inte till lösningsvariabler såvida du inte är säker på att du inte vill bevara den här trendningen. Alla kunder bör använda lösningens variabler och bearbetningsregler för att lägga in mediedata i befintliga props och eVars endast om de behöver bevara den historiska kontinuiteten. Så här migrerar du till lösningsvariabler: Välj **[!UICONTROL Use Solution Variables]** och klicka **[!UICONTROL Save].** <br><br> VIKTIGT! Om du migrerar till lösningsvariabler förlorar du **alla** historisk trender och jämförelse för medierapporter. |
+   | Fortsätt använda anpassade variabler | Pros and Cons:<ul> <li> **Pros:** Innehållstrendningen fortsätter att fungera efter migreringen. </li> <li> **Kon:** Kräver att du behåller två anpassade eVars-variabler och tre anpassade händelser som tilldelats media. Du återanvänder en anpassad eVar och en anpassad händelse. </li> </ul> Så här fortsätter du använda anpassade variabler: <ol> <li>Välj **[!UICONTROL Use Custom Variables,]** och klicka sedan på **[!UICONTROL Save.]** </li> <li>Mappa dina aktuella anpassade eVars och händelser när du uppmanas till det och klicka sedan på **[!UICONTROL Save:]** </li> </ol> |
+   | Migrera till lösningsvariabler | Pros and Cons:<ul> <li> **Pros:** Du återanvänder tre anpassade eVars-variabler och fyra anpassade händelser. </li> <li> **Kon:** Du förlorar **all** historik för trender och jämförelse för medierapporter. Det innebär att du inte kan trenda innehållsvyer eller den innehållstid som spelas upp för datum innan du migrerar till pulsslag. </li> </ul> **Begränsning:** Migrera inte till lösningsvariabler såvida du inte är säker på att du inte vill bevara den här trendningen. Alla kunder bör använda lösningens variabler och bearbetningsregler för att lägga in mediedata i befintliga props och eVars endast om de behöver bevara den historiska kontinuiteten. Så här migrerar du till lösningsvariabler: Välj **[!UICONTROL Use Solution Variables]** och klicka på **[!UICONTROL Save].** <br><br> VIKTIGT! Om du migrerar till lösningsvariabler förlorar du **alla** historiktrender och jämförelse för medierapporter. |
 
 >[!IMPORTANT]
 >
->Ändra inte klassificeringsnamnen för variabler som listas i Metrics and metadata tables (t.ex. [Parametrar för ljud och video](/help/implementation/variables/audio-video-parameters.md) som beskrivs där under Rapportering/Reserverad variabel som&quot;klassificering&quot;. Medieklassificeringarna definieras när en rapportsserie aktiveras för mediespårning. Ibland lägger Adobe till nya egenskaper, och när detta inträffar måste kunderna aktivera sina rapporteringsprogram på nytt för att få tillgång till de nya medieegenskaperna. Under uppdateringsprocessen avgör Adobe om klassificeringarna är aktiverade genom att kontrollera namnen på variablerna. Om någon av dem saknas lägger Adobe till de saknade igen.
+>Ändra inte klassificeringsnamnen för variabler som listas i Metrics- och metadatatabeller (t.ex. [Audio- och Video-parametrar](/help/implementation/variables/audio-video-parameters.md) som beskrivs där under Rapportera/Reserverad variabel som &quot;klassificering&quot;. Medieklassificeringarna definieras när en rapportsserie aktiveras för mediespårning. Ibland lägger Adobe till nya egenskaper, och när detta inträffar måste kunderna aktivera sina rapporteringsprogram på nytt för att få tillgång till de nya medieegenskaperna. Under uppdateringsprocessen avgör Adobe om klassificeringarna är aktiverade genom att kontrollera namnen på variablerna. Om någon av dem saknas lägger Adobe till de saknade igen.

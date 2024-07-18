@@ -8,7 +8,7 @@ role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
 workflow-type: tm+mt
 source-wordcount: '279'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
@@ -20,22 +20,22 @@ Detta scenario omfattar uppspelning av VOD-innehåll med en överhoppad annons.
 
 ### En VOD med en överhoppad pre-roll-annons
 
-Detta är samma scenario som [VOD-uppspelning med pre-roll-annonser](/help/use-cases/tracking-scenarios/vod-preroll-ads.md), förutom att programmet har en bestämmelse som gör att användaren kan hoppa över annonsen, kanske genom att klicka på en hoppknapp.
+Det här är samma scenario som [VOD-uppspelning med pre-roll-annonser](/help/use-cases/tracking-scenarios/vod-preroll-ads.md), förutom att programmet har en bestämmelse om att användaren ska kunna hoppa över annonsen, kanske genom att klicka på en hoppknapp.
 
 | Utlösare   | Heartbeat-metod  | Nätverksanrop   | Anteckningar   |
 | --- | --- | --- | --- |
-| Användaren klickar [!UICONTROL Play] | `trackSessionStart()` | Börja med Analytics-innehåll, starta pulsslagsinnehåll | Mätbiblioteket är ovetande om att det finns en annons före rullning. Dessa nätverksanrop är fortfarande exakt likadana som [VOD-uppspelning utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md) scenario. |
-| Annonsen börjar. | <ul> <li> `trackEvent:AdBreakStart` </li> <li> `trackEvent:AdStart` </li> </ul> | Start, pulsslag och start för annonsering i Analytics |  |
-| Den första bildrutan i annonsen spelas upp. | `trackPlay()` | Heartbeat Ad Play | När annonsinnehållet spelas upp före huvudinnehållet börjar hjärtslagen när annonsen börjar spelas upp. |
-| Annonen spelas. |  | Ad Heartbeats |  |
-| Annonsen hoppas över. | `trackEvent:trackAdSkip` |  | Det finns inget och fullständigt nätverksanrop. |
-| Innehållet spelas upp. |  | Hjärtslag för innehåll | Dessa nätverksanrop är exakt likadana som [VOD-uppspelning utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md) scenario. |
-| Innehållet spelas upp helt. | `trackComplete()` | Hearsbeat-innehåll slutfört | Detta nätverksanrop är exakt detsamma som [VOD-uppspelning utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md) scenario. |
-| Sessionen är över. | `trackSessionEnd()` |  | `SessionEnd` |
+| Användaren klickar på [!UICONTROL Play] | `trackSessionStart()` | Börja med Analytics-innehåll, starta pulsslagsinnehåll | Mätbiblioteket är ovetande om att det finns en annons före rullning. Dessa nätverksanrop är fortfarande exakt likadana som [VOD-uppspelning utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md). |
+| Annonsen börjar. | <ul> <li> `trackEvent:AdBreakStart` </li> <li> `trackEvent:AdStart` </li> </ul> | Start, pulsslag och start för annonsering i Analytics | |
+| Den första bildrutan spelas upp. | `trackPlay()` | Heartbeat Ad Play | När annonsinnehållet spelas upp före huvudinnehållet börjar hjärtslagen när annonsen börjar spelas upp. |
+| Annonen spelas. | | Ad Heartbeats | |
+| Annonsen hoppas över. | `trackEvent:trackAdSkip` | | Det finns inget och fullständigt nätverkssamtal. |
+| Innehållet spelas upp. | | Hjärtslag för innehåll | Dessa nätverksanrop är exakt likadana som den [VOD-uppspelning utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md). |
+| Innehållet spelas upp helt. | `trackComplete()` | Passa upp innehållet fullständigt | Detta nätverksanrop är exakt detsamma som [VOD-uppspelningen utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md). |
+| Sessionen är över. | `trackSessionEnd()` | | `SessionEnd` |
 
 ## Parametrar {#parameters}
 
-Parametrarna är identiska med parametrarna i [VOD-uppspelning med pre-roll-annonser](/help/use-cases/tracking-scenarios/vod-preroll-ads.md) -scenariot, förutom att det inte finns något fullständigt annonserings- eller reklamavbrott.
+Parametrarna är identiska med parametrarna i [VOD-uppspelningen med pre-roll ads](/help/use-cases/tracking-scenarios/vod-preroll-ads.md) -scenariot, förutom att det inte finns något fullständigt och inget fullständigt annonseringsanrop.
 
 ## Exempelkod {#sample-code}
 

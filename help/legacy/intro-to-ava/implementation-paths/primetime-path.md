@@ -6,8 +6,8 @@ feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: 0c1382c9c4f1488fba81575097d154301a9b8e70
 workflow-type: tm+mt
-source-wordcount: '257'
-ht-degree: 1%
+source-wordcount: '254'
+ht-degree: 0%
 
 ---
 
@@ -22,12 +22,12 @@ Primetime eliminerar komplexiteten i att nå, tjäna pengar på och aktivera glo
 * Stöd för exakt mätning av linjära och VOD-innehållstyper.
 * Stöd för mätning av annonsbrytningar med (eller utan) dynamisk annonsinfogning.
 * TVSDK:s smidiga annonsinfogningsmodell möjliggör analyser som direkt mäter annonsuppspelningen, vilket ökar noggrannheten.
-* Robusta uppsättningar av händelser och metadata för att säkerställa exakthet i QoS-buffring eller avbrott i mobilanslutningen samt användarinteraktioner som sökning, pausning och bakgrundsbeläggning på mobilen.
+* Robusta uppsättningar av händelser och metadata för att säkerställa exakthet över QoS-buffring eller avbrott i den mobila anslutningen och slutanvändarinteraktioner som sökning, pausning och bakgrundsbeläggning på mobilen.
 <!--
 * Integrated support for Nielsen DTVR (linear) with ID3 metadata and DCR with CMS metadata.
 -->
 
-TVSDK är redan integrerat med Media SDK, vilket gör implementeringen mycket enklare och snabbare på alla plattformar som stöds. <!--Primetime also supports the partnership with Nielsen.--> Om du vill utnyttja Primetime måste du följa samma riktlinjer och krav som finns i [Klientsidan](/help/legacy/intro-to-ava/implementation-paths/client-side-path.md) tillsammans med följande dokument för din/dina plattform/plattformar: [Användarhandbok för Primetime.](https://helpx.adobe.com/se/primetime/user-guide.html)
+TVSDK är redan integrerat med Media SDK, vilket gör implementeringen mycket enklare och snabbare på alla plattformar som stöds. <!--Primetime also supports the partnership with Nielsen.--> Om du vill utnyttja Primetime måste du följa samma riktlinjer och krav som finns i [Klientsidan](/help/legacy/intro-to-ava/implementation-paths/client-side-path.md) tillsammans med följande dokument för plattformarna: [Användarhandbok för Primetime.](https://helpx.adobe.com/se/primetime/user-guide.html)
 
 >[!NOTE]
 >

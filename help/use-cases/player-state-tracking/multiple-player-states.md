@@ -7,7 +7,7 @@ exl-id: 7a512a81-a6d1-4d0c-a4fe-91e9b11419db
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
 workflow-type: tm+mt
 source-wordcount: '186'
-ht-degree: 4%
+ht-degree: 0%
 
 ---
 
@@ -25,14 +25,17 @@ Den aktuella implementeringen tillåter båda scenarierna:
 - `stateStart(fullScreen)` - t1
 - `stateEnd(fullScreen)` - t2
 
-Detta kräver dock att du utfärdar flera `stateStart` och `stateEnd` händelser för att signalera flera samtidiga statusförändringar. Ett nytt `statesUpdate` händelsetypen har implementerats, vilket avslutar en lista med lägen och startar en lista med nya lägen.
+Detta kräver dock att du utfärdar flera `stateStart`- och `stateEnd`-händelser för att signalera flera samtidiga statusändringar. I
+för att optimera det här vanliga beteendet har en ny `statesUpdate`-händelsetyp implementerats som avslutar en lista över lägen
+och startar en lista med nya lägen.
 
-Använda nya `statesUpdate` blir ovanstående lista över händelser:
+Med den nya `statesUpdate`-händelsen blir listan över händelser ovan:
 - `statesUpdate(statesEnd=[], statesStart=[pictureInPicture, mute])` - t0
 - `statesUpdate(statesEnd=[mute, pictureInPicture], statesStart=[fullScreen])` - t1
 - `statesUpdate(statesEnd=[fullScreen], statesStart=[])` - t2
 
-Antalet anrop om tillståndsuppdateringar har reducerats från sex till tre för samma beteende. Den sista händelsen kunde också ha varit en enkel `stateEnd(fullScreen)`.
+Antalet anrop om tillståndsuppdateringar har reducerats från sex till tre för samma beteende. Den sista händelsen
+kan också ha varit en enkel `stateEnd(fullScreen)`.
 
 ## API-implementering för Media Collection {#mpst-api}
 

@@ -7,8 +7,8 @@ feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
 workflow-type: tm+mt
-source-wordcount: '506'
-ht-degree: 2%
+source-wordcount: '510'
+ht-degree: 1%
 
 ---
 
@@ -20,7 +20,7 @@ Följande anvisningar ger vägledning vid implementering med SDK:er för 2.x.
 >
 >Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandböcker här: [Hämta SDK:er.](/help/getting-started/download-sdks.md)
 
-Annonsuppspelning inkluderar spårning av annonsbrytningar, start, slutförande av annonser och hopp för annonser. Använd mediespelarens API för att identifiera viktiga spelarhändelser och fylla i obligatoriska och valfria annonsvariabler. Se den omfattande listan med metadata här: [Annonsparametrar.](../../implementation/variables/ad-parameters.md)
+Annonsuppspelning inkluderar spårning av annonsbrytningar, start, slutförande av annonser och hopp för annonser. Använd mediespelarens API för att identifiera viktiga spelarhändelser och för att fylla i obligatoriska och valfria annonsvariabler. Se den omfattande listan med metadata här: [Lägg till parametrar.](../../implementation/variables/ad-parameters.md)
 
 ## Spelarhändelser {#player-events}
 
@@ -30,27 +30,27 @@ Annonsuppspelning inkluderar spårning av annonsbrytningar, start, slutförande 
 >[!NOTE]
 >Inklusive pre-roll
 
-* Skapa en `adBreak` objektinstans för annonsbrytningen. Exempel, `adBreakObject`.
+* Skapa en `adBreak`-objektinstans för annonsbrytningen. Exempel: `adBreakObject`.
 
-* Utlysning `trackEvent` för annonsbrytningen börja med `adBreakObject`.
+* Ring `trackEvent` för att annonsbrytningen ska börja med din `adBreakObject`.
 
 ### Alla annonsresurser börjar
 
-* Skapa en annonsobjektinstans för annonsresursen. Exempel, `adObject`.
-* Fyll i annonsens metadata, `adCustomMetadata`.
-* Utlysning `trackEvent` för annonsstart.
+* Skapa en annonsobjektinstans för annonsresursen. Exempel: `adObject`.
+* Fyll i annonsmetadata, `adCustomMetadata`.
+* Ring `trackEvent` för att starta annonsen.
 
-### Alla annonser är fullständiga
+### Alla annonser är slutförda
 
-* Utlysning `trackEvent` för att få veta allt.
+* Anropa `trackEvent` för att få annonsen klar.
 
 ### I annonshoppa
 
-* Utlysning `trackEvent` för annonsresan.
+* Anropa `trackEvent` för annonshoppa.
 
 ### On ad break complete
 
-* Utlysning `trackEvent` för annonsbrytningen.
+* Anropa `trackEvent` för att annonsbrytningen har slutförts.
 
 ## Implementera annonsspårning {#implement-ad-tracking}
 
@@ -66,9 +66,9 @@ Annonsuppspelning inkluderar spårning av annonsbrytningar, start, slutförande 
 
 ### Implementeringssteg
 
-1. Identifiera när annonsbrytningens gränser börjar, inklusive pre-roll, och skapa en `AdBreakObject` genom att använda annonsbrytningsinformationen.
+1. Identifiera när annonsbrytningsgränsen börjar, inklusive pre-roll, och skapa en `AdBreakObject` med hjälp av annonsbrytningsinformationen.
 
-   `AdBreakObject` referens:
+   `AdBreakObject`-referens:
 
    | Variabelnamn | Beskrivning | Obligatoriskt |
    | --- | --- | :---: |
@@ -76,11 +76,11 @@ Annonsuppspelning inkluderar spårning av annonsbrytningar, start, slutförande 
    | `position` | Annonsens nummerposition i innehållet, med början på 1. | Ja |
    | `startTime` | Spelhuvudets värde i början av annonsbrytningen. | Ja |
 
-1. Utlysning `trackEvent()` med `AdBreakStart` i `MediaHeartbeat` -instans för att börja spåra annonsbrytningen.
+1. Anropa `trackEvent()` med `AdBreakStart` i `MediaHeartbeat`-instansen för att börja spåra annonsbrytningen.
 
-1. Identifiera när annonsen börjar och skapa en `AdObject` -instans med annonsinformationen.
+1. Identifiera när annonsen startar och skapa en `AdObject`-instans med annonsinformationen.
 
-   `AdObject` referens:
+   `AdObject`-referens:
 
    | Variabelnamn | Beskrivning | Obligatoriskt |
    | --- | --- | :---: |
@@ -92,23 +92,23 @@ Annonsuppspelning inkluderar spårning av annonsbrytningar, start, slutförande 
 1. Du kan också bifoga standard- och/eller annonsmetadata till spårningssessionen via kontextdatavariabler.
 
    * **Standardannonsmetadata -** För standardannonsmetadata skapar du en ordlista med nyckelvärdepar för standardannonsmetadata med hjälp av tangenterna för din plattform.
-   * **Anpassade annonsmetadata -** För anpassade metadata skapar du ett variabelobjekt för de anpassade datavariablerna och fyller i med data för den aktuella annonsen.
+   * **Anpassade annonseringsmetadata -** Skapa ett variabelobjekt för anpassade datavariabler och fyll i med data för den aktuella annonsen för anpassade metadata.
 
-1. Utlysning `trackEvent()` med `AdStart` i `MediaHeartbeat` -instans för att börja spåra annonsuppspelningen.
+1. Anropa `trackEvent()` med händelsen `AdStart` i instansen `MediaHeartbeat` för att börja spåra annonsuppspelningen.
 
    Ta med en referens till din anpassade metadatavariabel (eller ett tomt objekt) som den tredje parametern i händelseanropet.
 
-1. När annonsuppspelningen är slut ringer du `trackEvent()` med `AdComplete` -händelse.
+1. När annonsuppspelningen når slutet av annonsen anropar du `trackEvent()` med händelsen `AdComplete`.
 
-1. Om annonsuppspelningen inte slutfördes eftersom användaren valde att hoppa över annonsen, ska du spåra `AdSkip` -händelse.
-1. Om det finns ytterligare annonser inom samma `AdBreak`, upprepa steg 3 till 7 igen.
-1. När annonsbrytningen är klar använder du `AdBreakComplete` -händelse för att spåra den.
+1. Om annonsuppspelningen inte slutfördes eftersom användaren valde att hoppa över annonsen, ska du spåra `AdSkip`-händelsen.
+1. Om det finns ytterligare annonser i samma `AdBreak` upprepar du steg 3 till 7 igen.
+1. När annonsbrytningen är klar använder du händelsen `AdBreakComplete` för att spåra den.
 
 >[!IMPORTANT]
 >
 >Kontrollera att du INTE ökar spelhuvudet för innehållsspelaren (`l:event:playhead`) under annonsuppspelning (`s:asset:type=ad`). Om du gör det påverkas Content Time Spent-måtten negativt.
 
-I följande exempelkod används JavaScript 2.x SDK för en HTML5-mediespelare.
+I följande exempelkod används JavaScript 2.x SDK för en mediespelare i HTML 5.
 
 ```js
 /* Call on ad break start */

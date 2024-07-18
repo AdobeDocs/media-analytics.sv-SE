@@ -4,26 +4,26 @@ description: Hämta JSON-rapportdata för samtidiga visningsprogram
 uuid: 9168f114-2459-4951-a06c-57b735d09dc0
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
 workflow-type: tm+mt
-source-wordcount: '164'
-ht-degree: 4%
+source-wordcount: '156'
+ht-degree: 0%
 
 ---
 
 
 # Hämta JSON-rapportdata för samtidiga visningsprogram{#get-concurrent-viewers-json-report-data}
 
-Du kan hämta rapportdata för samtidiga visningsprogram med _*1.4 version*_ av API:erna för analys:
-* [API:er för Analytics](https://github.com/AdobeDocs/analytics-1.4-apis)
+Du kan hämta rapportdata för samtidiga visningsprogram med _*1.4-versionen*_ av API:erna för analys:
+* [API:er för analys](https://github.com/AdobeDocs/analytics-1.4-apis)
 * [Swagger](https://adobedocs.github.io/analytics-1.4-apis/swagger-docs.html#/Report/Report.Get)
 
 1. Filtrera data med ett segment som bygger på användargränssnittet. Om du vill filtrera efter ett visst innehålls-ID skapar du ett nytt segment.
-1. Ange `elements` -> `id` i begärandetexten till `videoconcurrentviewers`.
+1. Ange `elements` -> `id` i begärandetexten som `videoconcurrentviewers`.
 1. Begär tillräckligt med data. Adobe rekommenderar 3200 datapunkter för att säkerställa att det inte finns några luckor i data.
 
-   * Det dataområde som du anger i rapporten samlar in alla samtidiga visningsprogramdata _när videosessionen avslutades._
+   * Det dataintervall som du anger i rapporten samlar in alla samtidiga visningsprogramdata _när videosessionen avslutades._
 Du måste alltså redovisa sessioner som börjar en dag och slutar efter midnatt (dvs. nästa dag).
 
-   * Begär mer än en dag data, men i din analys _*endast använda den första dagen i data.*_
+   * Begär mer än en dag data, men i din analys _*använd bara den första dagen i data.*_
 
 Nyttolasten för en exempelbegäran för det här scenariot skulle se ut så här:
 

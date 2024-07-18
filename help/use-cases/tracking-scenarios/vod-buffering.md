@@ -7,8 +7,8 @@ feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
 workflow-type: tm+mt
-source-wordcount: '227'
-ht-degree: 2%
+source-wordcount: '228'
+ht-degree: 0%
 
 ---
 
@@ -18,18 +18,18 @@ ht-degree: 2%
 
 I det här scenariot inträffar viss buffring när VOD-innehåll spelas upp.
 
-Om inget annat anges är nätverksanropen i det här scenariot samma som anropen i [VOD-uppspelning utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md) scenario.
+Om inget annat anges är nätverksanropen i det här scenariot samma som anropen i [VOD-uppspelningen utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md).
 
 | Utlösare   | Heartbeat-metod   | Nätverksanrop   | Anteckningar   |
 |---|---|---|---|
-| Användaren klickar **[!UICONTROL Play]** | `trackSessionStart` | Börja med Analytics-innehåll, starta pulsslagsinnehåll | Det här kan vara en användare som klickar **[!UICONTROL Play]** eller en automatisk uppspelningshändelse. |
-| Den första bildrutan i videon spelas upp. | `trackPlay` | Spela upp pulsslagsinnehåll | Den här metoden utlöser timern. Hjärtslag skickas var 10:e sekund så länge uppspelningen fortsätter. |
+| Användaren klickar på **[!UICONTROL Play]** | `trackSessionStart` | Börja med Analytics-innehåll, starta pulsslagsinnehåll | Detta kan vara en användare som klickar på **[!UICONTROL Play]** eller en automatisk uppspelningshändelse. |
+| Den första bildrutan i videon spelas. | `trackPlay` | Spela upp pulsslagsinnehåll | Den här metoden utlöser timern. Hjärtslag skickas var 10:e sekund så länge uppspelningen fortsätter. |
 | Innehållet spelas upp. |  | Hjärtslag för innehåll |  |
 | Bufferten börjar. | `trackEvent:BufferStart` | Heartbeat-buffert |  |
 | Innehållet är buffrat. |  | Hjärtslag för innehåll |  |
 | Bufferten är klar. | `trackEvent:BufferComplete` | Heartbeat-buffert, Heartbeat Play |  |
 | Innehållet spelas upp. |  | Hjärtslag för innehåll |  |
-| Innehållet spelas upp helt. | `trackComplete` | Hearsbeat-innehåll slutfört | Slutet av spelhuvudet nåddes. |
+| Innehållet spelas upp helt. | `trackComplete` | Passa upp innehållet fullständigt | Slutet av spelhuvudet nåddes. |
 | Sessionen är över. | `trackSessionEnd` |  | `SessionEnd` betyder slutet på en visningssession. Detta API måste anropas även om användaren inte ser videon tills den är klar. |
 
 ## Parametrar {#parameters}

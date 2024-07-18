@@ -18,11 +18,11 @@ Följande anvisningar ger vägledning för implementering i alla 2.x SDK:er.
 
 >[!IMPORTANT]
 >
->Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandboken här: [Ladda ned SDK:er.](/help/getting-started/download-sdks.md)
+>Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandboken här: [Hämta SDK:er.](/help/getting-started/download-sdks.md)
 
 ## Implementera QoS
 
-1. Identifiera när bithastigheten ändras under medieuppspelning och skapa `MediaObject` -instans med QoS-informationen.
+1. Identifiera när bithastigheten ändras under medieuppspelning och skapa instansen `MediaObject` med QoS-informationen.
 
    QoSObject-variabler:
 
@@ -47,8 +47,8 @@ Följande anvisningar ger vägledning för implementering i alla 2.x SDK:er.
                                     <DROPPED_FRAMES>);
    ```
 
-1. Se till att `getQoSObject()` returnerar den senaste QoS-informationen.
-1. När uppspelningen växlar bithastigheter anropar du `BitrateChange` i Media Heartbeat-instansen:
+1. Kontrollera att metoden `getQoSObject()` returnerar den senaste QoS-informationen.
+1. När uppspelningen växlar bithastigheter anropar du händelsen `BitrateChange` i instansen Mediepulsslag:
 
    ```java
    public void onBitrateChange(Observable observable, Object data) {  

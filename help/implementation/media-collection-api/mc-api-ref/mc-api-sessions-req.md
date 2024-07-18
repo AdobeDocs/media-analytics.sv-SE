@@ -7,8 +7,8 @@ feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
 workflow-type: tm+mt
-source-wordcount: '130'
-ht-degree: 5%
+source-wordcount: '133'
+ht-degree: 3%
 
 ---
 
@@ -61,15 +61,15 @@ Begärandetexten måste vara JSON och ha samma struktur som exempelbegärandetex
 }
 ```
 
-* `playerTime` (Obligatoriskt)
+* `playerTime` (obligatoriskt)
    * `playhead` - Om innehållet är live måste spelhuvudet vara den aktuella sekunden på dagen, 0 &lt;= spelhuvud &lt; 86400. Om innehållet spelas in måste spelhuvudet vara den aktuella sekunden av innehållet, 0 &lt;= spelhuvud &lt; innehållslängd. Värdet kan vara ett flyttal.
-   * `ts` - Tidsstämpel. måste vara i millisekunder, UTC (Coordinated Universal Time).
-* `eventType` (Obligatoriskt)
+   * `ts` - Tidsstämpel; måste vara i millisekunder; UTC (Coordinated Universal Time).
+* `eventType` (obligatoriskt)
 
-   **Giltigt värde:** `sessionStart`
-* `params` (Obligatoriskt)
-* `customMetadata` (Valfritt)
-* `qoeData` (Valfritt)
+  **Giltigt värde:** `sessionStart`
+* `params` (obligatoriskt)
+* `customMetadata` (valfritt)
+* `qoeData` (valfritt)
 
 ## Svar
 
@@ -88,7 +88,7 @@ Age: 0
 Via: 1.1 wsg.sanjose08
 ```
 
-`Location:` header - `/api/v1/` innehåller API-versionen. The part after `[…]sessions/` är sessions-ID.
+`Location:` header - `/api/v1/`-delen innehåller API-versionen. Delen efter `[…]sessions/` är sessions-ID.
 
 ## Svarskoder
 

@@ -36,8 +36,8 @@ Mer information om Adobe Mobile SDK-dokumentationen finns i [Android SDK 4.x for
 
 1. Lägg till din hämtade Media SDK i ditt projekt.
 
-   1. Expandera Android zip-filen (t.ex. `MediaSDK-android-v2.*.zip`).
-   1. Verifiera att `MediaSDK.jar` filen finns i `libs/` katalog.
+   1. Expandera zip-filen för Android (t.ex. `MediaSDK-android-v2.*.zip`).
+   1. Kontrollera att filen `MediaSDK.jar` finns i katalogen `libs/`.
 
    1. Lägg till biblioteket i ditt projekt.
 
@@ -45,10 +45,10 @@ Mer information om Adobe Mobile SDK-dokumentationen finns i [Android SDK 4.x for
 
       1. Högerklicka på projektet på panelen **[!UICONTROL Project navigation]**.
       1. Välj **[!UICONTROL Open Module Settings]**.
-      1. Under **[!UICONTROL Project Settings]**, markera **[!UICONTROL Libraries]**.
+      1. Välj **[!UICONTROL Libraries]** under **[!UICONTROL Project Settings]**.
 
-      1. Klicka **[!UICONTROL +]** för att lägga till ett nytt bibliotek.
-      1. Välj **[!UICONTROL Java]** och navigera till `MediaSDK.jar` -fil.
+      1. Klicka på **[!UICONTROL +]** om du vill lägga till ett nytt bibliotek.
+      1. Välj **[!UICONTROL Java]** och navigera till filen `MediaSDK.jar`.
 
       1. Välj de moduler där du vill använda det mobila biblioteket.
       1. Klicka på **[!UICONTROL Apply]** och sedan på **[!UICONTROL OK]** för att stänga fönstret Modulinställningar.
@@ -56,13 +56,13 @@ Mer information om Adobe Mobile SDK-dokumentationen finns i [Android SDK 4.x for
       **Eclipse:**
 
       1. Högerklicka på projektnamnet i Eclipse IDE.
-      1. Klicka  **[!UICONTROL Build Path]** > **[!UICONTROL Add External Archives]** .
+      1. Klicka på **[!UICONTROL Build Path]** > **[!UICONTROL Add External Archives]** .
       1. Välj `MediaSDK.jar`.
       1. Klicka på **[!UICONTROL Open]**.
-      1. Högerklicka på projektet igen och klicka på  **[!UICONTROL Build Path]** > **[!UICONTROL Configure Build Path]** .
+      1. Högerklicka på projektet igen och klicka på **[!UICONTROL Build Path]** > **[!UICONTROL Configure Build Path]** .
       1. Klicka på flikarna **[!UICONTROL Order]** och **[!UICONTROL Export]**.
 
-      1. Se till att `MediaSDK.jar` filen är markerad.
+      1. Kontrollera att filen `MediaSDK.jar` är markerad.
 
 1. Importera biblioteket.
 
@@ -73,7 +73,7 @@ Mer information om Adobe Mobile SDK-dokumentationen finns i [Android SDK 4.x for
    import com.adobe.primetime.va.simple.MediaObject;
    ```
 
-1. Skapa `MediaHeartbeatConfig` -instans.
+1. Skapa instansen `MediaHeartbeatConfig`.
 
    Här följer ett exempel på `MediaHeartbeatConfig`-initiering:
 
@@ -88,7 +88,7 @@ Mer information om Adobe Mobile SDK-dokumentationen finns i [Android SDK 4.x for
    config.debugLogging = <true/false>;
    ```
 
-1. Implementera `MediaHeartbeatDelegate` gränssnitt.
+1. Implementera gränssnittet `MediaHeartbeatDelegate`.
 
    ```java
    public class VideoAnalyticsProvider implements Observer, MediaHeartbeatDelegate{}
@@ -112,9 +112,9 @@ Mer information om Adobe Mobile SDK-dokumentationen finns i [Android SDK 4.x for
    }
    ```
 
-1. Skapa `MediaHeartbeat` -instans.
+1. Skapa instansen `MediaHeartbeat`.
 
-   Använd `MediaHeartbeatConfig` -instans och `MediaHertbeatDelegate` instans för att skapa `MediaHeartbeat` -instans.
+   Använd instansen `MediaHeartbeatConfig` och instansen `MediaHertbeatDelegate` för att skapa instansen `MediaHeartbeat`.
 
    ```java
    // Replace <MediaHertbeatDelegate> with your delegate instance
@@ -124,22 +124,22 @@ Mer information om Adobe Mobile SDK-dokumentationen finns i [Android SDK 4.x for
 
    >[!IMPORTANT]
    >
-   >Se till att `MediaHeartbeat` -instansen är tillgänglig och *inte frigörs förrän i slutet av sessionen*. Den här instansen kommer att användas för alla följande spårningshändelser.
+   >Kontrollera att din `MediaHeartbeat`-instans är tillgänglig och att *inte frigörs förrän i slutet av sessionen*. Den här instansen kommer att användas för alla följande spårningshändelser.
 
-**Lägga till programbehörigheter**
+**Lägger till programbehörigheter**
 
 Ditt program som använder Media SDK kräver följande behörigheter för att skicka data i spårningsanrop:
 
 * `INTERNET`
 * `ACCESS_NETWORK_STATE`
 
-Lägg till följande rader i `AndroidManifest.xml` i programprojektkatalogen:
+Om du vill lägga till de här behörigheterna lägger du till följande rader i filen `AndroidManifest.xml` i programmets projektkatalog:
 
 * `<uses-permission android:name="android.permission.INTERNET" />`
 * `<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />`
 
-**Migrera från version 1.x till 2.x i Android**
+**Migrerar från version 1.x till 2.x i Android**
 
-I version 2.x konsolideras alla publika metoder i `com.adobe.primetime.va.simple.MediaHeartbeat` för att underlätta för utvecklare. Dessutom konsolideras nu alla konfigurationer i `com.adobe.primetime.va.simple.MediaHeartbeatConfig` klassen.
+I version 2.x konsolideras alla publika metoder i klassen `com.adobe.primetime.va.simple.MediaHeartbeat` så att det blir enklare för utvecklare. Dessutom konsolideras nu alla konfigurationer i klassen `com.adobe.primetime.va.simple.MediaHeartbeatConfig`.
 
 Mer information om hur du migrerar från 1.x till 2.x finns i dokumentationen för den äldre implementeringen.

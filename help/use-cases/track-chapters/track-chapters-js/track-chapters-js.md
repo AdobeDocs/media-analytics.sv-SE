@@ -1,5 +1,5 @@
 ---
-title: Lär dig att spåra kapitel och segment med JavaScript 2.x
+title: Lär dig spåra kapitel och segment med JavaScript 2.x
 description: Lär dig hur du implementerar kapitel- och segmentspårning med Media SDK i webbläsarappar (JS).
 uuid: ef99edf7-7a77-46c4-8429-bc9a856b98d6
 exl-id: 9964ec0c-cce9-4ccc-bd26-a2b3fcdc3e28
@@ -7,7 +7,7 @@ feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
 workflow-type: tm+mt
-source-wordcount: '198'
+source-wordcount: '200'
 ht-degree: 2%
 
 ---
@@ -18,11 +18,11 @@ Följande instruktioner ger vägledning vid implementering med 2.x SDK:er.
 
 >[!IMPORTANT]
 >
-> Om du implementerar en 1.x-version av SDK kan du hämta utvecklarhandboken här: [Hämta SDK:er.](/help/getting-started/download-sdks.md)
+> Om du implementerar en 1.x-version av SDK kan du hämta utvecklarhandboken här: [Hämta SDK.](/help/getting-started/download-sdks.md)
 
-1. Identifiera när kapitelstarthändelsen inträffar och skapa `ChapterObject` med hjälp av kapitelinformationen.
+1. Identifiera när kapitelstarthändelsen inträffar och skapa `ChapterObject`-instansen med hjälp av kapitelinformationen.
 
-   `ChapterObject` kapitelspårningsreferens:
+   Referens för `ChapterObject`-kapitelspårning:
 
    >[!NOTE]
    >
@@ -55,7 +55,7 @@ Följande instruktioner ger vägledning vid implementering med 2.x SDK:er.
    };
    ```
 
-1. Börja spåra kapiteluppspelningen genom att anropa `ChapterStart` i `MediaHeartbeat` instans:
+1. Om du vill börja spåra kapiteluppspelningen anropar du händelsen `ChapterStart` i instansen `MediaHeartbeat`:
 
    ```js
    _onChapterStart = function() {
@@ -65,7 +65,7 @@ Följande instruktioner ger vägledning vid implementering med 2.x SDK:er.
    };
    ```
 
-1. Anropa `ChapterComplete` i `MediaHeartbeat` instans:
+1. När uppspelningen når kapitelslutsgränsen, enligt definitionen i din egen kod, anropar du händelsen `ChapterComplete` i instansen `MediaHeartbeat`:
 
    ```js
    _onChapterComplete = function() {
@@ -73,7 +73,7 @@ Följande instruktioner ger vägledning vid implementering med 2.x SDK:er.
    };
    ```
 
-1. Om kapiteluppspelningen inte slutfördes på grund av att användaren valde att hoppa över kapitlet (till exempel om användaren söker utanför kapitelgränsen), anropar du `ChapterSkip` i MediaHeartbeat-instansen:
+1. Om kapiteluppspelningen inte slutfördes eftersom användaren valde att hoppa över kapitlet (till exempel om användaren söker utanför kapitelgränsen), anropar du händelsen `ChapterSkip` i MediaHeartbeat-instansen:
 
    ```js
    _onChapterSkip = function() {

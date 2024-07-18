@@ -25,7 +25,7 @@ För enheter som för närvarande inte har SDK-stöd eller i situationer där du
 
 Tabellen nedan visar de enheter som stöds för närvarande. Om en enhet inte finns med i listan kontaktar du kundtjänst eller lösningskonsult för att få information om enhetens status.
 
-Mer information om hur du implementerar Media i Edge finns i [Installera tillägget Streaming Media Collection med Experience Platform Edge](/help/implementation/edge/implementation-edge.md).
+Mer information om hur du implementerar media på Edge finns i [Installera tillägget för direktuppspelad mediesamling med Experience Platform Edge](/help/implementation/edge/implementation-edge.md).
 
 | Strömmande plattformar och enheter | | Media för Edge Network SDK/Extension | Media Edge API | Media Extension med taggar eller AEP Mobile SDK | Media SDK | Media Collection API |
 |:---|:---|:---:|:---:|:---:|:---:|:---:|

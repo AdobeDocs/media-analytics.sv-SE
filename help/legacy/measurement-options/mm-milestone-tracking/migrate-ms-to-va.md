@@ -7,8 +7,8 @@ feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: 9ba64b68efec5dd8b52010ac1a13afd7703448d0
 workflow-type: tm+mt
-source-wordcount: '690'
-ht-degree: 11%
+source-wordcount: '707'
+ht-degree: 12%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 11%
 
 ## Översikt {#overview}
 
-De centrala begreppen för videomätning är desamma för Milestone och Media Analytics, som tar videospelarhändelser och mappar dem till analysmetoder, samtidigt som de hämtar metadata och värden för spelaren och mappar dem till analysvariabler. Medieanalyslösningen växte ut ur milstolpen, så många av metoderna och mätvärdena är desamma, men konfigurationsstrategin och koden har ändrats avsevärt. Det bör vara möjligt att uppdatera händelsekoden för spelaren så att den pekar på de nya Media Analytics-metoderna. Se [SDK-översikt](/help/legacy/setup/legacy-setup-overview.md) och [Spårningsöversikt](/help/use-cases/track-av-playback/track-core-overview.md) om du vill ha mer information om hur du implementerar Media Analytics.
+De centrala begreppen för videomätning är desamma för Milestone och Media Analytics, som tar videospelarhändelser och mappar dem till analysmetoder, samtidigt som de hämtar metadata och värden för spelaren och mappar dem till analysvariabler. Medieanalyslösningen växte ut ur milstolpen, så många av metoderna och mätvärdena är desamma, men konfigurationsstrategin och koden har ändrats avsevärt. Det bör vara möjligt att uppdatera händelsekoden för spelaren så att den pekar på de nya Media Analytics-metoderna. Mer information om hur du implementerar Media Analytics finns i [SDK-översikt](/help/legacy/setup/legacy-setup-overview.md) och [Spårningsöversikt](/help/use-cases/track-av-playback/track-core-overview.md).
 
 I följande tabeller finns översättningar mellan milstolpe-lösningen och Media Analytics-lösningen.
 
@@ -24,18 +24,18 @@ I följande tabeller finns översättningar mellan milstolpe-lösningen och Medi
 
 ### Variabelreferens
 
-| Mått för milstolpe | Variabeltyp | Media Analytics-mått |
+| Milstolpmått | Variabeltyp | Media Analytics-mått |
 | --- | --- | --- |
-| Innehåll | eVar <br> Standardförfallodatum: Besök | Innehåll |
+| Innehåll | Standardförfallodatum för eVar <br>: Besök | Innehåll |
 | Innehållstyp | eVar <br> Standardförfallodatum: Sidvy | Innehållstyp |
-| Innehållstid | Händelse <br> Typ: Räknare | Innehållstid |
-| Videostart | Händelse <br> Typ: Räknare | Videostart |
-| Videon slutförs | Händelse <br> Typ: Räknare | Innehållet har slutförts |
+| Innehållstid | Händelse <br> typ: Räknare | Innehållstid |
+| Videostart | Händelse <br> typ: Räknare | Videostart |
+| Videon slutförs | Händelse <br> typ: Räknare | Innehållet har slutförts |
 
 
 ### Mediemodvariabler
 
-| Milstolpe | Syntax för milstolpe | Medieanalys | Syntax för medieanalys |
+| Milstolpe | Syntax för milstolpe | Media Analytics | Syntax för medieanalys |
 | --- | --- | --- | --- |
 | Media.trackUsingContextData | `s.Media.trackUsingContextData` <br> `  = true;` | Ej tillämpligt | Alla Media Analytics-data skickas endast med kontextdata. |
 | Media.contextDataMapping | `s.Media.contextDataMapping = {` <br> `  "a.media.name":"eVar2,prop2",` <br> `  "a.media.segment":"eVar3",` <br> `  "a.contentType":"eVar1",` <br> `  "a.media.timePlayed":"event3",` <br> `  "a.media.view":"event1",` <br> `  "a.media.segmentView":"event2",` <br> `  "a.media.complete":"event7",` <br> `  "a.media.milestones": {` <br> `    25:"event4",` <br> `    50:"event5",` <br> `    75:"event6"` <br> `  }` <br> `};` | Ej tillämpligt | Kontextdata för Media Analytics fylls automatiskt i i reserverade variabler. Mappning till eVars, props och händelser som jag inte längre behöver i implementeringskoden. Kunder kan mappa kontextdata till variabler med bearbetningsregler. |
@@ -44,7 +44,7 @@ I följande tabeller finns översättningar mellan milstolpe-lösningen och Medi
 
 ### Valfria variabler
 
-| Milstolpe | Syntax för milstolpe | Medieanalys | Syntax för medieanalys |
+| Milstolpe | Syntax för milstolpe | Media Analytics | Syntax för medieanalys |
 | --- | --- | --- | --- |
 | Media.autoTrack | `s.Media.autoTrack` <br> `  = true;` | Ej tillämpligt | Vi tillhandahåller inte längre färdiga spelarmappningar. |
 | Media.autoTrackNetStreams | `s.Media.` <br> `  autoTrackNetStreams` <br> `  = true` | Ej tillämpligt | Vi tillhandahåller inte längre färdiga spelarmappningar. |
@@ -59,7 +59,7 @@ I följande tabeller finns översättningar mellan milstolpe-lösningen och Medi
 
 ### Annonsspårningsvariabler
 
-| Milstolpe | Syntax för milstolpe | Medieanalys | Syntax för medieanalys |
+| Milstolpe | Syntax för milstolpe | Media Analytics | Syntax för medieanalys |
 | --- | --- | --- | --- |
 | Media.adTrackSeconds | `s.Media.` <br> `  adTrackSeconds` <br> `  = 15` | Ej tillämpligt | Media Analytics är inställt på 10 sekunder för innehåll och 1 sekund för annonser. Inga andra alternativ är tillgängliga. |
 | Media.adTrackMilestones | `s.Media.` <br> `  adTrackMilestones` <br> `  = "25,50,75";` | Ej tillämpligt | Förloppsmarkörer anges inte som standard för annonser. Använd beräknade mätvärden för att skapa annonsförloppsmarkörer. |
@@ -69,7 +69,7 @@ I följande tabeller finns översättningar mellan milstolpe-lösningen och Medi
 
 ### Media Module-metoder
 
-| Milstolpe | Syntax för milstolpe | Medieanalys | Syntax för medieanalys |
+| Milstolpe | Syntax för milstolpe | Media Analytics | Syntax för medieanalys |
 | --- | --- | --- | --- |
 | Media.open | `s.Media.open(` <br> `  mediaName,` <br> `  mediaLength,` <br> `  mediaPlayerName)` | trackSessionStart | `trackSessionStart(` <br> `  mediaObject,` <br> `  contextData)` |
 | mediaName | `mediaName`: (obligatoriskt) Namnet på videon som du vill att den ska visas i videorapporter. | name | `createMediaObject(` <br> `  name,` <br> `  mediaId,` <br> `  length,` <br> `  streamType)` |
@@ -78,11 +78,11 @@ I följande tabeller finns översättningar mellan milstolpe-lösningen och Medi
 | Media.openAd | `s.Media.openAd(` <br> `  name,` <br> `  length,` <br> `  playerName,` <br> `  parentName,` <br> `  parentPod,` <br> `  parentPodPosition,` <br> `  CPM)` | trackEvent | `mediaHeartbeat.trackEvent(` <br> `  MediaHeartbeat.` <br> `    Event.` <br> `    AdBreakStart, ` <br> `  adBreakObject);` <br> `...` <br> `trackEvent(` <br> `  MediaHeartbeat.` <br> `    Event.` <br> `    AdStart, ` <br> `  adObject, ` <br> `  adCustomMetadata);` |
 | name | `name`: (obligatoriskt) Annonsens namn eller ID. | name | `createAdObject(` <br> `  name, ` <br> `  adId, ` <br> `  position, ` <br> `  length)` |
 | length | `length`: (obligatoriskt) Annonsens längd. | length | `createAdObject(` <br> `  name, ` <br> `  adId, ` <br> `  position, ` <br> `  length)` |
-| playerName | `playerName`: (obligatoriskt) Namnet på den mediespelare som användes för att visa annonsen. | playerName | `MediaHeartbeatConfig.` <br> `  playerName` |
-| parentName | `parentName`: Namnet eller ID för det primära innehållet där annonsen är inbäddad. | Ej tillämpligt | Ärvs automatiskt. |
+| playerName | `playerName`: (obligatoriskt) Namnet på mediespelaren som användes för att visa annonsen. | playerName | `MediaHeartbeatConfig.` <br> `  playerName` |
+| parentName | `parentName`: Namnet eller ID för det primära innehåll där annonsen är inbäddad. | Ej tillämpligt | Ärvs automatiskt. |
 | parentPod | `parentPod`: Positionen i annonsens primära innehåll spelades upp. | position | `createAdBreakObject(` <br> `  name, ` <br> `  position, ` <br> `  startTime)` |
 | parentPodPosition | `parentPodPosition`: Positionen i rutan där annonsen spelas upp. | position | `createAdObject(` <br> `  name, ` <br> `  adId, ` <br> `  position, ` <br> `  length)` |
-| CPM | `CPM`: CPM eller krypterad CPM (prefix med ett &quot;~&quot;) som gäller för den här uppspelningen. | Ej tillämpligt | Inte tillgängligt som standard i Media Analytics. |
+| CPM | `CPM`: CPM eller krypterad CPM (prefix with a &quot;~&quot;) som gäller för den här uppspelningen. | Ej tillämpligt | Inte tillgängligt som standard i Media Analytics. |
 | Media.click | `s.Media.click(name, offset)` | Ej tillämpligt | Använd ett anpassat länkanalysanrop för att spåra klickningar. |
 | Media.close | `s.Media.close(mediaName)` | trackSessionEnd | `trackSessionEnd()` |
 | Media.complete | `s.Media.complete(name, offset)` | trackComplete | `trackComplete()` |

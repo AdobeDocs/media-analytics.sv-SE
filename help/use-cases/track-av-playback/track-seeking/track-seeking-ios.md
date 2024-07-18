@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Spåra sökning på iOS{#track-seeking-on-ios}
 
-Följande instruktioner ger vägledning för implementering i alla 2.x SDK:er.
+Följande anvisningar ger vägledning för implementering i alla 2.x SDK:er.
 
 >[!IMPORTANT]
 >
@@ -29,7 +29,7 @@ Följande instruktioner ger vägledning för implementering i alla 2.x SDK:er.
 
 ## Implementeringssökning
 
-1. Lyssna efter uppspelningssökningshändelser från mediespelaren och spåra sökning med hjälp av `SeekStart` händelse:
+1. Lyssna efter uppspelningssökningshändelser från mediespelaren och spåra sökning med händelsen `SeekStart` vid sökningen efter starthändelse:
 
    ```
    - (void)onSeekStart:(NSNotification *)notification {
@@ -39,7 +39,7 @@ Följande instruktioner ger vägledning för implementering i alla 2.x SDK:er.
    }
    ```
 
-1. Spåra slutet av sökningen med `SeekComplete` händelse:
+1. Spåra slutet av sökningen med händelsen `SeekComplete` när du söker efter ett fullständigt meddelande från mediespelaren:
 
    ```
    - (void)onSeekComplete:(NSNotification *)notification {
@@ -49,4 +49,4 @@ Följande instruktioner ger vägledning för implementering i alla 2.x SDK:er.
    }
    ```
 
-Se spårningsscenariot [VOD-uppspelning med sökning i huvudinnehållet](/help/use-cases/tracking-scenarios/vod-seeking.md) för mer information.
+Mer information finns i spårningsscenariot [VOD-uppspelning med sökning i huvudinnehållet](/help/use-cases/tracking-scenarios/vod-seeking.md).

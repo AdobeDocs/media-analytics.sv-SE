@@ -18,9 +18,9 @@ Följande anvisningar ger vägledning för implementering i alla 2.x SDK:er.
 
 >[!IMPORTANT]
 >
->Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandboken här: [Ladda ned SDK:er.](/help/getting-started/download-sdks.md)
+>Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandboken här: [Hämta SDK:er.](/help/getting-started/download-sdks.md)
 
-Kvalitetsspårning innefattar QoS (Quality of Service) och felspårning, båda är valfria element och är **not** krävs för implementering av mediespårning. Du kan använda mediespelarens API för att identifiera variabler som är relaterade till QoS och felspårning. Här är de viktigaste elementen för att hålla koll på upplevelsekvaliteten:
+Kvalitetsspårning innefattar QoS (Quality of Service) och felspårning, båda är valfria element och **krävs inte** för viktiga implementeringar av mediespårning. Du kan använda mediespelarens API för att identifiera variabler som är relaterade till QoS och felspårning. Här är de viktigaste elementen för att hålla koll på upplevelsekvaliteten:
 
 ## Spelarhändelser {#player-events}
 
@@ -30,11 +30,11 @@ Skapa eller uppdatera QoS-objektinstansen för uppspelningen. [QoS API-referens]
 
 ### Alla bithastighetsändringshändelser
 
-Utlysning `trackEvent(Media.Heartbeat.Event.BitrateChange);`
+Ring `trackEvent(Media.Heartbeat.Event.BitrateChange);`
 
 ## Implementera QOS
 
-1. Identifiera när någon av mätvärdena för QOS ändras under medieuppspelning genom att skapa `MediaObject` genom att använda QoS-informationen och uppdatera den nya QoS-informationen.
+1. Identifiera när något av QOS-måtten ändras under medieuppspelning, skapa `MediaObject` med QoS-informationen och uppdatera den nya QoS-informationen.
 
    QoSObject-variabler:
 
@@ -49,8 +49,8 @@ Utlysning `trackEvent(Media.Heartbeat.Event.BitrateChange);`
    | `fps` | FPS-värde | Ja |
    | `droppedFrames` | Antal uteslutna bildrutor | Ja |
 
-1. Se till att `getQoSObject()` returnerar den senaste QoS-informationen.
-1. När uppspelningen växlar bithastigheter anropar du `BitrateChange` i Media Heartbeat-instansen.
+1. Kontrollera att metoden `getQoSObject()` returnerar den senaste QoS-informationen.
+1. När uppspelningen växlar bithastigheter anropar du händelsen `BitrateChange` i instansen Mediepulsslag.
 
    >[!IMPORTANT]
    >

@@ -18,13 +18,13 @@ Följande instruktioner ger vägledning vid implementering med 2.x SDK:er.
 
 >[!IMPORTANT]
 >
-> Om du implementerar en 1.x-version av SDK kan du hämta utvecklarhandboken här: [Ladda ned SDK:er.](/help/getting-started/download-sdks.md)
+> Om du implementerar en 1.x-version av SDK kan du hämta utvecklarhandboken här: [Hämta SDK.](/help/getting-started/download-sdks.md)
 
 ## Implementera standardannonsmetadata
 
-1. Identifiera när kapitelstarthändelsen inträffar och skapa `ChapterObject` med hjälp av kapitelinformationen.
+1. Identifiera när kapitelstarthändelsen inträffar och skapa `ChapterObject`-instansen med hjälp av kapitelinformationen.
 
-   `ChapterObject` kapitelspårningsreferens:
+   Referens för `ChapterObject`-kapitelspårning:
 
    >[!NOTE]
    >
@@ -56,20 +56,20 @@ Följande instruktioner ger vägledning vid implementering med 2.x SDK:er.
    chapterContextData["seg_info"] = "seg_info"
    ```
 
-1. Börja spåra kapiteluppspelningen genom att anropa `ChapterStart` -händelsen i `MediaHeartbeat` instans:
+1. Om du vill börja spåra kapiteluppspelningen anropar du händelsen `ChapterStart` i instansen `MediaHeartbeat`:
 
    ```
    ADBMobile().mediaTrackEvent(MEDIA_CHAPTER_START, chapterInfo, chapterContextData)
    ```
 
-1. När uppspelningen når kapitelslutsgränsen, som definieras av din egen kod, anropar du `ChapterComplete` -händelsen i `MediaHeartbeat` -instans.
+1. När uppspelningen når kapitelslutsgränsen, enligt definitionen i din egen kod, anropar du händelsen `ChapterComplete` i instansen `MediaHeartbeat`.
 
    ```
    chapterContextData = {}
    ADBMobile().mediaTrackEvent(MEDIA_CHAPTER_COMPLETE, chapterInfo, chapterContextData)
    ```
 
-1. Om kapiteluppspelningen inte slutfördes på grund av att användaren valde att hoppa över kapitlet (till exempel om användaren söker utanför kapitelgränsen), anropar du `ChapterSkip` i MediaHeartbeat-instansen.
+1. Om kapiteluppspelningen inte slutfördes eftersom användaren valde att hoppa över kapitlet (till exempel om användaren söker utanför kapitelgränsen) anropar du händelsen `ChapterSkip` i MediaHeartbeat-instansen.
 
    ```
    chapterContextData = {}

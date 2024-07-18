@@ -1,5 +1,5 @@
 ---
-title: Återuppta inaktiva sessioner
+title: Återupptar inaktiva sessioner
 description: Lär dig hur du återtar en inaktiv session.
 uuid: 3ff1205d-7bbe-4016-9bd7-6e34b7862c4c
 exl-id: ee4cf7f5-5788-4d35-a04d-4ed714ccd663
@@ -7,8 +7,8 @@ feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
 workflow-type: tm+mt
-source-wordcount: '158'
-ht-degree: 3%
+source-wordcount: '159'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +23,7 @@ Media SDK spårar automatiskt hur lång medieuppspelningen är i ett av följand
 * Stängd
 * Buffring
 
-Om en mediespårningssession är inaktiv i mer än 30 minuter stängs sessionen automatiskt. Om användaren återupptar efter en tidigare inaktiv videospårningssession (`trackPlay`) skapar Media Heartbeat automatiskt en ny videosession med den videoinformation och de metadata som använts tidigare och skickar en CV-händelse. Mer information finns i [Parametrar för ljud och video.](/help/implementation/variables/audio-video-parameters.md)
+Om en mediespårningssession är inaktiv i mer än 30 minuter stängs sessionen automatiskt. Om användaren återupptar efter en tidigare inaktiv videospårningssession (`trackPlay`) skapar Media Heartbeat automatiskt en ny videosession med den videoinformation och de metadata som användes tidigare och skickar en CV-händelse (CV). Mer information finns i [Parametrar för ljud och video.](/help/implementation/variables/audio-video-parameters.md)
 
 
 ## Återuppta tidigare stängd session manuellt

@@ -8,27 +8,27 @@ role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
 workflow-type: tm+mt
 source-wordcount: '274'
-ht-degree: 3%
+ht-degree: 0%
 
 ---
 
-# VOD-uppspelning med sökning i huvudinnehåll{#vod-playback-with-seeking-in-the-main-content}
+# VOD-uppspelning med sökning i huvudinnehållet{#vod-playback-with-seeking-in-the-main-content}
 
 ## Scenario {#scenario}
 
 Detta scenario omfattar sökning i huvudinnehållet under uppspelning.
 
-Detta är samma scenario som [VOD-uppspelning utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md) scenario, men en del av innehållet stegas igenom och en sökning utförs från en punkt i huvudinnehållet till en annan.
+Detta är samma scenario som för [VOD-uppspelningen utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md), men en del av innehållet stegas igenom och en sökning slutförs från en punkt i huvudinnehållet till en annan punkt.
 
 | Utlösare   | Heartbeat-metod   | Nätverksanrop   | Anteckningar   |
 | --- | --- | --- | --- |
-| Användaren klickar [!UICONTROL Play] | `trackSessionStart` | Börja med Analytics-innehåll, starta pulsslagsinnehåll | Mätbiblioteket är ovetande om att det finns en förrollsannons, så dessa nätverksanrop är identiska med [VOD-uppspelning utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md) scenario. |
+| Användaren klickar på [!UICONTROL Play] | `trackSessionStart` | Börja med Analytics-innehåll, starta pulsslagsinnehåll | Mätbiblioteket är ovetande om att det finns en förrollsannons, så dessa nätverksanrop är identiska med [VOD-uppspelningen utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md). |
 | Den första bildrutan i innehållet spelas upp. | `trackPlay` | Spela upp pulsslagsinnehåll | När kapitelinnehåll spelas upp före huvudinnehållet startar Heartslag när kapitlet börjar. |
-| Innehåll spelas upp |  | Hjärtslag för innehåll | Detta nätverksanrop är exakt detsamma som [VOD-uppspelning utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md) scenario. |
-| Användaren börjar söka efter innehåll | `trackSeekStart` |  | Inga hjärtslag går ut tills sökningen är klar, till exempel `trackSeekComplete` |
-| Sökningen har slutförts | `trackSeekComplete` |  | Hjärtslag börjar gå ut eftersom sökningen är klar.  Tips: Spelhuvudets värde ska representera det nya spelhuvudet efter sökningen. |
-| Innehållet är färdigt | `trackComplete` | Hearsbeat-innehåll slutfört | Detta nätverksanrop är exakt detsamma som [VOD-uppspelning utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md) scenario. |
-| Sessionen är över | `trackSessionEnd` |  | `SessionEnd` |
+| Innehåll spelas upp | | Hjärtslag för innehåll | Detta nätverksanrop är exakt detsamma som [VOD-uppspelningen utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md). |
+| Användaren börjar söka efter innehåll | `trackSeekStart` | | Inga pulsslag går ut tills sökningen är slutförd, till exempel `trackSeekComplete` |
+| Sökningen har slutförts | `trackSeekComplete` | | Hjärtslag börjar gå ut eftersom sökningen är klar.  Tips! Spelhuvudsvärdet ska representera det nya spelhuvudet efter sökningen. |
+| Innehållet är färdigt | `trackComplete` | Passa upp innehållet fullständigt | Detta nätverksanrop är exakt detsamma som [VOD-uppspelningen utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md). |
+| Sessionen är över | `trackSessionEnd` | | `SessionEnd` |
 
 ## Exempelkod {#sample-code}
 

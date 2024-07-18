@@ -8,10 +8,10 @@ role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
 workflow-type: tm+mt
 source-wordcount: '30'
-ht-degree: 26%
+ht-degree: 0%
 
 ---
 
 # OTT och Audience Manager{#ott-and-audience-manager}
 
-Mer information om hur du integrerar OTT-program med Audience Manager finns i [Audience Manager aktivering.](/help/legacy/intro-to-ava/am-enablement.md)
+Mer information om hur du integrerar OTT-program med Audience Manager finns i [Aktivera Audience Manager.](/help/legacy/intro-to-ava/am-enablement.md)

@@ -7,8 +7,8 @@ feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: c00c9850d5ea924cef6b4842ecb770df1e78eb21
 workflow-type: tm+mt
-source-wordcount: '362'
-ht-degree: 1%
+source-wordcount: '346'
+ht-degree: 0%
 
 ---
 
@@ -18,9 +18,9 @@ ht-degree: 1%
 
 Du kan kontrollera om spårningsaktivitet tillåts på en viss enhet:
 
-* **Mobilappar -** Media Extensions respekterar sekretessinställningarna i datainsamling. Om du vill avanmäla dig från spårning måste du konfigurera sekretess till [Utvalt i taggar](https://developer.adobe.com/client-sdks/documentation/getting-started/create-a-mobile-property/#create-a-mobile-property) eller [Uppdatera sekretessstatus för Mobile SDK](https://developer.adobe.com/client-sdks/resources/privacy-and-gdpr/#getprivacystatus).
-* **JavaScript-/webbläsarappar -** VA-biblioteket respekterar `VisitorAPI` sekretess- och alternativinställningar. Om du vill avanmäla spårning måste du avanmäla dig från Visitor API-tjänsten. Mer information om avanmälan och sekretess finns på [Adobe Experience Platform Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html).
-* **OTT-appar (Chromecast, Roku) -** OTT SDK:er tillhandahåller GDPR-klara API:er som gör att du kan ange `opt` statusflaggor för datainsamling och överföring samt för hämtning av lokalt lagrade identiteter.
+* **Mobilappar -** Medietilläggen respekterar sekretessinställningarna i datainsamling. Om du vill avanmäla dig från spårning måste du konfigurera sekretess till [Avanmäld i taggar](https://developer.adobe.com/client-sdks/documentation/getting-started/create-a-mobile-property/#create-a-mobile-property) eller [Uppdatera sekretessstatus i Mobile SDK](https://developer.adobe.com/client-sdks/resources/privacy-and-gdpr/#getprivacystatus).
+* **JavaScript-/webbläsarappar -** VA-biblioteket respekterar inställningarna för sekretess och avvisning i `VisitorAPI` . Om du vill avanmäla spårning måste du avanmäla dig från Visitor API-tjänsten. Mer information om avanmälan och sekretess finns i [Adobe Experience Platform Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html).
+* **OTT-appar (Chromecast, Roku) -** OTT SDK:er tillhandahåller GDPR-förberedda API:er (General Data Protection Regulation) som gör att du kan ange `opt`-statusflaggor för datainsamling och överföring samt hämta lokalt lagrade identiteter.
 
   >[!NOTE]
   >
@@ -28,9 +28,9 @@ Du kan kontrollera om spårningsaktivitet tillåts på en viss enhet:
 
   Du kan kontrollera om Analytics-data skickas på en viss enhet med följande inställningar:
 
-   * The `privacyDefault` i `ADBMobile.json` config-fil. Detta styr den inledande inställningen och kvarstår tills den ändras i koden.
+   * Inställningen `privacyDefault` i konfigurationsfilen `ADBMobile.json`. Detta styr den inledande inställningen och kvarstår tills den ändras i koden.
 
-   * The `ADBMobile().setPrivacyStatus()` -metod.
+   * Metoden `ADBMobile().setPrivacyStatus()`.
 
       * **Avanmäl dig:**
 
@@ -50,7 +50,7 @@ Du kan kontrollera om spårningsaktivitet tillåts på en viss enhet:
         >
         >När en användare väljer bort spårning rensas alla beständiga enhetsdata och ID:n tills användaren väljer tillbaka.
 
-      * **Anmäl dig igen:**
+      * **Välj tillbaka:**
 
          * **Chromecast:**
 
@@ -78,7 +78,7 @@ Du kan kontrollera om spårningsaktivitet tillåts på en viss enhet:
            ADBMobile().getPrivacyStatus()
            ```
 
-  När sekretessinställningarna har ändrats med `setPrivacyStatus`ändras ändringen permanent tills den ändras igen med den här metoden, eller så avinstalleras och installeras appen igen.
+  När sekretessinställningen har ändrats med `setPrivacyStatus` blir ändringen permanent tills den ändras igen med den här metoden, eller så avinstalleras och installeras appen igen.
 
 ## Hämtar lagrade identifierare (OTT-appar) {#retrieving-stored-identifiers-ott-apps}
 
@@ -86,14 +86,14 @@ Den här informationen hjälper dig att hämta lokalt lagrade användaridentitet
 
 >[!IMPORTANT]
 >
->Metoden för att hämta alla identifierare hämtar alla användaridentiteter som är kända och beständiga av SDK:n. Du måste anropa den här metoden **före** en användare avanmäler sig.
+>Metoden för att hämta alla identifierare hämtar alla användaridentiteter som är kända och beständiga av SDK:n. Du måste anropa den här metoden **innan** en användare avanmäler sig.
 
 De lokalt lagrade identiteterna returneras i en JSON-sträng som kan innehålla:
 
 * Företagskontext - IMS-organisations-ID
 * Användar-ID
 * Experience Cloud ID (MCID)
-* ID för datakälla (DPID, DPUUID)
+* Data-Source-id:n (DPID, DPUUID)
 * Analys-ID:n (AVID, AID, VID och associerade RSID)
 * Audience Manager ID (UUID)
 

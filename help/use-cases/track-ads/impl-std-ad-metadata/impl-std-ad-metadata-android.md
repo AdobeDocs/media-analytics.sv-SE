@@ -18,7 +18,7 @@ ht-degree: 0%
 
 | Konstantnamn | Beskrivning   |
 |---|---|
-| `MediaHeartbeat.MediaObjectKey.StandardAdMetadata` | Konstant för att bifoga standardannonsmetadata på annons `MediaObject`. |
+| `MediaHeartbeat.MediaObjectKey.StandardAdMetadata` | Konstant för att bifoga standardannonsmetadata på annonsen `MediaObject`. |
 
 ## Implementera standardannonsmetadata
 

@@ -14,10 +14,10 @@ ht-degree: 0%
 
 # Spåra buffring på Android{#track-buffering-on-android}
 
-Följande instruktioner ger vägledning för implementering i alla 2.x SDK:er.
+Följande anvisningar ger vägledning för implementering i alla 2.x SDK:er.
 
 >[!IMPORTANT]
->Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandboken här: [Ladda ned SDks.](/help/getting-started/download-sdks.md)
+>Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandboken här: [Hämta SDks.](/help/getting-started/download-sdks.md)
 
 ## Konstanter för buffertspårning
 
@@ -28,7 +28,7 @@ Följande instruktioner ger vägledning för implementering i alla 2.x SDK:er.
 
 ## Implementera buffring
 
-1. Lyssna efter uppspelningsbuffringshändelser från mediespelaren och vid meddelanden om starthändelser för buffert, spåra buffring med hjälp av `BufferStart` händelse:
+1. Lyssna efter uppspelningsbuffringshändelser från mediespelaren och spåra buffring med händelsen `BufferStart` vid meddelande om buffertstart:
 
    ```java
    public void onBufferStart(Observable observable, Object data) {  
@@ -36,7 +36,7 @@ Följande instruktioner ger vägledning för implementering i alla 2.x SDK:er.
    }
    ```
 
-1. Spåra slutet av buffringen med `BufferComplete` händelse:
+1. Spåra slutet av buffringen med händelsen `BufferComplete` när bufferten är klar från mediespelaren:
 
    ```java
    public void onBufferComplete(Observable observable, Object data) {  
@@ -44,4 +44,4 @@ Följande instruktioner ger vägledning för implementering i alla 2.x SDK:er.
    }
    ```
 
-Se spårningsscenariot [VOD-uppspelning med buffring](/help/use-cases/tracking-scenarios/vod-buffering.md) för mer information.
+Mer information finns i spårningsscenariot [VOD-uppspelning med buffring](/help/use-cases/tracking-scenarios/vod-buffering.md).

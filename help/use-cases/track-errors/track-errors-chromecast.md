@@ -7,14 +7,14 @@ feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
 workflow-type: tm+mt
-source-wordcount: '102'
+source-wordcount: '96'
 ht-degree: 0%
 
 ---
 
 # Spåra fel i Chromecast{#track-errors-on-chromecast}
 
-Följande instruktioner ger vägledning för implementering i alla 2.x SDK:er.
+Följande anvisningar ger vägledning för implementering i alla 2.x SDK:er.
 
 >[!IMPORTANT]
 >
@@ -30,4 +30,4 @@ Följande instruktioner ger vägledning för implementering i alla 2.x SDK:er.
 
 >[!NOTE]
 >
->Spårning av mediespelarfel stoppar inte mediespårningssessionen. Om mediaspelarfelet förhindrar att uppspelningen fortsätter kontrollerar du att mediespårningssessionen stängs genom att anropa `trackSessionEnd` efter anrop `trackError`.
+>Spårning av mediespelarfel kommer inte att stoppa mediespårningssessionen. Om mediespelarfelet förhindrar att uppspelningen fortsätter ska du kontrollera att mediespårningssessionen stängs genom att anropa `trackSessionEnd` efter att `trackError` har anropats.

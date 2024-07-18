@@ -15,7 +15,7 @@ ht-degree: 1%
 
 Informationen på den här sidan beskriver hur du installerar den fristående SDK för webben och konfigurerar JavaScript.
 
-Du kan också använda Adobe Media Analytics-tillägget för att implementera Adobe Streaming Media Collection-tillägget enligt beskrivningen i [Implementera Analytics med Media Analytics-tillägget](/help/implementation/media-sdk/setup/web-implementation-tags.md).
+Du kan också använda Adobe Media Analytics-tillägget för att implementera Adobe Streaming Media Collection-tillägget, vilket beskrivs i [Implementera Analytics med Media Analytics-tillägget](/help/implementation/media-sdk/setup/web-implementation-tags.md).
 
 ## Förutsättningar {#prerequesites}
 
@@ -27,31 +27,31 @@ Du kan också använda Adobe Media Analytics-tillägget för att implementera Ad
 
   Mer information finns i [Implementera analys med JavaScript](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html) och [Implementera Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-analytics.html).
 
-* **Inkludera följande API:er i mediespelaren**
+* **Ta med följande API:er i mediespelaren**
 
    * *Ett API för att prenumerera på spelarhändelser* - Media SDK kräver att du anropar en uppsättning enkla API:er när händelser inträffar i spelaren.
-   * *Ett API som tillhandahåller spelarinformation* - Detta innehåller information om hur du spelar upp media, annonser och kapitel.
+   * *Ett API som innehåller spelarinformation* - Detta innehåller information om media, annonser och kapitel som spelas upp just nu.
 
 ## Konfigurera JavaScript 3.x {#set-up-javascript}
 
-1. Lägg till [nedladdad](/help/getting-started/download-sdks.md) till ditt projekt. Skapa lokala referenser till klasserna.
+1. Lägg till ditt [hämtade](/help/getting-started/download-sdks.md)-bibliotek i ditt projekt. Skapa lokala referenser till klasserna.
 
-   1. Expandera `MediaSDK-js-v3*.zip` som du har laddat ned.
-   1. Verifiera att `MediaSDK.js` filen finns i `libs` katalog.
+   1. Expandera filen `MediaSDK-js-v3*.zip` som du hämtade.
+   1. Kontrollera att filen `MediaSDK.js` finns i katalogen `libs`.
 
-   1. Värd för `MediaSDK.js` -fil.
+   1. Värd för filen `MediaSDK.js`.
 
       Den här JavaScript-huvudfilen måste finnas på en webbserver som är tillgänglig för alla sidor på webbplatsen. Du behöver sökvägen till de här filerna för nästa steg.
 
    1. Referens `MediaSDK.js` på alla webbplatssidor.
 
-      Inkludera `MediaSDK` för JavaScript genom att lägga till följande kodrad i `<head>` eller `<body>` på varje sida. Exempel:
+      Inkludera `MediaSDK` för JavaScript genom att lägga till följande kodrad i taggen `<head>` eller `<body>` på varje sida. Exempel:
 
       ```html
       <script type="text/javascript" src="https://INSERT-DOMAIN-AND-PATH-TO-CODE-HERE/MediaSDK.js"></script>
       ```
 
-   1. Kontrollera att biblioteket har importerats `ADB.Media` exporteras på Window-objekt.
+   1. Om du snabbt vill verifiera att biblioteket har importerats, kontrollerar du att `ADB.Media` har exporterats till Window-objektet.
 
       >[!NOTE]
       >
@@ -59,7 +59,7 @@ Du kan också använda Adobe Media Analytics-tillägget för att implementera Ad
 
 1. Skapa en instans av `AppMeasurement` och konfigurera `visitor`.
 
-   Konfigurationen av Media SDK kräver en instans av `AppMeasurement` med `visitor` konfigurerad.
+   Media SDK-konfigurationen kräver en instans av `AppMeasurement` med `visitor` konfigurerad.
 
    ```js
     var appMeasurement = new AppMeasurement("<rsid>");
@@ -90,7 +90,7 @@ Du kan också använda Adobe Media Analytics-tillägget för att implementera Ad
     ADB.Media.configure(mediaConfig, appMeasurement);
    ```
 
-1. Skapa `MediaTracker` -instans.
+1. Skapa instansen `MediaTracker`.
 
    När Media SDK har konfigurerats kan spårningsinstanser för att spåra medieinnehåll skapas med `getInstance` API.
 
@@ -100,10 +100,10 @@ Du kan också använda Adobe Media Analytics-tillägget för att implementera Ad
 
    >[!IMPORTANT]
    >
-   >Se till att `tracker` -instansen är tillgänglig och tas inte bort förrän mediesessionen är slut. Den här instansen används för att spåra alla följande händelser för den sessionen.
+   >Se till att din `tracker`-instans är tillgänglig och inte tas bort förrän mediesessionen är slut. Den här instansen används för att spåra alla följande händelser för den sessionen.
 
 ## Migrera från JavaScript 2.x till 3.x
 
-Mer information om hur du migrerar från 2.x till 3.x finns i [2.x till 3.x-migrering.](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/MigrationGuide.html)
+Mer information om migrering från 2.x till 3.x finns i [2.x till 3.x-migrering.](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/MigrationGuide.html)
 
 Mer information om äldre innehåll finns i [Äldre implementeringar](/help/legacy/media-sdk/setup/setup-overview.md)

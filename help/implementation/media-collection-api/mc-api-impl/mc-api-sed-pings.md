@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # Skicka ping-händelser{#sending-ping-events}
 
-**Du måste utlösa pinghändelser var 10:e sekund, med början efter 10 sekunder av uppspelningen, oavsett andra API-händelser som du har skickat. Detta gäller både huvudinnehåll och annonsspårning.**
+**Du måste utlösa ping-händelser var 10:e sekund, med början efter 10 sekunder av uppspelningen, oavsett andra API-händelser som du har skickat. Detta gäller både huvudinnehåll och annonsspårning.**
 
-ping-händelserna är&quot;pulsslag&quot; i tillägget Streaming Media Collection. De enda parametrar som krävs för ett ping-anrop är `eventType: ping` tillsammans med `playerTime` objekt (spelhuvudets position och tidsstämpel).
+ping-händelserna är&quot;pulsslag&quot; i tillägget Streaming Media Collection. De enda obligatoriska parametrarna för ett ping-anrop är `eventType: ping` tillsammans med objektet `playerTime` (spelhuvudets position och tidsstämpel).
 
 I följande kodutdrag visas ett sätt att implementera en tidsbestämd pingmekanism för huvudinnehållet (10 sekunder):
 

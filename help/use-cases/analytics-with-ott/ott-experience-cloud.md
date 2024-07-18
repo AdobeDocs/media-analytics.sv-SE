@@ -8,7 +8,7 @@ role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
 workflow-type: tm+mt
 source-wordcount: '41'
-ht-degree: 26%
+ht-degree: 0%
 
 ---
 
@@ -16,5 +16,5 @@ ht-degree: 26%
 
 Mer information om hur du integrerar OTT-program med Experience Cloud finns i&quot;Konfigurera&quot;-avsnitten för Chromecast och Roku:
 
-* [Konfigurera Chromecast](/help/implementation/media-sdk/setup/set-up-chromecast.md)
+* [Konfigurera kromecast](/help/implementation/media-sdk/setup/set-up-chromecast.md)
 * [Konfigurera Roku](/help/implementation/media-sdk/setup/set-up-roku.md)

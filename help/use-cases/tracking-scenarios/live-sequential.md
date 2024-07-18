@@ -7,8 +7,8 @@ feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
 workflow-type: tm+mt
-source-wordcount: '519'
-ht-degree: 2%
+source-wordcount: '525'
+ht-degree: 0%
 
 ---
 
@@ -16,39 +16,39 @@ ht-degree: 2%
 
 ## Scenario {#scenario}
 
-I det här scenariot finns det en liveresurs utan annonser som spelas upp i 40 sekunder efter att liveströmmen anslutits.
+I det här scenariot finns det en liveresurs utan annonser som spelas upp i 40 sekunder efter att liveströmmen har anslutits.
 
-Detta är samma scenario som [VOD-uppspelning utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md) scenario, men en del av innehållet stegas igenom och en sökning utförs från en punkt i huvudinnehållet till en annan.
+Detta är samma scenario som för [VOD-uppspelningen utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md), men en del av innehållet stegas igenom och en sökning slutförs från en punkt i huvudinnehållet till en annan punkt.
 
 | Utlösare | Heartbeat-metod |  Nätverksanrop  |  Anteckningar   |
 | --- | --- | --- | --- |
-| Användaren klickar [!UICONTROL Play] | trackSessionStart | Börja med Analytics-innehåll, starta pulsslagsinnehåll | Mätbiblioteket är ovetande om att det finns en förrollsannons, så dessa nätverksanrop är identiska med [VOD-uppspelning utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md) scenario. |
+| Användaren klickar på [!UICONTROL Play] | trackSessionStart | Börja med Analytics-innehåll, starta pulsslagsinnehåll | Mätbiblioteket är ovetande om att det finns en förrollsannons, så dessa nätverksanrop är identiska med [VOD-uppspelningen utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md). |
 | Den första bildrutan i innehållet spelas upp. | trackPlay | Spela upp pulsslagsinnehåll | När kapitelinnehåll spelas upp före huvudinnehållet startar Heartslag när kapitlet börjar. |
-| Innehåll spelas upp |  | Hjärtslag för innehåll | Detta nätverksanrop är exakt detsamma som [VOD-uppspelning utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md) scenario. |
-| Session1 över (Episod1 avslutad) | trackComplete/trackSessionEnd | Hearsbeat-innehåll slutfört | Komplett innebär att session1 för det första avsnittet nåddes och sågs fullständigt. Innan du startar sessionen för nästa avsnitt måste den här sessionen avslutas. |
+| Innehåll spelas upp | | Hjärtslag för innehåll | Detta nätverksanrop är exakt detsamma som [VOD-uppspelningen utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md). |
+| Session1 över (Episod1 avslutad) | trackComplete/trackSessionEnd | Passa upp innehållet fullständigt | Komplett innebär att session1 för det första avsnittet nåddes och sågs fullständigt. Innan du startar sessionen för nästa avsnitt måste den här sessionen avslutas. |
 | Episod2 har startats (session2 har startats) | trackSessionStart | Start av pulsslaginnehåll för analysinnehåll | Detta beror på att användaren tittade på det första avsnittet och fortsatte att titta på ett annat avsnitt |
 | Mediets första bildruta | trackPlay | Spela upp pulsslagsinnehåll | Den här metoden utlöser timern och från och med nu skickas hjärtslag var 10:e sekund så länge uppspelningen fortsätter. |
-| Innehållsuppspelning |  | Hjärtslag för innehåll |  |
-| Sessionen är över (avsnitt 2 har avslutats) | trackComplete/trackSessionEnd | Hearsbeat-innehåll slutfört | Komplett innebär att session 2 för det andra avsnittet nåddes och sågs fullständigt. Innan du startar sessionen för nästa avsnitt måste den här sessionen avslutas. |
+| Innehållsuppspelning | | Hjärtslag för innehåll | |
+| Sessionen är över (avsnitt 2 har avslutats) | trackComplete/trackSessionEnd | Passa upp innehållet fullständigt | Komplett innebär att session 2 för det andra avsnittet nåddes och sågs fullständigt. Innan du startar sessionen för nästa avsnitt måste den här sessionen avslutas. |
 
 ## Parametrar {#parameters}
 
-### Starta pulsslagsinnehåll
+### Start för pulsslagsinnehåll
 
 | Parameter | Värde | Anteckningar |
 |---|---|---|
-| `s:sc:rsid` | &lt;Your Adobe Report Suite ID> |  |
-| `s:sc:tracking_serve` | &lt;Your Analytics Tracking Server URL> |  |
+| `s:sc:rsid` | &lt;Ditt Adobe Report Suite-ID> |  |
+| `s:sc:tracking_serve` | &lt;URL för analysspårningsserver> |  |
 | `s:user:mid` | `s:user:mid` | Ska matcha mittvärdet på Adobe Analytics Content Start Call |
 | `s:event:type` | `"start"` |  |
 | `s:asset:type` | `"main"` |  |
-| `s:asset:media_id` | &lt;Your Media Name> |  |
+| `s:asset:media_id` | &lt;Ditt medienamn> |  |
 | `s:stream:type` | `live` |  |
 | `s:meta:*` | *valfri* | Anpassade metadata för mediet |
 
 ## Spela upp pulsslagsinnehåll {#heartbeat-content-play}
 
-Detta ska se ut nästan exakt som när du anropar Heartbeat Content Start, men med den största skillnaden i &quot;s&quot;:event:type&quot;-parameter. Alla parametrar bör fortfarande finnas här.
+Detta ska se ut nästan exakt som anropet till Heartbeat Content Start, men med den största skillnaden i parametern&quot;s:event:type&quot;. Alla parametrar bör fortfarande finnas här.
 
 | Parameter | Värde | Anteckningar |
 |---|---|---|
@@ -64,9 +64,9 @@ I innehållets pulsslag kan du leta efter några specifika saker:
 | Parameter | Värde | Anteckningar |
 |---|---|---|
 | `s:event:type` | `"play"` |  |
-| `l:event:playhead` | &lt;playhead position=&quot;&quot;> t.ex. 50, 60, 70 | Detta bör återspegla spelhuvudets aktuella position. |
+| `l:event:playhead` | &lt;playhead position> t.ex. 50, 60, 70 | Detta bör återspegla spelhuvudets aktuella position. |
 
-## Hearsbeat-innehåll slutfört {#heartbeat-content-complete}
+## Passa upp innehållet fullständigt {#heartbeat-content-complete}
 
 När uppspelningen för ett visst avsnitt har slutförts (spelhuvudet korsar avsnittsgränsen) skickas ett anrop till funktionen Slutför pulsslagsinnehåll. Detta ser ut som andra Heartbeat-samtal, men kommer att innehålla några specifika saker:
 

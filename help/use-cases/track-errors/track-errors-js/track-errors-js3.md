@@ -13,11 +13,11 @@ ht-degree: 0%
 
 # Spåra fel med JavaScript 3.x{#track-errors-on-javascript}
 
-Följande instruktioner ger vägledning för implementering i alla 2.x SDK:er.
+Följande anvisningar ger vägledning för implementering i alla 2.x SDK:er.
 
 >[!IMPORTANT]
 >
->Om du implementerar en tidigare version av SDK kan du hämta utvecklarhandböckerna här: [Hämta SDK:er.](/help/getting-started/download-sdks.md)
+>Om du implementerar en tidigare version av SDK kan du hämta utvecklarguiderna här: [Hämta SDK:er.](/help/getting-started/download-sdks.md)
 
 ## Implementera felspårning
 
@@ -31,4 +31,4 @@ Följande instruktioner ger vägledning för implementering i alla 2.x SDK:er.
 
 >[!NOTE]
 >
->Spårning av mediespelarfel stoppar inte mediespårningssessionen. Om mediaspelarfelet förhindrar att uppspelningen fortsätter kontrollerar du att mediespårningssessionen stängs genom att anropa `trackSessionEnd` efter anrop `trackError`.
+>Spårning av mediespelarfel kommer inte att stoppa mediespårningssessionen. Om mediespelarfelet förhindrar att uppspelningen fortsätter ska du kontrollera att mediespårningssessionen stängs genom att anropa `trackSessionEnd` efter att `trackError` har anropats.

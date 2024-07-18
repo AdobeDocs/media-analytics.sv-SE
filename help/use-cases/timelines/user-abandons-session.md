@@ -7,12 +7,12 @@ feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: 4c68f5997a9d336e8c3545cdfb7b9cb955602b69
 workflow-type: tm+mt
-source-wordcount: '600'
-ht-degree: 6%
+source-wordcount: '627'
+ht-degree: 5%
 
 ---
 
-# Tidslinje 2 – Användaren avbryter sessionen {#timeline--2-user-abandons-session}
+# Tidslinje 2 - sessionen användaren avbryter {#timeline--2-user-abandons-session}
 
 ## VOD, Pre-roll-ad-annons, midroll-ads-annonser, användare överger innehåll tidigt
 
@@ -30,7 +30,7 @@ I följande diagram visas spelhuvudets tidslinje och motsvarande tidslinje för 
 | --- | :---: | :---: | --- |
 | Knappen Spela upp automatiskt eller Spela upp nedtryckt | 0 | 0 | `/api/v1/sessions` |
 
-Dessa samtalssignaler _användarens avsikt att spela_ en video. Det returnerar ett sessions-ID ( `{sid}` ) till klienten som används för att identifiera alla efterföljande spårningsanrop i sessionen. Spelarläget är inte&quot;uppspelning&quot; än, utan är i stället&quot;start&quot;.  Obligatoriska sessionsparametrar måste inkluderas i `params` karta i begärandetexten.  I bakgrunden genererar det här samtalet ett Adobe Analytics-initieringssamtal. Mer information om sessioner finns i dokumentationen för Media Collection API.
+Det här anropet signalerar _användarens avsikt att spela upp_ en video. Det returnerar ett sessions-ID ( `{sid}`) till klienten som används för att identifiera alla efterföljande spårningsanrop i sessionen. Spelarläget är inte&quot;uppspelning&quot; än, utan är i stället&quot;start&quot;.  Obligatoriska sessionsparametrar måste inkluderas i kartan `params` i begärandetexten.  I bakgrunden genererar det här samtalet ett Adobe Analytics-initieringssamtal. Mer information om sessioner finns i dokumentationen för Media Collection API.
 
 ```json
 {
@@ -60,7 +60,7 @@ Dessa samtalssignaler _användarens avsikt att spela_ en video. Det returnerar e
 
 | Åtgärd | Tidslinje för åtgärd (sekunder) | Spelhuvudsposition (sekunder) | Klientbegäran |
 | --- | :---: | :---: | --- |
-| Appen börjar pinga händelsetimer | 0 | 0 |  |
+| Appen börjar pinga händelsetimer | 0 | 0 | |
 
 Starta appens ping-timer. Den första ping-händelsen ska sedan utlösas 1 sekund om det finns annonser före rullning, annars 10 sekunder.
 
@@ -179,7 +179,7 @@ Annonsbrytningen är över. Under reklampausen har spelaren förblivit&quot;upps
 | --- | :---: | :---: | --- |
 | Spåra uppspelningshändelse | 12 | 0 | `/api/v1/sessions/{sid}/events` |
 
-Flytta spelaren till uppspelningsläget. börja spåra uppspelningens början.
+Flytta spelaren till uppspelningsläget. Börja spåra uppspelningen av innehållet.
 
 ```json
 {
@@ -289,7 +289,7 @@ Ringa backend var 10:e sekund.
 | --- | :---: | :---: | --- |
 | Spåra start av annonsbrytning mitt i rullen | 45 | 33 | `/api/v1/sessions/{sid}/events` |
 
-Adress mellan rullar med 8 sekunders varaktighet: skicka `adBreakStart` .
+Adress mellan rullar med 8 sekunders varaktighet: skicka `adBreakStart`.
 
 ```json
 {
@@ -342,7 +342,7 @@ Spåra annonsen i mellanrullen.
 | --- | :---: | :---: | --- |
 | Användaren stänger appen. Appen avgör att användaren har övergett visningen och inte återgår till den här sessionen. | 48 | 33 | `/api/v1/sessions/{sid}/events` |
 
-Skicka `sessionEnd` till VA-servern för att ange att sessionen ska avslutas omedelbart, utan någon ytterligare behandling.
+Skicka `sessionEnd` till VA-serverdelen för att ange att sessionen ska stängas omedelbart, utan någon ytterligare bearbetning.
 
 ```json
 {

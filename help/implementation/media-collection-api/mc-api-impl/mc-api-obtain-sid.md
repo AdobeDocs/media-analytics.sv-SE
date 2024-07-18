@@ -8,13 +8,13 @@ role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
 workflow-type: tm+mt
 source-wordcount: '61'
-ht-degree: 6%
+ht-degree: 0%
 
 ---
 
 # Hämta ett sessions-ID{#obtaining-a-session-id}
 
-Det här kodfragmentet från referensspelaren visar ett sätt att koda en [Sessionsbegäran](../mc-api-ref/mc-api-sessions-req.md)och extrahera sessions-ID (och API-versionen för Media Collection) från Location-huvudet i svaret:
+I det här kodfragmentet från referensspelaren visas ett sätt att koda en [sessionsbegäran](../mc-api-ref/mc-api-sessions-req.md), tillsammans med att extrahera sessions-ID (och API-versionen för Media Collection) från platshuvudet i svaret:
 
 ```js
 var  

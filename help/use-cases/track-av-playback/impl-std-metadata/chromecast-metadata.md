@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Chromecast-metadatanycklar{#chromecast-metadata-keys}
 
-Standardmetadata för video och annonser kan anges för medie- respektive annonsinfo-objekt. Använd konstanterna för video-/annonsmetadata för att ange den ordlista som innehåller standardmetadata för info-objektet innan du anropar spårnings-API:erna. Se tabellerna nedan för hela listan med standardmetadatakonstanter, följt av exempel.
+Standardmetadata för video och annonser kan anges för medie- respektive annonsinformation. Använd konstanterna för video-/annonsmetadata för att ange den ordlista som innehåller standardmetadata för info-objektet innan du anropar spårnings-API:erna. Se tabellerna nedan för hela listan med standardmetadatakonstanter, följt av exempel.
 
 ## Metadatakonstanter {#video-metadata-constants}
 

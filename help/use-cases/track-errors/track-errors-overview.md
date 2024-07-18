@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Översikt{#overview}
 
-Följande instruktioner ger vägledning för implementering i alla 2.x SDK:er.
+Följande anvisningar ger vägledning för implementering i alla 2.x SDK:er.
 
 >[!IMPORTANT]
 >
@@ -24,8 +24,8 @@ Följande instruktioner ger vägledning för implementering i alla 2.x SDK:er.
 
 1. Spåra mediespelarfel.
 
-   Vid felhändelser, anrop `trackError` med felinformationen.
+   Anropa `trackError` med felinformationen vid felhändelser.
 
 >[!NOTE]
 >
->Spårning av mediespelarfel stoppar inte mediespårningssessionen. Om mediaspelarfelet förhindrar att uppspelningen fortsätter kontrollerar du att mediespårningssessionen stängs genom att anropa `trackSessionEnd` efter anrop `trackError`.
+>Spårning av mediespelarfel kommer inte att stoppa mediespårningssessionen. Om mediespelarfelet förhindrar att uppspelningen fortsätter ska du kontrollera att mediespårningssessionen stängs genom att anropa `trackSessionEnd` efter att `trackError` har anropats.

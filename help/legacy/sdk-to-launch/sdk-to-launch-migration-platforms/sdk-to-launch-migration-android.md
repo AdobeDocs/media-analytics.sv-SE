@@ -6,7 +6,7 @@ feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: fb09280ae6fb9f0ab7e67bd6ae134e6e26f88ec8
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '379'
 ht-degree: 0%
 
 ---
@@ -14,14 +14,15 @@ ht-degree: 0%
 # Migrering från fristående Media SDK till Adobe Launch - Android
 
 >[!NOTE]
->Adobe Experience Platform Launch har omklassificerats som en serie datainsamlingstekniker i Experience Platform. Som ett resultat av detta har flera terminologiska förändringar införts i produktdokumentationen. Se följande [dokument](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=en) för en konsoliderad hänvisning till terminologiska förändringar.
+>Adobe Experience Platform Launch har omklassificerats som en serie datainsamlingstekniker i Experience Platform. Som ett resultat av detta har flera terminologiska förändringar införts i produktdokumentationen. I följande [dokument](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=en) finns en konsoliderad referens till de ändrade terminologin.
 
 
 ## Konfiguration
 
 ### Fristående media SDK
 
-I det fristående Media SDK konfigurerar du spårning i appen och skickar den till SDK när du skapar spåraren.
+I det fristående Media SDK konfigurerar du spårning i appen och skickar det till
+SDK när du skapar spåraren.
 
 ```java
 MediaHeartbeatConfig config = new MediaHeartbeatConfig();
@@ -38,8 +39,10 @@ MediaHeartbeat tracker = new MediaHeartbeat(... , config);
 
 ### Starta tillägg
 
-1. I Experience Platform Launch klickar du på [!UICONTROL Extensions] -fliken för din mobila egendom.
-1. På [!UICONTROL Catalog] går du till Adobe Media Analytics för ljud- och videotillägg och klickar på [!UICONTROL Install].
+1. Klicka på fliken [!UICONTROL Extensions] i Experience Platform Launch för
+mobil egenskap.
+1. På fliken [!UICONTROL Catalog] letar du reda på Adobe Media Analytics for Audio
+och videotillägg och klicka på [!UICONTROL Install] .
 1. Konfigurera spårningsparametrarna på sidan för tilläggsinställningar.
 Media-tillägget använder de konfigurerade parametrarna för spårning.
 
@@ -51,9 +54,10 @@ Media-tillägget använder de konfigurerade parametrarna för spårning.
 
 ### Fristående media SDK
 
-I den fristående Media SDK skapar du manuellt `MediaHeartbeatConfig` och konfigurera spårningsparametrarna. Implementera delegatgränssnittets exponering
+I den fristående Media SDK skapar du `MediaHeartbeatConfig`-objektet manuellt
+och konfigurera spårningsparametrarna. Implementera delegatgränssnittets exponering
 `getQoSObject()` och `getCurrentPlaybackTime()functions.`
-Skapa en `MediaHeartbeat` instans för spårning.
+Skapa en `MediaHeartbeat` -instans för spårning.
 
 ```java
 MediaHeartbeatConfig config = new MediaHeartbeatConfig();
@@ -87,9 +91,10 @@ MediaHeartbeatDelegate delegate = new MediaHeartbeatDelegate() {
 
 ### Starta tillägg
 
-[Media API-referens - Skapa en mediaspårare](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/api-reference/#createtracker)
+[Media API-referens - Skapa en mediespårare](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/api-reference/#createtracker)
 
-Innan du skapar spåraren bör du registrera medietillägget och de beroende tilläggen med mobilkärnan.
+Innan du skapar spåraren bör du registrera medietillägget och
+beroende tillägg till mobilbasen.
 
 ```java
 // Register the extension once during app launch
@@ -130,18 +135,21 @@ Media.createTracker(new AdobeCallback<MediaTracker>() {
 ### Fristående media SDK
 
 I den fristående Media SDK:n skickar du ett delegatobjekt som implementerar
-`MediaHeartbeartDelegate` när spåraren skapas.  Implementeringen bör returnera det senaste QoE-numret och spelhuvudet när spåraren anropar
-`getQoSObject()` och `getCurrentPlaybackTime()` gränssnittsmetoder.
+`MediaHeartbeartDelegate`-gränssnittet när spåraren skapas.  Implementeringen
+ska returnera det senaste QoE-numret och spelhuvudet när spåraren anropar
+Gränssnittsmetoderna `getQoSObject()` och `getCurrentPlaybackTime()`.
 
 ### Starta tillägg
 
 Implementeringen bör uppdatera spelarens spelhuvud genom att anropa
-`updateCurrentPlayhead` metod som exponeras av spåraren. För korrekt spårning bör du anropa den här metoden minst en gång per sekund.
+Metoden `updateCurrentPlayhead` som exponeras av spåraren. För korrekt spårning
+anropa den här metoden minst en gång per sekund.
 
 [Media API-referens - Uppdatera aktuell spelare](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/api-reference/#updatecurrentplayhead)
 
 Implementeringen bör uppdatera QoE-informationen genom att anropa `updateQoEObject`
-metod som exponeras av spåraren. Vi förväntar oss att den här metoden anropas när det sker en ändring av kvalitetsmåtten.
+metod som exponeras av spåraren. Vi förväntar oss att den här metoden anropas när det finns
+är en förändring av kvalitetsstatistik.
 
 [Media API-referens - Uppdatera QoE-objekt](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/api-reference/#createqoeobject)
 
@@ -151,111 +159,111 @@ metod som exponeras av spåraren. Vi förväntar oss att den här metoden anropa
 
 * Standardmetadata för media:
 
-   ```java
-   MediaObject mediaInfo =
-     MediaHeartbeat.createMediaObject("media-name",
-                                      "media-id",
-                                      60D,
-                                      MediaHeartbeat.StreamType.VOD,
-                                      MediaHeartbeat.MediaType.Video);
-   
-   // Standard metadata keys provided by adobe.
-   Map <String, String> standardVideoMetadata =
-     new HashMap<String, String>();
-   standardVideoMetadata.put(MediaHeartbeat.VideoMetadataKeys.EPISODE,
-                             "Sample Episode");
-   standardVideoMetadata.put(MediaHeartbeat.VideoMetadataKeys.SHOW,
-                             "Sample Show");
-   standardVideoMetadata.put(MediaHeartbeat.VideoMetadataKeys.SEASON,
-                             "Sample Season");
-   mediaInfo.setValue(MediaHeartbeat.MediaObjectKey.StandardMediaMetadata,
-                      standardVideoMetadata);
-   
-   // Custom metadata keys
-   HashMap<String, String> mediaMetadata = new HashMap<String, String>();
-   mediaMetadata.put("isUserLoggedIn", "false");
-   mediaMetadata.put("tvStation", "Sample TV Station");
-   tracker.trackSessionStart(mediaInfo, mediaMetadata);
-   ```
+  ```java
+  MediaObject mediaInfo =
+    MediaHeartbeat.createMediaObject("media-name",
+                                     "media-id",
+                                     60D,
+                                     MediaHeartbeat.StreamType.VOD,
+                                     MediaHeartbeat.MediaType.Video);
+  
+  // Standard metadata keys provided by adobe.
+  Map <String, String> standardVideoMetadata =
+    new HashMap<String, String>();
+  standardVideoMetadata.put(MediaHeartbeat.VideoMetadataKeys.EPISODE,
+                            "Sample Episode");
+  standardVideoMetadata.put(MediaHeartbeat.VideoMetadataKeys.SHOW,
+                            "Sample Show");
+  standardVideoMetadata.put(MediaHeartbeat.VideoMetadataKeys.SEASON,
+                            "Sample Season");
+  mediaInfo.setValue(MediaHeartbeat.MediaObjectKey.StandardMediaMetadata,
+                     standardVideoMetadata);
+  
+  // Custom metadata keys
+  HashMap<String, String> mediaMetadata = new HashMap<String, String>();
+  mediaMetadata.put("isUserLoggedIn", "false");
+  mediaMetadata.put("tvStation", "Sample TV Station");
+  tracker.trackSessionStart(mediaInfo, mediaMetadata);
+  ```
 
 * Standardmetadata för annonsering:
 
-   ```java
-   MediaObject adInfo =
-     MediaHeartbeat.createAdObject("ad-name",
-                                   "ad-id",
-                                   1L,
-                                   15D);
-   
-   // Standard metadata keys provided by adobe.
-   Map <String, String> standardAdMetadata =
-     new HashMap<String, String>();
-   standardAdMetadata.put(MediaHeartbeat.AdMetadataKeys.ADVERTISER,
-                          "Sample Advertiser");
-   standardAdMetadata.put(MediaHeartbeat.AdMetadataKeys.CAMPAIGN_ID,
-                          "Sample Campaign");
-   adInfo.setValue(MediaHeartbeat.MediaObjectKey.StandardAdMetadata,
-                   standardAdMetadata);
-   
-   HashMap<String, String> adMetadata =
-     new HashMap<String, String>();
-   adMetadata.put("affiliate",
-                  "Sample affiliate");
-   
-   tracker.trackEvent(MediaHeartbeat.Event.AdStart,
-                      adObject,
-                      adMetadata);
-   ```
+  ```java
+  MediaObject adInfo =
+    MediaHeartbeat.createAdObject("ad-name",
+                                  "ad-id",
+                                  1L,
+                                  15D);
+  
+  // Standard metadata keys provided by adobe.
+  Map <String, String> standardAdMetadata =
+    new HashMap<String, String>();
+  standardAdMetadata.put(MediaHeartbeat.AdMetadataKeys.ADVERTISER,
+                         "Sample Advertiser");
+  standardAdMetadata.put(MediaHeartbeat.AdMetadataKeys.CAMPAIGN_ID,
+                         "Sample Campaign");
+  adInfo.setValue(MediaHeartbeat.MediaObjectKey.StandardAdMetadata,
+                  standardAdMetadata);
+  
+  HashMap<String, String> adMetadata =
+    new HashMap<String, String>();
+  adMetadata.put("affiliate",
+                 "Sample affiliate");
+  
+  tracker.trackEvent(MediaHeartbeat.Event.AdStart,
+                     adObject,
+                     adMetadata);
+  ```
 
 ### Starta tillägg
 
 * Standardmetadata för media:
 
-   ```java
-   HashMap<String, Object> mediaObject =
-     Media.createMediaObject("media-name",
-                             "media-id",
-                             60D,
-                             MediaConstants.StreamType.VOD,
-                             Media.MediaType.Video);
-   
-   HashMap<String, String> mediaMetadata =
-     new HashMap<String, String>();
-   
-   // Standard metadata keys provided by adobe.
-   mediaMetadata.put(MediaConstants.VideoMetadataKeys.EPISODE,
-                     "Sample Episode");
-   mediaMetadata.put(MediaConstants.VideoMetadataKeys.SHOW,
-                     "Sample Show");
-   
-   // Custom metadata keys
-   mediaMetadata.put("isUserLoggedIn", "false");
-   mediaMetadata.put("tvStation", "Sample TV Station");
-   
-   tracker.trackSessionStart(mediaInfo, mediaMetadata);
-   ```
+  ```java
+  HashMap<String, Object> mediaObject =
+    Media.createMediaObject("media-name",
+                            "media-id",
+                            60D,
+                            MediaConstants.StreamType.VOD,
+                            Media.MediaType.Video);
+  
+  HashMap<String, String> mediaMetadata =
+    new HashMap<String, String>();
+  
+  // Standard metadata keys provided by adobe.
+  mediaMetadata.put(MediaConstants.VideoMetadataKeys.EPISODE,
+                    "Sample Episode");
+  mediaMetadata.put(MediaConstants.VideoMetadataKeys.SHOW,
+                    "Sample Show");
+  
+  // Custom metadata keys
+  mediaMetadata.put("isUserLoggedIn", "false");
+  mediaMetadata.put("tvStation", "Sample TV Station");
+  
+  tracker.trackSessionStart(mediaInfo, mediaMetadata);
+  ```
 
 * Standardmetadata för annonsering:
 
-   ```java
-   HashMap<String, Object> adObject =
-     Media.createAdObject("ad-name",
-                          "ad-id",
-                          1L,
-                          15D);
-   HashMap<String, String> adMetadata =
-     new HashMap<String, String>();
-   
-   // Standard metadata keys provided by adobe.
-   adMetadata.put(MediaConstants.AdMetadataKeys.ADVERTISER,
-                  "Sample Advertiser");
-   adMetadata.put(MediaConstants.AdMetadataKeys.CAMPAIGN_ID,
-                  "Sample Campaign");
-   
-   // Custom metadata keys
-   adMetadata.put("affiliate",
-                  "Sample affiliate");
-   _tracker.trackEvent(Media.Event.AdStart,
-                       adObject,
-                       adMetadata);
-   ```
+  ```java
+  HashMap<String, Object> adObject =
+    Media.createAdObject("ad-name",
+                         "ad-id",
+                         1L,
+                         15D);
+  HashMap<String, String> adMetadata =
+    new HashMap<String, String>();
+  
+  // Standard metadata keys provided by adobe.
+  adMetadata.put(MediaConstants.AdMetadataKeys.ADVERTISER,
+                 "Sample Advertiser");
+  adMetadata.put(MediaConstants.AdMetadataKeys.CAMPAIGN_ID,
+                 "Sample Campaign");
+  
+  // Custom metadata keys
+  adMetadata.put("affiliate",
+                 "Sample affiliate");
+  _tracker.trackEvent(Media.Event.AdStart,
+                      adObject,
+                      adMetadata);
+  ```

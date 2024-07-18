@@ -7,8 +7,8 @@ feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
 workflow-type: tm+mt
-source-wordcount: '647'
-ht-degree: 1%
+source-wordcount: '614'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +25,7 @@ Så här öppnar du Adobe Debug:
    >Inloggningen är inte samma användarnamn/lösenord som du använder för att logga in på Adobe Analytics.
 
 1. När du har ett Experience Cloud-konto kontaktar du Adobe och ber om åtkomst till felsökningen i Adobe.
-1. När åtkomst har beviljats går du till [https://debug.adobe.com](https://debug.adobe.com) och logga in med inloggningsuppgifterna för Experience Cloud.
+1. När åtkomst har beviljats går du till [https://debug.adobe.com](https://debug.adobe.com) och loggar in med dina inloggningsuppgifter för Experience Cloud.
 
    ![](assets/adobe-debug-login.png)
 
@@ -35,13 +35,13 @@ Så här öppnar du Adobe Debug:
    * Apple Safari
    * Microsoft Internet Explorer 9-11
 
-De rekommenderade webbläsarna är de senaste versionerna av Chrome och Firefox.
+Rekommenderade webbläsare är de senaste versionerna av Chrome och Firefox.
 
 ## Felsökningsproxy {#debug-proxy}
 
 Hämta och konfigurera felsökningsproxyn:
 
-1. Hämta felsökningsproxyappen på [Appnedladdningar.](https://debug.adobe.com/#/downloads)
+1. Hämta appen Debug Proxy på [App Downloads.](https://debug.adobe.com/#/downloads)
 
    Följande operativsystem stöds:
    * OS X 10.7 64-bitars eller högre
@@ -59,7 +59,7 @@ Första gången du kör Adobe Debug skapas ett unikt SSL-certifikat. Om du har s
 
 Hämta och installera SSL-certifikatet:
 
-1. När Adobe Debug har installerats och startats går du till [https://proxy.debug.adobe.com/ssl](https://proxy.debug.adobe.com/ssl) och ladda ned certifieringen.
+1. När Adobe Debug har installerats och startats går du till [https://proxy.debug.adobe.com/ssl](https://proxy.debug.adobe.com/ssl) och hämtar certifieringen.
 1. Importera certifikatet
 
    **Mac OS**
@@ -72,19 +72,18 @@ Hämta och installera SSL-certifikatet:
    **Windows**
    1. Gör något av följande:
 
-      * [Lägga till certifikat i arkivet Betrodda rotcertifikatutfärdare för en lokal dator](https://technet.microsoft.com/en-us/library/cc754841.aspx#BKMK_addlocal)
+      * [Lägger till certifikat i arkivet Betrodda rotcertifikatutfärdare för en lokal dator](https://technet.microsoft.com/en-us/library/cc754841.aspx#BKMK_addlocal)
+
    1. För Firefox slutför du proceduren i [Installera rotcertifikat i Mozilla Firefox.](https://wiki.wmtransfer.com/projects/webmoney/wiki/Installing_root_certificate_in_Mozilla_Firefox)
 
       Du kan behöva stänga och öppna Firefox igen för att se ändringen.
+
    **iOS-enheter**
    1. Ange att iOS-enheten ska använda Adobe Debug som HTTP-proxy genom att klicka på **[!UICONTROL Settings app]** **>** **[!UICONTROL Wifi settings]**.
 
-   1. I Safari: [Felsök.](https://proxy.debug.adobe.com/ssl)
+   1. Gå till [Felsök i Safari.](https://proxy.debug.adobe.com/ssl)
 
       Safari uppmanar dig att installera SSL-certifikatet.
-
-
-
 
 ## Installera SSL-certifikatet för din mobila enhet {#install-sSL-for-mobile-device}
 
@@ -94,7 +93,7 @@ Om du saknar HTTPS-anrop i Adobe Debug måste du installera SSL-certifikatet fö
 
 Så här installerar du SSL-certifikatet på en iOS-enhet:
 
-1. Starta felsökningsproxyn på din bärbara dator och gå till [Adobe Debug.](https://debug.adobe.com)
+1. På din bärbara dator aktiverar du felsökningsproxyn och går till [Adobe Debug.](https://debug.adobe.com)
 1. Utför följande steg på din iOS-enhet:
    1. Vrid enheten till flygplansläge.
    1. Välj samma Wi-Fi-signal som används av din bärbara dator.

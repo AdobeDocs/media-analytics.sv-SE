@@ -7,7 +7,7 @@ feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
 workflow-type: tm+mt
-source-wordcount: '325'
+source-wordcount: '327'
 ht-degree: 1%
 
 ---
@@ -18,9 +18,9 @@ Följande instruktioner ger vägledning vid implementering med 2.x SDK:er.
 
 >[!IMPORTANT]
 > 
-> Om du implementerar en 1.x-version av SDK kan du hämta utvecklarhandboken här: [Hämta SDK:er.](/help/getting-started/download-sdks.md)
+> Om du implementerar en 1.x-version av SDK kan du hämta utvecklarhandboken här: [Hämta SDK.](/help/getting-started/download-sdks.md)
 
-Kapitel- och segmentspårning är tillgängligt för anpassade mediekapital eller segment. En del vanliga användningsområden för kapitelspårning är att definiera anpassade segment baserat på mediainnehåll (t.ex. baseboll) eller att definiera innehållssegment mellan annonsbrytningar. Kapitelspårning är **not** krävs för implementering av mediespårning.
+Kapitel- och segmentspårning är tillgängligt för anpassade mediekapital eller segment. En del vanliga användningsområden för kapitelspårning är att definiera anpassade segment baserat på mediainnehåll (t.ex. baseboll) eller att definiera innehållssegment mellan annonsbrytningar. Kapitelspårning krävs **inte** för implementeringar av huvudmediespårning.
 
 Kapitelspårning innehåller kapitelstarter, kapitelslutföranden och kapitelhopp. Du kan använda mediaspelarens API med anpassad segmenteringslogik för att identifiera kapitelhändelser och för att fylla i obligatoriska och valfria kapitelvariabler.
 
@@ -30,21 +30,21 @@ Kapitelspårning innehåller kapitelstarter, kapitelslutföranden och kapitelhop
 
 * Skapa kapitelobjektinstansen för kapitlet, `chapterObject`
 * Fyll i kapitelmetadata, `chapterCustomMetadata`
-* Utlysning `trackEvent(MediaHeartbeat.Event.ChapterStart, chapterObject, chapterCustomMetadata);`
+* Ring `trackEvent(MediaHeartbeat.Event.ChapterStart, chapterObject, chapterCustomMetadata);`
 
 ### Vid kapitelavslutning
 
-* Utlysning `trackEvent(MediaHeartbeat.Event.ChapterComplete);`
+* Ring `trackEvent(MediaHeartbeat.Event.ChapterComplete);`
 
 ### Hoppa över kapitel
 
-* Utlysning `trackEvent(MediaHeartbeat.Event.ChapterSkip);`
+* Ring `trackEvent(MediaHeartbeat.Event.ChapterSkip);`
 
 ## Implementera kapitelspårning {#implement-chapter-tracking}
 
-1. Identifiera när kapitelstarthändelsen inträffar och skapa `ChapterObject` med hjälp av kapitelinformationen.
+1. Identifiera när kapitelstarthändelsen inträffar och skapa `ChapterObject`-instansen med hjälp av kapitelinformationen.
 
-   Här är `ChapterObject` kapitelspårningsreferens:
+   Här är handboken för `ChapterObject`-kapitelspårning:
 
    >[!NOTE]
    >
@@ -58,12 +58,12 @@ Kapitelspårning innehåller kapitelstarter, kapitelslutföranden och kapitelhop
    | `startTime` | Starttid för kapitel | Ja |
 
 1. Om du inkluderar anpassade metadata för kapitlet skapar du kontextdatavariabler för metadata.
-1. Börja spåra kapiteluppspelningen genom att anropa `ChapterStart` i `MediaHeartbeat` -instans.
-1. Anropa `ChapterComplete` i `MediaHeartbeat` -instans.
-1. Om kapiteluppspelningen inte slutfördes på grund av att användaren valde att hoppa över kapitlet (till exempel om användaren söker utanför kapitelgränsen), anropar du `ChapterSkip` i MediaHeartbeat-instansen.
+1. Om du vill börja spåra kapiteluppspelningen anropar du händelsen `ChapterStart` i instansen `MediaHeartbeat`.
+1. När uppspelningen når kapitelslutsgränsen, enligt definitionen i din egen kod, anropar du händelsen `ChapterComplete` i instansen `MediaHeartbeat`.
+1. Om kapiteluppspelningen inte slutfördes eftersom användaren valde att hoppa över kapitlet (till exempel om användaren söker utanför kapitelgränsen) anropar du händelsen `ChapterSkip` i MediaHeartbeat-instansen.
 1. Om det finns ytterligare kapitel upprepar du steg 1 till 5.
 
-I följande exempelkod används JavaScript 2.x SDK för en HTML5-mediespelare. Du bör använda den här koden med den viktigaste mediespelningskoden.
+I följande exempelkod används JavaScript 2.x SDK för en mediespelare i HTML 5. Du bör använda den här koden med den viktigaste mediespelningskoden.
 
 ```js
 /* Call on chapter start */

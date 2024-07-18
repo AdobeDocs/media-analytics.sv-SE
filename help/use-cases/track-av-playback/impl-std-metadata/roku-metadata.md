@@ -7,8 +7,8 @@ feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
 workflow-type: tm+mt
-source-wordcount: '470'
-ht-degree: 1%
+source-wordcount: '471'
+ht-degree: 0%
 
 ---
 
@@ -74,15 +74,15 @@ Du kan använda följande konstanter för att spåra mediahändelser:
 
 | Konstant | Beskrivning   |
 | --- | --- |
-| `MEDIA_STANDARD_MEDIA_METADATA` | Konstant för att ange metadata på `MediaInfo` `trackLoad` |
-| `MEDIA_STANDARD_AD_METADATA` | Konstant för att ange annonsmetadata på `EventData` `trackEvent` |
-| `MEDIA_RESUMED` | Konstant för sändning av videoåterupptagen hjärtfrekvens. Om du vill återuppta videospårning av innehåll som har stoppats tidigare måste du ange `MEDIA_RESUMED` på `mediaInfo` objekt när du anropar `mediaTrackLoad`. (`MEDIA_RESUMED` är inte en händelse som du kan spåra med `mediaTrackEvent` API.) `MEDIA_RESUMED` ska anges till true när ett program vill fortsätta att spåra innehåll som en användare har slutat titta på men nu har för avsikt att återuppta tittandet. <br/><br/>Exempel: en användare ser 30 % av innehållet och stänger sedan programmet. Detta leder till att sessionen avslutas. Om samma användare senare återgår till samma innehåll, och programmet tillåter att användaren återupptar från den punkt där han/hon slutade, bör programmet ställas in `MEDIA_RESUMED` till &quot;true&quot; när `mediaTrackLoad` API. Resultatet är att dessa två olika mediesessioner för samma videoinnehåll kan länkas tillsammans. Följande är implementeringsexemplet: <br/><br/> `mediaInfo =` <br/>   `adb_media_init_mediainfo(` <br/>     `"test_media_name",` <br/>     `"test_media_id",`<br/>      `10,` <br/>     `"vod"` <br/> `)` <br/> `mediaInfo[ADBMobile().MEDIA_RESUMED] = true` <br/> `mediaContextData = {}` <br/>  `ADBMobile().mediaTrackLoad(mediaInfo, mediaContextData)` <br/><br/>Detta skapar en ny session för videon, men det gör även att SDK skickar en pulsslagsförfrågan med händelsetypen &quot;resume&quot;, som kan användas vid rapportering för att knyta ihop två olika mediesessioner. |
+| `MEDIA_STANDARD_MEDIA_METADATA` | Konstant för att ange metadata för `MediaInfo` `trackLoad` |
+| `MEDIA_STANDARD_AD_METADATA` | Konstant för att ange annonsmetadata för `EventData` `trackEvent` |
+| `MEDIA_RESUMED` | Konstant för sändning av videoåterupptagen hjärtfrekvens. Om du vill återuppta videospårning av innehåll som tidigare stoppats måste du ange egenskapen `MEDIA_RESUMED` för objektet `mediaInfo` när du anropar `mediaTrackLoad`. (`MEDIA_RESUMED` är inte en händelse som du kan spåra med API:t `mediaTrackEvent`.) `MEDIA_RESUMED` ska anges till true när ett program vill fortsätta att spåra innehåll som en användare har slutat titta på men nu har för avsikt att återuppta tittandet. <br/><br/>Anta till exempel att en användare tittar på 30 % av innehållet och sedan stänger programmet. Detta leder till att sessionen avslutas. Om samma användare senare återgår till samma innehåll, och programmet tillåter användaren att återuppta från den punkt där han/hon slutade, bör programmet ange `MEDIA_RESUMED` till &quot;true&quot; när API:t `mediaTrackLoad` anropas. Resultatet är att dessa två olika mediesessioner för samma videoinnehåll kan länkas tillsammans. Följande är implementeringsexemplet: <br/><br/> `mediaInfo =` <br/>   `adb_media_init_mediainfo(` <br/>     `"test_media_name",` <br/>     `"test_media_id",`<br/>      `10,` <br/>     `"vod"` <br/> `)` <br/> `mediaInfo[ADBMobile().MEDIA_RESUMED] = true` <br/> `mediaContextData = {}` <br/>  `ADBMobile().mediaTrackLoad(mediaInfo, mediaContextData)` <br/><br/>Detta skapar en ny session för videon, men det gör även att SDK skickar en pulsslagsförfrågan med händelsetypen &quot;resume&quot;, som kan användas för rapportering för att knyta ihop två olika mediesessioner. |
 
 ### Konstanter för innehållstyp
 
 | Konstant | Beskrivning   |
 |---|---|
-| `MEDIA_STREAM_TYPE_LIVE` | Konstant för strömtyp LIVE |
+| `MEDIA_STREAM_TYPE_LIVE` | Konstant för strömningstyp LIVE |
 | `MEDIA_STREAM_TYPE_VOD` | Konstant för strömtyp VOD |
 
 ### Händelsetypskonstanter (används för trackEvent-anropet)

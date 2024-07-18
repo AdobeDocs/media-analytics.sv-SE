@@ -20,7 +20,7 @@ När du har laddat ned Media SDK för din videoapp eller spelare följer du info
 ## Allmänna riktlinjer för genomförandet {#general-implementation-guidelines}
 
 Det finns tre SDK-huvudkomponenter som används för att spåra med tillägget Streaming Media Collection:
-* Konfig för pulsslag - Media `MediaHeartbeatConfig` innehåller de grundläggande inställningarna för rapportering.
+* Konfiguration för pulsslag i media - `MediaHeartbeatConfig` innehåller de grundläggande inställningarna för rapportering.
 * Media Heartbeat Delegate - `MediaHeartbeatDelegate` styr uppspelningstiden och QoS-objektet.
 * Mediepulsslag - `MediaHeartbeat` är det primära biblioteket som innehåller medlemmar och metoder.
 
@@ -28,7 +28,7 @@ Det finns tre SDK-huvudkomponenter som används för att spåra med tillägget S
 
 Slutför följande implementeringssteg om du vill konfigurera och använda Streaming Media SDK:
 
-1. Skapa en `MediaHeartbeatConfig` -instans och ange värden för konfigurationsparametrar.
+1. Skapa en `MediaHeartbeatConfig`-instans och ange parametervärden för konfigurationen.
 
    |  Variabelnamn  | Beskrivning  | Obligatoriskt |  Standardvärde  |
    |---|---|:---:|---|
@@ -44,8 +44,8 @@ Slutför följande implementeringssteg om du vill konfigurera och använda Strea
 
    |  Metodnamn  |  Beskrivning  | Obligatoriskt |
    | --- | --- | :---: |
-   | `getQoSObject()` | Returnerar `MediaObject` -instans som innehåller aktuell QoS-information. Den här metoden anropas flera gånger under en uppspelningssession. Spelarimplementeringen måste alltid returnera de senast tillgängliga QoS-data. | Ja |
-   | `getCurrentPlaybackTime()` | Returnerar spelhuvudets aktuella position. <br /> För VOD-spårning anges värdet i sekunder från mediaobjektets början. <br /> Om spelaren inte anger information om innehållets varaktighet för direktuppspelning kan värdet anges som antalet sekunder sedan midnatt UTC den dagen. <br /> Obs! När du använder förloppsmarkörer krävs innehållets längd och spelhuvudet måste uppdateras som antal sekunder från början av medieobjektet, med början från 0. | Ja |
+   | `getQoSObject()` | Returnerar instansen `MediaObject` som innehåller aktuell QoS-information. Den här metoden anropas flera gånger under en uppspelningssession. Spelarimplementeringen måste alltid returnera de senast tillgängliga QoS-data. | Ja |
+   | `getCurrentPlaybackTime()` | Returnerar spelhuvudets aktuella position. <br /> För VOD-spårning anges värdet i sekunder från mediaobjektets början. <br /> Om spelaren inte anger information om innehållets varaktighet för direktuppspelning kan värdet anges som antalet sekunder sedan midnatt UTC den dagen. <br /> Obs! När du använder förloppsmarkörer krävs innehållets varaktighet och spelhuvudet måste uppdateras som antal sekunder från början av medieobjektet, med början från 0. | Ja |
 
    >[!TIP]
    >
@@ -58,17 +58,17 @@ Slutför följande implementeringssteg om du vill konfigurera och använda Strea
    | `fps` | Bildrutorna som visas per sekund. | Ja |
    | `droppedFrames` | Antalet uteslutna bildrutor hittills. | Ja |
 
-1. Skapa `MediaHeartbeat` -instans.
+1. Skapa instansen `MediaHeartbeat`.
 
-   Använd `MediaHertbeatConfig` och `MediaHertbeatDelegate` för att skapa `MediaHeartbeat` -instans.
+   Använd `MediaHertbeatConfig` och `MediaHertbeatDelegate` för att skapa `MediaHeartbeat`-instansen.
 
    >[!IMPORTANT]
    >
-   >Se till att `MediaHeartbeat` -instansen är tillgänglig och tas inte bort förrän i slutet av sessionen. Den här instansen kommer att användas för alla följande mediespårningshändelser.
+   >Se till att din `MediaHeartbeat`-instans är tillgänglig och inte tas bort förrän i slutet av sessionen. Den här instansen kommer att användas för alla följande mediespårningshändelser.
 
    >[!TIP]
    >
-   >`MediaHeartbeat` kräver en instans av `AppMeasurement` för att ringa Adobe Analytics.
+   >`MediaHeartbeat` kräver en instans av `AppMeasurement` för att kunna skicka anrop till Adobe Analytics.
 
 1. Kombinera alla bitar.
 
@@ -118,14 +118,15 @@ Spåra implementeringar med Media Analytics genererar två typer av spårningsan
 * Anrop till pulsslag skickas till Media Analytics-spårningsservern (hjärtslag) som bearbetas där och skickas vidare till Adobe Analytics-servern.
 
 * **Adobe Analytics-server (AppMeasurement)**
-Mer information om alternativ för spårning av server finns i [Fyll i variablerna trackingServer och trackingServerSecure korrekt.](https://helpx.adobe.com/analytics/kb/determining-data-center.html)
+Mer information om alternativ för spårning av serveralternativ finns i [Fylla i variablerna trackingServer och trackingServerSecure korrekt.](https://helpx.adobe.com/analytics/kb/determining-data-center.html)
 
   >[!IMPORTANT]
   >
   >Det krävs en RDC-spårningsserver eller CNAME som kan matchas till en RDC-server för Experience Cloud Visitor ID-tjänsten.
 
-  Analysspårningsservern ska sluta med &quot;`.sc.omtrdc.net`eller vara CNAME.
+  Analysspårningsservern ska avslutas med `.sc.omtrdc.net` eller vara en CNAME.
 
-* ** Media Analytics-server (Heartbeats)** Den har alltid formatet &quot;`[your_namespace].hb.omtrdc.net`&quot;. Värdet för`[your_namespace]`&quot; anger ditt företag och tillhandahålls av Adobe.
+* ** Media Analytics-server (Heartbeats)**
+Det här har alltid formatet `[your_namespace].hb.omtrdc.net`. Värdet `[your_namespace]` anger ditt företag och tillhandahålls av Adobe.
 
 Mediespårning fungerar likadant på alla plattformar, både datorer och mobila enheter. Ljudspårning fungerar för närvarande på mobilplattformar. För alla spårningsanrop finns det några viktiga universella variabler som ska valideras:

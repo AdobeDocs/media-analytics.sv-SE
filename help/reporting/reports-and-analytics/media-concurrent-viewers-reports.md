@@ -18,7 +18,7 @@ Kontrollpanelen för samtidiga visningsprogram i Media visar samtidiga visningsp
 
 >[!TIP]
 >
-> Den här rapporten baseras på samtidiga aktiva mediesessioner.  Om du vill se samtidiga tittare efter en unik besökare, med ytterligare funktioner för att tillämpa ett segment, dela upp och jämföra, använder du [Media Concurrent Viewers panel i Analysis Workspace](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/media-concurrent-viewers.html).
+> Den här rapporten baseras på samtidiga aktiva mediesessioner.  Om du vill se samtidiga visningsprogram efter en unik besökare, med ytterligare funktioner för att tillämpa ett segment, dela upp och jämföra, använder du [panelen Mediesamtidiga visningsprogram i Analysis Workspace](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/media-concurrent-viewers.html).
 >
 
 ![](assets/video-concurrent-viewers.png)
@@ -30,8 +30,8 @@ Här är några funktioner i den här rapporten:
 * Detta är inte i realtid. Den har normal Adobe Analytics latens.
 * Rapporten omfattar en 24-timmarsram. X-axeln baseras på tidszonen för rapportsviten.
 * Detta visar samtidiga visningsprogram vid minutgranularitet.
-* Det finns en *Rapport över samtidiga visningsprogram för media* som visar hur många tittare som tittar på eller lyssnar på allt innehåll.
-* Det finns en Concurrent Viewer-rapport i *Medieinformation* som visar hur många tittare som tittar på eller lyssnar på ett visst medieobjekt.
+* Det finns en *rapport om samtidiga visningsprogram för media* som visar hur många tittare som tittar på eller lyssnar på allt innehåll.
+* Det finns en rapport om samtidiga visningsprogram i rapporten *Mediedetaljer* som visar hur många tittare som tittar på eller lyssnar på ett visst medieobjekt.
 * Rapporten fungerar bara över en dag.
 * Kunden kan se historiska rapporter om samtidig användning (begränsat till en enstaka dag).
 

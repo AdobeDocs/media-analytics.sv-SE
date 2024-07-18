@@ -25,14 +25,14 @@ Installera och konfigurera följande för att implementera Streaming Media Colle
 
 * **Adobe Media Analytics för ljud- och videotillägg**
 
-Information om hur du hämtar SDK:er och om du vill ha ytterligare dokumentationsresurser finns i [Hämta SDK:er för media, tillägg med taggar och OTT SDK:er](/help/getting-started/download-sdks.md)
+Om du vill hämta SDK:er och om du vill ha mer dokumentation läser du [Hämta SDK:er för media, tillägg med hjälp av taggar och OTT SDK:er](/help/getting-started/download-sdks.md)
 
 * **Hämta giltiga konfigurationsparametrar**
 
   Dessa parametrar kan hämtas från en Adobe-representant när du har konfigurerat ditt analyskonto.
 
-* **Inkludera följande API:er i mediespelaren**
+* **Ta med följande API:er i mediespelaren**
 
    * *Ett API för att prenumerera på spelarhändelser* - Media SDK kräver att du anropar en uppsättning enkla API:er när händelser inträffar i spelaren.
 
-   * *Ett API som tillhandahåller spelarinformation* - Detta innehåller information om hur medienamnet spelas upp, spelhuvudet, annonser eller kapitel.
+   * *Ett API som innehåller spelarinformation* - Detta innehåller information om uppspelning, t.ex. medienamn, spelhuvudets position, annonser eller kapitel.

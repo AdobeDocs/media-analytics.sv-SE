@@ -7,14 +7,14 @@ feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
 workflow-type: tm+mt
-source-wordcount: '115'
+source-wordcount: '111'
 ht-degree: 20%
 
 ---
 
 # iOS metadatanycklar{#ios-metadata-keys}
 
-[iOS API-referens](https://adobe-marketing-cloud.github.io/media-sdks/reference/ios/)
+[API-referens för iOS](https://adobe-marketing-cloud.github.io/media-sdks/reference/ios/)
 
 Från `ADBStandardMetadataKeys.h`:
 

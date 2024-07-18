@@ -7,8 +7,8 @@ feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
 workflow-type: tm+mt
-source-wordcount: '243'
-ht-degree: 1%
+source-wordcount: '249'
+ht-degree: 0%
 
 ---
 
@@ -28,9 +28,9 @@ Du måste slutföra och registrera dessa uppgifter i följande ordning:
    1. Starta Media Analytics (hjärtslag)
    1. Begärt Adobe Analytics Start-anrop om Media Analytics (hjärtslag)
 
-   De två första anropen ovan innehåller ytterligare metadata och variabler. Information om anropsparametrar och metadata finns i [Information om testsamtal.](/help/legacy/validation/test-call-details.md#start-the-media-player)
+   De två första anropen ovan innehåller ytterligare metadata och variabler. Information om samtalsparametrar och metadata finns i [Testa samtalsinformation.](/help/legacy/validation/test-call-details.md#start-the-media-player)
 
-   Det tredje anropet ovan talar om för Media Analytics-servern att Media SDK har begärt att Adobe Analytics Start-anropet (`pev2=ms_s`) skickas till Adobe Analytics-servern.
+   Det tredje anropet ovan talar om för Media Analytics-servern att Media SDK har begärt att Adobe Analytics Start-anropet (`pev2=ms_s`) ska skickas till Adobe Analytics-servern.
 
 1. **Spela upp huvudinnehåll i minst 5 minuter utan avbrott**
 
@@ -38,21 +38,21 @@ Du måste slutföra och registrera dessa uppgifter i följande ordning:
 
    Under uppspelning av innehåll skickar Media SDK uppspelningsanrop (hjärtslag) till Media Analytics-servern var tionde sekund.
 
-   Information om anropsparametrar och metadata finns i [Information om testsamtal.](/help/legacy/validation/test-call-details.md#play-main-content)
+   Information om samtalsparametrar och metadata finns i [Testa samtalsinformation.](/help/legacy/validation/test-call-details.md#play-main-content)
 
-   Se även plattformens [Spåra annonser](/help/use-cases/track-ads/track-ads-overview.md) instruktioner för ytterligare information om dessa annonseringssamtal.
+   Se även instruktionerna [Spåra annonser](/help/use-cases/track-ads/track-ads-overview.md) för din plattform för ytterligare information om dessa annonsanrop.
 
 1. **Flytta programmet eller webbläsaren till bakgrunden**
 
-   Medan appen körs i bakgrunden är det bara `main:pause` anrop ska skickas till Media Analytics-servern, med början från VHL version 1.6.6 och senare.
+   När appen körs i bakgrunden bör bara `main:pause` anrop skickas till Media Analytics-servern, med början från VHL-version 1.6.6 och senare.
 
 1. **Flytta tillbaka appen eller webbläsaren till förgrunden**
 
    Vid återgång från bakgrunden bör uppspelningen av innehållet återupptas.
 
-1. **Spela upp mediematerial i minst 5 minuter utan avbrott**
+1. **Spela upp mediet med huvudinnehåll i minst 5 minuter utan avbrott**
 
-   Information om anropsparametrar och metadata finns i [Information om provsamtal.](/help/legacy/validation/test-call-details.md#play-main-content)
+   Information om anropsparametrar och metadata finns i [Information om testsamtal.](/help/legacy/validation/test-call-details.md#play-main-content)
 
 1. **Stäng mediespelaren**
 

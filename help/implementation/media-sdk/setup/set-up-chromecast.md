@@ -21,12 +21,12 @@ I det här avsnittet beskrivs förutsättningarna för att konfigurera en Chrome
 * **Hämta giltiga konfigurationsparametrar**
 
   Dessa parametrar kan hämtas från en Adobe-representant när du har konfigurerat ditt medieanalyskonto.
-* **Inkludera följande API:er i mediespelaren**
+* **Ta med följande API:er i mediespelaren**
 
    * *Ett API för att prenumerera på spelarhändelser* - Media SDK kräver att du anropar en uppsättning enkla API:er när händelser inträffar i spelaren.
    * *Ett API som tillhandahåller spelarinformation* - Den här informationen innehåller information som medienamnet och spelhuvudets position.
 
-Adobe Mobile-tjänster har ett nytt användargränssnitt som samlar funktioner för mobilmarknadsföring för mobilappar från hela Adobe Marketing Cloud. Från början erbjuder mobiltjänsten smidig integrering av funktioner för appanalys och målinriktning för Adobe Analytics- och Adobe Target-lösningarna. Läs mer på [Dokumentation för Adobe Mobile Services.](https://experienceleague.adobe.com/docs/mobile-services/using/home.html)
+Adobe Mobile-tjänster har ett nytt användargränssnitt som samlar funktioner för mobilmarknadsföring för mobilappar från hela Adobe Marketing Cloud. Från början erbjuder mobiltjänsten smidig integrering av funktioner för appanalys och målinriktning för Adobe Analytics- och Adobe Target-lösningarna. Läs mer på [Adobe Mobile Services-dokumentationen.](https://experienceleague.adobe.com/docs/mobile-services/using/home.html)
 
 Med Adobe Mobile Library for Chromecast v3.x for Experience Cloud Solutions kan ni mäta Chromecast-applikationer som skrivits i JavaScript, utnyttja och samla in målgruppsdata via målgruppshantering och mäta videoengagemang.
 
@@ -34,7 +34,7 @@ Med Adobe Mobile Library for Chromecast v3.x for Experience Cloud Solutions kan 
 
 1. Lägg till ditt hämtade Chromecast-bibliotek i ditt projekt.
 
-   1. The `AdobeMobileLibrary-Chromecast-[version]` ZIP-filen består av följande programkomponenter:
+   1. ZIP-filen `AdobeMobileLibrary-Chromecast-[version]` består av följande programvarukomponenter:
 
       * `adbmobile-chromecast.min.js`:
 
@@ -42,9 +42,9 @@ Med Adobe Mobile Library for Chromecast v3.x for Experience Cloud Solutions kan 
 
       * `ADBMobileConfig` config
 
-        Den här SDK-konfigurationsfilen är anpassad för ditt program. Ett exempel `ADBMobileConfig` SDK (under `samples/`). Hämta rätt inställningar från en Adobe-representant.
+        Den här SDK-konfigurationsfilen är anpassad för ditt program. Ett exempel på `ADBMobileConfig`-implementering anges med SDK (under `samples/`). Hämta rätt inställningar från en Adobe-representant.
 
-   1. Lägg till biblioteksfilen i `index.html` och skapa `ADBMobileConfig` global variabel enligt följande (den globala variabeln som används för att konfigurera Adobe Mobile för Media Analytics har en exklusiv nyckel med namnet `mediaHeartbeat`):
+   1. Lägg till biblioteksfilen i din `index.html`-fil och skapa den globala variabeln `ADBMobileConfig` enligt följande (den globala variabeln som används för att konfigurera Adobe Mobile för Media Analytics har en exklusiv nyckel med namnet `mediaHeartbeat`):
 
       ```js
       <script>
@@ -89,7 +89,7 @@ Med Adobe Mobile Library for Chromecast v3.x for Experience Cloud Solutions kan 
 
       >[!IMPORTANT]
       >
-      >If `mediaHeartbeat` är felaktigt konfigurerad, mediemodulen försätts i ett feltillstånd och kommer att sluta skicka spårningsanrop.
+      >Om `mediaHeartbeat` är felaktigt konfigurerad försätts mediemodulen i ett feltillstånd och skickar inga spårningsanrop.
 
       ADBMoble Config-parametrar för nyckeln mediaHeartbeat:
 
@@ -108,7 +108,7 @@ Med Adobe Mobile Library for Chromecast v3.x for Experience Cloud Solutions kan 
 
    Experience Cloud Visitor ID-tjänsten tillhandahåller ett universellt besökar-ID för olika Experience Cloud-lösningar. Tjänsten för besökar-ID krävs av Media Analytics och andra Marketing Cloud-integreringar.
 
-   Verifiera att `ADBMobileConfig` config innehåller `marketingCloud` organisations-ID.
+   Kontrollera att din `ADBMobileConfig`-konfiguration innehåller ditt organisations-ID för `marketingCloud`.
 
    ```
    "marketingCloud": {
@@ -116,13 +116,13 @@ Med Adobe Mobile Library for Chromecast v3.x for Experience Cloud Solutions kan 
    }
    ```
 
-   Experience Cloud organisations-ID:n är unika för alla klientföretag i Adobe Marketing Cloud och ser ut ungefär som följande värde: `016D5C175213CCA80A490D05@AdobeOrg`.
+   Experience Cloud organisations-ID:n identifierar unikt varje klientföretag i Adobe Marketing Cloud och ser ut ungefär som följande värde: `016D5C175213CCA80A490D05@AdobeOrg`.
 
    >[!IMPORTANT]
    >
    >Se till att du inkluderar `@AdobeOrg`.
 
-   När konfigurationen är klar skapas ett Experience Cloud Visitor-ID som ingår i alla träffar. Andra besökar-ID, t.ex. `custom` och `automatically-generated`, fortsätter att skickas med varje träff.
+   När konfigurationen är klar skapas ett Experience Cloud Visitor-ID som ingår i alla träffar. Andra besökar-ID:n, som `custom` och `automatically-generated`, fortsätter att skickas med varje träff.
 
    **Tjänstmetoder för Experience Cloud Visitor ID**
 

@@ -8,11 +8,11 @@ role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
 workflow-type: tm+mt
 source-wordcount: '59'
-ht-degree: 11%
+ht-degree: 3%
 
 ---
 
-# Implementera standardmetadata i Chromecast{#implement-standard-metadata-on-chromecast}
+# Implementera standardmetadata på Chromecast{#implement-standard-metadata-on-chromecast}
 
 Instansiera ett metadataobjekt av standardtyp, fyll i önskade variabler och ange metadataobjektet i objektet Mediepulsslag. Exempel:
 
@@ -32,4 +32,4 @@ standardAudioMetadata[AudioMetadataKeys.ALBUM] = "Sample album";
 mediaObject[ADBMobile.media.MediaObjectKey.StandardAudioMetadata] = standardAudioMetadata;
 ```
 
-Se den omfattande listan med metadata för ljud och video här: [Parametrar för ljud och video.](/help/implementation/variables/audio-video-parameters.md)
+Se den omfattande listan med ljud- och videometadata här: [Parametrar för ljud och video.](/help/implementation/variables/audio-video-parameters.md)

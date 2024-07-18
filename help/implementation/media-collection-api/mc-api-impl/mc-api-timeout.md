@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Timeoutvillkor{#timeout-conditions}
 
-**Tidsvillkor för Media Collection API**
+**API-timeoutvillkor för mediainsamling**
 
 Media Collection API har inte samma funktion som Media SDK för att utfärda ett nytt sessions-ID när timeoutförhållanden inträffar. När ett timeout-villkor inträffar kommer serverdelen att stänga sessionen och alla efterföljande anrop som görs med detta sessions-ID kommer att tas bort. Logiken som hanterar en timeout för session måste hanteras i klienten. Det innebär att spelaren måste övervaka timeoutvillkoren och hämta ett nytt sessions-ID om en timeout inträffar.
 
@@ -27,4 +27,4 @@ Media Collection API har inte samma funktion som Media SDK för att utfärda ett
 
 >[!NOTE]
 >
->Du kan också tvinga fram ett sessionsslut genom att skicka ett `events` begäran med `sessionEnd` händelsetyp.
+>Du kan också tvinga fram ett sessionsslut genom att skicka en `events`-begäran med händelsetypen `sessionEnd`.

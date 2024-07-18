@@ -7,24 +7,24 @@ exl-id: 65e5b67a-26fc-433e-b99b-0ebbc24428ac
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
 workflow-type: tm+mt
 source-wordcount: '205'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
 # Hämta JSON-rapportdata för Media Playback Time Spent med API:er för Analytics 2.0{#get-media-playback-time-spent-json-report-data}
 
-Du kan hämta den tid som går åt till att rapportera data med hjälp av [_*API:er för Analytics 2.0*_](https://www.adobe.io/apis/experiencecloud/analytics/docs.html).
+Du kan hämta den mediouppspelningstid som spenderas på rapportdata med [_*API:er för Analytics 2.0*_](https://www.adobe.io/apis/experiencecloud/analytics/docs.html).
 
 1. Filtrera data med valfritt segment som bygger på användargränssnittet. Om du vill filtrera efter ett visst innehålls-ID skapar du ett nytt segment.
-1. Ange `elements` -> `id` i begärandetexten till `metrics/playback_time_spent_seconds` eller `metrics/playback_time_spent_minutes` beroende på om du vill ha utdata i sekunder eller minuter.
+1. Ange `elements` -> `id` i begärandetexten som `metrics/playback_time_spent_seconds` eller `metrics/playback_time_spent_minutes` beroende på om du vill ha utdata i sekunder eller minuter.
 1. Begär tillräckligt med data.
 
-   * Det dataområde som du anger i rapporten samlar in alla samtidiga visningsprogramdata _när videosessionen avslutades._
+   * Det dataintervall som du anger i rapporten samlar in alla samtidiga visningsprogramdata _när videosessionen avslutades._
 Du måste redovisa sessioner som börjar en dag och slutar efter midnatt, nästa dag.
 
-   * Begär ytterligare en dag data till den avsedda perioden i din begäran, men i din analys _*endast använda de avsedda uppgifterna.*_
+   * Begär ytterligare en dag med data till den avsedda perioden i din begäran, men i din analys _*använd bara de data som är avsedda.*_
 
-Nyttolasten för en samplingsbegäran för en dag med data skulle se ut som följande exempel. Begäran görs två dagar i följd, men när du rapporterar används bara den första dagen.
+Nyttolasten för en samplingsbegäran för en dag med data skulle se ut som i följande exempel. Begäran görs två dagar i följd, men när du rapporterar används bara den första dagen.
 
 ## Exempelbegäran
 

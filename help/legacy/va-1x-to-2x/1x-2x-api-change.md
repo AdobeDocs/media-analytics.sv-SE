@@ -7,8 +7,8 @@ feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
 workflow-type: tm+mt
-source-wordcount: '201'
-ht-degree: 1%
+source-wordcount: '139'
+ht-degree: 2%
 
 ---
 
@@ -16,8 +16,8 @@ ht-degree: 1%
 
 ## Media SDK 2.x API-referenser
 
-* [Android API-referens](https://adobe-marketing-cloud.github.io/media-sdks/reference/android/index.html)
-* [iOS API-referens](https://adobe-marketing-cloud.github.io/media-sdks/reference/ios/index.html)
+* [API-referens för Android](https://adobe-marketing-cloud.github.io/media-sdks/reference/android/index.html)
+* [API-referens för iOS](https://adobe-marketing-cloud.github.io/media-sdks/reference/ios/index.html)
 * [JS API-referens](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/index.html)
 * [API-referens för Chromecast](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/index.html)
 
@@ -34,13 +34,13 @@ ht-degree: 1%
 | `videoPlayerPlugin.trackApplicationError()` | Ej tillämpligt |
 | `videoPlayerPlugin.trackVideoPlayerError()` | [mediaHeartbeat.trackError()](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/MediaHeartbeat.html#trackError) |
 
-Alla tillvalsspårnings-API:er som (annonser, kapitel, bithastighetsändring, sökning och buffring) ingår nu i en enda `trackEvent` API. The [trackEvent](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/MediaHeartbeat.html#trackEvent) API tar emot en konstant parameter som representerar den typ av händelse som ska spåras:
+Alla valfria API:er för spårning, till exempel (annonser, kapitel, ändring av bithastighet, sökning och buffring), ingår nu i ett enda `trackEvent`-API. API:t [trackEvent](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/MediaHeartbeat.html#trackEvent) tar emot en konstant parameter som representerar den typ av händelse som ska spåras:
 
 ## Valfria trackEvent-API:er:
 
 | VHL 1.x | VHL 2.x |
 |---|---|
-| Returnera ett giltigt `AdBreakInfo` in `VideoPlayerPlugin.getAdBreakInfo()` | `trackEvent(Event.AdBreakStart)` |
+| Returnera en giltig `AdBreakInfo` i `VideoPlayerPlugin.getAdBreakInfo()` | `trackEvent(Event.AdBreakStart)` |
 | Returnera null i `VideoPlayerPlugin.getAdBreakInfo()` | `trackEvent(Event.AdBreakComplete)` |
 | `playerPlugin.trackAdStart()` | `trackEvent(Event.AdStart, adObject, adCustomMetadata)` |
 | `playerPlugin.trackAdComplete()` | `trackEvent(Event.AdComplete)` |

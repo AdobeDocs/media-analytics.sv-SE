@@ -16,8 +16,8 @@ ht-degree: 0%
 
 Innan du börjar implementera tillägget Adobe Streaming Media Collection utför du följande åtgärder:
 
-1. **Granska översikten över tillägget Streaming Media Collection**<br>
-Innan du börjar implementera tillägget Streaming Media Collection ska du granska [Översikt över tillägget Streaming Media Collection](/help/media-overview.md) för att säkerställa att den uppfyller dina behov.
+1. **Granska översikten över tilläggsprogrammet för direktuppspelad mediesamling**<br>
+Innan du börjar implementera tillägget Streaming Media Collection bör du kontrollera att det passar dina behov i [ översikten över tillägget för direktuppspelad media Collection ](/help/media-overview.md) .
 
 1. **Bekräfta din prismodell**<br>
 Den aktuella prismodellen för tillägget Adobe Streaming Media Collection baseras på videoströmmar. Kontakta vid behov din försäljningsrepresentant eller kontoteamet på Adobe eftersom tillägget säljs separat för Adobe Analytics och Adobe Experience Platform.
@@ -27,19 +27,19 @@ Om du vill aktivera rapporter i Analytics eller Customer Journey Analytics och v
 
 1. **Implementera Adobe Experience Platform Identity Service i Experience Cloud**
 
-   The **Identitetstjänst** används för att skapa ett gemensamt identifieringsramverk för bastjänsterna, lösningarna, kundattributen och målgrupperna i bastjänsten för Experience Cloud. Det fungerar genom att tilldela ett unikt, beständigt ID till en besökare. När din organisation implementerar ID-tjänsten kan du med detta ID identifiera samma besökare och deras data i olika Experience Cloud-lösningar.
+   **Identitetstjänsten** aktiverar det gemensamma identifieringsramverket för bastjänsterna, lösningarna, kundattributen och målgrupperna i huvudtjänsten Experience Cloud. Det fungerar genom att tilldela ett unikt, beständigt ID till en besökare. När din organisation implementerar ID-tjänsten kan du med detta ID identifiera samma besökare och deras data i olika Experience Cloud-lösningar.
 
    ![ID-tjänstgrafik](assets/mc_id_service_graphic.png)
 
-   ID-tjänsten kan även ersätta olika lösningsspecifika ID:n (till exempel Analytics AID). Via [Kund-ID och autentiseringstillstånd](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html) Med ID-tjänsten kan du skicka in dina egna kund-ID:n till Experience Cloud. Tänk dock på att ID-tjänsten bara fungerar med de lösningar som du redan har prenumererat på. Om du inte är registrerad för åtkomst till andra produkter ger ID-tjänsten inte åtkomst.
+   ID-tjänsten kan även ersätta olika lösningsspecifika ID:n (till exempel Analytics AID). Genom funktionen [Kund-ID:n och autentiseringstillstånd](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html) kan du med ID-tjänsten skicka dina egna kund-ID:n till Experience Cloud. Tänk dock på att ID-tjänsten bara fungerar med de lösningar som du redan har prenumererat på. Om du inte är registrerad för åtkomst till andra produkter ger ID-tjänsten inte åtkomst.
 
-   ID-tjänsten är en integrerad komponent i många Experience Cloud-funktioner, förbättringar och tjänster. För närvarande stöder ID-tjänsten [Analyser,](https://www.adobe.com/marketing-cloud/web-analytics.html) [Audience Manager,](https://www.adobe.com/marketing-cloud/data-management-platform.html) och [Mål.](https://www.adobe.com/marketing-cloud/testing-targeting.html)
+   ID-tjänsten är en integrerad komponent i många Experience Cloud-funktioner, förbättringar och tjänster. För närvarande stöder ID-tjänsten [Analytics,](https://www.adobe.com/marketing-cloud/web-analytics.html) [Audience Manager,](https://www.adobe.com/marketing-cloud/data-management-platform.html) och [Target.](https://www.adobe.com/marketing-cloud/testing-targeting.html)
 
-   Om du inte har implementerat ID-tjänsten är det dags att börja fundera på en migreringsstrategi nu. Mer information om ID-tjänstens betydelse och roll finns i [Varför identitetstjänsten ska finnas på din radardator.](https://theblog.adobe.com/why-new-adobe-marketing-cloud-id-service-should-be-on-your-radar/)
+   Om du inte har implementerat ID-tjänsten är det dags att börja fundera på en migreringsstrategi nu. Mer information om ID-tjänstens betydelse och roll finns i [Varför identitetstjänsten ska finnas på din radarr.](https://theblog.adobe.com/why-new-adobe-marketing-cloud-id-service-should-be-on-your-radar/)
 
-   Mer information om Experience Cloud-ID finns i [Experience Cloud ID - översikt](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html) och [Adobe Experience Platform Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html).
+   Mer information om Experience Cloud ID finns i [Översikt över Experience Cloud ID,](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html) och [Adobe Experience Platform identitetstjänst](https://experienceleague.adobe.com/docs/id-service/using/home.html).
 
-1. **Visa ytterligare krav för implementeringsmetoden**
+1. **Visa ytterligare krav för din implementeringsmetod**
 
    Beroende på hur du tänker implementera tillägget för Streaming Media Collection kan du visa förutsättningarna för någon av följande implementeringsmetoder:
 
@@ -47,4 +47,4 @@ Om du vill aktivera rapporter i Analytics eller Customer Journey Analytics och v
 
    * [Krav för Edge-implementeringar](/help/implementation/edge/prerequisites-edge.md)
 
-   Använd [Implementeringsöversikt](/help/implementation/overview.md) för att avgöra vilken implementeringsmetod som är rätt för dig.
+   Använd [Implementeringsöversikten](/help/implementation/overview.md) för att avgöra vilken implementeringsmetod som är rätt för dig.

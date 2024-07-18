@@ -17,11 +17,11 @@ Följande anvisningar ger vägledning för implementering i alla 2.x SDK:er.
 
 >[!IMPORTANT]
 >
->Om du implementerar en tidigare version av SDK kan du hämta utvecklarhandböckerna här: [Ladda ned SDK:er.](/help/getting-started/download-sdks.md)
+>Om du implementerar en tidigare version av SDK kan du hämta utvecklarguiderna här: [Hämta SDK:er.](/help/getting-started/download-sdks.md)
 
 ## Implementera QOE
 
-1. Identifiera när bithastigheten ändras under medieuppspelning och skapa `qoeObject` -instans med QoE-informationen.
+1. Identifiera när bithastigheten ändras under medieuppspelning och skapa instansen `qoeObject` med hjälp av QoE-informationen.
 
    QoObject-variabler:
 
@@ -48,7 +48,7 @@ Följande anvisningar ger vägledning för implementering i alla 2.x SDK:er.
    tracker.updateQoEObject(qoeObject);
    ```
 
-1. När uppspelningen växlar bithastigheter anropar du `BitrateChange` i Media Heartbeat-instansen:
+1. När uppspelningen växlar bithastigheter anropar du händelsen `BitrateChange` i instansen Mediepulsslag:
 
    ```js
    _onBitrateChange = function() {
@@ -64,9 +64,9 @@ Följande anvisningar ger vägledning för implementering i alla 2.x SDK:er.
    >
    >Uppdatera QoE-objektet och anropa bithastighetsändringshändelsen för varje bithastighetsändring. Detta ger de mest exakta QoE-data.
 
-1. Se till att ringa `updateQoEObject()` metod för att tillhandahålla den mest uppdaterade QoE-informationen till SDK.
-1. När mediespelaren påträffar ett fel och felhändelsen är tillgänglig för spelarens API använder du `trackError()` om du vill hämta felinformation. (Se [Ökning](/help/use-cases/track-errors/track-errors-overview.md).)
+1. Se till att anropa metoden `updateQoEObject()` för att tillhandahålla den senaste QoE-informationen till SDK:n.
+1. När mediespelaren stöter på ett fel och felhändelsen är tillgänglig för spelarens API använder du `trackError()` för att hämta felinformationen. (Se [Översikt](/help/use-cases/track-errors/track-errors-overview.md).)
 
    >[!TIP]
    >
-   >Spårning av mediespelarfel kommer inte att stoppa mediespårningssessionen. Om mediaspelarfelet förhindrar att uppspelningen fortsätter kontrollerar du att mediespårningssessionen stängs genom att anropa `trackSessionEnd()` efter anrop `trackError()`.
+   >Spårning av mediespelarfel kommer inte att stoppa mediespårningssessionen. Om mediespelarfelet förhindrar att uppspelningen fortsätter ska du kontrollera att mediespårningssessionen stängs genom att anropa `trackSessionEnd()` efter att `trackError()` har anropats.

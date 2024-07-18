@@ -7,8 +7,8 @@ feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: 57b4120518a6fecf6a9751f944d5bd20f04b15fe
 workflow-type: tm+mt
-source-wordcount: '364'
-ht-degree: 1%
+source-wordcount: '369'
+ht-degree: 0%
 
 ---
 
@@ -20,30 +20,30 @@ Detta scenario har en VOD-resurs, utan annonser, som spelas upp en gång från b
 
 | Utlösare | Heartbeat-metod | Nätverksanrop | Anteckningar   |
 |---|---|---|---|
-| Användaren klickar **[!UICONTROL Play]** | `trackSessionStart` | Börja med Analytics-innehåll, starta pulsslagsinnehåll | Detta kan antingen vara en användare som klickar på Spela upp eller en automatisk uppspelningshändelse. |
+| Användaren klickar på **[!UICONTROL Play]** | `trackSessionStart` | Börja med Analytics-innehåll, starta pulsslagsinnehåll | Detta kan antingen vara en användare som klickar på Spela upp eller en automatisk uppspelningshändelse. |
 | Mediets första bildruta | `trackPlay` | Spela upp pulsslagsinnehåll | Den här metoden utlöser timern och från och med nu skickas hjärtslag var 10:e sekund under hela uppspelningen. |
 | Innehåll spelas upp |  | Hjärtslag för innehåll |  |
-| Innehållet är färdigt | `trackComplete` | Hearsbeat-innehåll slutfört | *Slutförd* betyder att slutet på spelhuvudet har nåtts. |
+| Innehållet är färdigt | `trackComplete` | Passa upp innehållet fullständigt | *Fullständigt* innebär att slutet på spelhuvudet nåddes. |
 
 ## Parametrar {#parameters}
 
-Många av de värden som du ser på startanrop för pulsslagsinnehåll visas också i Adobe Analytics `Content Start` Samtal. Det finns många parametrar som Adobe använder för att fylla i de olika medierapporter, men bara de viktigaste parametrarna visas i följande tabell:
+Många av de värden som du ser på startanrop för pulsslagsinnehåll visas också i Adobe Analytics `Content Start`-anrop. Det finns många parametrar som Adobe använder för att fylla i de olika medierapporter, men bara de viktigaste parametrarna visas i följande tabell:
 
-### Starta pulsslagsinnehåll
+### Start för pulsslagsinnehåll
 
 | Parameter | Värde | Anteckningar   |
 |---|---|---|
-| `s:sc:rsid` | &lt;Your Adobe Report Suite ID> |  |
-| `s:sc:tracking_server` | &lt;Your Analytics Tracking Server URL> |  |
-| `s:user:mid` | måste anges | Ska matcha mittvärdet på `Adobe Analytics Content Start` ring. |
+| `s:sc:rsid` | &lt;Ditt Adobe Report Suite-ID> |  |
+| `s:sc:tracking_server` | &lt;URL för analysspårningsserver> |  |
+| `s:user:mid` | måste anges | Ska matcha mittvärdet för anropet `Adobe Analytics Content Start`. |
 | `s:event:type` | `"start"` |  |
 | `s:asset:type` | `"main"` |  |
-| `s:asset:media_id` | &lt;Your Media Name> |  |
+| `s:asset:media_id` | &lt;Ditt medienamn> |  |
 | `s:meta:*` | valfri | Anpassade metadata som är inställda på mediet. |
 
 ## Spela upp pulsslagsinnehåll {#heartbeat-content-play}
 
-Dessa parametrar bör se nästan identiska ut som `Heartbeat Content Start` men den största skillnaden är `s:event:type` parameter. Alla andra parametrar ska fortfarande finnas.
+De här parametrarna ska se nästan identiska ut som anropet `Heartbeat Content Start`, men den största skillnaden är parametern `s:event:type`. Alla andra parametrar ska fortfarande finnas.
 
 | Parameter | Värde | Anteckningar   |
 |---|---|---|
@@ -54,16 +54,16 @@ Dessa parametrar bör se nästan identiska ut som `Heartbeat Content Start` men 
 
 Under medieuppspelning skickar en tidtagare minst ett pulsslag var 10:e sekund. Dessa hjärtslag innehåller information om uppspelning, annonser, buffring och så vidare. Det exakta innehållet i varje pulsslag ligger utanför det här dokumentets räckvidd, men det kritiska problemet är att pulsslag utlöses konsekvent medan uppspelningen fortsätter.
 
-I innehållsrubrikerna ska du leta efter följande parametrar:
+I innehållets pulsslag ska du leta efter följande parametrar:
 
 | Parametrar | Värde | Anteckningar   |
 |---|---|---|
 | `s:event:type` | `"play"` |  |
-| `l:event:playhead` | &lt;playhead position=&quot;&quot;> t.ex. 50,60,70 | Den här parametern återspeglar spelhuvudets aktuella position. |
+| `l:event:playhead` | &lt;playhead position> t.ex. 50,60,70 | Den här parametern återspeglar spelhuvudets aktuella position. |
 
-## Hearsbeat-innehåll slutfört {#heartbeat-content-complete}
+## Passa upp innehållet fullständigt {#heartbeat-content-complete}
 
-När uppspelningen är klar, vilket innebär att slutet av spelhuvudet nås, visas en `Heartbeat Content Complete` samtal skickas. Det här anropet ser ut som andra Heartbeat-anrop, men innehåller några specifika parametrar:
+När uppspelningen har slutförts, vilket innebär att slutet av spelhuvudet nås, skickas ett `Heartbeat Content Complete`-anrop. Det här anropet ser ut som andra Heartbeat-anrop, men innehåller några specifika parametrar:
 
 | Parametrar | Värde | Anteckningar   |
 |---|---|---|

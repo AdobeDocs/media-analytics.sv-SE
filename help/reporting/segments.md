@@ -7,8 +7,8 @@ feature: "Media Analytics, Segmentation"
 role: User, Admin, Data Engineer
 source-git-commit: b15a81dc8f08e94c9b80d66019f3d0fe95ef5a74
 workflow-type: tm+mt
-source-wordcount: '205'
-ht-degree: 6%
+source-wordcount: '198'
+ht-degree: 0%
 
 ---
 
@@ -18,13 +18,13 @@ Med segment kan du identifiera undergrupper av besökare baserat på egenskaper 
 
 >[!NOTE]
 >
->Dessa rapporteringssegment som är kopplade till Media Stream Type introducerades den 18 september tillsammans med `streamType` parameter.
+>Dessa rapporteringssegment som är associerade med mediaströmstypen introducerades den 18 mars 2018 tillsammans med parametern `streamType`.
 
 | Segment | Beskrivning | Regel |
 |---|---|---|
-| Medieströmtyp: Alla | Segmentera alla *media* strömdata | &quot;Innehåll (ID) finns&quot; |
-| Typ av medieström: Ljud | Segmentera alla *ljud* strömdata | &quot;Innehåll (ID) finns&quot; AND &quot;Media Stream Type = `audio`&quot; |
-| Medieströmtyp: Video | Segmentera alla *video* strömdata | &quot;Innehåll (ID) finns&quot; AND &quot;Media Stream Type != `audio`&quot; |
+| Medieströmtyp: Alla | Segmentera alla *media*-strömdata | &quot;Innehåll (ID) finns&quot; |
+| Typ av medieström: Ljud | Segmentera alla *ljud*-strömdata | &quot;Innehåll (ID) finns&quot; OCH &quot;Typ av medieström = `audio`&quot; |
+| Medieströmtyp: Video | Segmentera alla *video*-strömdata | &quot;Innehåll (ID) finns&quot; OCH &quot;Typ av medieström != `audio`&quot; |
 | Medieinnehållstyp: VoD | Segmentera allt VoD-innehåll | &quot;Innehållstyp = `vod`&quot; |
 | Medieinnehållstyp: Live | Segmentera allt Live-innehåll | &quot;Innehållstyp = `live`&quot; |
 | Medieinnehållstyp: Linjär | Segmentera allt linjärt innehåll | &quot;Innehållstyp = `linear`&quot; |

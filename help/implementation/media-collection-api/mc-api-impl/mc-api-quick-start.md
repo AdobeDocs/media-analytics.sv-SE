@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->Samla in de data som behövs för att slutföra ett projekt [Sessionsbegäran](../mc-api-ref/mc-api-sessions-req.md) till bakomliggande server för Media Analytics (MA) Collection API. Du kan snabbt verifiera data i din begäran genom att skicka förfrågningar manuellt (med `curl`, eller Postman osv.). Detta ger dig omedelbar feedback om du har problem med felaktiga datatyper eller felaktig information i din begäran. Använd [JSON-valideringsscheman](../mc-api-ref/mc-api-json-validation.md) för att verifiera att du har angett korrekta data för begäran.
+>Samla in de data som krävs för att slutföra en [sessionsbegäran](../mc-api-ref/mc-api-sessions-req.md) till bakomliggande server för Media Analytics-samlingen (MA). Du kan snabbt verifiera dina begärandedata genom att skicka förfrågningar manuellt (med `curl`, eller Postman, osv.). Detta ger dig omedelbar feedback om du har problem med felaktiga datatyper eller felaktig information i din begäran. Använd [JSON-valideringsscheman](../mc-api-ref/mc-api-json-validation.md) för att verifiera att du anger korrekta begärandedata.
 
 1. Samla in de Adobe Analytics- och Visitor-data som behövs för att köra något av Experience Cloud-programmen:
 
@@ -25,7 +25,7 @@ ht-degree: 0%
    * Analytics Report Suite-ID
    * URL för analysspårningsserver
 
-1. Skapa ett JSON-objekt för `sessions` begärandetext, som innehåller de minimidata som krävs för ett lyckat anrop. Exempel:
+1. Skapa ett JSON-objekt för din `sessions`-begärandebrödtext, som innehåller de minimidata som krävs för ett lyckat anrop. Exempel:
 
    ```json
    {
@@ -53,9 +53,9 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >Du måste använda rätt datatyper i JSON-begärandetexten. t.ex., `analytics.enableSSL` kräver ett booleskt värde, `media.length` är numerisk osv. Du kan kontrollera parametertyper och obligatoriska eller valfria krav genom att markera [JSON-valideringsscheman.](mc-api-validate-reqs.md)
+   >Du måste använda rätt datatyper i JSON-begärandetexten. `analytics.enableSSL` kräver t.ex. ett booleskt värde, `media.length` är numeriskt osv. Du kan kontrollera parametertyper och obligatoriska eller valfria krav genom att kontrollera [JSON-valideringsscheman.](mc-api-validate-reqs.md)
 
-1. Skicka sessionsbegäranden till API-slutpunkten för MA-samling. Om nyttolasten är ogiltig identifierar du problemet och försöker igen tills du får en `201 Created` svar. I den här `curl` JSON-begärandetexten finns i en fil med namnet `sample_data_session`:
+1. Skicka sessionsbegäranden till API-slutpunkten för MA-samling. Om nyttolasten för din begäran är ogiltig identifierar du problemet och försöker igen tills du får ett `201 Created`-svar. I det här `curl` exemplet finns JSON-begärandetexten i en fil med namnet `sample_data_session`:
 
    ```sh
    $ curl -i -d \
@@ -76,4 +76,4 @@ ht-degree: 0%
    Access-Control-Expose-Headers: Location
    ```
 
-Om [Sessionsbegäran](../mc-api-ref/mc-api-sessions-req.md) lyckas får du en `201 Created` samma svar som ovan. Svaret innehåller ett sessions-ID i platshuvudet. Sessions-ID är den viktigaste informationen i svaret, eftersom det krävs för alla efterföljande spårningsanrop. När en [Sessionsbegäran](../mc-api-ref/mc-api-sessions-req.md)kan du med tillförsikt fortsätta implementera videospårning med hjälp av MA API i videospelaren.
+Om [sessionsbegäran](../mc-api-ref/mc-api-sessions-req.md) lyckas får du ett `201 Created`-svar som liknar det ovan. Svaret innehåller ett sessions-ID i platshuvudet. Sessions-ID är den viktigaste informationen i svaret, eftersom det krävs för alla efterföljande spårningsanrop. När en [sessionsbegäran](../mc-api-ref/mc-api-sessions-req.md) har returnerats kan du fortsätta implementera videospårning med MA API i videospelaren.

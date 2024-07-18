@@ -1,6 +1,6 @@
 ---
 title: Lär dig spåra buffring med JavaScript 2.x
-description: Lär dig hur du spårar buffringshändelser i webbläsarappar (JS).
+description: Lär dig spåra buffringshändelser i webbläsarappar (JS).
 uuid: c380cf2c-7729-4d4a-a4da-581bd94a5896
 exl-id: 62c1d5b4-2717-42b3-8343-d41e895a9da3
 feature: Media Analytics
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Spåra buffring med JavaScript 2.x{#track-buffering-on-javascript}
 
-Följande instruktioner ger vägledning för implementering i alla 2.x SDK:er.
+Följande anvisningar ger vägledning för implementering i alla 2.x SDK:er.
 
 >[!IMPORTANT]
 >
@@ -29,7 +29,7 @@ Följande instruktioner ger vägledning för implementering i alla 2.x SDK:er.
 
 ## Implementera buffring
 
-1. Lyssna efter uppspelningsbuffringshändelser från mediespelaren och vid meddelanden om starthändelser för buffert, spåra buffring med hjälp av `BufferStart` -händelse.
+1. Lyssna efter uppspelningsbuffringshändelser från mediespelaren och spåra buffring med händelsen `BufferStart` vid meddelanden om start av buffert.
 
    ```js
    _onBufferStart = function() {
@@ -37,7 +37,7 @@ Följande instruktioner ger vägledning för implementering i alla 2.x SDK:er.
    };
    ```
 
-1. Spåra slutet av buffringen med `BufferComplete` -händelse.
+1. Spåra slutet av buffringen med händelsen `BufferComplete` när ett meddelande om att bufferten har slutförts från mediespelaren.
 
    ```js
    _onBufferComplete = function() {
@@ -45,4 +45,4 @@ Följande instruktioner ger vägledning för implementering i alla 2.x SDK:er.
    };
    ```
 
-Se spårningsscenariot [VOD-uppspelning med buffring](/help/use-cases/tracking-scenarios/vod-buffering.md) för mer information.
+Mer information finns i spårningsscenariot [VOD-uppspelning med buffring](/help/use-cases/tracking-scenarios/vod-buffering.md).

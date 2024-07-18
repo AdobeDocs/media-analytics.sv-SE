@@ -16,7 +16,7 @@ ht-degree: 3%
 
 Beräknade mätvärden för tillägget Adobe Streaming Media Collection är anpassade mätvärden som gör att ni kan få målstyrda strömmande mediedata, som genomsnittlig annonstid eller genomsnittliga annonser per medieström.
 
-Mer information om Adobe Analytics beräknade värden finns i [Beräknade och avancerade beräknade (härledda) värden](https://experienceleague.adobe.com/docs/analytics/components/calculated-metrics/cm-overview.html?lang=en) i Adobe Analytics Components Guide.
+Mer information om Adobe Analytics beräknade mått finns i [Beräknade och avancerade beräknade (härledda) mått](https://experienceleague.adobe.com/docs/analytics/components/calculated-metrics/cm-overview.html?lang=en) i Adobe Analytics Components Guide.
 
 >[!NOTE]
 >
@@ -26,10 +26,10 @@ Mer information om Adobe Analytics beräknade värden finns i [Beräknade och av
 |---|---|---|
 | Medel Ads per Media Stream | Komma igång med annonser per media | `Ad Starts / Media Starts` |
 | Medel Kapitel per medieström | Kapitelstart per media börjar | `Chapter Start / Media Starts` |
-| Medel Medietid tillagd | Total tid som tillbringats per mediematerial har startats (`HH:MM:SS`) | `Media Time Spent / Media Starts` |
-| Medel Innehållstid | Innehållstid per innehåll som börjar (`HH:MM:SS`) | `Content Time Spent / Content Start` |
-| Medel Annonstid | Annonstid per annonsstart (`HH:MM:SS`) | `Ad Time Spent / Ad Start` |
-| Medel Kapiteltid spenderad | Kapiteltid som spenderats per kapitel börjar (`HH:MM:SS`) | `Chapter Time Spent / Chapter Start` |
+| Medel Medietid tillagd | Total tid som tillbringats per mediematerial startar (`HH:MM:SS`) | `Media Time Spent / Media Starts` |
+| Medel Innehållstid | Innehållstid per innehåll börjar (`HH:MM:SS`) | `Content Time Spent / Content Start` |
+| Medel Annonstid | Lägg till tid per annonsstart (`HH:MM:SS`) | `Ad Time Spent / Ad Start` |
+| Medel Kapiteltid spenderad | Kapiteltid per kapitel börjar (`HH:MM:SS`) | `Chapter Time Spent / Chapter Start` |
 | Slutförandefrekvens för media | Frekvens för slutfört innehåll kontra initierat media (%) | `Content Completes/ Media Starts` |
 | Slutförandefrekvens för innehåll | Frekvens för slutfört innehåll jämfört med innehåll som börjar (%) | `Content Completes / Content Starts` |
 | Annonsslutförandefrekvens | Antal slutförda annonser jämfört med annonsstart (%) | `Ad Completes / Ad Starts` |

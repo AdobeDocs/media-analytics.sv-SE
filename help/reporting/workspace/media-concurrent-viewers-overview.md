@@ -21,4 +21,4 @@ I Analysis Workspace är Concurrent Viewers antalet unika besökare som visar me
 
 ## Få samtidiga visningsprogram via API:t för analysrapportering
 
-Du kan också få samtidiga visningsprogramdata för upp till en månad i taget på minutnivå med Analytics Reporting API 2.0. Rapporterings-API:t använder samma definition av samtidiga visningsprogram som Analysis Workspace.  Mer information finns i [_*Få JSON-rapportdata för samtidiga visningsprogram med API:er för Analytics 2.0*_](/help/reporting/reports-and-analytics/get-concurrent-json20.md).
+Du kan också få samtidiga visningsprogramdata för upp till en månad i taget på minutnivå med Analytics Reporting API 2.0. Rapporterings-API:t använder samma definition av samtidiga visningsprogram som Analysis Workspace.  Mer information finns i [_*Hämta JSON-rapportdata för samtidiga visningsprogram med API:er för Analytics 2.0*_](/help/reporting/reports-and-analytics/get-concurrent-json20.md).

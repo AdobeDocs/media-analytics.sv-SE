@@ -34,7 +34,7 @@ Visa snabbt mediemått per enhet eller land:
 
 ## Medieprestanda {#media-performance}
 
-Klicka och dra om du vill zooma in och hovra sedan om du vill visa detaljerade mått för specifika medier. Klicka  ![](assets/video-overview-report-revert.png)
+Klicka och dra om du vill zooma in och hovra sedan om du vill visa detaljerade mått för specifika medier. Klicka på ![](assets/video-overview-report-revert.png)
 
 om du vill återställa vyn när du har zoomat.
 

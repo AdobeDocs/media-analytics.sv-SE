@@ -7,7 +7,7 @@ feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: 0d53e62069a65b252e004e21943ecdbd011a3658
 workflow-type: tm+mt
-source-wordcount: '874'
+source-wordcount: '875'
 ht-degree: 0%
 
 ---
@@ -26,50 +26,50 @@ Spårning av huvuduppspelning inkluderar spårning av mediainläsning, mediestar
 
 ### Vid mediainläsning
 
-* Skapa medieobjektet
+* Skapa mediaobjektet
 * Fyll i metadata
-* Utlysning `trackSessionStart`; Till exempel: `trackSessionStart(mediaObject, contextData)`
+* Ring `trackSessionStart`, till exempel: `trackSessionStart(mediaObject, contextData)`
 
 ### Vid mediestart
 
-* Utlysning `trackPlay`
+* Ring `trackPlay`
 
 ### Vid paus/fortsätt
 
-* Utlysning `trackPause`
-* Utlysning `trackPlay`   _när uppspelningen återupptas_
+* Ring `trackPause`
+* Ring `trackPlay`   _när uppspelningen återupptas_
 
 ### On media complete
 
-* Utlysning `trackComplete`
+* Ring `trackComplete`
 
-### Vid medieavbrott
+### Om media avbryts
 
-* Utlysning `trackSessionEnd`
+* Ring `trackSessionEnd`
 
 ### När snabbspolning startar
 
-* Utlysning `trackEvent(SeekStart)`
+* Ring `trackEvent(SeekStart)`
 
 ### När snabbspolning slutar
 
-* Utlysning `trackEvent(SeekComplete)`
+* Ring `trackEvent(SeekComplete)`
 Avbryt ändringar
 
 ### När buffring börjar
 
-* Utlysning `trackEvent(BufferStart);`
+* Ring `trackEvent(BufferStart);`
 
 ### När buffring slutar
 
-* Utlysning `trackEvent(BufferComplete);`
+* Ring `trackEvent(BufferComplete);`
 
 
 ## Implementera {#implement}
 
-1. **Inledande spårningsinställning -** Identifiera när användaren aktiverar uppspelningsavsikten (användaren klickar på play och/eller autoplay är aktiverat) och skapar en `MediaObject` -instans som använder medieinformationen för innehållsnamn, innehålls-ID, innehållslängd och strömtyp.
+1. **Inledande spårningsinställning -** Identifiera när användaren aktiverar uppspelningsavsikten (användaren klickar på play och/eller autoplay är aktiverat) och skapa en `MediaObject`-instans med mediainformationen för innehållsnamn, innehålls-ID, innehållslängd och strömtyp.
 
-   **`MediaObject`referens:**
+   **`MediaObject`-referens:**
 
    | Variabelnamn | Beskrivning | Obligatoriskt |
    |---|---|---|
@@ -99,7 +99,7 @@ Avbryt ändringar
 
    Det allmänna formatet för att skapa `MediaObject` är `MediaHeartbeat.createMediaObject(<MEDIA_NAME>, <MEDIA_ID>, <MEDIA_LENGTH>, <STREAM_TYPE>, <MEDIA_TYPE>);`
 
-1. **Bifoga metadata -** Du kan också bifoga standard- och/eller anpassade metadataobjekt till spårningssessionen via kontextdatavariabler.
+1. **Bifoga metadata -** Du kan även bifoga standard- och/eller anpassade metadataobjekt till spårningssessionen via kontextdatavariabler.
 
    * **Standardmetadata -**
 
@@ -109,49 +109,49 @@ Avbryt ändringar
 
      Instansiera ett metadataobjekt av standardtyp, fyll i önskade variabler och ange metadataobjektet i objektet Mediepulsslag.
 
-     Se den omfattande listan med metadata här: [Parametrar för ljud och video.](../../implementation/variables/audio-video-parameters.md)
+     Se den omfattande listan med metadata här: [Ljud- och videoparametrar.](../../implementation/variables/audio-video-parameters.md)
 
    * **Anpassade metadata -** Skapa ett variabelobjekt för de anpassade variablerna och fyll i med data för det här innehållet.
 
-1. **Spåra avsikten att starta uppspelningen -** Om du vill börja spåra en session ringer du `trackSessionStart` på Media Heartbeat-instansen.
+1. **Spåra avsikten att starta uppspelningen -** Om du vill börja spåra en session anropar du `trackSessionStart` på instansen Mediepulsslag.
 
    >[!IMPORTANT]
    >
-   >`trackSessionStart` spårar användarens avsikt att spela upp, inte början av uppspelningen. Detta API används för att läsa in data/metadata och för att beräkna QoS-måttet för tiden till start (tidsintervallet mellan `trackSessionStart` och `trackPlay`).
+   >`trackSessionStart` spårar användarens avsikt att spela upp, inte början av uppspelningen. Det här API:t används för att läsa in data/metadata och för att uppskatta QoS-måttet för tid till start (tidsintervallet mellan `trackSessionStart` och `trackPlay`).
 
    >[!NOTE]
    >
-   >Om du inte använder anpassade metadata skickar du ett tomt objekt för `data` argument i `trackSessionStart`.
+   >Om du inte använder anpassade metadata skickar du ett tomt objekt för argumentet `data` i `trackSessionStart`.
 
-1. **Spåra faktiskt uppspelningsstart -** Identifiera händelsen från mediespelaren i början av uppspelningen, där den första bildrutan av innehållet återges på skärmen, och anropa `trackPlay`.
+1. **Spåra faktiskt uppspelningsstart -** Identifiera händelsen från mediespelaren för början av uppspelningen, där den första bildrutan av innehållet återges på skärmen, och anropa `trackPlay`.
 
-1. **Spåra slutförd uppspelning -** Identifiera händelsen från mediespelaren för att slutföra uppspelningen, där användaren har tittat på innehållet tills slutet, och anropa `trackComplete`.
+1. **Spåra slutförd uppspelning -** Identifiera händelsen från mediespelaren för att slutföra uppspelningen, där användaren har tittat på innehållet till slutet och anropa `trackComplete`.
 
 1. **Spåra slutet av sessionen -** Identifiera händelsen från mediespelaren för borttagning/stängning av uppspelningen, där användaren stänger innehållet och/eller innehållet är slutfört och har tagits bort, och anropa `trackSessionEnd`.
 
    >[!IMPORTANT]
    >
-   >`trackSessionEnd` markerar slutet av en spårningssession. Om sessionen har bevakats till slutet, där användaren har tittat på innehållet till slutet, måste du se till att `trackComplete` anropas före `trackSessionEnd`. Övriga `track*` API-anrop ignoreras efter `trackSessionEnd`, förutom `trackSessionStart` för en ny spårningssession.
+   >`trackSessionEnd` markerar slutet på en spårningssession. Om sessionen har bevakats till att slutföras, där användaren har tittat på innehållet till slutet, kontrollerar du att `trackComplete` anropas före `trackSessionEnd`. Alla andra `track*` API-anrop ignoreras efter `trackSessionEnd`, förutom `trackSessionStart` för en ny spårningssession.
 
-1. **Spåra alla möjliga pausscenarier -** Identifiera händelsen från mediespelaren för att pausa och ringa `trackPause`.
+1. **Spåra alla möjliga pausscenarier -** Identifiera händelsen från mediespelaren för paus och anrop `trackPause`.
 
-   **Pausa scenarier -** Identifiera ett scenario där spelaren pausar och se till att `trackPause` anropas korrekt. Följande scenarier kräver alla ditt appsamtal `trackPause()`:
+   **Pausa scenarier -** Identifiera alla scenarier där spelaren pausar och se till att `trackPause` anropas korrekt. Följande scenarier kräver att din app anropar `trackPause()`:
 
    * Användaren träffar uttryckligen paus i appen.
    * Spelaren försätts i pausläget.
    * (*Mobilappar*) - Användaren placerar programmet i bakgrunden, men du vill att sessionen ska vara öppen i appen.
    * (*Mobilappar*) - Alla typer av systemavbrott inträffar som gör att ett program backjordas. Användaren får t.ex. ett samtal eller ett popup-fönster från ett annat program inträffar, men du vill att sessionen ska vara aktiv så att användaren kan återuppta innehållet från den punkt då det avbröts.
 
-1. Identifiera händelsen från spelaren för uppspelning och/eller återupptagning från paus och samtal `trackPlay`.
+1. Identifiera händelsen från spelaren för uppspelning och/eller återupptagning från paus och anrop `trackPlay`.
 
    >[!TIP]
    >
-   >Detta kan vara samma händelsekälla som användes i steg 4. Se till att varje `trackPause()` API-anrop har parats med följande `trackPlay()` API-anrop när uppspelningen återupptas.
+   >Detta kan vara samma händelsekälla som användes i steg 4. Se till att varje `trackPause()` API-anrop paras med ett följande `trackPlay()` API-anrop när uppspelningen återupptas.
 
-1. Lyssna efter uppspelningssökningshändelser från mediespelaren. Vid händelsemeddelanden för sökstart spårar du sökningen med `SeekStart` -händelse.
-1. Spåra slutet av sökningen med `SeekComplete` -händelse.
-1. Lyssna efter uppspelningsbuffringshändelser från mediespelaren och vid meddelanden om starthändelser för buffert, spåra buffring med hjälp av `BufferStart` -händelse.
-1. Spåra slutet av buffringen med `BufferComplete` -händelse.
+1. Lyssna efter uppspelningssökningshändelser från mediespelaren. Spåra sökningen med händelsen `SeekStart` vid sökningen efter händelsemeddelanden.
+1. Spåra slutet av sökningen med händelsen `SeekComplete` när du söker efter ett fullständigt meddelande från mediespelaren.
+1. Lyssna efter uppspelningsbuffringshändelser från mediespelaren och spåra buffring med händelsen `BufferStart` vid meddelanden om start av buffert.
+1. Spåra slutet av buffringen med händelsen `BufferComplete` när ett meddelande om att bufferten har slutförts från mediespelaren.
 
 Se exempel på varje steg i följande plattformsspecifika ämnen och titta på de exempelspelare som ingår i dina SDK:er.
 
@@ -238,4 +238,4 @@ if (e.type == "buffered") {
 
 ## Validera {#validate}
 
-Information om hur du validerar *äldre* implementera, se [Äldre validering.](/help/legacy/validation/validation-overview.md)
+Information om hur du validerar din *äldre*-implementering finns i [Äldre validering.](/help/legacy/validation/validation-overview.md)

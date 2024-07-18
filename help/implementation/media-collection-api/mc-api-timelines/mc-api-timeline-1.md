@@ -1,5 +1,5 @@
 ---
-title: Lär dig mer om tidslinjer för mediespårning
+title: Läs mer om tidslinjer för mediespårning
 description: Gå djupare in på spelhuvudets tidslinje och motsvarande användares åtgärder. Läs mer om de olika åtgärderna och deras medföljande förfrågningar.
 uuid: 0ff591d3-fa99-4123-9e09-c4e71ea1060b
 exl-id: 16b15e03-5581-471f-ab0c-077189dd32d6
@@ -7,14 +7,14 @@ feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
 workflow-type: tm+mt
-source-wordcount: '1064'
+source-wordcount: '1120'
 ht-degree: 5%
 
 ---
 
-# Tidslinje 1 – Visa till innehållets slut{#timeline-view-to-end-of-content}
+# Tidslinje 1 - Visa till innehållets slut{#timeline-view-to-end-of-content}
 
-## VOD, pre-roll ads, pausa, buffra, visa innehållet i slutet
+## VOD, pre-roll ads, pausa, buffra, visa innehållet till slutet
 
 I följande diagram visas spelhuvudets tidslinje och motsvarande tidslinje för en användares åtgärder. Nedan presenteras närmare uppgifter om varje åtgärd och de tillhörande ansökningarna.
 
@@ -30,11 +30,11 @@ I följande diagram visas spelhuvudets tidslinje och motsvarande tidslinje för 
 | --- | :---: | :---: | --- |
 | Automatiskt uppspelad eller uppspelningsknappen nedtryckt börjar videoinläsningen. | 0 | 0 | `/api/v1/sessions` |
 
-Dessa samtalssignaler _användarens avsikt att spela_ en video.
+Det här anropet signalerar _användarens avsikt att spela upp_ en video.
 
 Det returnerar ett sessions-ID ( `{sid}`) till klienten som används för att identifiera alla efterföljande spårningsanrop i sessionen. Spelarläget är inte&quot;uppspelning&quot; än, utan är i stället&quot;start&quot;.
 
-[Parametrar för obligatoriska sessioner ](../mc-api-ref/mc-api-sessions-req.md) måste inkluderas i `params` karta i begärandetexten.
+[Obligatoriska sessionsparametrar](../mc-api-ref/mc-api-sessions-req.md) måste inkluderas i kartan `params` i begärandetexten.
 
 I bakgrunden genererar det här samtalet ett Adobe Analytics-initieringssamtal.
 
@@ -65,7 +65,7 @@ I bakgrunden genererar det här samtalet ett Adobe Analytics-initieringssamtal.
 
 | Åtgärd | Tidslinje för åtgärd (sekunder) | Spelhuvudsposition (sekunder) | Klientbegäran |
 | --- | :---: | :---: | --- |
-| Appen börjar pinga händelsetimer | 0 | 0 | `/api/v1/sessions/{sid}/events` |  |
+| Appen börjar pinga händelsetimer | 0 | 0 | `/api/v1/sessions/{sid}/events` | |
 
 Starta appens ping-timer. Den första ping-händelsen ska sedan utlösas 1 sekund om det finns annonser före rullning, annars 10 sekunder.
 
@@ -98,7 +98,7 @@ Annonserna kan bara spåras inom en annonsbrytning.
 | --- | :---: | :---: | --- |
 | Spåra start av förrullningsannons nr 1 | 0 | 0 | `/api/v1/sessions/{sid}/events` |
 
-Börja spåra den första pre-roll-annonsen, som är 15 sekunder lång. Inkludera anpassade metadata med detta `adStart` .
+Börja spåra den första pre-roll-annonsen, som är 15 sekunder lång. Inkluderar anpassade metadata med denna/detta `adStart`.
 
 ```json
 {
@@ -128,7 +128,7 @@ Börja spåra den första pre-roll-annonsen, som är 15 sekunder lång. Inkluder
 }
 ```
 
-**OBS! Mellan AdBreakStart- och AdStart-händelser ska det inte finnas några ytterligare uppspelningshändelser.**
+**Obs! Mellan AdBreakStart- och AdStart-händelser ska det inte finnas några ytterligare uppspelningshändelser.**
 
 ### Åtgärd 5 - annonsmaterial {#Action-5}
 
@@ -241,7 +241,7 @@ Spåra början av den andra pre-roll-annonsen, som är 7 sekunder lång.
 }
 ```
 
-### Åtgärd 8 - Annonsmaterial {#Action-8}
+### Åtgärd 8 - Annonspn {#Action-8}
 
 | Åtgärd | Tidslinje för åtgärd (sekunder) | Spelhuvudsposition (sekunder) | Klientbegäran |
 | --- | :---: | :---: | --- |
@@ -301,7 +301,7 @@ Annonsbrytningen är över. Under reklampausen har lekläget fortsatt att&quot;l
 | --- | :---: | :---: | --- |
 | Spåra uppspelningshändelse | 22 | 0 | `/api/v1/sessions/{sid}/events` |
 
-Efter `adBreakComplete` -händelsen, placerar spelaren i uppspelningsläge med `play` -händelse.
+Efter `adBreakComplete`-händelsen placerar du spelaren i uppspelningsläge med händelsen `play`.
 
 ```json
 {
@@ -354,7 +354,7 @@ Spåra spelarens förflyttning till buffringsläge.
 | --- | :---: | :---: | --- |
 | Buffringen är avslutad, programmet spårar återanvändning av innehåll | 36 | 11 | `/api/v1/sessions/{sid}/events` |
 
-Buffringen slutar efter 3 sekunder, så ställ in spelaren i uppspelningsläge igen. Du måste skicka ytterligare en spårets uppspelningshändelse som slutar buffras.  **The `play` ring efter `bufferStart` infogar ett &quot;bufferEnd&quot;-anrop i bakänden,** så det finns inget behov av `bufferEnd` -händelse.
+Buffringen slutar efter 3 sekunder, så ställ in spelaren i uppspelningsläge igen. Du måste skicka ytterligare en spårets uppspelningshändelse som slutar buffras.  **Anropet `play` efter `bufferStart` angriper ett &quot;bufferEnd&quot;-anrop till bakänden,**, så det finns inget behov av en `bufferEnd`-händelse.
 
 ```json
 {
@@ -389,7 +389,7 @@ Ringa backend var 10:e sekund.
 | --- | :---: | :---: | --- |
 | Spåra start av annonsbrytning mitt i rullen | 46 | 21 | `/api/v1/sessions/{sid}/events` |
 
-Adress mellan rullar med 8 sekunders varaktighet: skicka `adBreakStart` .
+Adress mellan rullar med 8 sekunders varaktighet: skicka `adBreakStart`.
 
 ```json
 {
@@ -533,7 +533,7 @@ Användarens åtgärd flyttar uppspelningsläget till &quot;pausad&quot;.
 | --- | :---: | :---: | --- |
 | Appen skickar ping-händelse | 70 | 31 | `/api/v1/sessions/{sid}/events` |
 
-Ringa backend var 10:e sekund. Spelaren är fortfarande i buffertläge. användaren sitter fast vid 20 sekunders innehåll. Rensar...
+Ringa backend var 10:e sekund. Spelaren är fortfarande i buffertläge. Användaren fastnar vid 20 sekunders innehåll. Rensar...
 
 ```json
 {
@@ -550,7 +550,7 @@ Ringa backend var 10:e sekund. Spelaren är fortfarande i buffertläge. använda
 | --- | :---: | :---: | --- |
 | Användaren tryckte på Spela upp för att återuppta huvudinnehållet | 74 | 31 | `/api/v1/sessions/{sid}/events` |
 
-Flytta uppspelningsläget till&quot;uppspelning&quot;.  **The `play` ring efter `pauseStart` infogar ett &quot;resume&quot;-anrop till back end,** så det finns inget behov av `resume` -händelse.
+Flytta uppspelningsläget till&quot;uppspelning&quot;.  **Anropet `play` efter `pauseStart` placerar ett &quot;resume&quot;-anrop i bakänden** så det finns inget behov av en `resume`-händelse.
 
 ```json
 {
@@ -597,4 +597,4 @@ Skicka `sessionComplete` till serverdelen för att ange att användaren har titt
 
 >[!NOTE]
 >
->**Hittar du inga händelser? -** Det finns inget uttryckligt stöd i Media Collection API för `seekStart` eller `seekComplete` händelser. Detta beror på att vissa spelare genererar ett mycket stort antal sådana händelser när slutanvändaren rensar, och att flera hundra användare enkelt kan tappa bort nätverksbandbredden för en backend-tjänst. Adobe kringgår explicit stöd för seek-händelser genom att beräkna pulsslagets varaktighet baserat på enhetens tidsstämpel i stället för spelhuvudets position.
+>**Inga söktider? -** Det finns inget uttryckligt stöd i Media Collection API för `seekStart` - eller `seekComplete` -händelser. Detta beror på att vissa spelare genererar ett mycket stort antal sådana händelser när slutanvändaren rensar, och att flera hundra användare enkelt kan tappa bort nätverksbandbredden för en backend-tjänst. Adobe kringgår explicit stöd för seek-händelser genom att beräkna pulsslagets varaktighet baserat på enhetens tidsstämpel i stället för spelhuvudets position.

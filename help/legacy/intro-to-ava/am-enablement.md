@@ -6,7 +6,7 @@ feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
 workflow-type: tm+mt
-source-wordcount: '402'
+source-wordcount: '397'
 ht-degree: 0%
 
 ---
@@ -17,100 +17,100 @@ Adobe Audience Manager (AAM), en plattform för datahantering (DMP), hjälper er
 
 Med AAM är du inte knuten till någon dataförsäljare, utbytesplattform eller efterfrågeplattform. Dessutom är AAM helt oberäkneligt när det gäller dina partners datatillgångar. Med tillgång till flera datakällor erbjuder AAM digitala utgivare möjlighet att använda en mängd olika tredjepartsdata. Mer information om AAM finns i AAM [Audience Manager produktdokumentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html).
 
-**AAM dataöverföring -** För både videoinnehåll och videoannonser kan mätvärden och metadata som samlas in med hjälp av lösningens (reserverade) variabler skickas automatiskt till AAM. Dataöverföringen är tillgänglig på alla plattformar, inklusive datorer, mobiler och OTT. Om du vill aktivera dataöverföringen på serversidan måste du kontakta Adobe Client Care och be om att denna feed aktiveras.
+**VA för AAM dataöverföring -** För både videoinnehåll och videoannonser kan mätvärden och metadata som samlas in med hjälp av lösningsvariabler (reserverade) skickas automatiskt till AAM. Dataöverföringen är tillgänglig på alla plattformar, inklusive datorer, mobiler och OTT. Om du vill aktivera dataöverföringen på serversidan måste du kontakta Adobe Client Care och be om att denna feed aktiveras.
 
 >[!IMPORTANT]
 >
 >För att säkerställa en smidig överföring av data till AAM bör du ha tillgång till de senaste versionerna av Media SDK-biblioteken.
 
-Federated Data har fullt stöd för datadelning till AAM. Kontakta ditt Adobe-team för att få en bekräftelse på Federated Data-inställningarna.
+Federated Data har fullt stöd för delning av data till AAM. Kontakta ditt Adobe-team för att få en bekräftelse på Federated Data-inställningarna.
 
-## OTT-/AAM-metoder {#ott-aam-methods}
+## OTT/AAM {#ott-aam-methods}
 
 Du kan använda dessa metoder för att skicka signaler och hämta besökarsegment från Audience Manager:
 
-### Chromecast {#am-chromecast}
+### Kromecast {#am-chromecast}
 
 * `getVisitorProfile() -`
 
-   Returnerar den besökarprofil som senast hämtades. Returnerar ett tomt objekt om ingen signal har skickats ännu.
+  Returnerar den besökarprofil som senast hämtades. Returnerar ett tomt objekt om ingen signal har skickats ännu.
 
-   ```js
-   ADBMobile.audienceManager.getVisitorProfile();
-   ```
+  ```js
+  ADBMobile.audienceManager.getVisitorProfile();
+  ```
 
 * `getDpid() -`
 
-   Returnerar den besökarprofil som senast hämtades. Returnerar ett tomt objekt om ingen signal har skickats ännu.
+  Returnerar den besökarprofil som senast hämtades. Returnerar ett tomt objekt om ingen signal har skickats ännu.
 
-   ```js
-   ADBMobile.audienceManager.getDpid();
-   ```
+  ```js
+  ADBMobile.audienceManager.getDpid();
+  ```
 
 * `getDpuuid() -`
 
-   Returnerar aktuellt DPUID.
+  Returnerar aktuellt DPUID.
 
-   ```js
-   ADBMobile.audienceManager.getDpuuid();
-   ```
+  ```js
+  ADBMobile.audienceManager.getDpuuid();
+  ```
 
 * `setDpidAndDpuuid() -`
 
-   Anger DPID och DPUID. Om DPID och DPUID anges skickas de med varje signal.
+  Anger DPID och DPUID. Om DPID och DPUID anges skickas de med varje signal.
 
-   ```js
-   ADBMobile.audienceManager.setDpidAndDpuuid("myDpid", "myDpuuid");
-   ```
+  ```js
+  ADBMobile.audienceManager.setDpidAndDpuuid("myDpid", "myDpuuid");
+  ```
 
 * `submitSignal() -`
 
-   Skickar målgruppshantering en signal med egenskaper.
+  Skickar målgruppshantering en signal med egenskaper.
 
-   ```js
-   ADBMobile.audienceManager.submitSignal({"sampleTrait":"sampleValue"});
-   ```
+  ```js
+  ADBMobile.audienceManager.submitSignal({"sampleTrait":"sampleValue"});
+  ```
 
 ### Roku {#am-roku}
 
 * `audienceVisitorProfile -`
 
-   Returnerar den besökarprofil som senast hämtades. Returnerar ett tomt objekt om ingen signal har skickats ännu.
+  Returnerar den besökarprofil som senast hämtades. Returnerar ett tomt objekt om ingen signal har skickats ännu.
 
-   ```js
-   ADBMobile().audienceVisitorProfile()
-   ```
+  ```js
+  ADBMobile().audienceVisitorProfile()
+  ```
 
 * `audienceDpid -`
 
-   Returnerar den besökarprofil som senast hämtades. Returnerar ett tomt objekt t om ingen signal har skickats ännu.
+  Returnerar den besökarprofil som senast hämtades. Returnerar ett tomt objekt t om ingen signal har skickats ännu.
 
-   ```js
-   ADBMobile().audienceDpid()
-   ```
+  ```js
+  ADBMobile().audienceDpid()
+  ```
 
 * `audienceDpuuid -`
 
-   Returnerar aktuellt DPUID.
+  Returnerar aktuellt DPUID.
 
-   ```js
-   ADBMobile().audienceDpuuid()
-   ```
+  ```js
+  ADBMobile().audienceDpuuid()
+  ```
 
 * `audienceSetDpidAndDpuuid -`
 
-   Anger DPID och DPUID. Om DPID och DPUID anges skickas de med varje signal.
+  Anger DPID och DPUID. Om DPID och DPUID anges skickas de med varje signal.
 
-   ```js
-   ADBMobile().audienceSetDpidAndDpuuid("myDpid", "myDpuuid")
-   ```
+  ```js
+  ADBMobile().audienceSetDpidAndDpuuid("myDpid", "myDpuuid")
+  ```
 
 * `audienceSubmitSignal -`
 
-   Skickar målgruppshantering en signal med egenskaper.
+  Skickar målgruppshantering en signal med egenskaper.
 
-   ```js
-   traitData = {}
-   traitData["sampleTrait"] = "sampleValue"
-   ADBMobile().audienceSubmitSignal(traitData)
-   ```
+  ```js
+  traitData = {}
+  traitData["sampleTrait"] = "sampleValue"
+  ADBMobile().audienceSubmitSignal(traitData)
+  ```

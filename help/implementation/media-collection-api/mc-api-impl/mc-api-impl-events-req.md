@@ -8,7 +8,7 @@ role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
 workflow-type: tm+mt
 source-wordcount: '99'
-ht-degree: 4%
+ht-degree: 0%
 
 ---
 
@@ -16,6 +16,6 @@ ht-degree: 4%
 
 **`{uri}/api/v1/sessions/{sid}/events`**
 
-Använd [Händelsebegäran](../mc-api-ref/mc-api-events-req.md) för alla efterföljande spårningsanrop efter att du har fått ett sessions-ID med [Sessionsbegäran.](../mc-api-ref/mc-api-sessions-req.md) Ange spelhuvudets plats och tidsstämpel, händelsetyp och eventuella parametrar som du vill inkludera i JSON-brödtexten för begäran.
+Använd [Händelsebegäran](../mc-api-ref/mc-api-events-req.md) för alla efterföljande spårningsanrop när du har fått ett sessions-ID med hjälp av [sessionsbegäran.](../mc-api-ref/mc-api-sessions-req.md) Ange spelhuvudets plats och tidsstämpel, händelsetyp och eventuella parametrar som du vill inkludera i JSON-delen av begäran.
 
-JSON-begärandetexten för [Händelsebegäran](../mc-api-ref/mc-api-events-req.md) har samma struktur som Sessions-begäran, men kontrollera [JSON-valideringsscheman](../mc-api-ref/mc-api-json-validation.md) för parameterkrav och -typer.
+JSON-begärandetexten för [Händelsebegäran](../mc-api-ref/mc-api-events-req.md) har samma struktur som Sessions-begäran, men kontrollera [JSON-valideringsscheman](../mc-api-ref/mc-api-json-validation.md) för parameterkrav och typer.

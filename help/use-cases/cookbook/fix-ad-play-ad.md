@@ -7,7 +7,7 @@ feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
 workflow-type: tm+mt
-source-wordcount: '448'
+source-wordcount: '450'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ## PROBLEM
 
-I vissa annonsspårningsscenarier kan du stöta på `main:play` anrop som inträffar oväntat mellan slutet av en annons och början av nästa annons. Om fördröjningen mellan det fullständiga annonsanropet och nästa annonsöppningsanrop är längre än 250 millisekunder återgår Media SDK till att skicka `main:play` samtal. Om detta alternativ `main:play` när en annonsbrytning pågår kan innehållets startmått anges tidigt.
+I vissa annonsspårningsscenarier kan `main:play` anrop inträffa oväntat mellan slutet av en annons och början av nästa annons. Om fördröjningen mellan det fullständiga annonsanropet och nästa annonsöppningsanrop är längre än 250 millisekunder återgår Media SDK till att skicka `main:play` samtal. Om det här återfallet till `main:play` inträffar under en annonsbrytning före rullning kan innehållets startmått anges tidigt.
 
 Ett mellanrum mellan annonser som beskrivs ovan tolkas av Media SDK som huvudinnehåll, eftersom det inte finns någon överlappning där med något annonsinnehåll. Media SDK har ingen annonsinformation och spelaren är i uppspelningsläge. Om det inte finns någon annonsinformation, och spelarläget spelas upp, kommer Media SDK som standard att identifiera längden på mellanrummet mot huvudinnehållet. Det går inte att kreditera uppspelningens varaktighet mot annonsen som är null.
 
@@ -27,58 +27,58 @@ När du använder Adobe Debug eller en nätverkspaketsniffer som Charles, om du 
 
 * Sessionsstart: `s:event:type=start` &amp; `s:asset:type=main`
 * Annonsstart: `s:event:type=start` &amp; `s:asset:type=ad`
-* Ad Play: `s:event:type=play` &amp; `s:asset:type=ad`
+* Annonsuppspelning: `s:event:type=play` &amp; `s:asset:type=ad`
 * Ad Complete: `s:event:type=complete` &amp; `s:asset:type=ad`
-* Huvudinnehåll spelas upp: `s:event:type=play` &amp; `s:asset:type=main` **(oväntat)**
+* Huvudinnehåll spelas: `s:event:type=play` &amp; `s:asset:type=main` **(oväntat)**
 
 * Annonsstart: `s:event:type=start` &amp; `s:asset:type=ad`
-* Ad Play: `s:event:type=play` &amp; `s:asset:type=ad`
+* Annonsuppspelning: `s:event:type=play` &amp; `s:asset:type=ad`
 * Ad Complete: `s:event:type=complete` &amp; `s:asset:type=ad`
-* Huvudinnehåll spelas upp: `s:event:type=play` &amp; `s:asset:type=main` **(förväntades)**
+* Huvudinnehåll spelas: `s:event:type=play` &amp; `s:asset:type=main` **(förväntades)**
 
 ## UPPLÖSNING
 
-***Fördröjning som utlöser anropet till Ad Complete.***
+***Fördröjning som utlöser anropet för att slutföra annonsering.***
 
-Hantera mellanrummet inifrån spelaren genom att ringa `trackEvent:AdComplete` sent till första annansen, följt av `trackEvent:AdStart` för den andra annonsen. Appen bör vänta med att anropa `AdComplete` -händelsen när den första annonsen är klar. Se till att du ringer `trackEvent:AdComplete` för den sista annonsen i annonsbrytningen. Om spelaren kan identifiera att den aktuella annonsresursen är den sista i annonsbrytningen ringer du `trackEvent:AdComplete` omedelbart. Upplösningen resulterar i att mindre än en sekund extra annonstid tillskrivs den föregående annonsenheten.
+Hantera gapet inifrån spelaren genom att anropa `trackEvent:AdComplete` sent för den första annonsen, omedelbart följt av `trackEvent:AdStart` för den andra annonsen. Appen bör vänta med att anropa `AdComplete`-händelsen när den första annonsen är klar. Se till att du ringer `trackEvent:AdComplete` för den sista annonsen i annonsbrytningen. Om spelaren kan identifiera att den aktuella annonsresursen är den sista i annonsbrytningen ska du omedelbart ringa `trackEvent:AdComplete`. Upplösningen resulterar i att mindre än en sekund extra annonstid tillskrivs föregående annonsenhet.
 
-**Vid start av annonsbrytning, inklusive pre-roll:**
+**Vid annonsradbrytning, inklusive pre-roll:**
 
-* Skapa `adBreak` objektinstans för annonsbrytningen, till exempel `adBreakObject`.
+* Skapa objektinstansen `adBreak` för annonsbrytningen, till exempel `adBreakObject`.
 
-* Utlysning `trackEvent(MediaHeartbeat.Event.AdBreakStart, adBreakObject);`.
+* Ring `trackEvent(MediaHeartbeat.Event.AdBreakStart, adBreakObject);`.
 
-**För varje annonsresurs:**
+**För varje annonsresurs som startar:**
 
-* **Utlysning`trackEvent(MediaHeartbeat.Event.AdComplete);`**
+* **Ring`trackEvent(MediaHeartbeat.Event.AdComplete);`**
 
-   >[!NOTE]
-   >
-   >Ring bara detta om föregående annons inte är fullständig. Överväg ett booleskt värde om du vill behålla ett`isinAd`&quot; för föregående annons.
+  >[!NOTE]
+  >
+  >Ring bara detta om föregående annons inte är fullständig. Överväg ett booleskt värde om du vill behålla tillståndet `isinAd` för föregående annons.
 
-* Skapa ad-objektinstansen för annonsresursen: till exempel `adObject`.
-* Fyll i annonsens metadata, `adCustomMetadata`.
-* Utlysning `trackEvent(MediaHeartbeat.Event.AdStart, adObject, adCustomMetadata);`.
-* Utlysning `trackPlay()` om detta är den första annonsen i en annonsbrytning före rullning.
+* Skapa annonsobjektsinstansen för annonsresursen, till exempel `adObject`.
+* Fyll i annonsmetadata, `adCustomMetadata`.
+* Ring `trackEvent(MediaHeartbeat.Event.AdStart, adObject, adCustomMetadata);`.
+* Anropa `trackPlay()` om det här är den första annonsen i en annonsbrytning före registrering.
 
-**För varje annonsmaterial:**
+**För varje annonsresurs som har slutförts:**
 
 * **Ring inte**
 
-   >[!NOTE]
-   >
-   >Om programmet vet att det är den sista annonsen i annonsbrytningen ringer du `trackEvent:AdComplete` här och hoppa över inställning `trackEvent:AdComplete` i `trackEvent:AdBreakComplete`
+  >[!NOTE]
+  >
+  >Om programmet vet att det är den sista annonsen i annonsbrytningen ringer du `trackEvent:AdComplete` här och hoppar över inställningen `trackEvent:AdComplete` i `trackEvent:AdBreakComplete`
 
-**On ad skip:**
+**I annonshoppa:**
 
-* Utlysning `trackEvent(MediaHeartbeat.Event.AdSkip);`.
+* Ring `trackEvent(MediaHeartbeat.Event.AdSkip);`.
 
-**Vid annonsbrytning:**
+**En annonsbrytning slutförd:**
 
-* **Utlysning`trackEvent(MediaHeartbeat.Event.AdComplete);`**
+* **Ring`trackEvent(MediaHeartbeat.Event.AdComplete);`**
 
-   >[!NOTE]
-   >
-   >Om det här steget redan utförs ovan som en del av det sista `trackEvent:AdComplete` så kan detta hoppas över.
+  >[!NOTE]
+  >
+  >Om det här steget redan har utförts ovan som en del av det senaste `trackEvent:AdComplete`-anropet kan det här hoppas över.
 
-* Utlysning `trackEvent(MediaHeartbeat.Event.AdBreakComplete);`.
+* Ring `trackEvent(MediaHeartbeat.Event.AdBreakComplete);`.

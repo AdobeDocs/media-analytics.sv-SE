@@ -16,11 +16,11 @@ ht-degree: 0%
 De krav som beskrivs i det här avsnittet gäller specifikt för implementering av tillägget Adobe Streaming Media Collection med Edge-implementeringar.
 
 1. **Slutför de allmänna kraven**<br>
-Oavsett om du implementerar tillägget Streaming Media Collection för Adobe Analytics eller för Edge måste du se till att du uppfyller [allmänna krav](/help/getting-started/prereqs.md).
+Oavsett om du implementerar tillägget Streaming Media Collection för Adobe Analytics eller för Edge måste du se till att du uppfyller de [allmänna kraven](/help/getting-started/prereqs.md) .
 
-1. **Bekräfta att du implementerar en Adobe-lösning som är kompatibel med Edge Network och tillägget Streaming Media Collection**<br>
+1. **Bekräfta att du implementerar en Adobe-lösning som är kompatibel med Edge Network och tillägget för direktuppspelad mediasamling**<br>
 När du implementerar tillägget Streaming Media Collection med Edge måste du också ha en fungerande Customer Journey Analytics-, Adobe Analytics-, Adobe Journey Optimizer- eller Real-time Customer Data Platform-implementering. Mer information finns i följande dokumentationsresurser:
-   * [Customer Journey Analytics guide](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-landing.html?lang=en)
+   * [Guiden Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-landing.html?lang=en)
    * [Implementera Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/home.html)
    * [Adobe Journey Optimizer-dokumentation](https://experienceleague.adobe.com/docs/journey-optimizer.html)
    * [Real-time Customer Data Platform-dokumentation](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
@@ -28,5 +28,5 @@ När du implementerar tillägget Streaming Media Collection med Edge måste du o
 1. **Hämta URL:en för mediespårningsservern**<br>
 Be din Customer Journey Analytics-representant om URL:en för mediespårningsservern. <!-- This is the `collection-api-server` URL for the Mobile SDK, the JavaScript SDK, and the non-collection-api tracking server for Roku. Domain names for API implementation is: `[your_namespace].hb-api.omtrdc.net`. -->
 
-1. **Implementera tillägget Streaming Media Collection med Edge Network**<br>
-Följ stegen i [Implementera tillägget Streaming Media Collection med Edge Network](/help/implementation/edge/implementation-edge.md).
+1. **Implementera tillägget för direktuppspelad mediasamling med Edge Network**<br>
+Följ stegen i [Implementera tillägget för direktuppspelad mediesamling med Edge Network ](/help/implementation/edge/implementation-edge.md) .

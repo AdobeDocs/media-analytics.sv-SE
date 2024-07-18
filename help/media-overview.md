@@ -36,30 +36,30 @@ Strömmande mediedata kan enkelt integreras i följande Adobe Experience Platfor
 
 Fördelarna med tillägget Streaming Media Collection är bland annat övervakning i realtid, detaljerad analys, användbara insikter, intäktsmöjligheter med mera.
 
-* **Realtidsanalys**: Fatta konkreta beslut i realtid med nyckeltal som mediestart, över flera kanaler.
+* **Realtidsanalys**: Fatta konkreta, åtgärdbara beslut i realtid med hjälp av nyckeltal som mediefrekvenser som startar i flera kanaler.
 
   Med tillägget Streaming Media Collection får du nästan detaljinformation om varaktighet, stopp och start i realtid så att du kan utvärdera och kombinera video- och ljudstatistik. Dessa insikter gör att ni kan förstå kundernas tittande och avlyssningsvanor och öka engagemanget med personaliserade rekommendationer.
 
-* **Engagera med andra**: Engagera användarna genom färre buffringshändelser och genom att förstå var och när annonser ska spelas upp i innehållet för att skapa en smidig och mindre påträngande upplevelse som levererar återkommande besök.
+* **Öka engagemanget**: Engagera användarna fullständigt genom färre buffringshändelser och förstå var och när annonser ska spelas upp i innehållet för att skapa en smidig, mindre påträngande upplevelse som levererar upprepade besök.
 
-* **Holistisk bild**: Kombinera flera datapunkter för alla era innehållsdistributörer för att få en fullständig bild av all medieaktivitet. Mät engagemanget och se/lyssna på alla möjliga kanaler.
+* **Holistisk bild**: Kombinera flera datapunkter i alla innehållsdistributörer för att få en fullständig bild av all medieaktivitet. Mät engagemanget och se/lyssna på alla möjliga kanaler.
 
   Med tillägget Streaming Media Collection kan ni spåra hela kundresan på hela webbplatsen och direktuppspelande appar för att visualisera kundens väg och intressen och för att ge förbättrade rekommendationer och personalisera kundupplevelser.  Med mediemätning kan ni kategorisera data i flera dimensioner och segment och samla in alla metadata ni behöver för att göra en fullständig och detaljerad analys. Sedan kan ni analysera data och attribuera framgångsmått för helt konsumerad media, genomsnittlig tid som tillbringats på platsen och slutförda annonser.
 
-* **Vitala mått**: Mät viktiga leveransvärden relaterade till Experience Quality of Experience (QoE), t.ex. uteslutna bildrutor, använd buffringstid och genomsnittlig bithastighet.
+* **Vitala mått**: Mät vitala leveransvärden relaterade till Quality of Experience (QoE), t.ex. uteslutna bildrutor, använd buffringstid och genomsnittlig bithastighet.
 
-* **Ökad granularitet**: Utvärdera visningsbeteendet på den mest detaljerade nivån, inklusive besökarnas tid på dygnet, samtidigt återkommande tittare eller avlyssnare per minut och genomsnittlig tid som innehållet förbrukades.
+* **Ökad granularitet**: Utvärdera visningsbeteendet på den mest detaljerade nivån, inklusive enskild besökartid på dagen, samtidiga visningsprogram eller avlyssnare per minut och den genomsnittliga tid som innehållet förbrukades.
 
-* **Exakt mätning**: Mät på olika enheter som används för mediekonsumtion, inklusive OTT, smarttelefon, surfplatta, dator med mera, för att övervaka användarnas engagemangsmönster och vanor.
+* **Exakt mätning**: Mät på flera enheter som används för mediekonsumtion, inklusive OTT, smarttelefon, surfplatta, dator med mera, för att övervaka användarnas interaktionsmönster och vanor.
 
-* **Segmentering**: Använd klassificeringar på spelare, enheter, genrer, kapitel och bildspel för att se hur de påverkar era övergripande vyer/avlyssningar och kundernas engagemang med innehåll, ljud, annonser och kombinationer.
+* **Segmentering**: Använd klassificeringar på spelare, enheter, genrer, kapitel och bildspel för att se hur de påverkar era övergripande vyer/avlyssningar och kundengagemang med innehåll, ljud, annonser och kombinationer.
 
 
 ## Så här fungerar det
 
 Spårningsdata för direktuppspelande media samlas in från en spelare med Media for Edge Network SDK/Extension, Media Extension with Tags, Media SDKs, Media Edge API eller Media Collection API.
 
-Alla detaljerade data (upp till 10 sekunder) skickas antingen till tjänsten Media Analytics eller Experience Edge (beroende på [implementeringsmetod](/help/implementation/overview.md) du väljer), som samlar in och bearbetar data för varje enskild uppspelningssession.
+Alla detaljerade data (upp till 10 sekunder) skickas antingen till Media Analytics-tjänsten eller Experience Edge (beroende på vilken [implementeringsmetod](/help/implementation/overview.md) du väljer), som samlar in och bearbetar data för varje enskild uppspelningssession.
 
 När uppspelningssessionen är slut skickas beräknade spårningsdata antingen till Adobe Analytics eller Customer Journey Analytics för lagring och rapportering.
 
@@ -68,4 +68,4 @@ När uppspelningssessionen är slut skickas beräknade spårningsdata antingen t
 >Med Customer Journey Analytics-implementeringar kan data skickas till Customer Journey Analytics antingen med Experience Edge eller med hjälp av Analytics Data Connector (ADC).
 
 
-Detaljerad information om de olika implementeringsmetoderna finns i [Implementera tillägget Streaming Media Collection för Adobe Analytics eller Customer Journey Analytics](/help/implementation/overview.md).
+Mer information om de olika implementeringsmetoderna finns i [Implementera Streaming Media Collection-tillägget för Adobe Analytics eller Customer Journey Analytics](/help/implementation/overview.md).

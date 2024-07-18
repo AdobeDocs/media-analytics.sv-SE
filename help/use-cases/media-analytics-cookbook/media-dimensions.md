@@ -17,13 +17,13 @@ Med Media Stream Attribution kan ni länka programåtgärder till mediaspårning
 
 ## Media Dimensions Outside Media Tracking
 
-Du kan lägga till mediedimensioner till analyssamtal som sidvyer och anpassade länkar. Under implementeringen måste du lägga till parametrar för mediekontextdata i Analytics-spårningsanropen. En fullständig lista över tillgängliga parametrar för kontextdata som används för media finns i [Parametrar för ljud och video.](/help/implementation/variables/audio-video-parameters.md)
+Du kan lägga till mediedimensioner till analyssamtal som sidvyer och anpassade länkar. Under implementeringen måste du lägga till parametrar för mediekontextdata i Analytics-spårningsanropen. Om du vill visa en fullständig lista över tillgängliga kontextdataparametrar som används för media kan du läsa [Parametrar för ljud och video.](/help/implementation/variables/audio-video-parameters.md)
 
 Om du vill aktivera den här funktionen för en viss rapport aktiverar du mediespårningskonfigurationen på nytt från Admin Console.
 
 >[!NOTE]
 >
->Mediemätningarna är _not_ som kan användas utanför mediespårning eftersom de flesta av dessa beräknas av tillägget Streaming Media Collection baserat på pulsslagshändelser. Det är också viktigt att mediemätningarna inte påverkas av olika implementeringar.
+>Mediemätningarna är _inte_ tillgängliga för användning utanför mediespårning eftersom de flesta av dessa beräknas av tilläggsprogrammet för direktuppspelad mediasamling baserat på pulsslagshändelser. Det är också viktigt att mediemätningarna inte påverkas av olika implementeringar.
 
 ## Använda attribut för medieström
 
@@ -34,7 +34,7 @@ s.contextData["a.media.show"]="Mi Amore"
 s.tl(this,'o','Hero Banner');
 ```
 
-I Analytics-rapporter kan ni använda `Show` eVar för att dela upp data, så kan du räkna instanserna av spårlänken. Rapporteringen skulle se ut ungefär så här:
+I analysrapporter kan du använda eVarna `Show` för att dela upp data, och du kan räkna antalet instanser av spårlänkar. Rapporteringen skulle se ut ungefär så här:
 
 ![](/assets/myShow-rpt-1.png)
 

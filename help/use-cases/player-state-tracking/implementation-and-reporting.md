@@ -7,7 +7,7 @@ role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
 workflow-type: tm+mt
 source-wordcount: '332'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -22,7 +22,7 @@ Media SDK innehåller två nya metoder för anpassad statusspårning:
 `trackStateClose("state_name")`
 
 
-API:t för Media Collection innehåller två nya händelser med `media.stateName` som den obligatoriska parametern:
+Media Collection API innehåller två nya händelser som har `media.stateName` som obligatorisk parameter:
 
 `stateStart` och `stateEnd`
 
@@ -85,9 +85,9 @@ http(s)://<Analytics_Visitor_Namespace>.hb-api.omtrdc.net/api/v1/sessions/<SID>/
 
 De mått som anges för varje enskilt tillstånd beräknas och skickas till Adobe Analytics som kontextdataparametrar och lagras för rapportering. Tre mätvärden är tillgängliga för varje läge:
 
-* `a.media.states.[state.name].set = true` — Ange som true om läget ställdes in minst en gång per varje specifik uppspelning av en ström.
-* `a.media.states.[state.name].count = 4` — Identifierar antalet förekomster av ett läge under varje enskild uppspelning av en ström
-* `a.media.states.[state.name].time = 240` — Identifierar den totala lägeslängden i sekunder för varje enskild uppspelning av en ström
+* `a.media.states.[state.name].set = true` - Ange som true om läget har angetts minst en gång för varje specifik uppspelning av en ström.
+* `a.media.states.[state.name].count = 4` - Identifierar antalet förekomster av ett läge under varje enskild uppspelning av en ström
+* `a.media.states.[state.name].time = 240` - Identifierar den totala lägeslängden i sekunder för varje enskild uppspelning av en ström
 
 ## Rapportering
 
@@ -95,10 +95,10 @@ Alla värden för spelartillstånd kan användas för alla rapportvisualiseringa
 
 ![](assets/report-setup.png)
 
-I arbetsytan Analytics (Analyser) finns alla nya egenskaper på mätpanelen. Du kan till exempel söka efter `full screen` för att visa helskärmsdata på mätpanelen.
+I Analytics Workspace finns alla nya egenskaper på mätpanelen. Du kan till exempel söka efter `full screen` för att visa helskärmsdata på mätpanelen.
 
 ![](assets/full-screen-report.png)
 
 ## Importera mätvärden från spelaren till Adobe Experience Platform
 
-Data som lagras i Analytics kan användas i alla syften och spelarlägesstatistik kan importeras till Adobe Experience Platform med hjälp av XDM och användas med Customer Journey Analytics. Standardlägesegenskaperna har specifika egenskaper medan de anpassade lägena är egenskaper som är tillgängliga med anpassade händelser. Mer information om standardlägesegenskaperna finns i *Egenskapslista för XDM-identiteter* i [Parametrar för spelartillstånd](/help/implementation/variables/player-state-parameters.md) sida.
+Data som lagras i Analytics kan användas i alla syften och spelarlägesstatistik kan importeras till Adobe Experience Platform med hjälp av XDM och användas med Customer Journey Analytics. Standardlägesegenskaperna har specifika egenskaper medan de anpassade lägena är egenskaper som är tillgängliga med anpassade händelser. Mer information om standardlägesegenskaperna finns i avsnittet *Egenskapslista för XDM-identiteter* på sidan [Parametrar för spelartillstånd](/help/implementation/variables/player-state-parameters.md).

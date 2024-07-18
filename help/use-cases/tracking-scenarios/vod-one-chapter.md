@@ -8,7 +8,7 @@ role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
 workflow-type: tm+mt
 source-wordcount: '430'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
@@ -18,24 +18,24 @@ ht-degree: 2%
 
 I det här scenariot markeras en del av VOD-innehållet som ett kapitel.
 
-Om inget annat anges är nätverksanropen i det här scenariot samma som anropen i [VOD-uppspelning utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md) scenario. Nätverksanropet sker samtidigt, men nyttolasten är annorlunda.
+Om inget annat anges är nätverksanropen i det här scenariot samma som anropen i [VOD-uppspelningen utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md). Nätverksanropet sker samtidigt, men nyttolasten är annorlunda.
 
 | Utlösare   | Heartbeat-metod   | Nätverksanrop   | Anteckningar   |
 |---|---|---|---|
-| Användaren klickar **[!UICONTROL Play]** | `trackSessionStart` | Börja med Analytics-innehåll, starta pulsslagsinnehåll | Vi har ännu inte berättat för mätbiblioteket att det finns en pre-roll-annons, så dessa nätverksanrop är fortfarande exakt likadana som Single VoD. |
+| Användaren klickar på **[!UICONTROL Play]** | `trackSessionStart` | Börja med Analytics-innehåll, starta pulsslagsinnehåll | Vi har ännu inte berättat för mätbiblioteket att det finns en pre-roll-annons, så dessa nätverksanrop är fortfarande exakt likadana som Single VoD. |
 | Kapitlet börjar. | `trackEvent:ChapterStart` | Starta pulsslag i kapitel |  |
-| Den första bildrutan i kapitlet spelas upp. | `trackPlay` | Spela upp pulsslagsinnehåll | När kapitelinnehåll spelas upp före huvudinnehållet startar Heartslag när kapitlet börjar. |
+| Kapitlets första bildruta spelas upp. | `trackPlay` | Spela upp pulsslagsinnehåll | När kapitelinnehåll spelas upp före huvudinnehållet startar Heartslag när kapitlet börjar. |
 | Kapitlet spelas upp. |  | Hjärtslag |  |
 | Kapitlet är färdigt. | `trackEvent:trackChapterComplete` | pulsslagskapitlet är slutfört | Det här är när slutet av kapitlet nås. |
-| Innehållet spelas upp. |  | Hjärtslag för innehåll | Detta nätverksanrop är exakt detsamma som [VOD-uppspelning utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md) scenario. |
-| Innehållet är färdigt. | `trackComplete` | Hearsbeat-innehåll slutfört | Detta nätverksanrop är exakt detsamma som [VOD-uppspelning utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md) scenario. |
-| Sessionen är över. | `trackSessionEnd` |  | `SessionEnd` innebär att slutet av en visningssession har nåtts. Detta API måste anropas även om användaren inte ser mediet tills det är klart. |
+| Innehållet spelas upp. |  | Hjärtslag för innehåll | Detta nätverksanrop är exakt detsamma som [VOD-uppspelningen utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md). |
+| Innehållet är färdigt. | `trackComplete` | Passa upp innehållet fullständigt | Detta nätverksanrop är exakt detsamma som [VOD-uppspelningen utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md). |
+| Sessionen är över. | `trackSessionEnd` |  | `SessionEnd` betyder att slutet på en visningssession har nåtts. Detta API måste anropas även om användaren inte ser mediet tills det är klart. |
 
 ## Parametrar {#parameters}
 
-När kapiteluppspelningen börjar, `Heartbeat Chapter Start` samtal skickas. Om början av kapitlet inte sammanfaller med 10-sekunderstimern visas `Heartbeat Chapter Start` anropet fördröjs med några sekunder och det går till nästa 10-sekundersintervall.
+När kapiteluppspelningen börjar skickas ett `Heartbeat Chapter Start`-anrop. Om början av kapitlet inte sammanfaller med 10-sekunderstimern fördröjs `Heartbeat Chapter Start`-anropet med några sekunder och anropet går till nästa 10-sekundersintervall.
 
-När det händer `Content Heartbeat` anropet går ut inom samma intervall. Du kan skilja mellan de två genom att undersöka händelsetypen och resurstypen:
+När detta inträffar utlöses ett `Content Heartbeat`-samtal inom samma intervall. Du kan skilja mellan de två genom att undersöka händelsetypen och resurstypen:
 
 ### Starta pulsslag i kapitel
 

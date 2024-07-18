@@ -8,21 +8,21 @@ role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
 workflow-type: tm+mt
 source-wordcount: '127'
-ht-degree: 3%
+ht-degree: 1%
 
 ---
 
 # Stöd för anpassade metadata{#custom-metadata-support}
 
-Du kan ange anpassade nyckel:värde-par på `sessionStart`, `chapterStart`och `adStart` händelser. Denna information måste anges i JSON-nyckeln. `customMetadata`, placerad bredvid `params` nyckel.
+Du kan ange anpassade nyckel:värde-par för händelserna `sessionStart`, `chapterStart` och `adStart`. Den här informationen måste anges i JSON-nyckeln, `customMetadata`, placerad bredvid `params`-nyckeln.
 
-The `customMetadata` JSON-tangenten ska innehålla ett objekt med nyckel:värde-par. Nyckeln får endast innehålla alfanumeriska tecken, understruken text och punkt/punkt.
+JSON-nyckeln `customMetadata` ska innehålla ett objekt med nyckel:value-par. Nyckeln får endast innehålla alfanumeriska tecken, understrykning och punkt/punkt.
 
 [API-händelser för MA-samling](../mc-api-ref/mc-api-events-req.md)
 
 ## Exempel
 
-För närvarande kan du skicka en `sessionStart` händelse med följande nyckel:value-par:
+För närvarande kan du skicka en `sessionStart`-händelse med följande nyckel:värde-par:
 
 ```
 params: { "media.channel": "channel-1" },

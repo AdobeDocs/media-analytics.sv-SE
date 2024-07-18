@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Ange HTTP-begärantyp {#setting-the-http-request-type}
 
-Begärandetexten för alla Media Collection API-begäranden måste vara i JSON-format, så du bör ange innehållets begärandetyp i spelaren. I JavaScript ställer du till exempel in `Content-Type` begäranhuvud enligt följande:
+Begärandetexten för alla Media Collection API-begäranden måste vara i JSON-format, så du bör ange innehållets begärandetyp i spelaren. I JavaScript skulle du till exempel ange begärandehuvudet `Content-Type` enligt följande:
 
 ```
 httpRequest.setRequestHeader('Content-Type', 'application/json'); 

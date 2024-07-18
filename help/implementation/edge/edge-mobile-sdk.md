@@ -15,10 +15,10 @@ ht-degree: 0%
 
 Du kan använda Adobe Experience Platform mobil-SDK för att skicka mediedata för direktuppspelning från mobiler till Experience Platform Edge.
 
-Innan du kan skicka mediedata för direktuppspelning från mobilen till Edge måste du slutföra stegen i [Installera tillägget Streaming Media Collection med Experience Platform Edge](/help/implementation/edge/implementation-edge.md)använder du sedan följande dokumentationsresurser för att slutföra implementeringen av både iOS och Android:
+Innan du kan skicka mediedata för direktuppspelning från mobilen till Edge måste du först slutföra stegen i [Installera tillägget för direktuppspelad mediesamling med Experience Platform Edge](/help/implementation/edge/implementation-edge.md) och sedan använda följande dokumentationsresurser för att slutföra implementeringen för både iOS och Android:
 
 * [Kom igång](https://developer.adobe.com/client-sdks/documentation/media-for-edge-network/)
 
 * [API-referens](https://developer.adobe.com/client-sdks/documentation/media-for-edge-network/api-reference/)
 
-* [Migrera till Adobe Streaming Media för Edge Network-tillägg](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/migration-guide/)
+* [Migrera till direktuppspelningsmedia för Adobe för tillägget Edge Network](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/migration-guide/)

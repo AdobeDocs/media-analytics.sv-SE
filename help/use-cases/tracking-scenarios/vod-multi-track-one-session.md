@@ -8,17 +8,17 @@ role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
 workflow-type: tm+mt
 source-wordcount: '184'
-ht-degree: 4%
+ht-degree: 0%
 
 ---
 
-# VOD – en spårare för flera sessioner{#vod-one-tracker-for-multiple-sessions}
+# VOD one tracker for multiple sessions{#vod-one-tracker-for-multiple-sessions}
 
 ## Scenario {#scenario}
 
-I det här scenariot är `MediaHeartbeat` -instans används för att skapa två separata sessioner i sekvens.
+I det här scenariot används instansen `MediaHeartbeat` för att skapa två separata sessioner i sekvens.
 
-Detta scenario är detsamma som [VOD-uppspelning utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md) scenario.
+Detta scenario är detsamma som [VOD-uppspelningen utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md).
 
 ## Parametrar {#parameters}
 
@@ -26,7 +26,7 @@ Detta scenario är detsamma som [VOD-uppspelning utan annonser](/help/use-cases/
 
 | Parameter | Värde | Anteckningar   |
 | --- | --- | --- |
-| `s:event:sid` | Unikt sessions-ID | Ett unikt sessions-ID som finns i alla hjärtslagsnätverksanrop tills `trackSessionEnd` |
+| `s:event:sid` | Unikt sessions-ID | Ett unikt sessions-ID som finns i alla nätverksanrop för pulsslag till `trackSessionEnd` |
 
 ## Exempelkod {#sample-code}
 
@@ -34,7 +34,7 @@ Detta scenario är detsamma som [VOD-uppspelning utan annonser](/help/use-cases/
 
 ### Android {#android}
 
-Skapa två förekomster av `MediaHeartbeat` för två mediespelare ställer du in följande kod:
+Om du vill skapa två instanser av `MediaHeartbeat` för två mediespelare ställer du in följande kod:
 
 ```java
 public class MediaAnalyticsProvider implements MediaHeartbeatDelegate { 
@@ -99,7 +99,7 @@ protected void onCreate(Bundle savedInstanceState) {
 } 
 ```
 
-Visa den första sessionen med `MediaAnalyticsProvider` (Därför `MediaHeartbeat`) i Android anger du följande kod:
+Om du vill visa den första sessionen med instansen `MediaAnalyticsProvider` (därav `MediaHeartbeat`) i Android ställer du in följande kod:
 
 ```java
 // Set up mediaObject 
@@ -143,7 +143,7 @@ _mediaHeartbeat.trackSessionEnd();
 ........ 
 ```
 
-Om du vill visa den andra sessionen kan du använda samma `MediaAnalyticsProvider` ( `MediaHeartbeat`) som första session, men för en ny session:
+Om du vill visa den andra sessionen kan du använda samma `MediaAnalyticsProvider` ( `MediaHeartbeat`)-instans som den första sessionen, men för en ny session:
 
 ```java
 // Set up mediaObject 
@@ -189,7 +189,7 @@ _mediaHeartbeat.trackSessionEnd();
 
 ### iOS {#ios}
 
-Skapa två förekomster av `MediaHeartbeat` För två mediespelare anger du följande:
+Om du vill skapa två instanser av `MediaHeartbeat` för två mediespelare anger du följande:
 
 ```
 @interface MediaAnalyticsProvider : NSObject <ADBMediaHeartbeatDelegate> 
@@ -257,7 +257,7 @@ Skapa två förekomster av `MediaHeartbeat` För två mediespelare anger du föl
 } 
 ```
 
-Visa den första sessionen med `MediaAnalyticsProvider` (Därför `MediaHeartbeat`) i iOS ställer du in följande kod:
+Om du vill visa den första sessionen med instansen `MediaAnalyticsProvider` (därav `MediaHeartbeat`) i iOS ställer du in följande kod:
 
 ```
 // Set up mediaObject 
@@ -295,7 +295,7 @@ NSMutableDictionary *mediaContextData = [[NSMutableDictionary alloc] init];
 ....... 
 ```
 
-Om du vill visa den andra sessionen kan du använda samma `MediaAnalyticsProvider` ( `MediaHeartbeat`) som första session, men för en ny session:
+Om du vill visa den andra sessionen kan du använda samma `MediaAnalyticsProvider` ( `MediaHeartbeat`)-instans som den första sessionen, men för en ny session:
 
 ```
 // Set up mediaObject 

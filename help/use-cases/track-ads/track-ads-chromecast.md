@@ -7,7 +7,7 @@ feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
 workflow-type: tm+mt
-source-wordcount: '332'
+source-wordcount: '298'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Följande anvisningar ger vägledning vid implementering med SDK:er för 2.x.
 
 ## Implementeringssteg
 
-1. Identifiera när annonsbrytningens gränser börjar, inklusive pre-roll, och skapa en `AdBreakObject` genom att använda annonsbrytningsinformationen.
+1. Identifiera när annonsbrytningsgränsen börjar, inklusive pre-roll, och skapa en `AdBreakObject` med hjälp av annonsbrytningsinformationen.
 
    Skapa brytningsobjekt: [createAdBreakObject](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.createAdBreakObject)
 
@@ -40,13 +40,13 @@ Följande anvisningar ger vägledning vid implementering med SDK:er för 2.x.
    adBreakInfo = ADBMobile.media.createAdBreakObject("First Ad-Break", 1, AD_BREAK_START_TIME, playerName);
    ```
 
-1. Utlysning `trackEvent()` med `AdBreakStart` i `MediaHeartbeat` -instans för att börja spåra annonsbrytningen: [trackEvent](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackEvent)
+1. Anropa `trackEvent()` med `AdBreakStart` i instansen `MediaHeartbeat` för att börja spåra annonsbrytningen: [trackEvent](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackEvent)
 
    ```
    ADBMobile.media.trackEvent(ADBMobile.media.Event.AdBreakStart, getAdBreakInfo());
    ```
 
-1. Identifiera när annonsresursen börjar och skapa en `AdObject` -instans med annonsinformationen.
+1. Identifiera när annonsresursen startar och skapa en `AdObject`-instans med annonsinformationen.
 
    Skapa annonsobjekt: [createAdObject](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.createAdObject)
 
@@ -56,10 +56,10 @@ Följande anvisningar ger vägledning vid implementering med SDK:er för 2.x.
 
 1. Du kan också bifoga standard- och/eller annonsmetadata till mediespårningssessionen via kontextdatavariabler.
 
-   * **Standardannonsmetadata -** För standardannonsmetadata skapar du en ordlista med nyckelvärdepar för standardannonsmetadata med hjälp av tangenterna för din plattform:
-   * **Anpassade annonsmetadata -** För anpassade metadata skapar du ett variabelobjekt för de anpassade datavariablerna och fyller i med data för den aktuella annonsresursen:
+   * **Standardannonsmetadata -** Om du vill ha standardannonsmetadata skapar du en ordlista med nyckelvärdepar för standardvärden och metadata med hjälp av tangenterna för din plattform:
+   * **Anpassade annonseringsmetadata -** För anpassade metadata skapar du ett variabelobjekt för anpassade datavariabler och fyller i med data för den aktuella annonsobjektet:
 
-1. Utlysning `trackEvent()` med `AdStart` -händelse för att börja spåra annonsuppspelningen.
+1. Anropa `trackEvent()` med händelsen `AdStart` för att börja spåra annonsuppspelningen.
 
    Ta med en referens till din anpassade metadatavariabel (eller ett tomt objekt) som den tredje parametern i händelseanropet: [trackEvent](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackEvent)
 
@@ -67,17 +67,17 @@ Följande anvisningar ger vägledning vid implementering med SDK:er för 2.x.
    ADBMobile.media.trackEvent(ADBMobile.media.Event.AdStart, getAdInfo(), adContextData);
    ```
 
-1. När annonsuppspelningen når slutet av annonsen ringer du `trackEvent()` med `AdComplete` händelse: [trackEvent](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackEvent)
+1. När annonsobjektsuppspelningen når slutet av annonsen anropar du `trackEvent()` med händelsen `AdComplete`: [trackEvent](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackEvent)
 
    ```
    ADBMobile.media.trackEvent(ADBMobile.media.Event.AdComplete);
    ```
 
-1. Om det finns ytterligare annonser inom samma `AdBreak`, upprepa steg 3 till 6 igen.
-1. När annonsbrytningen är klar använder du `AdBreakComplete` händelse att spåra: [trackEvent](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackEvent)
+1. Om det finns ytterligare annonser inom samma `AdBreak` upprepar du steg 3 till 6 igen.
+1. När annonsbrytningen är klar använder du händelsen `AdBreakComplete` för att spåra: [trackEvent](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackEvent)
 
    ```
    ADBMobile.media.trackEvent(ADBMobile.media.Event.AdBreakComplete, getAdBreakInfo());
    ```
 
-Se spårningsscenariot [VOD-uppspelning med pre-roll-annonser](/help/use-cases/tracking-scenarios/vod-preroll-ads.md) för mer information.
+Mer information finns i spårningsscenariot [VOD-uppspelning med pre-roll-annonser](/help/use-cases/tracking-scenarios/vod-preroll-ads.md).

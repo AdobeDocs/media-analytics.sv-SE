@@ -7,8 +7,8 @@ feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
 workflow-type: tm+mt
-source-wordcount: '614'
-ht-degree: 11%
+source-wordcount: '608'
+ht-degree: 8%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 11%
 
 ## Starta mediespelaren {#start-the-media-player}
 
-### Starta Adobe Analytics (AppMeasurement) {#aa-start-call}
+### Adobe Analytics (AppMeasurement) Starta samtal {#aa-start-call}
 
 | Parameter |  Värde (exempel)  |
 |---|---|
@@ -25,7 +25,7 @@ ht-degree: 11%
 | _**`a.media.name`**_ | _**123456**_ |
 | _**`a.media.length`**_ | _**120**_ |
 | `a.media.playerName` | HTML5 |
-| _**`a.media.view`**_ | _**sant**_ |
+| _**`a.media.view`**_ | _**true**_ |
 | `a.contentType` | vod |
 | _**`custom.[value]`**_ | _**Anpassade metadatafält**_ |
 | _**`a.media.[value]`**_ | _**Standardmetadatafält**_ |
@@ -35,7 +35,7 @@ ht-degree: 11%
 * Ytterligare kontextdatavariabler ska finnas och innehålla metadata. Se metadatainformation nedan.
 * Längden för linjära strömmar bör anges till den bästa uppskattningen för det aktuella programmet.
 
-### Standardmetadata i Adobe Analytics (AppMeasurement) Starta anrop {#std-metadata-aa}
+### Standardmetadata i Adobe Analytics (AppMeasurement) Starta samtal {#std-metadata-aa}
 
 | Parameter |  Värde (exempel)  |
 |---|---|
@@ -54,7 +54,7 @@ ht-degree: 11%
 | `a.media.feed` | ingen feed |
 | `a.media.stream_format` | 0 |
 
-### Anpassade metadata i Adobe Analytics (AppMeasurement) - starta anrop {#custom-metadata-aa}
+### Anpassade metadata i Adobe Analytics (AppMeasurement) Starta samtal {#custom-metadata-aa}
 
 | Parameter |  Värde (exempel)  |
 |---|---|
@@ -122,12 +122,12 @@ ht-degree: 11%
 
 **Anteckningar:**
 
-* Detta anrop anger att Media SDK har begärt att en Adobe Analytics `pev2=ms_s` anrop skickas till Adobe Analytics-servern (AppMeasurement).
+* Detta anrop anger att Media SDK har begärt att ett Adobe Analytics `pev2=ms_s`-anrop ska skickas till Adobe Analytics-servern (AppMeasurement).
 * Anropet innehåller inte anpassade metadata.
 
 ## Visa och spela upp {#view-ad-playback}
 
-### Adobe Analytics (AppMeasurement) Ad Start-anrop {#aa-ad-start-call}
+### Adobe Analytics (AppMeasurement) Ad Start-samtal {#aa-ad-start-call}
 
 | Parameter |  Värde (exempel)  |
 |---|---|
@@ -141,7 +141,7 @@ ht-degree: 11%
 | `a.media.ad.pod` | c27aaf3ff8224bb6b9ebfe1b2e79073d_1 |
 | `a.media.ad.podPosition` | 1 |
 | `a.media.ad.podSecond` | 0,0 |
-| _**`a.media.ad.view`**_ | _**True**_ |
+| _**`a.media.ad.view`**_ | _**Sant**_ |
 | _**`custom.[value]`**_ | _**Metadatafält**_ |
 | _**`a.media.[value]`**_ | _**Standardmetadatafält**_ |
 
@@ -150,7 +150,7 @@ ht-degree: 11%
 * Ytterligare kontextdatavariabler ska finnas och innehålla metadata. Se metadatainformation nedan.
 * Annonslängden kan anges till -1 om den inte är tillgänglig vid annonsstart.
 
-### Standardmetadata i Adobe Analytics (AppMeasurement) och Starta anrop {#std-metadata-aa-ad-start}
+### Standardmetadata i Adobe Analytics (AppMeasurement) Ad Start-anrop {#std-metadata-aa-ad-start}
 
 | Parameter |  Värde (exempel)  |
 |---|---|
@@ -169,7 +169,7 @@ ht-degree: 11%
 | `a.media.feed` | ingen feed |
 | `a.media.stream_format` | 0 |
 
-### Anpassade metadata i Adobe Analytics (AppMeasurement) och starta anrop {#custom-metadata-aa-ad-start}
+### Anpassade metadata i Adobe Analytics (AppMeasurement) Ad Start-anrop {#custom-metadata-aa-ad-start}
 
 | Parameter |  Värde (exempel)  |
 |---|---|
@@ -287,7 +287,7 @@ ht-degree: 11%
 **Anteckningar:**
 
 * Spelhuvudets position ska ökas med 10 sekunder för varje uppspelningsanrop.
-* The `l:event:duration` värdet representerar antalet millisekunder sedan det senaste spårningsanropet och bör vara ungefär lika stort för varje 10-sekundersanrop.
+* Värdet `l:event:duration` representerar antalet millisekunder sedan det senaste spårningsanropet och bör vara ungefär lika stort för varje 10-sekundersanrop.
 
 ## Pausa huvudinnehåll {#pause-main-content}
 

@@ -16,18 +16,18 @@ ht-degree: 0%
 
 ## sessionStart
 
-Skickat med `sessions` ring. När svaret returneras extraherar du sessions-ID från platshuvudet och använder det för efterföljande händelseanrop till samlingsservern.
+Skickat med `sessions`-samtalet. När svaret returneras extraherar du sessions-ID från platshuvudet och använder det för efterföljande händelseanrop till samlingsservern.
 
 ## play
 
-Skickas när spelaren ändrar läge till &quot;spela upp&quot; från ett annat läge (dvs. `on('Playing')` återanrop aktiveras av spelaren). Andra lägen från vilka spelaren går till&quot;uppspelning&quot; är&quot;buffring&quot;, användaren återupptog från&quot;pausad&quot;, spelaren återställdes från ett fel, automatisk uppspelning osv.
+Skickas när spelaren ändrar läge till att spelas upp från ett annat läge (d.v.s. `on('Playing')`-återanropet aktiveras av spelaren). Andra lägen från vilka spelaren går till&quot;uppspelning&quot; är&quot;buffring&quot;, användaren återupptog från&quot;pausad&quot;, spelaren återställdes från ett fel, automatisk uppspelning osv.
 
 ## ping
 
-* **Huvudinnehåll -** Måste skickas var 10:e sekund under uppspelning av huvudinnehåll, oavsett andra API-händelser som har skickats. Den första ping-händelsen ska utlösas 10 sekunder efter att uppspelningen av huvudinnehållet har startat.
-* **Annonsinnehåll -** Måste skickas var 1 sekund under annonsspårning.
+* **Huvudinnehåll -** måste skickas var 10:e sekund under uppspelning av huvudinnehåll, oavsett andra API-händelser som har skickats. Den första ping-händelsen ska utlösas 10 sekunder efter att uppspelningen av huvudinnehållet har startat.
+* **Annonsinnehåll -** måste skickas var 1 sekund under annonsspårning.
 
-Ping-händelser bör *not* innehåller `params` karta i begärandetexten.
+Ping-händelser ska *inte* innehålla kartan `params` i begärandetexten.
 
 ## bitrateChange
 
@@ -35,11 +35,11 @@ Skickas när skiljeförfarandet ändras.
 
 ## bufferStart
 
-Skickas när buffringen startar. Det finns inga `bufferResume` händelsetyp. A `bufferResume` härleds när du skickar en `play` händelse efter `bufferStart`.
+Skickas när buffringen startar. Det finns ingen `bufferResume`-händelsetyp. En `bufferResume` härleds när du skickar en `play`-händelse efter `bufferStart`.
 
 ## pauseStart
 
-Skickas när användaren trycker på Paus. Det finns inga `resume` händelsetyp. A `resume` härleds när du skickar en `play` händelse efter `pauseStart`.
+Skickas när användaren trycker på Paus. Det finns ingen `resume`-händelsetyp. En `resume` härleds när du skickar en `play`-händelse efter en `pauseStart`.
 
 ## adBreakStart
 
@@ -81,7 +81,7 @@ Signalerar att ett fel har inträffat.
 
 Detta används för att meddela Media Analytics-backend-objektet att omedelbart stänga sessionen när användaren har avbrutit sin visning av innehållet och det är osannolikt att de kommer att returnera.
 
-Om en `sessionEnd` skickas inte, en övergiven session kommer att [timeout normalt](../mc-api-impl/mc-api-timeout.md) (antingen efter att inga händelser har tagits emot under 10 minuter eller när ingen spelhuvudrörelse inträffar under 30 minuter). Dessutom kommer alla efterföljande mediaanrop som görs med detta sessions-ID att tas bort.
+Om `sessionEnd` inte skickas kommer en övergiven session att [timeout-värdet att vara ](../mc-api-impl/mc-api-timeout.md) (antingen efter att inga händelser har tagits emot under 10 minuter eller när ingen spelhuvudrörelse sker under 30 minuter). Dessutom kommer alla efterföljande mediaanrop som görs med detta sessions-ID att tas bort.
 
 ## sessionComplete
 
@@ -89,4 +89,4 @@ Skickas när slutet av huvudinnehållet nås
 
 >[!IMPORTANT]
 >
->Du bör läsa [JSON-valideringsscheman](mc-api-json-validation.md) för varje händelsetyp, verifiera korrekta händelseparametertyper och krav.
+>Du bör referera till [JSON-valideringsscheman](mc-api-json-validation.md) för varje händelsetyp för att verifiera rätt händelseparametertyper och krav.

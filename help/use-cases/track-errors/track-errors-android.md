@@ -12,7 +12,7 @@ ht-degree: 0%
 
 ---
 
-# Spåra fel på Android{#track-errors-on-android}
+# Spåra fel i Android{#track-errors-on-android}
 
 Följande instruktioner ger vägledning vid implementering med 2.x SDK:er.
 
@@ -30,4 +30,4 @@ Följande instruktioner ger vägledning vid implementering med 2.x SDK:er.
 
 >[!NOTE]
 >
->Spårning av mediespelarfel stoppar inte mediespårningssessionen. Om mediaspelarfelet förhindrar att uppspelningen fortsätter kontrollerar du att mediespårningssessionen stängs genom att anropa `trackSessionEnd` efter anrop `trackError`.
+>Spårning av mediespelarfel kommer inte att stoppa mediespårningssessionen. Om mediespelarfelet förhindrar att uppspelningen fortsätter ska du kontrollera att mediespårningssessionen stängs genom att anropa `trackSessionEnd` efter att `trackError` har anropats.

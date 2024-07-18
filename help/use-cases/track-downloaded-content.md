@@ -47,7 +47,7 @@ Funktionen för nedladdat innehåll är en offlineversion av (standard) API:t f�
 ### Ordning för händelser
 
 * Den första händelsen i batchnyttolasten måste vara `sessionStart` som vanligt med Media Collection API.
-* **Du måste inkludera`media.downloaded: true`** i standardmetadataparametrarna (`params` på `sessionStart` -händelse för att ange för back-end att du skickar hämtat innehåll. Om den här parametern inte finns eller är inställd på false när du skickar hämtade data returnerar API:t en 400-svarskod (felaktig begäran). Den här parametern skiljer nedladdat och direktsänt innehåll från baksidan. If `media.downloaded: true` är inställt på en live-session, vilket även resulterar i ett 400-svar från API:t.
+* **Du måste inkludera`media.downloaded: true`** i standardmetadataparametrarna (`params` key) i `sessionStart`-händelsen för att ange för backend-servern att du skickar hämtat innehåll. Om den här parametern inte finns eller är inställd på false när du skickar hämtade data returnerar API:t en 400-svarskod (felaktig begäran). Den här parametern skiljer nedladdat och direktsänt innehåll från baksidan. Om `media.downloaded: true` anges för en live-session resulterar detta även i ett 400-svar från API:t.
 * Det är implementeringens ansvar att lagra spelarhändelser korrekt i den ordning de visas.
 
 ### Svarskoder
@@ -57,7 +57,7 @@ Funktionen för nedladdat innehåll är en offlineversion av (standard) API:t f�
 
 ## Integrering med Adobe Analytics {#integration-with-adobe-analtyics}
 
-När analysanropen för det hämtade innehållsscenariot beräknas, anger back end ett extra analysfält som kallas `ts.` Det här är tidsstämplar för de första och sista händelserna som tas emot (start och slutförd). Den här funktionen gör att en slutförd mediesession kan placeras vid rätt tidpunkt (dvs. även om användaren inte ansluter igen på flera dagar, rapporteras mediesessionen ha inträffat vid den tidpunkt då innehållet visades). Du måste aktivera den här funktionen på Adobe Analytics-sidan genom att skapa en _tidsstämpel, valfri rapportsvit._ Information om hur du aktiverar en tidsstämpelsrapport finns i [Tidsstämplar är valfria.](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/timestamp-optional.html)
+När analysens start-/slutanrop beräknas för det hämtade innehållsscenariot, anger back end ett extra analysfält som heter `ts.`. Det här är tidsstämplar för den första och sista händelsen som tas emot (start och slutförd). Den här funktionen gör att en slutförd mediesession kan placeras vid rätt tidpunkt (dvs. även om användaren inte ansluter igen på flera dagar, rapporteras mediesessionen ha inträffat vid den tidpunkt då innehållet visades). Du måste aktivera den här funktionen på Adobe Analytics-sidan genom att skapa en _valfri tidsstämpelsserie._ Om du vill aktivera en tidsstämpelsrapport (valfri) ska du läsa [Tidsstämplar (valfritt).](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/timestamp-optional.html)
 
 ## Exempel på sessionsjämförelse {#sample-session-comparison}
 
@@ -109,12 +109,12 @@ POST /api/v1/downloaded HTTP/1.1
 
 >[!IMPORTANT]
 >
->Det hämtade innehållet kunde tidigare även skickas till `/api/v1/sessions` API. Det här sättet att spåra hämtat innehåll är **inaktuell** och **borttagen** i framtiden.
+>Det hämtade innehållet kunde tidigare också skickas till `/api/v1/sessions` API. Det här sättet att spåra hämtat innehåll är **föråldrat** och kommer att **tas bort** i framtiden.
 
 
-The `/api/v1/sessions` API accepterar endast sessionsinitieringshändelser.
-När du använder det nya API:t är det tidigare obligatoriska `media.downloaded` flagga behövs inte längre.
-Vi rekommenderar starkt att du använder `/api/v1/downloaded` API för nya innehållsimplementeringar och för att uppdatera befintliga implementeringar som är beroende av det gamla API:t.
+API:t `/api/v1/sessions` accepterar endast sessionsinitieringshändelser.
+När du använder det nya API:t behövs inte längre den tidigare obligatoriska `media.downloaded`-flaggan.
+Vi rekommenderar starkt att du använder `/api/v1/downloaded`-API:t för nya innehållsimplementeringar som har hämtats, samt att du uppdaterar befintliga implementeringar som är beroende av det gamla API:t.
 
 
 ```
@@ -147,4 +147,4 @@ POST /api/v1/sessions HTTP/1.1
 
 ## API-referens för mediespårare
 
-Mer information om hur du konfigurerar hämtat innehåll finns i [API-referens för mediespårare](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/api-reference/).
+Mer information om hur du konfigurerar hämtat innehåll finns i [API-referens för mediespåraren](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/api-reference/).

@@ -1,6 +1,6 @@
 ---
-title: Köa händelser när sessioner svarar långsamt
-description: Lär dig hur du gör när sessions-ID returneras efter att spelaren har aktiverat händelser.
+title: Köa händelser när sessionssvar är långsamma
+description: Lär dig vad du ska göra när sessions-ID returneras efter att spelaren har aktiverat händelser.
 uuid: 39ea59d9-89d3-4087-a806-48a43ecf0c98
 exl-id: 2c23c378-c104-4256-b6e7-8eb6871f62da
 feature: Media Analytics
@@ -8,19 +8,19 @@ role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
 workflow-type: tm+mt
 source-wordcount: '205'
-ht-degree: 4%
+ht-degree: 0%
 
 ---
 
 # Köa händelser när sessionens svar är långsamt{#queueing-events-when-sessions-response-is-slow}
 
-Media Collection API är RESTful: Du gör alltså en HTTP-begäran och väntar på svaret. Detta är bara en viktig punkt när du skapar [Sessionsbegäran](../mc-api-ref/mc-api-sessions-req.md) om du vill hämta ett sessions-ID i början av videouppspelningen. Detta är viktigt eftersom sessions-ID krävs för alla efterföljande spårningsanrop.
+Media Collection API är RESTful: d.v.s. du gör en HTTP-begäran och väntar på svaret. Detta är bara en viktig punkt när du begär [sessioner](../mc-api-ref/mc-api-sessions-req.md) för att få ett sessions-ID i början av videouppspelningen. Detta är viktigt eftersom sessions-ID krävs för alla efterföljande spårningsanrop.
 
-Det är möjligt att din spelare kan utlösa händelser _innan sessionerna returneras_ (med parametern för sessions-ID) från serverdelen. Om detta inträffar måste programmet placera eventuella spårningshändelser i kö mellan [Sessionsbegäran](../mc-api-ref/mc-api-sessions-req.md) och dess svar. När sessionens svar kommer bör du först bearbeta alla som står i kö [händelser](../mc-api-ref/mc-api-events-req.md)kan du påbörja bearbetningen _live_ med [Händelser](../mc-api-ref/mc-api-events-req.md) samtal.
+Det är möjligt att spelaren kan utlösa händelser _innan sessionens svar returnerar_ (med parametern för sessions-ID) från serverdelen. Om detta inträffar måste programmet placera eventuella spårningshändelser i kö som kommer mellan [sessionsbegäran](../mc-api-ref/mc-api-sessions-req.md) och dess svar. När sessionssvaret kommer, bör du först bearbeta [händelser](../mc-api-ref/mc-api-events-req.md) som står i kö, sedan kan du börja bearbeta _live_-händelser med [events](../mc-api-ref/mc-api-events-req.md) -anropen.
 
 >[!NOTE]
 >
->The [Händelsebegäran](../mc-api-ref/mc-api-events-req.md) returnerar inte data tillbaka till klienten efter en HTTP-svarskod.
+>[Händelsebegäran](../mc-api-ref/mc-api-events-req.md) returnerar inte data tillbaka till klienten efter en HTTP-svarskod.
 
 I referensspelaren i din distribution finns ett sätt att bearbeta händelser innan du får ett sessions-ID. Exempel:
 
@@ -75,7 +75,7 @@ VideoPlayer.prototype.getPlayerTime = function() {
 };
 ```
 
-**Bearbeta alla händelser som står i kö -** Referensspelaren bearbetar händelser i kö enligt följande:
+**Bearbeta händelser som står i kö -** Referensspelaren bearbetar händelser som står i kö enligt följande:
 
 ```js
     […] 

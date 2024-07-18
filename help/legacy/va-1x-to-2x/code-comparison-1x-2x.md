@@ -7,35 +7,35 @@ feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '544'
 ht-degree: 2%
 
 ---
 
 # Jämför äldre kod - 1.x till 2.x {#code-comparison-x-to-x}
 
-Alla konfigurationsparametrar och API:er för spårning konsolideras nu i `MediaHeartbeats` och `MediaHeartbeatConfig` klasser.
+Alla konfigurationsparametrar och API:er för spårning konsolideras nu i klasserna `MediaHeartbeats` och `MediaHeartbeatConfig`.
 
 **Ändringar i konfigurations-API:**
 
-* `AdobeHeartbeatPluginConfig.sdk` - Bytt namn till `MediaConfig.appVersion`
-* `MediaHeartbeatConfig.playerName` - Nu klar `MediaHeartbeatConfig` i stället för `VideoPlayerPluginDelegate`
-* (Endast för JavaScript): The `AppMeasurement` -instans - skickas nu via `MediaHeartbeat` konstruktor.
+* `AdobeHeartbeatPluginConfig.sdk` - har ändrat namn till `MediaConfig.appVersion`
+* `MediaHeartbeatConfig.playerName` - Nu inställt genom `MediaHeartbeatConfig` i stället för `VideoPlayerPluginDelegate`
+* (Endast för JavaScript): Instansen `AppMeasurement` - skickas nu via konstruktorn `MediaHeartbeat`.
 
 **Ändringar av konfigurationsegenskaper:**
 
-* `sdk` - Bytt namn till `appVersion`
-* `publisher` - Borttagen; Experience Cloud Org ID används i stället som utgivare
+* `sdk` - har ändrat namn till `appVersion`
+* `publisher` - Borttagen. Experience Cloud används i stället som utgivare
 * `quiteMode` - Borttagen
 
 **Länkar till exempelspelare för 1.x och 2.x:**
 
-* [1.x Exempelspelare ](https://github.com/Adobe-Marketing-Cloud/video-heartbeat/blob/master/sdks/js/samples/BasicPlayerSample/script/app/analytics/video.analytics.provider.js#L58)
-* [2.x Exempelspelare ](https://github.com/Adobe-Marketing-Cloud/media-sdks/blob/master/sdks/js/2.x/samples/BasicPlayerSample/script/app/analytics/video.analytics.provider.js#L47)
+* [1.x Exempelspelare](https://github.com/Adobe-Marketing-Cloud/video-heartbeat/blob/master/sdks/js/samples/BasicPlayerSample/script/app/analytics/video.analytics.provider.js#L58)
+* [2.x Exempelspelare](https://github.com/Adobe-Marketing-Cloud/media-sdks/blob/master/sdks/js/2.x/samples/BasicPlayerSample/script/app/analytics/video.analytics.provider.js#L47)
 
 I följande avsnitt finns kodjämförelser mellan 1.x och 2.x, som omfattar initiering, Core Playback, Ad Playback, Chapter PlayPlayback och några andra händelser.
 
-## Jämförelse av VHL-kod: INITIERING
+## VHL-kodjämförelse: INITIALISERING
 
 ### Objektinitiering
 
@@ -43,8 +43,8 @@ I följande avsnitt finns kodjämförelser mellan 1.x och 2.x, som omfattar init
 | --- | --- |
 | `Heartbeat()` | `MediaHeartbeat()` |
 | `VideoPlayerPlugin()` | `MediaHeartbeatConfig()` |
-| `AdobeAnalyticsPlugin()` |  |
-| `HeartbeatPlugin()` |  |
+| `AdobeAnalyticsPlugin()` | |
+| `HeartbeatPlugin()` | |
 
 #### Initiering av plugin-program för videospelare (1.x) {#plugin-init-1.x}
 
@@ -75,7 +75,7 @@ configData.debugLogging = true;
 this._heartbeat.configure(configData);
 ```
 
-#### Initiering av pulsslag (2.x) {#mh-init-2.x}
+#### Initiering av pulsslag för media (2.x) {#mh-init-2.x}
 
 ```js
 var mediaConfig = new MediaHeartbeatConfig();
@@ -96,11 +96,11 @@ this._mediaHeartbeat = new MediaHeartbeat( new SampleMediaHeartbeatDelegate(this
 | `VideoPlayerPluginDelegate()` | `MediaHeartbeatDelegate()` |
 | `VideoPlayerPluginDelegate().getVideoInfo` | `MediaHeartbeatDelegate().getCurrentPlaybackTime` |
 | `VideoPlayerPluginDelegate().getAdBreakInfo` | `MediaHeartbeatDelegate().getQoSObject` |
-| `VideoPlayerPluginDelegate().getAdInfo` |  |
-| `VideoPlayerPluginDelegate().getChapterInfo` |  |
-| `VideoPlayerPluginDelegate().getQoSInfo` |  |
-| `VideoPlayerPluginDelegate().get.onError` |  |
-| `AdobeAnalyticsPluginDelegate()` |  |
+| `VideoPlayerPluginDelegate().getAdInfo` | |
+| `VideoPlayerPluginDelegate().getChapterInfo` | |
+| `VideoPlayerPluginDelegate().getQoSInfo` | |
+| `VideoPlayerPluginDelegate().get.onError` | |
+| `AdobeAnalyticsPluginDelegate()` | |
 
 #### VideoPlayerPluginDelegate (1.x) {#player-plugin-delegate-1.x}
 
@@ -176,7 +176,7 @@ SampleMediaHeartbeatDelegate.prototype.getQoSObject = function() {
 this._mediaHeartbeat = new MediaHeartbeat(new SampleMediaHeartbeatDelegate(this._player), mediaConfig, appMeasurement);
 ```
 
-## Jämförelse av VHL-kod: KÄRNUPPSPELNING
+## VHL-kodjämförelse: CORE PLAYBACK
 
 ### Sessionsstart
 
@@ -266,7 +266,7 @@ VideoAnalyticsProvider.prototype._onLoad = function() {
 ```
 
 >[!NOTE]
->Istället för att ställa in standardvideometadata via `AdobeAnalyticsPlugin.setVideoMetadata()` I VHL 2.0 anges standardvideometadata med MediaObject-nyckeln `MediaObject.MediaObjectKey.StandardVideoMetadata()`.
+>I stället för att ange standardvideometadata via `AdobeAnalyticsPlugin.setVideoMetadata()`-API:t anges standardvideometadata i VHL 2.0 med MediaObject-nyckeln `MediaObject.MediaObjectKey.StandardVideoMetadata()`.
 
 ### Egna videometadata
 
@@ -275,7 +275,7 @@ VideoAnalyticsProvider.prototype._onLoad = function() {
 | `VideoMetadataKeys()` | `MediaHeartbeat.createMediaObject()` |
 | `AdobeAnalyticsPlugin.setVideoMetadata()` | `MediaHeartbeat.trackSessionStart()` |
 
-#### Egna metadata (1.x) {#custom-meta-1.x}
+#### Anpassade metadata (1.x) {#custom-meta-1.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onLoad = function() {
@@ -289,7 +289,7 @@ VideoAnalyticsProvider.prototype._onLoad = function() {
 };
 ```
 
-#### Egna metadata (2.x) {#custom-meta-2.x}
+#### Anpassade metadata (2.x) {#custom-meta-2.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onLoad = function() {
@@ -306,7 +306,7 @@ VideoAnalyticsProvider.prototype._onLoad = function() {
 ```
 
 >[!NOTE]
->Istället för att ställa in anpassade videometadata via `AdobeAnalyticsPlugin.setVideoMetadata()` I VHL 2.0 anges standardvideometadata via `MediaHeartbeat.trackSessionStart()` API.
+>I stället för att ställa in anpassade videometadata via `AdobeAnalyticsPlugin.setVideoMetadata()`-API:t anges standardvideometadata i VHL 2.0 via `MediaHeartbeat.trackSessionStart()`-API:t.
 
 
 ### Uppspelning
@@ -411,7 +411,7 @@ VideoAnalyticsProvider.prototype._onBufferStart = function() {
 | --- | --- |
 | `VideoPlayerPlugin.trackBufferComplete()` | `MediaHeartbeat.trackEvent(`<br/><br/>  `MediaHeartbeat.Event.BufferComplete)` |
 
-#### Bufferten är klar (1.x) {#buffer-complete-1.x}
+#### Bufferten har slutförts (1.x) {#buffer-complete-1.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onBufferComplete = function() {
@@ -455,7 +455,7 @@ VideoAnalyticsProvider.prototype._onComplete = function() {
 };
 ```
 
-## Jämförelse av VHL-kod: AD PLAYBACK
+## VHL-kodjämförelse: AD PLAYBACK
 
 ### Annonsstart
 
@@ -464,9 +464,9 @@ VideoAnalyticsProvider.prototype._onComplete = function() {
 | `VideoPlayerPlugin.trackAdStart()` | `MediaHeartbeat.createAdBreakObject()` |
 | `VideoPlayerPluginDelegate.getAdBreakInfo()` | `MediaHeartbeat.createAdObject()` |
 | `VideoPlayerPluginDelegate.getAdInfo()` | `MediaHeartbeat.trackEvent(`<br/><br/>  `MediaHeartbeat.Event.AdBreakStart)` |
-|  | `MediaHeartbeat.trackEvent(`<br/><br/>  `MediaHeartbeat.Event.AdStart)` |
+| | `MediaHeartbeat.trackEvent(`<br/><br/>  `MediaHeartbeat.Event.AdStart)` |
 
-#### Ad Start (1.x) {#ad-start-1.x}
+#### Annonsstart (1.x) {#ad-start-1.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onAdStart = function() {
@@ -481,7 +481,7 @@ SampleVideoPlayerPluginDelegate.prototype.getAdInfo = function() {
 };
 ```
 
-#### Ad Start (2.x) {#ad-start-2.x}
+#### Annonsstart (2.x) {#ad-start-2.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onAdStart = function() {
@@ -507,7 +507,7 @@ VideoAnalyticsProvider.prototype._onAdStart = function() {
 | `AdMetadataKeys()` | `MediaHeartbeat.createAdObject()` |
 | `AdobeAnalyticsPlugin.setAdMetadata()` | `MediaHeartbeat.trackAdStart()` |
 
-#### Standard Ad Metadata (1.x) {#ad-meta-1.x}
+#### Standardmetadata för annonsering (1.x) {#ad-meta-1.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onAdStart = function() {
@@ -526,7 +526,7 @@ VideoAnalyticsProvider.prototype._onAdStart = function() {
 };
 ```
 
-#### Standard Ad Metadata (2.x) {#ad-meta-2.x}
+#### Standardmetadata för annonsering (2.x) {#ad-meta-2.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onAdStart = function() {
@@ -552,14 +552,14 @@ VideoAnalyticsProvider.prototype._onAdStart = function() {
 ```
 
 >[!NOTE]
->Istället för att ställa in standardmetadata för annonsering via `AdobeAnalyticsPlugin.setVideoMetadata()` I VHL 2.0 anges Standard Ad-metadata via `AdMetadata` key `MediaObject.MediaObjectKey.StandardVideoMetadata`
+>I stället för att ställa in standardmetadata för annonsering via `AdobeAnalyticsPlugin.setVideoMetadata()`-API:t anges standardmetadata i VHL 2.0 via `AdMetadata` key `MediaObject.MediaObjectKey.StandardVideoMetadata`
 
 ### Anpassade annonseringsmetadata
 
 | 1.x API | 2.x API |
 | --- | --- |
 | `AdobeAnalyticsPlugin.setAdMetadata()` | `MediaHeartbeat.createAdObject()` |
-|  | `MediaHeartbeat.trackAdStart()` |
+| | `MediaHeartbeat.trackAdStart()` |
 
 #### Anpassade annonseringsmetadata (1.x) {#custom-ad-meta-1.x}
 
@@ -603,16 +603,16 @@ VideoAnalyticsProvider.prototype._onAdStart = function() {
 ```
 
 >[!NOTE]
->Istället för att ställa in anpassade annonseringsmetadata via `AdobeAnalyticsPlugin.setVideoMetadata` I VHL 2.0 anges Standard Ad-metadata via `MediaHeartbeat.trackAdStart()` API.
+>I stället för att ställa in anpassade annonseringsmetadata via `AdobeAnalyticsPlugin.setVideoMetadata`-API:t anges standardprogrammeringsmetadata i VHL 2.0 via `MediaHeartbeat.trackAdStart()`-API:t.
 
 ### Ad Hoppa över
 
 | 1.x API | 2.x API |
 | --- | --- |
 | `AdobeAnalyticsPlugin.setAdMetadata()` | `MediaHeartbeat.createAdObject()` |
-|  | `MediaHeartbeat.trackAdStart()` |
+| | `MediaHeartbeat.trackAdStart()` |
 
-#### Annonsväxling (1.x) {#ad-skip-1.x}
+#### Hoppa över annonser (1.x) {#ad-skip-1.x}
 
 ```js
 SampleVideoPlayerPluginDelegate.prototype.getAdInfo = function() {
@@ -630,14 +630,14 @@ VideoAnalyticsProvider.prototype._onAdSkip = function() {
 ```
 
 >[!NOTE]
->I VHL 1.5.X-API:er; `getAdinfo()` och `getAdBreakInfo()` måste returnera null om spelaren är utanför annonsbrytningens gränser.
+>I API:er för VHL 1.5.X måste `getAdinfo()` och `getAdBreakInfo()` returnera null om spelaren är utanför annonsbrytningsgränserna.
 
 ### Ad Complete
 
 | 1.x API | 2.x API |
 | --- | --- |
 | `VideoPlayerPlugin.trackAdComplete()` | `MediaHeartbeat.trackEvent(`<br/><br/>  `MediaHeartbeat.Event.AdComplete)` |
-|  | `MediaHeartbeat.trackEvent(`<br/><br/>  `MediaHeartbeat.Event.AdBreakComplete)` |
+| | `MediaHeartbeat.trackEvent(`<br/><br/>  `MediaHeartbeat.Event.AdBreakComplete)` |
 
 #### Ad Complete (1.x) {#ad-complete-1.x}
 
@@ -658,7 +658,7 @@ VideoAnalyticsProvider.prototype._onAdComplete = function() {
 };
 ```
 
-## Jämförelse av VHL-kod: KAPITEL UPPSPELNING
+## Jämförelse av VHL-kod: KAPITEL PLAYBACK
 
 ### Kapitelstart
 
@@ -711,7 +711,7 @@ SampleVideoPlayerPluginDelegate.prototype.getChapterInfo = function() {
 ```
 
 >[!NOTE]
->I VHL 1.5.X-API:er; `getChapterinfo()` måste returnera null om spelaren är utanför kapitelgränserna.
+>I VHL 1.5.X-API:er måste `getChapterinfo()` returnera null om spelaren är utanför kapitelgränserna.
 
 #### Hoppa över kapitel (2.x) {#chap-skip-2.x}
 
@@ -728,7 +728,7 @@ VideoAnalyticsProvider.prototype._onChapterSkip = function() {
 | `VideoPlayerPlugin.trackChapterStart()` | `MediaHeartbeat.createChapterObject()` |
 | `AdobeAnalyticsPlugin.setChapterMetadata()` | `MediaHeartbeat.trackEvent(`<br/><br/>  `MediaHeartbeat.Event.ChapterStart)` |
 
-#### Egna metadata för kapitel (1.x) {#chap-cust-meta-1.x}
+#### Anpassade metadata för kapitel (1.x) {#chap-cust-meta-1.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onChapterStart = function() {
@@ -740,7 +740,7 @@ VideoAnalyticsProvider.prototype._onChapterStart = function() {
 };
 ```
 
-#### Egna metadata för kapitel (2.x) {#chap-cust-meta-2.x}
+#### Anpassade metadata för kapitel (2.x) {#chap-cust-meta-2.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onChapterStart = function() {
@@ -762,7 +762,7 @@ VideoAnalyticsProvider.prototype._onChapterStart = function() {
 | --- | --- |
 | `trackChapterComplete()` | `trackEvent(MediaHeartbeat.Event.ChapterComplete)` |
 
-#### Kapitel fullständigt (1.x) {#chap-complete-1.x}
+#### Fullständigt kapitel (1.x) {#chap-complete-1.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onChapterComplete = function() {
@@ -771,7 +771,7 @@ VideoAnalyticsProvider.prototype._onChapterComplete = function() {
 };
 ```
 
-#### Kapitel fullständigt (2.x) {#chap-complete-2.x}
+#### Fullständigt kapitel (2.x) {#chap-complete-2.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onChapterComplete = function() {
@@ -780,7 +780,7 @@ VideoAnalyticsProvider.prototype._onChapterComplete = function() {
 };
 ```
 
-## Jämförelse av VHL-kod: ÖVRIGA HÄNDELSER
+## VHL-kodjämförelse: ANDRA HÄNDELSER
 
 ### Bithastighetsändring
 
@@ -788,7 +788,7 @@ VideoAnalyticsProvider.prototype._onChapterComplete = function() {
 | --- | --- |
 | `VideoPlayerPlugin.trackBitrateChange()` | `MediaHeartbeat.trackEvent(`<br/><br/>  `MediaHeartbeat.Event.BitrateChange)` |
 
-#### Ändra bithastighet (1.x) {#bitrate-chg-1.x}
+#### Bithastighetsändring (1.x) {#bitrate-chg-1.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onBitrateChange = function() {
@@ -816,7 +816,7 @@ VideoAnalyticsProvider.prototype._onBitrateChange = function() {
 | --- | --- |
 | `VideoInfo.resumed()` | `MediaObject()` |
 | `VideoPlayerPluginDelegate.getVideoInfo()` | `MediaHeartbeat.trackSessionStart()` |
-| `VideoPlayerPlugin.trackVideoLoad()` |  |
+| `VideoPlayerPlugin.trackVideoLoad()` | |
 
 #### Återuppta video (1.x) {#video-resume-1.x}
 

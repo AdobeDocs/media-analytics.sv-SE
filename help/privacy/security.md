@@ -18,7 +18,7 @@ På Adobe tar vi säkerhet och integritet på allvar. Från ett rigoröst säker
 
 ## Säkerhet för transportlager {#transport-layer-security}
 
-**Säkerhetsmeddelande för transportskikt —** Adobe har säkerhetsstandarder som kräver att äldre säkerhetsprotokoll upphör att gälla. För att fortsätta att uppfylla de föränderliga säkerhetsprotokollstandarderna går Adobe mot att använda TLS 1.2 (Transport Layer Security) för att få den senaste och säkraste versionen att använda. Från och med 20 februari 2019 har Adobe endast stöd för TLS 1.1 och senare. I och med den här ändringen kommer Adobe inte längre att samla in data från slutanvändare med äldre enheter eller webbläsare som använder TLS 1.0. Att migrera till TLS 1.2 ger högre säkerhet. Det är viktigt att du går igenom detaljerna och planerar ändringarna för en smidig övergång.
+**Säkerhetsmeddelande för transportlager -** Adobe har säkerhetsstandarder som kräver att äldre säkerhetsprotokoll upphör att gälla. För att fortsätta att uppfylla de föränderliga säkerhetsprotokollstandarderna går Adobe mot att använda TLS 1.2 (Transport Layer Security) för att få den senaste och säkraste versionen att använda. Från och med 20 februari 2019 har Adobe endast stöd för TLS 1.1 och senare. I och med den här ändringen kommer Adobe inte längre att samla in data från slutanvändare med äldre enheter eller webbläsare som använder TLS 1.0. Att migrera till TLS 1.2 ger högre säkerhet. Det är viktigt att du går igenom detaljerna och planerar ändringarna för en smidig övergång.
 
 >[!NOTE]
 >

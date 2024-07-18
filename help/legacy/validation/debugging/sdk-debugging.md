@@ -7,14 +7,14 @@ feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
 workflow-type: tm+mt
-source-wordcount: '217'
-ht-degree: 2%
+source-wordcount: '218'
+ht-degree: 0%
 
 ---
 
 # SDK-felsökning{#sdk-debugging}
 
-Du kan aktivera och inaktivera loggning. Media SDK har en omfattande funktion för spårning/loggning i hela mediespårningsstacken. Du kan aktivera eller inaktivera loggning genom att ange `debugLogging` på Config-objektet.
+Du kan aktivera och inaktivera loggning. Media SDK har en omfattande funktion för spårning/loggning i hela mediespårningsstacken. Du kan aktivera eller inaktivera loggning genom att ange flaggan `debugLogging` för Config-objektet.
 
 ## Exempelkod för felsökningsloggning
 
@@ -50,9 +50,9 @@ mediaConfig.debugLogging = true;
 this._mediaHeartbeat = new MediaHeartbeat(mediaDelegate, mediaConfig, appMeasurement);
 ```
 
-### OTT (kromecast, Roku)
+### OTT (kromeast, Roku)
 
-ADBMomobile-biblioteket loggar felsökningar via `setDebugLogging` -metod. Felsökningsloggning bör vara inställd på `false` för alla produktionsprogram.
+ADBMomobile-biblioteket tillhandahåller felsökningsloggning via metoden `setDebugLogging`. Felsökningsloggning ska anges till `false` för alla produktionsprogram.
 
 #### Roku
 
@@ -60,7 +60,7 @@ ADBMomobile-biblioteket loggar felsökningar via `setDebugLogging` -metod. Fels�
 ADBMobile().setDebugLogging(true)
 ```
 
-#### Chromecast
+#### Kromecast
 
 ```
 ADBMobile.config.setDebugLogging(true)
@@ -81,12 +81,12 @@ Example: [16:10:29 GMT­0700 (PDT).245] [DEBUG] [plugin::player] Resolving qos.s
    * DEBUG - Felsökningsloggar som används av utvecklare för att felsöka mer komplexa problem
    * VARNING - Anger potentiella integrerings-/konfigurationsfel eller Heartbeats SDK-fel
    * FEL - Anger viktiga integreringsfel eller Heartbeats SDK-fel
-* **tagg:** Namnet på den underkomponent som utfärdade loggmeddelandet (vanligtvis klassnamnet)
+* **tagg:** Namnet på den underkomponent som skickade loggmeddelandet (vanligtvis klassnamnet)
 * **meddelande:** Det faktiska spårningsmeddelandet
 
-Du kan använda loggutdata från Media SDK-biblioteket för att verifiera implementeringen. En bra strategi är att söka igenom loggarna efter strängen `#track`. Då markeras alla `track*()` samtal som görs av ditt program.
+Du kan använda loggutdata från Media SDK-biblioteket för att verifiera implementeringen. En bra strategi är att söka igenom loggarna efter strängen `#track`. Då markeras alla `track*()` anrop som gjorts av programmet.
 
-Detta är till exempel vad loggarna filtrerats efter `#track` skulle kunna se ut så här:
+Det här är till exempel vad loggarna som filtrerats för `#track` kan se ut så här:
 
 ```js
 [16:10:29 GMT­0700 (PDT).222] [INFO] [plugin::player] #trackVideoLoad()

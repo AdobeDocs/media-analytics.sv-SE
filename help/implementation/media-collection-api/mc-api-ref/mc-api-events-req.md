@@ -7,8 +7,8 @@ feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
 workflow-type: tm+mt
-source-wordcount: '261'
-ht-degree: 4%
+source-wordcount: '262'
+ht-degree: 1%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 4%
 
 ## URI-parameter
 
-`sid`: Sessions-ID som returneras från en [Sessionsbegäran](mc-api-sessions-req.md).
+`sid`: Sessions-ID som returnerats från en [sessionsbegäran](mc-api-sessions-req.md).
 
 ## Begärandetext
 
@@ -37,21 +37,21 @@ Begärandetexten måste vara JSON och ha samma struktur som exempelbegärandetex
 }
 ```
 
-* `playerTime` (Obligatoriskt)
-   * `playhead` - Måste vara i sekunder, men det kan vara ett flytande objekt.
-   * `ts` - Tidsstämpel. måste vara i millisekunder.
-* `eventType` (Obligatoriskt)
-* `params` (Valfritt)
-* `customMetadata` (Valfritt) skicka endast med `adStart` och `chapterStart` händelsetyper)
-* `qoeData` (Valfritt)
+* `playerTime` (obligatoriskt)
+   * `playhead` - Måste vara i sekunder, men det kan vara ett flyttal.
+   * `ts` - Tidsstämpel; måste vara i millisekunder.
+* `eventType` (obligatoriskt)
+* `params` (valfritt)
+* `customMetadata` (Valfritt; skicka endast med händelsetyperna `adStart` och `chapterStart`)
+* `qoeData` (valfritt)
 
-En lista över giltiga händelsetyper för den här versionen finns på [Händelsetyper och beskrivningar.](mc-api-event-types.md)
+En lista över giltiga händelsetyper för den här versionen finns i [Händelsetyper och beskrivningar.](mc-api-event-types.md)
 
 >[!IMPORTANT]
 >
 >***Annonsuppföljning -**Du kan bara spåra annonser inuti en`adBreak`*.
 >
->I avsaknad av `adBreakStart` och `adBreakComplete` &quot;bokstöd&quot; runt annonser, `adStart` och `adComplete` Händelser ignoreras helt enkelt och motsvarande annonslängd spåras som innehållets längd. Detta kan ha en betydande inverkan på de aggregerade data som kommer att bli tillgängliga i Adobe Analytics.
+>Om `adBreakStart` och `adBreakComplete` &quot;bokstöd&quot; saknas runt annonser ignoreras `adStart`- och `adComplete`-händelser och motsvarande annonslängd spåras som innehållslängd. Detta kan ha en betydande inverkan på de aggregerade data som kommer att bli tillgängliga i Adobe Analytics.
 
 ## Svar
 
@@ -71,7 +71,7 @@ Access-Control-Expose-Headers Location
 | HTTP-svarskod | Beskrivning | Klientåtgärdsobjekt |
 |---|---|---|
 | **204** | **Inget innehåll.** <br/><br/>Anropet till pulsslag lyckades. | Ej tillämpligt |
-| **400** | **Felaktig begäran.** <br/><br/>Begäran hade ett felaktigt format. | Kontrollera [JSON-valideringsscheman](mc-api-json-validation.md) för begärandetypen. |
-| **404** | **Hittades inte.** <br/><br/>Sessions-ID:t för mediesessionen hittades inte i back end-tjänsten. | Klientprogrammet bör använda [Sessionsbegäran](mc-api-sessions-req.md) API för att skapa en annan mediesession och rapportera spårning för den. |
-| **410** | **Borta.** <br/><br/>Mediesessionen hittades i back-end-tjänsten, men klienten kan inte längre rapportera aktivitet på den. | Klientprogrammet bör använda [Sessionsbegäran](mc-api-sessions-req.md) API för att skapa en annan mediesession och rapportera spårning för den. |
+| **400** | **Ogiltig begäran.** <br/><br/>Begäran hade ett felaktigt format. | Kontrollera [JSON-valideringsscheman](mc-api-json-validation.md) för begärandetypen. |
+| **404** | **Hittades inte.** <br/><br/>Sessions-ID:t för mediesessionen hittades inte i back-end-tjänsten. | Klientprogrammet bör använda API:t för [sessionsbegäran](mc-api-sessions-req.md) för att skapa en annan mediesession och rapportera spårning för den. |
+| **410** | **Borta.** <br/><br/>Mediesessionen hittades i back-end-tjänsten, men klienten kan inte längre rapportera aktivitet på den. | Klientprogrammet bör använda API:t för [sessionsbegäran](mc-api-sessions-req.md) för att skapa en annan mediesession och rapportera spårning för den. |
 | **500** | **Serverfel** | Ej tillämpligt |

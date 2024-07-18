@@ -18,4 +18,4 @@ Back-end för tillägget Streaming Media Collection validerar parametrarna för 
 
 `GET https://{uri}/api/v1/schemas/{event-type}`
 
-Mer information om hur du använder JSON-valideringsscheman finns i [Validerar händelsebegäranden.](../mc-api-impl/mc-api-validate-reqs.md)
+Mer information om hur du använder JSON-valideringsscheman finns i [Validera händelsebegäranden.](../mc-api-impl/mc-api-validate-reqs.md)
