@@ -4,9 +4,9 @@ description: Lär dig hur tillägget Streaming Media Collection kan implementera
 feature: Media Analytics
 role: User, Admin, Data Engineer
 exl-id: dfdb1415-105e-4c41-bedc-ecb85ed1b1d9
-source-git-commit: 4ed604cb1969212421fecd40996d7b25af50a2b2
+source-git-commit: 3963cd62b7c190464fe5314198107f273a225503
 workflow-type: tm+mt
-source-wordcount: '1879'
+source-wordcount: '2154'
 ht-degree: 0%
 
 ---
@@ -111,6 +111,30 @@ Så här skapar och konfigurerar du ett schema:
 
    1. Välj [!UICONTROL **Bekräfta**] > [!UICONTROL **Spara**] om du vill spara ändringarna.
 
++++
+
+1. (Valfritt) Du kan lägga till anpassade metadata i schemat. På så sätt kan du ta med ytterligare, användardefinierade metadata som kan anpassas efter särskilda behov eller sammanhang. Den här flexibiliteten är användbar i scenarier där befintliga scheman inte täcker de önskade datapunkterna. (Du kan också arbeta med anpassade metadata med Media Edge API:er. Mer information finns i [Skapa anpassade metadata med Media Edge API:er](https://developer.adobe.com/cja-apis/docs/endpoints/media-edge/custom-metadata/).)
+
++++ Expandera här om du vill visa instruktioner om hur du lägger till anpassade metadata i ditt schema.
+
+   1. Leta reda på namnet på innehavaren av organisationen genom att välja [!UICONTROL **Kontoinformation**] > [!UICONTROL **Tilldelade organ**] > [!UICONTROL _**organisationsnamn**_] > [!UICONTROL **klientorganisation**].
+
+      Dessa anpassade fält kommer att tas emot via den här sökvägen. (Till exempel klientnamn: _dcbl → sökväg till mittAnpassatFält: _dcbl.myCustomField.)
+
+   1. Lägg till en anpassad fältgrupp i det definierade medieschemat.
+
+      ![add-custom-metadata](assets/add-custom-metadata-fieldgroup.png)
+
+   1. Lägg till anpassade fält som du vill spåra i fältgruppen.
+
+      ![add-custom-metadata](assets/add-custom-fields.png)
+
+   1. [Använd den sökväg som genererats ](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/fields/overview#type-specific-properties) för det anpassade fältet i din nyttolast för begäran.
+
+      ![add-custom-metadata](assets/custom-fields-path.png)
+
++++
+
 1. Fortsätt med [Skapa en datauppsättning i Adobe Experience Platform](#create-a-dataset-in-adobe-experience-platform).
 
 ## Skapa en datauppsättning i Adobe Experience Platform
@@ -135,8 +159,8 @@ Så här skapar och konfigurerar du ett schema:
 
      >[!IMPORTANT]
      >
-         >     Välj inte [!UICONTROL **Save and Add Mapping**] eftersom det leder till mappningsfel för tidsstämpelfältet.
-     
+     >Välj inte [!UICONTROL **Spara och lägg till mappning**] eftersom det leder till mappningsfel för fältet Tidsstämpel.
+
      ![Skapa dataström och välj schema](assets/datastream-create-schema.png)
 
    * Lägg till någon av följande tjänster i datastream, beroende på om du använder Adobe Analytics eller Customer Journey Analytics:
@@ -151,7 +175,7 @@ Så här skapar och konfigurerar du ett schema:
 
      ![Lägg till Adobe Analytics-tjänsten](assets/datastream-add-service.png)
 
-   * Expandera [!UICONTROL **Avancerade alternativ**] och aktivera sedan alternativet [!UICONTROL **Medieanalys**].
+      * Expandera [!UICONTROL **Avancerade alternativ**] och aktivera sedan alternativet [!UICONTROL **Medieanalys**].
 
      ![Medieanalysalternativ](assets/datastream-media-check.png)
 
@@ -164,7 +188,6 @@ Så här skapar och konfigurerar du ett schema:
 >[!NOTE]
 >
 >Följande procedur krävs bara om du använder Customer Journey Analytics.
-
 
 1. Kontrollera att du har skapat en datastream enligt beskrivningen i [Konfigurera en datastream i Customer Journey Analytics](#configure-a-datastream-in-adobe-experience-platform).
 
@@ -301,11 +324,22 @@ Så här skapar och konfigurerar du ett schema:
 
    ![Medieuppspelningstid för panel](assets/media-playback-time-spent-panels.png)
 
+1. (Villkorligt) Om du har lagt till anpassade metadata i schemat, enligt beskrivningen i steg 8 i [Konfigurera schemat i Adobe Experience Platform](#set-up-the-schema-in-adobe-experience-platform), måste du ange beständighet för anpassade fält, enligt beskrivningen i [Inställningar för beständiga komponenter](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/component-settings/persistence) i guiden Customer Journey Analytics.
+
+   När data kommer in i Customer Journey Analytics är dimensionerna för anpassat användar-ID tillgängliga.
+
+   ![setup-custom-metadata](assets/custom-metadata-dimension.png)
+
+   >[!NOTE]
+   >
+   >Om du konfigurerar Adobe Analytics som ett uppdataflöde för ditt datastream finns de anpassade metadata också i ContextData, med det namn som du anger i schemat (utan klientprefix, t.ex. myCustomField). Detta gör det möjligt att använda alla Adobe Analytics-funktioner som är tillgängliga för ContextData, till exempel [skapa en bearbetningsregel](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/c-processing-rules/processing-rules).
+
 1. Dela projektet enligt beskrivningen i [Dela projekt](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/curate-share/share-projects.html?lang=en).
 
    >[!NOTE]
    >
    >   Om de användare du vill dela med inte är tillgängliga kontrollerar du att användarna har användar- och administratörsåtkomst till Customer Journey Analytics i Adobe Admin Console.
+
 
 1. Fortsätt med [Skicka data till Experience Platform Edge](#send-data-to-experience-platform-edge).
 
