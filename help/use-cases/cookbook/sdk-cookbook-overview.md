@@ -4,10 +4,10 @@ description: Läs mer om användningsfall för direktuppspelande media
 exl-id: 68230d3f-d1fd-4be3-ba67-689965d85771
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: 4ed604cb1969212421fecd40996d7b25af50a2b2
+source-git-commit: 0079116bcf39bb6d20b4fd5f14bd3c19137c46e3
 workflow-type: tm+mt
 source-wordcount: '78'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 2%
 * [Attribut för medieström](/help/use-cases/media-analytics-cookbook/media-dimensions.md)
 
 * Federated
-   * [Federated Analytics](/help/use-cases/federated-analytics.md)
+   * [Federated Media](/help/use-cases/federated-media.md)
 
 * Tidslinjer
    * [Kapitelstart och -slut](/help/use-cases/timelines/chapter-start-end.md)

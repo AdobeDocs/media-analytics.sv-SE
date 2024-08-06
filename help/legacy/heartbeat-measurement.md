@@ -4,7 +4,7 @@ description: Lär dig hur hjärtslag används för att samla in videostatistik.
 feature: Media Analytics
 role: User, Admin, Data Engineer
 exl-id: 180dd9b1-877a-4ec1-8e81-c293800069c0
-source-git-commit: 4ed604cb1969212421fecd40996d7b25af50a2b2
+source-git-commit: 0079116bcf39bb6d20b4fd5f14bd3c19137c46e3
 workflow-type: tm+mt
 source-wordcount: '315'
 ht-degree: 26%
@@ -24,5 +24,5 @@ Att använda pulsslag i tillägget Streaming Media Collection ger följande för
 | Integreringar | Experience Cloud ID är länkat till Adobe Experience Cloud för enklare korsanalys. Med automatisk integrering med Adobe Experience Cloud kan ni segmentera era mediemålgrupper, inrikta er på dem och ta fram medierekommendationer utifrån användarnas önskemål. |
 | Priser | Genomskinlig spårning efter medieström (enkel) |
 | Implementering och support | Effektiv konfiguration med pågående uppdateringar och förbättringar. Med en smidig implementeringsprocess kan du snabbt mappa variabler via spelar-API:t och validera implementeringar med Adobe Debug Tool för att säkerställa att alla nödvändiga variabler spåras korrekt. |
-| Partnerdelning | Federated Analytics och Certified Metrics. Med delade data via Federated Analytics kan ni utnyttja våra branschledande funktioner för mediedelning för att utvärdera data enhetligt i alla mediedistributionspartners - operatörer, programmerare och distributörer. |
+| Partnerdelning | Federated Media och Certified Metrics. Med delade data via Federated Media kan ni utnyttja våra branschledande funktioner för mediedelning för att utvärdera data enhetligt i alla mediedistributionspartners - operatörer, programmerare och distributörer. |
 | Avancerad spårning | Hämtade innehållsspårning, spårning av felåterställning och samtidiga visningsprogram. Du kan spåra direktuppspelat medieinnehåll som har laddats ned och spelats upp på en enhet oavsett dess anslutningsmöjligheter. |
