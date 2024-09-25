@@ -4,7 +4,7 @@ description: Lär dig hur tillägget Streaming Media Collection kan implementera
 feature: Media Analytics
 role: User, Admin, Data Engineer
 exl-id: dfdb1415-105e-4c41-bedc-ecb85ed1b1d9
-source-git-commit: 3963cd62b7c190464fe5314198107f273a225503
+source-git-commit: 380d3ea192162226816d2e269e5cca20f981ac0f
 workflow-type: tm+mt
 source-wordcount: '2154'
 ht-degree: 0%
@@ -387,4 +387,4 @@ Mer information om mediet-API:t för Edge finns i följande resurser:
 
 * [Felsökningsguide för Edge-API:t för media](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/troubleshooting.html)
 
-* [Använda Open API-specifikationsfilen för Media Edge API:er](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/swagger.html)
+* [Använda Open API-specifikationsfilen för Media Edge API:er](https://developer.adobe.com/data-collection-apis/docs/api/media-edge/)
