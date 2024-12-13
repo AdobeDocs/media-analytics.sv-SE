@@ -1,19 +1,19 @@
 ---
-title: Konfigurera en mobil SDK med taggar för direktuppspelningsmedia
+title: Konfigurera ett mobilt SDK med taggar för direktuppspelningsmedia
 description: Lär dig hur du implementerar Adobe Streaming Media för mobilappar.
 feature: Media Analytics
 role: User, Admin, Data Engineer
 exl-id: b4944b5f-cbae-4efc-9ef7-962d3f342240
-source-git-commit: 240fa48bdc738425e04cd29c27625c7dd612ff18
+source-git-commit: 0088d41f557b1dc49ac2b3b6d0a812f22d8849e9
 workflow-type: tm+mt
-source-wordcount: '198'
+source-wordcount: '197'
 ht-degree: 0%
 
 ---
 
 # Installera SDK för mobiler {#install-mobile-sdks}
 
-Installera och konfigurera följande för att implementera Streaming Media Collection-tillägget för mobilappar i Android eller iOS:
+Installera och konfigurera följande för att implementera Streaming Media Collection för mobilappar på Android eller iOS:
 
 * **Adobe Experience Platform Mobile SDK**
 

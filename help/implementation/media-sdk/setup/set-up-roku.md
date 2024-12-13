@@ -1,13 +1,13 @@
 ---
-title: Så här konfigurerar du Media SDK för Roku
-description: Följ de här stegen för att konfigurera Media SDK-programmet på Roku.
+title: Så här konfigurerar du Media SDK for Roku
+description: Följ de här stegen för att konfigurera Media SDK på Roku.
 uuid: 904dfda0-4782-41da-b4ab-212e81156633
 exl-id: b8de88d0-3a93-4776-b372-736bf979ee26
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: 1375fb3260d5c4ca703827b3d73174f4e475f76d
+source-git-commit: 0088d41f557b1dc49ac2b3b6d0a812f22d8849e9
 workflow-type: tm+mt
-source-wordcount: '666'
+source-wordcount: '664'
 ht-degree: 1%
 
 ---
@@ -16,17 +16,17 @@ ht-degree: 1%
 
 ## Förutsättningar {#roku-prerequisites}
 
-* **Hämta giltiga konfigurationsparametrar för tilläggsprogrammet för den direktuppspelade mediesamlingen**
+* **Hämta giltiga konfigurationsparametrar för den direktuppspelande mediesamlingen**
 
-  Dessa parametrar kan hämtas från en Adobe-representant när du har konfigurerat Adobe-direktuppspelningstillägget för Media Collection.
+  Dessa parametrar kan hämtas från en Adobe-representant när du har konfigurerat Adobe Streaming Media Collection-kontot.
 * **Ta med följande API:er i mediespelaren**
 
    * _Ett API för att prenumerera på spelarhändelser_ - Media SDK kräver att du anropar en uppsättning enkla API:er när händelser inträffar i spelaren.
    * _Ett API som tillhandahåller spelarinformation_ - Den här informationen innehåller information som medienamnet och spelhuvudets position.
 
-Med Roku SDK 2.x för Experience Cloud Solutions kan du mäta Roku-applikationer skrivna i BrightScript, utnyttja och samla in målgruppsdata via målgruppshantering och mäta videoengagemang via videohändelser.
+Med Roku SDK 2.x for Experience Cloud Solutions kan du mäta Roku-applikationer skrivna i BrightScript, utnyttja och samla in målgruppsdata via målgruppshantering och mäta videoengagemang via videohändelser.
 
-## Implementering av mobilbibliotek/SDK
+## Mobilbibliotek/SDK-implementering
 
 1. Lägg till ditt [hämtade](/help/getting-started/download-sdks.md) Roku-bibliotek i ditt projekt.
 
@@ -131,7 +131,7 @@ Med Roku SDK 2.x för Experience Cloud Solutions kan du mäta Roku-applikationer
    | --- | --- |
    | `visitorMarketingCloudID` | Hämtar besökar-ID:t för Experience Cloud från besökar-ID-tjänsten.  <br/><br/>`ADBMobile().visitorMarketingCloudID()` |
    | `visitorSyncIdentifiers` | Med besökar-ID:t för Experience Cloud kan du ange ytterligare kund-ID:n som kan kopplas till varje besökare. Besökar-API:t godkänner flera kund-ID:n för samma besökare och en kundtypsidentifierare för att skilja omfattningen för olika kund-ID:n åt. Den här metoden motsvarar `setCustomerIDs`. Till exempel: <br/><br/>`identifiers={}` <br/>`identifiers["idType"]="idValue"` <br/>`ADBMobile().visitorSyncIdentifiers(identifiers)` |
-   | `setAdvertisingIdentifier` | Används för att ange Roku-ID för Advertising (RIDA) på SDK:n. Till exempel: <br/><br/> `ADBMobile().setAdvertisingIdentifier(`<br/>  `"<sample_roku_identifier_for_advertising>")` <br/><br/><br/> Hämta Roku-ID:t för Advertising (RIDA) med Roku SDK-API:t [ getRIDA() ](https://developer.roku.com/docs/references/brightscript/interfaces/ifdeviceinfo.md#getrida-as-dynamic) . |
+   | `setAdvertisingIdentifier` | Används för att ange Roku-ID för Advertising (RIDA) på SDK. Till exempel: <br/><br/> `ADBMobile().setAdvertisingIdentifier(`<br/>  `"<sample_roku_identifier_for_advertising>")` <br/><br/><br/> Hämta Roku ID för Advertising (RIDA) med Roku SDK [ getRIDA() ](https://developer.roku.com/docs/references/brightscript/interfaces/ifdeviceinfo.md#getrida-as-dynamic) -API:t. |
    | `getAllIdentifiers` | Returnerar en lista med alla identifierare som lagras av SDK, inklusive Analytics, Visitor, Audience Manager och anpassade identifierare. <br/><br/> `identifiers = ADBMobile().getAllIdentifiers()` |
 
    <!--

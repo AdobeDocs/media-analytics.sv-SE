@@ -1,28 +1,28 @@
 ---
-title: Implementera tillägget Direktuppspelning av mediasamling
-description: Läs mer om implementeringssökvägarna för tillägget Streaming Media Collection.
+title: Implementera direktuppspelningsmediainsamlingen
+description: Lär dig mer om implementeringssökvägarna för Streaming Media Collection.
 uuid: null
 feature: Media Analytics
 role: User, Admin, Data Engineer
 exl-id: ed9297b1-6487-4099-bc62-0c3a40572255
-source-git-commit: 4ed604cb1969212421fecd40996d7b25af50a2b2
+source-git-commit: 0088d41f557b1dc49ac2b3b6d0a812f22d8849e9
 workflow-type: tm+mt
-source-wordcount: '459'
+source-wordcount: '453'
 ht-degree: 0%
 
 ---
 
-# Implementera tillägget Direktuppspelning av mediasamling
+# Implementera direktuppspelningsmediainsamlingen
 
-Det finns olika sätt att implementera tillägget Adobe Streaming Media Collection. En detaljerad jämförelse av enheter och plattformar som stöds för de implementeringsmetoder som beskrivs på den här sidan finns i [Enheter och plattformar som stöds](/help/getting-started/supported-devices.md).
+Det finns olika sätt att implementera Adobe Streaming Media Collection. En detaljerad jämförelse av enheter och plattformar som stöds för de implementeringsmetoder som beskrivs på den här sidan finns i [Enheter och plattformar som stöds](/help/getting-started/supported-devices.md).
 
 ## Edge implementeringsmetoder
 
-Vi rekommenderar att du använder Edge när du implementerar tillägget Streaming Media Collection för alla nya Adobe Analytics- och Customer Journey Analytics-kunder.
+Vi rekommenderar att du använder Edge när du implementerar Streaming Media Collection för alla nya Adobe Analytics- och Customer Journey Analytics-kunder.
 
-* **Media för Edge Network SDK/tillägg:** Samlar in data från webben, iOS- och Android-enheter eller Roku-enheter och skickar dem till Edge Network. Data kan sedan skickas till Customer Journey Analytics eller Adobe Analytics.
+* **Media för Edge Network SDK/Extension:** Samlar in data från webben, iOS- och Android-enheter eller Roku-enheter och skickar dem till Edge Network. Data kan sedan skickas till Customer Journey Analytics eller Adobe Analytics.
 
-  Mer information om Media för Edge Network SDK/Extension finns i [Implementera tillägget för direktuppspelad mediasamling med Edge Network](/help/implementation/edge/implementation-edge.md).
+  Mer information om Media för Edge Network SDK/Extension finns i [Implementera direktuppspelningsmediesamlingen med Edge Network](/help/implementation/edge/implementation-edge.md).
 
 * **Media Edge API:** Kan anpassas för att samla in data från alla enheter och format (inklusive mobila enheter, webbenheter och toppmoderna enheter) och skicka data till Edge Network. Data kan sedan skickas till Customer Journey Analytics eller Adobe Analytics.
 
@@ -38,7 +38,7 @@ Förutom Edge implementeringsmetoder finns det andra implementeringsmetoder. Des
 
 * **Medietillägg med taggar:** Adobe Media Analytics för ljud och video-tillägg innehåller funktioner för att lägga till Media Tracker-instansen till en plats eller ett projekt som har taggats. Data skickas till Adobe Analytics.
 
-  Information om hur du installerar, konfigurerar och implementerar medietillägget med taggar finns i [Adobe Media Analytics (3.x SDK) för översikt över ljud- och videotillägg](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/media-analytics-3x/overview.html).
+  Mer information om hur du installerar, konfigurerar och implementerar medietillägget med taggar finns i [Adobe Media Analytics (3.x SDK) för översikt över ljud- och videotillägg](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/media-analytics-3x/overview.html).
 
 * **Media SDK:** Med Media SDK kan du mäta flera medieplattformar, inklusive webbplatser, mobiltelefoner, anslutna TV-apparater, surfplattor, OTT-enheter, digitalboxar och spelkonsoler. (Mer information finns i [Enheter och plattformar som stöds](/help/getting-started/supported-devices.md).)
 

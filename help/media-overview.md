@@ -1,13 +1,13 @@
 ---
 title: Adobe Streaming Media Collection - översikt
-description: Använd tillägget Streaming Media Collection för att få kraftfulla insikter om innehåll, ljud och annonser.
+description: Använd Streaming Media Collection för att få kraftfulla insikter om innehåll, ljud och annonser.
 uuid: b3cbe240-b94d-42b8-a99c-0280334aaa14
 exl-id: 826530f7-2c39-41ef-b3b4-d3f44b46858f
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: 4ed604cb1969212421fecd40996d7b25af50a2b2
+source-git-commit: 0088d41f557b1dc49ac2b3b6d0a812f22d8849e9
 workflow-type: tm+mt
-source-wordcount: '597'
+source-wordcount: '590'
 ht-degree: 9%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 9%
 
 ![Banderoll](./assets/media_analytics_banner.png)
 
-Tillägget Adobe Streaming Media Collection innehåller kraftfulla verktyg för insamling, mätning och anpassning av direktuppspelat mediematerial, som ljud, video och reklam för leverantörer av direktuppspelade media. Ni kan kombinera data för direktuppspelande media med funktioner som Audience Analytics, Mobile eller Cross-Device Analytics.
+Adobe Streaming Media Collection innehåller kraftfulla verktyg för insamling, mätning och anpassning av direktuppspelat mediematerial, som ljud, video och reklam för medieföretag. Ni kan kombinera data för direktuppspelande media med funktioner som Audience Analytics, Mobile eller Cross-Device Analytics.
 
 Strömmande mediedata kan enkelt integreras i följande Adobe Experience Platform-produkter:
 
@@ -26,25 +26,25 @@ Strömmande mediedata kan enkelt integreras i följande Adobe Experience Platfor
 
 * Adobe Journey Optimizer
 
-* Real-Time Customer Data Platform
+* Plattform för kunddata i realtid
 
 >[!IMPORTANT]
 >
->Kontakta din säljare eller ditt kontoteam på Adobe för att se till att tillägget för direktuppspelad mediesamling ingår i din produktportfölj om du vill implementera en mediesamling för direktuppspelning.
+>Om du vill implementera Streaming Media Collection kontaktar du din säljare eller ditt kontoteam på Adobe för att se till att tillägget för Streaming Media Collection ingår i din produktportfölj.
 
 ## Viktiga funktioner
 
-Fördelarna med tillägget Streaming Media Collection är bland annat övervakning i realtid, detaljerad analys, användbara insikter, intäktsmöjligheter med mera.
+Fördelarna med Streaming Media Collection är bland annat övervakning i realtid, detaljerad analys, användbara insikter, intäktsmöjligheter med mera.
 
 * **Realtidsanalys**: Fatta konkreta, åtgärdbara beslut i realtid med hjälp av nyckeltal som mediefrekvenser som startar i flera kanaler.
 
-  Med tillägget Streaming Media Collection får du nästan detaljinformation om varaktighet, stopp och start i realtid så att du kan utvärdera och kombinera video- och ljudstatistik. Dessa insikter gör att ni kan förstå kundernas tittande och avlyssningsvanor och öka engagemanget med personaliserade rekommendationer.
+  Med Streaming Media Collection får du nästan detaljinformation om varaktighet, stopp och start i realtid så att du kan utvärdera och kombinera video- och ljudstatistik. Dessa insikter gör att ni kan förstå kundernas tittande och avlyssningsvanor och öka engagemanget med personaliserade rekommendationer.
 
 * **Öka engagemanget**: Engagera användarna fullständigt genom färre buffringshändelser och förstå var och när annonser ska spelas upp i innehållet för att skapa en smidig, mindre påträngande upplevelse som levererar upprepade besök.
 
 * **Holistisk bild**: Kombinera flera datapunkter i alla innehållsdistributörer för att få en fullständig bild av all medieaktivitet. Mät engagemanget och se/lyssna på alla möjliga kanaler.
 
-  Med tillägget Streaming Media Collection kan ni spåra hela kundresan på hela webbplatsen och direktuppspelande appar för att visualisera kundens väg och intressen och för att ge förbättrade rekommendationer och personalisera kundupplevelser.  Med mediemätning kan ni kategorisera data i flera dimensioner och segment och samla in alla metadata ni behöver för att göra en fullständig och detaljerad analys. Sedan kan ni analysera data och attribuera framgångsmått för helt konsumerad media, genomsnittlig tid som tillbringats på platsen och slutförda annonser.
+  Med Streaming Media Collection kan ni spåra hela kundresan på hela webbplatsen och direktuppspelningsappar för att visualisera kundens väg och intressen och tillhandahålla förbättrade rekommendationer och personalisera kundupplevelser.  Med mediemätning kan ni kategorisera data i flera dimensioner och segment och samla in alla metadata ni behöver för att göra en fullständig och detaljerad analys. Sedan kan ni analysera data och attribuera framgångsmått för helt konsumerad media, genomsnittlig tid som tillbringats på platsen och slutförda annonser.
 
 * **Vitala mått**: Mät vitala leveransvärden relaterade till Quality of Experience (QoE), t.ex. uteslutna bildrutor, använd buffringstid och genomsnittlig bithastighet.
 
@@ -68,4 +68,4 @@ När uppspelningssessionen är slut skickas beräknade spårningsdata antingen t
 >Med Customer Journey Analytics-implementeringar kan data skickas till Customer Journey Analytics antingen med Experience Edge eller med hjälp av Analytics Data Connector (ADC).
 
 
-Mer information om de olika implementeringsmetoderna finns i [Implementera Streaming Media Collection-tillägget för Adobe Analytics eller Customer Journey Analytics](/help/implementation/overview.md).
+Mer information om de olika implementeringsmetoderna finns i [Implementera Streaming Media Collection för Adobe Analytics eller Customer Journey Analytics](/help/implementation/overview.md).

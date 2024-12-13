@@ -1,19 +1,19 @@
 ---
 product: adobe analytics
 audience: end-user
-user-guide-title: Tillägg för insamling av strömningsmedia
+user-guide-title: Direktuppspelad mediainsamling
 breadcrumb-title: Strömning av Media Collection Guide
 user-guide-description: Implementera mediaströmning. Innehåller Media SDK och Media Collection API.
 sub-product: media analytics
-source-git-commit: 0079116bcf39bb6d20b4fd5f14bd3c19137c46e3
+source-git-commit: 0088d41f557b1dc49ac2b3b6d0a812f22d8849e9
 workflow-type: tm+mt
-source-wordcount: '895'
-ht-degree: 14%
+source-wordcount: '893'
+ht-degree: 13%
 
 ---
 
 
-# Tillägg för insamling av strömningsmedia {#using}
+# Direktuppspelad mediainsamling {#using}
 
 + [Strömning av Media Collection Guide](media-overview.md)
 + Versionsinformation {#release-notes}
@@ -24,12 +24,12 @@ ht-degree: 14%
    + [Implementeringsdokumentation för Streaming Media Collection](getting-started/implementation-documentation.md)
    + [SDK:er, bibliotek och tillägg](getting-started/download-sdks.md)
    + Supportslut {#end-of-support}
-      + [Stöd för Media Analytics Mobile SDK upphör](additional-resources/end-of-support-faqs.md)
-      + Äldre - fristående media-SDK för att starta migrering {#sdk-to-launch}
+      + [Media Analytics Mobile SDK End of Support](additional-resources/end-of-support-faqs.md)
+      + Äldre - Fristående SDK-media för att starta migrering {#sdk-to-launch}
          + [Översikt](legacy/sdk-to-launch/sdk-to-launch-migration.md)
          + [Android - Media SDK to Launch](legacy/sdk-to-launch/sdk-to-launch-migration-platforms/sdk-to-launch-migration-android.md)
          + [iOS - Media SDK to Launch](legacy/sdk-to-launch/sdk-to-launch-migration-platforms/sdk-to-launch-migration-ios.md)
-         + [JavaScript - Media SDK att starta](legacy/sdk-to-launch/sdk-to-launch-migration-platforms/sdk-to-launch-migration-js.md)
+         + [JavaScript - Media SDK to Launch](legacy/sdk-to-launch/sdk-to-launch-migration-platforms/sdk-to-launch-migration-js.md)
 + Implementering {#implementation}
    + [Implementeringsöversikt](implementation/overview.md)
    + Edge-implementeringar (rekommenderas) {#edge-recommended}
@@ -166,7 +166,7 @@ ht-degree: 14%
    + [Äldre - översikt](legacy/setup/legacy-setup-overview.md)
    + [Äldre - Ladda ned SDK:er](legacy/legacy-download-sdks.md)
    + Äldre - medie-SDK:er {#legacy-media-sdks}
-      + [Äldre - Översikt över Media SDK](legacy/media-sdk/setup/setup-overview.md)
+      + [Äldre - Media SDK - översikt](legacy/media-sdk/setup/setup-overview.md)
       + [Konfigurera Android](legacy/media-sdk/setup/set-up-android.md)
       + [Konfigurera iOS](legacy/media-sdk/setup/set-up-ios.md)
       + Konfigurera JavaScript {#setup-javascript}
@@ -186,7 +186,7 @@ ht-degree: 14%
       + [Information om provsamtal](legacy/validation/test-call-details.md)
       + [Beskrivning av parametern Heartbeat](legacy/validation/heartbeat-params.md)
       + Felsökning {#debugging}
-         + [SDK-felsökning](legacy/validation/debugging/sdk-debugging.md)
+         + [SDK Debugging](legacy/validation/debugging/sdk-debugging.md)
    + [Äldre migrering: VHL 1.x till VHL 2.x](legacy/va-1x-to-2x/mig-1x-2x-overview.md)
    + [Kodjämförelse v1.x till v2.x](legacy/va-1x-to-2x/code-comparison-1x-2x.md)
    + [Spårnings-API:er 1x till 2x](legacy/va-1x-to-2x/1x-2x-api-change.md)
@@ -234,14 +234,14 @@ ht-degree: 14%
          + Spåra fel i JavaScript {#track-errors-js}
             + [Spåra fel i JavaScript 2.x](use-cases/track-errors/track-errors-js/track-errors-js.md)
       + Spåra scenarier {#tracking-scenarios}
-         + [VOD-uppspelning utan annonser](use-cases/tracking-scenarios/vod-no-intrs-details.md)
-         + [VOD-uppspelning med pre-roll-annonser](use-cases/tracking-scenarios/vod-preroll-ads.md)
+         + [VOD utan annonser](use-cases/tracking-scenarios/vod-no-intrs-details.md)
+         + [Uppspelning av VOD med förrollningsannonser](use-cases/tracking-scenarios/vod-preroll-ads.md)
          + [VOD-uppspelning med överhoppade annonser](use-cases/tracking-scenarios/vod-skipped-ads.md)
-         + [VOD-uppspelning med ett kapitel](use-cases/tracking-scenarios/vod-one-chapter.md)
+         + [VOD uppspelning med ett kapitel](use-cases/tracking-scenarios/vod-one-chapter.md)
          + [VOD-uppspelning med ett överhoppat kapitel](use-cases/tracking-scenarios/vod-skipped-chapter.md)
-         + [VOD-uppspelning med sökning i huvudinnehållet](use-cases/tracking-scenarios/vod-seeking.md)
+         + [VOD uppspelning med sökning i huvudinnehållet](use-cases/tracking-scenarios/vod-seeking.md)
          + [VOD-uppspelning med buffring](use-cases/tracking-scenarios/vod-buffering.md)
-         + [Flera VOD-spår parallellt](use-cases/tracking-scenarios/vod-multi-trackers.md)
-         + [VOD one tracker for multiple sessions](use-cases/tracking-scenarios/vod-multi-track-one-session.md)
+         + [VOD flera spårare parallellt](use-cases/tracking-scenarios/vod-multi-trackers.md)
+         + [VOD en spårningsfunktion för flera sessioner](use-cases/tracking-scenarios/vod-multi-track-one-session.md)
          + [Live-huvudinnehåll](use-cases/tracking-scenarios/live-main-content.md)
          + [Live-huvudinnehåll med sekventiell spårning](use-cases/tracking-scenarios/live-sequential.md)

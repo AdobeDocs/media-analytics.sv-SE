@@ -1,32 +1,32 @@
 ---
 title: Implementera SDK:er som förklaras
-description: "Lär dig hur du konfigurerar Media SDK för mediespårning i dina mobil-, OTT- och webbläsarprogram (JS)."
+description: Lär dig hur du konfigurerar Media SDK för mediespårning i dina mobil-, OTT- och webbläsarprogram (JS).
 uuid: 06fefedb-b0c8-4f7d-90c8-e374cdde1695
 exl-id: a175332e-0bdc-44aa-82cb-b3f879e7abfc
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: 4ed604cb1969212421fecd40996d7b25af50a2b2
+source-git-commit: 0088d41f557b1dc49ac2b3b6d0a812f22d8849e9
 workflow-type: tm+mt
-source-wordcount: '618'
+source-wordcount: '617'
 ht-degree: 1%
 
 ---
 
-# Äldre - installationsöversikt för Media SDK {#setup-overview}
+# Äldre - Media SDK Setup Overview {#setup-overview}
 
 När du har laddat ned Media SDK för din videoapp eller spelare följer du informationen i det här avsnittet för att konfigurera och implementera Media SDK.
 
 
 ## Allmänna riktlinjer för genomförandet {#general-implementation-guidelines}
 
-Det finns tre SDK-huvudkomponenter som används för att spåra med tillägget Streaming Media Collection:
+Det finns tre huvudkomponenter i SDK som används för att spåra med Streaming Media Collection:
 * Konfiguration för pulsslag i media - `MediaHeartbeatConfig` innehåller de grundläggande inställningarna för rapportering.
 * Media Heartbeat Delegate - `MediaHeartbeatDelegate` styr uppspelningstiden och QoS-objektet.
 * Mediepulsslag - `MediaHeartbeat` är det primära biblioteket som innehåller medlemmar och metoder.
 
 ## Implementera Streaming Media SDK
 
-Slutför följande implementeringssteg om du vill konfigurera och använda Streaming Media SDK:
+Om du vill installera och använda Streaming Media SDK utför du följande implementeringssteg:
 
 1. Skapa en `MediaHeartbeatConfig`-instans och ange parametervärden för konfigurationen.
 
@@ -45,7 +45,7 @@ Slutför följande implementeringssteg om du vill konfigurera och använda Strea
    |  Metodnamn  |  Beskrivning  | Obligatoriskt |
    | --- | --- | :---: |
    | `getQoSObject()` | Returnerar instansen `MediaObject` som innehåller aktuell QoS-information. Den här metoden anropas flera gånger under en uppspelningssession. Spelarimplementeringen måste alltid returnera de senast tillgängliga QoS-data. | Ja |
-   | `getCurrentPlaybackTime()` | Returnerar spelhuvudets aktuella position. <br /> För VOD-spårning anges värdet i sekunder från mediaobjektets början. <br /> Om spelaren inte anger information om innehållets varaktighet för direktuppspelning kan värdet anges som antalet sekunder sedan midnatt UTC den dagen. <br /> Obs! När du använder förloppsmarkörer krävs innehållets varaktighet och spelhuvudet måste uppdateras som antal sekunder från början av medieobjektet, med början från 0. | Ja |
+   | `getCurrentPlaybackTime()` | Returnerar spelhuvudets aktuella position. <br /> För VOD-spårning anges värdet i sekunder från början av medieobjektet. <br /> Om spelaren inte anger information om innehållets varaktighet för direktuppspelning kan värdet anges som antalet sekunder sedan midnatt UTC den dagen. <br /> Obs! När du använder förloppsmarkörer krävs innehållets varaktighet och spelhuvudet måste uppdateras som antal sekunder från början av medieobjektet, med början från 0. | Ja |
 
    >[!TIP]
    >

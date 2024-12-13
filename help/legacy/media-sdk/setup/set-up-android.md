@@ -1,24 +1,24 @@
 ---
-title: Konfigurera Media SDK på Android
+title: Så här konfigurerar du Media SDK på Android
 description: Följ de här stegen för att konfigurera Media SDK-programmet på Android.
 uuid: 3ffe3276-a104-4182-9220-038729e9f3d5
 exl-id: 261445bf-3c8b-4658-891d-9a878e0b26ea
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: 4ed604cb1969212421fecd40996d7b25af50a2b2
+source-git-commit: 0088d41f557b1dc49ac2b3b6d0a812f22d8849e9
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '418'
 ht-degree: 6%
 
 ---
 
 # Konfigurera Android{#set-up-android}
 
-Lär dig hur du konfigurerar tillägget Streaming Media Collection för Android-enheter.
+Lär dig hur du konfigurerar Streaming Media Collection för Android-enheter.
 
 >[!IMPORTANT]
 >
->När stödet för version 4 Mobile SDK upphör den 31 augusti 2021 upphör även stödet för Media Analytics SDK för iOS och Android.  Mer information finns i [Vanliga frågor om supporten för Media Analytics SDK](/help/additional-resources/end-of-support-faqs.md).
+>När stödet för version 4 Mobile SDK upphör den 31 augusti 2021 upphör även stödet för Media Analytics SDK för iOS och Android.  Mer information finns i [Vanliga frågor och svar om SDK End-of-Support i Media Analytics](/help/additional-resources/end-of-support-faqs.md).
 
 
 ## Förutsättningar
@@ -26,7 +26,7 @@ Lär dig hur du konfigurerar tillägget Streaming Media Collection för Android-
 * **Hämta giltiga konfigurationsparametrar för Media SDK**
 Dessa parametrar kan hämtas från en Adobe-representant när du har konfigurerat ditt analyskonto.
 * **Implementera ADBMobil för Android i ditt program**
-Mer information om Adobe Mobile SDK-dokumentationen finns i [Android SDK 4.x for Experience Cloud Solutions.](https://experienceleague.adobe.com/docs/mobile-services/android/overview.html)
+Mer information om Adobe Mobile SDK finns i [Android SDK 4.x for Experience Cloud Solutions.](https://experienceleague.adobe.com/docs/mobile-services/android/overview.html)
 
 * **Tillhandahåll följande funktioner i din mediespelare:**
    * *Ett API för att prenumerera på spelarhändelser* - Media SDK kräver att du anropar en uppsättning enkla API:er när händelser inträffar i spelaren.
@@ -34,7 +34,7 @@ Mer information om Adobe Mobile SDK-dokumentationen finns i [Android SDK 4.x for
 
 ## SDK-implementering
 
-1. Lägg till din hämtade Media SDK i ditt projekt.
+1. Lägg till ditt nedladdade Media SDK i ditt projekt.
 
    1. Expandera zip-filen för Android (t.ex. `MediaSDK-android-v2.*.zip`).
    1. Kontrollera att filen `MediaSDK.jar` finns i katalogen `libs/`.

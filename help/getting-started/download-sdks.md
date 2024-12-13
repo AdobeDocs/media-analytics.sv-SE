@@ -1,13 +1,13 @@
 ---
 title: Få tillgång till länkar för att hämta SDK:er för medieanalys
-description: Länkar till SDK-nedladdningar för tillgängliga plattformar som Android, iOS, JavaScript, Chromecast och Roku.
+description: Länkar till SDK nedladdningar för tillgängliga plattformar, inklusive Android, iOS, JavaScript, Chromecast och Roku.
 uuid: a619fbb8-693e-4583-8dad-0ff875e715f8
 exl-id: d211fa2e-d5b0-4e9f-bdb7-eda838194f3d
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: 4ed604cb1969212421fecd40996d7b25af50a2b2
+source-git-commit: 0088d41f557b1dc49ac2b3b6d0a812f22d8849e9
 workflow-type: tm+mt
-source-wordcount: '427'
+source-wordcount: '426'
 ht-degree: 9%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 9%
 
 Informationen på den här sidan innehåller länkar för att hämta aktuella media-SDK:er och hämta medietillägg som använder taggar.
 
-Taggar i Adobe Experience Platform är nästa generation av funktioner för hantering av webbplatstaggar och SDK för mobila enheter från Adobe. Taggar är ett enkelt sätt att driftsätta och hantera de analyser-, marknadsförings- och annonslösningar som behövs för att skapa relevanta kundupplevelser. Mer information om taggar finns i [Översikt över taggar](https://experienceleague.adobe.com/docs/platform-learn/data-collection/overview.html?lang=en).
+Taggar i Adobe Experience Platform är nästa generation av hantering av webbplatstaggar och mobiler i SDK från Adobe. Taggar är ett enkelt sätt att driftsätta och hantera de analyser-, marknadsförings- och annonslösningar som behövs för att skapa relevanta kundupplevelser. Mer information om taggar finns i [Översikt över taggar](https://experienceleague.adobe.com/docs/platform-learn/data-collection/overview.html?lang=en).
 
 
 >[!NOTE]
@@ -30,9 +30,9 @@ Taggar i Adobe Experience Platform är nästa generation av funktioner för hant
 
 | Plattform som stöds | Lösningar | Implementeringsmetod | Version |  API:er   |  Dokumentation  |  Exempel  |
 |:---:|---|---|---|---| ---| ---|
-| ![JavaScript-ikon ](assets/javascript-icon.png)</br>**JavaScript API** | Adobe Analytics | Endast analyser | Webb - [Media SDK för JS v3.0.2](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/js-v3.0.2) | [API-referens för JavaScript](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/index.html) | [Installera Media SDK med JavaScript](/help/implementation/media-sdk/setup/web-implementation.md) | [Media SDK för JS v3.0.2-exempel](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/sdks/js/3.x) |
+| ![JavaScript-ikon ](assets/javascript-icon.png)</br>**JavaScript API** | Adobe Analytics | Endast analyser | Webb - [Media SDK för JS v3.0.2](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/js-v3.0.2) | [API-referens för JavaScript](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/index.html) | [Installera Media SDK med JavaScript](/help/implementation/media-sdk/setup/web-implementation.md) | [Media SDK för JS v3.0.2 - exempel](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/sdks/js/3.x) |
 | ![JavaScript-ikon ](assets/javascript-icon.png)</br>**JavaScript API** | Adobe Analytics | Endast analyser | Webb - Medietillägg |  | [Adobe Media Analytics (3.x SDK) för ljud- och videotillägg - med taggar (datainsamling)](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/media-analytics-3x/overview.html?lang=en) | [Adobe Media Analytics (3.x SDK) for Audio and Video Extension Sample](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/samples/launch/js/3.x) |
-| </br>**Webb** | Adobe Analytics<p>Customer Journey Analytics</p><p>Adobe Journey Optimizer</p><p>Real-Time CDP</p> | Edge | Webb - Experience Platform Edge |  | [Implementera tillägget för direktuppspelad mediasamling med Edge Network](/help/implementation/edge/implementation-edge.md) <p>och</p><p>[Skicka webbdata till Edge med Adobe Experience Platform Web SDK](/help/implementation/edge/edge-web-sdk.md)</p> | |
+| </br>**Webb** | Adobe Analytics<p>Customer Journey Analytics</p><p>Adobe Journey Optimizer</p><p>Real-Time CDP</p> | Edge | Webb - Experience Platform Edge |  | [Implementera den direktuppspelande mediesamlingen med Edge Network](/help/implementation/edge/implementation-edge.md) <p>och</p><p>[Skicka webbdata till Edge med Adobe Experience Platform Web SDK](/help/implementation/edge/edge-web-sdk.md)</p> | |
 
 ### Mobilimplementering {#get-mobile-extension}
 

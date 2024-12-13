@@ -1,20 +1,20 @@
 ---
 title: Så här konfigurerar du Media SDK för Chromecast
-description: Följ de här stegen för att konfigurera Media SDK-programmet på Chromecast.
+description: Följ de här stegen för att konfigurera Media SDK på Chromecast.
 uuid: d664e394-02a2-4985-bbad-be1bcc44fb2b
 exl-id: 5dfe3407-2858-48c0-a70c-8ea87967ac47
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: 4ed604cb1969212421fecd40996d7b25af50a2b2
+source-git-commit: 0088d41f557b1dc49ac2b3b6d0a812f22d8849e9
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '570'
 ht-degree: 0%
 
 ---
 
 # Konfigurera Mobile SDK v3.x för Chromecast {#set-up-chromecast}
 
-I det här avsnittet beskrivs förutsättningarna för att konfigurera en Chromecast-installation för tillägget Direktuppspelad mediasamling.
+I det här avsnittet beskrivs förutsättningarna för att konfigurera en Chromecast-installation för Streaming Media Collection.
 
 ## Förutsättningar
 
@@ -30,7 +30,7 @@ Adobe Mobile-tjänster har ett nytt användargränssnitt som samlar funktioner f
 
 Med Adobe Mobile Library for Chromecast v3.x for Experience Cloud Solutions kan ni mäta Chromecast-applikationer som skrivits i JavaScript, utnyttja och samla in målgruppsdata via målgruppshantering och mäta videoengagemang.
 
-## Implementering av mobilbibliotek/SDK
+## Mobilbibliotek/SDK-implementering
 
 1. Lägg till ditt hämtade Chromecast-bibliotek i ditt projekt.
 
@@ -42,7 +42,7 @@ Med Adobe Mobile Library for Chromecast v3.x for Experience Cloud Solutions kan 
 
       * `ADBMobileConfig` config
 
-        Den här SDK-konfigurationsfilen är anpassad för ditt program. Ett exempel på `ADBMobileConfig`-implementering anges med SDK (under `samples/`). Hämta rätt inställningar från en Adobe-representant.
+        Den här SDK-konfigurationsfilen är anpassad för ditt program. Ett exempel på `ADBMobileConfig`-implementering finns i SDK (under `samples/`). Hämta rätt inställningar från en Adobe-representant.
 
    1. Lägg till biblioteksfilen i din `index.html`-fil och skapa den globala variabeln `ADBMobileConfig` enligt följande (den globala variabeln som används för att konfigurera Adobe Mobile för Media Analytics har en exklusiv nyckel med namnet `mediaHeartbeat`):
 

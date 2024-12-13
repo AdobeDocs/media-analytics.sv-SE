@@ -1,19 +1,19 @@
 ---
 title: Lär dig mer om enheter och plattformar som stöds
-description: "Lär dig mer om de vanligaste enheterna som iOS, Android, OTT-enheter och JavaScript-webbläsare som stöds av tillägget Streaming Media Collection."
+description: Lär dig mer om de vanligaste enheterna som iOS, Android, OTT och JavaScript som finns i Streaming Media Collection.
 exl-id: 169ff7b9-e577-45b7-8927-74bdcccc0a77
 feature: Media Analytics
 role: User, Admin
-source-git-commit: 4ed604cb1969212421fecd40996d7b25af50a2b2
+source-git-commit: 0088d41f557b1dc49ac2b3b6d0a812f22d8849e9
 workflow-type: tm+mt
-source-wordcount: '313'
+source-wordcount: '309'
 ht-degree: 6%
 
 ---
 
 # Enheter och plattformar som stöds {#devices-supported}
 
-Tillägget Adobe Streaming Media Collection stöder alla större enheter, inklusive:
+Adobe Streaming Media Collection stöder alla större enheter:
 
 * iOS- och Android-smartphones och surfplattor
 * OTT-enheter för Roku, Fire TV och Android TV
@@ -21,11 +21,11 @@ Tillägget Adobe Streaming Media Collection stöder alla större enheter, inklus
 
 SDK uppdateras regelbundet när nya versioner av enheter släpps, och du kan använda SDK:er för att integrera med interna spelare för varje enskild plattform eller annan mediespelare som är tillgänglig.
 
-För enheter som för närvarande inte har SDK-stöd eller i situationer där du kan behöva anpassa implementeringen kan du använda Media Collection API eller Media Edge API. Med dessa API:er kan du göra RESTful API-anrop direkt från en enhet till bakänden av tillägget Streaming Media Collection.
+För enheter som för närvarande inte har stöd för SDK eller i situationer där du kan behöva anpassa implementeringen kan du använda API:t för Media Collection eller API:t för Media Edge. Med dessa API:er kan du göra RESTful API-anrop direkt från en enhet till backend-delen av Streaming Media Collection.
 
 Tabellen nedan visar de enheter som stöds för närvarande. Om en enhet inte finns med i listan kontaktar du kundtjänst eller lösningskonsult för att få information om enhetens status.
 
-Mer information om hur du implementerar media på Edge finns i [Installera tillägget för direktuppspelad mediesamling med Experience Platform Edge](/help/implementation/edge/implementation-edge.md).
+Mer information om hur du implementerar media på Edge finns i [Installera direktuppspelningsmediesamlingen med Experience Platform Edge](/help/implementation/edge/implementation-edge.md).
 
 | Strömmande plattformar och enheter | | Media för Edge Network SDK/Extension | Media Edge API | Media Extension med taggar eller AEP Mobile SDK | Media SDK | Media Collection API |
 |:---|:---|:---:|:---:|:---:|:---:|:---:|

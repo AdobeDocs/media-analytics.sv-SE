@@ -4,18 +4,18 @@ description: Lär dig hur du implementerar Adobe Streaming Media för webbprogra
 feature: Media Analytics
 role: User, Admin, Data Engineer
 exl-id: aed561d0-defc-4be5-87d3-0f331cdfab34
-source-git-commit: 4ed604cb1969212421fecd40996d7b25af50a2b2
+source-git-commit: 0088d41f557b1dc49ac2b3b6d0a812f22d8849e9
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '441'
 ht-degree: 1%
 
 ---
 
-# Installera Media SDK med JavaScript {#install-web-sdks}
+# Installera media SDK med JavaScript {#install-web-sdks}
 
-Informationen på den här sidan beskriver hur du installerar den fristående SDK för webben och konfigurerar JavaScript.
+Informationen på den här sidan beskriver hur du installerar den fristående webbversionen av SDK och konfigurerar JavaScript.
 
-Du kan också använda Adobe Media Analytics-tillägget för att implementera Adobe Streaming Media Collection-tillägget, vilket beskrivs i [Implementera Analytics med Media Analytics-tillägget](/help/implementation/media-sdk/setup/web-implementation-tags.md).
+Du kan också använda Adobe Media Analytics-tillägget för att implementera mediesamlingen för direktuppspelning i Adobe, vilket beskrivs i [Implementera analys med Media Analytics-tillägget](/help/implementation/media-sdk/setup/web-implementation-tags.md).
 
 ## Förutsättningar {#prerequesites}
 
@@ -59,7 +59,7 @@ Du kan också använda Adobe Media Analytics-tillägget för att implementera Ad
 
 1. Skapa en instans av `AppMeasurement` och konfigurera `visitor`.
 
-   Media SDK-konfigurationen kräver en instans av `AppMeasurement` med `visitor` konfigurerad.
+   Konfigurationen av Media SDK kräver en instans av `AppMeasurement` med `visitor` konfigurerad.
 
    ```js
     var appMeasurement = new AppMeasurement("<rsid>");
@@ -92,7 +92,7 @@ Du kan också använda Adobe Media Analytics-tillägget för att implementera Ad
 
 1. Skapa instansen `MediaTracker`.
 
-   När Media SDK har konfigurerats kan spårningsinstanser för att spåra medieinnehåll skapas med `getInstance` API.
+   När du har konfigurerat Media SDK kan du skapa spårningsinstanser för att spåra medieinnehåll med hjälp av `getInstance` API.
 
    ```js
    var tracker = ADB.Media.getInstance();

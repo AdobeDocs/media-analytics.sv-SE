@@ -1,20 +1,20 @@
 ---
-title: JSON-valideringsscheman för tillägget Streaming Media Collection
+title: JSON-valideringsscheman för direktuppspelad mediesamling
 description: Vad är JSON-valideringsscheman för strömmande media och hur används de för att fastställa rätt innehållsparametrar för begäran för varje typ av händelse.
 uuid: 7c9d5ce4-f5d2-4129-900e-4d02800907d1
 exl-id: 2931715d-2e7d-4c15-8569-da63b43d6006
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: 240fa48bdc738425e04cd29c27625c7dd612ff18
+source-git-commit: 0088d41f557b1dc49ac2b3b6d0a812f22d8849e9
 workflow-type: tm+mt
-source-wordcount: '85'
+source-wordcount: '83'
 ht-degree: 0%
 
 ---
 
 # JSON-valideringsscheman{#json-validation-schemas}
 
-Back-end för tillägget Streaming Media Collection validerar parametrarna för varje händelsetyp med JSON-valideringsscheman. Dessa scheman är tillgängliga för dig och fungerar som den aktuella behörigheten för parametertyper som används i MA API.
+Back-end för Streaming Media Collection validerar parametrarna för förfrågningar för varje händelsetyp med JSON-valideringsscheman. Dessa scheman är tillgängliga för dig och fungerar som den aktuella behörigheten för parametertyper som används i MA API.
 
 `GET https://{uri}/api/v1/schemas/{event-type}`
 

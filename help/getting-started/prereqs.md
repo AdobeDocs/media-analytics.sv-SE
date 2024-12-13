@@ -1,23 +1,23 @@
 ---
-title: Lär dig mer om krav för tillägget Adobe Streaming Media Collection
-description: Kom igång med tillägget Streaming Media Collection. Lär dig vad du behöver för implementering.
+title: Läs om kraven för Adobe Streaming Media Collection
+description: Kom igång med Streaming Media Collection. Lär dig vad du behöver för implementering.
 uuid: 4c0b37f3-8615-4cc0-b9c9-eeb029067064
 exl-id: 85ab1dbd-f4a7-4f11-afc9-8d5000e2de70
 feature: "Media Analytics, System Requirements"
 role: User, Admin, Data Engineer
-source-git-commit: 240fa48bdc738425e04cd29c27625c7dd612ff18
+source-git-commit: 0088d41f557b1dc49ac2b3b6d0a812f22d8849e9
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: '428'
 ht-degree: 0%
 
 ---
 
 # Förutsättningar {#prerequisites}
 
-Innan du börjar implementera tillägget Adobe Streaming Media Collection utför du följande åtgärder:
+Innan du börjar implementera Adobe Streaming Media Collection utför du följande uppgifter:
 
-1. **Granska översikten över tilläggsprogrammet för direktuppspelad mediesamling**<br>
-Innan du börjar implementera tillägget Streaming Media Collection bör du kontrollera att det passar dina behov i [ översikten över tillägget för direktuppspelad media Collection ](/help/media-overview.md) .
+1. **Granska översikten över den direktuppspelade mediesamlingen**<br>
+Innan du börjar implementera Streaming Media Collection bör du kontrollera att [ Streaming Media Collection-översikten ](/help/media-overview.md) uppfyller dina behov.
 
 1. **Bekräfta din prismodell**<br>
 Den aktuella prismodellen för tillägget Adobe Streaming Media Collection baseras på videoströmmar. Kontakta vid behov din försäljningsrepresentant eller kontoteamet på Adobe eftersom tillägget säljs separat för Adobe Analytics och Adobe Experience Platform.
@@ -41,7 +41,7 @@ Om du vill aktivera rapporter i Analytics eller Customer Journey Analytics och v
 
 1. **Visa ytterligare krav för din implementeringsmetod**
 
-   Beroende på hur du tänker implementera tillägget för Streaming Media Collection kan du visa förutsättningarna för någon av följande implementeringsmetoder:
+   Beroende på hur du tänker implementera Streaming Media Collection kan du se förutsättningarna för någon av följande implementeringsmetoder:
 
    * [Förutsättningar för implementering av endast Adobe Analytics](/help/implementation/media-sdk/setup/prerequisites-analytics.md)
 

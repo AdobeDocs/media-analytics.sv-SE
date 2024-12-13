@@ -1,27 +1,27 @@
 ---
-title: Implementera tillägget Streaming Media Collection med Edge Network
-description: Lär dig hur tillägget Streaming Media Collection kan implementeras med Experience Platform Edge.
+title: Implementera direktuppspelningsmediesamlingen med Edge Network
+description: Lär dig hur Streaming Media Collection kan implementeras med Experience Platform Edge.
 feature: Media Analytics
 role: User, Admin, Data Engineer
 exl-id: dfdb1415-105e-4c41-bedc-ecb85ed1b1d9
-source-git-commit: 380d3ea192162226816d2e269e5cca20f981ac0f
+source-git-commit: 0088d41f557b1dc49ac2b3b6d0a812f22d8849e9
 workflow-type: tm+mt
-source-wordcount: '2154'
+source-wordcount: '2146'
 ht-degree: 0%
 
 ---
 
-# Implementera tillägget Streaming Media Collection med Edge Network
+# Implementera direktuppspelningsmediesamlingen med Edge Network
 
 Med Adobe Experience Platform Edge Network kan du skicka data till flera produkter på en central plats. Upplev att Edge vidarebefordrar lämplig information till de önskade produkterna. Med det här konceptet kan ni konsolidera implementeringsinsatser, särskilt genom att sprida flera datalösningar.
 
-Följande bild visar hur tillägget Adobe Streaming Media Collection kan implementeras för att använda Experience Platform Edge för att göra data tillgängliga i Analysis Workspace, antingen i Adobe Analytics eller Customer Journey Analytics:
+Följande bild visar hur Adobe Streaming Media Collection kan implementeras för att använda Experience Platform Edge för att göra data tillgängliga i Analysis Workspace, antingen i Adobe Analytics eller Customer Journey Analytics:
 
 ![CJA-arbetsflöde](assets/streaming-media-edge.png)
 
-En översikt över alla implementeringsalternativ, inklusive implementeringsmetoder som inte använder Experience Platform Edge, finns i [Implementera tillägget för direktuppspelad mediasamling](/help/implementation/overview.md).
+En översikt över alla implementeringsalternativ, inklusive implementeringsmetoder som inte använder Experience Platform Edge, finns i [Implementera direktuppspelningsmediesamlingen](/help/implementation/overview.md).
 
-Oavsett om du använder Adobe Experience Platform Web SDK, Adobe Experience Platform Mobile SDK, Adobe Experience Platform Roku SDK eller API för att implementera Streaming Media Collection Add-on med Experience Edge måste du först slutföra följande avsnitt:
+Oavsett om du använder Adobe Experience Platform Web SDK, Adobe Experience Platform Mobile SDK, Adobe Experience Platform Roku SDK eller API:t för att implementera Streaming Media Collection med Experience Edge måste du först slutföra följande avsnitt:
 
 ## Konfigurera schemat i Adobe Experience Platform
 
@@ -193,7 +193,7 @@ Så här skapar och konfigurerar du ett schema:
 
 1. I Customer Journey Analytics skapar du en anslutning enligt beskrivningen i [Skapa en anslutning](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-connections/create-connection.html?lang=en).
 
-   När du skapar anslutningen krävs följande konfigurationsalternativ för att implementera tillägget för direktuppspelad mediasamling:
+   När du skapar anslutningen krävs följande konfigurationsalternativ för att implementera den direktuppspelande mediesamlingen:
 
    1. Markera den datauppsättning som du skapade tidigare, enligt beskrivningen i [Skapa en datauppsättning i Adobe Experience Platform](#create-a-dataset-in-adobe-experience-platform).
 
@@ -211,7 +211,7 @@ Så här skapar och konfigurerar du ett schema:
 
 1. Skapa en datavy enligt beskrivningen i [Skapa eller redigera en datavy](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/create-dataview.html?lang=en) i kundreseanalyser.
 
-   När du skapar datavyn krävs följande konfigurationsalternativ för att implementera tillägget för direktuppspelad mediasamling:
+   När du skapar datavyn krävs följande konfigurationsalternativ för att implementera den direktuppspelande mediesamlingen:
 
    1. I fältet [!UICONTROL **Anslutning**] markerar du anslutningen som du skapade tidigare, enligt beskrivningen i [Skapa en anslutning i Customer Journey Analytics](#create-a-connection-in-customer-journey-analytics).
 
