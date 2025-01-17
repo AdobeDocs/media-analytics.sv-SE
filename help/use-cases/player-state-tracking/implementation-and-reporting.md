@@ -4,29 +4,29 @@ description: Läs om hur du implementerar funktionen för spårning av spelartil
 exl-id: 19a97c9b-14d1-4f11-bb0a-3a1ad6f949da
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: 15cc123fb44654083b6501042bdd9d4e07128b59
 workflow-type: tm+mt
-source-wordcount: '332'
+source-wordcount: '328'
 ht-degree: 0%
 
 ---
 
 # Implementering och rapportering
 
-Under en uppspelningssession måste varje lägesförekomst (från början till slut) spåras individuellt. Media SDK och Media Collection API innehåller nya spårningsmetoder för den här funktionen.
+Under en uppspelningssession måste varje lägesförekomst (från början till slut) spåras individuellt. Media SDK och Media Collection API innehåller spårningsmetoder för den här funktionen.
 
-Media SDK innehåller två nya metoder för anpassad statusspårning:
+Media SDK innehåller två metoder för anpassad statusspårning:
 
 `trackStateStart("state_name")`
 
 `trackStateClose("state_name")`
 
 
-Media Collection API innehåller två nya händelser som har `media.stateName` som obligatorisk parameter:
+Media Collection API innehåller två händelser som har `media.stateName` som obligatorisk parameter:
 
 `stateStart` och `stateEnd`
 
-## Media SDK-implementering
+## Implementering av SDK Media
 
 Spelarstatus startar
 
@@ -91,11 +91,11 @@ De mått som anges för varje enskilt tillstånd beräknas och skickas till Adob
 
 ## Rapportering
 
-Alla värden för spelartillstånd kan användas för alla rapportvisualiseringar som är tillgängliga i Analysis Workspace eller en komponent (segment, beräknade värden) när en rapportserie har aktiverats för spårning av spelartillstånd. De nya måtten kan aktiveras från Admin Console för varje enskild rapport med hjälp av inställningarna för medierapportering (Redigera inställningar > Mediehantering > Medierapportering).
+Alla värden för spelartillstånd kan användas för alla rapportvisualiseringar som är tillgängliga i Analysis Workspace eller en komponent (segment, beräknade värden) när en rapportserie har aktiverats för spårning av spelartillstånd. Dessa mått kan aktiveras från Admin Console för varje enskild rapport med hjälp av Medierapporteringsinställningar (Redigera inställningar > Mediehantering > Medierapportering).
 
 ![](assets/report-setup.png)
 
-I Analytics Workspace finns alla nya egenskaper på mätpanelen. Du kan till exempel söka efter `full screen` för att visa helskärmsdata på mätpanelen.
+I Analysis Workspace finns alla nya egenskaper på mätpanelen. Du kan till exempel söka efter `full screen` för att visa helskärmsdata på mätpanelen.
 
 ![](assets/full-screen-report.png)
 

@@ -1,13 +1,13 @@
 ---
 title: Typer och beskrivningar av direktuppspelande mediahändelser
-description: "Vad är händelsetyperna och beskrivningarna för Media Collection? "
+description: 'Vilka är händelsetyperna och beskrivningarna för Media Collection? '
 uuid: bc4f75a7-ea22-47eb-a50d-5f41274c6d41
 exl-id: f2919e69-8b03-45b4-b9cd-365222a061e0
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: 06f24e828fb7795d55599ea1fa7913182dd357e6
+source-git-commit: 98722998606af3761652e282c31338bb966eb654
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '394'
 ht-degree: 0%
 
 ---
@@ -90,3 +90,15 @@ Skickas när slutet av huvudinnehållet nås
 >[!IMPORTANT]
 >
 >Du bör referera till [JSON-valideringsscheman](mc-api-json-validation.md) för varje händelsetyp för att verifiera rätt händelseparametertyper och krav.
+
+## stateStart
+
+Signalerar början på spårning av spelartillstånd.
+
+Mer information finns i [Implementering och rapportering](/help/use-cases/player-state-tracking/implementation-and-reporting.md).
+
+## stateEnd
+
+Signalerar slutet på spårning av spelartillstånd.
+
+Mer information finns i [Implementering och rapportering](/help/use-cases/player-state-tracking/implementation-and-reporting.md).

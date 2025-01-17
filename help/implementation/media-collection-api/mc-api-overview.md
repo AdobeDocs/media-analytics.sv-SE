@@ -6,7 +6,7 @@ uuid: c14bdbef-5846-4d31-8a14-8e9e0e9c9861
 exl-id: 58430636-7fab-433a-8ead-52ccaa45d920
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: 240fa48bdc738425e04cd29c27625c7dd612ff18
+source-git-commit: 7a1ae72af231659bd794fb18ce9e76685e6beff4
 workflow-type: tm+mt
 source-wordcount: '357'
 ht-degree: 0%
@@ -23,7 +23,7 @@ Media Collection API är i princip ett kort som fungerar som en serverversion av
 
 En mediespelare som implementerar API:t för Media Collection gör RESTful API-spårningsanrop direkt till bakomliggande mediaspårningsserver, medan en spelare som implementerar Media SDK gör spårningsanrop till SDK API:er inuti spelarappen. En effekt av att anropa via webben är att spelaren som implementerar API:t för Media Collection måste hantera en del av bearbetningen som Media SDK hanterar automatiskt. (Information i [Implementering av mediesamling.](mc-api-impl/mc-api-quick-start.md))
 
-Spårningsdata som hämtas med Media Collection API skickas och bearbetas först annorlunda än spårningsdata som hämtas i en Media SDK-spelare, men samma bearbetningsmotor på baksidan används för båda lösningarna.
+Spårningsdata som hämtas med Media Collection API skickas och bearbetas först på ett annat sätt än spårningsdata som hämtas i en Media SDK-spelare, men samma bearbetningsmotor på baksidan används för båda lösningarna.
 
 ![](assets/col_api_overview_simple.png)
 
@@ -93,3 +93,5 @@ För varje `eventType` finns det ett öppet [ JSON-valideringsschema ](mc-api-re
 * `chapterComplete`
 * `sessionEnd`
 * `sessionComplete`
+* `stateStart`
+* `stateEnd`
