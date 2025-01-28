@@ -1,19 +1,19 @@
 ---
 product: adobe analytics
 audience: end-user
-user-guide-title: Direktuppspelad mediainsamling
+user-guide-title: Strömning av Media Collection
 breadcrumb-title: Strömning av Media Collection Guide
 user-guide-description: Implementera mediaströmning. Innehåller Media SDK och Media Collection API.
 sub-product: media analytics
 source-git-commit: 0088d41f557b1dc49ac2b3b6d0a812f22d8849e9
 workflow-type: tm+mt
 source-wordcount: '893'
-ht-degree: 13%
+ht-degree: 14%
 
 ---
 
 
-# Direktuppspelad mediainsamling {#using}
+# Strömning av Media Collection {#using}
 
 + [Strömning av Media Collection Guide](media-overview.md)
 + Versionsinformation {#release-notes}
