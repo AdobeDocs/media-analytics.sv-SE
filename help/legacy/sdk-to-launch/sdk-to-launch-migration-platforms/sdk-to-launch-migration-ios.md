@@ -14,7 +14,7 @@ ht-degree: 0%
 # Migrering från fristående Media SDK till Adobe Launch - iOS
 
 >[!NOTE]
->Adobe Experience Platform Launch har omklassificerats som en serie datainsamlingstekniker i Experience Platform. Som ett resultat av detta har flera terminologiska förändringar införts i produktdokumentationen. I följande [dokument](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=en) finns en konsoliderad referens till de ändrade terminologin.
+>Adobe Experience Platform Launch har omklassificerats som en serie datainsamlingstekniker i Experience Platform. Som ett resultat av detta har flera terminologiska förändringar införts i produktdokumentationen. I följande [dokument](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=sv-SE) finns en konsoliderad referens till de ändrade terminologin.
 
 ## Konfiguration
 

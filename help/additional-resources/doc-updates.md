@@ -19,7 +19,7 @@ ht-degree: 29%
 
 ## Versionsinformation{#release-notes}
 
-* [Versionsinformation](https://experienceleague.adobe.com/docs/release-notes/experience-cloud/current.html)
+* [Versionsinformation](https://experienceleague.adobe.com/docs/release-notes/experience-cloud/current.html?lang=sv-SE)
 
 <!--
 ## Documentation Updates{#documentation-updates}

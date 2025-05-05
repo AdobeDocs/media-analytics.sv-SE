@@ -20,10 +20,10 @@ Oavsett om du implementerar Streaming Media Collection för implementeringar av 
 
 1. **Bekräfta att du implementerar en Adobe-lösning som är kompatibel med Edge Network och direktuppspelningsmediesamlingen**<br>
 När du implementerar Streaming Media Collection med Edge måste du också ha en fungerande Customer Journey Analytics-, Adobe Analytics-, Adobe Journey Optimizer- eller Real-time Customer Data Platform-implementering. Mer information finns i följande dokumentationsresurser:
-   * [Guiden Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-landing.html?lang=en)
-   * [Implementera Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/home.html)
-   * [Adobe Journey Optimizer-dokumentation](https://experienceleague.adobe.com/docs/journey-optimizer.html)
-   * [Real-time Customer Data Platform-dokumentation](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
+   * [Guiden Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-landing.html?lang=sv-SE)
+   * [Implementera Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/home.html?lang=sv-SE)
+   * [Adobe Journey Optimizer-dokumentation](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=sv-SE)
+   * [Real-time Customer Data Platform-dokumentation](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html?lang=sv-SE)
 
 1. **Hämta URL:en för mediespårningsservern**<br>
 Be din Customer Journey Analytics-representant om URL:en för mediespårningsservern. <!-- This is the `collection-api-server` URL for the Mobile SDK, the JavaScript SDK, and the non-collection-api tracking server for Roku. Domain names for API implementation is: `[your_namespace].hb-api.omtrdc.net`. -->

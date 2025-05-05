@@ -16,7 +16,7 @@ ht-degree: 0%
 # Migrering från fristående Media SDK till Adobe Launch
 
 >[!NOTE]
->Adobe Experience Platform Launch har omklassificerats som en serie datainsamlingstekniker i Experience Platform. Som ett resultat av detta har flera terminologiska förändringar införts i produktdokumentationen. I följande [dokument](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=en) finns en konsoliderad referens till de ändrade terminologin.
+>Adobe Experience Platform Launch har omklassificerats som en serie datainsamlingstekniker i Experience Platform. Som ett resultat av detta har flera terminologiska förändringar införts i produktdokumentationen. I följande [dokument](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=sv-SE) finns en konsoliderad referens till de ändrade terminologin.
 
 Denna dokumentation fokuserar främst på skillnader i implementeringen av Media Analytics
 mellan det fristående Media SDK och startalternativet för Media Analytics.
@@ -30,7 +30,7 @@ kan snabbt installera, konfigurera och driftsätta sina lösningar.
 
 Adobe Media Analytics för ljud och video finns som ett Launch-tillägg för både webb och mobiler:
 
-* [Dokumentation för webbstart](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/media-analytics/overview.html)
+* [Dokumentation för webbstart](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/media-analytics/overview.html?lang=sv-SE)
 * [Dokumentation för mobilstart](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/)
 
 ## Plattformar

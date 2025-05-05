@@ -19,7 +19,7 @@ ht-degree: 0%
 Du kan kontrollera om spårningsaktivitet tillåts på en viss enhet:
 
 * **Mobilappar -** Medietilläggen respekterar sekretessinställningarna i datainsamling. Om du vill avanmäla dig från spårning måste du konfigurera sekretess till [Avanmäld i taggar](https://developer.adobe.com/client-sdks/documentation/getting-started/create-a-mobile-property/#create-a-mobile-property) eller [Uppdatera sekretessstatus i Mobile SDK](https://developer.adobe.com/client-sdks/resources/privacy-and-gdpr/#getprivacystatus).
-* **JavaScript-/webbläsarappar -** VA-biblioteket respekterar inställningarna för sekretess och avvisning i `VisitorAPI` . Om du vill avanmäla spårning måste du avanmäla dig från Visitor API-tjänsten. Mer information om avanmälan och sekretess finns i [Adobe Experience Platform Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html).
+* **JavaScript-/webbläsarappar -** VA-biblioteket respekterar inställningarna för sekretess och avvisning i `VisitorAPI` . Om du vill avanmäla spårning måste du avanmäla dig från Visitor API-tjänsten. Mer information om avanmälan och sekretess finns i [Adobe Experience Platform Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=sv-SE).
 * **OTT-appar (Chromecast, Roku) -** OTT SDK:er tillhandahåller GDPR-förberedda API:er (General Data Protection Regulation) som gör att du kan ange `opt`-statusflaggor för datainsamling och överföring samt hämta lokalt lagrade identiteter.
 
   >[!NOTE]

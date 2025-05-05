@@ -20,22 +20,22 @@ För varje implementeringsväg måste kunderna kontakta sin säljare/kontogrupp 
 ## Adobe Experience Platform Data Collection med tillägget Adobe Media Analytics
 
 >[!NOTE]
->Adobe Experience Platform Launch har omklassificerats som en serie datainsamlingstekniker i Experience Platform. Som ett resultat av detta har flera terminologiska förändringar införts i produktdokumentationen. I följande [dokument](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=en) finns en konsoliderad referens till de ändrade terminologin.
+>Adobe Experience Platform Launch har omklassificerats som en serie datainsamlingstekniker i Experience Platform. Som ett resultat av detta har flera terminologiska förändringar införts i produktdokumentationen. I följande [dokument](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=sv-SE) finns en konsoliderad referens till de ändrade terminologin.
 
 
 Taggar i Adobe Experience Platform är nästa generation av tagghanteringsfunktioner från Adobe. Taggar ger kunderna ett enkelt sätt att driftsätta och hantera alla analys-, marknadsförings- och annonstaggar som behövs för att driva relevanta kundupplevelser. Adobe Experience Cloud-kunder erbjuds märkord som en av de funktioner som tillför mervärde.
 
 Taggar ger alla möjlighet att bygga och underhålla egna integreringar, så kallade tillägg. Dessa tillägg är tillgängliga för Adobe Experience Cloud-kunder i en appbutik så att de snabbt kan installera, konfigurera och distribuera sina taggar.
 
-Ett tillägg är ett kodpaket (JavaScript, HTML och CSS) som utökar taggfunktionaliteten. Bygg, hantera och uppdatera integreringarna med hjälp av ett praktiskt taget självbetjäningsgränssnitt. Du kan tänka dig tillägg som appar som du använder för att utföra dina uppgifter.Mer information finns i artikeln *Taggreöversikt* i [Adobe Experience Platform-dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)
+Ett tillägg är ett kodpaket (JavaScript, HTML och CSS) som utökar taggfunktionaliteten. Bygg, hantera och uppdatera integreringarna med hjälp av ett praktiskt taget självbetjäningsgränssnitt. Du kan tänka dig tillägg som appar som du använder för att utföra dina uppgifter.Mer information finns i artikeln *Taggreöversikt* i [Adobe Experience Platform-dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv-SE)
 
 Adobe Media Analytics-tillägget (MA) lägger till JavaScript Media SDK (Media 2.x SDK) för ljud och video. Det här tillägget innehåller funktioner för att lägga till spårningsinstansen `MediaHeartbeat` till en datainsamlingswebbplats eller ett projekt.
 
 Adobe Data Collection med Media Analytics-tillägget kräver följande:
 * Du måste vara kund hos Adobe Experience Cloud.
 * Du måste distribuera datainsamling eller DTM-inbäddningskod på dina webbsidor.
-* [Analystillägg](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/analytics/overview.html)
-* [Experience Cloud ID-tillägg](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/id-service/overview.html)
+* [Analystillägg](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/analytics/overview.html?lang=sv-SE)
+* [Experience Cloud ID-tillägg](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/id-service/overview.html?lang=sv-SE)
 
 
 ## Klientsida

@@ -19,7 +19,7 @@ ht-degree: 2%
 * **Hämta giltiga konfigurationsparametrar**
 Dessa parametrar kan hämtas från en Adobe-representant när du har konfigurerat ditt analyskonto.
 * **Implementera `AppMeasurement` för JavaScript i ditt medieprogram**
-Mer information om Adobe Mobile SDK-dokumentationen finns i [Implementera analys med JavaScript.](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html)
+Mer information om Adobe Mobile SDK-dokumentationen finns i [Implementera analys med JavaScript.](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=sv-SE)
 
 * **Tillhandahåll följande funktioner i din mediespelare:**
 

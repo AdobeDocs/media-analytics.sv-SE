@@ -25,7 +25,7 @@ Du kan också använda Adobe Media Analytics-tillägget för att implementera me
 
 * **Implementera `AppMeasurement` och `Experience Cloud Identity Service` för JavaScript i ditt medieprogram**
 
-  Mer information finns i [Implementera analys med JavaScript](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html) och [Implementera Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-analytics.html).
+  Mer information finns i [Implementera analys med JavaScript](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=sv-SE) och [Implementera Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-analytics.html?lang=sv-SE).
 
 * **Ta med följande API:er i mediespelaren**
 
