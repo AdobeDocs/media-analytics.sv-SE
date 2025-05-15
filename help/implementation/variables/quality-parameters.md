@@ -5,7 +5,7 @@ uuid: 0d9fa764-edef-4178-8650-90c9a0852a57
 exl-id: aac178dc-5a46-4ce3-80e9-ec82cbfbfff5
 feature: "Media Analytics, Variables"
 role: User, Admin, Data Engineer
-source-git-commit: ebabbe52fe673e3fb6f13da40bbc3c87aef1c7bd
+source-git-commit: e7f17c6e8ea6e54a55f59e4e817fba07a7851496
 workflow-type: tm+mt
 source-wordcount: '3314'
 ht-degree: 0%
@@ -185,7 +185,7 @@ Beskrivning av tabelldata:
 
 |   Implementering   | Nätverksparametrar | Rapportering |
 | --- | --- |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <ul> <li> **SDK-nyckel:**<br/> Ange automatiskt </li> <li> **API-nyckel:**<br/> Ej tillämpligt </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **Typ:**<br/> sträng </li> <li> **Skickat med:**<br/> Stäng media </li> <li> **Min. SDK-version:** Alla </li> <li> **Exempelvärde:**<br/> TRUE </li><li> **Beskrivning:**<br/> Antalet gånger som en användare avslutar videon innan den startas. Det här måttet är bara 1 om inget innehåll återges, oavsett annonser.  </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.qoe).<br/>dropBeforeStart) </li> <li> **pulsslag:**<br/> (<code>s:event:)</code><br/>type=aa_start) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> händelse </li> <li> **Rapportnamn:**<br/> Ignorerar före start </li> <li> **Kontextdata:**<br/> (a.media.qoe).<br/>dropBeforeStart) </li> <li> **Datafeed:**<br/> videoquoedropförstart </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.qoe.<br/>dropBeforeStart) </li> <li> **Sökväg till XDM-fält:** (inaktuellt)<br/>media.mediaTimed.primaryAssetViewDetails.<br/>qoe.dropBeforeStarts.value >= 1 => &quot;TRUE&quot;</li> <li> **Rapporterar XDM-fältsökväg:**<br/> mediaReporting.qoeDataDetails.<br/>isDroppedBeforeStart </li> </ul> |
+| <ul> <li> **SDK-nyckel:**<br/> Ange automatiskt </li> <li> **API-nyckel:**<br/> Ej tillämpligt </li> <li> **Obligatoriskt:**<br/> Nej </li> <li> **Typ:**<br/> sträng </li> <li> **Skickat med:**<br/> Stäng media </li> <li> **Min. SDK-version:** Alla </li> <li> **Exempelvärde:**<br/> TRUE </li><li> **Beskrivning:**<br/> Antalet gånger som en användare avslutar videon innan den startas. Det här måttet är bara 1 om inget innehåll återges, oavsett annonser.  </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.qoe).<br/>dropBeforeStart) </li> <li> **pulsslag:**<br/> (<code>s:event:)</code><br/>type=aa_start) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> händelse </li> <li> **Rapportnamn:**<br/> Ignorerar före start </li> <li> **Kontextdata:**<br/> (a.media.qoe).<br/>dropBeforeStart) </li> <li> **Datafeed:**<br/> videoquoedropförstart </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.qoe.<br/>dropBeforeStart) </li> <li> **Sökväg till XDM-fält:** (inaktuellt)<br/>media.mediaTimed.dropBeforeStarts.<br/>värde >= 1 => &quot;TRUE&quot;</li> <li> **Rapporterar XDM-fältsökväg:**<br/> mediaReporting.qoeDataDetails.<br/>isDroppedBeforeStart </li> </ul> |
 
 
 
