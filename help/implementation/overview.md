@@ -34,11 +34,11 @@ Vi rekommenderar att du använder Edge när du implementerar Streaming Media Col
 
 Edge implementeringsmetoder som beskrivs ovan rekommenderas för både Customer Journey Analytics och Adobe Analytics, särskilt för nya implementeringar.
 
-Förutom Edge implementeringsmetoder finns det andra implementeringsmetoder. Dessa implementeringsmetoder har utformats för användning med Adobe Analytics. Befintliga kunder med någon av följande implementeringsmetoder kan dock fortfarande göra data tillgängliga i Customer Journey Analytics genom att skapa en [Analytics-källanslutning](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/adobe-applications/analytics.html).
+Förutom Edge implementeringsmetoder finns det andra implementeringsmetoder. Dessa implementeringsmetoder har utformats för användning med Adobe Analytics. Befintliga kunder med någon av följande implementeringsmetoder kan dock fortfarande göra data tillgängliga i Customer Journey Analytics genom att skapa en [Analytics-källanslutning](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/adobe-applications/analytics.html?lang=sv-SE).
 
 * **Medietillägg med taggar:** Adobe Media Analytics för ljud och video-tillägg innehåller funktioner för att lägga till Media Tracker-instansen till en tagghanteringsaktiverad webbplats eller ett tagghanteringsprojekt. Data skickas till Adobe Analytics.
 
-  Information om hur du installerar, konfigurerar och implementerar medietillägget med taggar finns i [Adobe Media Analytics (3.x SDK) för en översikt över ljud- och videotillägg](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/media-analytics-3x/overview.html).
+  Information om hur du installerar, konfigurerar och implementerar medietillägget med taggar finns i [Adobe Media Analytics (3.x SDK) för en översikt över ljud- och videotillägg](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/media-analytics-3x/overview.html?lang=sv-SE).
 
 * **Media SDK:** Med Media SDK kan du mäta flera medieplattformar, inklusive webbplatser, mobiltelefoner, anslutna TV-apparater, surfplattor, OTT-enheter, digitalboxar och spelkonsoler. (Mer information finns i [Enheter och plattformar som stöds](/help/getting-started/supported-devices.md).)
 

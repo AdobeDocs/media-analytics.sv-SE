@@ -18,7 +18,7 @@ ht-degree: 0%
 >
 >*Rapporter* i Workspace kallades tidigare *mallar*.
 
-Analysis Workspace erbjuder en uppsättning färdiga rapporter som är tillgängliga som standard och som du kan använda för att analysera data. Mer information om alla standardrapporter som är tillgängliga finns i [Visa rapporter](https://experienceleague.adobe.com/docs/analytics/analyze/landing.html?lang=en#menus) på [Adobe Analytics startsida](https://experienceleague.adobe.com/docs/analytics/analyze/landing.html).
+Analysis Workspace erbjuder en uppsättning färdiga rapporter som är tillgängliga som standard och som du kan använda för att analysera data. Mer information om alla standardrapporter som är tillgängliga finns i [Visa rapporter](https://experienceleague.adobe.com/docs/analytics/analyze/landing.html?lang=sv-SE#menus) på [Adobe Analytics startsida](https://experienceleague.adobe.com/docs/analytics/analyze/landing.html?lang=sv-SE).
 
 Vissa av dessa rapporter är särskilt användbara för att analysera data från direktuppspelande media, vilket beskrivs i följande avsnitt.
 
@@ -41,6 +41,6 @@ Om du till exempel väljer rapporten [!UICONTROL **Direktuppspelad medieförbruk
 Du kan använda standardmedierapporter på följande sätt:
 när du skapar ett nytt projekt. Du kan också göra det eller när du ändrar ett befintligt projekt.
 
-* **När du skapar ett nytt projekt:** Mer information om hur du skapar ett nytt projekt från en standardrapport finns i [Skapa ett projekt från ett tomt projekt eller en rapport](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/build-workspace-project/create-projects.html?lang=en#create-a-project-from-a-blank-project-or-a-report) i [Skapa projekt i Analysis Workspace](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/build-workspace-project/create-projects.html?lang=en#create-a-project-from-a-blank-project-or-a-report).
+* **När du skapar ett nytt projekt:** Mer information om hur du skapar ett nytt projekt från en standardrapport finns i [Skapa ett projekt från ett tomt projekt eller en rapport](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/build-workspace-project/create-projects.html?lang=sv-SE#create-a-project-from-a-blank-project-or-a-report) i [Skapa projekt i Analysis Workspace](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/build-workspace-project/create-projects.html?lang=sv-SE#create-a-project-from-a-blank-project-or-a-report).
 
-* **När du skapar en anpassad företagsrapport:** Mer information om hur du skapar en anpassad företagsrapport finns i [Skapa en anpassad företagsrapport](https://experienceleague.adobe.com/docs/analytics/analyze/landing.html?lang=en#company-report) på [Adobe Analytics landningssida](https://experienceleague.adobe.com/docs/analytics/analyze/landing.html).
+* **När du skapar en anpassad företagsrapport:** Mer information om hur du skapar en anpassad företagsrapport finns i [Skapa en anpassad företagsrapport](https://experienceleague.adobe.com/docs/analytics/analyze/landing.html?lang=sv-SE#company-report) på [Adobe Analytics landningssida](https://experienceleague.adobe.com/docs/analytics/analyze/landing.html?lang=sv-SE).

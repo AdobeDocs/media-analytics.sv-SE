@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Mediesegment{#segments}
 
-Med segment kan du identifiera undergrupper av besökare baserat på egenskaper eller webbplatsinteraktioner. Med direktuppspelade mediesegment kan du identifiera typ av besöksström, till exempel ljud-, live- eller poddsändningsströmmar. Mer information om Adobe Analytics-segment finns i [Om segment och behållare](https://experienceleague.adobe.com/docs/analytics/components/segmentation/seg-overview.html?lang=en) i Adobe Analytics Components Guide.
+Med segment kan du identifiera undergrupper av besökare baserat på egenskaper eller webbplatsinteraktioner. Med direktuppspelade mediesegment kan du identifiera typ av besöksström, till exempel ljud-, live- eller poddsändningsströmmar. Mer information om Adobe Analytics-segment finns i [Om segment och behållare](https://experienceleague.adobe.com/docs/analytics/components/segmentation/seg-overview.html?lang=sv-SE) i Adobe Analytics Components Guide.
 
 >[!NOTE]
 >

@@ -18,8 +18,8 @@ ht-degree: 0%
 
 Du kan kontrollera om spårningsaktivitet tillåts på en viss enhet:
 
-* **Mobilappar -** VA-biblioteket respekterar `AdobeMobile`-bibliotekets sekretess- och avanmälningsinställningar. Om du vill avanmäla dig från spårning måste du använda biblioteket `AdobeMobile`. Mer information om `AdobeMobile`-bibliotekets avanmälan och sekretessinställningar finns i [Avanmäl dig och Sekretessinställningar](https://experienceleague.adobe.com/docs/mobile-services/android/gdpr-privacy-android/privacy.html).
-* **JavaScript-/webbläsarappar -** VA-biblioteket respekterar inställningarna för sekretess och avvisning i `VisitorAPI` . Om du vill avanmäla spårning måste du avanmäla dig från Visitor API-tjänsten. Mer information om avanmälan och sekretess finns i [Adobe Experience Platform Identity Service.](https://experienceleague.adobe.com/docs/id-service/using/home.html).
+* **Mobilappar -** VA-biblioteket respekterar `AdobeMobile`-bibliotekets sekretess- och avanmälningsinställningar. Om du vill avanmäla dig från spårning måste du använda biblioteket `AdobeMobile`. Mer information om `AdobeMobile`-bibliotekets avanmälan och sekretessinställningar finns i [Avanmäl dig och Sekretessinställningar](https://experienceleague.adobe.com/docs/mobile-services/android/gdpr-privacy-android/privacy.html?lang=sv-SE).
+* **JavaScript-/webbläsarappar -** VA-biblioteket respekterar inställningarna för sekretess och avvisning i `VisitorAPI` . Om du vill avanmäla spårning måste du avanmäla dig från Visitor API-tjänsten. Mer information om avanmälan och sekretess finns i [Adobe Experience Platform Identity Service.](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=sv-SE).
 * **OTT-appar (Chromecast, Roku) -** OTT SDK:er tillhandahåller GDPR-förberedda API:er (General Data Protection Regulation) som gör att du kan ange `opt`-statusflaggor för datainsamling och överföring samt hämta lokalt lagrade identiteter.
 
   >[!NOTE]

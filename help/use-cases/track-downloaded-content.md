@@ -57,7 +57,7 @@ Funktionen för nedladdat innehåll är en offlineversion av (standard) API:t f�
 
 ## Integrering med Adobe Analytics {#integration-with-adobe-analtyics}
 
-När analysens start-/slutanrop beräknas för det hämtade innehållsscenariot, anger back end ett extra analysfält som heter `ts.`. Det här är tidsstämplar för den första och sista händelsen som tas emot (start och slutförd). Den här funktionen gör att en slutförd mediesession kan placeras vid rätt tidpunkt (dvs. även om användaren inte ansluter igen på flera dagar, rapporteras mediesessionen ha inträffat vid den tidpunkt då innehållet visades). Du måste aktivera den här funktionen på Adobe Analytics-sidan genom att skapa en _valfri tidsstämpelsserie._ Om du vill aktivera en tidsstämpelsrapport (valfri) ska du läsa [Tidsstämplar (valfritt).](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/timestamp-optional.html)
+När analysens start-/slutanrop beräknas för det hämtade innehållsscenariot, anger back end ett extra analysfält som heter `ts.`. Det här är tidsstämplar för den första och sista händelsen som tas emot (start och slutförd). Den här funktionen gör att en slutförd mediesession kan placeras vid rätt tidpunkt (dvs. även om användaren inte ansluter igen på flera dagar, rapporteras mediesessionen ha inträffat vid den tidpunkt då innehållet visades). Du måste aktivera den här funktionen på Adobe Analytics-sidan genom att skapa en _valfri tidsstämpelsserie._ Om du vill aktivera en tidsstämpelsrapport (valfri) ska du läsa [Tidsstämplar (valfritt).](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/timestamp-optional.html?lang=sv-SE)
 
 ## Exempel på sessionsjämförelse {#sample-session-comparison}
 

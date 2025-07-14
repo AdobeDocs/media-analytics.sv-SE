@@ -17,7 +17,7 @@ Genom att analysera samtidiga visningsprogram kan ni förstå var maximal samtid
 
 ## Media Concurrent Viewer Panel i Analysis Workspace
 
-I Analysis Workspace är Concurrent Viewers antalet unika besökare som visar medieströmmarna vid en viss tidpunkt, oavsett antalet sessioner. Panelen Media Concurrent Viewers är tillgänglig för att visualisera samtidiga visningsprogram, dela upp och jämföra. [Läs mer …](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/media-concurrent-viewers.html)
+I Analysis Workspace är Concurrent Viewers antalet unika besökare som visar medieströmmarna vid en viss tidpunkt, oavsett antalet sessioner. Panelen Media Concurrent Viewers är tillgänglig för att visualisera samtidiga visningsprogram, dela upp och jämföra. [Läs mer …](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/media-concurrent-viewers.html?lang=sv-SE)
 
 ## Få samtidiga visningsprogram via API:t för analysrapportering
 

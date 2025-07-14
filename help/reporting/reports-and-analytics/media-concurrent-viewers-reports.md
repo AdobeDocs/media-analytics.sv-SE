@@ -18,7 +18,7 @@ Kontrollpanelen för samtidiga visningsprogram i Media visar samtidiga visningsp
 
 >[!TIP]
 >
-> Den här rapporten baseras på samtidiga aktiva mediesessioner.  Om du vill se samtidiga visningsprogram efter en unik besökare, med ytterligare funktioner för att tillämpa ett segment, dela upp och jämföra, använder du [panelen Mediesamtidiga visningsprogram i Analysis Workspace](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/media-concurrent-viewers.html).
+> Den här rapporten baseras på samtidiga aktiva mediesessioner.  Om du vill se samtidiga visningsprogram efter en unik besökare, med ytterligare funktioner för att tillämpa ett segment, dela upp och jämföra, använder du [panelen Mediesamtidiga visningsprogram i Analysis Workspace](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/media-concurrent-viewers.html?lang=sv-SE).
 >
 
 ![](assets/video-concurrent-viewers.png)
