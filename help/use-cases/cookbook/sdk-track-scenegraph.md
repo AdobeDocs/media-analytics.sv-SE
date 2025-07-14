@@ -142,28 +142,28 @@ Kopplingsbryggan är utformad för att fungera så här:
 <td> Ogiltig </td>
 <td> Skrivskydda Alla API:er som körs på AdobeMobileSDK returnerar svar i det här fältet. Registrera dig för ett återanrop för att lyssna efter uppdateringar av det här fältet för att kunna ta emot svarsobjekt. Här följer formatet för svarsobjektet:  
 <pre>
-response = {
+response = &lbrace;
   "apiName" : &lt;SceneGraphConstants.
                API_NAME&gt;
   "returnValue : &lt;API_RESPONSE&gt;
-}</pre>
+&rbrace;</pre>
 En instans av det här svarsobjektet skickas för alla API-anrop på AdobeMobileSDK som förväntas returnera ett värde enligt API-referenshandboken. Ett API-anrop till exempel för visitorMarketingCloudID() returnerar följande svarsobjekt:
 <pre>
-response = {
+response = &lbrace;
   "apiName" : m.
               adbmobileConstants.
               VISITOR_MARKETING_CLOUD_ID  
   "returnValue : "07050x25671x33760x72644x14"  
-}
+&rbrace;
 </pre>
 Eller så kan svarsdata vara ogiltiga:
 <pre>
-response = {  
+response = &lbrace;  
   "apiName" : m.
               adbmobileConstants.
               VISITOR_MARKETING_CLOUD_ID  
   "returnValue : invalid
-}
+&rbrace;
 </pre>
 </td>
 </tr>

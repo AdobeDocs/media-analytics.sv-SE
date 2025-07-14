@@ -71,6 +71,7 @@ Denna dokumentation beskriver spårning i version 2.x av SDK.
 
       * [Implementera standardmetadata på iOS](/help/use-cases/track-av-playback/impl-std-metadata/impl-std-metadata-ios.md)
       * **Metadatanycklar för video**
+
         [iOS metadatanycklar](/help/use-cases/track-av-playback/impl-std-metadata/ios-metadata-keys.md)
 
       * Se den omfattande listan med videometadata här: [Parametrar för ljud och video](/help/implementation/variables/audio-video-parameters.md)

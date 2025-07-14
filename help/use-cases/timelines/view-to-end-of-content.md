@@ -179,7 +179,7 @@ Pinga serverdelen var 1 sekund medan du är inne i en annons.
 >[!NOTE]
 >
 >Efterföljande annonser i tidslinjen kommer inte att visa serien med ensekunders ping
->>i fortsättningens intresse...
+>&#x200B;>i fortsättningens intresse...
 
 ```json
 {

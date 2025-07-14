@@ -49,7 +49,7 @@ En lista över giltiga händelsetyper för den här versionen finns i [Händelse
 
 >[!IMPORTANT]
 >
->***Annonsuppföljning -**Du kan bara spåra annonser inuti en`adBreak`*.
+>***Annonsuppföljning -**&#x200B;Du kan bara spåra annonser inuti en`adBreak`*.
 >
 >Om `adBreakStart` och `adBreakComplete` &quot;bokstöd&quot; saknas runt annonser ignoreras `adStart`- och `adComplete`-händelser och motsvarande annonslängd spåras som innehållslängd. Detta kan ha en betydande inverkan på de aggregerade data som kommer att bli tillgängliga i Adobe Analytics.
 
