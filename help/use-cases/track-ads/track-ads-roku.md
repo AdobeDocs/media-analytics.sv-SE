@@ -3,9 +3,9 @@ title: Lär dig spåra annonser på Roku
 description: Implementera annonsspårning i Roku-program med Media SDK.
 uuid: b1567265-7043-4efa-a313-aaaa91c4bb01
 exl-id: aaed828d-1aba-486e-83e3-2ffd092305e2
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '298'
 ht-degree: 1%
@@ -107,4 +107,4 @@ Följande anvisningar ger vägledning vid implementering med SDK:er för 2.x.
    ADBMobile().mediaTrackEvent(MEDIA_AD_BREAK_COMPLETE, adBreakInfo, contextData)
    ```
 
-Mer information finns i spårningsscenariot [VOD-uppspelning med pre-roll-annonser](/help/use-cases/tracking-scenarios/vod-preroll-ads.md).
+Mer information finns i spårningsscenariot [VOD-uppspelning med förhandsgranskningsannonser](/help/use-cases/tracking-scenarios/vod-preroll-ads.md).

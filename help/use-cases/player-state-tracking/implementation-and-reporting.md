@@ -2,9 +2,9 @@
 title: Implementering och rapportering
 description: Läs om hur du implementerar funktionen för spårning av spelartillstånd, inklusive .
 exl-id: 19a97c9b-14d1-4f11-bb0a-3a1ad6f949da
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: 15cc123fb44654083b6501042bdd9d4e07128b59
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 0%
@@ -91,7 +91,7 @@ De mått som anges för varje enskilt tillstånd beräknas och skickas till Adob
 
 ## Rapportering
 
-Alla värden för spelartillstånd kan användas för alla rapportvisualiseringar som är tillgängliga i Analysis Workspace eller en komponent (segment, beräknade värden) när en rapportserie har aktiverats för spårning av spelartillstånd. Dessa mått kan aktiveras från Admin Console för varje enskild rapport med hjälp av Medierapporteringsinställningar (Redigera inställningar > Mediehantering > Medierapportering).
+Alla värden för spelartillstånd kan användas för alla rapportvisualiseringar som är tillgängliga i Analysis Workspace eller en komponent (segment, beräknade värden) när en rapportserie har aktiverats för spårning av spelartillstånd. Dessa mått kan aktiveras från Admin Console för varje enskild rapport med hjälp av installationsprogrammet för medierapporter (Redigera inställningar > Mediehantering > Medierapportering).
 
 ![](assets/report-setup.png)
 

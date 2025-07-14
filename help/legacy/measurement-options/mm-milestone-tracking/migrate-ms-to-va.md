@@ -3,9 +3,9 @@ title: Lär dig hur du migrerar från milstolpe till medieanalys
 description: Lär dig hur du ändrar milstolpsvariabler till Media Analytics Metrics och Milestone-modulmetoder till Media Analytics-syntax.
 uuid: fdc96146-af63-48ce-b938-c0ca70729277
 exl-id: 655841ed-3a02-4e33-bbc9-46fb14302194
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: 9ba64b68efec5dd8b52010ac1a13afd7703448d0
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '707'
 ht-degree: 12%
@@ -26,8 +26,8 @@ I följande tabeller finns översättningar mellan milstolpe-lösningen och Medi
 
 | Milstolpmått | Variabeltyp | Media Analytics-mått |
 | --- | --- | --- |
-| Innehåll | Standardförfallodatum för eVar <br>: Besök | Innehåll |
-| Innehållstyp | eVar <br> Standardförfallodatum: Sidvy | Innehållstyp |
+| Innehåll | eVar <br> - standardförfallodatum: Besök | Innehåll |
+| Innehållstyp | eVar <br> - standardförfallodatum: Sidvy | Innehållstyp |
 | Innehållstid | Händelse <br> typ: Räknare | Innehållstid |
 | Videostart | Händelse <br> typ: Räknare | Videostart |
 | Videon slutförs | Händelse <br> typ: Räknare | Innehållet har slutförts |
@@ -50,7 +50,7 @@ I följande tabeller finns översättningar mellan milstolpe-lösningen och Medi
 | Media.autoTrackNetStreams | `s.Media.` <br> `  autoTrackNetStreams` <br> `  = true` | Ej tillämpligt | Vi tillhandahåller inte längre färdiga spelarmappningar. |
 | Media.completeByCloseOffset | `s.Media.` <br> `  completeByCloseOffset` <br> `  = true` | Ej tillämpligt | Innehållet Fullständigt stöder endast en 100 % förloppsindikator. |
 | Media.completeCloseOffsetThreshold | `s.Media.` <br> `  completeCloseOffsetThreshold` <br> `  = 1` | Ej tillämpligt | Innehållet Fullständigt stöder endast en 100 % förloppsindikator. |
-| Media.playerName | `s.Media.playerName` <br> `  = "Custom Player Name"` | SDK-nyckel: playerName;<br> API-nyckel: media.playerName | `MediaHeartbeatConfig.` <br> `  playerName` |
+| Media.playerName | `s.Media.playerName` <br> `  = "Custom Player Name"` | SDK Key: playerName;<br> API Key: media.playerName | `MediaHeartbeatConfig.` <br> `  playerName` |
 | Media.trackSeconds | `s.Media.` <br> `  trackSeconds` <br> `  = 15` | Ej tillämpligt | Media Analytics är inställt på 10 sekunder för innehåll och 1 sekund för annonser. Inga andra alternativ är tillgängliga. |
 | Media.trackMilestones | `s.Media.` <br> `  trackMilestones` <br> `  = "25,50,75";` | Ej tillämpligt | Media Analytics håller alltid reda på förloppsindikatorer med 10 %, 25 %, 50 %, 75 % och 95 %. |
 | Media.trackOffsetMilestones | `s.Media.` <br> `  trackOffsetMilestones` <br> `  = "20,40,60";` | Ej tillämpligt | Media Analytics håller alltid reda på förloppsindikatorer med 10 %, 25 %, 50 %, 75 % och 95 %. |

@@ -2,9 +2,9 @@
 title: Lär dig spåra buffring med JavaScript 3.x
 description: Lär dig spåra buffringshändelser i webbläsarappar (JS).
 exl-id: c6941942-02f9-4f9c-99ad-0c52ed2f793b
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '120'
 ht-degree: 0%
@@ -17,7 +17,7 @@ Följande instruktioner ger vägledning för implementering i alla 3.x SDK:er.
 
 >[!IMPORTANT]
 >
->Om du implementerar en tidigare version av SDK kan du hämta utvecklarguiderna här: [Hämta SDK:er.](/help/getting-started/download-sdks.md)
+>Om du implementerar en tidigare version av SDK kan du hämta utvecklarhandboken här: [Hämta SDK:er.](/help/getting-started/download-sdks.md)
 
 ## Konstanter för buffertspårning
 

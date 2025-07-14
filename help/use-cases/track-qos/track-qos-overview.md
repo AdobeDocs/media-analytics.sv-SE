@@ -1,11 +1,11 @@
 ---
 title: Spåra upplevelsekvalitet
-description: En översikt över upplevelsespårningskvalitet (QoE, QoS) med Media SDK.
+description: Översikt över versionskvaliteten (QoE, QoS) med Media SDK.
 uuid: 4d73c47f-d0a4-4228-9040-d6432311c9eb
 exl-id: af5f3372-a9a5-46ea-9c2f-81b0f5c96ccf
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: 2ce09eafeb8def909ae2a8ae7cc09a88b2f663af
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '252'
 ht-degree: 2%
@@ -18,7 +18,7 @@ Följande anvisningar ger vägledning för implementering i alla 2.x SDK:er.
 
 >[!IMPORTANT]
 >
->Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandboken här: [Hämta SDK:er.](/help/getting-started/download-sdks.md)
+>Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandboken här: [Hämta SDK.](/help/getting-started/download-sdks.md)
 
 Kvalitetsspårning innefattar QoS (Quality of Service) och felspårning, båda är valfria element och **krävs inte** för viktiga implementeringar av mediespårning. Du kan använda mediespelarens API för att identifiera variabler som är relaterade till QoS och felspårning. Här är de viktigaste elementen för att hålla koll på upplevelsekvaliteten:
 
@@ -56,7 +56,7 @@ Ring `trackEvent(Media.Heartbeat.Event.BitrateChange);`
    >
    >Uppdatera QoS-objektet och anropa bithastighetsändringshändelsen för varje bithastighetsändring. Detta ger de mest exakta QoS-data.
 
-I följande exempelkod används JavaScript 2.x SDK för en mediespelare i HTML 5. Du bör använda den här koden med den viktigaste mediespelningskoden.
+I följande exempelkod används JavaScript 2.x SDK för en HTML5-mediespelare. Du bör använda den här koden med den viktigaste mediespelningskoden.
 
 ```js
 var mediaDelegate = new MediaHeartbeatDelegate();

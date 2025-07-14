@@ -1,10 +1,10 @@
 ---
-title: Konfigurera en webbimplementering för Analytics per contenuti in streaming
+title: Konfigurera en webbimplementering för Analytics for Streaming Media
 description: Lär dig hur du implementerar Adobe Streaming Media för webbprogram.
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
 exl-id: aed561d0-defc-4be5-87d3-0f331cdfab34
-source-git-commit: 0088d41f557b1dc49ac2b3b6d0a812f22d8849e9
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '441'
 ht-degree: 1%
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 Informationen på den här sidan beskriver hur du installerar den fristående webbversionen av SDK och konfigurerar JavaScript.
 
-Du kan också använda Adobe Media Analytics-tillägget för att implementera mediesamlingen för direktuppspelning i Adobe, vilket beskrivs i [Implementera analys med Media Analytics-tillägget](/help/implementation/media-sdk/setup/web-implementation-tags.md).
+Du kan också använda Adobe Media Analytics-tillägget för att implementera Adobe Streaming Media Collection, vilket beskrivs i [Implementera Analytics med Media Analytics-tillägget](/help/implementation/media-sdk/setup/web-implementation-tags.md).
 
 ## Förutsättningar {#prerequesites}
 
@@ -25,7 +25,7 @@ Du kan också använda Adobe Media Analytics-tillägget för att implementera me
 
 * **Implementera `AppMeasurement` och `Experience Cloud Identity Service` för JavaScript i ditt medieprogram**
 
-  Mer information finns i [Implementera analys med JavaScript](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=sv-SE) och [Implementera Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-analytics.html?lang=sv-SE).
+  Mer information finns i [Implementera analys med JavaScript](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html) och [Implementera Experience Cloud identitetstjänst](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-analytics.html).
 
 * **Ta med följande API:er i mediespelaren**
 
@@ -73,7 +73,7 @@ Du kan också använda Adobe Media Analytics-tillägget för att implementera me
 
    >[!IMPORTANT]
    >
-   > Media SDK (3.x) använder Media Collection API för att spåra media som skiljer sig från HB-slutpunkten som används i 2.x SDK:er. Kontakta din Adobe-representant om du vill ha mer information.
+   > Media SDK (3.x) använder Media Collection API för att spåra media som skiljer sig från HB-slutpunkten som används i 2.x SDK:er. Kontakta Adobe om du vill ha mer information.
 
    Här följer ett exempel på `MediaConfig`-initiering:
 

@@ -3,9 +3,9 @@ title: Återupptar inaktiva sessioner
 description: Lär dig hur du återtar en inaktiv session.
 uuid: 3ff1205d-7bbe-4016-9bd7-6e34b7862c4c
 exl-id: ee4cf7f5-5788-4d35-a04d-4ed714ccd663
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '159'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Om en mediespårningssession är inaktiv i mer än 30 minuter stängs sessionen 
 
 ## Återuppta tidigare stängd session manuellt
 
-Media SDK återupptar endast sessioner automatiskt om programmet inte stängs. Om programmet lagrar användardata och har möjlighet att återuppta ett tidigare stängt medium, är det möjligt att manuellt utlösa en resume-händelse. När du startar videospårningssessionen anger du den valfria egenskapen Videoåterupptagen.
+Media SDK återupptar endast sessionerna automatiskt om programmet inte stängs. Om programmet lagrar användardata och har möjlighet att återuppta ett tidigare stängt medium, är det möjligt att manuellt utlösa en resume-händelse. När du startar videospårningssessionen anger du den valfria egenskapen Videoåterupptagen.
 
 ### Android
 

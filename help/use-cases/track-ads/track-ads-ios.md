@@ -3,9 +3,9 @@ title: Lär dig spåra annonser på iOS
 description: Implementera annonsspårning i iOS-program med Media SDK.
 uuid: e979e679-cde5-4c30-8f34-867feceac13a
 exl-id: a352bca9-bcfc-4418-b2a2-c9b1ad226359
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '359'
 ht-degree: 2%
@@ -135,4 +135,4 @@ Följande anvisningar ger vägledning vid implementering med SDK:er för 2.x.
    }
    ```
 
-Mer information finns i spårningsscenariot [VOD-uppspelning med pre-roll-annonser](/help/use-cases/tracking-scenarios/vod-preroll-ads.md).
+Mer information finns i spårningsscenariot [VOD-uppspelning med förhandsgranskningsannonser](/help/use-cases/tracking-scenarios/vod-preroll-ads.md).

@@ -2,9 +2,9 @@
 title: Lär dig spåra uppspelning med JavaScript v3.x
 description: Lär dig hur du implementerar huvudspårning med Media SDK i en webbläsare med JavaScript 3.x-appar.
 exl-id: f3145450-82ba-4790-91a4-9d2cc97bbaa5
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: c308dba2d7cf07b89bf124bd6e5f972c253c9f18
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '747'
 ht-degree: 0%
@@ -17,7 +17,7 @@ Denna dokumentation behandlar spårning i version 3.x av SDK.
 
 >[!IMPORTANT]
 >
->Om du implementerar en tidigare version av SDK kan du hämta utvecklarguiderna här: [Hämta SDK:er](/help/getting-started/download-sdks.md)
+>Om du implementerar en tidigare version av SDK kan du hämta utvecklarhandboken här: [Hämta SDK:er](/help/getting-started/download-sdks.md)
 
 1. **Inledande spårningsinställning**
 
@@ -128,7 +128,7 @@ Denna dokumentation behandlar spårning i version 3.x av SDK.
 
 1. **Uppdatera spelhuvudet**
 
-   Meddela SDK när mediespelhuvudet ändras genom att anropa `mediaUpdatePlayhead`-API:t. <br /> För video-on-demand (VOD) anges värdet i sekunder från mediaobjektets början. <br /> Om spelaren inte anger information om innehållets varaktighet för direktuppspelning kan värdet anges som antalet sekunder sedan midnatt UTC den dagen.
+   Meddela SDK om mediespelhuvudet ändras genom att anropa `mediaUpdatePlayhead`-API:t. <br /> För video-on-demand (VOD) anges värdet i sekunder från mediaobjektets början. <br /> Om spelaren inte anger information om innehållets varaktighet för direktuppspelning kan värdet anges som antalet sekunder sedan midnatt UTC den dagen.
 
    ```
    tracker.updatePlayhead(position)
@@ -188,4 +188,4 @@ Denna dokumentation behandlar spårning i version 3.x av SDK.
    >Detta kan vara samma händelsekälla som användes i steg 4. Se till att varje `trackPause()` API-anrop paras med ett följande `trackPlay()` API-anrop när uppspelningen återupptas.
 
 * Spåra scenarier: [VOD-uppspelning utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md)
-* Exempelspelare som ingår i JavaScript SDK för ett komplett spårningsexempel.
+* Exempelspelare ingår i JavaScript SDK för ett komplett spårningsexempel.

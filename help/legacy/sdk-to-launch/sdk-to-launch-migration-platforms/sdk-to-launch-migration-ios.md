@@ -1,26 +1,26 @@
 ---
-title: "Migrering från fristående Media SDK till Adobe Launch - iOS"
+title: Migrera från fristående media SDK till Adobe Launch - iOS
 description: Lär dig hur du migrerar från Media SDK till Launch för iOS.
 exl-id: f70b8e1b-cb9f-4230-86b2-171bdaed4615
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: fb09280ae6fb9f0ab7e67bd6ae134e6e26f88ec8
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '380'
-ht-degree: 0%
+ht-degree: 7%
 
 ---
 
-# Migrering från fristående Media SDK till Adobe Launch - iOS
+# Migrera från fristående Media SDK till Adobe Launch - iOS
 
 >[!NOTE]
->Adobe Experience Platform Launch har omklassificerats som en serie datainsamlingstekniker i Experience Platform. Som ett resultat av detta har flera terminologiska förändringar införts i produktdokumentationen. I följande [dokument](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=sv-SE) finns en konsoliderad referens till de ändrade terminologin.
+>Adobe Experience Platform Launch har omklassificerats som en serie datainsamlingstekniker i Experience Platform. Som ett resultat av detta har flera terminologiska förändringar genomförts i produktdokumentationen. Se följande [dokument](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=en) för en konsoliderad referens av terminologiändringarna.
 
 ## Konfiguration
 
 ### Fristående media SDK
 
-I det fristående Media SDK:t konfigurerar du spårningskonfigurationen i appen,
+I det fristående Media SDK konfigurerar du spårningskonfigurationen i appen,
 och skicka det till SDK när du skapar spåraren.
 
 ```objective-c
@@ -41,8 +41,8 @@ ADBMediaHeartbeat* tracker =
 
 ### Starta tillägg
 
-1. Klicka på fliken [!UICONTROL Extensions] i Experience Platform Launch för din mobila egenskap
-1. På fliken [!UICONTROL Catalog] letar du reda på Adobe Media Analytics for Audio and Video och klickar på [!UICONTROL Install].
+1. Klicka på fliken [!UICONTROL Extensions] för din mobila egenskap i Experience Platform Launch
+1. På fliken [!UICONTROL Catalog] letar du reda på Adobe Media Analytics för ljud- och videotillägg och klickar på [!UICONTROL Install].
 1. Konfigurera spårningsparametrarna på sidan för tilläggsinställningar.
 Media-tillägget använder de konfigurerade parametrarna för spårning.
 

@@ -3,9 +3,9 @@ title: Beskrivning av parametern Heartbeat
 description: Utforska de hjärtslagsparametrar som Adobe samlar in och bearbetar på Media Analytics-servern (hjärtslag).
 uuid: e9ddda32-0952-43d0-a702-49f5b1bfd8cf
 exl-id: ffa67b5e-ee54-4a5b-8064-decd108f944b
-feature: "Media Analytics, Variables"
+feature: "Streaming Media, Variables"
 role: User, Admin, Data Engineer
-source-git-commit: 917c87d759a43f124dfb3e3ac7f6a441c65fde94
+source-git-commit: 70900e305c3ed7a2be4069c6f296d56f1f6e0966
 workflow-type: tm+mt
 source-wordcount: '669'
 ht-degree: 4%
@@ -35,8 +35,8 @@ Lista med Media Analytics-parametrar som Adobe samlar in och bearbetar på Media
 | `s:user:aid` | Experience Cloud Org | (Valfritt)<br/><br/>Användarens ID-värde för Analytics Visitor. |
 | `s:user:mid` | Experience Cloud Org | (Obligatoriskt)<br/><br/>Användarens Experience Cloud-besökar-ID-värde. |
 | `s:cuser:customer_user_ids_x` | MediaHeartbeatConfig | (Valfritt)<br/><br/>Alla användar-ID:n för kund har angetts för Audience Manager. |
-| `l:aam:loc_hint` | MediaHeartbeatConfig | (Obligatoriskt)<br/><br/>AAM data skickade för varje nyttolast efter a_start |
-| `s:aam:blob` | MediaHeartbeatConfig | (Obligatoriskt)<br/><br/>AAM data skickade för varje nyttolast efter a_start |
+| `l:aam:loc_hint` | MediaHeartbeatConfig | (Obligatoriskt)<br/><br/>AAM-data skickas för varje nyttolast efter a_start |
+| `s:aam:blob` | MediaHeartbeatConfig | (Obligatoriskt)<br/><br/>AAM-data skickas för varje nyttolast efter a_start |
 | `s:sc:rsid` | Report Suit ID (eller ID) | (Obligatoriskt)<br/><br/>Adobe Analytics RSID, dit rapporter ska skickas. |
 | `s:sc:tracking_server` | MediaHeartbeatConfig | (Obligatoriskt)<br/><br/>Adobe Analytics spårningsserver. |
 | `h:sc:ssl` | MediaHeartbeatConfig | (Obligatoriskt)<br/><br/>Om trafiken sker via HTTPS (om värdet är 1) eller via HTTP (är 0). |
@@ -44,7 +44,7 @@ Lista med Media Analytics-parametrar som Adobe samlar in och bearbetar på Media
 | `s:sp:sdk` | MediaHeartbeatConfig | (Obligatoriskt)<br/><br/>Versionssträngen OVP. |
 | `s:sp:player_name` | VideoInfo | (Obligatoriskt)<br/><br/>Namn på videospelare (spelarprogramvaran som används för att identifiera spelaren). |
 | `s:sp:channel` | MediaHeartbeatConfig | (Valfritt)<br/><br/>Den kanal där användaren tittar på innehållet. Appnamnet för en mobilapp. Domännamnet för en webbplats. |
-| `s:sp:hb_version` | Media SDK | (Obligatoriskt)<br/><br/>Versionsnumret för det Media SDK-bibliotek som utfärdar samtalet. |
+| `s:sp:hb_version` | Media SDK | (Obligatoriskt)<br/><br/>Versionsnumret för det Media SDK-bibliotek som utlyste samtalet. |
 | `l:stream:bitrate` | QoSInfo | (Obligatoriskt)<br/><br/>Det aktuella värdet för strömmens bithastighet (i bit/s). |
 
 ## Felhändelser

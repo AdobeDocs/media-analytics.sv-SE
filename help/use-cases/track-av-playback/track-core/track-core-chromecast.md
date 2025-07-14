@@ -3,9 +3,9 @@ title: Lär dig hur du spårar uppspelning i Chromecast
 description: Lär dig implementera huvudspårning med Media SDK på Chromecast.
 uuid: a9fc59d8-a2f4-4889-bdec-55c42a835d06
 exl-id: 9812d06d-9efd-460c-a626-6a15f61a4c35
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: c308dba2d7cf07b89bf124bd6e5f972c253c9f18
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '719'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Spåra kärnuppspelning på Chromecast{#track-core-playback-on-chromecast}
 
-I den här dokumentationen beskrivs spårning i version 2.x av SDK.
+Denna dokumentation beskriver spårning i version 2.x av SDK.
 
 >[!IMPORTANT]
 >
@@ -151,4 +151,4 @@ I den här dokumentationen beskrivs spårning i version 2.x av SDK.
    >Detta kan vara samma händelsekälla som användes i steg 4. Kontrollera att varje `trackPause()` API-anrop är parat med ett följande `trackPlay()` API-anrop när videouppspelningen återupptas.
 
 * Spåra scenarier: [VOD-uppspelning utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md)
-* Exempelspelare ingår i Chromecast SDK för ett fullständigt spårningsexempel.
+* Exempelspelare ingår i Chromecast SDK för ett komplett spårningsexempel.

@@ -3,9 +3,9 @@ title: Adobe Streaming Media Collection - översikt
 description: Använd Streaming Media Collection för att få kraftfulla insikter om innehåll, ljud och annonser.
 uuid: b3cbe240-b94d-42b8-a99c-0280334aaa14
 exl-id: 826530f7-2c39-41ef-b3b4-d3f44b46858f
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: 0088d41f557b1dc49ac2b3b6d0a812f22d8849e9
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '590'
 ht-degree: 9%
@@ -16,7 +16,7 @@ ht-degree: 9%
 
 ![Banderoll](./assets/media_analytics_banner.png)
 
-Adobe Streaming Media Collection innehåller kraftfulla verktyg för insamling, mätning och anpassning av direktuppspelat mediematerial, som ljud, video och reklam för medieföretag. Ni kan kombinera data för direktuppspelande media med funktioner som Audience Analytics, Mobile eller Cross-Device Analytics.
+Adobe Streaming Media Collection innehåller kraftfulla verktyg för insamling, mätning och personalisering av direktuppspelat mediematerial som ljud, video och reklam för medieföretag som levererar direktuppspelande media. Ni kan kombinera data för direktuppspelande media med funktioner som Audience Analytics, Mobile eller Cross-Device Analytics.
 
 Strömmande mediedata kan enkelt integreras i följande Adobe Experience Platform-produkter:
 
@@ -30,7 +30,7 @@ Strömmande mediedata kan enkelt integreras i följande Adobe Experience Platfor
 
 >[!IMPORTANT]
 >
->Om du vill implementera Streaming Media Collection kontaktar du din säljare eller ditt kontoteam på Adobe för att se till att tillägget för Streaming Media Collection ingår i din produktportfölj.
+>Om du vill implementera Streaming Media Collection kontaktar du Adobe eller Adobe Account Team för att kontrollera att Streaming Media Collection-tillägget ingår i din produktportfölj.
 
 ## Viktiga funktioner
 
@@ -65,7 +65,7 @@ När uppspelningssessionen är slut skickas beräknade spårningsdata antingen t
 
 >[!NOTE]
 >
->Med Customer Journey Analytics-implementeringar kan data skickas till Customer Journey Analytics antingen med Experience Edge eller med hjälp av Analytics Data Connector (ADC).
+>Med Customer Journey Analytics-implementeringar kan data skickas till Customer Journey Analytics antingen med Experience Edge eller med Analytics Data Connector (ADC).
 
 
 Mer information om de olika implementeringsmetoderna finns i [Implementera Streaming Media Collection för Adobe Analytics eller Customer Journey Analytics](/help/implementation/overview.md).

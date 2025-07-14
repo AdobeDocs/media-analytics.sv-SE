@@ -1,11 +1,11 @@
 ---
 title: Konfigurera Adobe Debug
-description: "Lär dig konfigurera Adobe Debug, som du kan använda för att felsöka implementeringar av Media SDK."
+description: Lär dig hur du konfigurerar Adobe Debug, som du kan använda för att felsöka implementeringar av Media SDK.
 uuid: e416458d-f23c-41ce-8d99-fa5076c455f0
 exl-id: 48ad3f23-f36d-44f3-b8d9-b0b3a2ee06bc
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '614'
 ht-degree: 0%
@@ -24,8 +24,8 @@ Så här öppnar du Adobe Debug:
    >
    >Inloggningen är inte samma användarnamn/lösenord som du använder för att logga in på Adobe Analytics.
 
-1. När du har ett Experience Cloud-konto kontaktar du Adobe och ber om åtkomst till felsökningen i Adobe.
-1. När åtkomst har beviljats går du till [https://debug.adobe.com](https://debug.adobe.com) och loggar in med dina inloggningsuppgifter för Experience Cloud.
+1. När du har ett Experience Cloud-konto kontaktar du din Adobe-representant för att få åtkomst till Adobe Debug.
+1. När åtkomst har beviljats går du till [https://debug.adobe.com](https://debug.adobe.com) och loggar in med dina Experience Cloud-inloggningsuppgifter.
 
    ![](assets/adobe-debug-login.png)
 
@@ -93,7 +93,7 @@ Om du saknar HTTPS-anrop i Adobe Debug måste du installera SSL-certifikatet fö
 
 Så här installerar du SSL-certifikatet på en iOS-enhet:
 
-1. På din bärbara dator aktiverar du felsökningsproxyn och går till [Adobe Debug.](https://debug.adobe.com)
+1. På din bärbara dator aktiverar du Felsökningsproxy och går till [Adobe Debug.](https://debug.adobe.com)
 1. Utför följande steg på din iOS-enhet:
    1. Vrid enheten till flygplansläge.
    1. Välj samma Wi-Fi-signal som används av din bärbara dator.
@@ -102,7 +102,7 @@ Så här installerar du SSL-certifikatet på en iOS-enhet:
    1. Gå till [https://proxy.debug.adobe.com/ssl.](https://proxy.debug.adobe.com/ssl)
    1. Hämta och installera SSL-certifikatet.
 
-1. Starta din Adobe Debug-session på din bärbara dator.
+1. Starta en Adobe Debug-session på din bärbara dator.
 1. Börja testa på din iOS-enhet.
 
 ### Android
@@ -118,5 +118,5 @@ Så här installerar du SSL-certifikatet på en Android-enhet:
    1. Gå till [https://proxy.debug.adobe.com/ssl.](https://proxy.debug.adobe.com/ssl)
    1. Hämta och installera SSL-certifikatet.
 
-1. Starta din Adobe Debug-session på din bärbara dator.
+1. Starta en Adobe Debug-session på din bärbara dator.
 1. Börja testa på din Android-enhet.

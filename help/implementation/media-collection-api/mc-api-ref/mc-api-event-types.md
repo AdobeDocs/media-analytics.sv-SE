@@ -3,9 +3,9 @@ title: Typer och beskrivningar av direktuppspelande mediahändelser
 description: 'Vilka är händelsetyperna och beskrivningarna för Media Collection? '
 uuid: bc4f75a7-ea22-47eb-a50d-5f41274c6d41
 exl-id: f2919e69-8b03-45b4-b9cd-365222a061e0
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: 98722998606af3761652e282c31338bb966eb654
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 0%

@@ -1,11 +1,11 @@
 ---
 title: Live Main Content with Sequential Tracking
-description: Visa ett exempel på hur du spårar direktsänt innehåll med sekventiell spårning med Media SDK.
+description: Se ett exempel på hur du spårar direktsänt innehåll med sekventiell spårning med Media SDK.
 uuid: b03477b6-9be8-4b67-a5a0-4cef3cf262ab
 exl-id: 277a72b8-453b-41e5-b640-65c43587baf8
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '525'
 ht-degree: 0%
@@ -18,11 +18,11 @@ ht-degree: 0%
 
 I det här scenariot finns det en liveresurs utan annonser som spelas upp i 40 sekunder efter att liveströmmen har anslutits.
 
-Detta är samma scenario som för [VOD-uppspelningen utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md), men en del av innehållet stegas igenom och en sökning slutförs från en punkt i huvudinnehållet till en annan punkt.
+Detta är samma scenario som [VOD-uppspelningen utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md), men en del av innehållet stegas igenom och en sökning utförs från en punkt i huvudinnehållet till en annan.
 
 | Utlösare | Heartbeat-metod |  Nätverksanrop  |  Anteckningar   |
 | --- | --- | --- | --- |
-| Användaren klickar på [!UICONTROL Play] | trackSessionStart | Börja med Analytics-innehåll, starta pulsslagsinnehåll | Mätbiblioteket är ovetande om att det finns en förrollsannons, så dessa nätverksanrop är identiska med [VOD-uppspelningen utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md). |
+| Användaren klickar på [!UICONTROL Play] | trackSessionStart | Börja med Analytics-innehåll, starta pulsslagsinnehåll | Mätbiblioteket är ovetande om att det finns en förrollad annons, så dessa nätverksanrop är identiska med [VOD-uppspelningen utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md). |
 | Den första bildrutan i innehållet spelas upp. | trackPlay | Spela upp pulsslagsinnehåll | När kapitelinnehåll spelas upp före huvudinnehållet startar Heartslag när kapitlet börjar. |
 | Innehåll spelas upp | | Hjärtslag för innehåll | Detta nätverksanrop är exakt detsamma som [VOD-uppspelningen utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md). |
 | Session1 över (Episod1 avslutad) | trackComplete/trackSessionEnd | Passa upp innehållet fullständigt | Komplett innebär att session1 för det första avsnittet nåddes och sågs fullständigt. Innan du startar sessionen för nästa avsnitt måste den här sessionen avslutas. |

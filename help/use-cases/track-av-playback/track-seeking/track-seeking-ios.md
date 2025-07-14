@@ -1,11 +1,11 @@
 ---
 title: Lär dig spåra sökning på iOS
-description: Lär dig spåra händelserna Seek Start och Seek Complete med Media SDK på iOS.
+description: Lär dig spåra händelserna Seek Start och Seek Complete med Media SDK i iOS.
 uuid: 1d31ae99-384f-4b4d-b557-4018db177349
 exl-id: e8cb4962-2a14-4bfe-9a25-2405e503ba0b
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '130'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Följande anvisningar ger vägledning för implementering i alla 2.x SDK:er.
 
 >[!IMPORTANT]
 >
->Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandboken här: [Hämta SDK:er.](/help/getting-started/download-sdks.md)
+>Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandboken här: [Hämta SDK.](/help/getting-started/download-sdks.md)
 
 ## Sökspårningskonstanter
 
@@ -49,4 +49,4 @@ Följande anvisningar ger vägledning för implementering i alla 2.x SDK:er.
    }
    ```
 
-Mer information finns i spårningsscenariot [VOD-uppspelning med sökning i huvudinnehållet](/help/use-cases/tracking-scenarios/vod-seeking.md).
+Mer information finns i spårningsscenariot [VOD uppspelning med sökning i huvudinnehållet](/help/use-cases/tracking-scenarios/vod-seeking.md).

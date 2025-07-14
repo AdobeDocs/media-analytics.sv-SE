@@ -1,27 +1,27 @@
 ---
-title: "Migrering från fristående Media SDK till Adobe Launch - Android"
+title: Migrera från fristående media SDK till Adobe Launch - Android
 description: Lär dig hur du migrerar från Media SDK till Launch för Android.
 exl-id: 26764835-4781-417b-a6c0-ea6ae78d76ae
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: fb09280ae6fb9f0ab7e67bd6ae134e6e26f88ec8
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '379'
-ht-degree: 0%
+ht-degree: 7%
 
 ---
 
-# Migrering från fristående Media SDK till Adobe Launch - Android
+# Migrera från fristående Media SDK till Adobe Launch - Android
 
 >[!NOTE]
->Adobe Experience Platform Launch har omklassificerats som en serie datainsamlingstekniker i Experience Platform. Som ett resultat av detta har flera terminologiska förändringar införts i produktdokumentationen. I följande [dokument](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=sv-SE) finns en konsoliderad referens till de ändrade terminologin.
+>Adobe Experience Platform Launch har omklassificerats som en serie datainsamlingstekniker i Experience Platform. Som ett resultat av detta har flera terminologiska förändringar genomförts i produktdokumentationen. Se följande [dokument](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=en) för en konsoliderad referens av terminologiändringarna.
 
 
 ## Konfiguration
 
 ### Fristående media SDK
 
-I det fristående Media SDK konfigurerar du spårning i appen och skickar det till
+I det fristående Media SDK konfigurerar du spårning i appen och skickar den till
 SDK när du skapar spåraren.
 
 ```java
@@ -39,7 +39,7 @@ MediaHeartbeat tracker = new MediaHeartbeat(... , config);
 
 ### Starta tillägg
 
-1. Klicka på fliken [!UICONTROL Extensions] i Experience Platform Launch för
+1. I Experience Platform Launch klickar du på fliken [!UICONTROL Extensions] för
 mobil egenskap.
 1. På fliken [!UICONTROL Catalog] letar du reda på Adobe Media Analytics for Audio
 och videotillägg och klicka på [!UICONTROL Install] .
@@ -134,7 +134,7 @@ Media.createTracker(new AdobeCallback<MediaTracker>() {
 
 ### Fristående media SDK
 
-I den fristående Media SDK:n skickar du ett delegatobjekt som implementerar
+I det fristående Media SDK skickar du ett delegatobjekt som implementerar
 `MediaHeartbeartDelegate`-gränssnittet när spåraren skapas.  Implementeringen
 ska returnera det senaste QoE-numret och spelhuvudet när spåraren anropar
 Gränssnittsmetoderna `getQoSObject()` och `getCurrentPlaybackTime()`.

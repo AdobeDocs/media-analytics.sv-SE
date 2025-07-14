@@ -1,11 +1,11 @@
 ---
-title: VOD-uppspelning med ett överhoppat kapitel
-description: Visa ett exempel på hur du spårar VOD-innehåll där användaren hoppade över ett kapitel med Media SDK.
+title: VOD Playback med ett överhoppat kapitel
+description: Se ett exempel på hur du spårar VOD-innehåll där användaren hoppade över ett kapitel med Media SDK.
 uuid: 19fb020c-eb7a-4942-9212-94f4d47195b9
 exl-id: 5ab981bf-1195-4197-a7c0-051fa4aa11b8
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '312'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 I det här scenariot hoppar användaren över ett kapitel i huvudinnehållet.
 
-Detta är samma scenario som [VOD-uppspelning med ett kapitel](/help/use-cases/tracking-scenarios/vod-one-chapter.md), förutom att användaren i det här fallet vill söka ut ur kapitlet och därmed hoppa över det för att landa i huvudinnehållet.
+Detta är samma scenario som [VOD-uppspelning med ett kapitel](/help/use-cases/tracking-scenarios/vod-one-chapter.md), förutom att användaren i det här fallet vill söka ut från kapitlet och därigenom hoppa över det för att landa i huvudinnehållet.
 
 | Utlösare | Heartbeat-metod | Nätverksanrop   | Anteckningar |
 |---|---|---|---|
@@ -35,7 +35,7 @@ Detta är samma scenario som [VOD-uppspelning med ett kapitel](/help/use-cases/t
 
 ## Parametrar {#parameters}
 
-Parametrarna som används vid kapiteluppspelning är identiska med parametrarna i [VOD-uppspelningen med ett kapitel](/help/use-cases/tracking-scenarios/vod-one-chapter.md) -scenario, förutom att det inte finns något fullständigt kapitelanrop.
+Parametrarna som används vid kapiteluppspelning är identiska med parametrarna i [VOD-uppspelningen med ett kapitel](/help/use-cases/tracking-scenarios/vod-one-chapter.md) -scenario, förutom att det inte finns något fullständigt kapitelsamtal.
 
 ## Exempelkod {#sample-code}
 

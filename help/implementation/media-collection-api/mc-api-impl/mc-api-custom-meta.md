@@ -1,11 +1,11 @@
 ---
 title: Stöd för anpassade metadata
-description: "Lär dig hur du anger anpassade nyckel:värde-par för händelserna sessionStart, ChapterStart och adStart."
+description: Lär dig hur du anger anpassade nyckel:värde-par för händelserna sessionStart, ChapterStart och adStart.
 uuid: df4109dd-9fca-4c33-a7d5-8e6eec257527
 exl-id: 672fa804-4a4f-4f06-b29b-b0aad27ca2f3
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '127'
 ht-degree: 1%

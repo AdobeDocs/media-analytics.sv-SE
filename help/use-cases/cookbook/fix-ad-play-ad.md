@@ -1,11 +1,11 @@
 ---
 title: Lösa huvudspel som visas mellan annonser
-description: "Lär dig hur du hanterar oväntade huvud:uppspelningssamtal mellan annonser."
+description: Lär dig hur du hanterar oväntade huvud:uppspelningssamtal mellan annonser.
 uuid: 228b4812-c23e-40c8-ae2b-e15ca69b0bc2
 exl-id: f27ce2ba-7584-4601-8837-d8316c641708
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '450'
 ht-degree: 0%
@@ -17,9 +17,9 @@ ht-degree: 0%
 
 ## PROBLEM
 
-I vissa annonsspårningsscenarier kan `main:play` anrop inträffa oväntat mellan slutet av en annons och början av nästa annons. Om fördröjningen mellan det fullständiga annonsanropet och nästa annonsöppningsanrop är längre än 250 millisekunder återgår Media SDK till att skicka `main:play` samtal. Om det här återfallet till `main:play` inträffar under en annonsbrytning före rullning kan innehållets startmått anges tidigt.
+I vissa annonsspårningsscenarier kan `main:play` anrop inträffa oväntat mellan slutet av en annons och början av nästa annons. Om fördröjningen mellan det fullständiga annonsanropet och nästa annonsöppningsanrop är större än 250 millisekunder återgår Media SDK till att skicka `main:play` samtal. Om det här återfallet till `main:play` inträffar under en annonsbrytning före rullning kan innehållets startmått anges tidigt.
 
-Ett mellanrum mellan annonser som beskrivs ovan tolkas av Media SDK som huvudinnehåll, eftersom det inte finns någon överlappning där med något annonsinnehåll. Media SDK har ingen annonsinformation och spelaren är i uppspelningsläge. Om det inte finns någon annonsinformation, och spelarläget spelas upp, kommer Media SDK som standard att identifiera längden på mellanrummet mot huvudinnehållet. Det går inte att kreditera uppspelningens varaktighet mot annonsen som är null.
+En lucka mellan annonser som beskrivs ovan tolkas av Media SDK som huvudinnehåll eftersom det inte finns någon överlappning med något annonsinnehåll. Media SDK har ingen annonsinformation och spelaren är i uppspelningsläge. Om det inte finns någon annonsinformation, och spelarläget spelas upp, tilldelar Media SDK som standard längden på mellanrummet mot huvudinnehållet. Det går inte att kreditera uppspelningens varaktighet mot annonsen som är null.
 
 ## IDENTIFIERING
 

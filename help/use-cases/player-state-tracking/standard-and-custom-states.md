@@ -2,9 +2,9 @@
 title: Om standardlägen och anpassade lägen
 description: Läs om funktionen för spårning av spelartillstånd, inklusive krav och riktlinjer för implementering och rapportering av standardlägen och anpassade spelarlägen.
 exl-id: 3c492055-d471-4147-aa78-b058d6b931f4
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: cdc5ea361829c749dfbb457288ac5ba51a530961
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '278'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Fem standardspelarlägen är tillgängliga och du kan lägga till egna anpassade lägen.
 
-| Standardlägesnamn | Media SDK-konstant | API-namn för mediesamling |
+| Standardlägesnamn | Konstanten Media SDK | API-namn för mediesamling |
 |-----------------------|------------------------------------------|-----------------------------|
 | Helskärm | `ADB.Media.PlayerState.Fullscreen` | `fullScreen` |
 | Undertexter | `ADB.Media.PlayerState.ClosedCaptioning` | `closedCaptioning` |

@@ -3,9 +3,9 @@ title: Annonsparametrar
 description: Lär dig mer om annonsparametrar, inklusive implementering, nätverk och rapportvariabler för annonsvideodata.
 uuid: 92cd7f97-bb5a-4de6-8946-453d30271d0f
 exl-id: 949e86cb-d265-4836-8825-a06b87203b15
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: e7f17c6e8ea6e54a55f59e4e817fba07a7851496
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '2036'
 ht-degree: 0%
@@ -37,13 +37,13 @@ Beskrivning av tabelldata:
 >[!IMPORTANT]
 >
 >Ändra inte klassificeringsnamnen för de variabler som listas nedan
->beskrivs under Rapportering/Reserverad variabel som&quot;klassificering&quot;.
->Medieklassificeringarna definieras när en rapportserie aktiveras för media
->spårning. Då och då lägger Adobe till nya egenskaper och när detta inträffar,
->kunderna måste återaktivera sina rapporteringsprogram för att få tillgång till nya medier
->egenskaper. Under uppdateringsprocessen avgör Adobe om
->klassificeringar aktiveras genom att namnen på variablerna kontrolleras. Om något av
->om de saknas lägger Adobe till de saknade.
+>>beskrivs under Rapportering/Reserverad variabel som&quot;klassificering&quot;.
+>>Medieklassificeringarna definieras när en rapportserie aktiveras för media
+>>spårning. Då och då lägger Adobe till nya egenskaper och när detta inträffar,
+>>kunderna måste återaktivera sina rapporteringsprogram för att få tillgång till nya medier
+>>egenskaper. Under uppdateringsprocessen avgör Adobe om
+>>klassificeringar aktiveras genom att namnen på variablerna kontrolleras. Om något av
+>>om de saknas lägger Adobe till de saknade.
 
 ## Lägg till videodata {#ad-video-data}
 
@@ -51,7 +51,7 @@ Beskrivning av tabelldata:
 
 |   Implementering   | Nätverksparametrar | Rapportering |
 | --- | --- |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <ul> <li> **SDK-nyckel:**<br/> [adId](./ad-parameters.md#section_Related_APIs) </li> <li> **API-nyckel:**<br/> media.ad.id </li> <li> **Obligatoriskt:**<br/> Ja </li> <li> **Typ:**<br/> sträng </li> <li> **Skickat med:**<br/> Lägg till, Lägg till och stäng </li> <li> **Min. SDK-version:** Alla  </li> <li> **Exempelvärde:**<br/> &quot;2125&quot; </li><li> **Beskrivning:**<br/> ID för annonsen. (Valfritt heltal och/eller bokstavskombination)  </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.ad).<br/>namn) </li> <li> **pulsslag:**<br/> (<code>s:asset:ad_id&rbrace;</code>) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> eVar </li> <li> **Förfaller:**<br/> vid BESÖK </li> <li> **Rapportnamn:**<br/> Annons </li> <li> **Kontextdata:**<br/> (a.media.ad).<br/>namn) </li> <li> **Datafeed:**<br/> videoad </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.ad.name) </li> <li> **Sökväg till XDM-fält:** (inaktuellt)<br/> advertising.adAssetReference._id </li> <li> **Sökväg till XDM-samlingsfält:**<br/> mediaCollection.advertisingDetails.name </li> <li> **Rapporterar XDM-fältsökväg:**<br/> mediaReporting.advertisingDetails.name </li> </ul> |
+| <ul> <li> **SDK-nyckel:**<br/> [adId](./ad-parameters.md#section_Related_APIs) </li> <li> **API-nyckel:**<br/> media.ad.id </li> <li> **Obligatoriskt:**<br/> Ja </li> <li> **Typ:**<br/> sträng </li> <li> **Skickat med:**<br/> Lägg till, Lägg till och stäng </li> <li> **Min. SDK-version:** Alla  </li> <li> **Exempelvärde:**<br/> &quot;2125&quot; </li><li> **Beskrivning:**<br/> ID för annonsen. (Valfritt heltal och/eller bokstavskombination)  </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.ad).<br/>namn) </li> <li> **pulsslag:**<br/> (<code>s:asset:ad_id}</code>) </li> </ul> | <ul> <li> **Tillgänglig:**<br/> Ja </li> <li> **Reserverad variabel:**<br/> eVar </li> <li> **Förfaller:**<br/> vid BESÖK </li> <li> **Rapportnamn:**<br/> Annons </li> <li> **Kontextdata:**<br/> (a.media.ad).<br/>namn) </li> <li> **Datafeed:**<br/> videoad </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.ad.name) </li> <li> **Sökväg till XDM-fält:** (inaktuellt)<br/> advertising.adAssetReference._id </li> <li> **Sökväg till XDM-samlingsfält:**<br/> mediaCollection.advertisingDetails.name </li> <li> **Rapporterar XDM-fältsökväg:**<br/> mediaReporting.advertisingDetails.name </li> </ul> |
 
 
 

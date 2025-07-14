@@ -1,10 +1,10 @@
 ---
 title: Lär dig att spåra Experience Quality med JavaScript 3.x
-description: "Lär dig hur du implementerar kvalitetskontroll av upplevelser (QoE, QoS) med Media SDK i webbläsarappar med JavaScript 3x."
+description: Lär dig hur du implementerar kvalitetskontroll av upplevelser (QoE, QoS) med Media SDK i webbläsarappar med JavaScript 3x.
 exl-id: b5570e9c-8fb1-4458-bd1a-86ff6fce7813
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: 2ce09eafeb8def909ae2a8ae7cc09a88b2f663af
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '224'
 ht-degree: 1%
@@ -17,7 +17,7 @@ Följande anvisningar ger vägledning för implementering i alla 2.x SDK:er.
 
 >[!IMPORTANT]
 >
->Om du implementerar en tidigare version av SDK kan du hämta utvecklarguiderna här: [Hämta SDK:er.](/help/getting-started/download-sdks.md)
+>Om du implementerar en tidigare version av SDK kan du hämta utvecklarhandboken här: [Hämta SDK:er.](/help/getting-started/download-sdks.md)
 
 ## Implementera QOE
 
@@ -64,7 +64,7 @@ Följande anvisningar ger vägledning för implementering i alla 2.x SDK:er.
    >
    >Uppdatera QoE-objektet och anropa bithastighetsändringshändelsen för varje bithastighetsändring. Detta ger de mest exakta QoE-data.
 
-1. Se till att anropa metoden `updateQoEObject()` för att tillhandahålla den senaste QoE-informationen till SDK:n.
+1. Se till att anropa metoden `updateQoEObject()` för att tillhandahålla den senaste QoE-informationen till SDK.
 1. När mediespelaren stöter på ett fel och felhändelsen är tillgänglig för spelarens API använder du `trackError()` för att hämta felinformationen. (Se [Översikt](/help/use-cases/track-errors/track-errors-overview.md).)
 
    >[!TIP]

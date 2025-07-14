@@ -1,11 +1,11 @@
 ---
 title: Beskrivning av medieströmningssegment
-description: "Lär dig mer om de rapporteringssegment som är associerade med mediaströmstyp, inklusive segment, beskrivning och regel för mediaströmstyp."
+description: Lär dig mer om de rapporteringssegment som är associerade med mediaströmstyp, inklusive segment, beskrivning och regel för mediaströmstyp.
 uuid: 61906b8c-3362-4463-82be-fe0e741a5eb3
 exl-id: a450801c-0d6b-4e2a-8662-f00aaaa6e4e0
-feature: "Media Analytics, Segmentation"
+feature: "Streaming Media, Segmentation"
 role: User, Admin, Data Engineer
-source-git-commit: b15a81dc8f08e94c9b80d66019f3d0fe95ef5a74
+source-git-commit: 70900e305c3ed7a2be4069c6f296d56f1f6e0966
 workflow-type: tm+mt
 source-wordcount: '198'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Mediesegment{#segments}
 
-Med segment kan du identifiera undergrupper av besökare baserat på egenskaper eller webbplatsinteraktioner. Med direktuppspelade mediesegment kan du identifiera typ av besöksström, till exempel ljud-, live- eller poddsändningsströmmar. Mer information om Adobe Analytics-segment finns i [Om segment och behållare](https://experienceleague.adobe.com/docs/analytics/components/segmentation/seg-overview.html?lang=sv-SE) i Adobe Analytics Components Guide.
+Med segment kan du identifiera undergrupper av besökare baserat på egenskaper eller webbplatsinteraktioner. Med direktuppspelade mediesegment kan du identifiera typ av besöksström, till exempel ljud-, live- eller poddsändningsströmmar. Mer information om Adobe Analytics-segment finns i [Om segment och behållare](https://experienceleague.adobe.com/docs/analytics/components/segmentation/seg-overview.html?lang=en) i Adobe Analytics Components Guide.
 
 >[!NOTE]
 >

@@ -1,11 +1,11 @@
 ---
-title: VOD-uppspelning med överhoppade annonser
-description: Visa ett exempel på hur du spårar VOD-innehåll där användaren hoppade över annonser med Media SDK.
+title: VOD Playback with Skipped Ads
+description: Se ett exempel på hur man spårar VOD-innehåll där användaren hoppade över annonser med Media SDK.
 uuid: f3ab3524-abcb-4051-b64e-a1aad6e3dd3f
 exl-id: 034b5c1f-7dd9-431f-a51b-925e407a7b36
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 0%
@@ -20,7 +20,7 @@ Detta scenario omfattar uppspelning av VOD-innehåll med en överhoppad annons.
 
 ### En VOD med en överhoppad pre-roll-annons
 
-Det här är samma scenario som [VOD-uppspelning med pre-roll-annonser](/help/use-cases/tracking-scenarios/vod-preroll-ads.md), förutom att programmet har en bestämmelse om att användaren ska kunna hoppa över annonsen, kanske genom att klicka på en hoppknapp.
+Detta är samma scenario som [VOD-uppspelning med pre-roll-ads](/help/use-cases/tracking-scenarios/vod-preroll-ads.md), förutom att programmet har en bestämmelse om att användaren ska kunna hoppa över annonsen, kanske genom att klicka på en hoppknapp.
 
 | Utlösare   | Heartbeat-metod  | Nätverksanrop   | Anteckningar   |
 | --- | --- | --- | --- |
@@ -29,7 +29,7 @@ Det här är samma scenario som [VOD-uppspelning med pre-roll-annonser](/help/us
 | Den första bildrutan spelas upp. | `trackPlay()` | Heartbeat Ad Play | När annonsinnehållet spelas upp före huvudinnehållet börjar hjärtslagen när annonsen börjar spelas upp. |
 | Annonen spelas. | | Ad Heartbeats | |
 | Annonsen hoppas över. | `trackEvent:trackAdSkip` | | Det finns inget och fullständigt nätverkssamtal. |
-| Innehållet spelas upp. | | Hjärtslag för innehåll | Dessa nätverksanrop är exakt likadana som den [VOD-uppspelning utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md). |
+| Innehållet spelas upp. | | Hjärtslag för innehåll | Dessa nätverksanrop är exakt likadana som [VOD-uppspelningen utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md). |
 | Innehållet spelas upp helt. | `trackComplete()` | Passa upp innehållet fullständigt | Detta nätverksanrop är exakt detsamma som [VOD-uppspelningen utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md). |
 | Sessionen är över. | `trackSessionEnd()` | | `SessionEnd` |
 

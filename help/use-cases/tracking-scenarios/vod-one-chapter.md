@@ -1,22 +1,22 @@
 ---
-title: VOD-uppspelning med ett kapitel
-description: Visa ett exempel på hur du spårar VOD-uppspelning som innehåller ett kapitel.
+title: VOD Playback with One Chapter
+description: Se ett exempel på hur du spårar uppspelning i VOD som innehåller ett kapitel.
 uuid: 1566a6f5-cf22-42e7-8e1a-6976c6c4e649
 exl-id: a8394fd3-16a2-4f5d-b6e1-6e9acb4c7afd
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '430'
 ht-degree: 0%
 
 ---
 
-# VOD-uppspelning med ett kapitel{#vod-playback-with-one-chapter}
+# VOD uppspelning med ett kapitel{#vod-playback-with-one-chapter}
 
 ## Scenario {#scenario}
 
-I det här scenariot markeras en del av VOD-innehållet som ett kapitel.
+I det här fallet markeras en del av VOD-innehållet som ett kapitel.
 
 Om inget annat anges är nätverksanropen i det här scenariot samma som anropen i [VOD-uppspelningen utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md). Nätverksanropet sker samtidigt, men nyttolasten är annorlunda.
 

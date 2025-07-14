@@ -1,11 +1,11 @@
 ---
-title: "API för direktuppspelning av mediainsamling - snabbstart"
+title: API för direktuppspelad mediainsamling - snabbstart
 description: Kom igång med API:t för direktuppspelande media. Lär dig hur du snabbt verifierar data för din begäran.
 uuid: ca20bad4-2c8f-406b-833e-b4883a9aa534
 exl-id: 08bb5873-f69a-4fdd-8f27-69649b4acb17
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '293'
 ht-degree: 0%
@@ -18,9 +18,9 @@ ht-degree: 0%
 >
 >Samla in de data som krävs för att slutföra en [sessionsbegäran](../mc-api-ref/mc-api-sessions-req.md) till bakomliggande server för Media Analytics-samlingen (MA). Du kan snabbt verifiera dina begärandedata genom att skicka förfrågningar manuellt (med `curl`, eller Postman, osv.). Detta ger dig omedelbar feedback om du har problem med felaktiga datatyper eller felaktig information i din begäran. Använd [JSON-valideringsscheman](../mc-api-ref/mc-api-json-validation.md) för att verifiera att du anger korrekta begärandedata.
 
-1. Samla in de Adobe Analytics- och Visitor-data som behövs för att köra något av Experience Cloud-programmen:
+1. Samla in de Adobe Analytics- och Visitor-data som behövs för att köra Experience Cloud-programmen:
 
-   * Besökarens Experience Cloud organisation-ID
+   * Besökarens Experience Cloud Org ID
    * Användar-ID för besökare i Experience Cloud
    * Analytics Report Suite-ID
    * URL för analysspårningsserver

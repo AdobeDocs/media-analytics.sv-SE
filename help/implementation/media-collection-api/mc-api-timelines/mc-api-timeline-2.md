@@ -3,9 +3,9 @@ title: Lär dig mer om tidslinjer för Media Traking � sessioner där använda
 description: Lär dig mer om spelhuvudets tidslinje och motsvarande � när en videosession avbryts. Läs mer om de olika åtgärderna och förfrågningarna.
 uuid: 74b89e8f-ef56-4e0c-b9a8-40739e15b4cf
 exl-id: 0c6a89f4-7949-4623-8ed9-ce1d1547bdfa
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '616'
 ht-degree: 5%
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 # Tidslinje 2 - sessionen användaren avbryter {#timeline--2-user-abandons-session}
 
-## VOD, Pre-roll-ad-annons, midroll-ads-annonser, användare överger innehåll tidigt
+## VOD, Pre-roll-reklam, midroll-ads-annonser, användare överger innehåll tidigt
 
 I följande diagram visas spelhuvudets tidslinje och motsvarande tidslinje för en användares åtgärder. Nedan presenteras närmare uppgifter om varje åtgärd och de tillhörande ansökningarna.
 

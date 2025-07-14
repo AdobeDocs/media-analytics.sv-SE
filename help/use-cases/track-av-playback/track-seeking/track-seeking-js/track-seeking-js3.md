@@ -1,10 +1,10 @@
 ---
 title: Spåra sökning med JavaScript 3.x
-description: Lär dig hur du spårar händelserna Seek Start och Seek Complete med Media SDK i webbläsarappar (JS 3.x).
+description: Lär dig spåra händelserna Seek Start och Seek Complete med Media SDK i webbläsarappar (JS 3.x).
 exl-id: b7152436-520e-4f38-a8ad-1027ca3f1f6c
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '134'
 ht-degree: 0%
@@ -17,7 +17,7 @@ Följande instruktioner ger vägledning för implementering i alla 3.x SDK:er.
 
 >[!IMPORTANT]
 >
->Om du implementerar en tidigare version av SDK kan du hämta utvecklarguiderna här: [Hämta SDK:er.](/help/getting-started/download-sdks.md)
+>Om du implementerar en tidigare version av SDK kan du hämta utvecklarhandboken här: [Hämta SDK:er.](/help/getting-started/download-sdks.md)
 
 ## Sökspårningskonstanter
 
@@ -44,4 +44,4 @@ Följande instruktioner ger vägledning för implementering i alla 3.x SDK:er.
    };
    ```
 
-Mer information finns i spårningsscenariot [VOD-uppspelning med sökning i huvudinnehållet](/help/use-cases/tracking-scenarios/vod-seeking.md).
+Mer information finns i spårningsscenariot [VOD uppspelning med sökning i huvudinnehållet](/help/use-cases/tracking-scenarios/vod-seeking.md).

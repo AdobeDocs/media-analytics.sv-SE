@@ -3,9 +3,9 @@ title: Test 1 Standard Playback
 description: Lär dig mer om standarduppspelningstestet som används vid validering.
 uuid: c4b3fead-1b27-484b-ab6a-39f1ae0f03f2
 exl-id: 3781f0f7-be75-43e5-a40b-a34956dce36e
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '847'
 ht-degree: 0%
@@ -19,7 +19,7 @@ Det här testfallet validerar allmän uppspelning och sekvensering.
 Implementeringar av Media Analytics omfattar två typer av spårningsanrop:
 * Anrop som görs direkt till din Adobe Analytics-server (AppMeasurement) - Dessa anrop sker i händelserna &quot;Media Start&quot; och &quot;Ad Start&quot;.
 * Anrop till Media Analytics-servern (hjärtslag) - dessa omfattar in-band- och out-of-band-anrop:
-   * In-band - SDK skickar uppspelningsanrop eller&quot;pings&quot; med 10 sekunders mellanrum under uppspelning av innehåll och med 1 sekunders mellanrum under annonser.
+   * In-band - SDK skickar uppspelningsanrop eller&quot;pings&quot; med tio sekunders mellanrum under uppspelningen av innehållet och med en sekund i annonserna.
    * Out-of-band - Dessa samtal kan äga rum när som helst, t.ex. paus, buffring, fel, fullständigt innehåll och slutfört innehåll.
 
 >[!NOTE]
@@ -39,7 +39,7 @@ Fyll i och registrera följande åtgärder (i ordning):
 
    Du måste validera vissa nyckelvariabler som är universella för alla spårningsanrop:
 
-   **Adobe Visitor-ID (`mid`):** Variabeln `mid` används för att hämta värdeuppsättningen i AMCV-cookien. Variabeln `mid` är det primära ID-värdet för både webbplatser och mobilappar och anger även att Experience Cloud Visitor ID-tjänsten är korrekt konfigurerad. Den finns både i samtal från Adobe Analytics (AppMeasurement) och Media Analytics (hjärtslag).
+   **Adobe Visitor-ID (`mid`):** Variabeln `mid` används för att hämta värdeuppsättningen i AMCV-cookien. Variabeln `mid` är det primära ID-värdet för både webbplatser och mobilappar och anger även att tjänsten Experience Cloud Visitor ID är korrekt konfigurerad. Den finns både i samtal från Adobe Analytics (AppMeasurement) och Media Analytics (hjärtslag).
 
    * **Adobe Analytics Starta samtal**
 
@@ -80,7 +80,7 @@ Fyll i och registrera följande åtgärder (i ordning):
 
 1. **Starta mediespelaren**
 
-   När mediespelaren startas skickar Media SDK nyckelanropen till de två servrarna i följande ordning:
+   När mediespelaren startas skickar Media SDK nyckelanrop till de två servrarna i följande ordning:
 
    1. Adobe Analytics-server - Starta samtal
    1. Media Analytics-server - Starta samtal
@@ -114,7 +114,7 @@ Fyll i och registrera följande åtgärder (i ordning):
 
 1. **Pausa och spela upp i 30 sekunder, om tillgängligt.**  **Lägg till paus**
 
-   Under en paus i annonsen skickas anrop till pulsslag eller &quot;ping&quot; från Media Analytics av SDK till Media Analytics-servern varje sekund.
+   Under Ad Pause skickas samtal från SDK till Media Analytics-servern varje sekund med pulsslag eller &quot;ping&quot;.
 
    >[!NOTE]
    >
@@ -133,7 +133,7 @@ Fyll i och registrera följande åtgärder (i ordning):
 
      Information om samtalsparametrar och metadata finns i [Testa samtalsinformation.](/help/legacy/validation/test-call-details.md#play-main-content)
 
-1. **Pausa under uppspelning i minst 30 sekunder.** När mediespelaren pausas skickas händelseanrop från SDK till mediespelaren var 10:e sekund. När pausen är slut bör uppspelningshändelserna återupptas.
+1. **Pausa under uppspelning i minst 30 sekunder.** När mediespelaren pausas skickas händelseanrop från SDK till Media Analytics-servern var tionde sekund. När pausen är slut bör uppspelningshändelserna återupptas.
 
    Information om samtalsparametrar och metadata finns i [Testa samtalsinformation.](/help/legacy/validation/test-call-details.md#pause-main-content)
 

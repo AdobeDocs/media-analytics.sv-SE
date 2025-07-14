@@ -3,9 +3,9 @@ title: Så här konfigurerar du Media SDK för Chromecast
 description: Följ de här stegen för att konfigurera Media SDK på Chromecast.
 uuid: d664e394-02a2-4985-bbad-be1bcc44fb2b
 exl-id: 5dfe3407-2858-48c0-a70c-8ea87967ac47
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: 0088d41f557b1dc49ac2b3b6d0a812f22d8849e9
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '570'
 ht-degree: 0%
@@ -26,7 +26,7 @@ I det här avsnittet beskrivs förutsättningarna för att konfigurera en Chrome
    * *Ett API för att prenumerera på spelarhändelser* - Media SDK kräver att du anropar en uppsättning enkla API:er när händelser inträffar i spelaren.
    * *Ett API som tillhandahåller spelarinformation* - Den här informationen innehåller information som medienamnet och spelhuvudets position.
 
-Adobe Mobile-tjänster har ett nytt användargränssnitt som samlar funktioner för mobilmarknadsföring för mobilappar från hela Adobe Marketing Cloud. Från början erbjuder mobiltjänsten smidig integrering av funktioner för appanalys och målinriktning för Adobe Analytics- och Adobe Target-lösningarna. Läs mer på [Adobe Mobile Services-dokumentationen.](https://experienceleague.adobe.com/docs/mobile-services/using/home.html?lang=sv-SE)
+Adobe mobiltjänster har ett nytt användargränssnitt som samlar funktioner för mobilmarknadsföring för mobilappar från hela Adobe Marketing Cloud. Från början erbjuder mobiltjänsten smidig integrering av funktioner för appanalys och målinriktning för Adobe Analytics- och Adobe Target-lösningarna. Läs mer på [Adobe Mobile Services-dokumentation.](https://experienceleague.adobe.com/docs/mobile-services/using/home.html)
 
 Med Adobe Mobile Library for Chromecast v3.x for Experience Cloud Solutions kan ni mäta Chromecast-applikationer som skrivits i JavaScript, utnyttja och samla in målgruppsdata via målgruppshantering och mäta videoengagemang.
 
@@ -106,7 +106,7 @@ Med Adobe Mobile Library for Chromecast v3.x for Experience Cloud Solutions kan 
 
 1. Konfigurera Experience Cloud Visitor-ID.
 
-   Experience Cloud Visitor ID-tjänsten tillhandahåller ett universellt besökar-ID för olika Experience Cloud-lösningar. Tjänsten för besökar-ID krävs av Media Analytics och andra Marketing Cloud-integreringar.
+   Experience Cloud Visitor ID-tjänsten tillhandahåller ett universellt Visitor-ID för alla Experience Cloud-lösningar. Tjänsten för besökar-ID krävs av Media Analytics och andra Marketing Cloud-integreringar.
 
    Kontrollera att din `ADBMobileConfig`-konfiguration innehåller ditt organisations-ID för `marketingCloud`.
 
@@ -122,18 +122,18 @@ Med Adobe Mobile Library for Chromecast v3.x for Experience Cloud Solutions kan 
    >
    >Se till att du inkluderar `@AdobeOrg`.
 
-   När konfigurationen är klar skapas ett Experience Cloud Visitor-ID som ingår i alla träffar. Andra besökar-ID:n, som `custom` och `automatically-generated`, fortsätter att skickas med varje träff.
+   När konfigurationen är klar genereras ett Experience Cloud Visitor-ID som ingår i alla träffar. Andra besökar-ID:n, som `custom` och `automatically-generated`, fortsätter att skickas med varje träff.
 
    **Tjänstmetoder för Experience Cloud Visitor ID**
 
    >[!TIP]
    >
-   >Experience Cloud Visitor-ID-metoder har prefixet `visitor`.
+   >Experience Cloud Visitor ID-metoder har prefixet `visitor`.
 
    | Metod | Beskrivning |
    | --- | --- |
    | `getMarketingCloudID()` | Hämtar Experience Cloud Visitor-ID:t från Visitor-ID-tjänsten.  <br/><br/>`ADBMobile.visitor.getMarketingCloudID();` |
-   | `syncIdentifiers()` | Med besökar-ID:t för Experience Cloud kan du ange ytterligare kund-ID:n som kan kopplas till varje besökare. Besökar-API:t godkänner flera kund-ID:n för samma besökare och en kundtypsidentifierare för att skilja omfattningen för olika kund-ID:n åt. Den här metoden motsvarar `setCustomerIDs()` i JavaScript bibliotek.  Till exempel: <br/><br/>`var identifiers = {};` <br/><br/>`identifiers["idType"] = "idValue";` <br/><br/>`ADBMobile.visitor.syncIdentifiers(identifiers);` |
+   | `syncIdentifiers()` | Med Experience Cloud Visitor-ID kan du ange ytterligare kund-ID:n som kan kopplas till varje besökare. Besökar-API:t godkänner flera kund-ID:n för samma besökare och en kundtypsidentifierare för att skilja omfattningen för olika kund-ID:n åt. Den här metoden motsvarar `setCustomerIDs()` i JavaScript bibliotek.  Till exempel: <br/><br/>`var identifiers = {};` <br/><br/>`identifiers["idType"] = "idValue";` <br/><br/>`ADBMobile.visitor.syncIdentifiers(identifiers);` |
 
 1. Implementera MediaDelegate-protokollet för spårning av media
 
@@ -153,4 +153,4 @@ Med Adobe Mobile Library for Chromecast v3.x for Experience Cloud Solutions kan 
    }
    ```
 
-<!--   **Postbacks -** For more information about configuring postbacks, see [Configure Postbacks.](https://experienceleague.adobe.com/docs/mobile-services/using/manage-app-settings-ug/configuring-app/signals.html?lang=sv-SE) -->
+<!--   **Postbacks -** For more information about configuring postbacks, see [Configure Postbacks.](https://experienceleague.adobe.com/docs/mobile-services/using/manage-app-settings-ug/configuring-app/signals.html) -->

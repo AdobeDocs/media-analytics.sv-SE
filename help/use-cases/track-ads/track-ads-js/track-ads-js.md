@@ -3,9 +3,9 @@ title: Lär dig spåra annonser med JavaScript 2.x
 description: Implementera annonsspårning i webbläsarprogram (JS) med Media SDK.
 uuid: 4d81d29c-c55d-4d48-b505-3260922712ff
 exl-id: 4404d3a6-ab98-40f0-9573-ee32f480f650
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '359'
 ht-degree: 2%
@@ -129,4 +129,4 @@ Följande anvisningar ger vägledning vid implementering med SDK:er för 2.x.
    };
    ```
 
-Mer information finns i spårningsscenariot [VOD-uppspelning med pre-roll-annonser](/help/use-cases/tracking-scenarios/vod-preroll-ads.md).
+Mer information finns i spårningsscenariot [VOD-uppspelning med förhandsgranskningsannonser](/help/use-cases/tracking-scenarios/vod-preroll-ads.md).

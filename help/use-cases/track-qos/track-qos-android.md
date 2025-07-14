@@ -1,11 +1,11 @@
 ---
 title: Lär dig hur du spårar upplevelsekvalitet på Android
-description: "Lär dig att implementera kvalitetskontroll av upplevelser (QoE, QoS) med Media SDK på Android."
+description: Lär dig hur du implementerar kvalitetskontroll av upplevelser (QoE, QoS) med Media SDK i Android.
 uuid: 81ff3939-48a6-45c1-8837-ddfa33490559
 exl-id: cee8b119-bca2-4a5c-8111-2b49f7eede66
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: 2ce09eafeb8def909ae2a8ae7cc09a88b2f663af
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '156'
 ht-degree: 3%
@@ -18,7 +18,7 @@ Följande anvisningar ger vägledning för implementering i alla 2.x SDK:er.
 
 >[!IMPORTANT]
 >
->Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandboken här: [Hämta SDK:er.](/help/getting-started/download-sdks.md)
+>Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandboken här: [Hämta SDK.](/help/getting-started/download-sdks.md)
 
 ## Implementera QoS
 

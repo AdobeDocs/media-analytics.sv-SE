@@ -6,9 +6,9 @@ index: y
 internal: n
 snippet: y
 exl-id: 881a94f4-d248-4668-a2d1-4e50d3f9135a
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: 8eeb4a157d9756318582bc485769c5704f54c515
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '17'
 ht-degree: 29%
@@ -19,7 +19,7 @@ ht-degree: 29%
 
 ## Versionsinformation{#release-notes}
 
-* [Versionsinformation](https://experienceleague.adobe.com/docs/release-notes/experience-cloud/current.html?lang=sv-SE)
+* [Versionsinformation](https://experienceleague.adobe.com/docs/release-notes/experience-cloud/current.html)
 
 <!--
 ## Documentation Updates{#documentation-updates}

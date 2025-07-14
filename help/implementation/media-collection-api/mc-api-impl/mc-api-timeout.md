@@ -3,9 +3,9 @@ title: Timeout-villkor
 description: Lär dig mer om timeoutvillkoren för Media Collection API.
 uuid: 2a4ea13e-a561-4adf-b567-f980301b32c8
 exl-id: 0b494b27-a4a6-4af7-84c1-c44b33b6da8f
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: 240fa48bdc738425e04cd29c27625c7dd612ff18
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 **API-timeoutvillkor för mediainsamling**
 
-Media Collection API har inte samma funktion som Media SDK för att utfärda ett nytt sessions-ID när timeoutförhållanden inträffar. När ett timeout-villkor inträffar kommer serverdelen att stänga sessionen och alla efterföljande anrop som görs med detta sessions-ID kommer att tas bort. Logiken som hanterar en timeout för session måste hanteras i klienten. Det innebär att spelaren måste övervaka timeoutvillkoren och hämta ett nytt sessions-ID om en timeout inträffar.
+Media Collection API har inte samma funktion som Media SDK när det gäller att utfärda ett nytt sessions-ID när timeout inträffar. När ett timeout-villkor inträffar kommer serverdelen att stänga sessionen och alla efterföljande anrop som görs med detta sessions-ID kommer att tas bort. Logiken som hanterar en timeout för session måste hanteras i klienten. Det innebär att spelaren måste övervaka timeoutvillkoren och hämta ett nytt sessions-ID om en timeout inträffar.
 
 * **10 minuter: Inga API-händelser**
 

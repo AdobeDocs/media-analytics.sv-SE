@@ -1,11 +1,11 @@
 ---
 title: Spåra annonser som förklaras
-description: Översikt över implementering av annonsspårning med Media SDK.
+description: Översikt över hur ni implementerar annonsspårning med Media SDK.
 uuid: 1607798b-c6ef-4d60-8e40-e958c345b09c
 exl-id: c714d31f-3d08-4ded-a413-2762d53bec75
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '510'
 ht-degree: 1%
@@ -108,7 +108,7 @@ Annonsuppspelning inkluderar spårning av annonsbrytningar, start, slutförande 
 >
 >Kontrollera att du INTE ökar spelhuvudet för innehållsspelaren (`l:event:playhead`) under annonsuppspelning (`s:asset:type=ad`). Om du gör det påverkas Content Time Spent-måtten negativt.
 
-I följande exempelkod används JavaScript 2.x SDK för en mediespelare i HTML 5.
+I följande exempelkod används JavaScript 2.x SDK för en HTML5-mediespelare.
 
 ```js
 /* Call on ad break start */

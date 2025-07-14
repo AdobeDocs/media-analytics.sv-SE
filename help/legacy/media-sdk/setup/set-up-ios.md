@@ -3,9 +3,9 @@ title: Så här konfigurerar du Media SDK på iOS
 description: Följ de här stegen för att konfigurera Media SDK-programmet på iOS.
 uuid: a1c6be79-a6dc-47b6-93b3-ac7b42f1f3eb
 exl-id: fe7662b5-1700-4bd6-b542-66aa8493459d
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: 0088d41f557b1dc49ac2b3b6d0a812f22d8849e9
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '731'
 ht-degree: 3%
@@ -25,11 +25,11 @@ Lär dig hur du konfigurerar Streaming Media Collection för iOS-enheter.
 * **Hämta giltiga konfigurationsparametrar för Media SDK**
 Dessa parametrar kan hämtas från en Adobe-representant när du har konfigurerat ditt analyskonto.
 * **Implementera ADBMobil för iOS i ditt program**
-Mer information om Adobe Mobile SDK finns i [iOS SDK 4.x for Experience Cloud Solutions.](https://experienceleague.adobe.com/docs/mobile-services/ios/overview.html?lang=sv-SE)
+Mer information om dokumentationen för Adobe Mobile SDK finns i [iOS SDK 4.x for Experience Cloud Solutions.](https://experienceleague.adobe.com/docs/mobile-services/ios/overview.html)
 
   >[!IMPORTANT]
   >
-  >Från och med iOS 9 introducerade Apple en funktion som kallas ATS (App Transport Security). Den här funktionen syftar till att förbättra nätverkssäkerheten genom att säkerställa att dina appar endast använder protokoll och ciphers som följer branschstandard. Den här funktionen är aktiverad som standard, men du har konfigurationsalternativ som ger dig möjlighet att arbeta med ATS. Mer information om ATS finns i [App Transport Security.](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/app-transport-security.html?lang=sv-SE)
+  >Från och med iOS 9 introducerade Apple en funktion som kallas ATS (App Transport Security). Den här funktionen syftar till att förbättra nätverkssäkerheten genom att säkerställa att dina appar endast använder protokoll och ciphers som följer branschstandard. Den här funktionen är aktiverad som standard, men du har konfigurationsalternativ som ger dig möjlighet att arbeta med ATS. Mer information om ATS finns i [App Transport Security.](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/app-transport-security.html)
 
 * **Tillhandahåll följande funktioner i din mediespelare:**
 
@@ -169,7 +169,7 @@ Utför följande steg i Xcode-projektet. Den här guiden är skriven under föru
 
 1. Dra biblioteksfilen `VideoHeartbeat_TV.a` till projektets `lib`-mapp.
 
-1. Utöka avsnittet **[!UICONTROL Link Binary with Libraries]** på fliken **[!UICONTROL Build Phases]** i målet för din tvOS-app och lägg till följande bibliotek:
+1. Utöka avsnittet **[!UICONTROL Build Phases]** på fliken **[!UICONTROL Link Binary with Libraries]** i målet för din tvOS-app och lägg till följande bibliotek:
 
    * `MediaSDK_TV.a`
    * `AdobeMobileLibrary_TV.a`

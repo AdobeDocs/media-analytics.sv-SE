@@ -1,28 +1,28 @@
 ---
-title: VOD-uppspelning med sökning i huvudinnehållet
-description: Visa ett exempel på hur du spårar VOD-innehåll där sökning gjordes med Media SDK.
+title: VOD Playback with Search in the Main Content
+description: Se ett exempel på hur du spårar VOD-innehåll där sökning sker med Media SDK.
 uuid: 5c2392f6-9b9c-42f5-833f-77423d1e6222
 exl-id: d77aa717-5dcb-4429-8dce-1914434f2b32
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '274'
 ht-degree: 0%
 
 ---
 
-# VOD-uppspelning med sökning i huvudinnehållet{#vod-playback-with-seeking-in-the-main-content}
+# VOD uppspelning med sökning i huvudinnehållet{#vod-playback-with-seeking-in-the-main-content}
 
 ## Scenario {#scenario}
 
 Detta scenario omfattar sökning i huvudinnehållet under uppspelning.
 
-Detta är samma scenario som för [VOD-uppspelningen utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md), men en del av innehållet stegas igenom och en sökning slutförs från en punkt i huvudinnehållet till en annan punkt.
+Detta är samma scenario som [VOD-uppspelningen utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md), men en del av innehållet stegas igenom och en sökning utförs från en punkt i huvudinnehållet till en annan.
 
 | Utlösare   | Heartbeat-metod   | Nätverksanrop   | Anteckningar   |
 | --- | --- | --- | --- |
-| Användaren klickar på [!UICONTROL Play] | `trackSessionStart` | Börja med Analytics-innehåll, starta pulsslagsinnehåll | Mätbiblioteket är ovetande om att det finns en förrollsannons, så dessa nätverksanrop är identiska med [VOD-uppspelningen utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md). |
+| Användaren klickar på [!UICONTROL Play] | `trackSessionStart` | Börja med Analytics-innehåll, starta pulsslagsinnehåll | Mätbiblioteket är ovetande om att det finns en förrollad annons, så dessa nätverksanrop är identiska med [VOD-uppspelningen utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md). |
 | Den första bildrutan i innehållet spelas upp. | `trackPlay` | Spela upp pulsslagsinnehåll | När kapitelinnehåll spelas upp före huvudinnehållet startar Heartslag när kapitlet börjar. |
 | Innehåll spelas upp | | Hjärtslag för innehåll | Detta nätverksanrop är exakt detsamma som [VOD-uppspelningen utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md). |
 | Användaren börjar söka efter innehåll | `trackSeekStart` | | Inga pulsslag går ut tills sökningen är slutförd, till exempel `trackSeekComplete` |

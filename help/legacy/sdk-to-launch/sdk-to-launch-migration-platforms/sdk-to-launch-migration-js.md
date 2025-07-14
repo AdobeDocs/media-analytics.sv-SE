@@ -1,31 +1,31 @@
 ---
-title: "Migrering från det fristående mediet-SDK till Adobe Launch - webben (JS)"
+title: Migrera från Fristående media SDK till Adobe Launch - webben (JS)
 description: Lär dig hur du migrerar från Media SDK till Launch for JS.
 exl-id: 19b506b2-3070-4a5e-9732-a5cd0867afde
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: 73ef5e55c9ab57a5a2ba22aa1e4b646c530cc53f
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '412'
-ht-degree: 1%
+ht-degree: 8%
 
 ---
 
-# Migrera från det fristående medie-SDK:t till Adobe Launch - webben (JS)
+# Migrera från det fristående mediet SDK till Adobe Launch - webben (JS)
 
 >[!NOTE]
->Adobe Experience Platform Launch har omklassificerats som en serie datainsamlingstekniker i Experience Platform. Som ett resultat av detta har flera terminologiska förändringar införts i produktdokumentationen. I följande [dokument](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=sv-SE) finns en konsoliderad referens till de ändrade terminologin.
+>Adobe Experience Platform Launch har omklassificerats som en serie datainsamlingstekniker i Experience Platform. Som ett resultat av detta har flera terminologiska förändringar genomförts i produktdokumentationen. Se följande [dokument](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=en) för en konsoliderad referens av terminologiändringarna.
 
 ## Skillnader i funktioner
 
 * *Launch* - Launch ger dig ett användargränssnitt som hjälper dig att konfigurera, konfigurera och distribuera dina webbaserade mediespårningslösningar. Launch är bättre än Dynamic Tag Management (DTM).
-* *Media SDK* - Media SDK ger dig mediespårningsbibliotek som är utformade för särskilda plattformar (t.ex. Android, iOS osv.). Adobe rekommenderar Media SDK för att spåra medieanvändning i dina mobilappar.
+* *Media SDK* - Mediespårningsbiblioteken i SDK är utformade för specifika plattformar (t.ex. Android, iOS osv.). Adobe rekommenderar Media SDK för att spåra medieanvändning i mobilappar.
 
 ## Konfiguration
 
 ### Fristående media SDK
 
-I det fristående Media SDK:t konfigurerar du spårningskonfigurationen i appen
+I det fristående Media SDK konfigurerar du spårningskonfigurationen i appen
 och skicka det till SDK när du skapar spåraren.
 
 ```javascript
@@ -46,16 +46,16 @@ att fungera som det ska.
 
 ### Starta tillägg
 
-1. Klicka på fliken [!UICONTROL Extensions] i Experience Platform Launch för
+1. I Experience Platform Launch klickar du på fliken [!UICONTROL Extensions] för
 web-egenskap.
-1. På fliken [!UICONTROL Catalog] letar du reda på Adobe Media Analytics for Audio och
+1. På fliken [!UICONTROL Catalog] letar du reda på Adobe Media Analytics för ljud och
 Videotillägg och klicka på [!UICONTROL Install] .
 1. Konfigurera spårningsparametrarna på sidan för tilläggsinställningar.
 Media-tillägget använder de konfigurerade parametrarna för spårning.
 
    ![](assets/launch_config_js.png)
 
-[Starta användarhandboken - Installera och konfigurera medietillägget](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/media-analytics/overview.html?lang=sv-SE#install-and-configure-the-ma-extension)
+[Starta användarhandboken - Installera och konfigurera medietillägget](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/media-analytics/overview.html#install-and-configure-the-ma-extension)
 
 ## Skillnader mellan att skapa spårare
 
@@ -124,5 +124,5 @@ Skicka ett delegatobjekt till `get-instance` som visar `getQoSObject()`- och `ge
 
 ### Starta
 
-* [Översikt över Launch](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv-SE)
-* [Media Analytics-tillägg](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/media-analytics/overview.html?lang=sv-SE)
+* [Översikt över Launch](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)
+* [Media Analytics-tillägg](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/media-analytics/overview.html)

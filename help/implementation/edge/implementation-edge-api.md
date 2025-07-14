@@ -1,10 +1,10 @@
 ---
 title: Implementera Streaming Media Collection med Edge Network API
-description: Resurser för att installera Media Analytics med Experience Platform Edge API.
-feature: Media Analytics
+description: Resurser för installation av Media Analytics med Experience Platform Edge API.
+feature: Streaming Media
 role: User, Admin, Data Engineer
 exl-id: 762abfd4-dc84-40dc-9142-fbebbb892e15
-source-git-commit: 0088d41f557b1dc49ac2b3b6d0a812f22d8849e9
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%

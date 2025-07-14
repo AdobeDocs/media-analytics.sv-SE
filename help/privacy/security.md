@@ -1,10 +1,10 @@
 ---
 title: Säkerhet
 description: Läs mer om säkerhet i relation till Streaming Media Collection
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
 exl-id: a301612f-5019-40c3-af40-d608cd320e16
-source-git-commit: 0088d41f557b1dc49ac2b3b6d0a812f22d8849e9
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '227'
 ht-degree: 49%
@@ -18,7 +18,7 @@ På Adobe tar vi säkerhet och integritet på allvar. Från ett rigoröst säker
 
 ## Säkerhet för transportlager {#transport-layer-security}
 
-**Säkerhetsmeddelande för transportlager -** Adobe har säkerhetsstandarder som kräver att äldre säkerhetsprotokoll upphör att gälla. För att fortsätta att uppfylla de föränderliga säkerhetsprotokollstandarderna går Adobe mot att använda TLS 1.2 (Transport Layer Security) för att få den senaste och säkraste versionen att använda. Från och med 20 februari 2019 har Adobe endast stöd för TLS 1.1 och senare. I och med den här ändringen kommer Adobe inte längre att samla in data från slutanvändare med äldre enheter eller webbläsare som använder TLS 1.0. Att migrera till TLS 1.2 ger högre säkerhet. Det är viktigt att du går igenom detaljerna och planerar ändringarna för en smidig övergång.
+**Säkerhetsmeddelande för transportlager -** Adobe har säkerhetsstandarder som kräver att äldre säkerhetsprotokoll upphör att gälla. För att fortsätta uppfylla de föränderliga säkerhetsprotokollstandarderna går Adobe mot att använda TLS 1.2 (Transport Layer Security) för att få den senaste och säkraste versionen. Från och med 20 februari 2019 har Adobe endast stöd för TLS 1.1 och senare. I och med den här ändringen kommer Adobe inte längre att samla in data från slutanvändare med äldre enheter eller webbläsare som använder TLS 1.0. Att migrera till TLS 1.2 ger högre säkerhet. Det är viktigt att du går igenom detaljerna och planerar ändringarna för en smidig övergång.
 
 >[!NOTE]
 >

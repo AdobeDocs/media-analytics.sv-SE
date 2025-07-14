@@ -3,9 +3,9 @@ title: Förklaring av metadata för Chromecast
 description: Lär dig hur du ställer in standardmetadata för video och annonsering som ska skickas med spårningsanrop på Chromecast.
 uuid: c446ad41-51b8-46d6-9bc1-abfae866023f
 exl-id: ccc717ae-d846-4349-8282-5e3511ddeb9b
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '139'
 ht-degree: 2%
@@ -44,10 +44,10 @@ Standardmetadata för video och annonser kan anges för medie- respektive annons
 | --- | --- | --- |
 | Annonsör | `a.media.ad.advertiser` | `ADBMobile.media.AdMetadataKeys.ADVERTISER` |
 | Kampanj-ID | `a.media.ad.campaign` | `ADBMobile.media.AdMetadataKeys.CAMPAIGN_ID` |
-| Kreativt ID | `a.media.ad.creative` | `ADBMobile.media.AdMetadataKeys.CREATIVE_ID` |
+| CREATIVE ID | `a.media.ad.creative` | `ADBMobile.media.AdMetadataKeys.CREATIVE_ID` |
 | Placement-ID | `a.media.ad.placement` | `ADBMobile.media.AdMetadataKeys.PLACEMENT_ID` |
 | Plats-ID | `a.media.ad.site` | `ADBMobile.media.AdMetadataKeys.SITE_ID` |
-| Kreativ URL | `a.media.ad.creativeURL` | `ADBMobile.media.AdMetadataKeys.CREATIVE_URL` |
+| CREATIVE URL | `a.media.ad.creativeURL` | `ADBMobile.media.AdMetadataKeys.CREATIVE_URL` |
 
 ## Exempelimplementeringar för Chromecast {#sample-implementations-for-chromecast}
 

@@ -3,9 +3,9 @@ title: Spåra nedladdat material offline i Streaming Media Collection
 description: Lär dig hur du använder funktionen Hämtat innehåll för att spåra medieförbrukning när en användare är offline.
 uuid: 0718689d-9602-4e3f-833c-8297aae1d909
 exl-id: 82d3e5d7-4f88-425c-8bdb-e9101fc1db92
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: 0088d41f557b1dc49ac2b3b6d0a812f22d8849e9
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '696'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ## Översikt {#overview}
 
-Funktionen för hämtat innehåll gör det möjligt att spåra medieanvändning när en användare är offline. En användare kan till exempel hämta och installera en app på en mobilenhet och sedan använda appen för att hämta innehåll till den lokala lagringen på enheten. För att spåra nedladdade data utvecklade Adobe funktionen för nedladdat innehåll. Med den här funktionen lagras spårningsdata på enheten när användaren spelar upp innehåll från enhetens lagring, oavsett enhetens anslutning. När användaren är klar med uppspelningssessionen och enheten återgår online, skickas den lagrade spårningsinformationen till Media Collection API:ts baksida i en enda nyttolast. Den lagrade spårningsinformationen bearbetas sedan och rapporteras som vanligt i Media Collection API.
+Funktionen för hämtat innehåll gör det möjligt att spåra medieanvändning när en användare är offline. En användare kan till exempel hämta och installera en app på en mobilenhet och sedan använda appen för att hämta innehåll till den lokala lagringen på enheten. För att spåra nedladdade data har Adobe utvecklat funktionen för nedladdat innehåll. Med den här funktionen lagras spårningsdata på enheten när användaren spelar upp innehåll från enhetens lagring, oavsett enhetens anslutning. När användaren är klar med uppspelningssessionen och enheten återgår online, skickas den lagrade spårningsinformationen till Media Collection API:ts baksida i en enda nyttolast. Den lagrade spårningsinformationen bearbetas sedan och rapporteras som vanligt i Media Collection API.
 
 Jämför de två metoderna:
 
@@ -57,7 +57,7 @@ Funktionen för nedladdat innehåll är en offlineversion av (standard) API:t f�
 
 ## Integrering med Adobe Analytics {#integration-with-adobe-analtyics}
 
-När analysens start-/slutanrop beräknas för det hämtade innehållsscenariot, anger back end ett extra analysfält som heter `ts.`. Det här är tidsstämplar för den första och sista händelsen som tas emot (start och slutförd). Den här funktionen gör att en slutförd mediesession kan placeras vid rätt tidpunkt (dvs. även om användaren inte ansluter igen på flera dagar, rapporteras mediesessionen ha inträffat vid den tidpunkt då innehållet visades). Du måste aktivera den här funktionen på Adobe Analytics-sidan genom att skapa en _valfri tidsstämpelsserie._ Om du vill aktivera en tidsstämpelsrapport (valfri) ska du läsa [Tidsstämplar (valfritt).](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/timestamp-optional.html?lang=sv-SE)
+När analysens start-/slutanrop beräknas för det hämtade innehållsscenariot, anger back end ett extra analysfält som heter `ts.`. Det här är tidsstämplar för den första och sista händelsen som tas emot (start och slutförd). Den här funktionen gör att en slutförd mediesession kan placeras vid rätt tidpunkt (dvs. även om användaren inte ansluter igen på flera dagar, rapporteras mediesessionen ha inträffat vid den tidpunkt då innehållet visades). Du måste aktivera den här funktionen på Adobe Analytics-sidan genom att skapa en _valfri tidsstämpelsserie._ Om du vill aktivera en tidsstämpelsrapport (valfri) ska du läsa [Tidsstämplar (valfritt).](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/timestamp-optional.html)
 
 ## Exempel på sessionsjämförelse {#sample-session-comparison}
 

@@ -1,20 +1,20 @@
 ---
-title: SDK-felsökning
+title: SDK Debugging
 description: Läs mer om spårning/loggning i Media SDK.
 uuid: a5972d87-c593-4b4f-a56f-dca6e25268e1
 exl-id: c2de6454-8538-4d07-a099-e278b153d894
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '218'
 ht-degree: 0%
 
 ---
 
-# SDK-felsökning{#sdk-debugging}
+# SDK debugging{#sdk-debugging}
 
-Du kan aktivera och inaktivera loggning. Media SDK har en omfattande funktion för spårning/loggning i hela mediespårningsstacken. Du kan aktivera eller inaktivera loggning genom att ange flaggan `debugLogging` för Config-objektet.
+Du kan aktivera och inaktivera loggning. Media SDK har en omfattande funktion för spårning och loggning i hela mediespårningsstacken. Du kan aktivera eller inaktivera loggning genom att ange flaggan `debugLogging` för Config-objektet.
 
 ## Exempelkod för felsökningsloggning
 
@@ -75,12 +75,12 @@ Format: [<timestamp>] [<level>] [<tag>] [<message>]
 Example: [16:10:29 GMT­0700 (PDT).245] [DEBUG] [plugin::player] Resolving qos.startupTime: 0
 ```
 
-* **tidsstämpel:** Detta är den aktuella processortiden (tidszonsindelad för GMT)
+* **tidsstämpel:** Detta är den aktuella CPU-tiden (tidszonsindelad för GMT)
 * **nivå:** Det finns fyra definierade meddelandenivåer:
    * INFO - Vanligtvis indata från programmet (validera spelarens namn, video-ID etc.)
    * DEBUG - Felsökningsloggar som används av utvecklare för att felsöka mer komplexa problem
-   * VARNING - Anger potentiella integrerings-/konfigurationsfel eller Heartbeats SDK-fel
-   * FEL - Anger viktiga integreringsfel eller Heartbeats SDK-fel
+   * WARN - Anger potentiella integrerings-/konfigurationsfel eller pulsslag för SDK-fel
+   * FEL - Anger viktiga integreringsfel eller pulsslag i SDK-fel
 * **tagg:** Namnet på den underkomponent som skickade loggmeddelandet (vanligtvis klassnamnet)
 * **meddelande:** Det faktiska spårningsmeddelandet
 

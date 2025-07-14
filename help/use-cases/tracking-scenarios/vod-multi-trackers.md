@@ -1,24 +1,24 @@
 ---
 title: VOD Multiple Trackers in Parallel
-description: Visa ett exempel på hur du spårar VOD med flera spårare parallellt.
+description: Se ett exempel på hur du kan spåra VOD med flera spårare parallellt.
 uuid: 6e25dd92-522f-455c-8e71-99d71d352e06
 exl-id: 318beba8-bb26-4cec-81d7-c6fc446ec7b4
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '245'
 ht-degree: 0%
 
 ---
 
-# Flera VOD-spår parallellt{#vod-multiple-trackers-in-parallel}
+# VOD flera spårare parallellt{#vod-multiple-trackers-in-parallel}
 
 ## Scenario {#scenario}
 
 I det här scenariot körs två sessioner parallellt för två separata media och två separata instanser av `MediaHeartbeat` används.
 
-Detta scenario är identiskt med [VOD-uppspelningen utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md) -scenariot, förutom att det finns två sessioner som körs parallellt för två separata media. Var och en av sessionerna använder en separat instans av `MediaHeartbeat`.
+Det här scenariot är identiskt med [VOD-uppspelningen utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md), förutom att det finns två sessioner som körs parallellt för två separata medier. Var och en av sessionerna använder en separat instans av `MediaHeartbeat`.
 
 Om inget annat anges är nätverksanropen samma som [VOD-uppspelningen utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md).
 

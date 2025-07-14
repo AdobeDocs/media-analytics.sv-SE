@@ -1,10 +1,10 @@
 ---
 title: Medieuppspelningstid spenderad
 description: Lär dig hur du använder panelen Medieuppspelningstid för spenderad tid för att analysera hur lång uppspelningstid som har använts och för att förstå maximal samtidighet och var bortfall har inträffat.
-feature: Media Analytics, Workspace Basics
+feature: Streaming Media, Workspace Basics
 role: User, Admin
 exl-id: 958b4968-0f52-464c-81e0-5ab9b84aaa9c
-source-git-commit: 2ce09eafeb8def909ae2a8ae7cc09a88b2f663af
+source-git-commit: 67f1fa8194fa58b2c513e3136d2bc7880f9cb06b
 workflow-type: tm+mt
 source-wordcount: '215'
 ht-degree: 0%
@@ -20,7 +20,7 @@ Genom att analysera hur lång uppspelningstid som spenderas kan du förstå var 
 I Analysis Workspace är uppspelningstid den tid som du har lagt på att visa medieströmmar vid en viss tidpunkt, och omfattar paus, buffert och tid till start. Med Tillagd tid för mediauppspelning kan du dela uppspelningstiden med olika tidsintervall, t.ex. 5 minuter, 15 minuter, 30 minuter eller 1 timme.
 
 
-Medieuppspelningstiden hjälper till att analysera uppspelning över tid, med detaljer om maximal samtidighet och möjlighet att bryta ned och jämföra. Om du vill komma åt panelen Medieuppspelningstid för spenderad navigerar du till en rapportsvit med mediekomponenter för direktuppspelning aktiverade. Klicka sedan på panelikonen längst till vänster och dra panelen till ditt Analysis Workspace-projekt. [Läs mer …](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/media-playback-timespent/media-playback-time-spent.html?lang=sv-SE)
+Medieuppspelningstiden hjälper till att analysera uppspelning över tid, med detaljer om maximal samtidighet och möjlighet att bryta ned och jämföra. Om du vill komma åt panelen Medieuppspelningstid för spenderad navigerar du till en rapportsvit med mediekomponenter för direktuppspelning aktiverade. Klicka sedan på panelikonen längst till vänster och dra panelen till ditt Analysis Workspace-projekt. [Läs mer …](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/media-playback-timespent/media-playback-time-spent.html)
 
 <!-- ## DOES THIS APPLY Get Concurrent Viewers via Analytics Reporting API
 

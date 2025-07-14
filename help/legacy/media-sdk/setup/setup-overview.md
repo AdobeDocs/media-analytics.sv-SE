@@ -3,9 +3,9 @@ title: Implementera SDK:er som förklaras
 description: Lär dig hur du konfigurerar Media SDK för mediespårning i dina mobil-, OTT- och webbläsarprogram (JS).
 uuid: 06fefedb-b0c8-4f7d-90c8-e374cdde1695
 exl-id: a175332e-0bdc-44aa-82cb-b3f879e7abfc
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: 0088d41f557b1dc49ac2b3b6d0a812f22d8849e9
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '617'
 ht-degree: 1%
@@ -72,7 +72,7 @@ Om du vill installera och använda Streaming Media SDK utför du följande imple
 
 1. Kombinera alla bitar.
 
-   I följande exempelkod används JavaScript 2.x SDK för en videospelare i HTML 5:
+   I följande exempelkod används JavaScript 2.x SDK för en HTML5-videospelare:
 
    ```javascript
    // Create local references to the heartbeat classes
@@ -114,19 +114,19 @@ Om du vill installera och använda Streaming Media SDK utför du följande imple
 
 Spåra implementeringar med Media Analytics genererar två typer av spårningsanrop:
 
-* Media- och startanrop skickas direkt till Adobe Analytics-servern (AppMeasurement).
+* Media- och startsamtal skickas direkt till Adobe Analytics-servern (AppMeasurement).
 * Anrop till pulsslag skickas till Media Analytics-spårningsservern (hjärtslag) som bearbetas där och skickas vidare till Adobe Analytics-servern.
 
 * **Adobe Analytics-server (AppMeasurement)**
-Mer information om alternativ för spårning av serveralternativ finns i [Fylla i variablerna trackingServer och trackingServerSecure korrekt.](https://helpx.adobe.com/se/analytics/kb/determining-data-center.html)
+Mer information om alternativ för spårning av serveralternativ finns i [Fylla i variablerna trackingServer och trackingServerSecure korrekt.](https://helpx.adobe.com/analytics/kb/determining-data-center.html)
 
   >[!IMPORTANT]
   >
-  >Det krävs en RDC-spårningsserver eller CNAME som kan matchas till en RDC-server för Experience Cloud Visitor ID-tjänsten.
+  >En RDC-spårningsserver eller CNAME som löser problem med en RDC-server krävs för tjänsten Experience Cloud Visitor ID.
 
   Analysspårningsservern ska avslutas med `.sc.omtrdc.net` eller vara en CNAME.
 
-* **&#x200B; Media Analytics-server (Heartbeats)**
+* ** Media Analytics-server (Heartbeats)**
 Det här har alltid formatet `[your_namespace].hb.omtrdc.net`. Värdet `[your_namespace]` anger ditt företag och tillhandahålls av Adobe.
 
 Mediespårning fungerar likadant på alla plattformar, både datorer och mobila enheter. Ljudspårning fungerar för närvarande på mobilplattformar. För alla spårningsanrop finns det några viktiga universella variabler som ska valideras:

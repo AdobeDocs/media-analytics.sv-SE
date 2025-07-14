@@ -3,9 +3,9 @@ title: Test 2 - mediefel
 description: Lär dig mer om testet av mediefel som används vid validering.
 uuid: eeccd534-63fd-4dd3-b096-0431bc9a11ff
 exl-id: 3f22ce2d-4385-4a3b-8d1f-52e25a9b1101
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '249'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Du måste slutföra och registrera dessa uppgifter i följande ordning:
 
    När mediespelaren startas skickas följande samtal i följande ordning:
 
-   1. Adobe Analytics (AppMeasurement) - start
+   1. Adobe Analytics (AppMeasurement) Start
    1. Starta Media Analytics (hjärtslag)
    1. Begärt Adobe Analytics Start-anrop om Media Analytics (hjärtslag)
 
@@ -36,7 +36,7 @@ Du måste slutföra och registrera dessa uppgifter i följande ordning:
 
    **Innehållsuppspelning**
 
-   Under uppspelning av innehåll skickar Media SDK uppspelningsanrop (hjärtslag) till Media Analytics-servern var tionde sekund.
+   Under uppspelningen skickar Media SDK uppspelningsanrop (hjärtslag) till Media Analytics-servern var tionde sekund.
 
    Information om samtalsparametrar och metadata finns i [Testa samtalsinformation.](/help/legacy/validation/test-call-details.md#play-main-content)
 

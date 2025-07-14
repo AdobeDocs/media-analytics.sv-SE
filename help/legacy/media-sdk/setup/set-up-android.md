@@ -3,9 +3,9 @@ title: Så här konfigurerar du Media SDK på Android
 description: Följ de här stegen för att konfigurera Media SDK-programmet på Android.
 uuid: 3ffe3276-a104-4182-9220-038729e9f3d5
 exl-id: 261445bf-3c8b-4658-891d-9a878e0b26ea
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: 0088d41f557b1dc49ac2b3b6d0a812f22d8849e9
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '418'
 ht-degree: 6%
@@ -26,7 +26,7 @@ Lär dig hur du konfigurerar Streaming Media Collection för Android-enheter.
 * **Hämta giltiga konfigurationsparametrar för Media SDK**
 Dessa parametrar kan hämtas från en Adobe-representant när du har konfigurerat ditt analyskonto.
 * **Implementera ADBMobil för Android i ditt program**
-Mer information om Adobe Mobile SDK finns i [Android SDK 4.x for Experience Cloud Solutions.](https://experienceleague.adobe.com/docs/mobile-services/android/overview.html?lang=sv-SE)
+Mer information om dokumentationen för Adobe Mobile SDK finns i [Android SDK 4.x for Experience Cloud Solutions.](https://experienceleague.adobe.com/docs/mobile-services/android/overview.html)
 
 * **Tillhandahåll följande funktioner i din mediespelare:**
    * *Ett API för att prenumerera på spelarhändelser* - Media SDK kräver att du anropar en uppsättning enkla API:er när händelser inträffar i spelaren.
@@ -45,7 +45,7 @@ Mer information om Adobe Mobile SDK finns i [Android SDK 4.x for Experience Clou
 
       1. Högerklicka på projektet på panelen **[!UICONTROL Project navigation]**.
       1. Välj **[!UICONTROL Open Module Settings]**.
-      1. Välj **[!UICONTROL Libraries]** under **[!UICONTROL Project Settings]**.
+      1. Välj **[!UICONTROL Project Settings]** under **[!UICONTROL Libraries]**.
 
       1. Klicka på **[!UICONTROL +]** om du vill lägga till ett nytt bibliotek.
       1. Välj **[!UICONTROL Java]** och navigera till filen `MediaSDK.jar`.

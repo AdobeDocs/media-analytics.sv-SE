@@ -3,9 +3,9 @@ title: Lär dig hur du spårar uppspelning på Roku
 description: Lär dig implementera huvudspårning med Media SDK på Roku.
 uuid: a8aa7b3c-2d39-44d7-8ebc-b101d130101f
 exl-id: 5272c0ce-4e3d-48c6-bfa6-94066ccbf9ac
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: c308dba2d7cf07b89bf124bd6e5f972c253c9f18
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '795'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Spåra kärnuppspelning på Roku{#track-core-playback-on-roku}
 
-I den här dokumentationen beskrivs spårning i version 2.x av SDK.
+Denna dokumentation beskriver spårning i version 2.x av SDK.
 
 >[!IMPORTANT]
 >
@@ -150,7 +150,7 @@ I den här dokumentationen beskrivs spårning i version 2.x av SDK.
 
 1. **Uppdatera spelhuvudet**
 
-   Meddela SDK när mediespelhuvudet ändras genom att anropa `mediaUpdatePlayhead`-API:t. <br /> För video-on-demand (VOD) anges värdet i sekunder från mediaobjektets början. <br /> Om spelaren inte anger information om innehållets varaktighet för direktuppspelning kan värdet anges som antalet sekunder sedan midnatt UTC den dagen.
+   Meddela SDK om mediespelhuvudet ändras genom att anropa `mediaUpdatePlayhead`-API:t. <br /> För video-on-demand (VOD) anges värdet i sekunder från mediaobjektets början. <br /> Om spelaren inte anger information om innehållets varaktighet för direktuppspelning kan värdet anges som antalet sekunder sedan midnatt UTC den dagen.
 
    ```
    ADBMobile().mediaUpdatePlayhead(position)
@@ -209,4 +209,4 @@ I den här dokumentationen beskrivs spårning i version 2.x av SDK.
    >Detta kan vara samma händelsekälla som användes i steg 4. Kontrollera att varje `trackPause()` API-anrop är parat med ett följande `trackPlay()` API-anrop när videouppspelningen återupptas.
 
 * Spåra scenarier: [VOD-uppspelning utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md)
-* Exempelspelare som ingår i Roku SDK för ett fullständigt spårningsexempel.
+* Exempelspelare ingår i Roku SDK för ett komplett spårningsexempel.

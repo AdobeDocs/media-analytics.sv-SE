@@ -3,9 +3,9 @@ title: Läs mer om tidslinjer för mediespårning
 description: Gå djupare in på spelhuvudets tidslinje och motsvarande användares åtgärder. Läs mer om de olika åtgärderna och deras medföljande förfrågningar.
 uuid: 0ff591d3-fa99-4123-9e09-c4e71ea1060b
 exl-id: 16b15e03-5581-471f-ab0c-077189dd32d6
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a1c3bdbec223ab0141d922dce07ba2128b52e794
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '1120'
 ht-degree: 5%
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 # Tidslinje 1 - Visa till innehållets slut{#timeline-view-to-end-of-content}
 
-## VOD, pre-roll ads, pausa, buffra, visa innehållet till slutet
+## VOD, förrullningsannonser, pausa, buffra, visa innehållet i slutet
 
 I följande diagram visas spelhuvudets tidslinje och motsvarande tidslinje för en användares åtgärder. Nedan presenteras närmare uppgifter om varje åtgärd och de tillhörande ansökningarna.
 
@@ -179,7 +179,7 @@ Pinga serverdelen var 1 sekund medan du är inne i en annons.
 >[!NOTE]
 >
 >Efterföljande annonser i tidslinjen kommer inte att visa serien med ensekunders ping
->i fortsättningens intresse...
+>>i fortsättningens intresse...
 
 ```json
 {
@@ -597,4 +597,4 @@ Skicka `sessionComplete` till serverdelen för att ange att användaren har titt
 
 >[!NOTE]
 >
->**Inga söktider? -** Det finns inget uttryckligt stöd i Media Collection API för `seekStart` - eller `seekComplete` -händelser. Detta beror på att vissa spelare genererar ett mycket stort antal sådana händelser när slutanvändaren rensar, och att flera hundra användare enkelt kan tappa bort nätverksbandbredden för en backend-tjänst. Adobe kringgår explicit stöd för seek-händelser genom att beräkna pulsslagets varaktighet baserat på enhetens tidsstämpel i stället för spelhuvudets position.
+>**Inga söktider? -** Det finns inget uttryckligt stöd i Media Collection API för `seekStart` - eller `seekComplete` -händelser. Detta beror på att vissa spelare genererar ett mycket stort antal sådana händelser när slutanvändaren rensar, och att flera hundra användare enkelt kan tappa bort nätverksbandbredden för en backend-tjänst. Adobe kan kringgå explicit stöd för seek-händelser genom att beräkna pulsslagets varaktighet baserat på enhetens tidsstämpel i stället för spelhuvudets position.

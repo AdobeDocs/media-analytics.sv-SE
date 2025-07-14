@@ -3,9 +3,9 @@ title: Parametrar för spelartillstånd
 description: Lär dig mer om parametrar för spårning av spelartillstånd för helskärmsläge, bildtext, ljud av och bildegenskaper.
 uuid: 2a6b9247-a694-46e9-98e1-424c08c27ec2
 exl-id: cd51ed3a-fe37-41e9-8243-dfd9deb514c1
-feature: "Media Analytics, Variables"
+feature: "Streaming Media, Variables"
 role: User, Admin, Data Engineer
-source-git-commit: ebabbe52fe673e3fb6f13da40bbc3c87aef1c7bd
+source-git-commit: 70900e305c3ed7a2be4069c6f296d56f1f6e0966
 workflow-type: tm+mt
 source-wordcount: '2373'
 ht-degree: 0%

@@ -3,9 +3,9 @@ title: Förklaring av Roku-metadatanycklar
 description: Lär dig mer om de tillgängliga Roku-metadatanycklarna och visa hela listan med standardmetadatakonstanter.
 uuid: 2ca6bb1d-c545-43d3-9c3e-63b890aa268d
 exl-id: 687dbaa5-4723-4b3f-ab1e-4d5bf447cddf
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '471'
 ht-degree: 0%
@@ -55,10 +55,10 @@ Standardmetadata för video, ljud och annonser kan anges för medie- respektive 
 | --- | --- | --- |
 | Annonsör | `a.media.ad.advertiser` | `MEDIA_AdMetadataKeyADVERTISER` |
 | Kampanj-ID | `a.media.ad.campaign` | `MEDIA_AdMetadataKeyCAMPAIGN_ID` |
-| Kreativt ID | `a.media.ad.creative` | `MEDIA_AdMetadataKeyCREATIVE_ID` |
+| CREATIVE ID | `a.media.ad.creative` | `MEDIA_AdMetadataKeyCREATIVE_ID` |
 | Placement-ID | `a.media.ad.placement` | `MEDIA_AdMetadataKeyPLACEMENT_ID` |
 | Plats-ID | `a.media.ad.site` | `MEDIA_AdMetadataKeyPLACEMENT_ID` |
-| Kreativ URL | `a.media.ad.creativeURL` | `MEDIA_AdMetadataKeyCREATIVE_URL` |
+| CREATIVE URL | `a.media.ad.creativeURL` | `MEDIA_AdMetadataKeyCREATIVE_URL` |
 
 ## Konstanter {#constants}
 
@@ -76,7 +76,7 @@ Du kan använda följande konstanter för att spåra mediahändelser:
 | --- | --- |
 | `MEDIA_STANDARD_MEDIA_METADATA` | Konstant för att ange metadata för `MediaInfo` `trackLoad` |
 | `MEDIA_STANDARD_AD_METADATA` | Konstant för att ange annonsmetadata för `EventData` `trackEvent` |
-| `MEDIA_RESUMED` | Konstant för sändning av videoåterupptagen hjärtfrekvens. Om du vill återuppta videospårning av innehåll som tidigare stoppats måste du ange egenskapen `MEDIA_RESUMED` för objektet `mediaInfo` när du anropar `mediaTrackLoad`. (`MEDIA_RESUMED` är inte en händelse som du kan spåra med API:t `mediaTrackEvent`.) `MEDIA_RESUMED` ska anges till true när ett program vill fortsätta att spåra innehåll som en användare har slutat titta på men nu har för avsikt att återuppta tittandet. <br/><br/>Anta till exempel att en användare tittar på 30 % av innehållet och sedan stänger programmet. Detta leder till att sessionen avslutas. Om samma användare senare återgår till samma innehåll, och programmet tillåter användaren att återuppta från den punkt där han/hon slutade, bör programmet ange `MEDIA_RESUMED` till &quot;true&quot; när API:t `mediaTrackLoad` anropas. Resultatet är att dessa två olika mediesessioner för samma videoinnehåll kan länkas tillsammans. Följande är implementeringsexemplet: <br/><br/> `mediaInfo =` <br/>   `adb_media_init_mediainfo(` <br/>     `"test_media_name",` <br/>     `"test_media_id",`<br/>      `10,` <br/>     `"vod"` <br/> `)` <br/> `mediaInfo[ADBMobile().MEDIA_RESUMED] = true` <br/> `mediaContextData = {}` <br/>  `ADBMobile().mediaTrackLoad(mediaInfo, mediaContextData)` <br/><br/>Detta skapar en ny session för videon, men det gör även att SDK skickar en pulsslagsförfrågan med händelsetypen &quot;resume&quot;, som kan användas för rapportering för att knyta ihop två olika mediesessioner. |
+| `MEDIA_RESUMED` | Konstant för sändning av videoåterupptagen hjärtfrekvens. Om du vill återuppta videospårning av innehåll som tidigare stoppats måste du ange egenskapen `MEDIA_RESUMED` för objektet `mediaInfo` när du anropar `mediaTrackLoad`. (`MEDIA_RESUMED` är inte en händelse som du kan spåra med `mediaTrackEvent` API.) `MEDIA_RESUMED` bör anges till true när ett program vill fortsätta spåra innehåll som en användare har slutat titta på men nu vill återuppta tittandet. <br/><br/>Anta till exempel att en användare tittar på 30 % av innehållet och sedan stänger programmet. Detta leder till att sessionen avslutas. Om samma användare senare återgår till samma innehåll, och programmet tillåter användaren att återuppta från den punkt där han/hon slutade, bör programmet ange `MEDIA_RESUMED` till &quot;true&quot; när API:t `mediaTrackLoad` anropas. Resultatet är att dessa två olika mediesessioner för samma videoinnehåll kan länkas tillsammans. Följande är implementeringsexemplet: <br/><br/> `mediaInfo =` <br/>   `adb_media_init_mediainfo(` <br/>     `"test_media_name",` <br/>     `"test_media_id",`<br/>      `10,` <br/>     `"vod"` <br/> `)` <br/> `mediaInfo[ADBMobile().MEDIA_RESUMED] = true` <br/> `mediaContextData = {}` <br/>  `ADBMobile().mediaTrackLoad(mediaInfo, mediaContextData)` <br/><br/>Detta skapar en ny session för videon, men det gör även att SDK skickar en pulsslagsförfrågan med händelsetypen &quot;resume&quot;, som kan användas för rapportering för att knyta ihop två olika mediesessioner. |
 
 ### Konstanter för innehållstyp
 

@@ -1,11 +1,11 @@
 ---
 title: Lär dig spåra uppspelning med JavaScript 2.x
-description: Lär dig hur du implementerar huvudspårning med Media SDK i en webbläsare med JavaScript 2.x-appar.
+description: Lär dig implementera huvudspårning med Media SDK i en webbläsare med JavaScript 2.x-appar.
 uuid: 3d6e0ab1-899a-43c3-b632-8276e84345ab
 exl-id: d8af37a0-9048-4e6b-8cba-809386cbed5f
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '681'
 ht-degree: 2%
@@ -165,4 +165,4 @@ Följande instruktioner ger vägledning för implementering i 2.x SDK:er.
    >Detta kan vara samma händelsekälla som användes i steg 4. Se till att varje `trackPause()` API-anrop paras med ett följande `trackPlay()` API-anrop när uppspelningen återupptas.
 
 * Spåra scenarier: [VOD-uppspelning utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md)
-* Exempelspelare som ingår i JavaScript SDK för ett komplett spårningsexempel.
+* Exempelspelare ingår i JavaScript SDK för ett komplett spårningsexempel.

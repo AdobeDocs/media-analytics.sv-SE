@@ -2,9 +2,9 @@
 title: Media Analytics Cookbook
 description: Cookbook-sida på den översta nivån, med allmänna MA-cookbooklänkar och SDK-specifika länkar.
 exl-id: 5f26fbce-d861-4b38-8497-ce010082f3a7
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: 9ba64b68efec5dd8b52010ac1a13afd7703448d0
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '32'
 ht-degree: 0%
@@ -17,6 +17,6 @@ ht-degree: 0%
 
 [Attribut för medieström](/help/use-cases/media-analytics-cookbook/media-dimensions.md)
 
-## Hjälpavsnitt för Media SDK-kokbok
+## Media SDK cookbook topics
 
 [Media SDK Cookbook](/help/use-cases/cookbook/sdk-cookbook-overview.md)

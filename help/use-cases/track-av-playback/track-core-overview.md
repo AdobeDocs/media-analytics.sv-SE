@@ -1,11 +1,11 @@
 ---
 title: Uppspelning av spårningsinnehåll förklaras
-description: "Läs om hur du spårar uppspelning, inklusive spårning av mediainläsning, mediestart, mediapaus och slutförda media. "
+description: 'Läs om hur du spårar uppspelning, inklusive spårning av mediainläsning, mediestart, mediapaus och slutförda media. '
 uuid: 7b8e2f76-bc4e-4721-8933-3e4453b01788
 exl-id: 98ad2783-c9e3-48de-88df-8549f26114a0
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: 0d53e62069a65b252e004e21943ecdbd011a3658
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '875'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Spårningsöversikt{#tracking-overview}
 
-I den här dokumentationen beskrivs spårning i version 2.x av SDK.
+Denna dokumentation beskriver spårning i version 2.x av SDK.
 
 >[!IMPORTANT]
 >
@@ -22,7 +22,7 @@ I den här dokumentationen beskrivs spårning i version 2.x av SDK.
 
 ## Spelarhändelser
 
-Spårning av huvuduppspelning inkluderar spårning av mediainläsning, mediestart, mediapaus och slutförda media. Även om det inte är obligatoriskt är spårning av buffring och sökning också viktiga komponenter som används för att spåra uppspelning av innehåll. Identifiera de spelarhändelser som motsvarar Media SDK-spårningsanrop i mediespelarens API, och koda händelsehanterarna för att anropa spårnings-API:er och för att fylla i obligatoriska och valfria variabler.
+Spårning av huvuduppspelning inkluderar spårning av mediainläsning, mediestart, mediapaus och slutförda media. Även om det inte är obligatoriskt är spårning av buffring och sökning också viktiga komponenter som används för att spåra uppspelning av innehåll. Identifiera de spelarhändelser som motsvarar Media SDK-spårningsanropen i mediespelarens API, och koda händelsehanterarna för att anropa spårnings-API:er och för att fylla i obligatoriska och valfria variabler.
 
 ### Vid mediainläsning
 
@@ -155,7 +155,7 @@ Avbryt ändringar
 
 Se exempel på varje steg i följande plattformsspecifika ämnen och titta på de exempelspelare som ingår i dina SDK:er.
 
-Ett enkelt exempel på uppspelningsspårning finns i den här användningen av JavaScript 2.x SDK i en HTML 5-spelare:
+Ett enkelt exempel på uppspelningsspårning finns i den här användningen av JavaScript 2.x SDK i en HTML-spelare:
 
 ```js
 /* Call on media start */

@@ -1,22 +1,22 @@
 ---
-title: VOD-uppspelning utan annonser
-description: Visa ett exempel på hur du spårar VOD-uppspelning som inte innehåller några annonser.
+title: VOD Playback with No Ads
+description: Se ett exempel på hur du spårar uppspelning i VOD som inte innehåller några annonser.
 uuid: ee2a1b79-2c2f-42e1-8e81-b62bbdd0d8cb
 exl-id: 9e2240f0-da8d-4dcc-9d44-0f121c60d924
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: 57b4120518a6fecf6a9751f944d5bd20f04b15fe
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '369'
 ht-degree: 0%
 
 ---
 
-# VOD-uppspelning utan annonser{#vod-playback-with-no-ads}
+# VOD utan annonser{#vod-playback-with-no-ads}
 
 ## Scenario {#scenario}
 
-Detta scenario har en VOD-resurs, utan annonser, som spelas upp en gång från början till slut.
+Det här scenariot har en VOD-resurs utan annonser, som spelas upp en gång från början till slut.
 
 | Utlösare | Heartbeat-metod | Nätverksanrop | Anteckningar   |
 |---|---|---|---|

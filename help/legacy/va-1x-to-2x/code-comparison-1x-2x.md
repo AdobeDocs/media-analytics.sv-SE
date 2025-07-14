@@ -3,9 +3,9 @@ title: Kodjämförelse v1.x till v2.x
 description: Lär dig skillnaden mellan kod i 1.x- och 2.x-versionerna av Media SDK.
 uuid: 9f0a1660-2100-446d-ab75-afdf966478b3
 exl-id: c2324c6a-329f-44e2-bea0-9d43ef9c6ef7
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '544'
 ht-degree: 2%
@@ -25,7 +25,7 @@ Alla konfigurationsparametrar och API:er för spårning konsolideras nu i klasse
 **Ändringar av konfigurationsegenskaper:**
 
 * `sdk` - har ändrat namn till `appVersion`
-* `publisher` - Borttagen. Experience Cloud används i stället som utgivare
+* `publisher` - Borttagen; Experience Cloud Org ID används i stället som utgivare
 * `quiteMode` - Borttagen
 
 **Länkar till exempelspelare för 1.x och 2.x:**
@@ -75,7 +75,7 @@ configData.debugLogging = true;
 this._heartbeat.configure(configData);
 ```
 
-#### Initiering av pulsslag för media (2.x) {#mh-init-2.x}
+#### Initiering av pulsslag i media (2.x) {#mh-init-2.x}
 
 ```js
 var mediaConfig = new MediaHeartbeatConfig();
@@ -275,7 +275,7 @@ VideoAnalyticsProvider.prototype._onLoad = function() {
 | `VideoMetadataKeys()` | `MediaHeartbeat.createMediaObject()` |
 | `AdobeAnalyticsPlugin.setVideoMetadata()` | `MediaHeartbeat.trackSessionStart()` |
 
-#### Anpassade metadata (1.x) {#custom-meta-1.x}
+#### Egna metadata (1.x) {#custom-meta-1.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onLoad = function() {
@@ -289,7 +289,7 @@ VideoAnalyticsProvider.prototype._onLoad = function() {
 };
 ```
 
-#### Anpassade metadata (2.x) {#custom-meta-2.x}
+#### Egna metadata (2.x) {#custom-meta-2.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onLoad = function() {
@@ -411,7 +411,7 @@ VideoAnalyticsProvider.prototype._onBufferStart = function() {
 | --- | --- |
 | `VideoPlayerPlugin.trackBufferComplete()` | `MediaHeartbeat.trackEvent(`<br/><br/>  `MediaHeartbeat.Event.BufferComplete)` |
 
-#### Bufferten har slutförts (1.x) {#buffer-complete-1.x}
+#### Bufferten är klar (1.x) {#buffer-complete-1.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onBufferComplete = function() {
@@ -466,7 +466,7 @@ VideoAnalyticsProvider.prototype._onComplete = function() {
 | `VideoPlayerPluginDelegate.getAdInfo()` | `MediaHeartbeat.trackEvent(`<br/><br/>  `MediaHeartbeat.Event.AdBreakStart)` |
 | | `MediaHeartbeat.trackEvent(`<br/><br/>  `MediaHeartbeat.Event.AdStart)` |
 
-#### Annonsstart (1.x) {#ad-start-1.x}
+#### Ad Start (1.x) {#ad-start-1.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onAdStart = function() {
@@ -481,7 +481,7 @@ SampleVideoPlayerPluginDelegate.prototype.getAdInfo = function() {
 };
 ```
 
-#### Annonsstart (2.x) {#ad-start-2.x}
+#### Ad Start (2.x) {#ad-start-2.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onAdStart = function() {
@@ -507,7 +507,7 @@ VideoAnalyticsProvider.prototype._onAdStart = function() {
 | `AdMetadataKeys()` | `MediaHeartbeat.createAdObject()` |
 | `AdobeAnalyticsPlugin.setAdMetadata()` | `MediaHeartbeat.trackAdStart()` |
 
-#### Standardmetadata för annonsering (1.x) {#ad-meta-1.x}
+#### Standard Ad Metadata (1.x) {#ad-meta-1.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onAdStart = function() {
@@ -526,7 +526,7 @@ VideoAnalyticsProvider.prototype._onAdStart = function() {
 };
 ```
 
-#### Standardmetadata för annonsering (2.x) {#ad-meta-2.x}
+#### Standard Ad Metadata (2.x) {#ad-meta-2.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onAdStart = function() {
@@ -612,7 +612,7 @@ VideoAnalyticsProvider.prototype._onAdStart = function() {
 | `AdobeAnalyticsPlugin.setAdMetadata()` | `MediaHeartbeat.createAdObject()` |
 | | `MediaHeartbeat.trackAdStart()` |
 
-#### Hoppa över annonser (1.x) {#ad-skip-1.x}
+#### Annonsväxling (1.x) {#ad-skip-1.x}
 
 ```js
 SampleVideoPlayerPluginDelegate.prototype.getAdInfo = function() {
@@ -728,7 +728,7 @@ VideoAnalyticsProvider.prototype._onChapterSkip = function() {
 | `VideoPlayerPlugin.trackChapterStart()` | `MediaHeartbeat.createChapterObject()` |
 | `AdobeAnalyticsPlugin.setChapterMetadata()` | `MediaHeartbeat.trackEvent(`<br/><br/>  `MediaHeartbeat.Event.ChapterStart)` |
 
-#### Anpassade metadata för kapitel (1.x) {#chap-cust-meta-1.x}
+#### Egna metadata för kapitel (1.x) {#chap-cust-meta-1.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onChapterStart = function() {
@@ -740,7 +740,7 @@ VideoAnalyticsProvider.prototype._onChapterStart = function() {
 };
 ```
 
-#### Anpassade metadata för kapitel (2.x) {#chap-cust-meta-2.x}
+#### Egna metadata för kapitel (2.x) {#chap-cust-meta-2.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onChapterStart = function() {
@@ -771,7 +771,7 @@ VideoAnalyticsProvider.prototype._onChapterComplete = function() {
 };
 ```
 
-#### Fullständigt kapitel (2.x) {#chap-complete-2.x}
+#### Kapitel fullständigt (2.x) {#chap-complete-2.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onChapterComplete = function() {
@@ -788,7 +788,7 @@ VideoAnalyticsProvider.prototype._onChapterComplete = function() {
 | --- | --- |
 | `VideoPlayerPlugin.trackBitrateChange()` | `MediaHeartbeat.trackEvent(`<br/><br/>  `MediaHeartbeat.Event.BitrateChange)` |
 
-#### Bithastighetsändring (1.x) {#bitrate-chg-1.x}
+#### Ändra bithastighet (1.x) {#bitrate-chg-1.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onBitrateChange = function() {

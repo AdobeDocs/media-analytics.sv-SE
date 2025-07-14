@@ -1,11 +1,11 @@
 ---
-title: Ställa in Media SDK med JavaScript 2.x
+title: Så här konfigurerar du Media SDK med JavaScript 2.x
 description: Följ de här stegen för att konfigurera Media SDK-programmet på JavaScript 2.x.
 uuid: 0269d8ad-0af8-4bf1-9d15-e06c2952a005
 exl-id: 33976096-8b86-4353-906b-e25bf4693471
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '395'
 ht-degree: 2%
@@ -19,7 +19,7 @@ ht-degree: 2%
 * **Hämta giltiga konfigurationsparametrar**
 Dessa parametrar kan hämtas från en Adobe-representant när du har konfigurerat ditt analyskonto.
 * **Implementera `AppMeasurement` för JavaScript i ditt medieprogram**
-Mer information om Adobe Mobile SDK-dokumentationen finns i [Implementera analys med JavaScript.](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=sv-SE)
+Mer information om dokumentationen för Adobe Mobile SDK finns i [Implementera analys med JavaScript.](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html)
 
 * **Tillhandahåll följande funktioner i din mediespelare:**
 
@@ -48,7 +48,7 @@ Mer information om Adobe Mobile SDK-dokumentationen finns i [Implementera analys
 
       >[!NOTE]
       >
-      >Från och med version 2.1.0 är JavaScript SDK kompatibelt med modulspecifikationerna AMD och CommonJS, och `VideoHeartbeat.min.js` kan även användas med kompatibla modulinläsare.
+      >Från och med version 2.1.0 uppfyller JavaScript SDK kraven i modulerna AMD och CommonJS, och `VideoHeartbeat.min.js` kan även användas med kompatibla modulinläsare.
 
 1. Skapa lokala referenser till klasserna `MediaHeartbeat` för enkel åtkomst till API:erna.
 

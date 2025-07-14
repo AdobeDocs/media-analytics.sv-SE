@@ -3,9 +3,9 @@ title: Vad är tidslinjen för att starta och avsluta kapitlet om direktuppspeln
 description: Lär dig mer om spelhuvudets tidslinje och när ett kapitel börjar och slutar.
 uuid: 41b52072-e1cd-4dda-9253-31f3408924f6
 exl-id: e3f5bbdb-7007-435b-920c-566d163e57ad
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '1159'
 ht-degree: 5%
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 # Tidslinje: Kapitel {#timeline-3-chapters}
 
-## VOD, pre-roll ads, pausa, buffra, visa innehållet till slutet
+## VOD, förrullningsannonser, pausa, buffra, visa innehållet i slutet
 
 I följande diagram visas spelhuvudets tidslinje och motsvarande tidslinje för en användares åtgärder. Nedan presenteras närmare uppgifter om varje åtgärd och de tillhörande ansökningarna.
 
@@ -633,4 +633,4 @@ Skicka `sessionComplete` till serverdelen för att ange att användaren har titt
 
 >[!NOTE]
 >
->**Inga söktider? -** Det finns inget uttryckligt stöd i Media Collection API för `seekStart` - eller `seekComplete` -händelser. Detta beror på att vissa spelare genererar ett mycket stort antal sådana händelser när slutanvändaren rensar, och att flera hundra användare enkelt kan tappa bort nätverksbandbredden för en backend-tjänst. Adobe kringgår explicit stöd för seek-händelser genom att beräkna pulsslagets varaktighet baserat på enhetens tidsstämpel i stället för spelhuvudets position.
+>**Inga söktider? -** Det finns inget uttryckligt stöd i Media Collection API för `seekStart` - eller `seekComplete` -händelser. Detta beror på att vissa spelare genererar ett mycket stort antal sådana händelser när slutanvändaren rensar, och att flera hundra användare enkelt kan tappa bort nätverksbandbredden för en backend-tjänst. Adobe kan kringgå explicit stöd för seek-händelser genom att beräkna pulsslagets varaktighet baserat på enhetens tidsstämpel i stället för spelhuvudets position.

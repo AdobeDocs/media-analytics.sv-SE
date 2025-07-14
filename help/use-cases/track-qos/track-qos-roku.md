@@ -1,11 +1,11 @@
 ---
 title: Lär dig hur du spårar Experience-kvalitet på Roku
-description: "Lär dig hur du implementerar kvalitetskontroll av upplevelser (QoE, QoS) med Media SDK on Roku."
+description: Lär dig hur du implementerar kvalitetskontroll av upplevelser (QoE, QoS) med Media SDK på Roku.
 uuid: a8b242ab-da3c-4297-9eef-f0b9684ef56a
 exl-id: cd84c26d-ad91-4179-9532-83408030ff3e
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: 2ce09eafeb8def909ae2a8ae7cc09a88b2f663af
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '197'
 ht-degree: 4%
@@ -18,11 +18,11 @@ Följande anvisningar ger vägledning för implementering i alla 2.x SDK:er.
 
 >[!IMPORTANT]
 >
->Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandboken här: [Hämta SDK:er.](/help/getting-started/download-sdks.md)
+>Om du implementerar en 1.x-version av SDK kan du hämta 1.x-utvecklarhandboken här: [Hämta SDK.](/help/getting-started/download-sdks.md)
 
 ## Implementera QOS
 
-1. Identifiera när bithastigheten ändras under medieuppspelning och använd `mediaUpdateQoS`-API:t för att uppdatera QoS-informationen i Media SDK.
+1. Identifiera när bithastigheten ändras under medieuppspelning och använd `mediaUpdateQoS`-API:t för att uppdatera QoS-informationen på Media SDK.
 
    QoSObject-variabler:
 

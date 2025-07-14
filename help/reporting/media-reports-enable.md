@@ -3,9 +3,9 @@ title: Aktivera medierapporter
 description: Läs mer om medierapportsviten som samlar in mediemätningar.  Följ de här stegen för att konfigurera medierapporter innan mediedata skickas.
 uuid: d306068d-a308-4b6e-8a72-742dda0de428
 exl-id: 686d88a5-79b6-4936-ba9e-8f834ef330d1
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: 2ce09eafeb8def909ae2a8ae7cc09a88b2f663af
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '902'
 ht-degree: 0%
@@ -67,9 +67,9 @@ Avancerade kunder kan bara använda mediepanelerna i Analysis Workspace efter at
 
    | Alternativ | Anteckningar |
    | --- | --- |
-   | Fortsätt använda anpassade variabler | Pros and Cons:<ul> <li> **Pros:** Innehållstrendningen fortsätter att fungera efter migreringen. </li> <li> **Kon:** Kräver att du behåller två anpassade eVars-variabler och tre anpassade händelser som tilldelats media. Du återanvänder en anpassad eVar och en anpassad händelse. </li> </ul> Så här fortsätter du använda anpassade variabler: <ol> <li>Välj **[!UICONTROL Use Custom Variables,]** och klicka sedan på **[!UICONTROL Save.]** </li> <li>Mappa dina aktuella anpassade eVars och händelser när du uppmanas till det och klicka sedan på **[!UICONTROL Save:]** </li> </ol> |
+   | Fortsätt använda anpassade variabler | Pros and Cons:<ul> <li> **Pros:** Innehållstrendningen fortsätter att fungera efter migreringen. </li> <li> **Kon:** Kräver att du behåller två anpassade eVars-variabler och tre anpassade händelser som tilldelats media. Du återanvänder en anpassad eVar-händelse och en anpassad händelse. </li> </ul> Så här fortsätter du använda anpassade variabler: <ol> <li>Välj **[!UICONTROL Use Custom Variables,]** och klicka sedan på **[!UICONTROL Save.]** </li> <li>Mappa dina aktuella anpassade eVars och händelser när du uppmanas till det och klicka sedan på **[!UICONTROL Save:]** </li> </ol> |
    | Migrera till lösningsvariabler | Pros and Cons:<ul> <li> **Pros:** Du återanvänder tre anpassade eVars-variabler och fyra anpassade händelser. </li> <li> **Kon:** Du förlorar **all** historik för trender och jämförelse för medierapporter. Det innebär att du inte kan trenda innehållsvyer eller den innehållstid som spelas upp för datum innan du migrerar till pulsslag. </li> </ul> **Begränsning:** Migrera inte till lösningsvariabler såvida du inte är säker på att du inte vill bevara den här trendningen. Alla kunder bör använda lösningens variabler och bearbetningsregler för att lägga in mediedata i befintliga props och eVars endast om de behöver bevara den historiska kontinuiteten. Så här migrerar du till lösningsvariabler: Välj **[!UICONTROL Use Solution Variables]** och klicka på **[!UICONTROL Save].** <br><br> VIKTIGT! Om du migrerar till lösningsvariabler förlorar du **alla** historiktrender och jämförelse för medierapporter. |
 
 >[!IMPORTANT]
 >
->Ändra inte klassificeringsnamnen för variabler som listas i Metrics- och metadatatabeller (t.ex. [Audio- och Video-parametrar](/help/implementation/variables/audio-video-parameters.md) som beskrivs där under Rapportera/Reserverad variabel som &quot;klassificering&quot;. Medieklassificeringarna definieras när en rapportsserie aktiveras för mediespårning. Ibland lägger Adobe till nya egenskaper, och när detta inträffar måste kunderna aktivera sina rapporteringsprogram på nytt för att få tillgång till de nya medieegenskaperna. Under uppdateringsprocessen avgör Adobe om klassificeringarna är aktiverade genom att kontrollera namnen på variablerna. Om någon av dem saknas lägger Adobe till de saknade igen.
+>Ändra inte klassificeringsnamnen för variabler som listas i Metrics- och metadatatabeller (t.ex. [Audio- och Video-parametrar](/help/implementation/variables/audio-video-parameters.md) som beskrivs där under Rapportera/Reserverad variabel som &quot;klassificering&quot;. Medieklassificeringarna definieras när en rapportsserie aktiveras för mediespårning. Ibland lägger Adobe till nya egenskaper och när detta inträffar måste kunderna aktivera sina rapporteringsprogram på nytt för att få tillgång till de nya medieegenskaperna. Under uppdateringsprocessen avgör Adobe om klassificeringarna är aktiverade genom att kontrollera namnen på variablerna. Om någon av dem saknas lägger Adobe till de saknade igen.

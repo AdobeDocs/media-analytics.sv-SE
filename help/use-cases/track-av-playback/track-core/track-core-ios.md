@@ -3,9 +3,9 @@ title: Lär dig spåra uppspelning i iOS
 description: Lär dig implementera huvudspårning med Media SDK på iOS.
 uuid: bdc0e05c-4fe5-430e-aee2-f331bc59ac6b
 exl-id: 5c6b36b3-a421-45a4-a65e-4eb57513ca4a
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: c308dba2d7cf07b89bf124bd6e5f972c253c9f18
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '704'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Spåra kärnuppspelning på iOS{#track-core-playback-on-ios}
 
-I den här dokumentationen beskrivs spårning i version 2.x av SDK.
+Denna dokumentation beskriver spårning i version 2.x av SDK.
 
 >[!IMPORTANT]
 >
@@ -71,7 +71,6 @@ I den här dokumentationen beskrivs spårning i version 2.x av SDK.
 
       * [Implementera standardmetadata på iOS](/help/use-cases/track-av-playback/impl-std-metadata/impl-std-metadata-ios.md)
       * **Metadatanycklar för video**
-
         [iOS metadatanycklar](/help/use-cases/track-av-playback/impl-std-metadata/ios-metadata-keys.md)
 
       * Se den omfattande listan med videometadata här: [Parametrar för ljud och video](/help/implementation/variables/audio-video-parameters.md)
@@ -181,4 +180,4 @@ I den här dokumentationen beskrivs spårning i version 2.x av SDK.
 Mer information om hur du spårar uppspelning finns i följande:
 
 * Spåra scenarier: [VOD-uppspelning utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md)
-* Exempelspelare som ingår i iOS SDK för ett komplett spårningsexempel.
+* Exempelspelare ingår i iOS SDK för ett komplett spårningsexempel.

@@ -3,9 +3,9 @@ title: Hantera programavbrott under uppspelning
 description: Lär dig hur du hanterar avbrott i spårning under uppspelning av media.
 uuid: 1ccb4507-bda6-462d-bf67-e22978a4db3d
 exl-id: a84af6ad-dd4f-4f0d-93dd-66f2f84ddc0e
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: 2ce09eafeb8def909ae2a8ae7cc09a88b2f663af
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '355'
 ht-degree: 0%
@@ -31,8 +31,8 @@ Uppspelning i ett medieprogram kan avbrytas på flera olika sätt. En användare
 
 * _Vilket är det rätta sättet att hantera omstartsspårning efter att appen har funnits i bakgrunden under en lång tid?_
 
-  Programmet ska anropa `trackSessionEnd` för att avsluta spårningssessionen. Från och med version 2.1 skickar SDK en&quot;end&quot;-pinga för att meddela back-end-servern att spårningssessionen är stängd.
+  Programmet ska anropa `trackSessionEnd` för att avsluta spårningssessionen. Från och med version 2.1 skickar SDK en&quot;slutpinga&quot; för att meddela backend-servern att spårningssessionen är stängd.
 
 * _Vad händer om du startar om samma session?_
 
-  Information om hur du återupptar en spårningssession finns i [Återuppta inaktiva sessioner](resuming-inactive.md). SDK skickar ett återupptagningsförsök för att meddela backend-servern att användaren återtar sessionen manuellt.
+  Information om hur du återupptar en spårningssession finns i [Återuppta inaktiva sessioner](resuming-inactive.md). SDK skickar ett återupptagningsping för att meddela backend-servern att användaren återtar sessionen manuellt.

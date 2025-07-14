@@ -1,24 +1,24 @@
 ---
-title: "VOD Playback with Pre-roll Ads"
-description: "Se ett exempel på hur man spårar VOD-innehåll som innehåller pre-roll-annonser med Media SDK."
+title: VOD Playback with Pre-roll Ads
+description: Se ett exempel på hur du spårar VOD-innehåll som innehåller förrullningsannonser med Media SDK.
 uuid: 5d1022a8-88cb-40aa-919c-60dd592a639e
 exl-id: c77f6457-ac3b-4d7a-8eed-e7ebd357a6a5
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '530'
 ht-degree: 0%
 
 ---
 
-# VOD-uppspelning med pre-roll-annonser{#vod-playback-with-pre-roll-ads}
+# Uppspelning av VOD med förrollningsannonser{#vod-playback-with-pre-roll-ads}
 
-I det här scenariot har annonser i förväg infogats före huvudinnehållet. Om inget annat anges är nätverksanropen samma som anropen i VOD-uppspelningen [utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md). Nätverksanropen sker samtidigt, men nyttolasten är annorlunda.
+I det här scenariot har annonser i förväg infogats före huvudinnehållet. Om inget annat anges är nätverksanropen samma som anropen i [VOD-uppspelningen utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md). Nätverksanropen sker samtidigt, men nyttolasten är annorlunda.
 
 | Utlösare | Heartbeat-metod | Nätverksanrop   | Anteckningar   |
 | --- | --- | --- | --- |
-| Användaren klickar på [!UICONTROL Play] | `trackSessionStart` | Börja med Analytics-innehåll, starta pulsslagsinnehåll | Mätbiblioteket vet inte om det finns en förrollad annons, så dessa nätverksanrop är fortfarande identiska med [VOD-uppspelningen utan annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md). |
+| Användaren klickar på [!UICONTROL Play] | `trackSessionStart` | Börja med Analytics-innehåll, starta pulsslagsinnehåll | Mätbiblioteket vet inte om det finns en förrollsannonsering, så dessa nätverksanrop är fortfarande identiska med [VOD-uppspelningen utan några annonser](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md)-scenarier. |
 | Annonsen börjar. | <ul> <li> `trackEvent:AdBreakStart` </li> <li> `trackEvent:AdStart` </li> </ul> | Start, pulsslag och start för annonsering i Analytics | |
 | Bildrutan i annons 1 spelas upp. | `trackPlay` | Heartbeat Ad Play | Annonsinnehållet spelas upp före huvudinnehållet och hjärtslagen börjar när annonsen börjar. |
 | Annonsen spelas. | | Ad Heartbeats | |
@@ -72,7 +72,7 @@ På samma sätt som för `Heartbeat Content Complete` anrop skickas ett `Heartbe
 
 ## Exempelkod för en annonsbrytning före rullning {#sample-code-for-a-pre-roll-ad-break}
 
-I det här scenariot består VOD av en pre-roll-annons, en andra pre-roll-annons, och därefter spelas innehållet upp.
+I det här scenariot består VOD av en pre-roll-annons, en andra pre-roll-annons, och sedan spelas innehållet upp.
 
 ![](assets/preroll-regular-playback.png)
 

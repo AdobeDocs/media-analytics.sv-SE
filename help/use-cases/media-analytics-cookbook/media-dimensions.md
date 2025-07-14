@@ -2,9 +2,9 @@
 title: Vad är medieströmsattribuering?
 description: Lär dig hur du länkar programåtgärder till mediespårningsdata utan att behöva använda ytterligare bearbetningsregler och anpassade variabler.
 exl-id: 75cc9088-776d-4b10-b358-9fff956a7eb7
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: 0088d41f557b1dc49ac2b3b6d0a812f22d8849e9
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '232'
 ht-degree: 1%
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 Med Media Stream Attribution kan ni länka programåtgärder till mediaspårningsdata utan att behöva använda ytterligare bearbetningsregler och anpassade variabler.
 
-## Media Dimensions Outside Media Tracking
+## Mediedimensioner utanför mediespårning
 
 Du kan lägga till mediedimensioner till analyssamtal som sidvyer och anpassade länkar. Under implementeringen måste du lägga till parametrar för mediekontextdata i Analytics-spårningsanropen. Om du vill visa en fullständig lista över tillgängliga kontextdataparametrar som används för media kan du läsa [Parametrar för ljud och video.](/help/implementation/variables/audio-video-parameters.md)
 
@@ -34,7 +34,7 @@ s.contextData["a.media.show"]="Mi Amore"
 s.tl(this,'o','Hero Banner');
 ```
 
-I analysrapporter kan du använda eVarna `Show` för att dela upp data, och du kan räkna antalet instanser av spårlänkar. Rapporteringen skulle se ut ungefär så här:
+I Analytics-rapporter kan du använda eVar `Show` för att dela upp data, och du kan räkna antalet instanser av spårlänkar. Rapporteringen skulle se ut ungefär så här:
 
 ![](/assets/myShow-rpt-1.png)
 
