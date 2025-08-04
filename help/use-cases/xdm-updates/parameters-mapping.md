@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Parametermappning för Media Analytics för Adobe Experience Platform och Customer Journey Analytics
 
-Det här dokumentet innehåller en omfattande lista över alla Media Analytics-parametrar som används i Adobe Experience Platform och Customer Journey Analytics. Den är avsedd att stödja integrering av data som importeras från Adobe Analytics till plattformen via [Analytics Source Connector](https://experienceleague.adobe.com/en/docs/experience-platform/sources/connectors/adobe-applications/analytics) eller [Analytics Source Connector for Classifications](https://experienceleague.adobe.com/en/docs/experience-platform/sources/connectors/adobe-applications/classifications) och mappa varje parameter till motsvarande XDM-fältsökväg.
+Det här dokumentet innehåller en omfattande lista över alla Media Analytics-parametrar som används i Adobe Experience Platform och Customer Journey Analytics. Den är avsedd att stödja integrering av data som importeras från Adobe Analytics till plattformen via [Analytics Source Connector](https://experienceleague.adobe.com/sv/docs/experience-platform/sources/connectors/adobe-applications/analytics) eller [Analytics Source Connector for Classifications](https://experienceleague.adobe.com/sv/docs/experience-platform/sources/connectors/adobe-applications/classifications) och mappa varje parameter till motsvarande XDM-fältsökväg.
 
 ## Media Analytics-reserverade variabler
 

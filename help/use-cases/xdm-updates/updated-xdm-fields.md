@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Den här informationen är avsedd för organisationer som använder [Analytics-källkopplingen](https://experienceleague.adobe.com/en/docs/experience-platform/sources/connectors/adobe-applications/analytics) för att hämta Streaming Media-data från Adobe Analytics till Adobe Experience Platform för användning med Customer Journey Analytics-rapportering eller någon annan plattformstjänst.
+>Den här informationen är avsedd för organisationer som använder [Analytics-källkopplingen](https://experienceleague.adobe.com/sv/docs/experience-platform/sources/connectors/adobe-applications/analytics) för att hämta Streaming Media-data från Adobe Analytics till Adobe Experience Platform för användning med Customer Journey Analytics-rapportering eller någon annan plattformstjänst.
 >
 >Ändringarna påverkar inte Adobe Analytics som ett fristående program, inklusive datainsamling, bearbetning och rapportering. Verktyg som Dataflöden och Bearbetningsregler påverkas inte, så inga uppdateringar av Analytics-implementeringen krävs.
 
