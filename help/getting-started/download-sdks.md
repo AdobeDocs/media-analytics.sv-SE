@@ -22,7 +22,7 @@ Taggar i Adobe Experience Platform är nästa generation av funktioner för hant
 >[!NOTE]
 >
 >Mer information om hur du hämtar äldre SDK:er finns i [Äldre - Hämta SDK:er](/help/legacy/legacy-download-sdks.md).<br>
->>Viktig information om att supporten upphör finns i [Vanliga frågor om supporten](/help/additional-resources/end-of-support-faqs.md).
+>&#x200B;>Viktig information om att supporten upphör finns i [Vanliga frågor om supporten](/help/additional-resources/end-of-support-faqs.md).
 
 ## Media SDK och mobila bibliotek {#media-sdks-libraries}
 
