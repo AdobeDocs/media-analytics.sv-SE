@@ -1,19 +1,19 @@
 ---
-title: Lär dig mer om enheter och plattformar som stöds
-description: Lär dig mer om de vanligaste enheterna som iOS, Android, OTT och JavaScript som finns i Streaming Media Collection.
+title: Läs om enheter och plattformar som stöds
+description: Läs om de vanligaste enheterna som iOS, Android, OTT och JavaScript som Adobe direktuppspelningsmedietjänster stöder.
 exl-id: 169ff7b9-e577-45b7-8927-74bdcccc0a77
 feature: Streaming Media
 role: User, Admin
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+source-git-commit: 0083869ae4248134dea18a87b9d4ce563eeed1a4
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '308'
 ht-degree: 6%
 
 ---
 
 # Enheter och plattformar som stöds {#devices-supported}
 
-Adobe Streaming Media Collection stöder alla större enheter:
+Adobe direktuppspelade medietjänster har stöd för alla större enheter, inklusive:
 
 * iOS- och Android-smartphones och surfplattor
 * OTT-enheter för Roku, Fire TV och Android TV
@@ -21,7 +21,7 @@ Adobe Streaming Media Collection stöder alla större enheter:
 
 SDK uppdateras regelbundet när nya versioner av enheter släpps, och du kan använda SDK:er för att integrera med interna spelare för varje enskild plattform eller annan mediespelare som är tillgänglig.
 
-För enheter som för närvarande inte har stöd för SDK eller i situationer där du kan behöva anpassa implementeringen kan du använda API:t för Media Collection eller API:t för Media Edge. Med dessa API:er kan du göra RESTful API-anrop direkt från en enhet till backend-delen av Streaming Media Collection.
+För enheter som för närvarande inte har stöd för SDK eller i situationer där du kan behöva anpassa implementeringen kan du använda API:t för Media Collection eller API:t för Media Edge. Med dessa API:er kan du göra RESTful API-anrop direkt från en enhet till backend-delen av Adobe direktuppspelade medietjänster.
 
 Tabellen nedan visar de enheter som stöds för närvarande. Om en enhet inte finns med i listan kontaktar du kundtjänst eller lösningskonsult för att få information om enhetens status.
 

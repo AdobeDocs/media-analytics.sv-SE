@@ -1,13 +1,13 @@
 ---
 title: Skicka Ping-händelser
-description: Ping-händelser är pulsslagen i Streaming Media Collection. Lär dig hur du skickar en tidsbestämd ping för huvudinnehåll eller annonsspårning.
+description: Ping-händelser är den bästa takten i Adobe direktuppspelande medietjänster. Lär dig hur du skickar en tidsbestämd ping för huvudinnehåll eller annonsspårning.
 uuid: c92c1a92-3af6-4474-9e42-ffb8f6c94b33
 exl-id: 0a645363-26d5-41e7-aa16-c775253e2b1d
 feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+source-git-commit: 0083869ae4248134dea18a87b9d4ce563eeed1a4
 workflow-type: tm+mt
-source-wordcount: '109'
+source-wordcount: '110'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 **Du måste utlösa ping-händelser var 10:e sekund, med början efter 10 sekunder av uppspelningen, oavsett andra API-händelser som du har skickat. Detta gäller både huvudinnehåll och annonsspårning.**
 
-ping-händelserna är&quot;hjärtslagen&quot; i Streaming Media Collection. De enda obligatoriska parametrarna för ett ping-anrop är `eventType: ping` tillsammans med objektet `playerTime` (spelhuvudets position och tidsstämpel).
+ping-händelserna är&quot;hjärtslagen&quot; i Adobe direktuppspelande medietjänster. De enda obligatoriska parametrarna för ett ping-anrop är `eventType: ping` tillsammans med objektet `playerTime` (spelhuvudets position och tidsstämpel).
 
 I följande kodutdrag visas ett sätt att implementera en tidsbestämd pingmekanism för huvudinnehållet (10 sekunder):
 

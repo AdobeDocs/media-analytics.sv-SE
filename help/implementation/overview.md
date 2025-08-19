@@ -1,24 +1,26 @@
 ---
-title: Implementera direktuppspelningsmediainsamlingen
-description: Lär dig mer om implementeringssökvägarna för Streaming Media Collection.
+title: Implementera direktuppspelande medietjänster för Adobe Analytics eller Customer Journey Analytics
+description: Läs om implementeringsmöjligheterna för Adobe direktuppspelande medietjänster.
 uuid: null
 feature: Streaming Media
 role: User, Admin, Data Engineer
 exl-id: ed9297b1-6487-4099-bc62-0c3a40572255
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+source-git-commit: 0083869ae4248134dea18a87b9d4ce563eeed1a4
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '484'
 ht-degree: 0%
 
 ---
 
-# Implementera direktuppspelningsmediainsamlingen
+# Implementera direktuppspelande medietjänster för Adobe Analytics eller Customer Journey Analytics
 
-Det finns olika sätt att implementera Adobe Streaming Media Collection. En detaljerad jämförelse av enheter och plattformar som stöds för de implementeringsmetoder som beskrivs på den här sidan finns i [Enheter och plattformar som stöds](/help/getting-started/supported-devices.md).
+Det finns olika sätt att implementera Adobe direktuppspelade medietjänster. En detaljerad jämförelse av enheter och plattformar som stöds för de implementeringsmetoder som beskrivs på den här sidan finns i [Enheter och plattformar som stöds](/help/getting-started/supported-devices.md).
 
 ## Edge implementeringsmetoder
 
-Vi rekommenderar att du använder Edge när du implementerar Streaming Media Collection för alla nya Adobe Analytics- och Customer Journey Analytics-kunder.
+Vi rekommenderar att du använder Edge när du implementerar direktuppspelade medietjänster för alla nya Adobe Analytics- eller Customer Journey Analytics-kunder.
+
+Edge implementeringsmetoder använder tillägget Streaming Media Collection.
 
 * **Media för Edge Network SDK/tillägg:** Samlar in data från webben, iOS- och Android-enheter eller Roku-enheter och skickar dem till Edge Network. Data kan sedan skickas antingen till Customer Journey Analytics eller Adobe Analytics.
 
@@ -34,11 +36,13 @@ Vi rekommenderar att du använder Edge när du implementerar Streaming Media Col
 
 Edge implementeringsmetoder som beskrivs ovan rekommenderas för både Customer Journey Analytics och Adobe Analytics, särskilt för nya implementeringar.
 
-Förutom Edge implementeringsmetoder finns det andra implementeringsmetoder. Dessa implementeringsmetoder har utformats för användning med Adobe Analytics. Befintliga kunder med någon av följande implementeringsmetoder kan dock fortfarande göra data tillgängliga i Customer Journey Analytics genom att skapa en [Analytics-källanslutning](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/adobe-applications/analytics.html?lang=sv-SE).
+Förutom Edge implementeringsmetoder finns det andra implementeringsmetoder. Dessa implementeringsmetoder har utformats för användning med Adobe Analytics. Befintliga kunder med någon av följande implementeringsmetoder kan dock fortfarande göra data tillgängliga i Customer Journey Analytics genom att skapa en [Analytics-källanslutning](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/adobe-applications/analytics.html).
+
+Implementeringsmetoderna för Adobe Analytics använder Adobe Analytics for Streaming Media Add-on.
 
 * **Medietillägg med taggar:** Adobe Media Analytics för ljud och video-tillägg innehåller funktioner för att lägga till Media Tracker-instansen till en tagghanteringsaktiverad webbplats eller ett tagghanteringsprojekt. Data skickas till Adobe Analytics.
 
-  Information om hur du installerar, konfigurerar och implementerar medietillägget med taggar finns i [Adobe Media Analytics (3.x SDK) för en översikt över ljud- och videotillägg](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/media-analytics-3x/overview.html?lang=sv-SE).
+  Information om hur du installerar, konfigurerar och implementerar medietillägget med taggar finns i [Adobe Media Analytics (3.x SDK) för en översikt över ljud- och videotillägg](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/media-analytics-3x/overview.html).
 
 * **Media SDK:** Med Media SDK kan du mäta flera medieplattformar, inklusive webbplatser, mobiltelefoner, anslutna TV-apparater, surfplattor, OTT-enheter, digitalboxar och spelkonsoler. (Mer information finns i [Enheter och plattformar som stöds](/help/getting-started/supported-devices.md).)
 

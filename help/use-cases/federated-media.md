@@ -5,18 +5,26 @@ uuid: a82ace81-c2f6-4799-9a62-4c6a737a7dab
 exl-id: 81970370-663c-49d5-b13c-628d294be178
 feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+source-git-commit: 0083869ae4248134dea18a87b9d4ce563eeed1a4
 workflow-type: tm+mt
-source-wordcount: '571'
-ht-degree: 60%
+source-wordcount: '593'
+ht-degree: 58%
 
 ---
 
 # Federated Media{#federated-media}
 
-Tjänsten Federated Media är ett system för delning av strömmande mediedata (ljud och video) mellan två partners.
-De standardiserade mätdata som skapas av Streaming Media Collection är ett kännetecken för Federated Media, vilket gör att samma data kan flöda in i en enda rapport från flera källor.
+>[!AVAILABILITY]
+>
+>Federated Analytics-tjänsten är endast tillgänglig när du använder funktioner för direktuppspelande media med Adobe Analytics. Federated Analytics finns inte i Customer Journey Analytics.
+
+
+Federated Analytics-tjänsten tillhandahåller ett system för delning av strömmande mediedata (ljud och video) mellan två partners.
+
+De standardiserade mätdata som skapas av direktuppspelande medietjänster är ett kännetecken för Federated Media, vilket gör att samma data kan flöda in i en enda rapport från flera källor.
+
 Tack vare de regler och den logik som styr Federated Media kan data enkelt styras och individanpassas för att uppfylla behoven i varje partnerskap.
+
 Med Federated Media blir ljud- och videomätningarna effektivare, smidigare och mer användbara.
 
 
@@ -44,7 +52,7 @@ Med Federated Media blir ljud- och videomätningarna effektivare, smidigare och 
 * **Avtal om medieströmmar:** Mottagaren och avsändaren måste ha ingått avtal med Adobe Analytics för medieströmmar innan de får tillgång till ljud- och videodata i Adobe Analytics. Kontakta ditt kontoteam om du vill ha mer information.
 * **Federationstillägg:** Varje avsändare och mottagare måste ha undertecknat ett tillägg med Adobe innan data skickas eller tas emot. Ett tillägg per kund krävs, inte ett tillägg per partnerskap. Kontakta ditt kontoteam om du vill ha mer information.
 
-* **Implementering av mediainsamling för direktuppspelning:** Avsändaren måste ha den direktuppspelande mediainsamlingen implementerad på alla spelare som kommer att ingå i den federerade datauppsättningen. Endast direktuppspelande mediedata är tillgängliga för federation. Mer information finns i [Adobe Streaming Media Collection - översikt](/help/media-overview.md).
+* **Implementering av mediainsamling för direktuppspelning:** Avsändaren måste ha direktuppspelande medietjänster implementerade på alla spelare som kommer att ingå i den federerade datauppsättningen. Endast direktuppspelande mediedata är tillgängliga för federation. Mer information finns i [Översikt över Adobe tjänster för direktuppspelning av media](/help/media-overview.md).
 
 * **Konsultavtal med Adobe:** Vid den inledande konfigureringen av regler för federering är det praktiskt att samarbeta med våra konsulter för att granska data och skapa datadelningsavtalet.
 

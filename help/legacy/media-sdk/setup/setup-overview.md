@@ -5,9 +5,9 @@ uuid: 06fefedb-b0c8-4f7d-90c8-e374cdde1695
 exl-id: a175332e-0bdc-44aa-82cb-b3f879e7abfc
 feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+source-git-commit: 0083869ae4248134dea18a87b9d4ce563eeed1a4
 workflow-type: tm+mt
-source-wordcount: '617'
+source-wordcount: '616'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ När du har laddat ned Media SDK för din videoapp eller spelare följer du info
 
 ## Allmänna riktlinjer för genomförandet {#general-implementation-guidelines}
 
-Det finns tre huvudkomponenter i SDK som används för att spåra med Streaming Media Collection:
+Det finns tre huvudkomponenter i SDK som används för att spåra direktuppspelande medietjänster:
 * Konfiguration för pulsslag i media - `MediaHeartbeatConfig` innehåller de grundläggande inställningarna för rapportering.
 * Media Heartbeat Delegate - `MediaHeartbeatDelegate` styr uppspelningstiden och QoS-objektet.
 * Mediepulsslag - `MediaHeartbeat` är det primära biblioteket som innehåller medlemmar och metoder.
@@ -118,7 +118,7 @@ Spåra implementeringar med Media Analytics genererar två typer av spårningsan
 * Anrop till pulsslag skickas till Media Analytics-spårningsservern (hjärtslag) som bearbetas där och skickas vidare till Adobe Analytics-servern.
 
 * **Adobe Analytics-server (AppMeasurement)**
-Mer information om alternativ för spårning av serveralternativ finns i [Fylla i variablerna trackingServer och trackingServerSecure korrekt.](https://helpx.adobe.com/se/analytics/kb/determining-data-center.html)
+Mer information om alternativ för spårning av serveralternativ finns i [Fylla i variablerna trackingServer och trackingServerSecure korrekt.](https://helpx.adobe.com/analytics/kb/determining-data-center.html)
 
   >[!IMPORTANT]
   >
@@ -126,7 +126,7 @@ Mer information om alternativ för spårning av serveralternativ finns i [Fylla 
 
   Analysspårningsservern ska avslutas med `.sc.omtrdc.net` eller vara en CNAME.
 
-* **&#x200B; Media Analytics-server (Heartbeats)**
+* ** Media Analytics-server (Heartbeats)**
 Det här har alltid formatet `[your_namespace].hb.omtrdc.net`. Värdet `[your_namespace]` anger ditt företag och tillhandahålls av Adobe.
 
 Mediespårning fungerar likadant på alla plattformar, både datorer och mobila enheter. Ljudspårning fungerar för närvarande på mobilplattformar. För alla spårningsanrop finns det några viktiga universella variabler som ska valideras:

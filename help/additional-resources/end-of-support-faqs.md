@@ -4,9 +4,9 @@ description: Det här avsnittet innehåller frågor och svar om att stödet för
 exl-id: 9601ec17-8421-49d0-9d81-1cfa5e8f37cf
 feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+source-git-commit: 0083869ae4248134dea18a87b9d4ce563eeed1a4
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '614'
 ht-degree: 0%
 
 ---
@@ -15,18 +15,18 @@ ht-degree: 0%
 
 När stödet för version 4 Mobile SDK upphörde den 31 augusti 2021 upphörde Adobe även stödet för Media Analytics Mobile SDK för iOS och Android. (Detta omfattar inte Media Analytics SDK för webben (JS) och OTT-plattformar som Chromecast och Roku, som fortfarande stöds.)
 
-Det innebär att Adobe inte längre tillhandahåller korrigeringar, OS-relaterade uppdateringar eller stöd för Media Analytics Mobile SDK. När du migrerar till de nya Experience Platform SDK:erna ska du vara medveten om att [Media Analytics-tilläggen](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/) måste implementeras för att aktivera Adobe Streaming Media Collection.
+Det innebär att Adobe inte längre tillhandahåller korrigeringar, OS-relaterade uppdateringar eller stöd för Media Analytics Mobile SDK. När du migrerar till de nya Experience Platform SDK:erna ska du vara medveten om att [Media Analytics-tilläggen](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/) måste implementeras för att aktivera Adobe direktuppspelade medietjänster.
 
 
 ## De fem viktigaste sakerna att veta
 
 1. Mobile v4 SDK:er stöds inte längre per den 31 augusti 2021. Du bör migrera till Adobe Experience Platform (AEP) Mobile SDK för iOS och Android.
 
-1. Analyser för Streaming Media-implementering kräver AEP Mobile SDK och användning av tilläggen Analytics och Media Analytics. Från och med den 1 september 2021 bör du använda de nya SDK:erna och tilläggen för AEP Mobile.  Media Analytics-tillägg konfigureras med Adobe-taggar (datainsamling). Mer information finns i [Migrera från fristående media SDK till Adobe Launch](/help/legacy/sdk-to-launch/sdk-to-launch-migration.md)
+1. En implementering av Adobe direktuppspelade medietjänster kräver AEP Mobile SDK och användning av tilläggen Analytics och Media Analytics. Från och med den 1 september 2021 bör du använda de nya SDK:erna och tilläggen för AEP Mobile.  Media Analytics-tillägg konfigureras med Adobe-taggar (datainsamling). Mer information finns i [Migrera från fristående media SDK till Adobe Launch](/help/legacy/sdk-to-launch/sdk-to-launch-migration.md)
 
 1. Funktionsutvecklingen för Media Analytics SDK:er för iOS och Android har upphört. Nya funktioner som introducerades från och med hösten 2019 aktiveras med Media Analytics-tilläggen och Media Collection API.
 
-1. Roku och Chromecast SDK är fortfarande tillgängliga för Analytics för Streaming Media-kunder. Roku- och Chromecast-SDK:erna kommer att fortsätta förbättras och stödjas som fristående SDK:er. Om du använder JS SDK for Media Analytics kan du fortsätta använda den fristående SDK eller aktivera Media Analytics-tillägget med Adobe Data Collection (tidigare Adobe Launch).
+1. Roku- och Chromecast-SDK:erna är fortfarande tillgängliga för kunder med Adobe Analytics for Streaming Media Add-on och Customer Journey Analytics Streaming Media Collection Add-on. Roku- och Chromecast-SDK:erna kommer att fortsätta förbättras och stödjas som fristående SDK:er. Om du använder JS SDK for Media Analytics kan du fortsätta använda den fristående SDK eller aktivera Media Analytics-tillägget med Adobe Data Collection (tidigare Adobe Launch).
 
 Kontakta Adobe Account Team om du har några frågor.
 

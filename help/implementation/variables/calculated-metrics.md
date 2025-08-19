@@ -1,22 +1,22 @@
 ---
 title: Beräknade mätvärden
-description: Lär dig mer om beräknade mätvärden och mätformler i Streaming Media Collection.
+description: Lär dig mer om beräknade mätvärden och mätformler för direktuppspelande medietjänster.
 uuid: 9dd35155-58aa-4f05-896e-c5cbc4b13d59
 exl-id: 253f6c61-70b5-4bdf-8e79-840545aeca0e
 feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+source-git-commit: 0083869ae4248134dea18a87b9d4ce563eeed1a4
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '242'
 ht-degree: 3%
 
 ---
 
 # Beräknade mått{#calculated-metrics}
 
-Beräknade mätvärden för Adobe Streaming Media Collection är anpassade mätvärden som gör att ni kan få fram riktade data för direktuppspelande media, som genomsnittlig annonstid eller genomsnittliga annonser per medieström.
+Beräknade mätvärden för Adobe direktuppspelade medietjänster är anpassade mätvärden som gör att ni kan få måldata för direktuppspelande media, som genomsnittlig annonstid eller genomsnittliga annonser per medieström.
 
-Mer information om Adobe Analytics beräknade mått finns i [Beräknade och avancerade beräknade (härledda) mått](https://experienceleague.adobe.com/docs/analytics/components/calculated-metrics/cm-overview.html?lang=sv-SE) i Adobe Analytics Components Guide.
+Mer information om Adobe Analytics beräknade mått finns i [Beräknade och avancerade beräknade (härledda) mått](https://experienceleague.adobe.com/docs/analytics/components/calculated-metrics/cm-overview.html?lang=en) i Adobe Analytics Components Guide.
 
 >[!NOTE]
 >

@@ -4,7 +4,7 @@ description: Lär dig hur du länkar programåtgärder till mediespårningsdata 
 exl-id: 75cc9088-776d-4b10-b358-9fff956a7eb7
 feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+source-git-commit: 0083869ae4248134dea18a87b9d4ce563eeed1a4
 workflow-type: tm+mt
 source-wordcount: '232'
 ht-degree: 1%
@@ -23,7 +23,7 @@ Om du vill aktivera den här funktionen för en viss rapport aktiverar du medies
 
 >[!NOTE]
 >
->Mediemätningarna är _inte_ tillgängliga för användning utanför mediespårning eftersom de flesta av dessa beräknas av den direktuppspelade mediesamlingen baserat på pulsslagshändelser. Det är också viktigt att mediemätningarna inte påverkas av olika implementeringar.
+>Mediemätningarna är _inte_ tillgängliga för användning utanför mediespårning eftersom de flesta av dessa beräknas av de direktuppspelade medietjänsterna baserat på pulsslagshändelser. Det är också viktigt att mediemätningarna inte påverkas av olika implementeringar.
 
 ## Använda attribut för medieström
 

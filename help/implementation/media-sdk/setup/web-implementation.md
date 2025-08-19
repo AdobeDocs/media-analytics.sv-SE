@@ -4,7 +4,7 @@ description: Lär dig hur du implementerar Adobe Streaming Media för webbprogra
 feature: Streaming Media
 role: User, Admin, Data Engineer
 exl-id: aed561d0-defc-4be5-87d3-0f331cdfab34
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+source-git-commit: 0083869ae4248134dea18a87b9d4ce563eeed1a4
 workflow-type: tm+mt
 source-wordcount: '441'
 ht-degree: 1%
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 Informationen på den här sidan beskriver hur du installerar den fristående webbversionen av SDK och konfigurerar JavaScript.
 
-Du kan också använda Adobe Media Analytics-tillägget för att implementera Adobe Streaming Media Collection, vilket beskrivs i [Implementera Analytics med Media Analytics-tillägget](/help/implementation/media-sdk/setup/web-implementation-tags.md).
+Du kan också använda Adobe Media Analytics-tillägget för att implementera direktuppspelande medietjänster, vilket beskrivs i [Installera direktuppspelande medietjänster med Media Analytics-tillägget](/help/implementation/media-sdk/setup/web-implementation-tags.md).
 
 ## Förutsättningar {#prerequesites}
 
@@ -25,7 +25,7 @@ Du kan också använda Adobe Media Analytics-tillägget för att implementera Ad
 
 * **Implementera `AppMeasurement` och `Experience Cloud Identity Service` för JavaScript i ditt medieprogram**
 
-  Mer information finns i [Implementera analys med JavaScript](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=sv-SE) och [Implementera Experience Cloud identitetstjänst](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-analytics.html?lang=sv-SE).
+  Mer information finns i [Implementera analys med JavaScript](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html) och [Implementera Experience Cloud identitetstjänst](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-analytics.html).
 
 * **Ta med följande API:er i mediespelaren**
 

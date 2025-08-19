@@ -4,9 +4,9 @@ description: Läs om implementeringsvägar för Adobe Streaming Media, inklusive
 exl-id: eee70e62-ba45-440a-8ce1-e151b66d2c1f
 feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+source-git-commit: 0083869ae4248134dea18a87b9d4ce563eeed1a4
 workflow-type: tm+mt
-source-wordcount: '620'
+source-wordcount: '630'
 ht-degree: 4%
 
 ---
@@ -15,27 +15,27 @@ ht-degree: 4%
 
 **DET HÄR INNEHÅLLET FLYTTADES TILL DEN AKTUELLA IMPLEMENTERINGSBANSFILEN**
 
-För varje implementeringsväg måste kunderna kontakta sin säljare/Adobe-kontogrupp för att signera en ny försäljningsorder eftersom Streaming Media Analytics har en unik SKU och ändringar från en prismodell som baseras på serversamtal till en modell som baseras på videoströmmar.
+För varje implementeringsväg måste kunderna kontakta sin säljare eller Adobe Account Team för att signera en ny försäljningsorder eftersom Customer Journey Analytics Streaming Media Collection och Adobe Analytics for Streaming Media har en unik SKU och ändringar från en prismodell som baseras på serversamtal till en modell som baseras på videoströmmar.
 
 ## Adobe Experience Platform Data Collection med Adobe Media Analytics-tillägget
 
 >[!NOTE]
->Adobe Experience Platform Launch har omklassificerats som en serie datainsamlingstekniker i Experience Platform. Som ett resultat av detta har flera terminologiska förändringar genomförts i produktdokumentationen. Se följande [dokument](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=sv-SE) för en konsoliderad referens av terminologiändringarna.
+>Adobe Experience Platform Launch har omklassificerats som en serie datainsamlingstekniker i Experience Platform. Som ett resultat av detta har flera terminologiska förändringar genomförts i produktdokumentationen. Se följande [dokument](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=en) för en konsoliderad referens av terminologiändringarna.
 
 
 Taggar i Adobe Experience Platform är nästa generation av tagghanteringsfunktioner från Adobe. Taggar ger kunderna ett enkelt sätt att driftsätta och hantera alla analys-, marknadsförings- och annonstaggar som behövs för att driva relevanta kundupplevelser. Adobe Experience Cloud-kunder erbjuds märkord som en av de funktioner som tillför mervärde.
 
 Taggar ger alla möjlighet att bygga och underhålla egna integreringar, så kallade tillägg. Dessa tillägg är tillgängliga för Adobe Experience Cloud-kunder i en appbutik så att de snabbt kan installera, konfigurera och distribuera sina taggar.
 
-Ett tillägg är ett kodpaket (JavaScript, HTML och CSS) som utökar taggfunktionaliteten. Bygg, hantera och uppdatera integreringarna med hjälp av ett praktiskt taget självbetjäningsgränssnitt. Du kan tänka dig tillägg som appar som du använder för att utföra dina uppgifter.Mer information finns i artikeln *Taggreöversikt* i [Adobe Experience Platform-dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv-SE)
+Ett tillägg är ett kodpaket (JavaScript, HTML och CSS) som utökar taggfunktionaliteten. Bygg, hantera och uppdatera integreringarna med hjälp av ett praktiskt taget självbetjäningsgränssnitt. Du kan tänka dig tillägg som appar som du använder för att utföra dina uppgifter.Mer information finns i artikeln *Taggreöversikt* i [Adobe Experience Platform-dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)
 
 Adobe Media Analytics-tillägget (MA) lägger till JavaScript Media SDK (Media 2.x SDK) för ljud och video. Det här tillägget innehåller funktioner för att lägga till spårningsinstansen `MediaHeartbeat` till en datainsamlingswebbplats eller ett projekt.
 
 Adobe Data Collection med Media Analytics-tillägget kräver följande:
 * Du måste vara kund hos Adobe Experience Cloud.
 * Du måste distribuera datainsamling eller DTM-inbäddningskod på dina webbsidor.
-* [Analystillägg](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/analytics/overview.html?lang=sv-SE)
-* [Experience Cloud ID-tillägg](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/id-service/overview.html?lang=sv-SE)
+* [Analystillägg](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/analytics/overview.html)
+* [Experience Cloud ID-tillägg](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/id-service/overview.html)
 
 
 ## Klientsida

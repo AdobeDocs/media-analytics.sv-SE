@@ -5,16 +5,16 @@ uuid: 3ffe3276-a104-4182-9220-038729e9f3d5
 exl-id: 261445bf-3c8b-4658-891d-9a878e0b26ea
 feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+source-git-commit: 0083869ae4248134dea18a87b9d4ce563eeed1a4
 workflow-type: tm+mt
-source-wordcount: '418'
+source-wordcount: '417'
 ht-degree: 6%
 
 ---
 
 # Konfigurera Android{#set-up-android}
 
-Lär dig hur du konfigurerar Streaming Media Collection för Android-enheter.
+Lär dig hur du konfigurerar direktuppspelningstjänster för Android-enheter.
 
 >[!IMPORTANT]
 >
@@ -26,7 +26,7 @@ Lär dig hur du konfigurerar Streaming Media Collection för Android-enheter.
 * **Hämta giltiga konfigurationsparametrar för Media SDK**
 Dessa parametrar kan hämtas från en Adobe-representant när du har konfigurerat ditt analyskonto.
 * **Implementera ADBMobil för Android i ditt program**
-Mer information om dokumentationen för Adobe Mobile SDK finns i [Android SDK 4.x for Experience Cloud Solutions.](https://experienceleague.adobe.com/docs/mobile-services/android/overview.html?lang=sv-SE)
+Mer information om dokumentationen för Adobe Mobile SDK finns i [Android SDK 4.x for Experience Cloud Solutions.](https://experienceleague.adobe.com/docs/mobile-services/android/overview.html)
 
 * **Tillhandahåll följande funktioner i din mediespelare:**
    * *Ett API för att prenumerera på spelarhändelser* - Media SDK kräver att du anropar en uppsättning enkla API:er när händelser inträffar i spelaren.

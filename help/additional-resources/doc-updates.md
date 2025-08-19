@@ -1,6 +1,6 @@
 ---
-title: Nyheter i Streaming Media
-description: Läs om nyheterna i Streaming Media.
+title: Nyheter inom direktuppspelning av medietjänster
+description: Läs om nyheterna i tjänster för direktuppspelning av media.
 uuid: 1f3e48df-83b6-418c-8cf7-d79466481f79
 index: y
 internal: n
@@ -8,10 +8,10 @@ snippet: y
 exl-id: 881a94f4-d248-4668-a2d1-4e50d3f9135a
 feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+source-git-commit: 0083869ae4248134dea18a87b9d4ce563eeed1a4
 workflow-type: tm+mt
-source-wordcount: '17'
-ht-degree: 29%
+source-wordcount: '19'
+ht-degree: 26%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 29%
 
 ## Versionsinformation{#release-notes}
 
-* [Versionsinformation](https://experienceleague.adobe.com/docs/release-notes/experience-cloud/current.html?lang=sv-SE)
+* [Versionsinformation](https://experienceleague.adobe.com/docs/release-notes/experience-cloud/current.html)
 
 <!--
 ## Documentation Updates{#documentation-updates}

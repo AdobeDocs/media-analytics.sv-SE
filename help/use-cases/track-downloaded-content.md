@@ -1,13 +1,13 @@
 ---
-title: Spåra nedladdat material offline i Streaming Media Collection
+title: Spåra nedladdat innehåll offline i direktuppspelande medietjänster
 description: Lär dig hur du använder funktionen Hämtat innehåll för att spåra medieförbrukning när en användare är offline.
 uuid: 0718689d-9602-4e3f-833c-8297aae1d909
 exl-id: 82d3e5d7-4f88-425c-8bdb-e9101fc1db92
 feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+source-git-commit: 0083869ae4248134dea18a87b9d4ce563eeed1a4
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '695'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ Funktionen för nedladdat innehåll är en offlineversion av (standard) API:t f�
 
 ## Integrering med Adobe Analytics {#integration-with-adobe-analtyics}
 
-När analysens start-/slutanrop beräknas för det hämtade innehållsscenariot, anger back end ett extra analysfält som heter `ts.`. Det här är tidsstämplar för den första och sista händelsen som tas emot (start och slutförd). Den här funktionen gör att en slutförd mediesession kan placeras vid rätt tidpunkt (dvs. även om användaren inte ansluter igen på flera dagar, rapporteras mediesessionen ha inträffat vid den tidpunkt då innehållet visades). Du måste aktivera den här funktionen på Adobe Analytics-sidan genom att skapa en _valfri tidsstämpelsserie._ Om du vill aktivera en tidsstämpelsrapport (valfri) ska du läsa [Tidsstämplar (valfritt).](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/timestamp-optional.html?lang=sv-SE)
+När analysens start-/slutanrop beräknas för det hämtade innehållsscenariot, anger back end ett extra analysfält som heter `ts.`. Det här är tidsstämplar för den första och sista händelsen som tas emot (start och slutförd). Den här funktionen gör att en slutförd mediesession kan placeras vid rätt tidpunkt (dvs. även om användaren inte ansluter igen på flera dagar, rapporteras mediesessionen ha inträffat vid den tidpunkt då innehållet visades). Du måste aktivera den här funktionen på Adobe Analytics-sidan genom att skapa en _valfri tidsstämpelsserie._ Om du vill aktivera en tidsstämpelsrapport (valfri) ska du läsa [Tidsstämplar (valfritt).](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/timestamp-optional.html)
 
 ## Exempel på sessionsjämförelse {#sample-session-comparison}
 

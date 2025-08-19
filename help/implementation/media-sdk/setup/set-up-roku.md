@@ -5,9 +5,9 @@ uuid: 904dfda0-4782-41da-b4ab-212e81156633
 exl-id: b8de88d0-3a93-4776-b372-736bf979ee26
 feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+source-git-commit: 0083869ae4248134dea18a87b9d4ce563eeed1a4
 workflow-type: tm+mt
-source-wordcount: '664'
+source-wordcount: '675'
 ht-degree: 1%
 
 ---
@@ -16,9 +16,10 @@ ht-degree: 1%
 
 ## Förutsättningar {#roku-prerequisites}
 
-* **Hämta giltiga konfigurationsparametrar för den direktuppspelande mediesamlingen**
+* **Hämta giltiga konfigurationsparametrar för Adobe direktuppspelade medietjänster**
 
-  Dessa parametrar kan hämtas från en Adobe-representant när du har konfigurerat ditt Adobe Streaming Media Collection-konto.
+  Dessa parametrar kan hämtas från en Adobe-representant när du har konfigurerat ditt konto för Adobe Streaming Media Collection eller Adobe Analytics for Streaming Media Add-on.
+
 * **Ta med följande API:er i mediespelaren**
 
    * _Ett API för att prenumerera på spelarhändelser_ - Media SDK kräver att du anropar en uppsättning enkla API:er när händelser inträffar i spelaren.
@@ -171,4 +172,4 @@ Med Roku SDK 2.x for Experience Cloud Solutions kan du mäta Roku-applikationer 
    | `processMediaMessages` | Ansvarig för att skicka mediahändelser till den SDK som ska hanteras. <br/><br/>`ADBMobile().processMediaMessages()` |
 
 
-<!--    **Postbacks -** For more information about configuring postbacks, see [Configure Postbacks.](https://experienceleague.adobe.com/docs/mobile-services/using/manage-app-settings-ug/configuring-app/signals.html?lang=sv-SE) -->
+<!--    **Postbacks -** For more information about configuring postbacks, see [Configure Postbacks.](https://experienceleague.adobe.com/docs/mobile-services/using/manage-app-settings-ug/configuring-app/signals.html) -->

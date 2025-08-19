@@ -1,17 +1,17 @@
 ---
-title: Implementera Streaming Media Collection med Edge Network API
+title: Implementera Adobe direktuppspelade medietjänster med hjälp av Edge Network API
 description: Resurser för installation av Media Analytics med Experience Platform Edge API.
 feature: Streaming Media
 role: User, Admin, Data Engineer
 exl-id: 762abfd4-dc84-40dc-9142-fbebbb892e15
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+source-git-commit: 0083869ae4248134dea18a87b9d4ce563eeed1a4
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%
 
 ---
 
-# Implementera Streaming Media Collection med Edge Network API
+# Implementera Adobe direktuppspelade medietjänster med hjälp av Edge Network API
 
 Om du inte kan använda [Adobe Experience Platform Mobile SDK](/help/implementation/edge/implementation-edge.md) kan du skicka data till Adobe Experience Platform Edge Network direkt via ett API.
 

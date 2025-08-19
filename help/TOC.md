@@ -1,27 +1,27 @@
 ---
 product: adobe analytics
 audience: end-user
-user-guide-title: Strömning av Media Collection
-breadcrumb-title: Strömning av Media Collection Guide
-user-guide-description: Implementera mediaströmning. Innehåller Media SDK och Media Collection API.
+user-guide-title: Guide för direktuppspelande medietjänster
+breadcrumb-title: Guide för direktuppspelande medietjänster
+user-guide-description: Implementera tjänster för direktuppspelning av media. Innehåller Media SDK och Media Collection API.
 sub-product: media analytics
-source-git-commit: a0a357c3fe7e958b0b6491c84f17f26a806ea205
+source-git-commit: 0083869ae4248134dea18a87b9d4ce563eeed1a4
 workflow-type: tm+mt
-source-wordcount: '922'
-ht-degree: 5%
+source-wordcount: '926'
+ht-degree: 3%
 
 ---
 
 
-# Strömning av Media Collection {#using}
+# Guide för direktuppspelande medietjänster {#using}
 
-+ [Strömning av Media Collection Guide](media-overview.md)
++ [Guide för Adobe direktuppspelande medietjänster](media-overview.md)
 + Versionsinformation {#release-notes}
-   + [Versionsinformation för Streaming Media Collection](additional-resources/release-notes.md)
+   + [Versionsinformation för direktuppspelande medietjänster](additional-resources/release-notes.md)
 + Kom igång {#getting-started}
    + [Förutsättningar](getting-started/prereqs.md)
    + [Enheter som stöds](getting-started/supported-devices.md)
-   + [Implementeringsdokumentation för Streaming Media Collection](getting-started/implementation-documentation.md)
+   + [Implementeringsdokumentation för direktuppspelande medietjänster](getting-started/implementation-documentation.md)
    + [SDK:er, bibliotek och tillägg](getting-started/download-sdks.md)
    + Supportslut {#end-of-support}
       + [Media Analytics Mobile SDK End of Support](additional-resources/end-of-support-faqs.md)

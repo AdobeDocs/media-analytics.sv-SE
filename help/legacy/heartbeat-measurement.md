@@ -4,18 +4,18 @@ description: Lär dig hur hjärtslag används för att samla in videostatistik.
 feature: Streaming Media
 role: User, Admin, Data Engineer
 exl-id: 180dd9b1-877a-4ec1-8e81-c293800069c0
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+source-git-commit: 0083869ae4248134dea18a87b9d4ce563eeed1a4
 workflow-type: tm+mt
-source-wordcount: '313'
+source-wordcount: '312'
 ht-degree: 27%
 
 ---
 
 # Om mätning av pulsslag
 
-Adobe Streaming Media Collection samlar in videostatistik med &quot;hjärtslag&quot;. Under videouppspelningen skickas pulsslag till en spårningsserver för att mäta uppspelningstiden. Pulsslagsanropen skickas var tionde sekund. Pulsslagen genererar detaljerad statistik om videoengagemang och mer korrekta rapporter om videobortfall. Direktuppspelande media-mätningar fångar pulsen med Adobe Launch med Media Analytics-tillägget, Media SDK och Media Collection API. Komponenterna `AppMeasurement` och `VisitorID` används för att ta emot videodata.
+Adobe direktuppspelade medietjänster använder&quot;hjärtslag&quot; för att samla in videostatistik. Under videouppspelningen skickas pulsslag till en spårningsserver för att mäta uppspelningstiden. Pulsslagsanropen skickas var tionde sekund. Pulsslagen genererar detaljerad statistik om videoengagemang och mer korrekta rapporter om videobortfall. mäta hjärtslag med Adobe Launch med Media Analytics-tillägget, Media SDK och Media Collection API. Komponenterna `AppMeasurement` och `VisitorID` används för att ta emot videodata.
 
-Att använda pulsslag i Streaming Media Collection ger följande fördelar:
+Att använda hjärtslag i direktuppspelande medietjänster ger följande fördelar:
 
 | Funktion | Beskrivning |
 |---|---|
