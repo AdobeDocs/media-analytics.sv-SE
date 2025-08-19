@@ -13,11 +13,11 @@ ht-degree: 0%
 
 # Migrera dataprep för anpassade fält till nya direktuppspelade mediefält
 
-I det här dokumentet beskrivs processen att migrera den Data Prep-tjänst som finns ovanpå de Adobe Data Collection-flöden som är aktiverade för Adobe Streaming Media Collection-data. Migreringen konverterar en datapresentationsmappning från datatypen Adobe Streaming Media Collection som kallas &quot;Media&quot; till att använda den nya motsvarande datatypen &quot;[Media Reporting Details](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/media-reporting-details)&quot;.
+I det här dokumentet beskrivs processen att migrera den Data Prep-tjänst som finns ovanpå de Adobe Data Collection-flöden som är aktiverade för Adobe Streaming Media Collection-data. Migreringen konverterar en datapresentationsmappning från datatypen Adobe Streaming Media Collection som kallas &quot;Media&quot; till att använda den nya motsvarande datatypen &quot;[Media Reporting Details](https://experienceleague.adobe.com/sv/docs/experience-platform/xdm/data-types/media-reporting-details)&quot;.
 
 ## Migrera dataprep för anpassade fält
 
-Om du vill migrera datapresentationsmappningar från den gamla datatypen Media till den nya datatypen [Information om medierapportering](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/media-reporting-details) måste du redigera dataprexamappningarna:
+Om du vill migrera datapresentationsmappningar från den gamla datatypen Media till den nya datatypen [Information om medierapportering](https://experienceleague.adobe.com/sv/docs/experience-platform/xdm/data-types/media-reporting-details) måste du redigera dataprexamappningarna:
 
 >[!IMPORTANT]
 >
@@ -35,7 +35,7 @@ Om du vill migrera datapresentationsmappningar från den gamla datatypen Media t
 
 1. Verifiera att mappningarna fortfarande fungerar som förväntat.
 
-Se parametern [Innehålls-ID](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/audio-video-parameters#content-id) på sidan [Ljud- och videoparametrar](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/audio-video-parameters) för att mappa mellan de gamla och de nya fälten. Den gamla fältsökvägen finns under egenskapen XDM-fältsökväg medan den nya fältsökvägen finns under egenskapen Reporting XDM-fältsökväg.
+Se parametern [Innehålls-ID](https://experienceleague.adobe.com/sv/docs/media-analytics/using/implementation/variables/audio-video-parameters#content-id) på sidan [Ljud- och videoparametrar](https://experienceleague.adobe.com/sv/docs/media-analytics/using/implementation/variables/audio-video-parameters) för att mappa mellan de gamla och de nya fälten. Den gamla fältsökvägen finns under egenskapen XDM-fältsökväg medan den nya fältsökvägen finns under egenskapen Reporting XDM-fältsökväg.
 
 ## Exempel
 
@@ -77,7 +77,7 @@ För att göra det enklare att följa riktlinjerna för migrering bör du ta fö
 
 I exemplet ovan var alla datatyper som berördes String, så mappningsersättningen var direkt.
 
-Om källfältets datatyp skiljer sig från datatypen för målfältet måste du följa riktlinjerna i [felsökningsguiden för dataprestanda](https://experienceleague.adobe.com/en/docs/experience-platform/data-prep/troubleshooting-guide), [Hantera dataformat med dataprep](https://experienceleague.adobe.com/en/docs/experience-platform/data-prep/data-handling) och [funktionerna för datapremier](https://experienceleague.adobe.com/en/docs/experience-platform/data-prep/data-handling) .
+Om källfältets datatyp skiljer sig från datatypen för målfältet måste du följa riktlinjerna i [felsökningsguiden för dataprestanda](https://experienceleague.adobe.com/sv/docs/experience-platform/data-prep/troubleshooting-guide), [Hantera dataformat med dataprep](https://experienceleague.adobe.com/sv/docs/experience-platform/data-prep/data-handling) och [funktionerna för datapremier](https://experienceleague.adobe.com/sv/docs/experience-platform/data-prep/data-handling) .
 
 Om källtypen till exempel är en sträng och måltypen är en boolesk typ, kan Data Prep automatiskt tolka värdet och konvertera källvärdet till ett booleskt värde.
 

@@ -16,7 +16,7 @@ ht-degree: 3%
 
 Beräknade mätvärden för Adobe direktuppspelade medietjänster är anpassade mätvärden som gör att ni kan få måldata för direktuppspelande media, som genomsnittlig annonstid eller genomsnittliga annonser per medieström.
 
-Mer information om Adobe Analytics beräknade mått finns i [Beräknade och avancerade beräknade (härledda) mått](https://experienceleague.adobe.com/docs/analytics/components/calculated-metrics/cm-overview.html?lang=en) i Adobe Analytics Components Guide.
+Mer information om Adobe Analytics beräknade mått finns i [Beräknade och avancerade beräknade (härledda) mått](https://experienceleague.adobe.com/docs/analytics/components/calculated-metrics/cm-overview.html?lang=sv-SE) i Adobe Analytics Components Guide.
 
 >[!NOTE]
 >
