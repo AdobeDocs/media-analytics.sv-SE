@@ -1,19 +1,19 @@
 ---
 product: adobe analytics
 audience: end-user
-user-guide-title: Guide för direktuppspelande medietjänster
-breadcrumb-title: Guide för direktuppspelande medietjänster
-user-guide-description: Implementera tjänster för direktuppspelning av media. Innehåller Media SDK och Media Collection API.
+user-guide-title: Guide för strömningstjänster för media
+breadcrumb-title: Guide för strömningstjänster för media
+user-guide-description: Implementera strömningstjänster för media. Innehåller Media SDK och Media Collection API.
 sub-product: media analytics
 source-git-commit: 0083869ae4248134dea18a87b9d4ce563eeed1a4
 workflow-type: tm+mt
 source-wordcount: '926'
-ht-degree: 3%
+ht-degree: 5%
 
 ---
 
 
-# Guide för direktuppspelande medietjänster {#using}
+# Guide för strömningstjänster för media {#using}
 
 + [Guide för Adobe direktuppspelande medietjänster](media-overview.md)
 + Versionsinformation {#release-notes}
