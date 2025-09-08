@@ -140,7 +140,7 @@ När du har [skapat en programschemadatauppsättning](#create-a-program-schedule
 
    1. Skicka .json-filen som innehåller programschemadataposterna med batch-ID:t.
 
-      Om du vill skicka schemainformation ska du använda AEP batch-API:er, enligt beskrivningen i [API-översikt för gruppinläsning](https://experienceleague.adobe.com/en/docs/experience-platform/ingestion/batch/overview).
+      Om du vill skicka schemainformation ska du använda AEP batch-API:er, enligt beskrivningen i [API-översikt för gruppinläsning](https://experienceleague.adobe.com/sv/docs/experience-platform/ingestion/batch/overview).
 
       Tänk på följande exempel på hur du använder cURL för att skicka en fil med schemaposterna:
 
@@ -300,9 +300,9 @@ Följande exempel är en .json-schemafil med två poster. Varje .json-fil ska in
 
    Här följer några exempel på dimensioner som du kan skapa och sedan rapportera om i Customer Journey Analytics:
 
-   * **[&quot;_Avsnittsnamn_&quot;](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/audio-video-parameters#episode)**: Den här dimensionen kan hjälpa dig att lära dig vilka avsnitt i en viss serie som fungerar bäst.
+   * **[&quot;_Avsnittsnamn_&quot;](https://experienceleague.adobe.com/sv/docs/media-analytics/using/implementation/variables/audio-video-parameters#episode)**: Den här dimensionen kan hjälpa dig att lära dig vilka avsnitt i en viss serie som fungerar bäst.
 
-   * **[Resurs-ID](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/audio-video-parameters#asset-id)**
+   * **[Resurs-ID](https://experienceleague.adobe.com/sv/docs/media-analytics/using/implementation/variables/audio-video-parameters#asset-id)**
 
 1. Fortsätt med [Analysera data i Customer Journey Analytics](#analyze-data-in-customer-journey-analytics).
 
