@@ -132,7 +132,7 @@ Med Roku SDK 2.x for Experience Cloud Solutions kan du mäta Roku-applikationer 
    | --- | --- |
    | `visitorMarketingCloudID` | Hämtar besökar-ID:t för Experience Cloud från besökar-ID-tjänsten.  <br/><br/>`ADBMobile().visitorMarketingCloudID()` |
    | `visitorSyncIdentifiers` | Med Experience Cloud Visitor-ID kan du ange ytterligare kund-ID:n som kan kopplas till varje besökare. Besökar-API:t godkänner flera kund-ID:n för samma besökare och en kundtypsidentifierare för att skilja omfattningen för olika kund-ID:n åt. Den här metoden motsvarar `setCustomerIDs`. Till exempel: <br/><br/>`identifiers={}` <br/>`identifiers["idType"]="idValue"` <br/>`ADBMobile().visitorSyncIdentifiers(identifiers)` |
-   | `setAdvertisingIdentifier` | Används för att ange Roku-ID för Advertising (RIDA) på SDK. Till exempel: <br/><br/> `ADBMobile().setAdvertisingIdentifier(`<br/>  `"<sample_roku_identifier_for_advertising>")` <br/><br/><br/> Hämta Roku ID för Advertising (RIDA) med Roku SDK [ getRIDA() ](https://developer.roku.com/docs/references/brightscript/interfaces/ifdeviceinfo.md#getrida-as-dynamic) -API:t. |
+   | `setAdvertisingIdentifier` | Används för att ange Roku-ID för Advertising (RIDA) på SDK. Till exempel: <br/><br/> `ADBMobile().setAdvertisingIdentifier(`<br/>  `"<sample_roku_identifier_for_advertising>")` <br/><br/><br/> Hämta Roku ID för Advertising (RIDA) med Roku SDK [&#x200B; getRIDA() &#x200B;](https://developer.roku.com/docs/references/brightscript/interfaces/ifdeviceinfo.md#getrida-as-dynamic) -API:t. |
    | `getAllIdentifiers` | Returnerar en lista med alla identifierare som lagras av SDK, inklusive Analytics, Visitor, Audience Manager och anpassade identifierare. <br/><br/> `identifiers = ADBMobile().getAllIdentifiers()` |
 
    <!--

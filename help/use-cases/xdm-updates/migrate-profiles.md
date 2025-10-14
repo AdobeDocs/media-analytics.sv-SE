@@ -56,7 +56,7 @@ För att göra det enklare att följa riktlinjerna för migrering bör du ta fö
    ![AEP dataflödesfilterregler](assets/dataflow-filtering-rules-profile.jpeg)
 
 
-   För varje filter som använder objektet meda.mediaTimed söker du efter dess korrespondent i objektet `mediaReporting` med hjälp av sidan [ Ljud- och videoparametrar ](https://experienceleague.adobe.com/sv/docs/media-analytics/using/implementation/variables/audio-video-parameters) för att mappa mellan de gamla fälten och de nya fälten. Den gamla fältsökvägen finns under egenskapen XDM-fältsökväg medan den nya fältsökvägen finns under egenskapen Reporting XDM-fältsökväg. För [Media Starts](https://experienceleague.adobe.com/sv/docs/media-analytics/using/implementation/variables/audio-video-parameters#media-starts) är motsvarande för `media.mediaTimed.impressions.value` till exempel `mediaReporting.sessionDetails.isViewed`.
+   För varje filter som använder objektet meda.mediaTimed söker du efter dess korrespondent i objektet `mediaReporting` med hjälp av sidan [&#x200B; Ljud- och videoparametrar &#x200B;](https://experienceleague.adobe.com/sv/docs/media-analytics/using/implementation/variables/audio-video-parameters) för att mappa mellan de gamla fälten och de nya fälten. Den gamla fältsökvägen finns under egenskapen XDM-fältsökväg medan den nya fältsökvägen finns under egenskapen Reporting XDM-fältsökväg. För [Media Starts](https://experienceleague.adobe.com/sv/docs/media-analytics/using/implementation/variables/audio-video-parameters#media-starts) är motsvarande för `media.mediaTimed.impressions.value` till exempel `mediaReporting.sessionDetails.isViewed`.
 
    ![Nya och gamla XDM-fält](assets/xdm-fields-new-and-old.jpeg)
 

@@ -129,7 +129,7 @@ Så här skapar och konfigurerar du ett schema:
 
       ![add-custom-metadata](assets/add-custom-fields.png)
 
-   1. [Använd den sökväg som genererats ](https://experienceleague.adobe.com/sv/docs/experience-platform/xdm/ui/fields/overview#type-specific-properties) för det anpassade fältet i din nyttolast för begäran.
+   1. [Använd den sökväg som genererats &#x200B;](https://experienceleague.adobe.com/sv/docs/experience-platform/xdm/ui/fields/overview#type-specific-properties) för det anpassade fältet i din nyttolast för begäran.
 
       ![add-custom-metadata](assets/custom-fields-path.png)
 

@@ -20,7 +20,7 @@ Varje rapportsvit som samlar in mediemätningar måste konfigureras innan medied
 >
 >För att kunna utnyttja de nya funktionerna bör befintliga kunder som använder direktuppspelade medier återaktivera mediespårning för sina RSID-enheter.
 
-1. Klicka [ i ](https://experience.adobe.com)Adobe Analytics **[!UICONTROL Admin > Report Suites].**
+1. Klicka [&#x200B; i &#x200B;](https://experience.adobe.com)Adobe Analytics **[!UICONTROL Admin > Report Suites].**
 1. Markera de rapportsviter där du samlar in mediedata och klicka på **[!UICONTROL Edit Settings > Media Management > Media Reporting].**
 
    ![](assets/media-reporting.png){width="400px"}
