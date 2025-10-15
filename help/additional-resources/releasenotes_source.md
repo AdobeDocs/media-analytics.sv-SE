@@ -10,7 +10,7 @@ ht-degree: 13%
 Följande innehåll har kopierats från versionsinformationen för Experience Cloud. Det här kommer att flyttas till de nya versionskommentarerna för direktuppspelande media.
 
 
-Läs om de senaste versionsuppdateringarna för [Adobe Experience Cloud-produkter](https://business.adobe.com/products/adobe-experience-cloud-products.html). Få den senaste självhjälpsdokumentationen, självstudiekurserna och kurserna om Experience League.
+Läs om de senaste versionsuppdateringarna för [Adobe Experience Cloud-produkter](https://business.adobe.com/se/products/adobe-experience-cloud-products.html). Få den senaste självhjälpsdokumentationen, självstudiekurserna och kurserna om Experience League.
 
 Läs om de senaste versionsuppdateringarna för [Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/release-notes/latest.html?lang=sv-SE). Få den senaste självhjälpsdokumentationen, självstudiekurserna och kurserna om Experience League.
 

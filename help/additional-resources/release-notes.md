@@ -21,7 +21,7 @@ Mer information om nya funktioner, korrigeringar och viktig information för adm
 
 * [Versionsinformation för Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/release-notes/latest.html?lang=sv-SE)
 * [Versionsinformation för Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/releases/latest.html?lang=sv-SE)
-* Den senaste releaseuppdateringen för [Adobe Experience Cloud-produkter](https://business.adobe.com/products/adobe-experience-cloud-products.html)
+* Den senaste releaseuppdateringen för [Adobe Experience Cloud-produkter](https://business.adobe.com/se/products/adobe-experience-cloud-products.html)
 
 * [Adobe Analytics självstudiekurser](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/overview.html?lang=sv-SE)
 
