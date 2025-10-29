@@ -3,16 +3,19 @@ title: Överför schemadata för att spåra livematerial
 description: Lär dig hur du överför schemadata för att spåra livematerial.
 feature: Streaming Media
 role: User, Admin, Data Engineer
-hide: true
-hidefromtoc: true
-source-git-commit: e38a83853e85418611e17015b661d8592a7c95a1
+exl-id: 875c4513-ea4e-4c5f-bfc1-34ea175007ca
+source-git-commit: 65cd7987acb677b4f4c863b42dc809b5a23c2ed1
 workflow-type: tm+mt
-source-wordcount: '1334'
+source-wordcount: '1381'
 ht-degree: 0%
 
 ---
 
 # Överför schemadata för att spåra livematerial
+
+>[!AVAILABILITY]
+>
+>Funktionerna som beskrivs i den här artikeln är i den begränsade testfasen av releasen och är kanske inte tillgängliga än i din miljö. Den här anteckningen tas bort när funktionen är allmänt tillgänglig. Mer information om versionsprocessen finns i [Customer Journey Analytics funktionsreleaser](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/releases).
 
 Du kan överföra schemadata från tidigare direktuppspelat mediematerial för att enklare och exaktare kunna spåra hur det direktuppspelade innehållet visas. Du kan spåra visningen av enskilda program och till och med specifika ämnen eller programsegment.
 
@@ -140,7 +143,7 @@ När du har [skapat en programschemadatauppsättning](#create-a-program-schedule
 
    1. Skicka .json-filen som innehåller programschemadataposterna med batch-ID:t.
 
-      Om du vill skicka schemainformation ska du använda AEP batch-API:er, enligt beskrivningen i [API-översikt för gruppinläsning](https://experienceleague.adobe.com/sv/docs/experience-platform/ingestion/batch/overview).
+      Om du vill skicka schemainformation ska du använda AEP batch-API:er, enligt beskrivningen i [API-översikt för gruppinläsning](https://experienceleague.adobe.com/en/docs/experience-platform/ingestion/batch/overview).
 
       Tänk på följande exempel på hur du använder cURL för att skicka en fil med schemaposterna:
 
@@ -300,9 +303,9 @@ Följande exempel är en .json-schemafil med två poster. Varje .json-fil ska in
 
    Här följer några exempel på dimensioner som du kan skapa och sedan rapportera om i Customer Journey Analytics:
 
-   * **[&quot;_Avsnittsnamn_&quot;](https://experienceleague.adobe.com/sv/docs/media-analytics/using/implementation/variables/audio-video-parameters#episode)**: Den här dimensionen kan hjälpa dig att lära dig vilka avsnitt i en viss serie som fungerar bäst.
+   * **[&quot;_Avsnittsnamn_&quot;](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/audio-video-parameters#episode)**: Den här dimensionen kan hjälpa dig att lära dig vilka avsnitt i en viss serie som fungerar bäst.
 
-   * **[Resurs-ID](https://experienceleague.adobe.com/sv/docs/media-analytics/using/implementation/variables/audio-video-parameters#asset-id)**
+   * **[Resurs-ID](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/audio-video-parameters#asset-id)**
 
 1. Fortsätt med [Analysera data i Customer Journey Analytics](#analyze-data-in-customer-journey-analytics).
 
