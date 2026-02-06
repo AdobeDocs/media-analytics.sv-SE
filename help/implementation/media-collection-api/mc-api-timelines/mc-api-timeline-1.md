@@ -4,8 +4,8 @@ description: Gå djupare in på spelhuvudets tidslinje och motsvarande användar
 uuid: 0ff591d3-fa99-4123-9e09-c4e71ea1060b
 exl-id: 16b15e03-5581-471f-ab0c-077189dd32d6
 feature: Streaming Media
-role: User, Admin, Data Engineer
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+role: User, Admin, Developer
+source-git-commit: 83c64e35a52921532697063d3fdf987e889b2854
 workflow-type: tm+mt
 source-wordcount: '1120'
 ht-degree: 5%
@@ -65,7 +65,7 @@ I bakgrunden genererar det här samtalet ett Adobe Analytics-initieringssamtal.
 
 | Åtgärd | Tidslinje för åtgärd (sekunder) | Spelhuvudsposition (sekunder) | Klientbegäran |
 | --- | :---: | :---: | --- |
-| Appen börjar pinga händelsetimer | 0 | 0 | `/api/v1/sessions/{sid}/events` | |
+| Appen börjar pinga händelsetimer | 0 | 0 | `/api/v1/sessions/{sid}/events` |
 
 Starta appens ping-timer. Den första ping-händelsen ska sedan utlösas 1 sekund om det finns annonser före rullning, annars 10 sekunder.
 
@@ -179,7 +179,7 @@ Pinga serverdelen var 1 sekund medan du är inne i en annons.
 >[!NOTE]
 >
 >Efterföljande annonser i tidslinjen kommer inte att visa serien med ensekunders ping
->&#x200B;>i fortsättningens intresse...
+>i fortsättningens intresse...
 
 ```json
 {

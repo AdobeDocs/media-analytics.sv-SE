@@ -4,8 +4,8 @@ description: Vilka är Media Collection API-sessionerna som begär slutpunktspar
 uuid: 9609192d-4f7f-4fb5-844f-ea89d47c4e30
 exl-id: f55f5838-610f-4f82-b3c5-72165ea2c86b
 feature: Streaming Media
-role: User, Admin, Data Engineer
-source-git-commit: 0083869ae4248134dea18a87b9d4ce563eeed1a4
+role: User, Admin, Developer
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 3%

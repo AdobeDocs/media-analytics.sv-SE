@@ -4,8 +4,8 @@ description: Lär dig skillnaden mellan kod i 1.x- och 2.x-versionerna av Media 
 uuid: 9f0a1660-2100-446d-ab75-afdf966478b3
 exl-id: c2324c6a-329f-44e2-bea0-9d43ef9c6ef7
 feature: Streaming Media
-role: User, Admin, Data Engineer
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+role: User, Admin, Developer
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '544'
 ht-degree: 2%

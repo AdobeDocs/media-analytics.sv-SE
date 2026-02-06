@@ -4,8 +4,8 @@ description: 'Vilka är händelsetyperna och beskrivningarna för Media Collecti
 uuid: bc4f75a7-ea22-47eb-a50d-5f41274c6d41
 exl-id: f2919e69-8b03-45b4-b9cd-365222a061e0
 feature: Streaming Media
-role: User, Admin, Data Engineer
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+role: User, Admin, Developer
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 0%
@@ -81,7 +81,7 @@ Signalerar att ett fel har inträffat.
 
 Detta används för att meddela Media Analytics-backend-objektet att omedelbart stänga sessionen när användaren har avbrutit sin visning av innehållet och det är osannolikt att de kommer att returnera.
 
-Om `sessionEnd` inte skickas kommer en övergiven session att [timeout-värdet att vara &#x200B;](../mc-api-impl/mc-api-timeout.md) (antingen efter att inga händelser har tagits emot under 10 minuter eller när ingen spelhuvudrörelse sker under 30 minuter). Dessutom kommer alla efterföljande mediaanrop som görs med detta sessions-ID att tas bort.
+Om `sessionEnd` inte skickas kommer en övergiven session att [timeout-värdet att vara ](../mc-api-impl/mc-api-timeout.md) (antingen efter att inga händelser har tagits emot under 10 minuter eller när ingen spelhuvudrörelse sker under 30 minuter). Dessutom kommer alla efterföljande mediaanrop som görs med detta sessions-ID att tas bort.
 
 ## sessionComplete
 

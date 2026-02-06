@@ -2,9 +2,9 @@
 title: Uppdatera en implementering av en anslutning till en Analytics-källa till nya XDM-fält för direktuppspelande medietjänster
 description: Lär dig hur du migrerar en implementering av en Analytics-källanslutning till uppdaterade XDM Streaming Media-fält
 feature: Streaming Media
-role: User, Admin, Data Engineer
+role: User, Admin, Developer
 exl-id: d239b203-71ce-4307-884f-9d11cc623d04
-source-git-commit: 0083869ae4248134dea18a87b9d4ce563eeed1a4
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '869'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Den här informationen är avsedd för organisationer som använder [Analytics-källkopplingen](https://experienceleague.adobe.com/sv/docs/experience-platform/sources/connectors/adobe-applications/analytics) för att överföra direktuppspelade mediedata från Adobe Analytics till Adobe Experience Platform för användning med Customer Journey Analytics-rapportering eller någon annan plattformstjänst.
+>Den här informationen är avsedd för organisationer som använder [Analytics-källkopplingen](https://experienceleague.adobe.com/en/docs/experience-platform/sources/connectors/adobe-applications/analytics) för att överföra direktuppspelade mediedata från Adobe Analytics till Adobe Experience Platform för användning med Customer Journey Analytics-rapportering eller någon annan plattformstjänst.
 >
 >Ändringarna påverkar inte Adobe Analytics som ett fristående program, inklusive datainsamling, bearbetning och rapportering. Verktyg som Dataflöden och Bearbetningsregler påverkas inte, så inga uppdateringar av Analytics-implementeringen krävs.
 

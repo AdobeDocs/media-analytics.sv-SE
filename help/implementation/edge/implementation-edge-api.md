@@ -2,9 +2,9 @@
 title: Implementera Adobe direktuppspelade medietjänster med hjälp av Edge Network API
 description: Resurser för installation av Media Analytics med Experience Platform Edge API.
 feature: Streaming Media
-role: User, Admin, Data Engineer
+role: User, Admin, Developer
 exl-id: 762abfd4-dc84-40dc-9142-fbebbb892e15
-source-git-commit: 0083869ae4248134dea18a87b9d4ce563eeed1a4
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%

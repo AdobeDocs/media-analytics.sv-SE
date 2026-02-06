@@ -4,8 +4,8 @@ description: Ping-händelser är den bästa takten i Adobe direktuppspelande med
 uuid: c92c1a92-3af6-4474-9e42-ffb8f6c94b33
 exl-id: 0a645363-26d5-41e7-aa16-c775253e2b1d
 feature: Streaming Media
-role: User, Admin, Data Engineer
-source-git-commit: 0083869ae4248134dea18a87b9d4ce563eeed1a4
+role: User, Admin, Developer
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '110'
 ht-degree: 0%

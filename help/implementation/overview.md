@@ -3,9 +3,9 @@ title: Implementera direktuppspelande medietjänster för Adobe Analytics eller 
 description: Läs om implementeringsmöjligheterna för Adobe direktuppspelande medietjänster.
 uuid: null
 feature: Streaming Media
-role: User, Admin, Data Engineer
+role: User, Admin, Developer
 exl-id: ed9297b1-6487-4099-bc62-0c3a40572255
-source-git-commit: 0083869ae4248134dea18a87b9d4ce563eeed1a4
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '484'
 ht-degree: 0%
@@ -36,13 +36,13 @@ Edge implementeringsmetoder använder tillägget Streaming Media Collection.
 
 Edge implementeringsmetoder som beskrivs ovan rekommenderas för både Customer Journey Analytics och Adobe Analytics, särskilt för nya implementeringar.
 
-Förutom Edge implementeringsmetoder finns det andra implementeringsmetoder. Dessa implementeringsmetoder har utformats för användning med Adobe Analytics. Befintliga kunder med någon av följande implementeringsmetoder kan dock fortfarande göra data tillgängliga i Customer Journey Analytics genom att skapa en [Analytics-källanslutning](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/adobe-applications/analytics.html?lang=sv-SE).
+Förutom Edge implementeringsmetoder finns det andra implementeringsmetoder. Dessa implementeringsmetoder har utformats för användning med Adobe Analytics. Befintliga kunder med någon av följande implementeringsmetoder kan dock fortfarande göra data tillgängliga i Customer Journey Analytics genom att skapa en [Analytics-källanslutning](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/adobe-applications/analytics.html).
 
 Implementeringsmetoderna för Adobe Analytics använder Adobe Analytics for Streaming Media Add-on.
 
 * **Medietillägg med taggar:** Adobe Media Analytics för ljud och video-tillägg innehåller funktioner för att lägga till Media Tracker-instansen till en tagghanteringsaktiverad webbplats eller ett tagghanteringsprojekt. Data skickas till Adobe Analytics.
 
-  Information om hur du installerar, konfigurerar och implementerar medietillägget med taggar finns i [Adobe Media Analytics (3.x SDK) för en översikt över ljud- och videotillägg](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/media-analytics-3x/overview.html?lang=sv-SE).
+  Information om hur du installerar, konfigurerar och implementerar medietillägget med taggar finns i [Adobe Media Analytics (3.x SDK) för en översikt över ljud- och videotillägg](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/media-analytics-3x/overview.html).
 
 * **Media SDK:** Med Media SDK kan du mäta flera medieplattformar, inklusive webbplatser, mobiltelefoner, anslutna TV-apparater, surfplattor, OTT-enheter, digitalboxar och spelkonsoler. (Mer information finns i [Enheter och plattformar som stöds](/help/getting-started/supported-devices.md).)
 

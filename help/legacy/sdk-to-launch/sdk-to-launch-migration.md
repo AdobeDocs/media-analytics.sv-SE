@@ -5,8 +5,8 @@ seo-description: Instructions and code samples to assist in migrating from the M
 description: Lär dig hur du migrerar från Media SDK till Launch.
 exl-id: 5350bbe9-c34f-46d9-a4c4-dbccdbed0bb0
 feature: Streaming Media
-role: User, Admin, Data Engineer
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+role: User, Admin, Developer
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 14%
@@ -16,7 +16,7 @@ ht-degree: 14%
 # Migrera från fristående Media SDK till Adobe Launch
 
 >[!NOTE]
->Adobe Experience Platform Launch har omklassificerats som en serie datainsamlingstekniker i Experience Platform. Som ett resultat av detta har flera terminologiska förändringar genomförts i produktdokumentationen. Se följande [dokument](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=sv-SE) för en konsoliderad referens av terminologiändringarna.
+>Adobe Experience Platform Launch har omklassificerats som en serie datainsamlingstekniker i Experience Platform. Som ett resultat av detta har flera terminologiska förändringar genomförts i produktdokumentationen. Se följande [dokument](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=en) för en konsoliderad referens av terminologiändringarna.
 
 Denna dokumentation fokuserar främst på skillnader i implementeringen av Media Analytics
 mellan det fristående Media SDK och Media Analytics Launch.
@@ -30,7 +30,7 @@ kan snabbt installera, konfigurera och driftsätta sina lösningar.
 
 Adobe Media Analytics för ljud och video finns som ett Launch-tillägg för både webben och mobiler:
 
-* [Dokumentation för webbstart](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/media-analytics/overview.html?lang=sv-SE)
+* [Dokumentation för webbstart](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/media-analytics/overview.html)
 * [Dokumentation för mobilstart](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/)
 
 ## Plattformar

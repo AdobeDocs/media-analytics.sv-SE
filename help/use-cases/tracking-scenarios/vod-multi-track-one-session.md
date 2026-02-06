@@ -4,8 +4,8 @@ description: Se ett exempel på hur du använder en spårare för att spåra fle
 uuid: 355c83f4-52bd-4bdd-92dc-ab506e412d0a
 exl-id: 72edb484-0d45-446e-bda3-cda9e2272e7e
 feature: Streaming Media
-role: User, Admin, Data Engineer
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+role: User, Admin, Developer
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '184'
 ht-degree: 0%

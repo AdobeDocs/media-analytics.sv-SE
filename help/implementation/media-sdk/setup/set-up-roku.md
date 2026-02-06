@@ -4,8 +4,8 @@ description: Följ de här stegen för att konfigurera Media SDK på Roku.
 uuid: 904dfda0-4782-41da-b4ab-212e81156633
 exl-id: b8de88d0-3a93-4776-b372-736bf979ee26
 feature: Streaming Media
-role: User, Admin, Data Engineer
-source-git-commit: 0083869ae4248134dea18a87b9d4ce563eeed1a4
+role: User, Admin, Developer
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '675'
 ht-degree: 1%
@@ -132,7 +132,7 @@ Med Roku SDK 2.x for Experience Cloud Solutions kan du mäta Roku-applikationer 
    | --- | --- |
    | `visitorMarketingCloudID` | Hämtar besökar-ID:t för Experience Cloud från besökar-ID-tjänsten.  <br/><br/>`ADBMobile().visitorMarketingCloudID()` |
    | `visitorSyncIdentifiers` | Med Experience Cloud Visitor-ID kan du ange ytterligare kund-ID:n som kan kopplas till varje besökare. Besökar-API:t godkänner flera kund-ID:n för samma besökare och en kundtypsidentifierare för att skilja omfattningen för olika kund-ID:n åt. Den här metoden motsvarar `setCustomerIDs`. Till exempel: <br/><br/>`identifiers={}` <br/>`identifiers["idType"]="idValue"` <br/>`ADBMobile().visitorSyncIdentifiers(identifiers)` |
-   | `setAdvertisingIdentifier` | Används för att ange Roku-ID för Advertising (RIDA) på SDK. Till exempel: <br/><br/> `ADBMobile().setAdvertisingIdentifier(`<br/>  `"<sample_roku_identifier_for_advertising>")` <br/><br/><br/> Hämta Roku ID för Advertising (RIDA) med Roku SDK [&#x200B; getRIDA() &#x200B;](https://developer.roku.com/docs/references/brightscript/interfaces/ifdeviceinfo.md#getrida-as-dynamic) -API:t. |
+   | `setAdvertisingIdentifier` | Används för att ange Roku-ID för Advertising (RIDA) på SDK. Till exempel: <br/><br/> `ADBMobile().setAdvertisingIdentifier(`<br/>  `"<sample_roku_identifier_for_advertising>")` <br/><br/><br/> Hämta Roku ID för Advertising (RIDA) med Roku SDK [ getRIDA() ](https://developer.roku.com/docs/references/brightscript/interfaces/ifdeviceinfo.md#getrida-as-dynamic) -API:t. |
    | `getAllIdentifiers` | Returnerar en lista med alla identifierare som lagras av SDK, inklusive Analytics, Visitor, Audience Manager och anpassade identifierare. <br/><br/> `identifiers = ADBMobile().getAllIdentifiers()` |
 
    <!--
@@ -172,4 +172,4 @@ Med Roku SDK 2.x for Experience Cloud Solutions kan du mäta Roku-applikationer 
    | `processMediaMessages` | Ansvarig för att skicka mediahändelser till den SDK som ska hanteras. <br/><br/>`ADBMobile().processMediaMessages()` |
 
 
-<!--    **Postbacks -** For more information about configuring postbacks, see [Configure Postbacks.](https://experienceleague.adobe.com/docs/mobile-services/using/manage-app-settings-ug/configuring-app/signals.html?lang=sv-SE) -->
+<!--    **Postbacks -** For more information about configuring postbacks, see [Configure Postbacks.](https://experienceleague.adobe.com/docs/mobile-services/using/manage-app-settings-ug/configuring-app/signals.html) -->

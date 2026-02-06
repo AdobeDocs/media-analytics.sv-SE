@@ -3,8 +3,8 @@ title: Läs mer om Media Analytics - Vanliga frågor och svar om SDK support
 description: Det här avsnittet innehåller frågor och svar om att stödet för SDK:er för Media Analytics har upphört.
 exl-id: 9601ec17-8421-49d0-9d81-1cfa5e8f37cf
 feature: Streaming Media
-role: User, Admin, Data Engineer
-source-git-commit: 0083869ae4248134dea18a87b9d4ce563eeed1a4
+role: User, Admin, Developer
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '614'
 ht-degree: 0%

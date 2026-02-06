@@ -4,8 +4,8 @@ description: Lär dig mer om parametrar för spårning av spelartillstånd för 
 uuid: 2a6b9247-a694-46e9-98e1-424c08c27ec2
 exl-id: cd51ed3a-fe37-41e9-8243-dfd9deb514c1
 feature: "Streaming Media, Variables"
-role: User, Admin, Data Engineer
-source-git-commit: 70900e305c3ed7a2be4069c6f296d56f1f6e0966
+role: User, Admin, Developer
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '2373'
 ht-degree: 0%

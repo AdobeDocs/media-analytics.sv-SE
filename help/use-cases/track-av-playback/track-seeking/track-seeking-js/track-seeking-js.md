@@ -4,8 +4,8 @@ description: Lär dig spåra händelserna Seek Start och Seek Complete med Media
 uuid: 089947fb-8bae-4ae8-b215-53793620efd7
 exl-id: 90f35376-24d8-405d-82b4-d6b737acf7b9
 feature: Streaming Media
-role: User, Admin, Data Engineer
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+role: User, Admin, Developer
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '135'
 ht-degree: 0%

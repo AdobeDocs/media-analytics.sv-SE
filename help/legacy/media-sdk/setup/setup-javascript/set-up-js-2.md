@@ -4,8 +4,8 @@ description: Följ de här stegen för att konfigurera Media SDK-programmet på 
 uuid: 0269d8ad-0af8-4bf1-9d15-e06c2952a005
 exl-id: 33976096-8b86-4353-906b-e25bf4693471
 feature: Streaming Media
-role: User, Admin, Data Engineer
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+role: User, Admin, Developer
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '395'
 ht-degree: 2%
@@ -19,7 +19,7 @@ ht-degree: 2%
 * **Hämta giltiga konfigurationsparametrar**
 Dessa parametrar kan hämtas från en Adobe-representant när du har konfigurerat ditt analyskonto.
 * **Implementera `AppMeasurement` för JavaScript i ditt medieprogram**
-Mer information om dokumentationen för Adobe Mobile SDK finns i [Implementera analys med JavaScript.](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=sv-SE)
+Mer information om dokumentationen för Adobe Mobile SDK finns i [Implementera analys med JavaScript.](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html)
 
 * **Tillhandahåll följande funktioner i din mediespelare:**
 

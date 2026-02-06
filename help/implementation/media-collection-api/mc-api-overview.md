@@ -5,8 +5,8 @@ description: Lär dig mer om Media Collection API och hur spelaren kan spåra lj
 uuid: c14bdbef-5846-4d31-8a14-8e9e0e9c9861
 exl-id: 58430636-7fab-433a-8ead-52ccaa45d920
 feature: Streaming Media
-role: User, Admin, Data Engineer
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+role: User, Admin, Developer
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '357'
 ht-degree: 0%
@@ -69,12 +69,12 @@ Spårningsdata som hämtas med Media Collection API skickas och bearbetas först
 
 * `playerTime` - Obligatoriskt för alla begäranden.
 * `eventType` - Obligatoriskt för alla begäranden.
-* `params` - Obligatoriskt för vissa `eventTypes`. Kontrollera [&#x200B; JSON-valideringsschemat &#x200B;](mc-api-ref/mc-api-json-validation.md) för att avgöra vilka eventTypes som är obligatoriska och vilka som är valfria.
+* `params` - Obligatoriskt för vissa `eventTypes`. Kontrollera [ JSON-valideringsschemat ](mc-api-ref/mc-api-json-validation.md) för att avgöra vilka eventTypes som är obligatoriska och vilka som är valfria.
 
 * `qoeData` - Valfritt för alla begäranden.
 * `customMetadata` - Valfritt för alla förfrågningar, men endast skickat med händelsetyperna `sessionStart`, `adStart` och `chapterStart`.
 
-För varje `eventType` finns det ett öppet [&#x200B; JSON-valideringsschema &#x200B;](mc-api-ref/mc-api-json-validation.md) som du bör använda för att verifiera parametertyper och om en parameter är valfri eller nödvändig för en viss händelse.
+För varje `eventType` finns det ett öppet [ JSON-valideringsschema ](mc-api-ref/mc-api-json-validation.md) som du bör använda för att verifiera parametertyper och om en parameter är valfri eller nödvändig för en viss händelse.
 
 ### Händelsetyper {#mc-api-event-types}
 

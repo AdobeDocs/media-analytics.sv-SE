@@ -4,8 +4,8 @@ description: Se ett exempel på hur du spårar uppspelning i VOD som innehåller
 uuid: 1566a6f5-cf22-42e7-8e1a-6976c6c4e649
 exl-id: a8394fd3-16a2-4f5d-b6e1-6e9acb4c7afd
 feature: Streaming Media
-role: User, Admin, Data Engineer
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+role: User, Admin, Developer
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '430'
 ht-degree: 0%

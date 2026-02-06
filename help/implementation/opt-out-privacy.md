@@ -4,10 +4,10 @@ description: Lär dig hur du hanterar anmälan, avanmälan och sekretess.
 uuid: 7e60c7bd-8dba-4c7a-9c3c-0c634b815397
 exl-id: 64f5ef2b-7850-43d8-8f32-3d008ea4f156
 feature: Streaming Media
-role: User, Admin, Data Engineer
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+role: User, Admin, Developer
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
-source-wordcount: '374'
+source-wordcount: '347'
 ht-degree: 0%
 
 ---
@@ -18,8 +18,8 @@ ht-degree: 0%
 
 Du kan kontrollera om spårningsaktivitet tillåts på en viss enhet:
 
-* **Mobilappar -** VA-biblioteket respekterar `AdobeMobile`-bibliotekets sekretess- och avanmälningsinställningar. Om du vill avanmäla dig från spårning måste du använda biblioteket `AdobeMobile`. Mer information om `AdobeMobile`-bibliotekets avanmälan och sekretessinställningar finns i [Avanmäl dig och Sekretessinställningar](https://experienceleague.adobe.com/docs/mobile-services/android/gdpr-privacy-android/privacy.html?lang=sv-SE).
-* **JavaScript-/webbläsarappar -** VA-biblioteket respekterar inställningarna för sekretess och avvisning i `VisitorAPI` . Om du vill avanmäla spårning måste du avanmäla dig från Visitor API-tjänsten. Mer information om avanmälan och sekretess finns i [Adobe Experience Platform Identity Service.](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=sv-SE).
+* **Mobilappar -** VA-biblioteket respekterar `AdobeMobile`-bibliotekets sekretess- och avanmälningsinställningar. Om du vill avanmäla dig från spårning måste du använda biblioteket `AdobeMobile`. Mer information om `AdobeMobile`-bibliotekets avanmälan och sekretessinställningar finns i [Avanmäl dig och Sekretessinställningar](https://experienceleague.adobe.com/docs/mobile-services/android/gdpr-privacy-android/privacy.html).
+* **JavaScript-/webbläsarappar -** VA-biblioteket respekterar inställningarna för sekretess och avvisning i `VisitorAPI` . Om du vill avanmäla spårning måste du avanmäla dig från Visitor API-tjänsten. Mer information om avanmälan och sekretess finns i [Adobe Experience Platform Identity Service.](https://experienceleague.adobe.com/docs/id-service/using/home.html).
 * **OTT-appar (Chromecast, Roku) -** OTT SDK:er tillhandahåller GDPR-förberedda API:er (General Data Protection Regulation) som gör att du kan ange `opt`-statusflaggor för datainsamling och överföring samt hämta lokalt lagrade identiteter.
 
   >[!NOTE]
@@ -36,16 +36,16 @@ Du kan kontrollera om spårningsaktivitet tillåts på en viss enhet:
 
          * **Chromecast:**
 
-               &quot;
-               ADBMobil.config.setPrivacyStatus(ADBMoble.config.PRIVACY_STATUS_OPT_OUT)
-               &quot;
-           
+           ```
+           ADBMobile.config.setPrivacyStatus(ADBMobile.config.PRIVACY_STATUS_OPT_OUT)
+           ```
+
          * **Roku:**
 
-               &quot;
-               ADBMobil().setPrivacyStatus(ADBMomobile().PRIVACY_STATUS_OPT_OUT)
-               &quot;
-           
+           ```
+           ADBMobile().setPrivacyStatus(ADBMobile().PRIVACY_STATUS_OPT_OUT)
+           ```
+
            >[!IMPORTANT]
            >
            >När en användare väljer bort spårning rensas alla beständiga enhetsdata och ID:n tills användaren väljer tillbaka.
@@ -54,30 +54,30 @@ Du kan kontrollera om spårningsaktivitet tillåts på en viss enhet:
 
          * **Chromecast:**
 
-               &quot;
-               ADBMobil.config.setPrivacyStatus(ADBMoble.config.PRIVACY_STATUS_OPT_IN)
-               &quot;
-           
+           ```
+           ADBMobile.config.setPrivacyStatus(ADBMobile.config.PRIVACY_STATUS_OPT_IN)
+           ```
+
          * **Roku:**
 
-               &quot;
-               ADBMobil().setPrivacyStatus(ADBMomobile().PRIVACY_STATUS_OPT_IN)
-               &quot;
-           
+           ```
+           ADBMobile().setPrivacyStatus(ADBMobile().PRIVACY_STATUS_OPT_IN)
+           ```
+
       * **Returnera den aktuella inställningen:**
 
          * **Chromecast:**
 
-               &quot;
-               ADBMobil.config.getPrivacyStatus()
-               &quot;
-           
+           ```
+           ADBMobile.config.getPrivacyStatus()
+           ```
+
          * **Roku:**
 
-               &quot;
-               ADBMobil().getPrivacyStatus()
-               &quot;
-           
+           ```
+           ADBMobile().getPrivacyStatus()
+           ```
+
   När sekretessinställningen har ändrats med `setPrivacyStatus` blir ändringen permanent tills den ändras igen med den här metoden, eller så avinstalleras och installeras appen igen.
 
 ## Hämtar lagrade identifierare (OTT-appar) {#retrieving-stored-identifiers-ott-apps}

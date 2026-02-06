@@ -4,8 +4,8 @@ description: Lär dig spåra media med Roku SceneGraph XML-programmeringsramverk
 uuid: fa85e546-c79b-4df4-8c03-d6593fa296d5
 exl-id: e428d3cd-dbc7-48bb-82ff-61b6b892884c
 feature: Streaming Media
-role: User, Admin, Data Engineer
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+role: User, Admin, Developer
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '1152'
 ht-degree: 1%
@@ -142,28 +142,28 @@ Kopplingsbryggan är utformad för att fungera så här:
 <td> Ogiltig </td>
 <td> Skrivskydda Alla API:er som körs på AdobeMobileSDK returnerar svar i det här fältet. Registrera dig för ett återanrop för att lyssna efter uppdateringar av det här fältet för att kunna ta emot svarsobjekt. Här följer formatet för svarsobjektet:  
 <pre>
-response = &lbrace;
+response = {
   "apiName" : &lt;SceneGraphConstants.
                API_NAME&gt;
   "returnValue : &lt;API_RESPONSE&gt;
-&rbrace;</pre>
+}</pre>
 En instans av det här svarsobjektet skickas för alla API-anrop på AdobeMobileSDK som förväntas returnera ett värde enligt API-referenshandboken. Ett API-anrop till exempel för visitorMarketingCloudID() returnerar följande svarsobjekt:
 <pre>
-response = &lbrace;
+response = {
   "apiName" : m.
               adbmobileConstants.
               VISITOR_MARKETING_CLOUD_ID  
   "returnValue : "07050x25671x33760x72644x14"  
-&rbrace;
+}
 </pre>
 Eller så kan svarsdata vara ogiltiga:
 <pre>
-response = &lbrace;  
+response = {  
   "apiName" : m.
               adbmobileConstants.
               VISITOR_MARKETING_CLOUD_ID  
   "returnValue : invalid
-&rbrace;
+}
 </pre>
 </td>
 </tr>

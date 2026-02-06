@@ -3,8 +3,8 @@ title: Om Spårning av spelartillstånd
 description: Läs mer om funktionen för spårning av spelartillstånd, inklusive krav och riktlinjer för implementering och rapportering av spelarlägen.
 exl-id: c678e182-74e4-4f46-8596-7be57e645c66
 feature: Streaming Media
-role: User, Admin, Data Engineer
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+role: User, Admin, Developer
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 0%

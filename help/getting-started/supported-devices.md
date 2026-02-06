@@ -4,7 +4,7 @@ description: Läs om de vanligaste enheterna som iOS, Android, OTT och JavaScrip
 exl-id: 169ff7b9-e577-45b7-8927-74bdcccc0a77
 feature: Streaming Media
 role: User, Admin
-source-git-commit: 0083869ae4248134dea18a87b9d4ce563eeed1a4
+source-git-commit: 83c64e35a52921532697063d3fdf987e889b2854
 workflow-type: tm+mt
 source-wordcount: '308'
 ht-degree: 6%
@@ -27,12 +27,12 @@ Tabellen nedan visar de enheter som stöds för närvarande. Om en enhet inte fi
 
 Mer information om hur du implementerar media på Edge finns i [Installera direktuppspelningssamlingen med Experience Platform Edge](/help/implementation/edge/implementation-edge.md).
 
-| Strömmande plattformar och enheter | | Media för Edge Network SDK / Extension | Media Edge API | Media Extension med taggar eller AEP Mobile SDK | Media SDK | Media Collection API |
+| Strömmande plattformar och enheter |  | Media för Edge Network SDK / Extension | Media Edge API | Media Extension med taggar eller AEP Mobile SDK | Media SDK | Media Collection API |
 |:---|:---|:---:|:---:|:---:|:---:|:---:|
-| Webb/mobil | | | | | |
+| Webb/mobil | | | | | | |
 | | JavaScript Browser | ![Stöds](/help/assets/icon-blue-check.png) | ![Stöds](/help/assets/icon-blue-check.png) | ![Stöds](/help/assets/icon-blue-check.png) | ![Stöds](/help/assets/icon-blue-check.png) | ![Stöds](/help/assets/icon-blue-check.png) |
-| Mobilapp | | | | | |
-| | iOS Devices | ![Stöds](/help/assets/icon-blue-check.png) | ![Stöds](/help/assets/icon-blue-check.png) | ![Stöds](/help/assets/icon-blue-check.png) | | ![Stöds](/help/assets/icon-blue-check.png) | |
+| Mobilapp | | | | | | |
+| | iOS Devices | ![Stöds](/help/assets/icon-blue-check.png) | ![Stöds](/help/assets/icon-blue-check.png) | ![Stöds](/help/assets/icon-blue-check.png) | | ![Stöds](/help/assets/icon-blue-check.png) |
 | | Android Devices | ![Stöds](/help/assets/icon-blue-check.png) | ![Stöds](/help/assets/icon-blue-check.png) | ![Stöds](/help/assets/icon-blue-check.png) | | ![Stöds](/help/assets/icon-blue-check.png) |
 | | Windows-enheter | | ![Stöds](/help/assets/icon-blue-check.png) | | | ![Stöds](/help/assets/icon-blue-check.png) |
 | OTT | | | | | | |

@@ -3,8 +3,8 @@ title: Exempel på spårning av spelartillstånd
 description: Det här avsnittet innehåller exempel på funktionen Spårning av spelartillstånd.
 exl-id: a77bc882-ac03-40b4-ac64-87f26a09707b
 feature: Streaming Media
-role: User, Admin, Data Engineer
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+role: User, Admin, Developer
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '120'
 ht-degree: 0%

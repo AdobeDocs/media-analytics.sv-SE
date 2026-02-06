@@ -2,8 +2,9 @@
 title: Migrera målgrupper till nya Adobe Analytics för Streaming Media-datatyp
 description: Lär dig hur du migrerar målgrupper till den nya datatypen Adobe Analytics for Streaming Media
 feature: Streaming Media
-role: User, Admin, Data Engineer
-source-git-commit: 3056a384535b3f5f2a9bc2d950bd5ee3410ec0a5
+role: User, Admin, Developer
+exl-id: 79203a2f-8158-44f2-83b2-146179be9180
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '1346'
 ht-degree: 0%
@@ -12,7 +13,7 @@ ht-degree: 0%
 
 # Parametermappning för Media Analytics för Adobe Experience Platform och Customer Journey Analytics
 
-Det här dokumentet innehåller en omfattande lista över alla Media Analytics-parametrar som används i Adobe Experience Platform och Customer Journey Analytics. Den är avsedd att stödja integrering av data som importeras från Adobe Analytics till plattformen via [Analytics Source Connector](https://experienceleague.adobe.com/sv/docs/experience-platform/sources/connectors/adobe-applications/analytics) eller [Analytics Source Connector for Classifications](https://experienceleague.adobe.com/sv/docs/experience-platform/sources/connectors/adobe-applications/classifications) och mappa varje parameter till motsvarande XDM-fältsökväg.
+Det här dokumentet innehåller en omfattande lista över alla Media Analytics-parametrar som används i Adobe Experience Platform och Customer Journey Analytics. Den är avsedd att stödja integrering av data som importeras från Adobe Analytics till plattformen via [Analytics Source Connector](https://experienceleague.adobe.com/en/docs/experience-platform/sources/connectors/adobe-applications/analytics) eller [Analytics Source Connector for Classifications](https://experienceleague.adobe.com/en/docs/experience-platform/sources/connectors/adobe-applications/classifications) och mappa varje parameter till motsvarande XDM-fältsökväg.
 
 ## Media Analytics-reserverade variabler
 
@@ -237,9 +238,3 @@ I båda fallen motsvarar `<number>` den specifika händelse eller det eVar-numme
 | Total varaktighet för förvaring | `_experience.analytics.event<x>to<y>.event<number>.value` | Mått |
 
 {style="table-layout:auto"}
-
-
-
-
-
-

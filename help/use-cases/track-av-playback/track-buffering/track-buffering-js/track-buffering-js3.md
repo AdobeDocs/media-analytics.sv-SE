@@ -3,8 +3,8 @@ title: Lär dig spåra buffring med JavaScript 3.x
 description: Lär dig spåra buffringshändelser i webbläsarappar (JS).
 exl-id: c6941942-02f9-4f9c-99ad-0c52ed2f793b
 feature: Streaming Media
-role: User, Admin, Data Engineer
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+role: User, Admin, Developer
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '120'
 ht-degree: 0%

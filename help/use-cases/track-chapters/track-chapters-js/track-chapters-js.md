@@ -4,8 +4,8 @@ description: Lär dig hur du implementerar kapitel- och segmentspårning med Med
 uuid: ef99edf7-7a77-46c4-8429-bc9a856b98d6
 exl-id: 9964ec0c-cce9-4ccc-bd26-a2b3fcdc3e28
 feature: Streaming Media
-role: User, Admin, Data Engineer
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+role: User, Admin, Developer
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '200'
 ht-degree: 2%

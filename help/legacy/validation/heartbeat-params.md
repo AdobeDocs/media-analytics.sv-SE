@@ -4,8 +4,8 @@ description: Utforska de hjärtslagsparametrar som Adobe samlar in och bearbetar
 uuid: e9ddda32-0952-43d0-a702-49f5b1bfd8cf
 exl-id: ffa67b5e-ee54-4a5b-8064-decd108f944b
 feature: "Streaming Media, Variables"
-role: User, Admin, Data Engineer
-source-git-commit: 70900e305c3ed7a2be4069c6f296d56f1f6e0966
+role: User, Admin, Developer
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '669'
 ht-degree: 4%

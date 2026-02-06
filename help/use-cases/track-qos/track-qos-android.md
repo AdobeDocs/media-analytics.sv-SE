@@ -4,8 +4,8 @@ description: Lär dig hur du implementerar kvalitetskontroll av upplevelser (QoE
 uuid: 81ff3939-48a6-45c1-8837-ddfa33490559
 exl-id: cee8b119-bca2-4a5c-8111-2b49f7eede66
 feature: Streaming Media
-role: User, Admin, Data Engineer
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+role: User, Admin, Developer
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '156'
 ht-degree: 3%

@@ -4,8 +4,8 @@ description: Läs mer om kvalitetsparametrarna (QoE) som används för att hämt
 uuid: 0d9fa764-edef-4178-8650-90c9a0852a57
 exl-id: aac178dc-5a46-4ce3-80e9-ec82cbfbfff5
 feature: "Streaming Media, Variables"
-role: User, Admin, Data Engineer
-source-git-commit: 70900e305c3ed7a2be4069c6f296d56f1f6e0966
+role: User, Admin, Developer
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '3314'
 ht-degree: 0%

@@ -4,8 +4,8 @@ description: Lär dig skapa en ny felsökningsrapport.
 uuid: 438fde3d-98f9-46d1-9672-75d204361568
 exl-id: 047acf35-8c1c-4493-9ee7-e2bad47c351e
 feature: Streaming Media
-role: User, Admin, Data Engineer
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+role: User, Admin, Developer
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '171'
 ht-degree: 0%

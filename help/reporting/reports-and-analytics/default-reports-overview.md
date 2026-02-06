@@ -4,8 +4,8 @@ description: Lär dig mer om rapporttyper och mätvärden som används för att 
 uuid: a078aa59-3b2d-45b2-9e66-3d9c29c82f0c
 exl-id: 0040006e-cd59-48a1-b019-1feafc275fa3
 feature: "Streaming Media, Workspace Basics"
-role: User, Admin, Data Engineer
-source-git-commit: 67f1fa8194fa58b2c513e3136d2bc7880f9cb06b
+role: User, Admin, Developer
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '346'
 ht-degree: 0%

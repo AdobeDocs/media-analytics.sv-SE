@@ -4,8 +4,8 @@ description: Lär dig hur du konfigurerar Adobe Debug, som du kan använda för 
 uuid: e416458d-f23c-41ce-8d99-fa5076c455f0
 exl-id: 48ad3f23-f36d-44f3-b8d9-b0b3a2ee06bc
 feature: Streaming Media
-role: User, Admin, Data Engineer
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+role: User, Admin, Developer
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '614'
 ht-degree: 0%

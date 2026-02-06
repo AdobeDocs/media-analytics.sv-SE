@@ -7,8 +7,8 @@ internal: n
 snippet: y
 exl-id: 881a94f4-d248-4668-a2d1-4e50d3f9135a
 feature: Streaming Media
-role: User, Admin, Data Engineer
-source-git-commit: 0083869ae4248134dea18a87b9d4ce563eeed1a4
+role: User, Admin, Developer
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '19'
 ht-degree: 26%
@@ -19,7 +19,7 @@ ht-degree: 26%
 
 ## Versionsinformation{#release-notes}
 
-* [Versionsinformation](https://experienceleague.adobe.com/docs/release-notes/experience-cloud/current.html?lang=sv-SE)
+* [Versionsinformation](https://experienceleague.adobe.com/docs/release-notes/experience-cloud/current.html)
 
 <!--
 ## Documentation Updates{#documentation-updates}

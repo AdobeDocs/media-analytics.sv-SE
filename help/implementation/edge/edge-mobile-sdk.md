@@ -2,9 +2,9 @@
 title: Skicka mobildata till Edge med Adobe Experience Platform Mobile SDK
 description: Lär dig hur du skickar mediedata för direktuppspelning från mobiler till Experience Platform Edge.
 feature: Streaming Media
-role: User, Admin, Data Engineer
+role: User, Admin, Developer
 exl-id: 63b62784-dce9-4f91-8c16-8e14155734d5
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '110'
 ht-degree: 0%

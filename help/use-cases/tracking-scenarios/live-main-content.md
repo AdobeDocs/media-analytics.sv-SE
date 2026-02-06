@@ -4,10 +4,10 @@ description: Se ett exempel på hur man spårar direktsänt innehåll med Media 
 uuid: e92e99f4-c395-48aa-8a30-cbdd2f5fc07c
 exl-id: f6a00ffd-da6a-4d62-92df-15d119cfc426
 feature: Streaming Media
-role: User, Admin, Data Engineer
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+role: User, Admin, Developer
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
-source-wordcount: '587'
+source-wordcount: '586'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ För LIVE-strömmar måste du ange spelhuvudvärdet som antalet sekunder sedan m
 
 För LIVE-media måste du ange antalet sekunder sedan midnatt UTC den dagen för att en användare ska kunna börja spela upp strömmen till `l:event:playhead`. Detta är i motsats till VOD, där du ställer in spelhuvudet på &quot;0&quot;. Obs! När du använder förloppsmarkörer krävs innehållets längd och spelhuvudet måste uppdateras som antal sekunder från början av medieobjektet, med början från 0.
 
-Exempel: en LIVE-direktuppspelningshändelse startar vid midnatt och pågår i 24 timmar (`a.media.length=86400`; `l:asset:length=86400`). Anta sedan att en användare börjar spela upp den LIVE-strömmen kl. 12:00. I det här scenariot bör du ange `l:event:playhead` till 43200 (12 timmar sedan midnatt UTC den dagen i sekunder).
+Exempel: en LIVE-direktuppspelningshändelse startar vid midnatt och pågår i 24 timmar (`a.media.length=86400`; `l:asset:length=86400`). Anta sedan att en användare börjar spela upp den LIVE-strömmen vid 12:00pm. I det här scenariot bör du ange `l:event:playhead` till 43200 (12 timmar sedan midnatt UTC den dagen i sekunder).
 
 ### Vid paus
 
