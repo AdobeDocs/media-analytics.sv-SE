@@ -144,7 +144,7 @@ Mer information om alternativ för spårning av serveralternativ finns i [Fylla 
 
   Analysspårningsservern ska avslutas med `.sc.omtrdc.net` eller vara en CNAME.
 
-* ** Media Analytics-server (Heartbeats)**
+* **&#x200B; Media Analytics-server (Heartbeats)**
 Det här har alltid formatet `[your_namespace].hb.omtrdc.net`. Värdet `[your_namespace]` anger ditt företag och tillhandahålls av Adobe.
 
 Mediespårning fungerar likadant på alla plattformar, både datorer och mobila enheter. Ljudspårning fungerar för närvarande på mobilplattformar. För alla spårningsanrop finns det några viktiga universella variabler som ska valideras:

@@ -16,7 +16,7 @@ ht-degree: 0%
 De krav som beskrivs i det här avsnittet gäller specifikt för implementering av Adobe Streaming Media Collection med Edge-implementeringar.
 
 1. **Slutför de allmänna kraven**<br>
-Oavsett om du implementerar Streaming Media Collection för implementeringar av endast Adobe Analytics eller för Edge måste du se till att du uppfyller de [allmänna kraven ](/help/getting-started/prereqs.md) .
+Oavsett om du implementerar Streaming Media Collection för implementeringar av endast Adobe Analytics eller för Edge måste du se till att du uppfyller de [allmänna kraven &#x200B;](/help/getting-started/prereqs.md) .
 
 1. **Bekräfta att du implementerar en Adobe-lösning som är kompatibel med Edge Network och Streaming Media Collection**<br>
 När du implementerar Streaming Media Collection med Edge måste du också ha en fungerande Customer Journey Analytics-, Adobe Analytics-, Adobe Journey Optimizer- eller Real-Time Customer Data Platform-implementering. Mer information finns i följande dokumentationsresurser:

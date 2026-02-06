@@ -22,13 +22,13 @@ ht-degree: 8%
 |---|---|
 | `pev2` | ms_s |
 | `a.media.friendlyName` | Avsnittstitel |
-| _**`a.media.name`**_ | _**123456**_ |
-| _**`a.media.length`**_ | _**120**_ |
+| _&#x200B;**`a.media.name`**&#x200B;_ | _&#x200B;**123456**&#x200B;_ |
+| _&#x200B;**`a.media.length`**&#x200B;_ | _&#x200B;**120**&#x200B;_ |
 | `a.media.playerName` | HTML5 |
-| _**`a.media.view`**_ | _**true**_ |
+| _&#x200B;**`a.media.view`**&#x200B;_ | _&#x200B;**true**&#x200B;_ |
 | `a.contentType` | vod |
-| _**`custom.[value]`**_ | _**Anpassade metadatafält**_ |
-| _**`a.media.[value]`**_ | _**Standardmetadatafält**_ |
+| _&#x200B;**`custom.[value]`**&#x200B;_ | _&#x200B;**Anpassade metadatafält**&#x200B;_ |
+| _&#x200B;**`a.media.[value]`**&#x200B;_ | _&#x200B;**Standardmetadatafält**&#x200B;_ |
 
 **Anteckningar:**
 
@@ -66,15 +66,15 @@ ht-degree: 8%
 | Parameter |  Värde (exempel)  |
 |---|---|
 | `s:event:type` | start |
-| _**`l:event:playhead`**_ | _**0**_ |
+| _&#x200B;**`l:event:playhead`**&#x200B;_ | _&#x200B;**0**&#x200B;_ |
 | `l:event:duration` | 4 |
 | `s:asset:name` | Avsnittstitel |
 | `s:asset:video_id` | 123456 |
 | `l:asset:length` | 120 |
 | `s:stream:type` | vod |
 | `s:asset:type` | main |
-| _**`s:meta:custom.[value]`**_ | _**Anpassade metadatafält**_ |
-| _**`s:meta:a.media.[value]`**_ | _**Standardmetadatafält**_ |
+| _&#x200B;**`s:meta:custom.[value]`**&#x200B;_ | _&#x200B;**Anpassade metadatafält**&#x200B;_ |
+| _&#x200B;**`s:meta:a.media.[value]`**&#x200B;_ | _&#x200B;**Standardmetadatafält**&#x200B;_ |
 
 **Anteckningar:**
 
@@ -111,7 +111,7 @@ ht-degree: 8%
 
 | Parameter |  Värde (exempel)  |
 |---|---|
-| _**`s:event:type`**_ | _**aa_start**_ |
+| _&#x200B;**`s:event:type`**&#x200B;_ | _&#x200B;**aa_start**&#x200B;_ |
 | `l:event:playhead` | 0 |
 | `l:event:duration` | 4 |
 | `s:asset:name` | Avsnittstitel |
@@ -131,19 +131,19 @@ ht-degree: 8%
 
 | Parameter |  Värde (exempel)  |
 |---|---|
-| _**`pev2`**_ | _**msa_s**_ |
+| _&#x200B;**`pev2`**&#x200B;_ | _&#x200B;**msa_s**&#x200B;_ |
 | `a.media.name` | 123456 |
-| _**`a.media.ad.name`**_ | _**9378**_ |
+| _&#x200B;**`a.media.ad.name`**&#x200B;_ | _&#x200B;**9378**&#x200B;_ |
 | `a.media.ad.friendlyName` | Video_VPAID_DFA |
 | `a.media.ad.podFriendlyName` | preroll |
-| _**`a.media.ad.length`**_ | _**15**_ |
+| _&#x200B;**`a.media.ad.length`**&#x200B;_ | _&#x200B;**15**&#x200B;_ |
 | `a.media.ad.playerName` | HTML5 |
 | `a.media.ad.pod` | c27aaf3ff8224bb6b9ebfe1b2e79073d_1 |
 | `a.media.ad.podPosition` | 1 |
 | `a.media.ad.podSecond` | 0,0 |
-| _**`a.media.ad.view`**_ | _**Sant**_ |
-| _**`custom.[value]`**_ | _**Metadatafält**_ |
-| _**`a.media.[value]`**_ | _**Standardmetadatafält**_ |
+| _&#x200B;**`a.media.ad.view`**&#x200B;_ | _&#x200B;**Sant**&#x200B;_ |
+| _&#x200B;**`custom.[value]`**&#x200B;_ | _&#x200B;**Metadatafält**&#x200B;_ |
+| _&#x200B;**`a.media.[value]`**&#x200B;_ | _&#x200B;**Standardmetadatafält**&#x200B;_ |
 
 **Anteckningar:**
 
@@ -180,15 +180,15 @@ ht-degree: 8%
 
 | Parameter |  Värde (exempel)  |
 |---|---|
-| _**`s:event:type`**_ | _**start**_ |
+| _&#x200B;**`s:event:type`**&#x200B;_ | _&#x200B;**start**&#x200B;_ |
 | `l:event:playhead` | 0 |
 | `l:event:duration` | 4 |
 | `s:asset:ad_id` | 9378 |
-| _**`l:asset:length`**_ | _**120**_ |
+| _&#x200B;**`l:asset:length`**&#x200B;_ | _&#x200B;**120**&#x200B;_ |
 | `s:stream:type` | vod |
-| _**`s:asset:type`**_ | _**ad**_ |
-| _**`s:meta:custom.[value]`**_ | _**Anpassade metadatafält**_ |
-| _**`s:meta:a.media.[value]`**_ | _**Standardmetadatafält**_ |
+| _&#x200B;**`s:asset:type`**&#x200B;_ | _&#x200B;**ad**&#x200B;_ |
+| _&#x200B;**`s:meta:custom.[value]`**&#x200B;_ | _&#x200B;**Anpassade metadatafält**&#x200B;_ |
+| _&#x200B;**`s:meta:a.media.[value]`**&#x200B;_ | _&#x200B;**Standardmetadatafält**&#x200B;_ |
 
 **Anteckningar:**
 
@@ -225,7 +225,7 @@ ht-degree: 8%
 
 | Parameter |  Värde (exempel)  |
 |---|---|
-| _**`s:event:type`**_ | _**aa_ad_start**_ |
+| _&#x200B;**`s:event:type`**&#x200B;_ | _&#x200B;**aa_ad_start**&#x200B;_ |
 | `l:event:playhead` | 0 |
 | `l:event:duration` | 0 |
 | `s:asset:ad_id` | 9378 |
@@ -237,37 +237,37 @@ ht-degree: 8%
 
 | Parameter |  Värde (exempel)  |
 |---|---|
-| _**`s:event:type`**_ | _**play**_ |
+| _&#x200B;**`s:event:type`**&#x200B;_ | _&#x200B;**play**&#x200B;_ |
 | `l:event:playhead` | 15 |
 | `l:event:duration` | 0 |
 | `s:asset:ad_id` | 9378 |
 | `l:asset:ad_length` | 15 |
 | `s:stream:type` | vod |
-| _**`s:asset:type`**_ | _**ad**_ |
+| _&#x200B;**`s:asset:type`**&#x200B;_ | _&#x200B;**ad**&#x200B;_ |
 
 ### Media Analytics (hjärtslag) och paus-samtal {#ma-ad-pause-call}
 
 | Parameter |  Värde (exempel)  |
 |---|---|
-| _**`s:event:type`**_ | _**paus**_ |
+| _&#x200B;**`s:event:type`**&#x200B;_ | _&#x200B;**paus**&#x200B;_ |
 | `l:event:playhead` | 15 |
 | `l:event:duration` | 0 |
 | `s:asset:ad_id` | 9378 |
 | `l:asset:ad_length` | 15 |
 | `s:stream:type` | vod |
-| _**`s:asset:type`**_ | _**ad**_ |
+| _&#x200B;**`s:asset:type`**&#x200B;_ | _&#x200B;**ad**&#x200B;_ |
 
 ### Media Analytics (hjärtslag) Adobe Analytics Ad Complete call {#ma-aa-ad-complete-call}
 
 | Parameter |  Värde (exempel)  |
 |---|---|
-| _**`s:event:type`**_ | _**complete**_ |
+| _&#x200B;**`s:event:type`**&#x200B;_ | _&#x200B;**complete**&#x200B;_ |
 | `l:event:playhead` | 15 |
 | `l:event:duration` | 0 |
 | `s:asset:ad_id` | 9378 |
 | `l:asset:ad_length` | 15 |
 | `s:stream:type` | vod |
-| _**`s:asset:type`**_ | _**ad**_ |
+| _&#x200B;**`s:asset:type`**&#x200B;_ | _&#x200B;**ad**&#x200B;_ |
 
 ## Spela upp huvudinnehåll {#play-main-content}
 
@@ -276,8 +276,8 @@ ht-degree: 8%
 | Parameter |  Värde (exempel)  |
 |---|---|
 | `s:event:type` | play |
-| _**`l:event:playhead`**_ | _**29**_ |
-| _**`l:event:duration`**_ | _**10189**_ |
+| _&#x200B;**`l:event:playhead`**&#x200B;_ | _&#x200B;**29**&#x200B;_ |
+| _&#x200B;**`l:event:duration`**&#x200B;_ | _&#x200B;**10189**&#x200B;_ |
 | `s:asset:name` | Avsnittstitel |
 | `s:asset:video_id` | 123456 |
 | `l:asset:length` | 120 |
@@ -295,8 +295,8 @@ ht-degree: 8%
 
 | Parameter |  Värde (exempel)  |
 |---|---|
-| _**`s:event:type`**_ | _**paus**_ |
-| _**`l:event:playhead`**_ | _**29**_ |
+| _&#x200B;**`s:event:type`**&#x200B;_ | _&#x200B;**paus**&#x200B;_ |
+| _&#x200B;**`l:event:playhead`**&#x200B;_ | _&#x200B;**29**&#x200B;_ |
 | `l:event:duration` | 10189 |
 | `s:asset:name` | Avsnittstitel |
 | `s:asset:video_id` | 123456 |

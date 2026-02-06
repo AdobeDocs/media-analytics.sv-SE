@@ -81,7 +81,7 @@ Signalerar att ett fel har inträffat.
 
 Detta används för att meddela Media Analytics-backend-objektet att omedelbart stänga sessionen när användaren har avbrutit sin visning av innehållet och det är osannolikt att de kommer att returnera.
 
-Om `sessionEnd` inte skickas kommer en övergiven session att [timeout-värdet att vara ](../mc-api-impl/mc-api-timeout.md) (antingen efter att inga händelser har tagits emot under 10 minuter eller när ingen spelhuvudrörelse sker under 30 minuter). Dessutom kommer alla efterföljande mediaanrop som görs med detta sessions-ID att tas bort.
+Om `sessionEnd` inte skickas kommer en övergiven session att [timeout-värdet att vara &#x200B;](../mc-api-impl/mc-api-timeout.md) (antingen efter att inga händelser har tagits emot under 10 minuter eller när ingen spelhuvudrörelse sker under 30 minuter). Dessutom kommer alla efterföljande mediaanrop som görs med detta sessions-ID att tas bort.
 
 ## sessionComplete
 
