@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Adobe Audience Manager (AAM), en plattform för datahantering (DMP), hjälper er att samla ihop era målgruppsdata, vilket gör det enkelt att samla in kommersiellt relevant information om webbplatsbesökare, skapa marknadsföringsbara segment och leverera riktad reklam och innehåll till rätt målgrupp.
 
-Med AAM är du inte knuten till någon dataförsäljare, utbytesplattform eller DSP (Demand-side Platform). Dessutom är AAM helt oberoende när det gäller dina partners datatillgångar. Med tillgång till flera datakällor erbjuder AAM digitala utgivare möjlighet att använda en mängd olika tredjepartsdata. Mer information om AAM finns i AAM dokumentation [Audience Manager produktdokumentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html).
+Med AAM är du inte knuten till någon dataförsäljare, utbytesplattform eller DSP (Demand-side Platform). Dessutom är AAM helt oberoende när det gäller dina partners datatillgångar. Med tillgång till flera datakällor erbjuder AAM digitala utgivare möjlighet att använda en mängd olika tredjepartsdata. Mer information om AAM finns i AAM dokumentation [Audience Manager produktdokumentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=sv-SE).
 
 **Dataöverföring från VA till AAM -** För både videoinnehåll och videoannonser kan mätvärden och metadata som samlas in med hjälp av lösningsvariabler (reserverade) skickas automatiskt till AAM. Dataöverföringen är tillgänglig på alla plattformar, inklusive datorer, mobiler och OTT. Om du vill aktivera dataöverföringen på serversidan måste du kontakta Adobe Client Care och be om att denna feed aktiveras.
 

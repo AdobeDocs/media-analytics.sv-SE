@@ -13,11 +13,11 @@ ht-degree: 0%
 
 # Migrera Customer Journey Analytics för att använda de nya mediefälten för direktuppspelning
 
-I det här dokumentet beskrivs hur en Customer Journey Analytics-konfiguration som använder datatypen&quot;Media&quot; för Adobe direktuppspelande medietjänster ska uppdateras för att använda den nya motsvarande datatypen [Media Reporting Details](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/media-reporting-details).
+I det här dokumentet beskrivs hur en Customer Journey Analytics-konfiguration som använder datatypen&quot;Media&quot; för Adobe direktuppspelande medietjänster ska uppdateras för att använda den nya motsvarande datatypen [Media Reporting Details](https://experienceleague.adobe.com/sv/docs/experience-platform/xdm/data-types/media-reporting-details).
 
 ## Migrera Customer Journey Analytics
 
-Om du vill migrera en Customer Journey Analytics-konfiguration från den gamla datatypen Media till den nya datatypen [Media Reporting Details](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/media-reporting-details) måste du uppdatera följande inställningar som använder den gamla datatypen:
+Om du vill migrera en Customer Journey Analytics-konfiguration från den gamla datatypen Media till den nya datatypen [Media Reporting Details](https://experienceleague.adobe.com/sv/docs/experience-platform/xdm/data-types/media-reporting-details) måste du uppdatera följande inställningar som använder den gamla datatypen:
 
 * Datavyer
 
@@ -43,7 +43,7 @@ Så här migrerar du härledda fält till den nya datatypen:
 
 1. Ersätt alla gamla fält i det härledda fältet med det nya motsvarande fältet från &quot;Media Reporting Details&quot;.
 
-Se parametern [Innehålls-ID](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/audio-video-parameters#content-id) på sidan [Ljud- och videoparametrar](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/audio-video-parameters) för att mappa mellan de gamla och de nya fälten. Den gamla fältsökvägen finns under egenskapen XDM-fältsökväg medan den nya fältsökvägen finns under egenskapen Reporting XDM-fältsökväg.
+Se parametern [Innehålls-ID](https://experienceleague.adobe.com/sv/docs/media-analytics/using/implementation/variables/audio-video-parameters#content-id) på sidan [Ljud- och videoparametrar](https://experienceleague.adobe.com/sv/docs/media-analytics/using/implementation/variables/audio-video-parameters) för att mappa mellan de gamla och de nya fälten. Den gamla fältsökvägen finns under egenskapen XDM-fältsökväg medan den nya fältsökvägen finns under egenskapen Reporting XDM-fältsökväg.
 
 ![Gamla och nya XDM-fältsökvägar](assets/field-paths-updated.jpeg)
 
@@ -61,7 +61,7 @@ Du kan använda något av följande alternativ för att uppdatera datavyn:
 
    ![Gammal fältsökväg i datavyn](assets/old-field-data-view.jpeg)
 
-1. Kontrollera motsvarande nya fält i avsnittet [Kapitelförskjutning](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/chapter-parameters#chapter-offset) i artikeln [Kapitelparametrar](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/chapter-parameters).
+1. Kontrollera motsvarande nya fält i avsnittet [Kapitelförskjutning](https://experienceleague.adobe.com/sv/docs/media-analytics/using/implementation/variables/chapter-parameters#chapter-offset) i artikeln [Kapitelparametrar](https://experienceleague.adobe.com/sv/docs/media-analytics/using/implementation/variables/chapter-parameters).
 
 1. Leta reda på det nya motsvarande fältet i datavyn.
 
@@ -81,7 +81,7 @@ Om du vill skapa ett härlett fält för &quot;Kapitelnamn&quot; som använder d
 
    ![Anpassa det nya fältet för att skapa en datavy](assets/create-derived-field2.jpeg)
 
-1. Fyll i [!UICONTROL **If**]-satsen med värdet för **Reporting XDM-fältsökvägen**, vilket visas i parametern [Chapter name](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/chapter-parameters#chapter-name) på sidan [Chapter parameters](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/chapter-parameters) .
+1. Fyll i [!UICONTROL **If**]-satsen med värdet för **Reporting XDM-fältsökvägen**, vilket visas i parametern [Chapter name](https://experienceleague.adobe.com/sv/docs/media-analytics/using/implementation/variables/chapter-parameters#chapter-name) på sidan [Chapter parameters](https://experienceleague.adobe.com/sv/docs/media-analytics/using/implementation/variables/chapter-parameters) .
 
    ![Kapitelnamn](assets/chapter-name.jpeg)
 
@@ -111,7 +111,7 @@ Om du vill skapa ett härlett fält för &quot;Kapitelnamn&quot; som använder d
 
    ![Hitta fält med gammal datatyp](assets/locate-fields-with-old-datatype.jpeg)
 
-1. Kontrollera motsvarande nya fält i avsnittet [Innehållsnamn (variabel)](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/audio-video-parameters#content-name-variable) i artikeln [Direktuppspelningsmediaparametrar](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/audio-video-parameters#content-name-variable).
+1. Kontrollera motsvarande nya fält i avsnittet [Innehållsnamn (variabel)](https://experienceleague.adobe.com/sv/docs/media-analytics/using/implementation/variables/audio-video-parameters#content-name-variable) i artikeln [Direktuppspelningsmediaparametrar](https://experienceleague.adobe.com/sv/docs/media-analytics/using/implementation/variables/audio-video-parameters#content-name-variable).
 
 1. Ersätt det gamla fältet med det nya fältet.
 

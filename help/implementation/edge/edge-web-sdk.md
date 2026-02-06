@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Skicka webbdata till Edge med Adobe Experience Platform Web SDK
 
-Från och med version 2.20.0 gör komponenten `streamingMedia` i Adobe Experience Platform [Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/home) att du kan samla in data relaterade till mediesessioner på din webbplats. De insamlade data kan innehålla information om medieuppspelningar, pauser, slutföranden och andra relaterade händelser.
+Från och med version 2.20.0 gör komponenten `streamingMedia` i Adobe Experience Platform [Web SDK](https://experienceleague.adobe.com/sv/docs/experience-platform/web-sdk/home) att du kan samla in data relaterade till mediesessioner på din webbplats. De insamlade data kan innehålla information om medieuppspelningar, pauser, slutföranden och andra relaterade händelser.
 
 När data har samlats in kan du skicka dem till Adobe Experience Platform och/eller Adobe Analytics för att generera rapporter. Den här funktionen är en heltäckande lösning för att spåra och förstå hur medieanvändningen fungerar på din webbplats.
 
@@ -25,8 +25,8 @@ Om du vill använda komponenten `streamingMedia` i Web SDK måste du uppfylla f�
 
 * Innan du kan skicka strömmande mediedata till Edge måste du först slutföra stegen i [Implementera Adobe direktuppspelade medietjänster med Edge Network](/help/implementation/edge/implementation-edge.md).
 * Kontrollera att du har tillgång till Adobe Experience Platform och/eller Adobe Analytics.
-* Du måste använda Web SDK version 2.20.0 eller senare. Se [installationsöversikten för Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/install/overview) om du vill veta hur du installerar den senaste versionen.
-* Aktivera alternativet **[[!UICONTROL Media Analytics]](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/configure)** för den datastream du använder.
+* Du måste använda Web SDK version 2.20.0 eller senare. Se [installationsöversikten för Web SDK](https://experienceleague.adobe.com/sv/docs/experience-platform/web-sdk/install/overview) om du vill veta hur du installerar den senaste versionen.
+* Aktivera alternativet **[[!UICONTROL Media Analytics]](https://experienceleague.adobe.com/sv/docs/experience-platform/datastreams/configure)** för den datastream du använder.
 * Kontrollera att schemat som används av din datastream innehåller schemafälten för mediesamlingen.
 * Konfigurera direktuppspelande medietjänster i Web SDK-konfigurationen, vilket visas på den här sidan, antingen med [taggtillägget](#tag-extension) eller via [JavaScript-biblioteket](#library).
 
@@ -34,7 +34,7 @@ Följ stegen som beskrivs på den här sidan för att migrera implementeringen a
 
 ### Steg 1: Installera Experience Platform Web SDK
 
-Läs den [dedikerade dokumentationen](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/install/overview) om du vill veta hur du installerar Web SDK på dina webbegenskaper.
+Läs den [dedikerade dokumentationen](https://experienceleague.adobe.com/sv/docs/experience-platform/web-sdk/install/overview) om du vill veta hur du installerar Web SDK på dina webbegenskaper.
 
 ### Steg 2: Konfigurera Web SDK `streamingMedia`-komponenten.
 
@@ -68,7 +68,7 @@ alloy("configure", {
 });
 ```
 
-Mer information om hur du konfigurerar den finns i Web SDK `streamingMedia`-komponenten [documentation](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/configure/streamingmedia).
+Mer information om hur du konfigurerar den finns i Web SDK `streamingMedia`-komponenten [documentation](https://experienceleague.adobe.com/sv/docs/experience-platform/web-sdk/commands/configure/streamingmedia).
 
 ### Steg 3: Hämta instansen av mediespåraren när du migrerar från Media JS SDK
 
@@ -76,7 +76,7 @@ För kunder som använder Media JS SDK erbjuder Web SDK en migreringsväg för a
 
 [!DNL Web SDK] innehåller ett kommando för att hämta en Media Analytics-spårare. Du kan använda det här kommandot för att skapa en objektinstans och sedan, med samma API:er som de som finns i [Media JS-biblioteket](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/APIReference.html), spåra mediahändelser.
 
-Mer information om vilka metoder som stöds finns i dokumentationen för [`getMediaAnalyticsTracker`](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/getmediaanalyticstracker).
+Mer information om vilka metoder som stöds finns i dokumentationen för [`getMediaAnalyticsTracker`](https://experienceleague.adobe.com/sv/docs/experience-platform/web-sdk/commands/getmediaanalyticstracker).
 
 I kodutdraget nedan visas hur du hämtar mediaspårningsinstansen i Media JS.
 

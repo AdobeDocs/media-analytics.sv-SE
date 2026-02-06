@@ -14,7 +14,7 @@ ht-degree: 8%
 # Migrera från det fristående mediet SDK till Adobe Launch - webben (JS)
 
 >[!NOTE]
->Adobe Experience Platform Launch har omklassificerats som en serie datainsamlingstekniker i Experience Platform. Som ett resultat av detta har flera terminologiska förändringar genomförts i produktdokumentationen. Se följande [dokument](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=en) för en konsoliderad referens av terminologiändringarna.
+>Adobe Experience Platform Launch har omklassificerats som en serie datainsamlingstekniker i Experience Platform. Som ett resultat av detta har flera terminologiska förändringar genomförts i produktdokumentationen. Se följande [dokument](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=sv-SE) för en konsoliderad referens av terminologiändringarna.
 
 ## Skillnader i funktioner
 
@@ -55,7 +55,7 @@ Media-tillägget använder de konfigurerade parametrarna för spårning.
 
    ![](assets/launch_config_js.png)
 
-[Starta användarhandboken - Installera och konfigurera medietillägget](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/media-analytics/overview.html#install-and-configure-the-ma-extension)
+[Starta användarhandboken - Installera och konfigurera medietillägget](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/media-analytics/overview.html?lang=sv-SE#install-and-configure-the-ma-extension)
 
 ## Skillnader mellan att skapa spårare
 
@@ -124,5 +124,5 @@ Skicka ett delegatobjekt till `get-instance` som visar `getQoSObject()`- och `ge
 
 ### Starta
 
-* [Översikt över Launch](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)
-* [Media Analytics-tillägg](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/media-analytics/overview.html)
+* [Översikt över Launch](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv-SE)
+* [Media Analytics-tillägg](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/media-analytics/overview.html?lang=sv-SE)

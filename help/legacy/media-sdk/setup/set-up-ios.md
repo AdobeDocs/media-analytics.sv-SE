@@ -25,11 +25,11 @@ Lär dig hur du konfigurerar direktuppspelningstjänster för iOS-enheter.
 * **Hämta giltiga konfigurationsparametrar för Media SDK**
 Dessa parametrar kan hämtas från en Adobe-representant när du har konfigurerat ditt analyskonto.
 * **Implementera ADBMobil för iOS i ditt program**
-Mer information om dokumentationen för Adobe Mobile SDK finns i [iOS SDK 4.x for Experience Cloud Solutions.](https://experienceleague.adobe.com/docs/mobile-services/ios/overview.html)
+Mer information om dokumentationen för Adobe Mobile SDK finns i [iOS SDK 4.x for Experience Cloud Solutions.](https://experienceleague.adobe.com/docs/mobile-services/ios/overview.html?lang=sv-SE)
 
   >[!IMPORTANT]
   >
-  >Från och med iOS 9 introducerade Apple en funktion som kallas ATS (App Transport Security). Den här funktionen syftar till att förbättra nätverkssäkerheten genom att säkerställa att dina appar endast använder protokoll och ciphers som följer branschstandard. Den här funktionen är aktiverad som standard, men du har konfigurationsalternativ som ger dig möjlighet att arbeta med ATS. Mer information om ATS finns i [App Transport Security.](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/app-transport-security.html)
+  >Från och med iOS 9 introducerade Apple en funktion som kallas ATS (App Transport Security). Den här funktionen syftar till att förbättra nätverkssäkerheten genom att säkerställa att dina appar endast använder protokoll och ciphers som följer branschstandard. Den här funktionen är aktiverad som standard, men du har konfigurationsalternativ som ger dig möjlighet att arbeta med ATS. Mer information om ATS finns i [App Transport Security.](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/app-transport-security.html?lang=sv-SE)
 
 * **Tillhandahåll följande funktioner i din mediespelare:**
 

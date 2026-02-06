@@ -18,7 +18,7 @@ Anpassad videospårning använder manuell länkspårning med anpassad länkkod i
 Oftast används videouppföljning för anpassade videolänkar på plattformar och enheter där minimal videomätning krävs.
 
 * I JavaScript: funktionen `s.tl()`
-* I mobilappar: [trackAction() Android](https://experienceleague.adobe.com/docs/mobile-services/android/analytics-android/actions.html), [trackAction() iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/analytics-ios/actions.html), [trackAction() OTT](/help/use-cases/analytics-with-ott/track-app-actions.md)
+* I mobilappar: [trackAction() Android](https://experienceleague.adobe.com/docs/mobile-services/android/analytics-android/actions.html?lang=sv-SE), [trackAction() iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/analytics-ios/actions.html?lang=sv-SE), [trackAction() OTT](/help/use-cases/analytics-with-ott/track-app-actions.md)
 * I API:t för datainfogning: [linktype-tagg](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/reference/r_supported_tags.md)
 
 ## Krav

@@ -19,7 +19,7 @@ De krav som beskrivs i det här avsnittet är specifika för implementering av A
 Oavsett om du implementerar direktuppspelningstjänster för implementeringar av endast Adobe Analytics eller för Edge måste du se till att du uppfyller de [allmänna kraven &#x200B;](/help/getting-started/prereqs.md) .
 
 1. **Bekräfta att du har en Adobe Analytics-implementering**<br>
-När du implementerar Adobe Analytics for Streaming Media Add-on för en implementering som bara innehåller analyser krävs också en grundläggande Adobe Analytics-implementering. Mer information finns i [Implementera Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/home.html).
+När du implementerar Adobe Analytics for Streaming Media Add-on för en implementering som bara innehåller analyser krävs också en grundläggande Adobe Analytics-implementering. Mer information finns i [Implementera Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/home.html?lang=sv-SE).
 
 1. **Hämta URL:en för mediespårningsservern**<br>
 Be din Adobe Analytics-representant om URL:en för mediespårningsservern. Det här är `collection-api-server`-URL:en för Mobile SDK, JavaScript SDK och den icke-samlings-API-spårningsservern för Roku. Domännamn för API-implementering är: `[your_namespace].hb-api.omtrdc.net`.
