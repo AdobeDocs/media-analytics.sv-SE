@@ -2,24 +2,24 @@
 title: Nyheter inom direktuppspelning av medietjänster
 description: Läs om nyheterna i tjänster för direktuppspelning av media.
 uuid: 1f3e48df-83b6-418c-8cf7-d79466481f79
-index: y
+index: true
 internal: n
 snippet: y
 exl-id: 881a94f4-d248-4668-a2d1-4e50d3f9135a
 feature: Streaming Media
 role: User, Admin, Developer
-source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
+source-git-commit: 528a82a4299370c2ef5a366b1f3fab9fd21b164f
 workflow-type: tm+mt
-source-wordcount: '19'
-ht-degree: 26%
+source-wordcount: '26'
+ht-degree: 0%
 
 ---
 
-# Resurser{#resources}
+# Resurs{#resources}
 
 ## Versionsinformation{#release-notes}
 
-* [Versionsinformation](https://experienceleague.adobe.com/docs/release-notes/experience-cloud/current.html?lang=sv-SE)
+* [Versionsinformation](https://experienceleague.adobe.com/docs/release-notes/experience-cloud/current.html)
 
 <!--
 ## Documentation Updates{#documentation-updates}

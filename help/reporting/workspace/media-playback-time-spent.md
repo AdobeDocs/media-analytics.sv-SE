@@ -4,9 +4,9 @@ description: Lär dig hur du använder panelen Medieuppspelningstid för spender
 feature: Streaming Media, Workspace Basics
 role: User, Admin
 exl-id: 958b4968-0f52-464c-81e0-5ab9b84aaa9c
-source-git-commit: 67f1fa8194fa58b2c513e3136d2bc7880f9cb06b
+source-git-commit: 528a82a4299370c2ef5a366b1f3fab9fd21b164f
 workflow-type: tm+mt
-source-wordcount: '215'
+source-wordcount: '232'
 ht-degree: 0%
 
 ---
@@ -20,8 +20,10 @@ Genom att analysera hur lång uppspelningstid som spenderas kan du förstå var 
 I Analysis Workspace är uppspelningstid den tid som du har lagt på att visa medieströmmar vid en viss tidpunkt, och omfattar paus, buffert och tid till start. Med Tillagd tid för mediauppspelning kan du dela uppspelningstiden med olika tidsintervall, t.ex. 5 minuter, 15 minuter, 30 minuter eller 1 timme.
 
 
-Medieuppspelningstiden hjälper till att analysera uppspelning över tid, med detaljer om maximal samtidighet och möjlighet att bryta ned och jämföra. Om du vill komma åt panelen Medieuppspelningstid för spenderad navigerar du till en rapportsvit med mediekomponenter för direktuppspelning aktiverade. Klicka sedan på panelikonen längst till vänster och dra panelen till ditt Analysis Workspace-projekt. [Läs mer …](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/media-playback-timespent/media-playback-time-spent.html?lang=sv-SE)
+Medieuppspelningstiden hjälper till att analysera uppspelning över tid, med detaljer om maximal samtidighet och möjlighet att bryta ned och jämföra. Om du vill komma åt panelen Medieuppspelningstid för spenderad navigerar du till en rapportsvit med mediekomponenter för direktuppspelning aktiverade. Klicka sedan på panelikonen längst till vänster och dra panelen till ditt Analysis Workspace-projekt. [Läs mer..](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/media-playback-timespent/media-playback-time-spent.html)
 
-<!-- ## DOES THIS APPLY Get Concurrent Viewers via Analytics Reporting API
+<!--
+## DOES THIS APPLY Get Concurrent Viewers via Analytics Reporting API
 
-REVISE You can also get concurrent viewer data for up to 1-month at a time at minute-level granularity using the Analytics Reporting API 2.0.  The reporting API uses the same definition of concurrent viewers as Analysis Workspace.  For more information see [_*Get concurrent viewers JSON report data with Analytics 2.0 APIs*_](/help/reporting/reports-and-analytics/get-concurrent-json20.md). -->
+REVISE You can also get concurrent viewer data for up to 1-month at a time at minute-level granularity using the Analytics Reporting API 2.0.  The reporting API uses the same definition of concurrent viewers as Analysis Workspace.  For more information see [_*Get concurrent viewers JSON report data with Analytics 2.0 APIs*_](/help/reporting/reports-and-analytics/get-concurrent-json20.md). 
+-->

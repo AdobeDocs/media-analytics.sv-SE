@@ -5,10 +5,10 @@ uuid: f83e9ef1-803d-4152-a6c7-acaa325036b9
 exl-id: a70025ec-1418-46f1-b41f-433d09f024e1
 feature: Streaming Media
 role: User, Admin, Developer
-source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
+source-git-commit: 528a82a4299370c2ef5a366b1f3fab9fd21b164f
 workflow-type: tm+mt
-source-wordcount: '1337'
-ht-degree: 4%
+source-wordcount: '1344'
+ht-degree: 0%
 
 ---
 
@@ -136,10 +136,12 @@ Skicka användar-ID:t för Experience Cloud (kallas även `MID` eller `MCID`) f�
 >
 >`appInstallationId` identifierar programmet *och enheten* unikt. Den måste vara unik för varje app på varje enhet, d.v.s. två användare som använder samma version av samma app på olika enheter måste skicka olika (unika) `appInstallationId`.
 
-<!-- Initially, there were no browser-based customers. In future this will be part of a two-bullet list, one bullet for Native Apps, the other for Browser apps. The .
+<!-- 
+Initially, there were no browser-based customers. In future this will be part of a two-bullet list, one bullet for Native Apps, the other for Browser apps. The .
 \<ul id="ul_iwc_fqt_pbb"\>
  \<li\>For Browser Apps, this should be a first-party cookie that is persistent for as long as the user stays in the same browser. If clients have multiple websites, they need to have different cookies for each site.</li>
-</ul> -->
+</ul> 
+-->
 
 ### visitor.marketingCloudOrgId
 
