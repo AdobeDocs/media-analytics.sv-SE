@@ -4,10 +4,10 @@ description: Lär dig hur du använder panelen Media Concurrent Viewer för att 
 exl-id: 2eadd5e7-45de-4275-aac5-d16e2a6a9fed
 feature: "Streaming Media, Workspace Basics"
 role: User, Admin
-source-git-commit: 67f1fa8194fa58b2c513e3136d2bc7880f9cb06b
+source-git-commit: 48e78a06bbcea0918bfa7d93dfc44bbcc8bddb22
 workflow-type: tm+mt
-source-wordcount: '178'
-ht-degree: 1%
+source-wordcount: '192'
+ht-degree: 0%
 
 ---
 
@@ -17,8 +17,8 @@ Genom att analysera samtidiga visningsprogram kan ni förstå var maximal samtid
 
 ## Media Concurrent Viewer Panel i Analysis Workspace
 
-I Analysis Workspace är Concurrent Viewers antalet unika besökare som visar medieströmmarna vid en viss tidpunkt, oavsett antalet sessioner. Panelen Media Concurrent Viewers är tillgänglig för att visualisera samtidiga visningsprogram, dela upp och jämföra. [Läs mer …](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/media-concurrent-viewers.html?lang=sv-SE)
+I Analysis Workspace är Concurrent Viewers antalet unika besökare som visar medieströmmarna vid en viss tidpunkt, oavsett antalet sessioner. Panelen Media Concurrent Viewers är tillgänglig för att visualisera samtidiga visningsprogram, dela upp och jämföra. [Läs mer..](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/media-concurrent-viewers.html)
 
 ## Få samtidiga visningsprogram via API:t för analysrapportering
 
-Du kan också få samtidiga visningsprogramdata för upp till en månad i taget på minutnivå med Analytics Reporting API 2.0. Rapporterings-API:t använder samma definition av samtidiga visningsprogram som Analysis Workspace.  Mer information finns i [_*Hämta JSON-rapportdata för samtidiga visningsprogram med API:er för Analytics 2.0*_](/help/reporting/reports-and-analytics/get-concurrent-json20.md).
+Du kan också få samtidiga visningsprogramdata i upp till en månad i taget på minutnivå med Analytics Reporting API 2.0.  Rapporterings-API:t använder samma definition av samtidiga visningsprogram som Analysis Workspace.  Mer information finns i [_*Hämta JSON-rapportdata för samtidiga visningsprogram med API:er för Analytics 2.0*_](/help/reporting/reports-and-analytics/get-concurrent-json20.md).
